@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: data_structure/unionfind.py
   requiredBy: []
-  timestamp: '2023-06-09 12:42:19+09:00'
+  timestamp: '2023-06-09 12:11:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - library_checker/data_structure/unionfind.test.py

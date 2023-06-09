@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: library_checker/data_structure/associative_array.test.py
   requiredBy: []
-  timestamp: '2023-06-09 12:42:19+09:00'
+  timestamp: '2023-06-09 12:11:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/data_structure/associative_array.test.py

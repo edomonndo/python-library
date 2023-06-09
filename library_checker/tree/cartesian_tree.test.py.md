@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/cartesian_tree
     links:
@@ -29,8 +29,8 @@ data:
   isVerificationFile: true
   path: library_checker/tree/cartesian_tree.test.py
   requiredBy: []
-  timestamp: '2023-06-09 12:42:19+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-06-09 12:11:59+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/tree/cartesian_tree.test.py
 layout: document

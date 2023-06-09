@@ -94,10 +94,10 @@ data:
       title: library_checker/math/two_sat.test.py
   - name: library_checker/sample
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/sample/aplusb.test.py
       title: library_checker/sample/aplusb.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/sample/many_aplusb.test.py
       title: library_checker/sample/many_aplusb.test.py
   - name: library_checker/string
@@ -110,7 +110,7 @@ data:
       title: library_checker/string/z_algorithm.test.py
   - name: library_checker/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/tree/cartesian_tree.test.py
       title: library_checker/tree/cartesian_tree.test.py
     - icon: ':x:'
