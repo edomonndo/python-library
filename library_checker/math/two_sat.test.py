@@ -1,3 +1,5 @@
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/two_sat
+
 from math.two_sat import two_sat
 
 p, cnf, N, M = input().split()
