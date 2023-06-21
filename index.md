@@ -1,6 +1,14 @@
 ---
 data:
   libraryCategories:
+  - name: convolution
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: convolution/convolution.py
+      title: convolution/convolution.py
+    - icon: ':heavy_check_mark:'
+      path: convolution/cooley_turkey.py
+      title: convolution/cooley_turkey.py
   - name: data_structure
     pages:
     - icon: ':warning:'
@@ -33,9 +41,26 @@ data:
       title: library_checker/tree/jump_on_tree.py
   - name: math
     pages:
+    - icon: ':x:'
+      path: math/count_primes.py
+      title: math/count_primes.py
+    - icon: ':warning:'
+      path: math/factorize.py
+      title: math/factorize.py
+    - icon: ':x:'
+      path: math/floor_sum.py
+      title: math/floor_sum.py
+    - icon: ':warning:'
+      path: math/min_of_linear.py
+      title: math/min_of_linear.py
     - icon: ':warning:'
       path: math/two_sat.py
       title: math/two_sat.py
+  - name: matrix
+    pages:
+    - icon: ':x:'
+      path: matrix/matrix.py
+      title: matrix/matrix.py
   - name: string
     pages:
     - icon: ':warning:'
@@ -50,6 +75,14 @@ data:
       path: tree/lca.py
       title: tree/lca.py
   verificationCategories:
+  - name: library_checker/convolution
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: library_checker/convolution/convolution_mod.test.py
+      title: library_checker/convolution/convolution_mod.test.py
+    - icon: ':heavy_check_mark:'
+      path: library_checker/convolution/convolution_mod_1000000007.test.py
+      title: library_checker/convolution/convolution_mod_1000000007.test.py
   - name: library_checker/data_structure
     pages:
     - icon: ':heavy_check_mark:'
@@ -81,17 +114,40 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/graph/scc.test.py
       title: library_checker/graph/scc.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/graph/shortest_path.test.py
       title: library_checker/graph/shortest_path.test.py
   - name: library_checker/math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/math/count_primes.test.py
       title: library_checker/math/count_primes.test.py
     - icon: ':x:'
+      path: library_checker/math/factorize.test.py
+      title: library_checker/math/factorize.test.py
+    - icon: ':x:'
+      path: library_checker/math/min_of_linear.test.py
+      title: library_checker/math/min_of_linear.test.py
+    - icon: ':x:'
+      path: library_checker/math/sum_of_floor_of_linear.test.py
+      title: library_checker/math/sum_of_floor_of_linear.test.py
+    - icon: ':x:'
       path: library_checker/math/two_sat.test.py
       title: library_checker/math/two_sat.test.py
+  - name: library_checker/matrix
+    pages:
+    - icon: ':x:'
+      path: library_checker/matrix/matrix_det.test.py
+      title: library_checker/matrix/matrix_det.test.py
+    - icon: ':x:'
+      path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
+      title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
+    - icon: ':x:'
+      path: library_checker/matrix/matrix_inverse.test.py
+      title: library_checker/matrix/matrix_inverse.test.py
+    - icon: ':x:'
+      path: library_checker/matrix/matrix_product.test.py
+      title: library_checker/matrix/matrix_product.test.py
   - name: library_checker/sample
     pages:
     - icon: ':heavy_check_mark:'

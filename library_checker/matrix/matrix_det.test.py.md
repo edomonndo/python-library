@@ -1,45 +1,54 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':x:'
+    path: matrix/matrix.py
+    title: matrix/matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/suffixarray
+    PROBLEM: https://judge.yosupo.jp/problem/matrix_det
     links:
-    - https://judge.yosupo.jp/problem/suffixarray
+    - https://judge.yosupo.jp/problem/matrix_det
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/suffixarray
+  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_det
 
 
-    from string.suffix_array import suffix_array
+    from matrix.matrix import Matrix
 
 
-    S = input()
+    N, M, K = map(int, input().split())
 
-    sa = suffix_array(S)
+    A = list(map(int, input().split()))
 
-    print(*sa)
+    B = list(map(int, input().split()))
+
+
+    A = Matrix(N, M, A)
+
+    print(A.determinant())
 
     '
-  dependsOn: []
+  dependsOn:
+  - matrix/matrix.py
   isVerificationFile: true
-  path: library_checker/string/suffix_array.test.py
+  path: library_checker/matrix/matrix_det.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-06-21 08:58:45+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: library_checker/string/suffix_array.test.py
+documentation_of: library_checker/matrix/matrix_det.test.py
 layout: document
 redirect_from:
-- /verify/library_checker/string/suffix_array.test.py
-- /verify/library_checker/string/suffix_array.test.py.html
-title: library_checker/string/suffix_array.test.py
+- /verify/library_checker/matrix/matrix_det.test.py
+- /verify/library_checker/matrix/matrix_det.test.py.html
+title: library_checker/matrix/matrix_det.test.py
 ---
