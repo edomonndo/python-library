@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/min_of_mod_of_linear
     links:
@@ -17,7 +17,7 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/min_of_mod_of_linear\n\
-    \nfrom math.min_of_linear import min_of_linear\n\nT = int(input())\nans = [None]\
+    \nfrom math_.min_of_linear import min_of_linear\n\nT = int(input())\nans = [None]\
     \ * T\nfor i in range(T):\n    N, M, A, B = map(int, input().split())\n    _,\
     \ ans[i] = min_of_linear(0, N, A, B, M)\n\nprint(*ans, sep=\"\\n\")\n"
   dependsOn: []
@@ -25,7 +25,7 @@ data:
   path: library_checker/math/min_of_linear.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/math/min_of_linear.test.py
 layout: document

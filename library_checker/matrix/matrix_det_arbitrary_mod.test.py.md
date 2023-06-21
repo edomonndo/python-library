@@ -1,25 +1,25 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: matrix/matrix.py
     title: matrix/matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/matrix_det
+    PROBLEM: https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
     links:
-    - https://judge.yosupo.jp/problem/matrix_det
+    - https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_det
+  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
 
 
     from matrix.matrix import determinant_arbitrary_mod
@@ -27,7 +27,7 @@ data:
 
     N, M = map(int, input().split())
 
-    A = list(map(int, input().split()))
+    A = [list(map(int, input().split())) for _ in range(N)]
 
 
     print(determinant_arbitrary_mod(N, A, M))
@@ -38,8 +38,8 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_det_arbitrary_mod.test.py
 layout: document

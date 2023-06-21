@@ -20,15 +20,15 @@ data:
     factor \" + s, shell=True))\n    return x[x.rfind(\":\") + 2 : -3].split()\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/factorize.py
+  path: math_/factorize.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: math/factorize.py
+documentation_of: math_/factorize.py
 layout: document
 redirect_from:
-- /library/math/factorize.py
-- /library/math/factorize.py.html
-title: math/factorize.py
+- /library/math_/factorize.py
+- /library/math_/factorize.py.html
+title: math_/factorize.py
 ---

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/math/sum_of_floor_of_linear.test.py
     title: library_checker/math/sum_of_floor_of_linear.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -26,16 +26,16 @@ data:
     \ a) * y_max\n        n, m, a, b = y_max, a, m, x_max % a\n    return res\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/floor_sum.py
+  path: math_/floor_sum.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - library_checker/math/sum_of_floor_of_linear.test.py
-documentation_of: math/floor_sum.py
+documentation_of: math_/floor_sum.py
 layout: document
 redirect_from:
-- /library/math/floor_sum.py
-- /library/math/floor_sum.py.html
-title: math/floor_sum.py
+- /library/math_/floor_sum.py
+- /library/math_/floor_sum.py.html
+title: math_/floor_sum.py
 ---

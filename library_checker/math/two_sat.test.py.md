@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/two_sat
     links:
@@ -17,7 +17,7 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/two_sat\n\n\
-    from math.two_sat import two_sat\n\np, cnf, N, M = input().split()\nN, M = map(int,\
+    from math_.two_sat import two_sat\n\np, cnf, N, M = input().split()\nN, M = map(int,\
     \ (N, M))\nclause = []\nfor i in range(M):\n    a, b, z = map(int, input().split())\n\
     \    c, d = (a // abs(a) + 1) // 2, (b // abs(b) + 1) // 2\n    c, d = bool(c),\
     \ bool(d)\n    clause.append((abs(a) - 1, c, abs(b) - 1, d))\nresult = two_sat(N,\
@@ -29,7 +29,7 @@ data:
   path: library_checker/math/two_sat.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/math/two_sat.test.py
 layout: document

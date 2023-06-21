@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: matrix/matrix.py
     title: matrix/matrix.py
   _extendedRequiredBy: []
@@ -21,14 +21,15 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_product\n\
     \nfrom matrix.matrix import Matrix\n\nN, M, K = map(int, input().split())\nA =\
-    \ list(map(int, input().split()))\nB = list(map(int, input().split()))\n\nA =\
-    \ Matrix(N, M, A)\nB = Matrix(M, K, B)\n\nC = A * B\nfor row in C:\n    print(*row)\n"
+    \ [list(map(int, input().split())) for _ in range(N)]\nB = [list(map(int, input().split()))\
+    \ for _ in range(M)]\n\nA = Matrix(N, M, A)\nB = Matrix(M, K, B)\n\nC = A * B\n\
+    for row in C:\n    print(*row)\n"
   dependsOn:
   - matrix/matrix.py
   isVerificationFile: true
   path: library_checker/matrix/matrix_product.test.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
+  timestamp: '2023-06-21 21:40:34+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_product.test.py

@@ -22,15 +22,15 @@ data:
     \       i += 1\n    z[0] = n\n    return z\n"
   dependsOn: []
   isVerificationFile: false
-  path: string/z_algorithm.py
+  path: string_/z_algorithm.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: string/z_algorithm.py
+documentation_of: string_/z_algorithm.py
 layout: document
 redirect_from:
-- /library/string/z_algorithm.py
-- /library/string/z_algorithm.py.html
-title: string/z_algorithm.py
+- /library/string_/z_algorithm.py
+- /library/string_/z_algorithm.py.html
+title: string_/z_algorithm.py
 ---

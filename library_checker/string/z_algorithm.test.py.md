@@ -19,7 +19,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/zalgorithm
 
 
-    from stirng.z_algorithm import z_algorithm
+    from stirng_.z_algorithm import z_algorithm
 
 
     S = input()
@@ -33,7 +33,7 @@ data:
   isVerificationFile: true
   path: library_checker/string/z_algorithm.test.py
   requiredBy: []
-  timestamp: '2023-06-09 12:11:59+09:00'
+  timestamp: '2023-06-21 21:40:34+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/string/z_algorithm.test.py

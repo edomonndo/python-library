@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/factorize
     links:
@@ -17,15 +17,15 @@ data:
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/factorize\n\
-    \nfrom math.factorize import factorize\n\nQ = int(input())\nquery = [input() for\
-    \ _ in range(Q)]\nans = [None] * Q\nfor i in range(Q):\n    x = factorize(query[i])\n\
+    \nfrom math_.factorize import factorize\n\nQ = int(input())\nquery = [input()\
+    \ for _ in range(Q)]\nans = [None] * Q\nfor i in range(Q):\n    x = factorize(query[i])\n\
     \    ans[i] = \" \".join([str(len(x))] + x)\n\nprint(*ans, sep=\"\\n\")\n"
   dependsOn: []
   isVerificationFile: true
   path: library_checker/math/factorize.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/math/factorize.test.py
 layout: document

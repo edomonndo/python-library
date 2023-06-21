@@ -39,36 +39,36 @@ data:
     - icon: ':warning:'
       path: library_checker/tree/jump_on_tree.py
       title: library_checker/tree/jump_on_tree.py
-  - name: math
+  - name: math_
     pages:
-    - icon: ':x:'
-      path: math/count_primes.py
-      title: math/count_primes.py
+    - icon: ':heavy_check_mark:'
+      path: math_/count_primes.py
+      title: math_/count_primes.py
     - icon: ':warning:'
-      path: math/factorize.py
-      title: math/factorize.py
-    - icon: ':x:'
-      path: math/floor_sum.py
-      title: math/floor_sum.py
+      path: math_/factorize.py
+      title: math_/factorize.py
+    - icon: ':heavy_check_mark:'
+      path: math_/floor_sum.py
+      title: math_/floor_sum.py
     - icon: ':warning:'
-      path: math/min_of_linear.py
-      title: math/min_of_linear.py
+      path: math_/min_of_linear.py
+      title: math_/min_of_linear.py
     - icon: ':warning:'
-      path: math/two_sat.py
-      title: math/two_sat.py
+      path: math_/two_sat.py
+      title: math_/two_sat.py
   - name: matrix
     pages:
-    - icon: ':x:'
+    - icon: ':question:'
       path: matrix/matrix.py
       title: matrix/matrix.py
-  - name: string
+  - name: string_
     pages:
     - icon: ':warning:'
-      path: string/suffix_array.py
-      title: string/suffix_array.py
+      path: string_/suffix_array.py
+      title: string_/suffix_array.py
     - icon: ':warning:'
-      path: string/z_algorithm.py
-      title: string/z_algorithm.py
+      path: string_/z_algorithm.py
+      title: string_/z_algorithm.py
   - name: tree
     pages:
     - icon: ':warning:'
@@ -114,35 +114,35 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/graph/scc.test.py
       title: library_checker/graph/scc.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/graph/shortest_path.test.py
       title: library_checker/graph/shortest_path.test.py
   - name: library_checker/math
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/count_primes.test.py
       title: library_checker/math/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/factorize.test.py
       title: library_checker/math/factorize.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/min_of_linear.test.py
       title: library_checker/math/min_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/sum_of_floor_of_linear.test.py
       title: library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/two_sat.test.py
       title: library_checker/math/two_sat.test.py
   - name: library_checker/matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/matrix/matrix_det.test.py
       title: library_checker/matrix/matrix_det.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/matrix/matrix_inverse.test.py
       title: library_checker/matrix/matrix_inverse.test.py
     - icon: ':x:'

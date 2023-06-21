@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
-    path: math/count_primes.py
-    title: math/count_primes.py
+  - icon: ':heavy_check_mark:'
+    path: math_/count_primes.py
+    title: math_/count_primes.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/counting_primes
     links:
@@ -22,7 +22,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/counting_primes
 
 
-    from math.count_primes import count_primes
+    from math_.count_primes import count_primes
 
 
     N = int(input())
@@ -31,12 +31,12 @@ data:
 
     '
   dependsOn:
-  - math/count_primes.py
+  - math_/count_primes.py
   isVerificationFile: true
   path: library_checker/math/count_primes.test.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/math/count_primes.test.py
 layout: document

@@ -3,13 +3,13 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det.test.py
     title: library_checker/matrix/matrix_det.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_inverse.test.py
     title: library_checker/matrix/matrix_inverse.test.py
   - icon: ':x:'
@@ -17,7 +17,7 @@ data:
     title: library_checker/matrix/matrix_product.test.py
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -132,16 +132,16 @@ data:
     \n    res = 1\n    for i in range(N):\n        for j in range(i + 1, N):\n   \
     \         while A[j][i]:\n                tmp = A[i][i] // A[j][i]\n         \
     \       if tmp:\n                    for k in range(i, N):\n                 \
-    \       A[i][k] -= tmp * A[j][k]\n                        A[i][k] %= MOD\n   \
+    \       A[i][k] -= tmp * A[j][k]\n                        A[i][k] %= mod\n   \
     \             A[i], A[j] = A[j], A[i]\n                res *= -1\n           \
-    \     res %= MOD\n        res *= A[i][i]\n        res %= MOD\n        if not res:\n\
+    \     res %= mod\n        res *= A[i][i]\n        res %= mod\n        if not res:\n\
     \            break\n    return res\n"
   dependsOn: []
   isVerificationFile: false
   path: matrix/matrix.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - library_checker/matrix/matrix_det.test.py
   - library_checker/matrix/matrix_det_arbitrary_mod.test.py

@@ -44,15 +44,15 @@ data:
     \ = ids[2 * i] < ids[2 * i + 1]\n    return answer\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/two_sat.py
+  path: math_/two_sat.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: math/two_sat.py
+documentation_of: math_/two_sat.py
 layout: document
 redirect_from:
-- /library/math/two_sat.py
-- /library/math/two_sat.py.html
-title: math/two_sat.py
+- /library/math_/two_sat.py
+- /library/math_/two_sat.py.html
+title: math_/two_sat.py
 ---

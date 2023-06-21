@@ -60,15 +60,15 @@ data:
     \         s2[idx[i]] = now\n        return sa_is(s2, now)\n"
   dependsOn: []
   isVerificationFile: false
-  path: string/suffix_array.py
+  path: string_/suffix_array.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: string/suffix_array.py
+documentation_of: string_/suffix_array.py
 layout: document
 redirect_from:
-- /library/string/suffix_array.py
-- /library/string/suffix_array.py.html
-title: string/suffix_array.py
+- /library/string_/suffix_array.py
+- /library/string_/suffix_array.py.html
+title: string_/suffix_array.py
 ---

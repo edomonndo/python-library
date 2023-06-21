@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: matrix/matrix.py
     title: matrix/matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_det
     links:
@@ -25,14 +25,12 @@ data:
     from matrix.matrix import Matrix
 
 
-    N, M, K = map(int, input().split())
+    N = int(input())
 
-    A = list(map(int, input().split()))
-
-    B = list(map(int, input().split()))
+    A = [list(map(int, input().split())) for _ in range(N)]
 
 
-    A = Matrix(N, M, A)
+    A = Matrix(N, N, A)
 
     print(A.determinant())
 
@@ -42,8 +40,8 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_det.test.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_det.test.py
 layout: document

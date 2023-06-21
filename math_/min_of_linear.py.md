@@ -44,15 +44,15 @@ data:
     \        q += k * s\n        # assert min(p, q, r, s) >= 0\n    return X, DX\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/min_of_linear.py
+  path: math_/min_of_linear.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: math/min_of_linear.py
+documentation_of: math_/min_of_linear.py
 layout: document
 redirect_from:
-- /library/math/min_of_linear.py
-- /library/math/min_of_linear.py.html
-title: math/min_of_linear.py
+- /library/math_/min_of_linear.py
+- /library/math_/min_of_linear.py.html
+title: math_/min_of_linear.py
 ---

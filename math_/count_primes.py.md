@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/math/count_primes.test.py
     title: library_checker/math/count_primes.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -45,16 +45,16 @@ data:
     \ / r)]\n        ret += t - (e - l) * (pc + l - 1)\n    return ret\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/count_primes.py
+  path: math_/count_primes.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-06-21 21:40:34+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - library_checker/math/count_primes.test.py
-documentation_of: math/count_primes.py
+documentation_of: math_/count_primes.py
 layout: document
 redirect_from:
-- /library/math/count_primes.py
-- /library/math/count_primes.py.html
-title: math/count_primes.py
+- /library/math_/count_primes.py
+- /library/math_/count_primes.py.html
+title: math_/count_primes.py
 ---
