@@ -2,9 +2,8 @@
 
 from matrix.matrix import Matrix
 
-N, M, K = map(int, input().split())
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
+N = int(input())
+A = [list(map(int, input().split())) for _ in range(N)]
 
-A = Matrix(N, M, A)
+A = Matrix(N, N, A)
 print(A.determinant())

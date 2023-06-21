@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/sum_of_floor_of_linear
 
-from math.floor_sum import floor_sum
+from math_.floor_sum import floor_sum
 
 T = int(input())
 ans = [None] * T

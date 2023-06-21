@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/factorize
 
-from math.factorize import factorize
+from math_.factorize import factorize
 
 Q = int(input())
 query = [input() for _ in range(Q)]
