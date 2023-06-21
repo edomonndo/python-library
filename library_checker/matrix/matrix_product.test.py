@@ -10,5 +10,4 @@ A = Matrix(N, M, A)
 B = Matrix(M, K, B)
 
 C = A * B
-for row in C:
-    print(*row)
+print(C)

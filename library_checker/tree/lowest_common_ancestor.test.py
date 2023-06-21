@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/tree_diameter
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/lca
 
 from tree.lca import LcaDoubling
 

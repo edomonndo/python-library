@@ -1,7 +1,8 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/tree_diameter
+from typing import Tuple, List
 
 
-def diameter(N: int, G: list) -> tuple[int, list]:
+def diameter(N: int, G: List[List[int]]) -> Tuple[int, List[int]]:
     def dfs(start: int):
         dist = [-1 for _ in range(N)]
         dist[start] = 0
