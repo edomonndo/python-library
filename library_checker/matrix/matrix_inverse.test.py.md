@@ -6,9 +6,9 @@ data:
     title: matrix/matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/inverse_matrix
     links:
@@ -40,8 +40,8 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_inverse.test.py
   requiredBy: []
-  timestamp: '2023-06-21 21:40:34+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-06-21 22:43:59+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_inverse.test.py
 layout: document

@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2023-06-21 21:40:34+09:00'
+  timestamp: '2023-06-21 22:43:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_det_arbitrary_mod.test.py

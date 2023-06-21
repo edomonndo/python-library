@@ -36,8 +36,8 @@ data:
   timestamp: '2023-06-09 12:11:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - library_checker/data_structure/point_add_range_sum.test.py
   - library_checker/data_structure/static_range_sum.test.py
+  - library_checker/data_structure/point_add_range_sum.test.py
 documentation_of: data_structure/fenwick_tree.py
 layout: document
 title: Fenwick Tree
