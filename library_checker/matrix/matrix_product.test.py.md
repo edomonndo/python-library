@@ -19,17 +19,35 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_product\n\
-    \nfrom matrix.matrix import Matrix\n\nN, M, K = map(int, input().split())\nA =\
-    \ [list(map(int, input().split())) for _ in range(N)]\nB = [list(map(int, input().split()))\
-    \ for _ in range(M)]\n\nA = Matrix(N, M, A)\nB = Matrix(M, K, B)\n\nC = A * B\n\
-    for row in C:\n    print(*row)\n"
+  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_product
+
+
+    from matrix.matrix import Matrix
+
+
+    N, M, K = map(int, input().split())
+
+    A = [list(map(int, input().split())) for _ in range(N)]
+
+    B = [list(map(int, input().split())) for _ in range(M)]
+
+
+    A = Matrix(N, M, A)
+
+    B = Matrix(M, K, B)
+
+
+    C = A * B
+
+    print(C)
+
+    '
   dependsOn:
   - matrix/matrix.py
   isVerificationFile: true
   path: library_checker/matrix/matrix_product.test.py
   requiredBy: []
-  timestamp: '2023-06-21 21:40:34+09:00'
+  timestamp: '2023-06-21 22:22:13+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_product.test.py
