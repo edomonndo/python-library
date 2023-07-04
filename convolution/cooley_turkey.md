@@ -1,6 +1,6 @@
 ---
 title: 畳み込み カラツバ法
-documentation_of: ./cooley_turkey.md
+documentation_of: ./cooley_turkey.py
 --- 
 
 内容は理解できていない。

@@ -1,6 +1,6 @@
 ---
 title: 畳み込み $mod=998244353$
-documentation_of: ./convolution.md
+documentation_of: ./convolution.py
 --- 
 
 内容は理解できていない。
