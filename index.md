@@ -5,10 +5,10 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: convolution/convolution.py
-      title: convolution/convolution.py
+      title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
-      title: convolution/cooley_turkey.py
+      title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
   - name: data_structure
     pages:
     - icon: ':warning:'
@@ -30,7 +30,7 @@ data:
     pages:
     - icon: ':warning:'
       path: graph/dijkstra.py
-      title: Dijkstra
+      title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':warning:'
       path: graph/scc.py
       title: Strongly Connected Components
@@ -41,39 +41,45 @@ data:
       title: library_checker/tree/jump_on_tree.py
   - name: math_
     pages:
+    - icon: ':warning:'
+      path: math_/combination_mod.py
+      title: math_/combination_mod.py
     - icon: ':heavy_check_mark:'
       path: math_/count_primes.py
-      title: math_/count_primes.py
+      title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
     - icon: ':warning:'
       path: math_/factorize.py
-      title: math_/factorize.py
+      title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: math_/floor_sum.py
-      title: math_/floor_sum.py
+      title: Floor sum
+    - icon: ':warning:'
+      path: math_/is_prime.py
+      title: "\u7D20\u6570\u5224\u5B9A"
     - icon: ':warning:'
       path: math_/min_of_linear.py
-      title: math_/min_of_linear.py
+      title: Min of linear
     - icon: ':warning:'
       path: math_/two_sat.py
-      title: math_/two_sat.py
+      title: 2 Sat
   - name: matrix
     pages:
     - icon: ':question:'
       path: matrix/matrix.py
-      title: matrix/matrix.py
+      title: "\u884C\u5217"
   - name: string_
     pages:
     - icon: ':warning:'
       path: string_/suffix_array.py
-      title: string_/suffix_array.py
+      title: Suffix array
     - icon: ':warning:'
       path: string_/z_algorithm.py
-      title: string_/z_algorithm.py
+      title: Z algorithm
   - name: tree
     pages:
     - icon: ':warning:'
       path: tree/lca.py
-      title: tree/lca.py
+      title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
   verificationCategories:
   - name: library_checker/convolution
     pages:
@@ -142,7 +148,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/matrix/matrix_inverse.test.py
       title: library_checker/matrix/matrix_inverse.test.py
     - icon: ':x:'

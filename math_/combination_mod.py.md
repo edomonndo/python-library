@@ -14,24 +14,21 @@ data:
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import subprocess\n\n\ndef factorize(s: str) -> list[str]:\n    \"\"\"\n\
-    \    Factorize x by Linux command. Note that args s is string.\n    ```\n    $\
-    \ factor 12 -> \"b'12: 2 2 3\\r\\n'\"\n    ```\n    \"\"\"\n    x = str(subprocess.check_output(\"\
-    factor \" + s, shell=True))\n    return x[x.rfind(\":\") + 2 : -3].split()\n"
+  code: "def combination_mod(n: int, r: int, mod=10**9 + 7) -> int:\n    num = 1\n\
+    \    denom = 1\n    for i in range(r):\n        num = (num * (n - i)) % mod\n\
+    \        denom = (denom * (r - i)) % mod\n\n    return num * pow(denom, mod -\
+    \ 2, mod)\n"
   dependsOn: []
   isVerificationFile: false
-  path: math_/factorize.py
+  path: math_/combination_mod.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-07-05 08:12:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: math_/factorize.py
+documentation_of: math_/combination_mod.py
 layout: document
-title: "\u7D20\u56E0\u6570\u5206\u89E3"
+redirect_from:
+- /library/math_/combination_mod.py
+- /library/math_/combination_mod.py.html
+title: math_/combination_mod.py
 ---
-
-なぜかLinuxのコマンドの方が速い。もちろんLinuxでしか使えない。
-
-### `factorize(s: str)`
-
-$s$を素因数分解する。$s$は**文字列**であることに注意。

@@ -57,7 +57,14 @@ data:
     \ 255)\n    else:\n        idx = list(range(n))\n        idx.sort(key=lambda x:\
     \ s[x])\n        s2 = [0] * n\n        now = 0\n        for i in range(n):\n \
     \           if i & s[idx[i - 1]] != s[idx[i]]:\n                now += 1\n   \
-    \         s2[idx[i]] = now\n        return sa_is(s2, now)\n"
+    \         s2[idx[i]] = now\n        return sa_is(s2, now)\n\n\ndef lcp_array(s:\
+    \ str, sa: List[int]) -> List[int]:\n    n = len(s)\n    assert n >= 1\n    rnk\
+    \ = [0] * n\n    for i in range(n):\n        rnk[sa[i]] = i\n    lcp = [0] * (n\
+    \ - 1)\n    h = 0\n    for i in range(n):\n        if h > 0:\n            h -=\
+    \ 1\n        if rnk[i] == 0:\n            continue\n        j = sa[rnk[i] - 1]\n\
+    \        while j + h < n and i + h < n:\n            if s[j + h] != s[i + h]:\n\
+    \                break\n            h += 1\n        lcp[rnk[i] - 1] = h\n    return\
+    \ lcp\n"
   dependsOn: []
   isVerificationFile: false
   path: string_/suffix_array.py
@@ -67,8 +74,39 @@ data:
   verifiedWith: []
 documentation_of: string_/suffix_array.py
 layout: document
-redirect_from:
-- /library/string_/suffix_array.py
-- /library/string_/suffix_array.py.html
-title: string_/suffix_array.py
+title: Suffix array
 ---
+
+Suffix arrayは文字列全てのsuffix（接尾辞）を辞書順でソートし、その開始位置を保持した配列。
+
+#### 例
+S=abracadabra
+
+Sのすべてのsuffixとその開始位置、辞書順は、以下の通り。
+|suffix|開始位置|辞書順|
+|----|----|----|
+|abracadabra|0|2|
+|bracadabra|1|6|
+|racadabra|2|10|
+|acadabra|3|3|
+|cadabra|4|7|
+|adabra|5|4|
+|dabra|6|8|
+|abra|7|1|
+|bra|8|5|
+|ra|9|9|
+|a|10|0|
+
+よってSuffix arrayは `[10, 7, 0, 3, 5, 8, 1, 4, 6, 9, 2]`
+
+### `suffix_array_upper(s: List[int], upper: int)`
+
+Listからsuffix arrayを求める。
+
+### `suffix_array(s: str)`
+
+文字列からsuffix arrayを求める。
+
+### `lcp_array(s: str, sa: List[int])`
+最長共通接頭辞(Longest common prefix)
+を求める。Suffix arrayの前計算が必要。

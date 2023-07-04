@@ -34,8 +34,10 @@ data:
   - library_checker/math/sum_of_floor_of_linear.test.py
 documentation_of: math_/floor_sum.py
 layout: document
-redirect_from:
-- /library/math_/floor_sum.py
-- /library/math_/floor_sum.py.html
-title: math_/floor_sum.py
+title: Floor sum
 ---
+
+### `floor_sum(N: int, M: int, A: int, B: int)`
+
+以下の値を計算する。
+$$\displaystyle\sum^{N-1}_{i=0} floor(\frac{Ai+B}{M})$$

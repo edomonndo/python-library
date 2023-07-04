@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_inverse.test.py
     title: library_checker/matrix/matrix_inverse.test.py
   - icon: ':x:'
@@ -63,26 +63,7 @@ data:
     \  res = [[0] * self.m for _ in range(self.n)]\n        for i in range(self.n):\n\
     \            res_i, res_j = res[i], self[i]\n            for j in range(self.m):\n\
     \                res_i[j] = k * self_i[j] % self.MOD\n        return Matrix(self.n,\
-    \ self.m, res)\n\n    def linear_equations(self, vec):\n        assert self.n\
-    \ == len(vec)\n        aug = [self[i] + [vec[i]] for i in range(self.n)]\n   \
-    \     rank = 0\n        p = []\n        q = []\n        for j in range(self.m\
-    \ + 1):\n            for i in range(rank, self.n):\n                if aug[i][j]\
-    \ != 0:\n                    break\n            else:\n                q.append(j)\n\
-    \                continue\n            if j == self.m:\n                return\
-    \ -1, [], []\n            p.append(j)\n            aug[rank], aug[i] = aug[i],\
-    \ aug[rank]\n            inv = pow(aug[rank][j], self.MOD - 2, self.MOD)\n   \
-    \         aug_rank = aug[rank]\n            for k in range(self.m + 1):\n    \
-    \            aug_rank[k] *= inv\n                aug_rank[k] %= self.MOD\n   \
-    \         for i in range(self.n):\n                if i == rank:\n           \
-    \         continue\n                aug_i = aug[i]\n                c = -aug_i[j]\n\
-    \                for k in range(self.m + 1):\n                    aug_i[k] +=\
-    \ c * aug_rank[k]\n                    aug_i[k] %= self.MOD\n            rank\
-    \ += 1\n        dim = self.m - rank\n        sol = [0] * self.m\n        for i\
-    \ in range(rank):\n            sol[p[i]] = aug[i][-1]\n        vecs = [[0] * self.m\
-    \ for _ in range(dim)]\n        for i in range(dim):\n            vecs[i][q[i]]\
-    \ = 1\n        for i in range(dim):\n            vecs_i = vecs[i]\n          \
-    \  for j in range(rank):\n                vecs_i[p[j]] = -aug[j][q[i]] % self.MOD\n\
-    \        return dim, sol, vecs\n\n    def determinant(self):\n        assert self.is_square()\n\
+    \ self.m, res)\n\n    def determinant(self):\n        assert self.is_square()\n\
     \        res = 1\n        tmp = Matrix(self.n, self.n, self.mat)\n        for\
     \ j in range(self.n):\n            if tmp[j][j] == 0:\n                for i in\
     \ range(j + 1, self.n):\n                    if tmp[i][j] != 0:\n            \
@@ -141,17 +122,48 @@ data:
   isVerificationFile: false
   path: matrix/matrix.py
   requiredBy: []
-  timestamp: '2023-06-21 22:43:59+09:00'
+  timestamp: '2023-07-05 08:12:28+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - library_checker/matrix/matrix_product.test.py
   - library_checker/matrix/matrix_inverse.test.py
-  - library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - library_checker/matrix/matrix_det.test.py
 documentation_of: matrix/matrix.py
 layout: document
-redirect_from:
-- /library/matrix/matrix.py
-- /library/matrix/matrix.py.html
-title: matrix/matrix.py
+title: "\u884C\u5217"
 ---
+
+Matrixクラスは$\bmod{998,244,353}$で計算される。
+
+### `Mat = Matrix(N, M, [Mat])`
+
+$N$行$M$列の行列を作成する。引数に$Mat$を指定した場合は、その行列をコピーする。
+
+### `四則演算`
+
+$+$、$-$、$\times$　がサポートされている。
+
+### `Mat.is_square()`
+
+正方行列(`self.n == self.m`)であれば`True`。
+
+### `Mat.times(k)`
+
+行列の各要素を`k`倍する。
+
+### `Mat.determinant()`
+
+行列式を計算する。
+
+### `Mat.inverse()`
+
+逆行列を計算する。
+
+### `Mat.linear_equations(b)`
+
+行列$A$とベクトル$b$から、$Ax=b$となるベクトル$x$を求める。
+
+### `determinant_arbitrary_mod(N, A, m=998244353)`
+
+$N$行$N$列の正方行列$A$と非負整数$m$から行列式を$\mod m$で求める。
