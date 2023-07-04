@@ -93,50 +93,6 @@ class Matrix:
                 res_i[j] = k * self_i[j] % self.MOD
         return Matrix(self.n, self.m, res)
 
-    def linear_equations(self, vec):
-        assert self.n == len(vec)
-        aug = [self[i] + [vec[i]] for i in range(self.n)]
-        rank = 0
-        p = []
-        q = []
-        for j in range(self.m + 1):
-            for i in range(rank, self.n):
-                if aug[i][j] != 0:
-                    break
-            else:
-                q.append(j)
-                continue
-            if j == self.m:
-                return -1, [], []
-            p.append(j)
-            aug[rank], aug[i] = aug[i], aug[rank]
-            inv = pow(aug[rank][j], self.MOD - 2, self.MOD)
-            aug_rank = aug[rank]
-            for k in range(self.m + 1):
-                aug_rank[k] *= inv
-                aug_rank[k] %= self.MOD
-            for i in range(self.n):
-                if i == rank:
-                    continue
-                aug_i = aug[i]
-                c = -aug_i[j]
-                for k in range(self.m + 1):
-                    aug_i[k] += c * aug_rank[k]
-                    aug_i[k] %= self.MOD
-            rank += 1
-        dim = self.m - rank
-        sol = [0] * self.m
-        for i in range(rank):
-            sol[p[i]] = aug[i][-1]
-        vecs = [[0] * self.m for _ in range(dim)]
-        for i in range(dim):
-            vecs[i][q[i]] = 1
-        for i in range(dim):
-            vecs_i = vecs[i]
-            for j in range(rank):
-                vecs_i[p[j]] = -aug[j][q[i]] % self.MOD
-        return dim, sol, vecs
-
     def determinant(self):
         assert self.is_square()
         res = 1

@@ -119,3 +119,25 @@ def suffix_array(s: str) -> List[int]:
                 now += 1
             s2[idx[i]] = now
         return sa_is(s2, now)
+
+
+def lcp_array(s: str, sa: List[int]) -> List[int]:
+    n = len(s)
+    assert n >= 1
+    rnk = [0] * n
+    for i in range(n):
+        rnk[sa[i]] = i
+    lcp = [0] * (n - 1)
+    h = 0
+    for i in range(n):
+        if h > 0:
+            h -= 1
+        if rnk[i] == 0:
+            continue
+        j = sa[rnk[i] - 1]
+        while j + h < n and i + h < n:
+            if s[j + h] != s[i + h]:
+                break
+            h += 1
+        lcp[rnk[i] - 1] = h
+    return lcp
