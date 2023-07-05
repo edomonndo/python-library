@@ -12,19 +12,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_inverse.test.py
     title: library_checker/matrix/matrix_inverse.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_product.test.py
     title: library_checker/matrix/matrix_product.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
-    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "class Matrix:\n    MOD = 998244353\n\n    def __init__(self, n, m, mat=None):\n\
     \        self.n = n\n        self.m = m\n        self.mat = [[0] * self.m for\
@@ -124,7 +122,7 @@ data:
   path: matrix/matrix.py
   requiredBy: []
   timestamp: '2023-07-05 16:20:47+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - library_checker/matrix/matrix_product.test.py
