@@ -164,10 +164,10 @@ data:
       title: library_checker/sample/many_aplusb.test.py
   - name: library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/string/suffix_array.test.py
       title: library_checker/string/suffix_array.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/string/z_algorithm.test.py
       title: library_checker/string/z_algorithm.test.py
   - name: library_checker/tree
@@ -175,10 +175,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/tree/cartesian_tree.test.py
       title: library_checker/tree/cartesian_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/tree/lowest_common_ancestor.test.py
       title: library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/tree/tree_diameter.test.py
       title: library_checker/tree/tree_diameter.test.py
 layout: toppage
