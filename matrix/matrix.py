@@ -85,7 +85,7 @@ class Matrix:
             res[i][i] = 1
         return res
 
-    def times(self, k: int) -> Matrix:
+    def times(self, k: int):
         res = [[0] * self.m for _ in range(self.n)]
         for i in range(self.n):
             res_i, self_i = res[i], self[i]
