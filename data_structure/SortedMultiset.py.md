@@ -7,16 +7,14 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
   attributes:
-    links:
-    - https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py\n\
-    \nimport math\nfrom bisect import bisect_left, bisect_right\nfrom typing import\
+  code: "import math\nfrom bisect import bisect_left, bisect_right\nfrom typing import\
     \ Generic, Iterable, Iterator, List, Tuple, TypeVar, Optional\n\nT = TypeVar(\"\
     T\")\n\n\nclass SortedMultiset(Generic[T]):\n    BUCKET_RATIO = 50\n    REBUILD_RATIO\
     \ = 170\n\n    def _build(self, a: Optional[List[T]] = None) -> None:\n      \
@@ -93,6 +91,8 @@ documentation_of: data_structure/SortedMultiset.py
 layout: document
 title: SortedMultiset
 ---
+
+参考元：https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py
 
 SortedSet の多重集合版です。同じ要素を複数入れることができます。
 

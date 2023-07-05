@@ -27,8 +27,9 @@ data:
   verifiedWith: []
 documentation_of: math_/combination_mod.py
 layout: document
-redirect_from:
-- /library/math_/combination_mod.py
-- /library/math_/combination_mod.py.html
-title: math_/combination_mod.py
+title: "\u4E8C\u9805\u4FC2\u6570(mod)"
 ---
+
+### `combination_mod(n: int, r: int, m=10**9 + 7)`
+
+$nCr\pmod m$を求める。

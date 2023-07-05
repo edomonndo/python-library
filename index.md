@@ -43,7 +43,7 @@ data:
     pages:
     - icon: ':warning:'
       path: math_/combination_mod.py
-      title: math_/combination_mod.py
+      title: "\u4E8C\u9805\u4FC2\u6570(mod)"
     - icon: ':heavy_check_mark:'
       path: math_/count_primes.py
       title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"

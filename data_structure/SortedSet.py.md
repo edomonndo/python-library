@@ -7,21 +7,19 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
   attributes:
-    links:
-    - https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
     \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py\n\nimport\
-    \ math\nfrom bisect import bisect_left, bisect_right\nfrom typing import Generic,\
-    \ Iterable, Iterator, List, Tuple, TypeVar, Optional\n\nT = TypeVar(\"T\")\n\n\
-    \nclass SortedSet(Generic[T]):\n    BUCKET_RATIO = 50\n    REBUILD_RATIO = 170\n\
-    \n    def _build(self, a: Optional[List[T]] = None) -> None:\n        \"Evenly\
-    \ divide `a` into buckets.\"\n        if a is None:\n            a = list(self)\n\
-    \        size = self.size = len(a)\n        bucket_size = int(math.ceil(math.sqrt(size\
+  code: "import math\nfrom bisect import bisect_left, bisect_right\nfrom typing import\
+    \ Generic, Iterable, Iterator, List, Tuple, TypeVar, Optional\n\nT = TypeVar(\"\
+    T\")\n\n\nclass SortedSet(Generic[T]):\n    BUCKET_RATIO = 50\n    REBUILD_RATIO\
+    \ = 170\n\n    def _build(self, a: Optional[List[T]] = None) -> None:\n      \
+    \  \"Evenly divide `a` into buckets.\"\n        if a is None:\n            a =\
+    \ list(self)\n        size = self.size = len(a)\n        bucket_size = int(math.ceil(math.sqrt(size\
     \ / self.BUCKET_RATIO)))\n        self.a = [\n            a[size * i // bucket_size\
     \ : size * (i + 1) // bucket_size]\n            for i in range(bucket_size)\n\
     \        ]\n\n    def __init__(self, a: Iterable[T] = []) -> None:\n        \"\
@@ -92,6 +90,8 @@ documentation_of: data_structure/SortedSet.py
 layout: document
 title: SortedSet
 ---
+
+参考元：https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
 
 ソート済み列をいくつかのバケット (`list`) に分割して管理します。このとき、(バケットの個数) : (バケット内の個数) ${} = 1 : 50$ くらいにします。(`list` の `insert` / `pop` の定数倍が軽く、バケット再構築の定数倍が重いため)  
 あるバケットが空になったり、多すぎたりしたら、1 度まとめて、均等にバケットに分割します。  
