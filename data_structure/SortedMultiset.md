@@ -3,6 +3,8 @@ title: SortedMultiset
 documentation_of: ./SortedMultiset.py
 ---
 
+参考元：https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py
+
 SortedSet の多重集合版です。同じ要素を複数入れることができます。
 
 ソート済み列をいくつかのバケット (`list`) に分割して管理します。このとき、(バケットの個数) : (バケット内の個数) ${} = 1 : 50$ くらいにします。(`list` の `insert` / `pop` の定数倍が軽く、バケット再構築の定数倍が重いため)  

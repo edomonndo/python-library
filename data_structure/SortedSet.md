@@ -3,6 +3,8 @@ title: SortedSet
 documentation_of: ./SortedSet.py
 ---
 
+参考元：https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
+
 ソート済み列をいくつかのバケット (`list`) に分割して管理します。このとき、(バケットの個数) : (バケット内の個数) ${} = 1 : 50$ くらいにします。(`list` の `insert` / `pop` の定数倍が軽く、バケット再構築の定数倍が重いため)  
 あるバケットが空になったり、多すぎたりしたら、1 度まとめて、均等にバケットに分割します。  
 基本的に、全ての操作が (要素数を $N$ として) $O(\sqrt N)$ 時間で、(どのバケットか探す時間) < (バケットの中を探す時間) < (バケットへの挿入・削除) の順に重くなります。
