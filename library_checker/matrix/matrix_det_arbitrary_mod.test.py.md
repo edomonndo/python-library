@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: matrix/matrix.py
     title: "\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
     links:
@@ -38,8 +38,8 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2023-07-05 10:35:19+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-07-05 16:20:47+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_det_arbitrary_mod.test.py
 layout: document

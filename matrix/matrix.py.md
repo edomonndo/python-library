@@ -3,10 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det.test.py
     title: library_checker/matrix/matrix_det.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - icon: ':x:'
@@ -17,7 +17,7 @@ data:
     title: library_checker/matrix/matrix_product.test.py
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -60,7 +60,7 @@ data:
     \ 1\n        return res\n\n    def is_square(self) -> bool:\n        return self.n\
     \ == self.m\n\n    def id(self, n: int):\n        res = Matrix(n, n)\n       \
     \ for i in range(n):\n            res[i][i] = 1\n        return res\n\n    def\
-    \ times(self, k: int) -> Matrix:\n        res = [[0] * self.m for _ in range(self.n)]\n\
+    \ times(self, k: int):\n        res = [[0] * self.m for _ in range(self.n)]\n\
     \        for i in range(self.n):\n            res_i, self_i = res[i], self[i]\n\
     \            for j in range(self.m):\n                res_i[j] = k * self_i[j]\
     \ % self.MOD\n        return Matrix(self.n, self.m, res)\n\n    def determinant(self):\n\
@@ -123,8 +123,8 @@ data:
   isVerificationFile: false
   path: matrix/matrix.py
   requiredBy: []
-  timestamp: '2023-07-05 10:35:19+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-07-05 16:20:47+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - library_checker/matrix/matrix_product.test.py
