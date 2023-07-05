@@ -64,7 +64,7 @@ data:
       title: 2 Sat
   - name: matrix
     pages:
-    - icon: ':question:'
+    - icon: ':x:'
       path: matrix/matrix.py
       title: "\u884C\u5217"
   - name: string_
@@ -142,13 +142,13 @@ data:
       title: library_checker/math/two_sat.test.py
   - name: library_checker/matrix
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/matrix/matrix_det.test.py
       title: library_checker/matrix/matrix_det.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/matrix/matrix_inverse.test.py
       title: library_checker/matrix/matrix_inverse.test.py
     - icon: ':x:'

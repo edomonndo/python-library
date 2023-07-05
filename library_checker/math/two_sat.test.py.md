@@ -21,7 +21,7 @@ data:
     \ (N, M))\nclause = []\nfor i in range(M):\n    a, b, z = map(int, input().split())\n\
     \    c, d = (a // abs(a) + 1) // 2, (b // abs(b) + 1) // 2\n    c, d = bool(c),\
     \ bool(d)\n    clause.append((abs(a) - 1, c, abs(b) - 1, d))\nresult = two_sat(N,\
-    \ clause)\nif result == None:\n    print(\"s UNSATISFIABLE\")\nelse:\n    print(\"\
+    \ clause)\nif result is None:\n    print(\"s UNSATISFIABLE\")\nelse:\n    print(\"\
     s SATISFIABLE\")\n    print(\"v\", *[(i + 1) if result[i] else (-1 - i) for i\
     \ in range(N)] + [0])\n"
   dependsOn: []

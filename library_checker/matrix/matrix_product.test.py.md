@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: matrix/matrix.py
     title: "\u884C\u5217"
   _extendedRequiredBy: []
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: library_checker/matrix/matrix_product.test.py
   requiredBy: []
-  timestamp: '2023-07-05 08:12:28+09:00'
+  timestamp: '2023-07-05 10:35:19+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/matrix/matrix_product.test.py

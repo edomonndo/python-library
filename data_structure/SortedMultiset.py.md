@@ -22,21 +22,21 @@ data:
     \ list(self)\n        size = self.size = len(a)\n        bucket_size = int(math.ceil(math.sqrt(size\
     \ / self.BUCKET_RATIO)))\n        self.a = [\n            a[size * i // bucket_size\
     \ : size * (i + 1) // bucket_size]\n            for i in range(bucket_size)\n\
-    \        ]\n\n    def __init__(self, a: Iterable[T] = []) -> None:\n        \"\
-    Make a new SortedMultiset from iterable. / O(N) if sorted / O(N log N)\"\n   \
-    \     a = list(a)\n        if not all(a[i] <= a[i + 1] for i in range(len(a) -\
-    \ 1)):\n            a = sorted(a)\n        self._build(a)\n\n    def __iter__(self)\
-    \ -> Iterator[T]:\n        for i in self.a:\n            for j in i:\n       \
-    \         yield j\n\n    def __reversed__(self) -> Iterator[T]:\n        for i\
-    \ in reversed(self.a):\n            for j in reversed(i):\n                yield\
-    \ j\n\n    def __eq__(self, other) -> bool:\n        return list(self) == list(other)\n\
-    \n    def __len__(self) -> int:\n        return self.size\n\n    def __repr__(self)\
-    \ -> str:\n        return \"SortedMultiset\" + str(self.a)\n\n    def __str__(self)\
-    \ -> str:\n        s = str(list(self))\n        return \"{\" + s[1 : len(s) -\
-    \ 1] + \"}\"\n\n    def _position(self, x: T) -> Tuple[List[T], int]:\n      \
-    \  \"Find the bucket and position which x should be inserted. self must not be\
-    \ empty.\"\n        for a in self.a:\n            if x <= a[-1]:\n           \
-    \     break\n        return (a, bisect_left(a, x))\n\n    def __contains__(self,\
+    \        ]\n\n    def __init__(self, a: Iterable[T] = None) -> None:\n       \
+    \ \"Make a new SortedMultiset from iterable. / O(N) if sorted / O(N log N)\"\n\
+    \        a = list(a) if a is not None else []\n        if not all(a[i] <= a[i\
+    \ + 1] for i in range(len(a) - 1)):\n            a = sorted(a)\n        self._build(a)\n\
+    \n    def __iter__(self) -> Iterator[T]:\n        for i in self.a:\n         \
+    \   for j in i:\n                yield j\n\n    def __reversed__(self) -> Iterator[T]:\n\
+    \        for i in reversed(self.a):\n            for j in reversed(i):\n     \
+    \           yield j\n\n    def __eq__(self, other) -> bool:\n        return list(self)\
+    \ == list(other)\n\n    def __len__(self) -> int:\n        return self.size\n\n\
+    \    def __repr__(self) -> str:\n        return \"SortedMultiset\" + str(self.a)\n\
+    \n    def __str__(self) -> str:\n        s = str(list(self))\n        return \"\
+    {\" + s[1 : len(s) - 1] + \"}\"\n\n    def _position(self, x: T) -> Tuple[List[T],\
+    \ int]:\n        \"Find the bucket and position which x should be inserted. self\
+    \ must not be empty.\"\n        for a in self.a:\n            if x <= a[-1]:\n\
+    \                break\n        return (a, bisect_left(a, x))\n\n    def __contains__(self,\
     \ x: T) -> bool:\n        if self.size == 0:\n            return False\n     \
     \   a, i = self._position(x)\n        return i != len(a) and a[i] == x\n\n   \
     \ def count(self, x: T) -> int:\n        \"Count the number of x.\"\n        return\

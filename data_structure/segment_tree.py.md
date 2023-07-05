@@ -36,7 +36,7 @@ data:
     \n    def max_right(self, l, f):\n        assert 0 <= l and l <= self.n\n    \
     \    assert f(self.e)\n        if l == self.n:\n            return self.n\n  \
     \      l += self.size\n        sm = self.e\n        while 1:\n            while\
-    \ l % 2 == 0:\n                l >>= 1\n            if not (f(self.op(sm, self.d[l]))):\n\
+    \ l % 2 == 0:\n                l >>= 1\n            if not f(self.op(sm, self.d[l])):\n\
     \                while l < self.size:\n                    l = 2 * l\n       \
     \             if f(self.op(sm, self.d[l])):\n                        sm = self.op(sm,\
     \ self.d[l])\n                        l += 1\n                return l - self.size\n\
@@ -45,7 +45,7 @@ data:
     \ r, f):\n        assert 0 <= r and r <= self.n\n        assert f(self.e)\n  \
     \      if r == 0:\n            return 0\n        r += self.size\n        sm =\
     \ self.e\n        while 1:\n            r -= 1\n            while r > 1 and (r\
-    \ % 2):\n                r >>= 1\n            if not (f(self.op(self.d[r], sm))):\n\
+    \ % 2):\n                r >>= 1\n            if not f(self.op(self.d[r], sm)):\n\
     \                while r < self.size:\n                    r = 2 * r + 1\n   \
     \                 if f(self.op(self.d[r], sm)):\n                        sm =\
     \ self.op(self.d[r], sm)\n                        r -= 1\n                return\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: false
   path: data_structure/segment_tree.py
   requiredBy: []
-  timestamp: '2023-06-09 12:11:59+09:00'
+  timestamp: '2023-07-05 10:35:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - library_checker/data_structure/static_rmq.test.py
