@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: library_checker/matrix/matrix_inverse.test.py
     title: library_checker/matrix/matrix_inverse.test.py
   - icon: ':x:'
