@@ -20,9 +20,9 @@ class SortedMultiset(Generic[T]):
             for i in range(bucket_size)
         ]
 
-    def __init__(self, a: Iterable[T] = []) -> None:
+    def __init__(self, a: Iterable[T] = None) -> None:
         "Make a new SortedMultiset from iterable. / O(N) if sorted / O(N log N)"
-        a = list(a)
+        a = list(a) if a is not None else []
         if not all(a[i] <= a[i + 1] for i in range(len(a) - 1)):
             a = sorted(a)
         self._build(a)

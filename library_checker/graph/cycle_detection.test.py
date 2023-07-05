@@ -1,7 +1,8 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/cycle_detection
+from typing import List
 
 
-def find_cycle(N: int, G: list) -> list:
+def find_cycle(N: int, G: List[List[int]]) -> List[int]:
     visited = [False] * N
     finished = [False] * N
     stc = []

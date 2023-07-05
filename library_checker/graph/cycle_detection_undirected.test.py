@@ -1,7 +1,11 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/cycle_detection_undirected
 
+from typing import List, Tuple
 
-def find_cycle(N: int, M: int, G: list) -> tuple[int, int, int, list, list]:
+
+def find_cycle(
+    N: int, M: int, G: List[List[int]]
+) -> Tuple[int, int, int, List[int], List[int]]:
     visited = [0] * N
     finished = [0] * M
     par_v = [None] * N
@@ -33,7 +37,7 @@ def find_cycle(N: int, M: int, G: list) -> tuple[int, int, int, list, list]:
     return -1, -1, -1, par_v, par_e
 
 
-def cycle_detection(N: int, M: int, G: list):
+def cycle_detection(N: int, M: int, G: List[int]):
     v, p, e, par_v, par_e = find_cycle(N, M, G)
     if p == -1:
         return [], []

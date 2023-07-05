@@ -1,3 +1,6 @@
+from typing import List
+
+
 def miller_rabin(n: int) -> bool:
     """Miller-Rabin: ≒ O(1)"""
     assert n <= 1 << 64

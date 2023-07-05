@@ -20,9 +20,9 @@ class SortedSet(Generic[T]):
             for i in range(bucket_size)
         ]
 
-    def __init__(self, a: Iterable[T] = []) -> None:
+    def __init__(self, a: Iterable[T] = None) -> None:
         "Make a new SortedSet from iterable. / O(N) if sorted and unique / O(N log N)"
-        a = list(a)
+        a = list(a) if a is not None else []
         if not all(a[i] < a[i + 1] for i in range(len(a) - 1)):
             a = sorted(set(a))
         self._build(a)

@@ -59,7 +59,7 @@ class Segtree:
         while 1:
             while l % 2 == 0:
                 l >>= 1
-            if not (f(self.op(sm, self.d[l]))):
+            if not f(self.op(sm, self.d[l])):
                 while l < self.size:
                     l = 2 * l
                     if f(self.op(sm, self.d[l])):
@@ -83,7 +83,7 @@ class Segtree:
             r -= 1
             while r > 1 and (r % 2):
                 r >>= 1
-            if not (f(self.op(self.d[r], sm))):
+            if not f(self.op(self.d[r], sm)):
                 while r < self.size:
                     r = 2 * r + 1
                     if f(self.op(self.d[r], sm)):

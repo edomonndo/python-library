@@ -65,10 +65,10 @@ class Matrix:
     def __rmul__(self, other):
         return self.times(other)
 
-    def __pow__(self, k):
+    def __pow__(self, k: int):
         assert self.is_square()
         tmp = Matrix(self.n, self.n, self.mat)
-        res = Matrix.id(self.n)
+        res = self.id(self.n)
         while k:
             if k & 1:
                 res *= tmp
@@ -76,19 +76,19 @@ class Matrix:
             k >>= 1
         return res
 
-    def is_square(self):
+    def is_square(self) -> bool:
         return self.n == self.m
 
-    def id(n):
+    def id(self, n: int):
         res = Matrix(n, n)
         for i in range(n):
             res[i][i] = 1
         return res
 
-    def times(self, k):
+    def times(self, k: int) -> Matrix:
         res = [[0] * self.m for _ in range(self.n)]
         for i in range(self.n):
-            res_i, res_j = res[i], self[i]
+            res_i, self_i = res[i], self[i]
             for j in range(self.m):
                 res_i[j] = k * self_i[j] % self.MOD
         return Matrix(self.n, self.m, res)
@@ -121,7 +121,7 @@ class Matrix:
 
     def inverse(self):
         assert self.is_square()
-        res = Matrix.id(self.n)
+        res = self.id(self.n)
         tmp = Matrix(self.n, self.n, self.mat)
         for j in range(self.n):
             if tmp[j][j] == 0:

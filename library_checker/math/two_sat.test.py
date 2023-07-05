@@ -11,7 +11,7 @@ for i in range(M):
     c, d = bool(c), bool(d)
     clause.append((abs(a) - 1, c, abs(b) - 1, d))
 result = two_sat(N, clause)
-if result == None:
+if result is None:
     print("s UNSATISFIABLE")
 else:
     print("s SATISFIABLE")

@@ -19,7 +19,7 @@ def sa_is(s: List[int], upper: int) -> List[int]:
     sum_l = [0] * (upper + 1)
     sum_s = [0] * (upper + 1)
     for i in range(n):
-        if not (ls[i]):
+        if not ls[i]:
             sum_s[s[i]] += 1
         else:
             sum_l[s[i] + 1] += 1
@@ -42,7 +42,7 @@ def sa_is(s: List[int], upper: int) -> List[int]:
         buf[s[n - 1]] += 1
         for i in range(n):
             v = sa[i]
-            if v >= 1 and not (ls[v - 1]):
+            if v >= 1 and not ls[v - 1]:
                 sa[buf[s[v - 1]]] = v - 1
                 buf[s[v - 1]] += 1
         buf = sum_l[:]
@@ -87,7 +87,7 @@ def sa_is(s: List[int], upper: int) -> List[int]:
                     r += 1
                 if (l == n) or (s[l] != s[r]):
                     same = False
-            if not (same):
+            if not same:
                 rec_upper += 1
             rec_s[lms_map[sorted_lms[i]]] = rec_upper
         rec_sa = sa_is(rec_s, rec_upper)
