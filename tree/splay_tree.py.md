@@ -41,20 +41,20 @@ data:
     \                elif p.right == n and pp.left == p:\n                    self.rotate_left(p)\n\
     \                    self.rotate_right(pp)\n                elif p.left == n and\
     \ pp.right == p:\n                    self.rotate_right(p)\n                 \
-    \   self.rotate_left(pp)\n\n    def insert(self, n: Node):\n        x = None\n\
-    \        temp = self.root\n        while temp is not None:\n            x = temp\n\
-    \            if n.data < temp.data:\n                temp = temp.left\n      \
-    \      else:\n                temp = temp.right\n\n        n.parent = x\n\n  \
-    \      if x is None:  # newly added temp is root\n            self.root = n\n\
-    \        elif n.data < x.data:\n            x.left = n\n        else:\n      \
-    \      x.right = n\n\n        self.splay(n)\n\n    def search(self, n: Node, x):\n\
-    \        try:\n            while x != n.data:\n                if x < n.data:\n\
-    \                    n = n.left\n                elif x > n.data:\n          \
-    \          n = n.right\n                else:\n                    return None\n\
-    \            self.splay(n)\n            return n\n        except AttributeError:\n\
-    \            return None\n\n    def delete(self, n: Node):\n        self.splay(n)\n\
-    \n        left_subtree = SplayTree()\n        left_subtree.root = self.root.left\n\
-    \        if left_subtree.root is not None:\n            left_subtree.root.parent\
+    \   self.rotate_left(pp)\n\n    def insert(self, key):\n        n = Node(key)\n\
+    \        x = None\n        temp = self.root\n        while temp is not None:\n\
+    \            x = temp\n            if n.data < temp.data:\n                temp\
+    \ = temp.left\n            else:\n                temp = temp.right\n\n      \
+    \  n.parent = x\n\n        if x is None:  # newly added temp is root\n       \
+    \     self.root = n\n        elif n.data < x.data:\n            x.left = n\n \
+    \       else:\n            x.right = n\n\n        self.splay(n)\n\n    def search(self,\
+    \ n: Node, x):\n        try:\n            while x != n.data:\n               \
+    \ if x < n.data:\n                    n = n.left\n                elif x > n.data:\n\
+    \                    n = n.right\n                else:\n                    return\
+    \ None\n            self.splay(n)\n            return n\n        except AttributeError:\n\
+    \            return None\n\n    def delete(self, key):\n        n = Node(key)\n\
+    \        self.splay(n)\n\n        left_subtree = SplayTree()\n        left_subtree.root\
+    \ = self.root.left\n        if left_subtree.root is not None:\n            left_subtree.root.parent\
     \ = None\n\n        right_subtree = SplayTree()\n        right_subtree.root =\
     \ self.root.right\n        if right_subtree.root is not None:\n            right_subtree.root.parent\
     \ = None\n\n        if left_subtree.root is not None:\n            m = left_subtree.maximum(left_subtree.root)\n\
@@ -67,13 +67,35 @@ data:
   isVerificationFile: false
   path: tree/splay_tree.py
   requiredBy: []
-  timestamp: '2023-07-06 11:56:00+09:00'
+  timestamp: '2023-07-06 22:40:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tree/splay_tree.py
 layout: document
-redirect_from:
-- /library/tree/splay_tree.py
-- /library/tree/splay_tree.py.html
-title: tree/splay_tree.py
+title: Splay tree
 ---
+
+追加、削除、検索が$O(logN)$でできる二分木。
+独特なSplay操作により、選択された頂点が上にくるため、繰り返し同じ内容を検索するときに有利。
+Splay操作は木を平衡二分木に近い状態に保ち、最悪計算量を悪化させない。
+
+
+### `ST=SplayTree()`
+
+初期化。
+
+### `ST.insert(x)`
+
+$x$を追加する。
+
+### `ST.search(self, ST.root, x)`
+
+スプレー木から$x$のノードを検索する。第１引数は検索を開始するノードを指定する。$x$により近い先祖ノードが分かっていればルートノード以外を指定してもよい。
+
+### `ST.delete(x)`
+
+$x$を削除する
+
+### `ST.inorder(ST.root)`
+
+ルートノードの子孫ノードを左から順に出力する。

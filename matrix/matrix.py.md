@@ -124,9 +124,9 @@ data:
   timestamp: '2023-07-05 16:20:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - library_checker/matrix/matrix_inverse.test.py
   - library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - library_checker/matrix/matrix_product.test.py
-  - library_checker/matrix/matrix_inverse.test.py
   - library_checker/matrix/matrix_det.test.py
 documentation_of: matrix/matrix.py
 layout: document

@@ -80,6 +80,7 @@ Suffix arrayは文字列全てのsuffix（接尾辞）を辞書順でソート�
 S=abracadabra
 
 Sのすべてのsuffixとその開始位置、辞書順は、以下の通り。
+
 |suffix|開始位置|辞書順|
 |----|----|----|
 |abracadabra|0|2|
@@ -105,5 +106,6 @@ Listからsuffix arrayを求める。
 文字列からsuffix arrayを求める。
 
 ### `lcp_array(s: str, sa: List[int])`
+
 最長共通接頭辞(Longest common prefix)
 を求める。Suffix arrayの前計算が必要。

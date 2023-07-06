@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/jump_on_tree
     links:
@@ -20,16 +20,16 @@ data:
     \    G[a].append(b)\n    G[b].append(a)\n\nlca = LcaDoubling(N, G)\nfor _ in range(Q):\n\
     \    s, t, i = map(int, input().split())\n    print(lca.jump(s, t, i))\n"
   dependsOn: []
-  isVerificationFile: false
-  path: library_checker/tree/jump_on_tree.py
+  isVerificationFile: true
+  path: library_checker/tree/jump_on_tree.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: library_checker/tree/jump_on_tree.py
+documentation_of: library_checker/tree/jump_on_tree.test.py
 layout: document
 redirect_from:
-- /library/library_checker/tree/jump_on_tree.py
-- /library/library_checker/tree/jump_on_tree.py.html
-title: library_checker/tree/jump_on_tree.py
+- /verify/library_checker/tree/jump_on_tree.test.py
+- /verify/library_checker/tree/jump_on_tree.test.py.html
+title: library_checker/tree/jump_on_tree.test.py
 ---

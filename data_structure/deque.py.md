@@ -69,6 +69,6 @@ title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
 
 キューの先頭/末尾から$x$を削除する。削除した値が返り値となる。
 
-###　`Deque.sum`
+### `Deque.sum`
 
 キューに入った要素の合計を$O(1)$で取得する。

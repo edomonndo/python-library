@@ -38,11 +38,6 @@ data:
     - icon: ':warning:'
       path: graph/scc.py
       title: Strongly Connected Components
-  - name: library_checker/tree
-    pages:
-    - icon: ':warning:'
-      path: library_checker/tree/jump_on_tree.py
-      title: library_checker/tree/jump_on_tree.py
   - name: math_
     pages:
     - icon: ':warning:'
@@ -81,7 +76,7 @@ data:
       title: Suffix array
     - icon: ':warning:'
       path: string_/trie_tree.py
-      title: string_/trie_tree.py
+      title: Trie tree
     - icon: ':warning:'
       path: string_/z_algorithm.py
       title: Z algorithm
@@ -92,7 +87,7 @@ data:
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
     - icon: ':warning:'
       path: tree/splay_tree.py
-      title: tree/splay_tree.py
+      title: Splay tree
   verificationCategories:
   - name: library_checker/convolution
     pages:
@@ -141,7 +136,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/math/count_primes.test.py
       title: library_checker/math/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/math/factorize.test.py
       title: library_checker/math/factorize.test.py
     - icon: ':heavy_check_mark:'
@@ -188,6 +183,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/tree/cartesian_tree.test.py
       title: library_checker/tree/cartesian_tree.test.py
+    - icon: ':heavy_check_mark:'
+      path: library_checker/tree/jump_on_tree.test.py
+      title: library_checker/tree/jump_on_tree.test.py
     - icon: ':heavy_check_mark:'
       path: library_checker/tree/lowest_common_ancestor.test.py
       title: library_checker/tree/lowest_common_ancestor.test.py
