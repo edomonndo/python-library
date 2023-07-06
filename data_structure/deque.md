@@ -19,6 +19,6 @@ documentation_of: ./deque.py
 
 キューの先頭/末尾から$x$を削除する。削除した値が返り値となる。
 
-###　`Deque.sum`
+### `Deque.sum`
 
 キューに入った要素の合計を$O(1)$で取得する。

@@ -77,7 +77,8 @@ class SplayTree:
                     self.rotate_right(p)
                     self.rotate_left(pp)
 
-    def insert(self, n: Node):
+    def insert(self, key):
+        n = Node(key)
         x = None
         temp = self.root
         while temp is not None:
@@ -112,7 +113,8 @@ class SplayTree:
         except AttributeError:
             return None
 
-    def delete(self, n: Node):
+    def delete(self, key):
+        n = Node(key)
         self.splay(n)
 
         left_subtree = SplayTree()

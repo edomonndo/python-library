@@ -3,8 +3,6 @@ title: 素因数分解
 documentation_of: ./factorize.py
 ---
 
-なぜかLinuxのコマンドの方が速い。もちろんLinuxでしか使えない。
+### `factorize(n: int)`
 
-### `factorize(s: str)`
-
-$s$を素因数分解する。$s$は**文字列**であることに注意。
+$s$を素因数分解する。返り値はdictで、keyが素因数、valueがその素因数で割れる回数。

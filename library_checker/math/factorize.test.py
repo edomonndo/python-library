@@ -3,10 +3,11 @@
 from math_.factorize import factorize
 
 Q = int(input())
-query = [input() for _ in range(Q)]
+query = [int(input()) for _ in range(Q)]
 ans = [None] * Q
 for i in range(Q):
     x = factorize(query[i])
-    ans[i] = " ".join([str(len(x))] + x)
+    factors = [i for i, j in sorted(x.items()) for _ in range(j)]
+    ans[i] = " ".join(map(str, [len(factors)] + factors))
 
 print(*ans, sep="\n")
