@@ -17,6 +17,10 @@ data:
     - icon: ':warning:'
       path: data_structure/SortedSet.py
       title: SortedSet
+    - icon: ':warning:'
+      path: data_structure/deque.py
+      title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
+        \u5408\u8A08\uFF09"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
@@ -48,6 +52,9 @@ data:
       path: math_/count_primes.py
       title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
     - icon: ':warning:'
+      path: math_/divisors.py
+      title: "\u7D04\u6570\u5217\u6319"
+    - icon: ':warning:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -73,6 +80,9 @@ data:
       path: string_/suffix_array.py
       title: Suffix array
     - icon: ':warning:'
+      path: string_/trie_tree.py
+      title: string_/trie_tree.py
+    - icon: ':warning:'
       path: string_/z_algorithm.py
       title: Z algorithm
   - name: tree
@@ -80,6 +90,9 @@ data:
     - icon: ':warning:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
+    - icon: ':warning:'
+      path: tree/splay_tree.py
+      title: tree/splay_tree.py
   verificationCategories:
   - name: library_checker/convolution
     pages:

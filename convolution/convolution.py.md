@@ -104,7 +104,7 @@ title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
 
 このとき、$A = [a_0, a_1, ..., a_{n-1}]$ と $B = [b_0, b_1, ..., b_{m-1}]$ から $C = [c_0, c_1, ..., c_{(n-1)+(m-1)}]$ を求める。
 ただし、
-$$C_k = \displaystyle\sum^{}_{i+j=k} a_i b_j\mod 998,244,353$$
+$C_k = \displaystyle\sum^{}_{i+j=k} a_i b_j\mod 998,244,353$
 
 ### 使い方
 
