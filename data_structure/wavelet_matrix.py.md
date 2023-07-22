@@ -71,14 +71,14 @@ data:
     \u3001k\u756A\u76EE\u306Evalue\u306EIndex\u3092\u8FD4\u3059(0-index)\n       \
     \ # value\u304C\u51FA\u73FE\u3059\u308B\u6570\u304C\u4EE5\u4E0B\u306E\u3068\u304D\
     \u3001-1\u3092\u8FD4\u3059\n        if self.rank(0, self.n, value) <= k:\n   \
-    \         return -1\n        ind = 0\n        for i in range(self.bit_size)[::-1]:\n\
+    \         return -1\n        idx = 0\n        for i in range(self.bit_size)[::-1]:\n\
     \            z, bit_vector = self.B[i]\n            # 1\n            if value\
-    \ >> i & 1:\n                ind = z + bit_vector.rank1(ind)\n            # 0\n\
-    \            else:\n                ind = bit_vector.rank0(ind)\n        ind +=\
+    \ >> i & 1:\n                idx = z + bit_vector.rank1(idx)\n            # 0\n\
+    \            else:\n                idx = bit_vector.rank0(idx)\n        idx +=\
     \ k\n        for i in range(self.bit_size):\n            z, bit_vector = self.B[i]\n\
-    \            # 0\n            if ind < z:\n                ind = bit_vector.select0(ind)\n\
-    \            # 1\n            else:\n                ind = bit_vector.select1(ind\
-    \ - z)\n        return ind\n\n    def quantile(self, l, r, k):\n        # A[l,\
+    \            # 0\n            if idx < z:\n                idx = bit_vector.select0(idx)\n\
+    \            # 1\n            else:\n                idx = bit_vector.select1(idx\
+    \ - z)\n        return idx\n\n    def quantile(self, l, r, k):\n        # A[l,\
     \ r)\u306Ek\u756A\u76EE\u306B\u5C0F\u3055\u3044\u5024\u3092\u8FD4\u3059\n    \
     \    if k >= r - l:\n            return -1\n        ret = 0\n        for i in\
     \ range(self.bit_size)[::-1]:\n            z, bit_vector = self.B[i]\n       \
@@ -124,21 +124,21 @@ data:
     \                que.append((l1_1, r1_1, l2_1, r2_1, depth + 1, nv))\n\n     \
     \   return res\n\n    def rangefreq_to(self, l, r, value):\n        # A[l,r)\u306B\
     \u51FA\u73FE\u3059\u308B0<=z<value\u3092\u6E80\u305F\u3059z\u306E\u6570\u3092\u8FD4\
-    \u3059\n        if not value:\n            return 0\n        if l >= r:\n    \
-    \        return 0\n        ret = 0\n        for i in range(self.bit_size)[::-1]:\n\
+    \u3059\n        if not value:\n            return 0\n        if l >= r or self.n\
+    \ == 0:\n            return 0\n        ret = 0\n        for i in range(self.bit_size)[::-1]:\n\
     \            z, bit_vector = self.B[i]\n            # 1\n            if value\
     \ >> i & 1:\n                ret += bit_vector.rank0(r) - bit_vector.rank0(l)\n\
     \                l = z + bit_vector.rank1(l)\n                r = z + bit_vector.rank1(r)\n\
     \            # 0\n            else:\n                l = bit_vector.rank0(l)\n\
     \                r = bit_vector.rank0(r)\n        return ret\n\n    def rangefreq(self,\
     \ l, r, x, y):\n        # A[l,r)\u306B\u51FA\u73FE\u3059\u308Bx<=z<y\u3092\u6E80\
-    \u305F\u3059z\u306E\u6570\u3092\u8FD4\u3059\n        if x >= y:\n            return\
-    \ 0\n        return self.rangefreq_to(l, r, y) - self.rangefreq_to(l, r, x)\n\n\
-    \nif __name__ == \"__main__\":\n    T = [5, 4, 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]\n\
-    \    WM = WaveletMatrix(3, T)\n\n    assert WM.n == len(T)\n    assert WM.A ==\
-    \ T\n    for i, t in enumerate(T):\n        assert t == WM.access(i)\n       \
-    \ assert t == WM.accessFromB(i)\n    rank = WM.rank(0, 6, 5)\n    assert rank\
-    \ == 3, rank\n\n    select = WM.select(5, 3)\n    assert select == 6, select\n\
+    \u305F\u3059z\u306E\u6570\u3092\u8FD4\u3059\n        if x >= y or self.n == 0:\n\
+    \            return 0\n        return self.rangefreq_to(l, r, y) - self.rangefreq_to(l,\
+    \ r, x)\n\n\nif __name__ == \"__main__\":\n    T = [5, 4, 5, 5, 2, 1, 5, 6, 1,\
+    \ 3, 5, 0]\n    WM = WaveletMatrix(3, T)\n\n    assert WM.n == len(T)\n    assert\
+    \ WM.A == T\n    for i, t in enumerate(T):\n        assert t == WM.access(i)\n\
+    \        assert t == WM.accessFromB(i)\n    rank = WM.rank(0, 6, 5)\n    assert\
+    \ rank == 3, rank\n\n    select = WM.select(5, 3)\n    assert select == 6, select\n\
     \n    quantile = WM.quantile(1, 11, 8)\n    assert quantile == 5, quantile\n\n\
     \    quantile = WM.quantile(1, 11, 8)\n    assert quantile == 5, quantile\n\n\
     \    topk = WM.topk(1, 10, 2)\n    assert topk == [(5, 3), (1, 2)], topk\n\n \
