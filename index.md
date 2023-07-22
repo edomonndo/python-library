@@ -36,6 +36,9 @@ data:
     - icon: ':warning:'
       path: data_structure/wavelet_matrix.py
       title: data_structure/wavelet_matrix.py
+    - icon: ':warning:'
+      path: data_structure/weighted_union_find.py
+      title: data_structure/weighted_union_find.py
   - name: graph
     pages:
     - icon: ':warning:'
@@ -52,6 +55,9 @@ data:
       title: graph/toporogical_sort.py
   - name: math_
     pages:
+    - icon: ':warning:'
+      path: math_/combination.py
+      title: math_/combination.py
     - icon: ':warning:'
       path: math_/combination_mod.py
       title: "\u4E8C\u9805\u4FC2\u6570(mod)"
@@ -112,8 +118,17 @@ data:
   - name: utility
     pages:
     - icon: ':warning:'
+      path: utility/binary_search.py
+      title: utility/binary_search.py
+    - icon: ':warning:'
       path: utility/compress.py
       title: utility/compress.py
+    - icon: ':warning:'
+      path: utility/fast_power.py
+      title: utility/fast_power.py
+    - icon: ':warning:'
+      path: utility/permutations.py
+      title: utility/permutations.py
   verificationCategories:
   - name: library_checker/convolution
     pages:
