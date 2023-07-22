@@ -137,6 +137,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/range_kth_smallest.test.py
       title: library_checker/data_structure/range_kth_smallest.test.py
+    - icon: ':x:'
+      path: library_checker/data_structure/static_range_frequency.test.py
+      title: library_checker/data_structure/static_range_frequency.test.py
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/static_range_sum.test.py
       title: library_checker/data_structure/static_range_sum.test.py
@@ -146,6 +149,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/unionfind.test.py
       title: library_checker/data_structure/unionfind.test.py
+    - icon: ':x:'
+      path: library_checker/data_structure/vertext_add_path_sum.test.py
+      title: library_checker/data_structure/vertext_add_path_sum.test.py
+    - icon: ':x:'
+      path: library_checker/data_structure/vertext_add_subtree_sum.test.py
+      title: library_checker/data_structure/vertext_add_subtree_sum.test.py
   - name: library_checker/graph
     pages:
     - icon: ':heavy_check_mark:'
