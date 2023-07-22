@@ -41,13 +41,13 @@ data:
     \       else:\n                r = mid\n        return l\n\n\nclass WaveletMatrix:\n\
     \    # \u5B8C\u5099\u8F9E\u66F8\n    # s := bit\u9577\n    # A := \u9577\u3055\
     n\u306E\u914D\u5217\n    def __init__(self, A):\n        self.bit_size = len(bin(max(A)))\
-    \ - 2\n        self.A = A\n        self.n = len(A)\n        T = A[:]\n       \
-    \ self.B = []\n        for i in range(self.bit_size)[::-1]:\n            L = []\n\
-    \            R = []\n            _T = []\n            for b in T:\n          \
-    \      if b >> i & 1 == 0:\n                    _T.append(0)\n               \
-    \     L.append(b)\n                else:\n                    _T.append(1)\n \
-    \                   R.append(b)\n            bit_vector = BitVector(_T)\n    \
-    \        self.B.append((bit_vector.rank0(self.n), bit_vector))\n            T\
+    \ - 2 if A else 0\n        self.A = A\n        self.n = len(A)\n        T = A[:]\n\
+    \        self.B = []\n        for i in range(self.bit_size)[::-1]:\n         \
+    \   L = []\n            R = []\n            _T = []\n            for b in T:\n\
+    \                if b >> i & 1 == 0:\n                    _T.append(0)\n     \
+    \               L.append(b)\n                else:\n                    _T.append(1)\n\
+    \                    R.append(b)\n            bit_vector = BitVector(_T)\n   \
+    \         self.B.append((bit_vector.rank0(self.n), bit_vector))\n            T\
     \ = L + R\n        self.B = self.B[::-1]\n\n    def access(self, i: int) -> int:\n\
     \        # A\u306Ei\u756A\u76EE\u306E\u8981\u7D20\u3092\u53D6\u5F97\u3059\u308B\
     \n        return self.A[i]\n\n    def accessFromB(self, i: int) -> int:\n    \

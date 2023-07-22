@@ -137,7 +137,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/range_kth_smallest.test.py
       title: library_checker/data_structure/range_kth_smallest.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/static_range_frequency.test.py
       title: library_checker/data_structure/static_range_frequency.test.py
     - icon: ':heavy_check_mark:'
