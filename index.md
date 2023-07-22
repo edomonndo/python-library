@@ -24,20 +24,32 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
+    - icon: ':warning:'
+      path: data_structure/inversion_number.py
+      title: data_structure/inversion_number.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
       title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
+    - icon: ':warning:'
+      path: data_structure/wavelet_matrix.py
+      title: data_structure/wavelet_matrix.py
   - name: graph
     pages:
+    - icon: ':warning:'
+      path: graph/bfs.py
+      title: graph/bfs.py
     - icon: ':warning:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':warning:'
       path: graph/scc.py
       title: Strongly Connected Components
+    - icon: ':warning:'
+      path: graph/toporogical_sort.py
+      title: graph/toporogical_sort.py
   - name: math_
     pages:
     - icon: ':warning:'
@@ -72,6 +84,9 @@ data:
   - name: string_
     pages:
     - icon: ':warning:'
+      path: string_/rolling_hash.py
+      title: string_/rolling_hash.py
+    - icon: ':warning:'
       path: string_/suffix_array.py
       title: Suffix array
     - icon: ':warning:'
@@ -83,11 +98,22 @@ data:
   - name: tree
     pages:
     - icon: ':warning:'
+      path: tree/euler_tour.py
+      title: tree/euler_tour.py
+    - icon: ':warning:'
+      path: tree/heavy_light_decomposition.py
+      title: tree/heavy_light_decomposition.py
+    - icon: ':warning:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
     - icon: ':warning:'
       path: tree/splay_tree.py
       title: Splay tree
+  - name: utility
+    pages:
+    - icon: ':warning:'
+      path: utility/compress.py
+      title: utility/compress.py
   verificationCategories:
   - name: library_checker/convolution
     pages:
@@ -108,6 +134,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/point_add_range_sum.test.py
       title: library_checker/data_structure/point_add_range_sum.test.py
+    - icon: ':heavy_check_mark:'
+      path: library_checker/data_structure/range_kth_smallest.test.py
+      title: library_checker/data_structure/range_kth_smallest.test.py
     - icon: ':heavy_check_mark:'
       path: library_checker/data_structure/static_range_sum.test.py
       title: library_checker/data_structure/static_range_sum.test.py
