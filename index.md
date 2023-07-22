@@ -39,6 +39,14 @@ data:
     - icon: ':warning:'
       path: data_structure/weighted_union_find.py
       title: data_structure/weighted_union_find.py
+  - name: geometory
+    pages:
+    - icon: ':x:'
+      path: geometory/convex_layers.py
+      title: geometory/convex_layers.py
+    - icon: ':warning:'
+      path: geometory/sort_points_by_argument.py
+      title: geometory/sort_points_by_argument.py
   - name: graph
     pages:
     - icon: ':warning:'
@@ -89,6 +97,9 @@ data:
       title: "\u884C\u5217"
   - name: string_
     pages:
+    - icon: ':x:'
+      path: string_/manacher.py
+      title: string_/manacher.py
     - icon: ':warning:'
       path: string_/rolling_hash.py
       title: string_/rolling_hash.py
@@ -103,6 +114,9 @@ data:
       title: Z algorithm
   - name: tree
     pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/cartesian_tree.py
+      title: tree/cartesian_tree.py
     - icon: ':warning:'
       path: tree/euler_tour.py
       title: tree/euler_tour.py
@@ -170,6 +184,14 @@ data:
     - icon: ':x:'
       path: library_checker/data_structure/vertext_add_subtree_sum.test.py
       title: library_checker/data_structure/vertext_add_subtree_sum.test.py
+  - name: library_checker/geometory
+    pages:
+    - icon: ':x:'
+      path: library_checker/geometory/convex_layers.test.py
+      title: library_checker/geometory/convex_layers.test.py
+    - icon: ':heavy_check_mark:'
+      path: library_checker/geometory/sort_points_by_argument.test.py
+      title: library_checker/geometory/sort_points_by_argument.test.py
   - name: library_checker/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -225,6 +247,9 @@ data:
       title: library_checker/sample/many_aplusb.test.py
   - name: library_checker/string
     pages:
+    - icon: ':x:'
+      path: library_checker/string/manacher.test.py
+      title: library_checker/string/manacher.test.py
     - icon: ':heavy_check_mark:'
       path: library_checker/string/suffix_array.test.py
       title: library_checker/string/suffix_array.test.py
@@ -242,7 +267,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/tree/lowest_common_ancestor.test.py
       title: library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: library_checker/tree/tree_diameter.test.py
       title: library_checker/tree/tree_diameter.test.py
 layout: toppage

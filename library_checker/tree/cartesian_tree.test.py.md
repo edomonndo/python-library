@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: tree/cartesian_tree.py
+    title: tree/cartesian_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -15,19 +18,15 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/cartesian_tree\n\
-    \n\ndef cartesian_tree(LIST: list) -> list:\n    n = len(LIST)\n    parent = [-1]\
-    \ * n\n    stack = []\n    for i in range(n):\n        prv_i = -1\n        while\
-    \ stack and LIST[i] < LIST[stack[-1]]:\n            prv_i = stack.pop()\n    \
-    \    if prv_i != -1:\n            parent[prv_i] = i\n        if stack:\n     \
-    \       parent[i] = stack[-1]\n        stack.append(i)\n    return parent\n\n\n\
-    N = int(input())\nA = list(map(int, input().split()))\n\nparent = cartesian_tree(A)\n\
-    # \u6839\u306F$parent_r$ = r\u3068\u3059\u308B\nprint(*[v if v != -1 else i for\
-    \ i, v in enumerate(parent)])\n"
-  dependsOn: []
+    \nfrom tree.cartesian_tree import cartesian_tree\n\nN = int(input())\nA = list(map(int,\
+    \ input().split()))\n\nparent = cartesian_tree(A)\n# \u6839\u306F$parent_r$ =\
+    \ r\u3068\u3059\u308B\nprint(*[v if v != -1 else i for i, v in enumerate(parent)])\n"
+  dependsOn:
+  - tree/cartesian_tree.py
   isVerificationFile: true
   path: library_checker/tree/cartesian_tree.test.py
   requiredBy: []
-  timestamp: '2023-06-09 12:11:59+09:00'
+  timestamp: '2023-07-23 01:42:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: library_checker/tree/cartesian_tree.test.py
