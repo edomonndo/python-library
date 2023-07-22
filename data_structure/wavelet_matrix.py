@@ -61,7 +61,7 @@ class WaveletMatrix:
     # s := bit長
     # A := 長さnの配列
     def __init__(self, A):
-        self.bit_size = len(bin(max(A))) - 2
+        self.bit_size = len(bin(max(A))) - 2 if A else 0
         self.A = A
         self.n = len(A)
         T = A[:]
