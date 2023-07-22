@@ -123,25 +123,25 @@ class WaveletMatrix:
         # valueが出現する数が以下のとき、-1を返す
         if self.rank(0, self.n, value) <= k:
             return -1
-        ind = 0
+        idx = 0
         for i in range(self.bit_size)[::-1]:
             z, bit_vector = self.B[i]
             # 1
             if value >> i & 1:
-                ind = z + bit_vector.rank1(ind)
+                idx = z + bit_vector.rank1(idx)
             # 0
             else:
-                ind = bit_vector.rank0(ind)
-        ind += k
+                idx = bit_vector.rank0(idx)
+        idx += k
         for i in range(self.bit_size):
             z, bit_vector = self.B[i]
             # 0
-            if ind < z:
-                ind = bit_vector.select0(ind)
+            if idx < z:
+                idx = bit_vector.select0(idx)
             # 1
             else:
-                ind = bit_vector.select1(ind - z)
-        return ind
+                idx = bit_vector.select1(idx - z)
+        return idx
 
     def quantile(self, l, r, k):
         # A[l, r)のk番目に小さい値を返す
@@ -228,7 +228,7 @@ class WaveletMatrix:
         # A[l,r)に出現する0<=z<valueを満たすzの数を返す
         if not value:
             return 0
-        if l >= r:
+        if l >= r or self.n == 0:
             return 0
         ret = 0
         for i in range(self.bit_size)[::-1]:
@@ -246,7 +246,7 @@ class WaveletMatrix:
 
     def rangefreq(self, l, r, x, y):
         # A[l,r)に出現するx<=z<yを満たすzの数を返す
-        if x >= y:
+        if x >= y or self.n == 0:
             return 0
         return self.rangefreq_to(l, r, y) - self.rangefreq_to(l, r, x)
 
