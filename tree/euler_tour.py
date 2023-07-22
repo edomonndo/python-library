@@ -34,7 +34,6 @@ class EulerTour:
                 seen[v] = 1
                 if self.into[v] == 0:
                     self.into[v] = idx
-                    self.depth[v] = depth
                 for w, u in G[v][::-1]:
                     if not seen[u]:
                         stack.append((~u, depth, w))
