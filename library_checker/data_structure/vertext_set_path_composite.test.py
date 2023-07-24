@@ -1,4 +1,9 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite
+
+from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
 from tree.euler_tour import EulerTour
 from data_structure.segment_tree import Segtree
@@ -13,7 +18,7 @@ for _ in range(N - 1):
 
 et = EulerTour(N, G, 0, A)
 segPQ = Segtree(et.vcost, (lambda x, y: x + y), 0)
-segLca = Segtree(et.depth, min, (10**9, N))
+segLca = Segtree(et.depth, min, 10**9)
 for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 0:
@@ -21,13 +26,10 @@ for _ in range(Q):
         segPQ.set(p, x)
     elif t == 1:
         u, v = q
-        if u == v:
-            lca = u
-        else:
-            l, r = et.into[u], et.into[v]
-            if l > r:
-                l, r = r, l
-            _, lca = segLca.prod(l, r + 1)
+        l, r = et.into[u], et.into[v]
+        if l > r:
+            l, r = r, l
+        lca = segLca.prod(l, r + 1)
         m = et.into[lca]
         print(
             segPQ.prod(0, l + 1)

@@ -1,3 +1,5 @@
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/enumerate_palindromes
+
 from string_.manacher import manacher
 
 S = input()

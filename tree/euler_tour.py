@@ -8,6 +8,7 @@ class EulerTour:
         self.into = [0] * N
         self.out = [0] * N
         # For LCA
+        self.parent = [-1] * N
         self.depth = []
         # For Path Query
         self.vcost = []
@@ -26,7 +27,7 @@ class EulerTour:
             idx += 1
             if v >= 0:
                 self.ET.append(v)
-                self.depth.append(depth)
+                self.depth.append((depth, v))
                 self.vcost.append(vcost[v])
                 self.ecost.append(weight)
                 self.vcost_st.append(vcost[v])
@@ -36,11 +37,12 @@ class EulerTour:
                     self.into[v] = idx
                 for w, u in G[v][::-1]:
                     if not seen[u]:
+                        self.parent[u] = v
                         stack.append((~u, depth, w))
                         stack.append((u, depth + 1, w))
             else:
                 self.ET.append(v + 1)
-                self.depth.append(depth)
+                self.depth.append((depth, self.parent[~v]))
                 self.vcost.append(-vcost[~v])
                 self.ecost.append(-weight)
                 self.vcost_st.append(0)
@@ -68,7 +70,20 @@ if __name__ == "__main__":
     assert et.ET == [0, 1, 2, 3, -3, -2, 4, -4, -1, 5, -5, 0], et.ET
     assert et.into == [0, 1, 2, 3, 6, 9], et.into
     assert et.out == [11, 8, 5, 4, 7, 10], et.out
-    assert et.depth == [0, 1, 2, 3, 2, 1, 2, 1, 0, 1, 0, 0], et.depth
+    assert et.depth == [
+        (0, 0),
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (2, 2),
+        (1, 1),
+        (2, 4),
+        (1, 1),
+        (0, 0),
+        (1, 5),
+        (0, 0),
+        (0, -1),
+    ], et.depth
     assert et.vcost == [1, 2, 4, 8, -8, -4, 16, -16, -2, 32, -32, -1], et.vcost
     assert et.ecost == [0, 1, 2, 4, -4, -2, 8, -8, -1, 16, -16, 0], et.ecost
     assert et.vcost_st == [1, 2, 4, 8, 0, 0, 16, 0, 0, 32, 0, 0], et.vcost_st
@@ -97,6 +112,13 @@ if __name__ == "__main__":
     assert SegPQ2.prod(0, et.into[v] + 1) == 9, SegPQ2.prod(0, et.into[v] + 1)
 
     # 頂点u,vのLCA
-    SegLca = Segtree(et.depth, min, 10**9)
+    # (depth, v)で返る。最小のdepthに対するvがLCA
+    SegLca = Segtree(et.depth, min, (10**9, N))
     u, v = 2, 5
-    assert SegLca.prod(et.into[u], et.into[v]) == 0
+    if u == v:
+        pass
+    else:
+        l, r = et.into[u], et.into[v]
+        if l > r:
+            l, r = r, l
+        assert SegLca.prod(l, r + 1) == (0, 0), SegLca.prod(l, r + 1)
