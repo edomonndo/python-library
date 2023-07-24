@@ -25,9 +25,11 @@
 "library_checker/matrix/matrix_product.test.py": "2023-07-05 16:20:47 +0900",
 "library_checker/sample/aplusb.test.py": "2023-06-09 12:11:59 +0900",
 "library_checker/sample/many_aplusb.test.py": "2023-06-09 12:11:59 +0900",
+"library_checker/string/manacher.test.py": "2023-07-24 09:36:48 +0900",
 "library_checker/string/suffix_array.test.py": "1970-01-01 00:00:00 +0000",
 "library_checker/string/z_algorithm.test.py": "1970-01-01 00:00:00 +0000",
 "library_checker/tree/cartesian_tree.test.py": "2023-07-23 01:42:59 +0900",
 "library_checker/tree/jump_on_tree.test.py": "1970-01-01 00:00:00 +0000",
-"library_checker/tree/lowest_common_ancestor.test.py": "1970-01-01 00:00:00 +0000"
+"library_checker/tree/lowest_common_ancestor.test.py": "1970-01-01 00:00:00 +0000",
+"library_checker/tree/tree_diameter.test.py": "1970-01-01 00:00:00 +0000"
 }
