@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/convex_layers
 
 
-    from geometory.convex_layers import convex_layers
+    from geometory.convex_layers import convex_hull
 
 
     N = int(input())
@@ -28,7 +28,7 @@ data:
     A = [tuple(map(int, input().split())) for _ in range(N)]
 
 
-    ans = convex_layers(A)
+    ans = convex_hull(A)
 
     print(*ans, sep="\n")
 
@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: library_checker/geometory/convex_layers.test.py
   requiredBy: []
-  timestamp: '2023-07-23 01:42:59+09:00'
+  timestamp: '2023-07-24 09:36:48+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: library_checker/geometory/convex_layers.test.py

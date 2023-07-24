@@ -97,7 +97,7 @@ data:
       title: "\u884C\u5217"
   - name: string_
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string_/manacher.py
       title: string_/manacher.py
     - icon: ':warning:'
@@ -184,6 +184,9 @@ data:
     - icon: ':x:'
       path: library_checker/data_structure/vertext_add_subtree_sum.test.py
       title: library_checker/data_structure/vertext_add_subtree_sum.test.py
+    - icon: ':x:'
+      path: library_checker/data_structure/vertext_set_path_composite.test.py
+      title: library_checker/data_structure/vertext_set_path_composite.test.py
   - name: library_checker/geometory
     pages:
     - icon: ':x:'
@@ -247,7 +250,7 @@ data:
       title: library_checker/sample/many_aplusb.test.py
   - name: library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/string/manacher.test.py
       title: library_checker/string/manacher.test.py
     - icon: ':heavy_check_mark:'
@@ -267,7 +270,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: library_checker/tree/lowest_common_ancestor.test.py
       title: library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: library_checker/tree/tree_diameter.test.py
       title: library_checker/tree/tree_diameter.test.py
 layout: toppage
