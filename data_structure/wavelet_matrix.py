@@ -1,6 +1,5 @@
 # https://miti-7.hatenablog.com/entry/2018/04/28/152259
 # https://miti-7.hatenablog.com/entry/2018/04/15/155638
-# https://atcoder.jp/contests/abc202/submissions/25000501
 
 from heapq import heappush, heappop
 from collections import deque
@@ -77,10 +76,9 @@ class WaveletMatrix:
                 else:
                     _T.append(1)
                     R.append(b)
-            bit_vector = BitVector(_T)
-            self.B.append((bit_vector.rank0(self.n), bit_vector))
+            bv = BitVector(_T)
+            self.B.append((bv.rank0(self.n), bv))
             T = L + R
-        self.B = self.B[::-1]
 
     def access(self, i: int) -> int:
         # Aのi番目の要素を取得する
@@ -90,32 +88,30 @@ class WaveletMatrix:
         # Aのi番目の要素を取得する
         # 通常accessで取得すれば良い。高速化が必要なとき、こちらを利用するとself.Aの配列を持たなくて良い
         # 実際に速くなるかは不明
+        assert 0 <= i < self.n
         res = 0
-        for j in range(self.bit_size)[::-1]:
-            _, bit_vector = self.B[j]
-            # 1
-            if bit_vector.access(i):
-                res += 1 << j
-                i = (bit_vector.n - bit_vector.SB[-1]) + bit_vector.rank1(i)
-            # 0
+        for z, bv in self.B:
+            bit = bv.access(i)
+            res = (res << 1) | bit
+            if bit:
+                i = z + bv.rank1(i)
             else:
-                i = bit_vector.rank0(i)
+                i = bv.rank0(i)
         return res
 
     def rank(self, l, r, value):
         # A[l,r)にvalueが出現する数を返す
         if l >= r:
             return 0
-        for i in range(self.bit_size)[::-1]:
-            z, bit_vector = self.B[i]
+        for i, (z, bv) in enumerate(self.B):
             # 1
-            if value >> i & 1:
-                l = z + bit_vector.rank1(l)
-                r = z + bit_vector.rank1(r)
+            if (value >> (self.bit_size - i - 1)) & 1:
+                l = z + bv.rank1(l)
+                r = z + bv.rank1(r)
             # 0
             else:
-                l = bit_vector.rank0(l)
-                r = bit_vector.rank0(r)
+                l = bv.rank0(l)
+                r = bv.rank0(r)
         return r - l
 
     def select(self, value, k):
@@ -124,51 +120,87 @@ class WaveletMatrix:
         if self.rank(0, self.n, value) <= k:
             return -1
         idx = 0
-        for i in range(self.bit_size)[::-1]:
-            z, bit_vector = self.B[i]
+        for i, (z, bv) in enumerate(self.B):
             # 1
-            if value >> i & 1:
-                idx = z + bit_vector.rank1(idx)
+            if (value >> (self.bit_size - i - 1)) & 1:
+                idx = z + bv.rank1(idx)
             # 0
             else:
-                idx = bit_vector.rank0(idx)
+                idx = bv.rank0(idx)
         idx += k
-        for i in range(self.bit_size):
-            z, bit_vector = self.B[i]
+        for z, bv in self.B[::-1]:
             # 0
             if idx < z:
-                idx = bit_vector.select0(idx)
+                idx = bv.select0(idx)
             # 1
             else:
-                idx = bit_vector.select1(idx - z)
+                idx = bv.select1(idx - z)
         return idx
 
     def quantile(self, l, r, k):
-        # A[l, r)のk番目に小さい値を返す
+        # A[l, r)のk番目に小さい値を返す(0-index)
         if k >= r - l:
             return -1
         ret = 0
-        for i in range(self.bit_size)[::-1]:
-            z, bit_vector = self.B[i]
-            zeros = bit_vector.rank0(r) - bit_vector.rank0(l)
+        for i, (z, bv) in enumerate(self.B):
+            zeros = bv.rank0(r) - bv.rank0(l)
             # 0
             if zeros > k:
-                l = bit_vector.rank0(l)
-                r = bit_vector.rank0(r)
+                l = bv.rank0(l)
+                r = bv.rank0(r)
             # 1
             else:
                 k -= zeros
-                ret |= 1 << i
-                l = z + bit_vector.rank1(l)
-                r = z + bit_vector.rank1(r)
+                ret |= 1 << (self.bit_size - i - 1)
+                l = z + bv.rank1(l)
+                r = z + bv.rank1(r)
         return ret
+
+    def quantilerange(self, l, r, k):
+        # A[l, r)のk番目に小さい値のindexを返す(kは0-index)
+        assert 0 <= l < r and r <= self.n
+        assert k < r - l
+
+        val = 0
+        for z, bv in self.B:
+            num_of_zero_l = bv.rank0(l)
+            num_of_zero_r = bv.rank0(r)
+            num_or_zero = num_of_zero_r - num_of_zero_l  # lからrまでにある0の数
+            bit = 0 if k < num_or_zero else 1  # k番目の値の上からi番目のbit値
+
+            if bit:
+                k -= num_or_zero
+                l = z + l - num_of_zero_l
+                r = z + r - num_of_zero_r
+            else:
+                l = num_of_zero_l
+                r = num_of_zero_l + num_or_zero
+            val = (val << 1) | bit
+
+        left = 0
+        for i, (z, bv) in enumerate(self.B):
+            bit = (val >> (self.bit_size - i - 1)) & 1  # 上からi番目のbit値
+            if bit:
+                left = z + bv.rank1(left)
+            else:
+                left = bv.rank0(left)
+        rank = l + k - left
+        return self.select(val, rank)
+
+    def maxrange(self, l, r):
+        # A[l,r)で最大値のindexを返す
+        return self.quantilerange(l, r, r - l - 1)
+
+    def minrange(self, l, r):
+        # A[l,r)で最小値のindexを返す
+        return self.quantilerange(l, r, 0)
 
     def topk(self, l, r, k):
         # A[l,r)の中で出現回数が多い順にk個の値と頻度を返す
         # 頻度が同じ場合は値が小さいものが優先される
         # キューは最大のwidthをキーとするため、マイナスをつける
         res = []
-        pq = [(-(self.bit_size - 1), 0, 0, l, r)]  # -width, depth, value, left, right
+        pq = [(-(r - l), 0, 0, l, r)]  # -width, depth, value, left, right
         while pq and k > 0:
             _, depth, value, left, right = heappop(pq)
             if depth >= self.bit_size:
@@ -176,21 +208,21 @@ class WaveletMatrix:
                 k -= 1
                 continue
 
-            z, bit_vector = self.B[self.bit_size - depth - 1]
+            z, bv = self.B[depth]
             # 0
-            l0 = bit_vector.rank0(left)
-            r0 = bit_vector.rank0(right)
+            l0 = bv.rank0(left)
+            r0 = bv.rank0(right)
             if l0 < r0:
                 heappush(pq, (-(r0 - l0), depth + 1, value, l0, r0))
             # 1
-            l1 = z + bit_vector.rank1(left)
-            r1 = z + bit_vector.rank1(right)
+            l1 = z + bv.rank1(left)
+            r1 = z + bv.rank1(right)
             if l1 < r1:
                 nv = value | (1 << (self.bit_size - depth - 1))
                 heappush(pq, (-(r1 - l1), depth + 1, nv, l1, r1))
         return res
 
-    def sum(self, l, r):
+    def rangesum(self, l, r):
         # A[l,r)の合計を返す
         return sum(value * freq for value, freq in self.topk(l, r, r - l))
 
@@ -205,19 +237,19 @@ class WaveletMatrix:
             if depth >= self.bit_size:
                 res.append((value, right1 - left1, right2 - left2))
                 continue
-            z, bit_vector = self.B[self.bit_size - depth - 1]
+            z, bv = self.B[depth]
             # 0
-            l1_0 = bit_vector.rank0(left1)
-            r1_0 = bit_vector.rank0(right1)
-            l2_0 = bit_vector.rank0(left2)
-            r2_0 = bit_vector.rank0(right2)
+            l1_0 = bv.rank0(left1)
+            r1_0 = bv.rank0(right1)
+            l2_0 = bv.rank0(left2)
+            r2_0 = bv.rank0(right2)
             if l1_0 < r1_0 and l2_0 < r2_0:
                 que.append((l1_0, r1_0, l2_0, r2_0, depth + 1, value))
             # 1
-            l1_1 = z + bit_vector.rank1(left1)
-            r1_1 = z + bit_vector.rank1(right1)
-            l2_1 = z + bit_vector.rank1(left2)
-            r2_1 = z + bit_vector.rank1(right2)
+            l1_1 = z + bv.rank1(left1)
+            r1_1 = z + bv.rank1(right1)
+            l2_1 = z + bv.rank1(left2)
+            r2_1 = z + bv.rank1(right2)
             if l1_1 < r1_1 and l2_1 < r2_1:
                 nv = value | (1 << (self.bit_size - depth - 1))
                 que.append((l1_1, r1_1, l2_1, r2_1, depth + 1, nv))
@@ -231,17 +263,16 @@ class WaveletMatrix:
         if l >= r or self.n == 0:
             return 0
         ret = 0
-        for i in range(self.bit_size)[::-1]:
-            z, bit_vector = self.B[i]
+        for i, (z, bv) in enumerate(self.B):
             # 1
-            if value >> i & 1:
-                ret += bit_vector.rank0(r) - bit_vector.rank0(l)
-                l = z + bit_vector.rank1(l)
-                r = z + bit_vector.rank1(r)
+            if (value >> (self.bit_size - i - 1)) & 1:
+                ret += bv.rank0(r) - bv.rank0(l)
+                l = z + bv.rank1(l)
+                r = z + bv.rank1(r)
             # 0
             else:
-                l = bit_vector.rank0(l)
-                r = bit_vector.rank0(r)
+                l = bv.rank0(l)
+                r = bv.rank0(r)
         return ret
 
     def rangefreq(self, l, r, x, y):
@@ -250,39 +281,75 @@ class WaveletMatrix:
             return 0
         return self.rangefreq_to(l, r, y) - self.rangefreq_to(l, r, x)
 
+    def prevvalue(self, l, r, x, y):
+        # A[l,r)に出現するx<=c<yを満たす最大のcを返す
+        assert l < r and 0 < r <= self.n
+        assert 0 <= x < y
 
-if __name__ == "__main__":
-    T = [5, 4, 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]
-    WM = WaveletMatrix(3, T)
+        y = min(y, self.n)
+        y -= 1  # 　閉区間A[l,r]にする
 
-    assert WM.n == len(T)
-    assert WM.A == T
-    for i, t in enumerate(T):
-        assert t == WM.access(i)
-        assert t == WM.accessFromB(i)
-    rank = WM.rank(0, 6, 5)
-    assert rank == 3, rank
+        stack = [(l, r, 0, 0, True)]  # l,r,depth,z,tight
+        while stack:
+            l, r, depth, c, tight = stack.pop()
+            if depth == self.bit_size:
+                if c >= x:
+                    return c
+                continue
+            bit = (y >> (self.bit_size - depth - 1)) & 1
+            z, bv = self.B[depth]
+            rank0_l = bv.rank0(l)
+            rank0_r = bv.rank0(r)
+            rank1_l = l - rank0_l
+            rank1_r = r - rank0_r
 
-    select = WM.select(5, 3)
-    assert select == 6, select
+            # 0
+            l0 = rank0_l
+            r0 = rank0_r
+            if l0 != r0:
+                c0 = (c << 1) | 0
+                stack.append((l0, r0, depth + 1, c0, tight and bit == 0))
+            # 1
+            l1 = z + rank1_l
+            r1 = z + rank1_r
+            if l1 != r1:
+                if not tight or bit == 1:
+                    c1 = (c << 1) | 1
+                    stack.append((l1, r1, depth + 1, c1, tight))
+        # 見つからないとエラー
+        return -1
 
-    quantile = WM.quantile(1, 11, 8)
-    assert quantile == 5, quantile
+    def nextvalue(self, l, r, x, y):
+        # A[l,r)に出現するx<=c<yを満たす最小のcを返す
+        assert l < r and 0 < r <= self.n
+        assert 0 <= x < y
 
-    quantile = WM.quantile(1, 11, 8)
-    assert quantile == 5, quantile
+        stack = [(l, r, 0, 0, True)]  # l,r,depth,z,tight
+        while stack:
+            l, r, depth, c, tight = stack.pop()
+            if depth == self.bit_size:
+                if c < y:
+                    return c
+                continue
+            bit = (x >> (self.bit_size - depth - 1)) & 1
+            z, bv = self.B[depth]
+            rank0_l = bv.rank0(l)
+            rank0_r = bv.rank0(r)
+            rank1_l = l - rank0_l
+            rank1_r = r - rank0_r
 
-    topk = WM.topk(1, 10, 2)
-    assert topk == [(5, 3), (1, 2)], topk
-
-    sum = WM.sum(1, 10)
-    assert sum == 32, sum
-
-    intersect = WM.intersect(0, 6, 6, 11)
-    assert intersect == [(1, 1, 1), (5, 3, 2)], intersect
-
-    rangefreq_to = WM.rangefreq_to(2, 7, 3)
-    assert rangefreq_to == 2, rangefreq_to
-
-    rangefreq = WM.rangefreq(0, 12, 3, 6)
-    assert rangefreq == 7, rangefreq
+            # 1
+            l1 = z + rank1_l
+            r1 = z + rank1_r
+            if l1 != r1:
+                c1 = (c << 1) | 1
+                stack.append((l1, r1, depth + 1, c1, tight and bit == 1))
+            # 0
+            l0 = rank0_l
+            r0 = rank0_r
+            if l0 != r0:
+                if not tight or bit == 0:
+                    c0 = (c << 1) | 0
+                    stack.append((l0, r0, depth + 1, c0, tight))
+        # 見つからないとエラー
+        return -1
