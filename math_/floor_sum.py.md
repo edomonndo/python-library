@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: library_checker/math/sum_of_floor_of_linear.test.py
-    title: library_checker/math/sum_of_floor_of_linear.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/math/sum_of_floor_of_linear.test.py
+    title: test/library_checker/math/sum_of_floor_of_linear.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -27,9 +27,9 @@ data:
   path: math_/floor_sum.py
   requiredBy: []
   timestamp: '2023-06-21 21:40:34+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - library_checker/math/sum_of_floor_of_linear.test.py
+  - test/library_checker/math/sum_of_floor_of_linear.test.py
 documentation_of: math_/floor_sum.py
 layout: document
 title: Floor sum

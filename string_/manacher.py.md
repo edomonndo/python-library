@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: library_checker/string/manacher.test.py
-    title: library_checker/string/manacher.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/string/manacher.test.py
+    title: test/library_checker/string/manacher.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -40,9 +40,9 @@ data:
   path: string_/manacher.py
   requiredBy: []
   timestamp: '2023-07-23 01:42:59+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - library_checker/string/manacher.test.py
+  - test/library_checker/string/manacher.test.py
 documentation_of: string_/manacher.py
 layout: document
 redirect_from:

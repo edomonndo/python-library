@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: library_checker/convolution/convolution_mod.test.py
-    title: library_checker/convolution/convolution_mod.test.py
+    path: test/library_checker/convolution/convolution_mod.test.py
+    title: test/library_checker/convolution/convolution_mod.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -92,7 +92,7 @@ data:
   timestamp: '2023-06-21 08:58:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - library_checker/convolution/convolution_mod.test.py
+  - test/library_checker/convolution/convolution_mod.test.py
 documentation_of: convolution/convolution.py
 layout: document
 title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"

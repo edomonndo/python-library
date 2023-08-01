@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: library_checker/data_structure/unionfind.test.py
-    title: library_checker/data_structure/unionfind.test.py
+    path: test/library_checker/data_structure/unionfind.test.py
+    title: test/library_checker/data_structure/unionfind.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -45,7 +45,7 @@ data:
   timestamp: '2023-06-09 12:11:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - library_checker/data_structure/unionfind.test.py
+  - test/library_checker/data_structure/unionfind.test.py
 documentation_of: data_structure/unionfind.py
 layout: document
 title: Union Find

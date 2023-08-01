@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: library_checker/data_structure/static_rmq.test.py
-    title: library_checker/data_structure/static_rmq.test.py
+    path: test/library_checker/data_structure/static_rmq.test.py
+    title: test/library_checker/data_structure/static_rmq.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -58,7 +58,7 @@ data:
   timestamp: '2023-07-05 10:35:19+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - library_checker/data_structure/static_rmq.test.py
+  - test/library_checker/data_structure/static_rmq.test.py
 documentation_of: data_structure/segment_tree.py
 layout: document
 title: Segment Tree

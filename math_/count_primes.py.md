@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: library_checker/math/count_primes.test.py
-    title: library_checker/math/count_primes.test.py
+    path: test/library_checker/math/count_primes.test.py
+    title: test/library_checker/math/count_primes.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -48,7 +48,7 @@ data:
   timestamp: '2023-06-21 21:40:34+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - library_checker/math/count_primes.test.py
+  - test/library_checker/math/count_primes.test.py
 documentation_of: math_/count_primes.py
 layout: document
 title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
