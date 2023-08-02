@@ -13,11 +13,12 @@ data:
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE\n\nfrom data_structure.wavelet_matrix import\
-    \ WaveletMatrix\n\nif __name__ == \"__main__\":\n    T = [5, 4, 5, 5, 2, 1, 5,\
-    \ 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n == len(T)\n   \
-    \ assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n        assert\
-    \ t == WM.access(i), (t, WM.access(i))\n        assert t == WM.accessFromB(i),\
+  code: "# verification-helper: IGNORE\n\nif __name__ == \"__main__\":\n    from pathlib\
+    \ import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent))\n\
+    \    from data_structure.wavelet_matrix import WaveletMatrix\n\n    T = [5, 4,\
+    \ 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n\
+    \ == len(T)\n    assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n\
+    \        assert t == WM.access(i), (t, WM.access(i))\n        assert t == WM.accessFromB(i),\
     \ (t, WM.accessFromB(i))\n\n    # rank\n    for l in range(len(T)):\n        for\
     \ r in range(l + 1, len(T)):\n            for t in T:\n                greedy_rank\
     \ = T[l:r].count(t)\n                assert greedy_rank == WM.rank(l, r, t), (\n\

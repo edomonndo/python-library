@@ -33,7 +33,7 @@ data:
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: data_structure/inversion_number.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segment_tree.py
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -84,7 +84,7 @@ data:
     - icon: ':warning:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/floor_sum.py
       title: Floor sum
     - icon: ':warning:'
@@ -101,12 +101,12 @@ data:
       title: 2 Sat
   - name: matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: matrix/matrix.py
       title: "\u884C\u5217"
   - name: string_
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string_/manacher.py
       title: string_/manacher.py
     - icon: ':warning:'
@@ -123,10 +123,10 @@ data:
       title: Z algorithm
   - name: tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: tree/cartesian_tree.py
-    - icon: ':warning:'
+    - icon: ':x:'
       path: tree/euler_tour.py
       title: tree/euler_tour.py
     - icon: ':warning:'
@@ -220,57 +220,57 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/sum_of_floor_of_linear.test.py
       title: test/library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/two_sat.test.py
       title: test/library_checker/math/two_sat.test.py
   - name: test/library_checker/matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det.test.py
       title: test/library_checker/matrix/matrix_det.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_inverse.test.py
       title: test/library_checker/matrix/matrix_inverse.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_product.test.py
       title: test/library_checker/matrix/matrix_product.test.py
   - name: test/library_checker/sample
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/aplusb.test.py
       title: test/library_checker/sample/aplusb.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/many_aplusb.test.py
       title: test/library_checker/sample/many_aplusb.test.py
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/manacher.test.py
       title: test/library_checker/string/manacher.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
     - icon: ':x:'
@@ -281,6 +281,9 @@ data:
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
+    - icon: ':x:'
+      path: test/unit_test/euler_tour.test.py
+      title: test/unit_test/euler_tour.test.py
     - icon: ':x:'
       path: test/unit_test/wavelet_maxrix.test.py
       title: test/unit_test/wavelet_maxrix.test.py

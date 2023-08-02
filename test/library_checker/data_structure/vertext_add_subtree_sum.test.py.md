@@ -1,6 +1,12 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/segment_tree.py
+    title: Segment Tree
+  - icon: ':x:'
+    path: tree/euler_tour.py
+    title: tree/euler_tour.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -23,11 +29,13 @@ data:
     \    t, *q = map(int, input().split())\n    if t == 0:\n        u, x = q\n   \
     \     cur = seg.get(u)\n        seg.set(u, cur + x)\n    elif t == 1:\n      \
     \  u = q[0]\n        print(seg.prod(et.into[u], et.out[u]))\n"
-  dependsOn: []
+  dependsOn:
+  - tree/euler_tour.py
+  - data_structure/segment_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-02 17:54:14+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/vertext_add_subtree_sum.test.py

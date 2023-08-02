@@ -1,6 +1,12 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/segment_tree.py
+    title: Segment Tree
+  - icon: ':x:'
+    path: tree/euler_tour.py
+    title: tree/euler_tour.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -28,11 +34,13 @@ data:
     \        print(\n            segPQ.prod(0, l + 1)\n            + segPQ.prod(0,\
     \ r + 1)\n            - 2 * segPQ.prod(0, m + 1)\n            + segPQ.get(m)\n\
     \        )\n"
-  dependsOn: []
+  dependsOn:
+  - tree/euler_tour.py
+  - data_structure/segment_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/vertext_add_path_sum.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-02 17:54:14+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/vertext_add_path_sum.test.py
