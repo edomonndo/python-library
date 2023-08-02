@@ -1,6 +1,3 @@
-# https://miti-7.hatenablog.com/entry/2018/04/28/152259
-# https://miti-7.hatenablog.com/entry/2018/04/15/155638
-
 from heapq import heappush, heappop
 from collections import deque
 

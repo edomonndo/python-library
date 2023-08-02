@@ -5,7 +5,7 @@ if __name__ == "__main__":
     from pathlib import Path
     import sys
 
-    sys.path.append(str(Path(__file__).resolve().parent.parent))
+    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
     from data_structure.segment_tree import Segtree
     from tree.euler_tour import EulerTour
 

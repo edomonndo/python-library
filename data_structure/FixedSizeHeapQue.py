@@ -4,9 +4,10 @@ class FixedSizeHeapQue:
         self.heap = arr
         self.max_size = max_size
 
-        n = len(arr)
-        self.size = n
-        self.heapify()
+        if arr:
+            n = len(arr)
+            self.size = n
+            self.heapify()
 
     def heapify(self):
         """Transform list into a heap, in-place, in O(len(x)) time."""
@@ -29,7 +30,7 @@ class FixedSizeHeapQue:
         if self.heap:
             returnitem = self.heap[0]
             self.heap[0] = lastelt
-            _siftup(0)
+            self._siftup(0)
             return returnitem
         return lastelt
 
