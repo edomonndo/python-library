@@ -121,8 +121,7 @@ data:
   verifiedWith: []
 documentation_of: tree/heavy_light_decomposition.py
 layout: document
-redirect_from:
-- /library/tree/heavy_light_decomposition.py
-- /library/tree/heavy_light_decomposition.py.html
-title: tree/heavy_light_decomposition.py
+title: "HL\u5206\u89E3"
 ---
+
+木の高さを圧縮する.

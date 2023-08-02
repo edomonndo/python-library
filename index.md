@@ -13,10 +13,10 @@ data:
     pages:
     - icon: ':warning:'
       path: data_structure/DeletableHeapQue.py
-      title: data_structure/DeletableHeapQue.py
+      title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
     - icon: ':warning:'
       path: data_structure/FixedSizeHeapQue.py
-      title: data_structure/FixedSizeHeapQue.py
+      title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
     - icon: ':warning:'
       path: data_structure/SortedMultiset.py
       title: SortedMultiset
@@ -32,8 +32,8 @@ data:
       title: Fenwick Tree
     - icon: ':warning:'
       path: data_structure/inversion_number.py
-      title: data_structure/inversion_number.py
-    - icon: ':question:'
+      title: "\u8EE2\u7F6E\u6570"
+    - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -41,23 +41,23 @@ data:
       title: Union Find
     - icon: ':warning:'
       path: data_structure/wavelet_matrix.py
-      title: data_structure/wavelet_matrix.py
+      title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':warning:'
       path: data_structure/weighted_union_find.py
-      title: data_structure/weighted_union_find.py
+      title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: geometory
     pages:
     - icon: ':warning:'
       path: geometory/convex_full.py
-      title: geometory/convex_full.py
+      title: Convex full
     - icon: ':warning:'
       path: geometory/sort_points_by_argument.py
-      title: geometory/sort_points_by_argument.py
+      title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - name: graph
     pages:
     - icon: ':warning:'
       path: graph/bfs.py
-      title: graph/bfs.py
+      title: "\u5E45\u512A\u5148\u63A2\u7D22"
     - icon: ':warning:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
@@ -66,12 +66,9 @@ data:
       title: Strongly Connected Components
     - icon: ':warning:'
       path: graph/toporogical_sort.py
-      title: graph/toporogical_sort.py
+      title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: math_
     pages:
-    - icon: ':warning:'
-      path: math_/combination.py
-      title: math_/combination.py
     - icon: ':warning:'
       path: math_/combination_mod.py
       title: "\u4E8C\u9805\u4FC2\u6570(mod)"
@@ -95,7 +92,7 @@ data:
       title: Min of linear
     - icon: ':warning:'
       path: math_/sum_of_difference.py
-      title: math_/sum_of_difference.py
+      title: Sum of difference
     - icon: ':warning:'
       path: math_/two_sat.py
       title: 2 Sat
@@ -108,10 +105,10 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: string_/manacher.py
-      title: string_/manacher.py
+      title: Manacher
     - icon: ':warning:'
       path: string_/rolling_hash.py
-      title: string_/rolling_hash.py
+      title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
     - icon: ':warning:'
       path: string_/suffix_array.py
       title: Suffix array
@@ -125,13 +122,13 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
-      title: tree/cartesian_tree.py
-    - icon: ':x:'
+      title: Cartesian tree
+    - icon: ':warning:'
       path: tree/euler_tour.py
-      title: tree/euler_tour.py
+      title: Euler tour
     - icon: ':warning:'
       path: tree/heavy_light_decomposition.py
-      title: tree/heavy_light_decomposition.py
+      title: "HL\u5206\u89E3"
     - icon: ':warning:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
@@ -142,16 +139,16 @@ data:
     pages:
     - icon: ':warning:'
       path: utility/binary_search.py
-      title: utility/binary_search.py
+      title: "\u4E8C\u5206\u6CD5"
     - icon: ':warning:'
       path: utility/compress.py
-      title: utility/compress.py
+      title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':warning:'
       path: utility/fast_power.py
-      title: utility/fast_power.py
+      title: "\u51AA\u4E57"
     - icon: ':warning:'
       path: utility/permutations.py
-      title: utility/permutations.py
+      title: "\u9806\u5217"
   verificationCategories:
   - name: test/library_checker/convolution
     pages:
@@ -187,15 +184,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.py
       title: test/library_checker/data_structure/unionfind.test.py
-    - icon: ':x:'
-      path: test/library_checker/data_structure/vertext_add_path_sum.test.py
-      title: test/library_checker/data_structure/vertext_add_path_sum.test.py
-    - icon: ':x:'
-      path: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-      title: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-    - icon: ':x:'
-      path: test/library_checker/data_structure/vertext_set_path_composite.test.py
-      title: test/library_checker/data_structure/vertext_set_path_composite.test.py
   - name: test/library_checker/geometory
     pages:
     - icon: ':heavy_check_mark:'
@@ -273,10 +261,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
@@ -285,7 +273,7 @@ data:
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
     - icon: ':x:'
-      path: test/unit_test/wavelet_maxrix.test.py
-      title: test/unit_test/wavelet_maxrix.test.py
+      path: test/unit_test/wavelet_matrix.test.py
+      title: test/unit_test/wavelet_matrix.test.py
 layout: toppage
 ---

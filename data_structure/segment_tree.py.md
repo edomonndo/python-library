@@ -6,15 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq.test.py
     title: test/library_checker/data_structure/static_rmq.test.py
-  - icon: ':x:'
-    path: test/library_checker/data_structure/vertext_add_path_sum.test.py
-    title: test/library_checker/data_structure/vertext_add_path_sum.test.py
-  - icon: ':x:'
-    path: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-    title: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -62,11 +56,9 @@ data:
   path: data_structure/segment_tree.py
   requiredBy: []
   timestamp: '2023-07-05 10:35:19+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_rmq.test.py
-  - test/library_checker/data_structure/vertext_add_path_sum.test.py
-  - test/library_checker/data_structure/vertext_add_subtree_sum.test.py
 documentation_of: data_structure/segment_tree.py
 layout: document
 title: Segment Tree

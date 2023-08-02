@@ -27,8 +27,7 @@ data:
   verifiedWith: []
 documentation_of: string_/rolling_hash.py
 layout: document
-redirect_from:
-- /library/string_/rolling_hash.py
-- /library/string_/rolling_hash.py.html
-title: string_/rolling_hash.py
+title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
 ---
+
+文字列を高速に検索する.

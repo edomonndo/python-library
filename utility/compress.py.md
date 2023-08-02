@@ -30,8 +30,6 @@ data:
   verifiedWith: []
 documentation_of: utility/compress.py
 layout: document
-redirect_from:
-- /library/utility/compress.py
-- /library/utility/compress.py.html
-title: utility/compress.py
+title: "\u5EA7\u6A19\u5727\u7E2E"
 ---
+

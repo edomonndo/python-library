@@ -30,8 +30,6 @@ data:
   verifiedWith: []
 documentation_of: utility/binary_search.py
 layout: document
-redirect_from:
-- /library/utility/binary_search.py
-- /library/utility/binary_search.py.html
-title: utility/binary_search.py
+title: "\u4E8C\u5206\u6CD5"
 ---
+

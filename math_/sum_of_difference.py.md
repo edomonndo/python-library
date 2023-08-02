@@ -25,8 +25,7 @@ data:
   verifiedWith: []
 documentation_of: math_/sum_of_difference.py
 layout: document
-redirect_from:
-- /library/math_/sum_of_difference.py
-- /library/math_/sum_of_difference.py.html
-title: math_/sum_of_difference.py
+title: Sum of difference
 ---
+
+$$\displaystyle\sum^{N-1}_{i=0} \sum^{N-1}_{j=i+1} A_i - A_j \qquad (A_i < A_j)$$

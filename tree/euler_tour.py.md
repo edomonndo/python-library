@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/library_checker/data_structure/vertext_add_path_sum.test.py
-    title: test/library_checker/data_structure/vertext_add_path_sum.test.py
-  - icon: ':x:'
-    path: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-    title: test/library_checker/data_structure/vertext_add_subtree_sum.test.py
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links:
     - "https://maspypy.com/euler-tour-\u306E\u304A\u52C9\u5F37"
@@ -45,14 +39,12 @@ data:
   path: tree/euler_tour.py
   requiredBy: []
   timestamp: '2023-08-02 17:54:14+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/library_checker/data_structure/vertext_add_path_sum.test.py
-  - test/library_checker/data_structure/vertext_add_subtree_sum.test.py
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: tree/euler_tour.py
 layout: document
-redirect_from:
-- /library/tree/euler_tour.py
-- /library/tree/euler_tour.py.html
-title: tree/euler_tour.py
+title: Euler tour
 ---
+
+木をDFS順に訪問し，その結果をさまざまな形式で格納していく.
+木の情報を列に変換し，区間計算できるようにする．

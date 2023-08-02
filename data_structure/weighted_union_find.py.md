@@ -49,8 +49,8 @@ data:
   verifiedWith: []
 documentation_of: data_structure/weighted_union_find.py
 layout: document
-redirect_from:
-- /library/data_structure/weighted_union_find.py
-- /library/data_structure/weighted_union_find.py.html
-title: data_structure/weighted_union_find.py
+title: "\u91CD\u307F\u4ED8\u304D Union Find"
 ---
+
+未履修
+別名：ポテンシャルUnion Find.

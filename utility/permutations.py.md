@@ -52,8 +52,6 @@ data:
   verifiedWith: []
 documentation_of: utility/permutations.py
 layout: document
-redirect_from:
-- /library/utility/permutations.py
-- /library/utility/permutations.py.html
-title: utility/permutations.py
+title: "\u9806\u5217"
 ---
+

@@ -14,7 +14,7 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE\n\nif __name__ == \"__main__\":\n    from pathlib\
-    \ import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent))\n\
+    \ import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
     \    from data_structure.wavelet_matrix import WaveletMatrix\n\n    T = [5, 4,\
     \ 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n\
     \ == len(T)\n    assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n\
@@ -100,15 +100,15 @@ data:
     \       )\n"
   dependsOn: []
   isVerificationFile: true
-  path: test/unit_test/wavelet_maxrix.test.py
+  path: test/unit_test/wavelet_matrix.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/unit_test/wavelet_maxrix.test.py
+documentation_of: test/unit_test/wavelet_matrix.test.py
 layout: document
 redirect_from:
-- /verify/test/unit_test/wavelet_maxrix.test.py
-- /verify/test/unit_test/wavelet_maxrix.test.py.html
-title: test/unit_test/wavelet_maxrix.test.py
+- /verify/test/unit_test/wavelet_matrix.test.py
+- /verify/test/unit_test/wavelet_matrix.test.py.html
+title: test/unit_test/wavelet_matrix.test.py
 ---

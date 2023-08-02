@@ -37,8 +37,7 @@ data:
   verifiedWith: []
 documentation_of: graph/toporogical_sort.py
 layout: document
-redirect_from:
-- /library/graph/toporogical_sort.py
-- /library/graph/toporogical_sort.py.html
-title: graph/toporogical_sort.py
+title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
 ---
+
+有向グラフにおいて，どの頂点もその出力辺の先の頂点より前にくるように並べる.

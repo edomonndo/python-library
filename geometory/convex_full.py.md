@@ -30,8 +30,7 @@ data:
   verifiedWith: []
 documentation_of: geometory/convex_full.py
 layout: document
-redirect_from:
-- /library/geometory/convex_full.py
-- /library/geometory/convex_full.py.html
-title: geometory/convex_full.py
+title: Convex full
 ---
+
+凸包．複数の点から全ての点を内包する多角形を考えた時，多角形を構成する点を求める．

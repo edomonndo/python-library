@@ -30,8 +30,7 @@ data:
   - test/library_checker/tree/cartesian_tree.test.py
 documentation_of: tree/cartesian_tree.py
 layout: document
-redirect_from:
-- /library/tree/cartesian_tree.py
-- /library/tree/cartesian_tree.py.html
-title: tree/cartesian_tree.py
+title: Cartesian tree
 ---
+
+未履修.

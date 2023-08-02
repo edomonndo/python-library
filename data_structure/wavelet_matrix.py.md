@@ -7,36 +7,33 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
   attributes:
-    links:
-    - https://miti-7.hatenablog.com/entry/2018/04/15/155638
-    - https://miti-7.hatenablog.com/entry/2018/04/28/152259
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# https://miti-7.hatenablog.com/entry/2018/04/28/152259\n# https://miti-7.hatenablog.com/entry/2018/04/15/155638\n\
-    \nfrom heapq import heappush, heappop\nfrom collections import deque\n\n\nclass\
-    \ BitVector:\n    # \u7C21\u6F54\u30C7\u30FC\u30BF\u69CB\u9020\n    # B := \u9577\
-    \u3055n\u306E01\u5217\n    def __init__(self, B: list):\n        self.n = len(B)\n\
-    \        self.B = B\n        # \u7D2F\u7A4D\u548C\n        self.SB = [0]\n   \
-    \     for b in B:\n            self.SB.append(self.SB[-1] + b)\n\n    def access(self,\
-    \ i: int) -> int:\n        # B[i]\u3092\u8FD4\u3059\n        return self.B[i]\n\
-    \n    def rank0(self, i: int) -> int:\n        # B\u306B\u5BFE\u3057\u3066\u3001\
-    i\u756A\u76EE\u307E\u3067\u306B\u51FA\u73FE\u3059\u308B0\u306E\u500B\u6570\n \
-    \       return i - self.rank1(i)\n\n    def rank1(self, i: int) -> int:\n    \
-    \    # B\u306B\u5BFE\u3057\u3066\u3001i\u756A\u76EE\u307E\u3067\u306B\u51FA\u73FE\
-    \u3059\u308B1\u306E\u500B\u6570\n        return self.SB[i]\n\n    def select0(self,\
-    \ k: int) -> int:\n        # B\u306B\u5BFE\u3057\u3066\u3001\u5148\u982D\u304B\
-    \u3089k\u756A\u76EE\u306E0\u306Eindex\u3092\u6C42\u3081\u308B\n        l, r =\
-    \ 0, len(self.SB)\n        if not k < r - 1 - self.SB[r - 1]:\n            return\
-    \ -1\n        while r - l > 1:\n            mid = l + r >> 1\n            if mid\
-    \ - self.SB[mid] <= k:\n                l = mid\n            else:\n         \
-    \       r = mid\n        return l\n\n    def select1(self, k: int) -> int:\n \
-    \       # B\u306B\u5BFE\u3057\u3066\u3001\u5148\u982D\u304B\u3089k\u756A\u76EE\
-    \u306E1\u306Eindex\u3092\u6C42\u3081\u308B\n        l, r = 0, len(self.SB)\n \
-    \       if not k < self.SB[r - 1]:\n            return -1\n        while r - l\
-    \ > 1:\n            mid = l + r >> 1\n            if self.SB[mid] <= k:\n    \
-    \            l = mid\n            else:\n                r = mid\n        return\
+  code: "from heapq import heappush, heappop\nfrom collections import deque\n\n\n\
+    class BitVector:\n    # \u7C21\u6F54\u30C7\u30FC\u30BF\u69CB\u9020\n    # B :=\
+    \ \u9577\u3055n\u306E01\u5217\n    def __init__(self, B: list):\n        self.n\
+    \ = len(B)\n        self.B = B\n        # \u7D2F\u7A4D\u548C\n        self.SB\
+    \ = [0]\n        for b in B:\n            self.SB.append(self.SB[-1] + b)\n\n\
+    \    def access(self, i: int) -> int:\n        # B[i]\u3092\u8FD4\u3059\n    \
+    \    return self.B[i]\n\n    def rank0(self, i: int) -> int:\n        # B\u306B\
+    \u5BFE\u3057\u3066\u3001i\u756A\u76EE\u307E\u3067\u306B\u51FA\u73FE\u3059\u308B\
+    0\u306E\u500B\u6570\n        return i - self.rank1(i)\n\n    def rank1(self, i:\
+    \ int) -> int:\n        # B\u306B\u5BFE\u3057\u3066\u3001i\u756A\u76EE\u307E\u3067\
+    \u306B\u51FA\u73FE\u3059\u308B1\u306E\u500B\u6570\n        return self.SB[i]\n\
+    \n    def select0(self, k: int) -> int:\n        # B\u306B\u5BFE\u3057\u3066\u3001\
+    \u5148\u982D\u304B\u3089k\u756A\u76EE\u306E0\u306Eindex\u3092\u6C42\u3081\u308B\
+    \n        l, r = 0, len(self.SB)\n        if not k < r - 1 - self.SB[r - 1]:\n\
+    \            return -1\n        while r - l > 1:\n            mid = l + r >> 1\n\
+    \            if mid - self.SB[mid] <= k:\n                l = mid\n          \
+    \  else:\n                r = mid\n        return l\n\n    def select1(self, k:\
+    \ int) -> int:\n        # B\u306B\u5BFE\u3057\u3066\u3001\u5148\u982D\u304B\u3089\
+    k\u756A\u76EE\u306E1\u306Eindex\u3092\u6C42\u3081\u308B\n        l, r = 0, len(self.SB)\n\
+    \        if not k < self.SB[r - 1]:\n            return -1\n        while r -\
+    \ l > 1:\n            mid = l + r >> 1\n            if self.SB[mid] <= k:\n  \
+    \              l = mid\n            else:\n                r = mid\n        return\
     \ l\n\n\nclass WaveletMatrix:\n    # \u5B8C\u5099\u8F9E\u66F8\n    # s := bit\u9577\
     \n    # A := \u9577\u3055n\u306E\u914D\u5217\n    def __init__(self, A):\n   \
     \     self.bit_size = len(bin(max(A))) - 2 if A else 0\n        self.A = A\n \
@@ -189,8 +186,13 @@ data:
   verifiedWith: []
 documentation_of: data_structure/wavelet_matrix.py
 layout: document
-redirect_from:
-- /library/data_structure/wavelet_matrix.py
-- /library/data_structure/wavelet_matrix.py.html
-title: data_structure/wavelet_matrix.py
+title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
 ---
+
+静的配列を高速に検索する．
+前処理: $n$列$b$ビットの配列で$0(nb)$, 検索: ($O(\log b)$ or $O(k\log b)$)
+
+
+参考：
+https://miti-7.hatenablog.com/entry/2018/04/28/152259
+https://miti-7.hatenablog.com/entry/2018/04/15/155638

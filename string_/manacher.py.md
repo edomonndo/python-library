@@ -45,8 +45,7 @@ data:
   - test/library_checker/string/manacher.test.py
 documentation_of: string_/manacher.py
 layout: document
-redirect_from:
-- /library/string_/manacher.py
-- /library/string_/manacher.py.html
-title: string_/manacher.py
+title: Manacher
 ---
+
+未履修．
