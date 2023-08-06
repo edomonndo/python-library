@@ -3,7 +3,7 @@
 from data_structure.segment_tree import RangeMinQuery
 
 N, Q = map(int, input().split())
-INF = 1 << 31 - 1
+INF = (1 << 31) - 1
 G = RangeMinQuery([INF] * N)
 
 ans = []

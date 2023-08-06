@@ -1,6 +1,6 @@
 ---
 title: 中国余剰定理
-documentation_of: ./chinese_remainer_theorem.py
+documentation_of: ./chinese_remainder_theorem.py
 ---
 
 $m1$と$m2$を互いに素な正の整数とする．  
