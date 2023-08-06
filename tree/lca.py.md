@@ -19,11 +19,11 @@ data:
     \               if self.parent[v] != u:\n                    self.parent[u] =\
     \ v\n                    que.append(u)\n                    self.depth[u] = self.depth[v]\
     \ + 1\n\n        self.ancestor = [self.parent]  # self.ancestor[k][u]\u306Fu\u306E\
-    2**k\u5148\u306E\u7956\u5148\u3002\n\n        # \u30C0\u30D6\u30EA\u30F3\u30B0\
-    \n        k = 1\n        while (1 << k) < N:\n            anc_k = [0] * N\n  \
-    \          for u in range(N):\n                if self.ancestor[-1][u] == -1:\n\
-    \                    anc_k[u] = -1\n                else:\n                  \
-    \  anc_k[u] = self.ancestor[-1][self.ancestor[-1][u]]\n            self.ancestor.append(anc_k)\n\
+    2**k\u5148\u306E\u7956\u5148.\n\n        # \u30C0\u30D6\u30EA\u30F3\u30B0\n  \
+    \      k = 1\n        while (1 << k) < N:\n            anc_k = [0] * N\n     \
+    \       for u in range(N):\n                if self.ancestor[-1][u] == -1:\n \
+    \                   anc_k[u] = -1\n                else:\n                   \
+    \ anc_k[u] = self.ancestor[-1][self.ancestor[-1][u]]\n            self.ancestor.append(anc_k)\n\
     \            k += 1\n\n    def lca(self, u: int, v: int) -> int:\n        # u\u3088\
     \u308Av\u306E\u65B9\u304C\u6DF1\u3044\u9802\u70B9\u3068\u3059\u308B\n        if\
     \ self.depth[u] < self.depth[v]:\n            u, v = v, u\n        for k, bit\
@@ -52,24 +52,24 @@ layout: document
 title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
 ---
 
-木上の頂点$u,v$の共通祖先の中でも最も$u,v$に近い頂点を求める。
+木上の頂点$u,v$の共通祖先の中でも最も$u,v$に近い頂点を求める.
 
 ### `lca=LcaDoubling(N: int, G: List[List[int]], root: int = 0)`
 
-頂点数$N$の隣接リスト$G$で根を$root$にして初期化する。実装はダブリング。
+頂点数$N$の隣接リスト$G$で根を$root$にして初期化する.実装はダブリング.
 
 ### `lca.lca(u: int, v: int)`
 
-頂点$u,v$の最近共通祖先を求める。
+頂点$u,v$の最近共通祖先を求める.
 
 ### `lca.dist(u: int, v: int)`
 
-頂点$u,v$の最短距離を求める。
+頂点$u,v$の最短距離を求める.
 
 ### `lca.up(v: int, k: int)`
 
-頂点$v$から$k$個親の頂点を求める。
+頂点$v$から$k$個親の頂点を求める.
 
 ### `lca.jump(u: int, v: int, i: int)`
 
-頂点$u,v$の最短経路上の$i$番目の頂点を求める。始点・終点は$u,v$で、$i$が最短距離より大きい場合は`-1`を返す。
+頂点$u,v$の最短経路上の$i$番目の頂点を求める.始点・終点は$u,v$で,$i$が最短距離より大きい場合は`-1`を返す.

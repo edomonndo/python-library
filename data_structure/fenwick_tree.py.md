@@ -34,24 +34,24 @@ data:
   timestamp: '2023-06-09 12:11:59+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/point_add_range_sum.test.py
   - test/library_checker/data_structure/static_range_sum.test.py
+  - test/library_checker/data_structure/point_add_range_sum.test.py
 documentation_of: data_structure/fenwick_tree.py
 layout: document
 title: Fenwick Tree
 ---
 
-数列 $a_i (i=0,...,n-1)$ に対して以下のクエリを高速に行えます。
+数列 $a_i (i=0,...,n-1)$ に対して以下のクエリを高速に行えます.
 
 - $a_i$ を $x$ に更新する
-- $k$ に対して、 $a_0+...+a_{k-1}$ を求める
+- $k$ に対して, $a_0+...+a_{k-1}$ を求める
 
 ### 初期化
 
 ```
 FT = fenwick_tree(N)
 ```
-$N$は配列のサイズです。 初期化した時、最初の配列のサイズは全て$0$になっています。 【注意】もしバグったら、まずは初期値を間違えてないか確認しましょう。
+$N$は配列のサイズです. 初期化した時,最初の配列のサイズは全て$0$になっています. 【注意】もしバグったら,まずは初期値を間違えてないか確認しましょう.
 
 ### 更新
 
@@ -65,11 +65,11 @@ $i$番目の値を$a$に更新します
 ```
 print(FT.sum0(r))
 ```
-$a_0+...+a_{r-1}$ の総和、つまり $sum(a[:r))$ を求めます。
+$a_0+...+a_{r-1}$ の総和,つまり $sum(a[:r))$ を求めます.
 
 ### 和を求める2
 
 ```
 print(FT.sum(l, r))
 ```
-$a_l+...+a_{r-1}$ の総和、つまり $sum(a[l:r))$ を求めます。
+$a_l+...+a_{r-1}$ の総和,つまり $sum(a[l:r))$ を求めます.

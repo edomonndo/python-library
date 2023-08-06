@@ -46,4 +46,4 @@ title: "\u7D20\u56E0\u6570\u5206\u89E3"
 
 ### `factorize(n: int)`
 
-$s$を素因数分解する。返り値はdictで、keyが素因数、valueがその素因数で割れる回数。
+$s$を素因数分解する.返り値はdictで,keyが素因数,valueがその素因数で割れる回数.

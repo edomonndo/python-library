@@ -30,4 +30,4 @@ title: "\u4E8C\u9805\u4FC2\u6570(mod)"
 
 ### `combination_mod(n: int, r: int, m=10**9 + 7)`
 
-$nCr\pmod m$を求める。
+$nCr\pmod m$を求める.

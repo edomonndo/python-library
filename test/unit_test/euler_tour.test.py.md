@@ -43,8 +43,8 @@ data:
     \n    # Path Query2 \u6839\u304B\u3089\u9802\u70B9v\u307E\u3067\u306E\u8FBA\u306E\
     \u5024\u306E\u548C\n    SegPQ2 = Segtree(et.ecost, (lambda x, y: x + y), 0)\n\
     \    v = 4\n    assert SegPQ2.prod(0, et.into[v] + 1) == 9, SegPQ2.prod(0, et.into[v]\
-    \ + 1)\n\n    # \u9802\u70B9u,v\u306ELCA\n    # (depth, v)\u3067\u8FD4\u308B\u3002\
-    \u6700\u5C0F\u306Edepth\u306B\u5BFE\u3059\u308Bv\u304CLCA\n    SegLca = Segtree(et.depth,\
+    \ + 1)\n\n    # \u9802\u70B9u,v\u306ELCA\n    # (depth, v)\u3067\u8FD4\u308B.\u6700\
+    \u5C0F\u306Edepth\u306B\u5BFE\u3059\u308Bv\u304CLCA\n    SegLca = Segtree(et.depth,\
     \ min, (10**9, N))\n    u, v = 2, 5\n    if u == v:\n        pass\n    else:\n\
     \        l, r = et.into[u], et.into[v]\n        if l > r:\n            l, r =\
     \ r, l\n        assert SegLca.prod(l, r + 1) == (0, 0), SegLca.prod(l, r + 1)\n"

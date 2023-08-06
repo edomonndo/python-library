@@ -33,7 +33,10 @@ data:
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
+      path: data_structure/lazy_segment_tree.py
+      title: Lazy Segment Tree
+    - icon: ':question:'
       path: data_structure/segment_tree.py
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -62,6 +65,12 @@ data:
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':warning:'
+      path: graph/maxflow.py
+      title: "\u6700\u5927\u30D5\u30ED\u30FC"
+    - icon: ':warning:'
+      path: graph/mincostflow.py
+      title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
+    - icon: ':warning:'
       path: graph/scc.py
       title: Strongly Connected Components
     - icon: ':warning:'
@@ -69,6 +78,9 @@ data:
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: math_
     pages:
+    - icon: ':warning:'
+      path: math_/chinese_remainder_theorem.py
+      title: math_/chinese_remainder_theorem.py
     - icon: ':warning:'
       path: math_/combination_mod.py
       title: "\u4E8C\u9805\u4FC2\u6570(mod)"
@@ -150,6 +162,11 @@ data:
       path: utility/permutations.py
       title: "\u9806\u5217"
   verificationCategories:
+  - name: test/aoj
+    pages:
+    - icon: ':x:'
+      path: test/aoj/range_min_query.test.py
+      title: test/aoj/range_min_query.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'

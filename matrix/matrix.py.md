@@ -124,45 +124,45 @@ data:
   timestamp: '2023-07-05 16:20:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/matrix/matrix_inverse.test.py
+  - test/library_checker/matrix/matrix_det.test.py
   - test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
   - test/library_checker/matrix/matrix_product.test.py
-  - test/library_checker/matrix/matrix_det.test.py
+  - test/library_checker/matrix/matrix_inverse.test.py
 documentation_of: matrix/matrix.py
 layout: document
 title: "\u884C\u5217"
 ---
 
-Matrixクラスは$\bmod{998,244,353}$で計算される。
+Matrixクラスは$\bmod{998,244,353}$で計算される.
 
 ### `Mat = Matrix(N, M, [Mat])`
 
-$N$行$M$列の行列を作成する。引数に$Mat$を指定した場合は、その行列をコピーする。
+$N$行$M$列の行列を作成する.引数に$Mat$を指定した場合は,その行列をコピーする.
 
 ### `四則演算`
 
-$+$、$-$、$\times$　がサポートされている。
+$+$,$-$,$\times$　がサポートされている.
 
 ### `Mat.is_square()`
 
-正方行列(`self.n == self.m`)であれば`True`。
+正方行列(`self.n == self.m`)であれば`True`.
 
 ### `Mat.times(k)`
 
-行列の各要素を`k`倍する。
+行列の各要素を`k`倍する.
 
 ### `Mat.determinant()`
 
-行列式を計算する。
+行列式を計算する.
 
 ### `Mat.inverse()`
 
-逆行列を計算する。
+逆行列を計算する.
 
 ### `Mat.linear_equations(b)`
 
-行列$A$とベクトル$b$から、$Ax=b$となるベクトル$x$を求める。
+行列$A$とベクトル$b$から,$Ax=b$となるベクトル$x$を求める.
 
 ### `determinant_arbitrary_mod(N, A, m=998244353)`
 
-$N$行$N$列の正方行列$A$と非負整数$m$から行列式を$\mod m$で求める。
+$N$行$N$列の正方行列$A$と非負整数$m$から行列式を$\mod m$で求める.

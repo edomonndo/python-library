@@ -20,13 +20,13 @@ data:
     \ = [0] * N\n    finished = [0] * M\n    par_v = [None] * N\n    par_e = [None]\
     \ * N\n\n    for i in range(N):\n        if visited[i]:\n            continue\n\
     \        stack = [(i, -1, -1)]\n        while stack:\n            v, p, e = stack.pop()\
-    \  # v: \u9802\u70B9\u756A\u53F7\uFF64p: v\u306E\u89AA\u9802\u70B9\u3001e: v\u3068\
-    \u63A5\u7D9A\u3059\u308B\u8FBA\n            if e != -1 and finished[e]:\n    \
-    \            continue\n            if visited[v]:\n                par_v[v] =\
-    \ p\n                if e != -1:\n                    par_e[v] = e\n         \
-    \       return v, p, e, par_v, par_e\n            visited[v] = 1\n           \
-    \ if e != -1:\n                par_e[v] = e\n                finished[e] = 1\n\
-    \            par_v[v] = p\n            for u, e in G[v]:\n                if finished[e]:\n\
+    \  # v: \u9802\u70B9\u756A\u53F7\uFF64p: v\u306E\u89AA\u9802\u70B9,e: v\u3068\u63A5\
+    \u7D9A\u3059\u308B\u8FBA\n            if e != -1 and finished[e]:\n          \
+    \      continue\n            if visited[v]:\n                par_v[v] = p\n  \
+    \              if e != -1:\n                    par_e[v] = e\n               \
+    \ return v, p, e, par_v, par_e\n            visited[v] = 1\n            if e !=\
+    \ -1:\n                par_e[v] = e\n                finished[e] = 1\n       \
+    \     par_v[v] = p\n            for u, e in G[v]:\n                if finished[e]:\n\
     \                    continue\n                stack.append((u, v, e))\n\n   \
     \ return -1, -1, -1, par_v, par_e\n\n\ndef cycle_detection(N: int, M: int, G:\
     \ List[int]):\n    v, p, e, par_v, par_e = find_cycle(N, M, G)\n    if p == -1:\n\

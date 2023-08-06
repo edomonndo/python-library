@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segment_tree.py
     title: Segment Tree
   _extendedRequiredBy: []
@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/static_rmq.test.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
+  timestamp: '2023-08-06 23:53:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_rmq.test.py
