@@ -3,12 +3,12 @@ title: Suffix array
 documentation_of: ./suffix_array.py
 ---
 
-Suffix arrayは文字列全てのsuffix（接尾辞）を辞書順でソートし、その開始位置を保持した配列。
+Suffix arrayは文字列全てのsuffix（接尾辞）を辞書順でソートし,その開始位置を保持した配列.
 
 #### 例
 S=abracadabra
 
-Sのすべてのsuffixとその開始位置、辞書順は、以下の通り。
+Sのすべてのsuffixとその開始位置,辞書順は,以下の通り.
 
 |suffix|開始位置|辞書順|
 |----|----|----|
@@ -28,13 +28,13 @@ Sのすべてのsuffixとその開始位置、辞書順は、以下の通り。
 
 ### `suffix_array_upper(s: List[int], upper: int)`
 
-Listからsuffix arrayを求める。
+Listからsuffix arrayを求める.
 
 ### `suffix_array(s: str)`
 
-文字列からsuffix arrayを求める。
+文字列からsuffix arrayを求める.
 
 ### `lcp_array(s: str, sa: List[int])`
 
 最長共通接頭辞(Longest common prefix)
-を求める。Suffix arrayの前計算が必要。
+を求める.Suffix arrayの前計算が必要.

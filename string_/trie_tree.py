@@ -35,8 +35,8 @@ class TrieTree:
         # 現在のノードをリーフとしてマークします
         curr.word_finieshed = True
 
-    # Trie内のキーを検索するための反復関数。
-    # キーと一致する単語がTrieで見つかった場合はTrueを返す。それ以外の場合は、Falseを返す。
+    # Trie内のキーを検索するための反復関数.
+    # キーと一致する単語がTrieで見つかった場合はTrueを返す.それ以外の場合は,Falseを返す.
     # 2つ目の返り値はキーと同じprefixを持つワードの数
     def search(self, key: str, prefix=False):
         curr = self.root

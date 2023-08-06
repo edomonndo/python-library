@@ -18,15 +18,15 @@ class BitVector:
         return self.B[i]
 
     def rank0(self, i: int) -> int:
-        # Bに対して、i番目までに出現する0の個数
+        # Bに対して,i番目までに出現する0の個数
         return i - self.rank1(i)
 
     def rank1(self, i: int) -> int:
-        # Bに対して、i番目までに出現する1の個数
+        # Bに対して,i番目までに出現する1の個数
         return self.SB[i]
 
     def select0(self, k: int) -> int:
-        # Bに対して、先頭からk番目の0のindexを求める
+        # Bに対して,先頭からk番目の0のindexを求める
         l, r = 0, len(self.SB)
         if not k < r - 1 - self.SB[r - 1]:
             return -1
@@ -39,7 +39,7 @@ class BitVector:
         return l
 
     def select1(self, k: int) -> int:
-        # Bに対して、先頭からk番目の1のindexを求める
+        # Bに対して,先頭からk番目の1のindexを求める
         l, r = 0, len(self.SB)
         if not k < self.SB[r - 1]:
             return -1
@@ -83,7 +83,7 @@ class WaveletMatrix:
 
     def accessFromB(self, i: int) -> int:
         # Aのi番目の要素を取得する
-        # 通常accessで取得すれば良い。高速化が必要なとき、こちらを利用するとself.Aの配列を持たなくて良い
+        # 通常accessで取得すれば良い.高速化が必要なとき,こちらを利用するとself.Aの配列を持たなくて良い
         # 実際に速くなるかは不明
         assert 0 <= i < self.n
         res = 0
@@ -112,8 +112,8 @@ class WaveletMatrix:
         return r - l
 
     def select(self, value, k):
-        # Aに対して、k番目のvalueのIndexを返す(0-index)
-        # valueが出現する数が以下のとき、-1を返す
+        # Aに対して,k番目のvalueのIndexを返す(0-index)
+        # valueが出現する数が以下のとき,-1を返す
         if self.rank(0, self.n, value) <= k:
             return -1
         idx = 0
@@ -195,7 +195,7 @@ class WaveletMatrix:
     def topk(self, l, r, k):
         # A[l,r)の中で出現回数が多い順にk個の値と頻度を返す
         # 頻度が同じ場合は値が小さいものが優先される
-        # キューは最大のwidthをキーとするため、マイナスをつける
+        # キューは最大のwidthをキーとするため,マイナスをつける
         res = []
         pq = [(-(r - l), 0, 0, l, r)]  # -width, depth, value, left, right
         while pq and k > 0:

@@ -5,4 +5,4 @@ documentation_of: ./divisors.py
 
 ### `make_divisors(n: int)`
 
-$n$の約数を列挙する。
+$n$の約数を列挙する.

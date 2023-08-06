@@ -64,7 +64,7 @@ if __name__ == "__main__":
     assert SegPQ2.prod(0, et.into[v] + 1) == 9, SegPQ2.prod(0, et.into[v] + 1)
 
     # 頂点u,vのLCA
-    # (depth, v)で返る。最小のdepthに対するvがLCA
+    # (depth, v)で返る.最小のdepthに対するvがLCA
     SegLca = Segtree(et.depth, min, (10**9, N))
     u, v = 2, 5
     if u == v:

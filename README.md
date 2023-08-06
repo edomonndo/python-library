@@ -12,7 +12,7 @@ $ pip3 install online-judge-verify-helper
 
 ## verify自動実行
 
-拡張子の前に`.test`をつけたファイルに、特定の方法でverify用問題のURLを書いておきます (たとえば Pythonであれば、`example.test.py`のようなファイルに`# verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind`のような形で書きます。) このとき、次のコマンドでverifyできているかを確認してくれます。
+拡張子の前に`.test`をつけたファイルに,特定の方法でverify用問題のURLを書いておきます (たとえば Pythonであれば,`example.test.py`のようなファイルに`# verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind`のような形で書きます.) このとき,次のコマンドでverifyできているかを確認してくれます.
 
 ```
 $ oj-verify run
@@ -20,10 +20,10 @@ $ oj-verify run
 
 ## ドキュメント生成
 
-以下のコマンドを実行すると'.verify-helper/markdown/'にドキュメントが生成されます。例:'https://online-judge-tools.github.io/verification-helper/'
+以下のコマンドを実行すると'.verify-helper/markdown/'にドキュメントが生成されます.例:'https://online-judge-tools.github.io/verification-helper/'
 
 '''
 $ oj-verify docs
 '''
 
-ドキュメント生成時に'Doxygen'風のコメントが見つかれば、それらは自動で利用されます。 また、TeX記法の数式 (例: $O(N \sum_i A_i)$) の'MathJax'による表示にも対応しています。 より詳しい説明はリファレンスにあります
+ドキュメント生成時に'Doxygen'風のコメントが見つかれば,それらは自動で利用されます. また,TeX記法の数式 (例: $O(N \sum_i A_i)$) の'MathJax'による表示にも対応しています. より詳しい説明はリファレンスにあります

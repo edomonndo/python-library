@@ -8,7 +8,7 @@ def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], Lis
     dist[start] = 0
     prev = [-1] * N
 
-    que = [(0, start)]  # 距離、頂点
+    que = [(0, start)]  # 距離,頂点
     while que:
         c, u = heappop(que)
         if c > dist[u]:

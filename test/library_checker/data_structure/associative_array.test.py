@@ -7,7 +7,7 @@ input = sys.stdin.readline
 Q = int(input())
 dic = dict()
 for _ in range(Q):
-    # インプットを整数に変換するとTLEになる。strのままの方が速い。
+    # インプットを整数に変換するとTLEになる.strのままの方が速い.
     query = input().split()
     if query[0] == "0":
         k, v = query[1], query[2]

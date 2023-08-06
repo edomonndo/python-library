@@ -16,7 +16,7 @@ def find_cycle(
             continue
         stack = [(i, -1, -1)]
         while stack:
-            v, p, e = stack.pop()  # v: 頂点番号､p: vの親頂点、e: vと接続する辺
+            v, p, e = stack.pop()  # v: 頂点番号､p: vの親頂点,e: vと接続する辺
             if e != -1 and finished[e]:
                 continue
             if visited[v]:

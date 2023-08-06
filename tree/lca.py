@@ -15,7 +15,7 @@ class LcaDoubling:
                     que.append(u)
                     self.depth[u] = self.depth[v] + 1
 
-        self.ancestor = [self.parent]  # self.ancestor[k][u]はuの2**k先の祖先。
+        self.ancestor = [self.parent]  # self.ancestor[k][u]はuの2**k先の祖先.
 
         # ダブリング
         k = 1

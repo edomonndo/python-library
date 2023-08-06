@@ -23,8 +23,8 @@ def min_of_linear(L: int, R: int, a: int, b: int, mod: int) -> Tuple[int, int]:
 
 def _min_of_linear_segments(a: int, b: int, mod: int) -> Tuple[List[int], List[int]]:
     """
-    `ax + b (x>=0)` が最小となるところの情報を返す。
-    prefix min を更新する x 全体が、等差数列の和集合。
+    `ax + b (x>=0)` が最小となるところの情報を返す.
+    prefix min を更新する x 全体が,等差数列の和集合.
 
     次を返す:
 
