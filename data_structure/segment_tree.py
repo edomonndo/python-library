@@ -1,11 +1,4 @@
 class Segtree:
-    n = 1
-    size = 1
-    log = 2
-    d = [0]
-    op = None
-    e = 10**15
-
     def __init__(self, V, OP, E):
         self.n = len(V)
         self.op = OP
@@ -31,10 +24,9 @@ class Segtree:
 
     def prod(self, l, r):
         assert 0 <= l and l <= r and r <= self.n
-        sml = self.e
-        smr = self.e
         l += self.size
         r += self.size
+        sml, smr = self.e, self.e
         while l < r:
             if l & 1:
                 sml = self.op(sml, self.d[l])
@@ -97,6 +89,56 @@ class Segtree:
 
     def update(self, k):
         self.d[k] = self.op(self.d[2 * k], self.d[2 * k + 1])
+
+    def __str__(self):
+        return str([self.get(i) for i in range(self.n)])
+
+
+class RangeMinQuery:
+    def __init__(self, V):
+        self.n = len(V)
+        self.log = (self.n - 1).bit_length()
+        self.size = 1 << self.log
+        _INF = float("inf")
+        self.e = _INF
+        self.d = [_INF for i in range(2 * self.size)]
+        for i in range(self.n):
+            self.d[self.size + i] = V[i]
+        for i in range(self.size - 1, 0, -1):
+            self._update(i)
+
+    def update(self, p, x):
+        assert 0 <= p and p < self.n
+        p += self.size
+        self.d[p] = x
+        for i in range(1, self.log + 1):
+            self._update(p >> i)
+
+    def get(self, p):
+        assert 0 <= p and p < self.n
+        return self.d[p + self.size]
+
+    def query(self, l, r):
+        assert 0 <= l and l <= r and r <= self.n
+        l += self.size
+        r += self.size
+        sml, smr = self.e, self.e
+        while l < r:
+            if l & 1:
+                sml = min(sml, self.d[l])
+                l += 1
+            if r & 1:
+                smr = min(self.d[r - 1], smr)
+                r -= 1
+            l >>= 1
+            r >>= 1
+        return min(sml, smr)
+
+    def fold(self):
+        return self.d[1]
+
+    def _update(self, k):
+        self.d[k] = min(self.d[2 * k], self.d[2 * k + 1])
 
     def __str__(self):
         return str([self.get(i) for i in range(self.n)])
