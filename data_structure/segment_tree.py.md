@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/range_min_query.test.py
     title: test/aoj/range_min_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq.test.py
     title: test/library_checker/data_structure/static_rmq.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -76,7 +76,7 @@ data:
   path: data_structure/segment_tree.py
   requiredBy: []
   timestamp: '2023-08-06 23:53:30+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/range_min_query.test.py
   - test/library_checker/data_structure/static_rmq.test.py

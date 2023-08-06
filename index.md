@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: data_structure/lazy_segment_tree.py
       title: Lazy Segment Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -72,7 +72,7 @@ data:
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
     - icon: ':warning:'
       path: graph/scc.py
-      title: Strongly Connected Components
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
       path: graph/toporogical_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
@@ -80,7 +80,7 @@ data:
     pages:
     - icon: ':warning:'
       path: math_/chinese_remainder_theorem.py
-      title: math_/chinese_remainder_theorem.py
+      title: "\u4E2D\u56FD\u4F59\u5270\u5B9A\u7406"
     - icon: ':warning:'
       path: math_/combination_mod.py
       title: "\u4E8C\u9805\u4FC2\u6570(mod)"
@@ -164,7 +164,7 @@ data:
   verificationCategories:
   - name: test/aoj
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/range_min_query.test.py
       title: test/aoj/range_min_query.test.py
   - name: test/library_checker/convolution
@@ -289,6 +289,9 @@ data:
     - icon: ':x:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
+    - icon: ':x:'
+      path: test/unit_test/heavy_light_decomposition.test.py
+      title: test/unit_test/heavy_light_decomposition.test.py
     - icon: ':x:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py

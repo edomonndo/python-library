@@ -46,7 +46,7 @@ data:
   verifiedWith: []
 documentation_of: graph/scc.py
 layout: document
-title: Strongly Connected Components
+title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
 ---
 
 強連結成分に分解する.
