@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: collections.py
+    title: collections.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -28,11 +31,12 @@ data:
     \ ans.append(v)\n        for u in G[v]:\n            deg[u] -= 1\n           \
     \ if deg[u] == 0:\n                que.append(u)\n                ans.append(u)\n\
     \    if len(ans) == N:\n        return ans\n    return -1\n"
-  dependsOn: []
+  dependsOn:
+  - collections.py
   isVerificationFile: false
   path: graph/toporogical_sort.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-07 21:41:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/toporogical_sort.py

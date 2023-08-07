@@ -1,6 +1,14 @@
 ---
 data:
   libraryCategories:
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: collections.py
+      title: collections.py
+    - icon: ':warning:'
+      path: heapq.py
+      title: heapq.py
   - name: convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -17,6 +25,12 @@ data:
     - icon: ':warning:'
       path: data_structure/FixedSizeHeapQue.py
       title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+    - icon: ':warning:'
+      path: data_structure/FoldableDeque.py
+      title: Foldable Deque(DSWAG)
+    - icon: ':warning:'
+      path: data_structure/FoldableQue.py
+      title: Foldable Queue(SWAG)
     - icon: ':warning:'
       path: data_structure/SortedMultiset.py
       title: SortedMultiset
@@ -180,16 +194,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/associative_array.test.py
       title: test/library_checker/data_structure/associative_array.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.py
       title: test/library_checker/data_structure/point_add_range_sum.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/static_range_frequency.test.py
       title: test/library_checker/data_structure/static_range_frequency.test.py
     - icon: ':heavy_check_mark:'
@@ -203,21 +217,21 @@ data:
       title: test/library_checker/data_structure/unionfind.test.py
   - name: test/library_checker/geometory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: test/library_checker/geometory/sort_points_by_argument.test.py
   - name: test/library_checker/graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/cycle_detection.test.py
       title: test/library_checker/graph/cycle_detection.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/cycle_detection_undirected.test.py
       title: test/library_checker/graph/cycle_detection_undirected.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/shortest_path.test.py
       title: test/library_checker/graph/shortest_path.test.py
   - name: test/library_checker/math
@@ -225,16 +239,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/sum_of_floor_of_linear.test.py
       title: test/library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/two_sat.test.py
       title: test/library_checker/math/two_sat.test.py
   - name: test/library_checker/matrix
@@ -264,10 +278,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/manacher.test.py
       title: test/library_checker/string/manacher.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
@@ -275,13 +289,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
