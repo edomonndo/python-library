@@ -1,5 +1,5 @@
 ---
-title: Segment Tree
+title: セグメント木 (Segment Tree)
 documentation_of: ./segment_tree.py
 ---
 

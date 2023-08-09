@@ -1,5 +1,5 @@
 ---
-title: Lazy Segment Tree
+title: 遅延セグメント木 (Lazy Segment Tree)
 documentation_of: ./lazy_segment_tree.py
 ---
 
@@ -11,69 +11,20 @@ documentation_of: ./lazy_segment_tree.py
 G = LazySegtree([0 for i in range(N)], func, ide_ele, mapping, composition, identity)
 ```
 ここで,最初のリストは初期値である.ここは全部 $0$ である必要はない.必要に応じて変えてもいい. 例えば, `A` だったり, `list(range(N))` だったりを入れる. また,`func`, `ide_ele` は演算と単位元である.この演算はモノイドであることが要求される. （注：モノイドとは,結合法則が成り立って,単位元が存在するような演算のことである.）`mapping`は，$F$
-の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `idneitty`は$F$における単位元である.ß
+の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `idneitty`は$F$における単位元である.
 
-以下は遅延セグ木に載せることのできる演算の例である.これはあくまで具体例なので他にもたくさんある.
+以下は遅延セグ木に載せることのできる演算の例である.これはあくまで具体例なので他にもたくさんある. 
 
 
-| セグ木関数 | 単位元 | mapping | composition | 補足 |
+| 分類 | mapping | composition | ID | 補足 |
 | ---- | ---- | ---- | ---- | ---- | 
-| add | $0$ | | | 足し算 | 
-| min | $INF$ | | |  最小値 | 
-| max | $-INF$ | | |  最大値 | 
-| gcd | $0$ | | |  最大公約数 | 
-| lcm | $1$ | | |  最小公倍数 | 
-| xor | $0$ | | |  排他的論理和 | 
-| or | $0$ | | |  bitwise or | 
-| and | $2^N-1$ | | |  bitwise and（Nは制約に応じて十分大きな値を取る） | 
-| convolution | $[1]$ | | |  多項式の積（畳み込みを参照） | 
-(a,b)*(c,d)->(ac,ad+b) | $(1,0)$ | | |  1次関数の合成,(a,b)はx->ax+bに対応 | 
-| matrix | 単位行列 | | | 行列の積 | 
+| 区間加算・区間最小値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
+| 区間加算・区間最大値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
+| 区間加算・区間和取得 | `lambda f,x: (x[0]+f*x[1], x[1])` | `lambda f, g: f+g` | $0$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` | 
+| 区間変更・区間最小値取得 | `lambda f,x: x if f==ID else f` | `lambda f,g: g if f==ID else f` | $INF$ |  | 
+| 区間変更・区間最大値取得 | `lambda f,x: x if f==ID else f` | `lambda f, g: g if f==ID else f` | $INF$ |  | 
+| 区間変更・区間和取得 | `lambda f,x: x if f==ID else (f*x[1], x[1])` | `lambda f, g: g if f==ID else f` | $INF$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` |
 
-### 実装上の注意
-
-前節で例に挙げた各演算について,セグ木に載せる際には例えば以下のように書く.
-
-```
-#add
-G=Segtree(LIST,(lambda x,y:x+y),0)
-
-#addの書き方その2
-def add(x,y):
-    return x+y
-G=Segtree(LIST,add,0)
-
-
-#times
-G=Segtree(LIST,(lambda x,y:x*y),1)
-
-#min
-G=Segtree(LIST,min,INF)
-
-#max
-G=Segtree(LIST,max,-INF)
-
-#gcd
-from math import gcd
-G=Segtree(LIST,gcd,0)
-
-#lcm
-from math import gcd
-def lcm(x,y):
-    return (x*y)//gcd(x,y)
-G=Segtree(LIST,lcm,1)
-
-# xor
-G=Segtree(LIST,(lambda x,y:x^y),0)
-
-# or
-G=Segtree(LIST,(lambda x,y:x|y),0)
-
-# and
-N=30
-G=Segtree(LIST,(lambda x,y:x&y),(1<<N)-1)
-```
-関数はラムダ式で定義しても,defで定義してもどちらでも問題ない.
 
 ### set
 

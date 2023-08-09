@@ -10,7 +10,7 @@ class LazySegtree:
             self.d[self.size + i] = V[i]
         for i in range(self.size - 1, 0, -1):
             self._update(i)
-        # 遅延評価用
+        # 遅延伝播用
         self.lz = [ID for i in range(self.size)]
         self.mapping = MAPPING
         self.composition = COMPOSITION
