@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B
 
-from graph.toporogical_sort import topological_sort
+from graph.topological_sort import topological_sort
 
 N, M = map(int, input().split())
 G = [[] for _ in range(N)]
