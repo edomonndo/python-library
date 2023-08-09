@@ -8,7 +8,7 @@ data:
   - icon: ':warning:'
     path: graph/maxflow.py
     title: "\u6700\u5927\u30D5\u30ED\u30FC"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/toporogical_sort.py
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _extendedVerifiedWith: []

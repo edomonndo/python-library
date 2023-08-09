@@ -25,10 +25,10 @@ data:
     - icon: ':warning:'
       path: data_structure/FixedSizeHeapQue.py
       title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/FoldableDeque.py
       title: Foldable Deque(DSWAG)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/FoldableQue.py
       title: Foldable Queue(SWAG)
     - icon: ':warning:'
@@ -42,24 +42,27 @@ data:
       title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
         \u5408\u8A08\uFF09"
     - icon: ':heavy_check_mark:'
+      path: data_structure/dual_segment_tree.py
+      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
-    - icon: ':warning:'
+    - icon: ':question:'
       path: data_structure/lazy_segment_tree.py
-      title: Lazy Segment Tree
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
-      title: Segment Tree
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
     - icon: ':warning:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: geometory
@@ -87,7 +90,7 @@ data:
     - icon: ':warning:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: graph/toporogical_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: math_
@@ -150,6 +153,9 @@ data:
       path: tree/cartesian_tree.py
       title: Cartesian tree
     - icon: ':warning:'
+      path: tree/diameter.py
+      title: "\u6728\u306E\u76F4\u5F84"
+    - icon: ':warning:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':warning:'
@@ -179,8 +185,41 @@ data:
   - name: test/aoj
     pages:
     - icon: ':heavy_check_mark:'
+      path: test/aoj/range_add_min_query.test.py
+      title: test/aoj/range_add_min_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/range_add_query.test.py
+      title: test/aoj/range_add_query.test.py
+    - icon: ':heavy_check_mark:'
       path: test/aoj/range_min_query.test.py
       title: test/aoj/range_min_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/range_sum_query.test.py
+      title: test/aoj/range_sum_query.test.py
+    - icon: ':x:'
+      path: test/aoj/range_update_min_query.test.py
+      title: test/aoj/range_update_min_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/range_update_query.test.py
+      title: test/aoj/range_update_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/sliding_minimum_element_swag.test.py
+      title: test/aoj/sliding_minimum_element_swag.test.py
+    - icon: ':x:'
+      path: test/aoj/sliding_minimum_element_wm.test.py
+      title: test/aoj/sliding_minimum_element_wm.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/smallest_window1.test.py
+      title: test/aoj/smallest_window1.test.py
+    - icon: ':x:'
+      path: test/aoj/toporogical_sort.test.py
+      title: test/aoj/toporogical_sort.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/union_find.test.py
+      title: test/aoj/union_find.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/weighted_union_find.test.py
+      title: test/aoj/weighted_union_find.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'

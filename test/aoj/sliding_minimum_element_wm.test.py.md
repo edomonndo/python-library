@@ -7,29 +7,28 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/tree_diameter
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/3/DSL_3_D
     links:
-    - https://judge.yosupo.jp/problem/tree_diameter
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/3/DSL_3_D
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/tree_diameter\n\
-    \nfrom tree.diameter import diameter\n\nN = int(input())\nG = [[] for _ in range(N)]\n\
-    for _ in range(N - 1):\n    a, b, c = map(int, input().split())\n    G[a].append((b,\
-    \ c))\n    G[b].append((a, c))\n\ndiam, path = diameter(N, G)\nprint(diam, len(path))\n\
-    print(*path)\n"
+  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/3/DSL_3_D\n\
+    \nfrom data_structure.wavelet_matrix import WaveletMatrix\n\nN, L = map(int, input().split())\n\
+    A = list(map(int, input().split()))\nWM = WaveletMatrix(A)\nans = []\nfor l in\
+    \ range(N - L + 1):\n    ans.append(WM.quantile(l, l + L, 0))\nprint(*ans)\n"
   dependsOn: []
   isVerificationFile: true
-  path: test/library_checker/tree/tree_diameter.test.py
+  path: test/aoj/sliding_minimum_element_wm.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/library_checker/tree/tree_diameter.test.py
+documentation_of: test/aoj/sliding_minimum_element_wm.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/tree/tree_diameter.test.py
-- /verify/test/library_checker/tree/tree_diameter.test.py.html
-title: test/library_checker/tree/tree_diameter.test.py
+- /verify/test/aoj/sliding_minimum_element_wm.test.py
+- /verify/test/aoj/sliding_minimum_element_wm.test.py.html
+title: test/aoj/sliding_minimum_element_wm.test.py
 ---

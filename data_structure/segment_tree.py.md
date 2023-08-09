@@ -82,7 +82,7 @@ data:
   - test/library_checker/data_structure/static_rmq.test.py
 documentation_of: data_structure/segment_tree.py
 layout: document
-title: Segment Tree
+title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
 ---
 
 一点更新・区間クエリを高速で計算することが出来る.

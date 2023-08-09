@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/weighted_union_find.test.py
+    title: test/aoj/weighted_union_find.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -45,8 +48,9 @@ data:
   path: data_structure/weighted_union_find.py
   requiredBy: []
   timestamp: '2023-07-23 00:15:14+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/weighted_union_find.test.py
 documentation_of: data_structure/weighted_union_find.py
 layout: document
 title: "\u91CD\u307F\u4ED8\u304D Union Find"

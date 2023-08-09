@@ -5,10 +5,13 @@ data:
     path: collections.py
     title: collections.py
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/aoj/toporogical_sort.test.py
+    title: test/aoj/toporogical_sort.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -37,8 +40,9 @@ data:
   path: graph/toporogical_sort.py
   requiredBy: []
   timestamp: '2023-08-07 21:41:31+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/aoj/toporogical_sort.test.py
 documentation_of: graph/toporogical_sort.py
 layout: document
 title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"

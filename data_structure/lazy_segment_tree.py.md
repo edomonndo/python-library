@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/range_add_min_query.test.py
+    title: test/aoj/range_add_min_query.test.py
+  - icon: ':x:'
+    path: test/aoj/range_update_min_query.test.py
+    title: test/aoj/range_update_min_query.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -17,7 +23,7 @@ data:
     \      self.log = (self.n - 1).bit_length()\n        self.size = 1 << self.log\n\
     \        self.d = [E for i in range(2 * self.size)]\n        for i in range(self.n):\n\
     \            self.d[self.size + i] = V[i]\n        for i in range(self.size -\
-    \ 1, 0, -1):\n            self._update(i)\n        # \u9045\u5EF6\u8A55\u4FA1\u7528\
+    \ 1, 0, -1):\n            self._update(i)\n        # \u9045\u5EF6\u4F1D\u64AD\u7528\
     \n        self.lz = [ID for i in range(self.size)]\n        self.mapping = MAPPING\n\
     \        self.composition = COMPOSITION\n        self.identity = ID\n\n    def\
     \ set(self, p, x):\n        assert 0 <= p and p < self.n\n        p += self.size\n\
@@ -83,12 +89,14 @@ data:
   isVerificationFile: false
   path: data_structure/lazy_segment_tree.py
   requiredBy: []
-  timestamp: '2023-08-06 23:53:35+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-08-10 00:04:04+09:00'
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - test/aoj/range_add_min_query.test.py
+  - test/aoj/range_update_min_query.test.py
 documentation_of: data_structure/lazy_segment_tree.py
 layout: document
-title: Lazy Segment Tree
+title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
 ---
 
 区間更新・区間クエリを高速で計算することが出来る.
@@ -99,69 +107,20 @@ title: Lazy Segment Tree
 G = LazySegtree([0 for i in range(N)], func, ide_ele, mapping, composition, identity)
 ```
 ここで,最初のリストは初期値である.ここは全部 $0$ である必要はない.必要に応じて変えてもいい. 例えば, `A` だったり, `list(range(N))` だったりを入れる. また,`func`, `ide_ele` は演算と単位元である.この演算はモノイドであることが要求される. （注：モノイドとは,結合法則が成り立って,単位元が存在するような演算のことである.）`mapping`は，$F$
-の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `idneitty`は$F$における単位元である.ß
+の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `idneitty`は$F$における単位元である.
 
-以下は遅延セグ木に載せることのできる演算の例である.これはあくまで具体例なので他にもたくさんある.
+以下は遅延セグ木に載せることのできる演算の例である.これはあくまで具体例なので他にもたくさんある. 
 
 
-| セグ木関数 | 単位元 | mapping | composition | 補足 |
+| 分類 | mapping | composition | ID | 補足 |
 | ---- | ---- | ---- | ---- | ---- | 
-| add | $0$ | | | 足し算 | 
-| min | $INF$ | | |  最小値 | 
-| max | $-INF$ | | |  最大値 | 
-| gcd | $0$ | | |  最大公約数 | 
-| lcm | $1$ | | |  最小公倍数 | 
-| xor | $0$ | | |  排他的論理和 | 
-| or | $0$ | | |  bitwise or | 
-| and | $2^N-1$ | | |  bitwise and（Nは制約に応じて十分大きな値を取る） | 
-| convolution | $[1]$ | | |  多項式の積（畳み込みを参照） | 
-(a,b)*(c,d)->(ac,ad+b) | $(1,0)$ | | |  1次関数の合成,(a,b)はx->ax+bに対応 | 
-| matrix | 単位行列 | | | 行列の積 | 
+| 区間加算・区間最小値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
+| 区間加算・区間最大値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
+| 区間加算・区間和取得 | `lambda f,x: (x[0]+f*x[1], x[1])` | `lambda f, g: f+g` | $0$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` | 
+| 区間変更・区間最小値取得 | `lambda f,x: x if f==ID else f` | `lambda f,g: g if f==ID else f` | $INF$ |  | 
+| 区間変更・区間最大値取得 | `lambda f,x: x if f==ID else f` | `lambda f, g: g if f==ID else f` | $INF$ |  | 
+| 区間変更・区間和取得 | `lambda f,x: x if f==ID else (f*x[1], x[1])` | `lambda f, g: g if f==ID else f` | $INF$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` |
 
-### 実装上の注意
-
-前節で例に挙げた各演算について,セグ木に載せる際には例えば以下のように書く.
-
-```
-#add
-G=Segtree(LIST,(lambda x,y:x+y),0)
-
-#addの書き方その2
-def add(x,y):
-    return x+y
-G=Segtree(LIST,add,0)
-
-
-#times
-G=Segtree(LIST,(lambda x,y:x*y),1)
-
-#min
-G=Segtree(LIST,min,INF)
-
-#max
-G=Segtree(LIST,max,-INF)
-
-#gcd
-from math import gcd
-G=Segtree(LIST,gcd,0)
-
-#lcm
-from math import gcd
-def lcm(x,y):
-    return (x*y)//gcd(x,y)
-G=Segtree(LIST,lcm,1)
-
-# xor
-G=Segtree(LIST,(lambda x,y:x^y),0)
-
-# or
-G=Segtree(LIST,(lambda x,y:x|y),0)
-
-# and
-N=30
-G=Segtree(LIST,(lambda x,y:x&y),(1<<N)-1)
-```
-関数はラムダ式で定義しても,defで定義してもどちらでも問題ない.
 
 ### set
 
