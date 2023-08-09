@@ -1,4 +1,4 @@
-# verification-helper: IGNORE
+# verification-helper: UNITTEST
 
 
 if __name__ == "__main__":
