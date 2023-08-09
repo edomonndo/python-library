@@ -83,7 +83,7 @@ data:
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
-      path: graph/toporogical_sort.py
+      path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: math_
     pages:
@@ -204,8 +204,8 @@ data:
       path: test/aoj/smallest_window1.test.py
       title: test/aoj/smallest_window1.test.py
     - icon: ':x:'
-      path: test/aoj/toporogical_sort.test.py
-      title: test/aoj/toporogical_sort.test.py
+      path: test/aoj/topological_sort.test.py
+      title: test/aoj/topological_sort.test.py
     - icon: ':heavy_check_mark:'
       path: test/aoj/union_find.test.py
       title: test/aoj/union_find.test.py
