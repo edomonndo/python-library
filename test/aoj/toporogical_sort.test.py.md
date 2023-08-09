@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':x:'
-    path: graph/toporogical_sort.py
-    title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -22,12 +19,11 @@ data:
     G = [[] for _ in range(N)]\ndeg = [0] * N\nfor _ in range(M):\n    u, v = map(int,\
     \ input().split())\n    G[u].append(v)\n    deg[v] += 1\n\nans = topological_sort(N,\
     \ G, deg)\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn:
-  - graph/toporogical_sort.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/toporogical_sort.test.py
   requiredBy: []
-  timestamp: '2023-08-10 00:04:04+09:00'
+  timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/toporogical_sort.test.py

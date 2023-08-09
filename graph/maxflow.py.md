@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':warning:'
-    path: collections.py
-    title: collections.py
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -61,12 +58,11 @@ data:
     \ to, rev, cap in self.g[p]:\n                if cap and not (visited[to]):\n\
     \                    visited[to] = True\n                    que.append(to)\n\
     \        return visited\n"
-  dependsOn:
-  - collections.py
+  dependsOn: []
   isVerificationFile: false
   path: graph/maxflow.py
   requiredBy: []
-  timestamp: '2023-08-07 21:41:31+09:00'
+  timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/maxflow.py

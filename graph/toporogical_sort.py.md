@@ -1,17 +1,11 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':warning:'
-    path: collections.py
-    title: collections.py
+  _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/aoj/toporogical_sort.test.py
-    title: test/aoj/toporogical_sort.test.py
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -34,15 +28,13 @@ data:
     \ ans.append(v)\n        for u in G[v]:\n            deg[u] -= 1\n           \
     \ if deg[u] == 0:\n                que.append(u)\n                ans.append(u)\n\
     \    if len(ans) == N:\n        return ans\n    return -1\n"
-  dependsOn:
-  - collections.py
+  dependsOn: []
   isVerificationFile: false
   path: graph/toporogical_sort.py
   requiredBy: []
-  timestamp: '2023-08-07 21:41:31+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/aoj/toporogical_sort.test.py
+  timestamp: '1970-01-01 00:00:00+00:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: graph/toporogical_sort.py
 layout: document
 title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
