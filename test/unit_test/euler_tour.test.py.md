@@ -7,13 +7,13 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    IGNORE: ''
+    UNITTEST: ''
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE\n\n\nif __name__ == \"__main__\":\n    from\
+  code: "# verification-helper: UNITTEST\n\n\nif __name__ == \"__main__\":\n    from\
     \ pathlib import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
     \    from data_structure.segment_tree import Segtree\n    from tree.euler_tour\
     \ import EulerTour\n\n    N = 6\n    G = [[] for _ in range(N)]\n    edges = [(0,\

@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/range_add_min_query.test.py
     title: test/aoj/range_add_min_query.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/range_update_min_query.test.py
     title: test/aoj/range_update_min_query.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -90,7 +90,7 @@ data:
   path: data_structure/lazy_segment_tree.py
   requiredBy: []
   timestamp: '2023-08-10 00:04:04+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/range_add_min_query.test.py
   - test/aoj/range_update_min_query.test.py

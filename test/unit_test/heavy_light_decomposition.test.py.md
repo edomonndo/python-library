@@ -7,14 +7,14 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    IGNORE: ''
+    UNITTEST: ''
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE\n\nif __name__ == \"__main__\":\n    from pathlib\
-    \ import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
+  code: "# verification-helper: UNITTEST\n\nif __name__ == \"__main__\":\n    from\
+    \ pathlib import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
     \    from tree.heavy_light_decomposition import HeavyLightDecomposition\n\n  \
     \  N = 12\n    tree = [[1, 6, 10], [2, 5], [3, 4], [], [], [], [7], [8, 9], [],\
     \ [], [11], []]\n    parent = [-1, 0, 1, 2, 2, 1, 0, 6, 7, 7, 0, 10]\n    v_bfs_order\
