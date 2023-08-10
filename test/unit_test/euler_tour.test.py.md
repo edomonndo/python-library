@@ -3,21 +3,23 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    UNITTEST: ''
-    links: []
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
+    links:
+    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: UNITTEST\n\n\nif __name__ == \"__main__\":\n    from\
-    \ pathlib import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
-    \    from data_structure.segment_tree import Segtree\n    from tree.euler_tour\
-    \ import EulerTour\n\n    N = 6\n    G = [[] for _ in range(N)]\n    edges = [(0,\
-    \ 1, 1), (0, 5, 16), (1, 2, 2), (1, 4, 8), (2, 3, 4)]\n    Vs = [1, 2, 4, 8, 16,\
+  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A\n\
+    \n\nif __name__ == \"__main__\":\n    from pathlib import Path\n    import sys\n\
+    \n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n  \
+    \  from data_structure.segment_tree import Segtree\n    from tree.euler_tour import\
+    \ EulerTour\n\n    N = 6\n    G = [[] for _ in range(N)]\n    edges = [(0, 1,\
+    \ 1), (0, 5, 16), (1, 2, 2), (1, 4, 8), (2, 3, 4)]\n    Vs = [1, 2, 4, 8, 16,\
     \ 32]\n    for u, v, w in edges:\n        G[u].append((w, v))\n        G[v].append((w,\
     \ u))\n    root = 0\n    et = EulerTour(N, G, root, Vs)\n\n    assert et.ET ==\
     \ [0, 1, 2, 3, -3, -2, 4, -4, -1, 5, -5, 0], et.ET\n    assert et.into == [0,\
@@ -47,13 +49,14 @@ data:
     \u5C0F\u306Edepth\u306B\u5BFE\u3059\u308Bv\u304CLCA\n    SegLca = Segtree(et.depth,\
     \ min, (10**9, N))\n    u, v = 2, 5\n    if u == v:\n        pass\n    else:\n\
     \        l, r = et.into[u], et.into[v]\n        if l > r:\n            l, r =\
-    \ r, l\n        assert SegLca.prod(l, r + 1) == (0, 0), SegLca.prod(l, r + 1)\n"
+    \ r, l\n        assert SegLca.prod(l, r + 1) == (0, 0), SegLca.prod(l, r + 1)\n\
+    \n    print(\"Hello World\")\n"
   dependsOn: []
   isVerificationFile: true
   path: test/unit_test/euler_tour.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/euler_tour.test.py
 layout: document

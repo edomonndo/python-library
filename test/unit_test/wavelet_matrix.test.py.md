@@ -7,17 +7,19 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    UNITTEST: ''
-    links: []
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
+    links:
+    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: UNITTEST\n\nif __name__ == \"__main__\":\n    from\
-    \ pathlib import Path\n    import sys\n\n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\
-    \    from data_structure.wavelet_matrix import WaveletMatrix\n\n    T = [5, 4,\
-    \ 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n\
-    \ == len(T)\n    assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n\
+  code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A\n\
+    if __name__ == \"__main__\":\n    from pathlib import Path\n    import sys\n\n\
+    \    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n   \
+    \ from data_structure.wavelet_matrix import WaveletMatrix\n\n    T = [5, 4, 5,\
+    \ 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n ==\
+    \ len(T)\n    assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n\
     \        assert t == WM.access(i), (t, WM.access(i))\n        assert t == WM.accessFromB(i),\
     \ (t, WM.accessFromB(i))\n\n    # rank\n    for l in range(len(T)):\n        for\
     \ r in range(l + 1, len(T)):\n            for t in T:\n                greedy_rank\
@@ -97,7 +99,7 @@ data:
     \                  assert greedy_nextvalue(l, r, x, y) == WM.nextvalue(l, r, x,\
     \ y), (\n                        (l, r, x, y),\n                        greedy_nextvalue(l,\
     \ r, x, y),\n                        WM.nextvalue(l, r, x, y),\n             \
-    \       )\n"
+    \       )\n\n    print(\"Hello World\")\n"
   dependsOn: []
   isVerificationFile: true
   path: test/unit_test/wavelet_matrix.test.py
