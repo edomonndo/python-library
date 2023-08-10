@@ -1,4 +1,4 @@
-# verification-helper: UNITTEST
+# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
 
 
 if __name__ == "__main__":
@@ -74,3 +74,5 @@ if __name__ == "__main__":
         if l > r:
             l, r = r, l
         assert SegLca.prod(l, r + 1) == (0, 0), SegLca.prod(l, r + 1)
+
+    print("Hello World")
