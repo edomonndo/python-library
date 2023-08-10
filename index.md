@@ -62,6 +62,9 @@ data:
     - icon: ':warning:'
       path: geometory/convex_full.py
       title: Convex full
+    - icon: ':question:'
+      path: geometory/geometory.py
+      title: geometory/geometory.py
     - icon: ':warning:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
@@ -176,6 +179,27 @@ data:
   verificationCategories:
   - name: test/aoj
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl_counter_clockwise.test.py
+      title: test/aoj/cgl_counter_clockwise.test.py
+    - icon: ':x:'
+      path: test/aoj/cgl_cross_point.test.py
+      title: test/aoj/cgl_cross_point.test.py
+    - icon: ':x:'
+      path: test/aoj/cgl_distance.test.py
+      title: test/aoj/cgl_distance.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl_intersection.test.py
+      title: test/aoj/cgl_intersection.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl_parallel_orthogonal.test.py
+      title: test/aoj/cgl_parallel_orthogonal.test.py
+    - icon: ':x:'
+      path: test/aoj/cgl_projection.test.py
+      title: test/aoj/cgl_projection.test.py
+    - icon: ':x:'
+      path: test/aoj/cgl_refrection.test.py
+      title: test/aoj/cgl_refrection.test.py
     - icon: ':heavy_check_mark:'
       path: test/aoj/range_add_min_query.test.py
       title: test/aoj/range_add_min_query.test.py
