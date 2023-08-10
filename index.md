@@ -326,7 +326,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
