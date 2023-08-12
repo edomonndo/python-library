@@ -27,5 +27,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
-        PYTHONPATH: /home/runner/work/edomonndo/python-library:/opt/hostedtoolcache/PyPy/3.7.13/x64/lib-python/3/
+        PYTHONPATH: /home/runner/work/edomonndo/python-library
       run: oj-verify all --timeout 1200
