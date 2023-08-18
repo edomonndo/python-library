@@ -39,7 +39,7 @@ class Point:
         return self.y > other.y
 
     def __str__(self):
-        return "{} {}".format(self.x, self.y)
+        return f"<Point({self.x} {self.y})>"
 
     def norm(self):
         return self.x**2 + self.y**2
@@ -98,6 +98,9 @@ class Point:
     def arg(self):
         return math.atan2(self.y, self.x)
 
+    def get(self):
+        return self.x, self.y
+
 
 class Line:
     def __init__(self, p1: Point, p2: Point):
@@ -107,7 +110,7 @@ class Line:
         self.vector = p2 - p1
 
     def __str__(self):
-        return "{} {} {} {}".format(self.s.x, self.s.y, self.t.x, self.t.y)
+        return f"<Line({self.s.x} {self.s.y} {self.t.x} {self.t.y})>"
 
     def is_orthogonal(self, other):
         return abs(self.vector.dot(other.vector)) < self.EPS
@@ -188,7 +191,7 @@ class Circle:
         self.r = radius
 
     def __str__(self):
-        return "{} {} {}".format(self.center.x, self.center.y, self.r)
+        return f"<Circle({self.center.x} {self.center.y} {self.r})>"
 
     def get_diameter(self):
         return self.r * 2
@@ -239,6 +242,81 @@ class Circle:
 
 
 class Rectangle:
+    def __init__(self, top_left, bottom_right):
+        self.top_left = top_left
+        self.bottom_right = bottom_right
+
+    def __str__(self):
+        return f"<Rect({self.top_left}, {self.bottom_right})>"
+
+    def sub(self, other):
+        xs1, ys1 = self.top_left.get()
+        xs2, ys2 = self.bottom_right.get()
+        xo1, yo1 = other.top_left.get()
+        xo2, yo2 = other.bottom_right.get()
+
+        if xs1 < xo1:
+            yield Rectangle(Point(xs1, ys1), Point(xo1, ys2))
+        if xs2 > xo2:
+            yield Rectangle(Point(xo2, ys1), Point(xs2, ys2))
+        if ys1 < yo1:
+            yield Rectangle(Point(max(xs1, xo1), ys1), Point(min(xs2, xo2), yo1))
+        if ys2 > yo2:
+            yield Rectangle(Point(max(xs1, xo1), yo2), Point(min(xs2, xo2), ys2))
+
+    def intersect(self, other):
+        xs1, ys1 = self.top_left.get()
+        xs2, ys2 = self.bottom_right.get()
+        xo1, yo1 = other.top_left.get()
+        xo2, yo2 = other.bottom_right.get()
+
+        if xs1 >= xo2:
+            return False
+        elif xs2 <= xo1:
+            return False
+
+        if ys1 >= yo2:
+            return False
+        elif ys2 <= yo1:
+            return False
+        return True
+
+    def get_area(self):
+        return (self.bottom_right.x - self.top_left.x) * (
+            self.bottom_right.y - self.top_left.y
+        )
+
+
+class Rectangles:
+    def __init__(self):
+        self.rects = []
+
+    def __str__(self):
+        return "<Rects(" + "\n ".join(str(r) for r in self.rects) + ")>"
+
+    def add(self, rect):
+        rects = []
+        for r in self.rects:
+            if rect.intersect(r):
+                rects.extend(r.sub(rect))
+            else:
+                rects.append(r)
+        rects.append(rect)
+        self.rects = rects
+
+    def area(self):
+        return sum(r.get_area() for r in self.rects)
+
+    def not_intersect(self):
+        N = len(self.rects)
+        for i in range(N - 1):
+            for j in range(i + 1, N):
+                if self.rects[i].intersect(self.rects[j]):
+                    return False
+        return True
+
+
+class Polygon:
     def __init__(self, arr):
         """
         配列arrは，多角形の隣り合った点を反時計回りに訪問する順番であること．
