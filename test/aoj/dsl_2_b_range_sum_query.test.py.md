@@ -25,15 +25,15 @@ data:
   dependsOn:
   - data_structure/fenwick_tree.py
   isVerificationFile: true
-  path: test/aoj/range_sum_query.test.py
+  path: test/aoj/dsl_2_b_range_sum_query.test.py
   requiredBy: []
-  timestamp: '2023-08-10 00:04:04+09:00'
+  timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/range_sum_query.test.py
+documentation_of: test/aoj/dsl_2_b_range_sum_query.test.py
 layout: document
 redirect_from:
-- /verify/test/aoj/range_sum_query.test.py
-- /verify/test/aoj/range_sum_query.test.py.html
-title: test/aoj/range_sum_query.test.py
+- /verify/test/aoj/dsl_2_b_range_sum_query.test.py
+- /verify/test/aoj/dsl_2_b_range_sum_query.test.py.html
+title: test/aoj/dsl_2_b_range_sum_query.test.py
 ---

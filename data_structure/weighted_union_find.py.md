@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/weighted_union_find.test.py
-    title: test/aoj/weighted_union_find.test.py
+    path: test/aoj/dsl_1_b_weighted_union_find.test.py
+    title: test/aoj/dsl_1_b_weighted_union_find.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -50,7 +50,7 @@ data:
   timestamp: '2023-07-23 00:15:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/weighted_union_find.test.py
+  - test/aoj/dsl_1_b_weighted_union_find.test.py
 documentation_of: data_structure/weighted_union_find.py
 layout: document
 title: "\u91CD\u307F\u4ED8\u304D Union Find"

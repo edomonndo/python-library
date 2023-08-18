@@ -4,11 +4,17 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/range_add_min_query.test.py
-    title: test/aoj/range_add_min_query.test.py
+    path: test/aoj/dsl_2_f_range_update_min_query.test.py
+    title: test/aoj/dsl_2_f_range_update_min_query.test.py
   - icon: ':heavy_check_mark:'
-    path: test/aoj/range_update_min_query.test.py
-    title: test/aoj/range_update_min_query.test.py
+    path: test/aoj/dsl_2_g_range_add_sum_query.test.py
+    title: test/aoj/dsl_2_g_range_add_sum_query.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl_2_h_range_add_min_query.test.py
+    title: test/aoj/dsl_2_h_range_add_min_query.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl_2_i_range_update_sum_query.test.py
+    title: test/aoj/dsl_2_i_range_update_sum_query.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -92,8 +98,10 @@ data:
   timestamp: '2023-08-10 00:04:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/range_add_min_query.test.py
-  - test/aoj/range_update_min_query.test.py
+  - test/aoj/dsl_2_i_range_update_sum_query.test.py
+  - test/aoj/dsl_2_g_range_add_sum_query.test.py
+  - test/aoj/dsl_2_f_range_update_min_query.test.py
+  - test/aoj/dsl_2_h_range_add_min_query.test.py
 documentation_of: data_structure/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"

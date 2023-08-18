@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':question:'
     path: geometory/geometory.py
-    title: geometory/geometory.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -28,15 +28,15 @@ data:
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
-  path: test/aoj/cgl_counter_clockwise.test.py
+  path: test/aoj/cgl_1_c_counter_clockwise.test.py
   requiredBy: []
-  timestamp: '2023-08-10 22:55:11+09:00'
+  timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/cgl_counter_clockwise.test.py
+documentation_of: test/aoj/cgl_1_c_counter_clockwise.test.py
 layout: document
 redirect_from:
-- /verify/test/aoj/cgl_counter_clockwise.test.py
-- /verify/test/aoj/cgl_counter_clockwise.test.py.html
-title: test/aoj/cgl_counter_clockwise.test.py
+- /verify/test/aoj/cgl_1_c_counter_clockwise.test.py
+- /verify/test/aoj/cgl_1_c_counter_clockwise.test.py.html
+title: test/aoj/cgl_1_c_counter_clockwise.test.py
 ---

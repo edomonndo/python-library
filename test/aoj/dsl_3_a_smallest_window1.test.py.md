@@ -27,15 +27,15 @@ data:
   dependsOn:
   - data_structure/FoldableDeque.py
   isVerificationFile: true
-  path: test/aoj/smallest_window1.test.py
+  path: test/aoj/dsl_3_a_smallest_window1.test.py
   requiredBy: []
-  timestamp: '2023-08-10 00:04:04+09:00'
+  timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/smallest_window1.test.py
+documentation_of: test/aoj/dsl_3_a_smallest_window1.test.py
 layout: document
 redirect_from:
-- /verify/test/aoj/smallest_window1.test.py
-- /verify/test/aoj/smallest_window1.test.py.html
-title: test/aoj/smallest_window1.test.py
+- /verify/test/aoj/dsl_3_a_smallest_window1.test.py
+- /verify/test/aoj/dsl_3_a_smallest_window1.test.py.html
+title: test/aoj/dsl_3_a_smallest_window1.test.py
 ---

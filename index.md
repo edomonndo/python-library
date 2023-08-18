@@ -64,7 +64,10 @@ data:
       title: Convex full
     - icon: ':question:'
       path: geometory/geometory.py
-      title: geometory/geometory.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+    - icon: ':warning:'
+      path: geometory/kd_tree.py
+      title: KD tree
     - icon: ':warning:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
@@ -179,63 +182,75 @@ data:
   verificationCategories:
   - name: test/aoj
     pages:
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/cgl_counter_clockwise.test.py
-      title: test/aoj/cgl_counter_clockwise.test.py
     - icon: ':x:'
-      path: test/aoj/cgl_cross_point.test.py
-      title: test/aoj/cgl_cross_point.test.py
+      path: test/aoj/cgl_1_a_projection.test.py
+      title: test/aoj/cgl_1_a_projection.test.py
     - icon: ':x:'
-      path: test/aoj/cgl_distance.test.py
-      title: test/aoj/cgl_distance.test.py
+      path: test/aoj/cgl_1_b_refrection.test.py
+      title: test/aoj/cgl_1_b_refrection.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/cgl_intersection.test.py
-      title: test/aoj/cgl_intersection.test.py
+      path: test/aoj/cgl_1_c_counter_clockwise.test.py
+      title: test/aoj/cgl_1_c_counter_clockwise.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/cgl_parallel_orthogonal.test.py
-      title: test/aoj/cgl_parallel_orthogonal.test.py
+      path: test/aoj/cgl_2_a_parallel_orthogonal.test.py
+      title: test/aoj/cgl_2_a_parallel_orthogonal.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl_2_b_intersection.test.py
+      title: test/aoj/cgl_2_b_intersection.test.py
     - icon: ':x:'
-      path: test/aoj/cgl_projection.test.py
-      title: test/aoj/cgl_projection.test.py
+      path: test/aoj/cgl_2_c_cross_point.test.py
+      title: test/aoj/cgl_2_c_cross_point.test.py
     - icon: ':x:'
-      path: test/aoj/cgl_refrection.test.py
-      title: test/aoj/cgl_refrection.test.py
+      path: test/aoj/cgl_2_d_distance.test.py
+      title: test/aoj/cgl_2_d_distance.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_add_min_query.test.py
-      title: test/aoj/range_add_min_query.test.py
+      path: test/aoj/dsl_1_a_union_find.test.py
+      title: test/aoj/dsl_1_a_union_find.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_add_query.test.py
-      title: test/aoj/range_add_query.test.py
+      path: test/aoj/dsl_1_b_weighted_union_find.test.py
+      title: test/aoj/dsl_1_b_weighted_union_find.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_min_query.test.py
-      title: test/aoj/range_min_query.test.py
+      path: test/aoj/dsl_2_a_range_min_query.test.py
+      title: test/aoj/dsl_2_a_range_min_query.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_sum_query.test.py
-      title: test/aoj/range_sum_query.test.py
+      path: test/aoj/dsl_2_b_range_sum_query.test.py
+      title: test/aoj/dsl_2_b_range_sum_query.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_update_min_query.test.py
-      title: test/aoj/range_update_min_query.test.py
+      path: test/aoj/dsl_2_c_range_search.test.py
+      title: test/aoj/dsl_2_c_range_search.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/range_update_query.test.py
-      title: test/aoj/range_update_query.test.py
+      path: test/aoj/dsl_2_d_range_update_query.test.py
+      title: test/aoj/dsl_2_d_range_update_query.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/sliding_minimum_element_swag.test.py
-      title: test/aoj/sliding_minimum_element_swag.test.py
+      path: test/aoj/dsl_2_e_range_add_query.test.py
+      title: test/aoj/dsl_2_e_range_add_query.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/sliding_minimum_element_wm.test.py
-      title: test/aoj/sliding_minimum_element_wm.test.py
+      path: test/aoj/dsl_2_f_range_update_min_query.test.py
+      title: test/aoj/dsl_2_f_range_update_min_query.test.py
     - icon: ':heavy_check_mark:'
-      path: test/aoj/smallest_window1.test.py
-      title: test/aoj/smallest_window1.test.py
+      path: test/aoj/dsl_2_g_range_add_sum_query.test.py
+      title: test/aoj/dsl_2_g_range_add_sum_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_2_h_range_add_min_query.test.py
+      title: test/aoj/dsl_2_h_range_add_min_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_2_i_range_update_sum_query.test.py
+      title: test/aoj/dsl_2_i_range_update_sum_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_3_a_smallest_window1.test.py
+      title: test/aoj/dsl_3_a_smallest_window1.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
+      title: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+      title: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_4_a_union_of_rectangles.test.py
+      title: test/aoj/dsl_4_a_union_of_rectangles.test.py
     - icon: ':x:'
       path: test/aoj/topological_sort.test.py
       title: test/aoj/topological_sort.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/union_find.test.py
-      title: test/aoj/union_find.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/aoj/weighted_union_find.test.py
-      title: test/aoj/weighted_union_find.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -347,18 +362,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
     - icon: ':x:'

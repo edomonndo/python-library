@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj/smallest_window1.test.py
-    title: test/aoj/smallest_window1.test.py
+    path: test/aoj/dsl_3_a_smallest_window1.test.py
+    title: test/aoj/dsl_3_a_smallest_window1.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,7 +47,7 @@ data:
   timestamp: '2023-08-07 21:41:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/smallest_window1.test.py
+  - test/aoj/dsl_3_a_smallest_window1.test.py
 documentation_of: data_structure/FoldableDeque.py
 layout: document
 title: Foldable Deque(DSWAG)

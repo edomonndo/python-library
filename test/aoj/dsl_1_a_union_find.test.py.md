@@ -25,15 +25,15 @@ data:
   dependsOn:
   - data_structure/unionfind.py
   isVerificationFile: true
-  path: test/aoj/union_find.test.py
+  path: test/aoj/dsl_1_a_union_find.test.py
   requiredBy: []
-  timestamp: '2023-08-10 00:04:04+09:00'
+  timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/union_find.test.py
+documentation_of: test/aoj/dsl_1_a_union_find.test.py
 layout: document
 redirect_from:
-- /verify/test/aoj/union_find.test.py
-- /verify/test/aoj/union_find.test.py.html
-title: test/aoj/union_find.test.py
+- /verify/test/aoj/dsl_1_a_union_find.test.py
+- /verify/test/aoj/dsl_1_a_union_find.test.py.html
+title: test/aoj/dsl_1_a_union_find.test.py
 ---
