@@ -20,13 +20,14 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_1_A\n\
     \nfrom geometory.geometory import Point, Line\n\nx1, y1, x2, y2 = map(int, input().split())\n\
     line = Line(Point(x1, y1), Point(x2, y2))\n\nQ = int(input())\nfor _ in range(Q):\n\
-    \    x, y = map(int, input().split())\n    p = Point(x, y)\n    print(line.project(p))\n"
+    \    x, y = map(int, input().split())\n    p = Point(x, y)\n    ans = line.project(p)\n\
+    \    print(ans.x, ans.y)\n"
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
   path: test/aoj/cgl_1_a_projection.test.py
   requiredBy: []
-  timestamp: '2023-08-19 03:09:04+09:00'
+  timestamp: '2023-08-19 18:12:23+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/cgl_1_a_projection.test.py
