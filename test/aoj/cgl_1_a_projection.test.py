@@ -9,4 +9,5 @@ Q = int(input())
 for _ in range(Q):
     x, y = map(int, input().split())
     p = Point(x, y)
-    print(line.project(p))
+    ans = line.project(p)
+    print(ans.x, ans.y)

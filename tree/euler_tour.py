@@ -1,6 +1,3 @@
-# https://maspypy.com/euler-tour-のお勉強
-
-
 class EulerTour:
     def __init__(self, N, G, root, vcost):
         self.N = N

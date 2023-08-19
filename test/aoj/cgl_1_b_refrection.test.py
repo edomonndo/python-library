@@ -9,4 +9,5 @@ Q = int(input())
 for _ in range(Q):
     x, y = map(int, input().split())
     p = Point(x, y)
-    print(line.refrection(p))
+    ans = line.refrection(p)
+    print(ans.x, ans.y)

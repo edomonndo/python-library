@@ -7,4 +7,5 @@ for _ in range(Q):
     x1, y1, x2, y2, x3, y3, x4, y4 = map(int, input().split())
     l1 = Line(Point(x1, y1), Point(x2, y2))
     l2 = Line(Point(x3, y3), Point(x4, y4))
-    print(l1.get_cross_point(l2))
+    ans = l1.get_cross_point(l2)
+    print(ans.x, ans.y)
