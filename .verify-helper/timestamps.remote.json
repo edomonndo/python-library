@@ -5,6 +5,7 @@
 "test/aoj/cgl_2_a_parallel_orthogonal.test.py": "2023-08-19 03:09:04 +0900",
 "test/aoj/cgl_2_b_intersection.test.py": "2023-08-19 03:09:04 +0900",
 "test/aoj/cgl_2_c_cross_point.test.py": "2023-08-20 13:14:27 +0900",
+"test/aoj/cgl_2_d_distance.test.py": "2023-08-20 14:25:04 +0900",
 "test/aoj/dsl_1_a_union_find.test.py": "2023-08-19 03:09:04 +0900",
 "test/aoj/dsl_1_b_weighted_union_find.test.py": "2023-08-19 03:09:04 +0900",
 "test/aoj/dsl_2_a_range_min_query.test.py": "2023-08-19 03:09:04 +0900",
