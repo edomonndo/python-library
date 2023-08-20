@@ -8,4 +8,4 @@ for _ in range(Q):
     l1 = Line(Point(x1, y1), Point(x2, y2))
     l2 = Line(Point(x3, y3), Point(x4, y4))
     ans = l1.get_distance_seg_to_seg(l2)
-    print("{:.10f}".format(ans.x), "{:.10f}".format(ans.x))
+    print("{:.10f}".format(ans.x), "{:.10f}".format(ans.y))

@@ -10,4 +10,4 @@ for _ in range(Q):
     x, y = map(int, input().split())
     p = Point(x, y)
     ans = line.refrection(p)
-    print("{:.10f}".format(ans.x), "{:.10f}".format(ans.x))
+    print("{:.10f}".format(ans.x), "{:.10f}".format(ans.y))
