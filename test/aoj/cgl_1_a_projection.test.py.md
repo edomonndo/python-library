@@ -6,9 +6,9 @@ data:
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_1_A
     links:
@@ -21,14 +21,14 @@ data:
     \nfrom geometory.geometory import Point, Line\n\nx1, y1, x2, y2 = map(int, input().split())\n\
     line = Line(Point(x1, y1), Point(x2, y2))\n\nQ = int(input())\nfor _ in range(Q):\n\
     \    x, y = map(int, input().split())\n    p = Point(x, y)\n    ans = line.project(p)\n\
-    \    print(\"{:.10f}\".format(ans.x), \"{:.10f}\".format(ans.x))\n"
+    \    print(\"{:.10f}\".format(ans.x), \"{:.10f}\".format(ans.y))\n"
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
   path: test/aoj/cgl_1_a_projection.test.py
   requiredBy: []
-  timestamp: '2023-08-20 12:26:39+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-08-20 13:14:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl_1_a_projection.test.py
 layout: document

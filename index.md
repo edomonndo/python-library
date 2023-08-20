@@ -182,10 +182,10 @@ data:
   verificationCategories:
   - name: test/aoj
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_1_a_projection.test.py
       title: test/aoj/cgl_1_a_projection.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_1_b_refrection.test.py
       title: test/aoj/cgl_1_b_refrection.test.py
     - icon: ':heavy_check_mark:'
@@ -197,7 +197,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_2_b_intersection.test.py
       title: test/aoj/cgl_2_b_intersection.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_2_c_cross_point.test.py
       title: test/aoj/cgl_2_c_cross_point.test.py
     - icon: ':x:'
