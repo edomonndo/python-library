@@ -376,7 +376,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
 layout: toppage
