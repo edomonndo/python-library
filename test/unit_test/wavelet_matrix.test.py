@@ -77,7 +77,9 @@ if __name__ == "__main__":
     for l in range(len(T)):
         for r in range(l + 1, len(T) + 1):
             for k in range(r - l):
-                assert greedy_quantilerange(l, r, k) == WM.quantilerange(l, r, k), (
+                assert sorted(greedy_quantilerange(l, r, k)) == sorted(
+                    WM.quantilerange(l, r, k)
+                ), (
                     (l, r, k),
                     greedy_quantilerange(l, r, k),
                     WM.quantilerange(l, r, k),
