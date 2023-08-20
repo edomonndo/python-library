@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/geometory.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/2/CGL_2_D
     links:
@@ -21,15 +21,14 @@ data:
     \nfrom geometory.geometory import Point, Line\n\nQ = int(input())\nfor _ in range(Q):\n\
     \    x1, y1, x2, y2, x3, y3, x4, y4 = map(int, input().split())\n    l1 = Line(Point(x1,\
     \ y1), Point(x2, y2))\n    l2 = Line(Point(x3, y3), Point(x4, y4))\n    ans =\
-    \ l1.get_distance_seg_to_seg(l2)\n    print(\"{:.10f}\".format(ans.x), \"{:.10f}\"\
-    .format(ans.y))\n"
+    \ l1.get_distance_seg_to_seg(l2)\n    print(\"{:.10f}\".format(ans))\n"
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
   path: test/aoj/cgl_2_d_distance.test.py
   requiredBy: []
-  timestamp: '2023-08-20 13:14:27+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-08-20 14:25:04+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl_2_d_distance.test.py
 layout: document

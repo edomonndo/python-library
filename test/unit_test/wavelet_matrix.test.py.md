@@ -43,63 +43,64 @@ data:
     \  cnt += 1\n                if cnt == num:\n                    idx = i\n   \
     \                 break\n        return idx + l\n\n    for l in range(len(T)):\n\
     \        for r in range(l + 1, len(T) + 1):\n            for k in range(r - l):\n\
-    \                assert greedy_quantilerange(l, r, k) == WM.quantilerange(l, r,\
-    \ k), (\n                    (l, r, k),\n                    greedy_quantilerange(l,\
-    \ r, k),\n                    WM.quantilerange(l, r, k),\n                )\n\n\
-    \    # maxrange, minrange\n    def greedy_maxrange(l, r):\n        max_value =\
-    \ max(T[l:r])\n        idx = -1\n        for i, t in enumerate(T[l:r]):\n    \
-    \        if t == max_value:\n                idx = i\n        return idx + l\n\
-    \n    def greedy_minrange(l, r):\n        min_value = min(T[l:r])\n        idx\
-    \ = -1\n        for i, t in enumerate(T[l:r]):\n            if t == min_value:\n\
-    \                idx = i\n                break\n        return idx + l\n\n  \
-    \  for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n     \
-    \       assert greedy_maxrange(l, r) == WM.maxrange(l, r), (\n               \
-    \ (l, r),\n                greedy_maxrange(l, r),\n                WM.maxrange(l,\
-    \ r),\n            )\n            assert greedy_minrange(l, r) == WM.minrange(l,\
-    \ r), (\n                (l, r),\n                greedy_minrange(l, r),\n   \
-    \             WM.minrange(l, r),\n            )\n\n    # topk\n    def greedy_topk(l,\
-    \ r, k):\n        dic = dict()\n        for t in T[l:r]:\n            if t in\
-    \ dic:\n                dic[t] += 1\n            else:\n                dic[t]\
-    \ = 1\n        res = []\n        for key, value in sorted(dic.items(), key=lambda\
-    \ x: (-x[1], x[0])):\n            res.append((key, value))\n        return res[:k]\n\
-    \n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n  \
-    \          for k in range(1, r - l + 1):\n                assert greedy_topk(l,\
-    \ r, k) == WM.topk(l, r, k), (\n                    (l, r, k),\n             \
-    \       greedy_topk(l, r, k),\n                    WM.topk(l, r, k),\n       \
-    \         )\n\n    # rangesum\n    def greedy_rangesum(l, r):\n        return\
-    \ sum(T[l:r])\n\n    for l in range(len(T)):\n        for r in range(l + 1, len(T)\
-    \ + 1):\n            assert greedy_rangesum(l, r) == WM.rangesum(l, r)\n\n   \
-    \ # intersect\n    def greedy_intersect(l1, r1, l2, r2):\n        S1 = set(T[l1:r1])\n\
-    \        S2 = set(T[l2:r2])\n        S = S1 & S2\n        res = []\n        for\
-    \ s in S:\n            t1 = T[l1:r1].count(s)\n            t2 = T[l2:r2].count(s)\n\
-    \            res.append((s, t1, t2))\n        return res\n\n    for l1 in range(len(T)):\n\
-    \        for r1 in range(l + 1, len(T) + 1):\n            for l2 in range(len(T)):\n\
-    \                for r2 in range(l + 1, len(T) + 1):\n                    assert\
-    \ greedy_intersect(l1, r1, l2, r2) == WM.intersect(\n                        l1,\
-    \ r1, l2, r2\n                    ), (\n                        (l1, r1, l2, r2),\n\
-    \                        greedy_intersect(l1, r1, l2, r2),\n                 \
-    \       WM.intersect(l1, r1, l2, r2),\n                    )\n\n    # rangefreq_to,\
-    \ rangefreq\n    def greedy_rangefreq_to(l, r, value):\n        return len([t\
-    \ for t in T[l:r] if 0 <= t < value])\n\n    def greedy_rangefreq(l, r, x, y):\n\
-    \        return len([t for t in T[l:r] if x <= t < y])\n\n    for l in range(len(T)):\n\
-    \        for r in range(l + 1, len(T) + 1):\n            for y in range(max(T)\
-    \ + 2):\n                assert greedy_rangefreq_to(l, r, y) == WM.rangefreq_to(l,\
-    \ r, y)\n                for x in range(0, y):\n                    assert greedy_rangefreq(l,\
-    \ r, x, y) == WM.rangefreq(l, r, x, y)\n\n    # prevvalue, nextvalue (Not verified)\n\
-    \    def greedy_prevvalue(l, r, x, y):\n        try:\n            res = max(t\
+    \                assert sorted(greedy_quantilerange(l, r, k)) == sorted(\n   \
+    \                 WM.quantilerange(l, r, k)\n                ), (\n          \
+    \          (l, r, k),\n                    greedy_quantilerange(l, r, k),\n  \
+    \                  WM.quantilerange(l, r, k),\n                )\n\n    # maxrange,\
+    \ minrange\n    def greedy_maxrange(l, r):\n        max_value = max(T[l:r])\n\
+    \        idx = -1\n        for i, t in enumerate(T[l:r]):\n            if t ==\
+    \ max_value:\n                idx = i\n        return idx + l\n\n    def greedy_minrange(l,\
+    \ r):\n        min_value = min(T[l:r])\n        idx = -1\n        for i, t in\
+    \ enumerate(T[l:r]):\n            if t == min_value:\n                idx = i\n\
+    \                break\n        return idx + l\n\n    for l in range(len(T)):\n\
+    \        for r in range(l + 1, len(T) + 1):\n            assert greedy_maxrange(l,\
+    \ r) == WM.maxrange(l, r), (\n                (l, r),\n                greedy_maxrange(l,\
+    \ r),\n                WM.maxrange(l, r),\n            )\n            assert greedy_minrange(l,\
+    \ r) == WM.minrange(l, r), (\n                (l, r),\n                greedy_minrange(l,\
+    \ r),\n                WM.minrange(l, r),\n            )\n\n    # topk\n    def\
+    \ greedy_topk(l, r, k):\n        dic = dict()\n        for t in T[l:r]:\n    \
+    \        if t in dic:\n                dic[t] += 1\n            else:\n      \
+    \          dic[t] = 1\n        res = []\n        for key, value in sorted(dic.items(),\
+    \ key=lambda x: (-x[1], x[0])):\n            res.append((key, value))\n      \
+    \  return res[:k]\n\n    for l in range(len(T)):\n        for r in range(l + 1,\
+    \ len(T) + 1):\n            for k in range(1, r - l + 1):\n                assert\
+    \ greedy_topk(l, r, k) == WM.topk(l, r, k), (\n                    (l, r, k),\n\
+    \                    greedy_topk(l, r, k),\n                    WM.topk(l, r,\
+    \ k),\n                )\n\n    # rangesum\n    def greedy_rangesum(l, r):\n \
+    \       return sum(T[l:r])\n\n    for l in range(len(T)):\n        for r in range(l\
+    \ + 1, len(T) + 1):\n            assert greedy_rangesum(l, r) == WM.rangesum(l,\
+    \ r)\n\n    # intersect\n    def greedy_intersect(l1, r1, l2, r2):\n        S1\
+    \ = set(T[l1:r1])\n        S2 = set(T[l2:r2])\n        S = S1 & S2\n        res\
+    \ = []\n        for s in S:\n            t1 = T[l1:r1].count(s)\n            t2\
+    \ = T[l2:r2].count(s)\n            res.append((s, t1, t2))\n        return res\n\
+    \n    for l1 in range(len(T)):\n        for r1 in range(l + 1, len(T) + 1):\n\
+    \            for l2 in range(len(T)):\n                for r2 in range(l + 1,\
+    \ len(T) + 1):\n                    assert greedy_intersect(l1, r1, l2, r2) ==\
+    \ WM.intersect(\n                        l1, r1, l2, r2\n                    ),\
+    \ (\n                        (l1, r1, l2, r2),\n                        greedy_intersect(l1,\
+    \ r1, l2, r2),\n                        WM.intersect(l1, r1, l2, r2),\n      \
+    \              )\n\n    # rangefreq_to, rangefreq\n    def greedy_rangefreq_to(l,\
+    \ r, value):\n        return len([t for t in T[l:r] if 0 <= t < value])\n\n  \
+    \  def greedy_rangefreq(l, r, x, y):\n        return len([t for t in T[l:r] if\
+    \ x <= t < y])\n\n    for l in range(len(T)):\n        for r in range(l + 1, len(T)\
+    \ + 1):\n            for y in range(max(T) + 2):\n                assert greedy_rangefreq_to(l,\
+    \ r, y) == WM.rangefreq_to(l, r, y)\n                for x in range(0, y):\n \
+    \                   assert greedy_rangefreq(l, r, x, y) == WM.rangefreq(l, r,\
+    \ x, y)\n\n    # prevvalue, nextvalue (Not verified)\n    def greedy_prevvalue(l,\
+    \ r, x, y):\n        try:\n            res = max(t for t in T[l:r] if x <= t <\
+    \ y)\n        except ValueError:\n            res = -1\n        return res\n\n\
+    \    def greedy_nextvalue(l, r, x, y):\n        try:\n            res = min(t\
     \ for t in T[l:r] if x <= t < y)\n        except ValueError:\n            res\
-    \ = -1\n        return res\n\n    def greedy_nextvalue(l, r, x, y):\n        try:\n\
-    \            res = min(t for t in T[l:r] if x <= t < y)\n        except ValueError:\n\
-    \            res = -1\n        return res\n\n    for l in range(len(T)):\n   \
-    \     for r in range(l + 1, len(T) + 1):\n            for x in range(max(T)):\n\
-    \                for y in range(x + 1, max(T) + 2):\n                    assert\
-    \ greedy_prevvalue(l, r, x, y) == WM.prevvalue(l, r, x, y), (\n              \
-    \          (l, r, x, y),\n                        greedy_prevvalue(l, r, x, y),\n\
-    \                        WM.prevvalue(l, r, x, y),\n                    )\n  \
-    \                  assert greedy_nextvalue(l, r, x, y) == WM.nextvalue(l, r, x,\
-    \ y), (\n                        (l, r, x, y),\n                        greedy_nextvalue(l,\
-    \ r, x, y),\n                        WM.nextvalue(l, r, x, y),\n             \
-    \       )\n\n    print(\"Hello World\")\n"
+    \ = -1\n        return res\n\n    for l in range(len(T)):\n        for r in range(l\
+    \ + 1, len(T) + 1):\n            for x in range(max(T)):\n                for\
+    \ y in range(x + 1, max(T) + 2):\n                    assert greedy_prevvalue(l,\
+    \ r, x, y) == WM.prevvalue(l, r, x, y), (\n                        (l, r, x, y),\n\
+    \                        greedy_prevvalue(l, r, x, y),\n                     \
+    \   WM.prevvalue(l, r, x, y),\n                    )\n                    assert\
+    \ greedy_nextvalue(l, r, x, y) == WM.nextvalue(l, r, x, y), (\n              \
+    \          (l, r, x, y),\n                        greedy_nextvalue(l, r, x, y),\n\
+    \                        WM.nextvalue(l, r, x, y),\n                    )\n\n\
+    \    print(\"Hello World\")\n"
   dependsOn: []
   isVerificationFile: true
   path: test/unit_test/wavelet_matrix.test.py

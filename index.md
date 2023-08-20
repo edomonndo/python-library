@@ -62,7 +62,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_full.py
       title: Convex full
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/geometory.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
     - icon: ':warning:'
@@ -200,7 +200,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_2_c_cross_point.test.py
       title: test/aoj/cgl_2_c_cross_point.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl_2_d_distance.test.py
       title: test/aoj/cgl_2_d_distance.test.py
     - icon: ':heavy_check_mark:'
