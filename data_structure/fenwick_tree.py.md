@@ -38,8 +38,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl_2_b_range_sum_query.test.py
-  - test/library_checker/data_structure/point_add_range_sum.test.py
   - test/library_checker/data_structure/static_range_sum.test.py
+  - test/library_checker/data_structure/point_add_range_sum.test.py
 documentation_of: data_structure/fenwick_tree.py
 layout: document
 title: Fenwick Tree

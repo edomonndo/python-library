@@ -21,13 +21,14 @@ data:
     \nfrom geometory.geometory import Point, Line\n\nQ = int(input())\nfor _ in range(Q):\n\
     \    x1, y1, x2, y2, x3, y3, x4, y4 = map(int, input().split())\n    l1 = Line(Point(x1,\
     \ y1), Point(x2, y2))\n    l2 = Line(Point(x3, y3), Point(x4, y4))\n    ans =\
-    \ l1.get_distance_seg_to_seg(l2)\n    print(ans.x, ans.y)\n"
+    \ l1.get_distance_seg_to_seg(l2)\n    print(\"{:.10f}\".format(ans.x), \"{:.10f}\"\
+    .format(ans.x))\n"
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
   path: test/aoj/cgl_2_d_distance.test.py
   requiredBy: []
-  timestamp: '2023-08-19 18:12:23+09:00'
+  timestamp: '2023-08-20 12:26:39+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/cgl_2_d_distance.test.py
