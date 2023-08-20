@@ -77,9 +77,7 @@ if __name__ == "__main__":
     for l in range(len(T)):
         for r in range(l + 1, len(T) + 1):
             for k in range(r - l):
-                assert sorted(greedy_quantilerange(l, r, k)) == sorted(
-                    WM.quantilerange(l, r, k)
-                ), (
+                assert greedy_quantilerange(l, r, k) == WM.quantilerange(l, r, k), (
                     (l, r, k),
                     greedy_quantilerange(l, r, k),
                     WM.quantilerange(l, r, k),
@@ -162,8 +160,8 @@ if __name__ == "__main__":
         for r1 in range(l + 1, len(T) + 1):
             for l2 in range(len(T)):
                 for r2 in range(l + 1, len(T) + 1):
-                    assert greedy_intersect(l1, r1, l2, r2) == WM.intersect(
-                        l1, r1, l2, r2
+                    assert sorted(greedy_intersect(l1, r1, l2, r2)) == sorted(
+                        WM.intersect(l1, r1, l2, r2)
                     ), (
                         (l1, r1, l2, r2),
                         greedy_intersect(l1, r1, l2, r2),
