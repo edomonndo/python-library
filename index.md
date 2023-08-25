@@ -74,11 +74,21 @@ data:
   - name: graph
     pages:
     - icon: ':warning:'
+      path: graph/bellman_ford.py
+      title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
+    - icon: ':warning:'
       path: graph/bfs.py
       title: "\u5E45\u512A\u5148\u63A2\u7D22"
     - icon: ':warning:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
+    - icon: ':warning:'
+      path: graph/floyd_warshall.py
+      title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
+        \u5BFE\u6700\u77ED\u8DDD\u96E2)"
+    - icon: ':warning:'
+      path: graph/low_link.py
+      title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
     - icon: ':warning:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
@@ -105,6 +115,13 @@ data:
     - icon: ':warning:'
       path: math_/divisors.py
       title: "\u7D04\u6570\u5217\u6319"
+    - icon: ':heavy_check_mark:'
+      path: math_/euler_phi.py
+      title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\
+        \u30F3\u30C8\u95A2\u6570)"
+    - icon: ':heavy_check_mark:'
+      path: math_/ext_gcd.py
+      title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
     - icon: ':warning:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
@@ -153,7 +170,7 @@ data:
     - icon: ':warning:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':warning:'
@@ -249,8 +266,53 @@ data:
       path: test/aoj/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl_4_a_union_of_rectangles.test.py
     - icon: ':x:'
-      path: test/aoj/topological_sort.test.py
-      title: test/aoj/topological_sort.test.py
+      path: test/aoj/grl_1_a_dijkstra.test.py
+      title: test/aoj/grl_1_a_dijkstra.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_1_b_bellman_ford.test.py
+      title: test/aoj/grl_1_b_bellman_ford.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_1_c_floyd_warshall.test.py
+      title: test/aoj/grl_1_c_floyd_warshall.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
+      title: test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_3_a_articulation_points.test.py
+      title: test/aoj/grl_3_a_articulation_points.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_3_b_bridges.test.py
+      title: test/aoj/grl_3_b_bridges.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_3_c_strongly_connected_components.test.py
+      title: test/aoj/grl_3_c_strongly_connected_components.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_4_a_cycle_detection.test.py
+      title: test/aoj/grl_4_a_cycle_detection.test.py
+    - icon: ':x:'
+      path: test/aoj/grl_4_b_topological_sort.test.py
+      title: test/aoj/grl_4_b_topological_sort.test.py
+    - icon: ':x:'
+      path: test/aoj/grl_5_a_diameter.test.py
+      title: test/aoj/grl_5_a_diameter.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
+      title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_6_a_max_flow.test.py
+      title: test/aoj/grl_6_a_max_flow.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_6_b_min_cost_flow.test.py
+      title: test/aoj/grl_6_b_min_cost_flow.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_7_a_bipartite_matching.test.py
+      title: test/aoj/grl_7_a_bipartite_matching.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ntl_1_d_euler_phi.test.py
+      title: test/aoj/ntl_1_d_euler_phi.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/ntl_1_e_extended_euclidean.test.py
+      title: test/aoj/ntl_1_e_extended_euclidean.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -309,16 +371,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/sum_of_floor_of_linear.test.py
       title: test/library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/math/two_sat.test.py
       title: test/library_checker/math/two_sat.test.py
   - name: test/library_checker/matrix
@@ -348,10 +410,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/manacher.test.py
       title: test/library_checker/string/manacher.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
@@ -359,24 +421,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
 layout: toppage
