@@ -1,84 +1,83 @@
 class WeightedUnionFind:
-    def __init__(self, n, W=[]):
+    def __init__(self, n, W=None):
         self.n = n
-        self.parents = [-1] * n
+        self.parent_or_size = [-1] * n
         self.ng = [False] * n
         self.weight = [0] * n  # W_i - W_{P_i}
         self.group = n
-        if W:
-            self.W = W[:]
-        else:
+        if W is None:
             self.W = [0] * n
-
-    def find(self, x):
-        if self.parents[x] < 0:
-            return x
         else:
-            p = self.find(self.parents[x])
-            self.weight[x] += self.weight[self.parents[x]]
-            self.parents[x] = p
-            return self.parents[x]
+            self.W = W
 
-    # x = y + w
-    def union(self, x, y, w):
-        xp = self.find(x)
-        yp = self.find(y)
-        w -= self.weight[x]
-        x = xp
-        w += self.weight[y]
-        y = yp
+    # a = b + w
+    def merge(self, a, b, w):
+        assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
+        assert 0 <= b < self.n, "0<=b<n,b={0},n={1}".format(b, self.n)
+        x = self.leader(a)
+        y = self.leader(b)
+        w -= self.weight[a]
+        w += self.weight[b]
 
         if x == y:
             if w != 0:
                 self.ng[x] = True
-            return False
+            return x
         self.group -= 1
-
-        if self.parents[x] > self.parents[y]:
+        if -self.parent_or_size[x] < -self.parent_or_size[y]:
             w *= -1
             x, y = y, x
-
-        self.parents[x] += self.parents[y]
+        self.parent_or_size[x] += self.parent_or_size[y]
+        self.parent_or_size[y] = x
         self.weight[y] = -w
-        self.parents[y] = x
         self.ng[x] |= self.ng[y]
-        return True
+        return x
 
-    def size(self, x):
-        return -self.parents[self.find(x)]
+    def same(self, a, b):
+        assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
+        assert 0 <= b < self.n, "0<=b<n,b={0},n={1}".format(b, self.n)
+        return self.leader(a) == self.leader(b)
 
-    def same(self, x, y):
-        return self.find(x) == self.find(y)
+    def leader(self, a):
+        assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
+        if self.parent_or_size[a] < 0:
+            return a
+        self.weight[a] += self.weight[self.parent_or_size[a]]
+        self.parent_or_size[a] = self.leader(self.parent_or_size[a])
+        return self.parent_or_size[a]
 
-    def diff(self, x, y):
-        if not self.same(x, y):
-            return None
-        else:
-            return self.weight[x] - self.weight[y]
-
-    def members(self, x):
-        root = self.find(x)
-        return [i for i in range(self.n) if self.find(i) == root]
-
-    def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+    def size(self, a):
+        assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
+        return -self.parent_or_size[self.leader(a)]
 
     def group_count(self):
         return self.group
 
-    def all_group_members(self):
-        dic = {r: [] for r in self.roots()}
+    def groups(self):
+        leader_buf = [0 for i in range(self.n)]
+        group_size = [0 for i in range(self.n)]
         for i in range(self.n):
-            dic[self.find(i)].append(i)
-        return dic
+            leader_buf[i] = self.leader(i)
+            group_size[leader_buf[i]] += 1
+        result = [[] for i in range(self.n)]
+        for i in range(self.n):
+            result[leader_buf[i]].append(i)
+        result2 = []
+        for i in range(self.n):
+            if len(result[i]) > 0:
+                result2.append(result[i])
+        return result2
 
-    def __str__(self):
-        return "\n".join("{}: {}".format(r, self.members(r)) for r in self.roots())
+    def diff(self, a, b):
+        if not self.same(a, b):
+            return None
+        else:
+            return self.weight[a] - self.weight[b]
 
     def add(self, a, b):
-        a = self.find(a)
+        a = self.leader(a)
         self.W[a] += b
 
     def get(self, a):
-        p = self.find(a)
+        p = self.leader(a)
         return self.W[p] + self.diff(a, p)

@@ -1,7 +1,8 @@
 class UnionFind:
-    def __init__(self, N):
-        self.n = N
-        self.parent_or_size = [-1 for i in range(N)]
+    def __init__(self, n):
+        self.n = n
+        self.parent_or_size = [-1] * n
+        self.group = n
 
     def merge(self, a, b):
         assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
@@ -10,6 +11,7 @@ class UnionFind:
         y = self.leader(b)
         if x == y:
             return x
+        self.group -= 1
         if -self.parent_or_size[x] < -self.parent_or_size[y]:
             x, y = y, x
         self.parent_or_size[x] += self.parent_or_size[y]
@@ -31,6 +33,9 @@ class UnionFind:
     def size(self, a):
         assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
         return -self.parent_or_size[self.leader(a)]
+
+    def group_count(self):
+        return self.group
 
     def groups(self):
         leader_buf = [0 for i in range(self.n)]

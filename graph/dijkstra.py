@@ -3,7 +3,7 @@ from heapq import heappush, heappop
 
 
 def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], List[int]]:
-    INF = 1 << 60
+    INF = float("inf")
     dist = [INF] * N
     dist[start] = 0
     prev = [-1] * N

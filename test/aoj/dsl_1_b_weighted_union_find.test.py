@@ -8,7 +8,7 @@ for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 0:
         x, y, z = q
-        G.union(y, x, z)
+        G.merge(y, x, z)
     else:
         x, y = q
         ans = G.diff(y, x)

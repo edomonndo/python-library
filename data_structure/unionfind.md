@@ -9,7 +9,7 @@ disjoint set union,つまりUnionFind木です.
 ### 初期化
 
 ```
-G = dsu(N)
+G = UnionFind(N)
 ```
 ここで$N$は頂点の数です.
 
