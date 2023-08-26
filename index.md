@@ -54,7 +54,7 @@ data:
     - icon: ':warning:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: geometory
@@ -223,7 +223,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_1_a_union_find.test.py
       title: test/aoj/dsl_1_a_union_find.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/dsl_1_b_weighted_union_find.test.py
       title: test/aoj/dsl_1_b_weighted_union_find.test.py
     - icon: ':heavy_check_mark:'
@@ -265,7 +265,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl_4_a_union_of_rectangles.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl_1_a_dijkstra.test.py
       title: test/aoj/grl_1_a_dijkstra.test.py
     - icon: ':heavy_check_mark:'
@@ -363,7 +363,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/shortest_path.test.py
       title: test/library_checker/graph/shortest_path.test.py
   - name: test/library_checker/math

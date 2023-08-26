@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_1_a_union_find.test.py
   requiredBy: []
-  timestamp: '2023-08-19 03:09:04+09:00'
+  timestamp: '2023-08-26 10:33:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_1_a_union_find.test.py

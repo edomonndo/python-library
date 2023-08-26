@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
   requiredBy: []
-  timestamp: '2023-08-26 01:45:36+09:00'
+  timestamp: '2023-08-26 10:33:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py

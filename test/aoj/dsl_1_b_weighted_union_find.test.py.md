@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/weighted_union_find.py
     title: "\u91CD\u307F\u4ED8\u304D Union Find"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B
     links:
@@ -20,7 +20,7 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B\n\
     \nfrom data_structure.weighted_union_find import WeightedUnionFind\n\nN, Q = map(int,\
     \ input().split())\nG = WeightedUnionFind(N)\nfor _ in range(Q):\n    t, *q =\
-    \ map(int, input().split())\n    if t == 0:\n        x, y, z = q\n        G.union(y,\
+    \ map(int, input().split())\n    if t == 0:\n        x, y, z = q\n        G.merge(y,\
     \ x, z)\n    else:\n        x, y = q\n        ans = G.diff(y, x)\n        print(ans\
     \ if ans is not None else \"?\")\n"
   dependsOn:
@@ -28,8 +28,8 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_1_b_weighted_union_find.test.py
   requiredBy: []
-  timestamp: '2023-08-19 03:09:04+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-08-26 10:33:44+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/dsl_1_b_weighted_union_find.test.py
 layout: document

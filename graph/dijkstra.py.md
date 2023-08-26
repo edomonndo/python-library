@@ -14,9 +14,9 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import List, Tuple\nfrom heapq import heappush, heappop\n\n\n\
     def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], List[int]]:\n\
-    \    INF = 1 << 60\n    dist = [INF] * N\n    dist[start] = 0\n    prev = [-1]\
-    \ * N\n\n    que = [(0, start)]  # \u8DDD\u96E2,\u9802\u70B9\n    while que:\n\
-    \        c, u = heappop(que)\n        if c > dist[u]:\n            continue\n\
+    \    INF = float(\"inf\")\n    dist = [INF] * N\n    dist[start] = 0\n    prev\
+    \ = [-1] * N\n\n    que = [(0, start)]  # \u8DDD\u96E2,\u9802\u70B9\n    while\
+    \ que:\n        c, u = heappop(que)\n        if c > dist[u]:\n            continue\n\
     \        for nc, v in graph[u]:\n            cost = dist[u] + nc\n           \
     \ if cost < dist[v]:\n                dist[v] = cost\n                prev[v]\
     \ = u\n                heappush(que, (cost, v))\n\n    return dist, prev\n\n\n\

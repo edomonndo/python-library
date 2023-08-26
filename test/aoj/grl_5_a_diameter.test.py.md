@@ -17,7 +17,7 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A\n\
     \nfrom tree.diameter import diameter\n\nN = int(input())\nG = [[] for _ in range(N)]\n\
     for _ in range(N - 1):\n    a, b, c = map(int, input().split())\n    G[a].append((b,\
-    \ c))\n    G[b].append((a, c))\n\ndiam = diameter(N, G)\nprint(diam)\n"
+    \ c))\n    G[b].append((a, c))\n\ndiam, _ = diameter(N, G)\nprint(diam)\n"
   dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl_5_a_diameter.test.py
