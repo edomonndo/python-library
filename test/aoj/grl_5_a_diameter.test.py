@@ -9,5 +9,5 @@ for _ in range(N - 1):
     G[a].append((b, c))
     G[b].append((a, c))
 
-diam, _ = diameter(N, G)
+diam = diameter(N, G)
 print(diam)

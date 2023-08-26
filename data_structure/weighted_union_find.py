@@ -8,7 +8,7 @@ class WeightedUnionFind:
         if W is None:
             self.W = [0] * n
         else:
-            self.W = W
+            self.W = W[:]
 
     # a = b + w
     def merge(self, a, b, w):
@@ -42,8 +42,9 @@ class WeightedUnionFind:
         assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
         if self.parent_or_size[a] < 0:
             return a
+        p = self.leader(self.parent_or_size[a])
         self.weight[a] += self.weight[self.parent_or_size[a]]
-        self.parent_or_size[a] = self.leader(self.parent_or_size[a])
+        self.parent_or_size[a] = p
         return self.parent_or_size[a]
 
     def size(self, a):

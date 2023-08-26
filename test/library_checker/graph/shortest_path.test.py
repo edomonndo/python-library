@@ -2,6 +2,7 @@
 
 from graph.dijkstra import dijkstra, get_path
 
+INF = float("inf")
 N, M, s, t = map(int, input().split())
 G = [[] for _ in range(N)]
 for _ in range(M):
@@ -10,7 +11,7 @@ for _ in range(M):
 
 dist, prev = dijkstra(N, G, s)
 
-if dist[t] == 1 << 60:
+if dist[t] == INF:
     print(-1)
     exit()
 

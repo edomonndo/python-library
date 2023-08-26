@@ -9,6 +9,6 @@ for _ in range(N - 1):
     G[a].append((b, c))
     G[b].append((a, c))
 
-diam, path = diameter(N, G)
+diam, path = diameter(N, G, True)
 print(diam, len(path))
 print(*path)
