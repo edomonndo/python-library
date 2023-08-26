@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/weighted_union_find.py
     title: "\u91CD\u307F\u4ED8\u304D Union Find"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B
     links:
@@ -28,8 +28,8 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_1_b_weighted_union_find.test.py
   requiredBy: []
-  timestamp: '2023-08-26 10:33:44+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-08-26 13:13:56+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_1_b_weighted_union_find.test.py
 layout: document

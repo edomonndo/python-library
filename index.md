@@ -54,7 +54,7 @@ data:
     - icon: ':warning:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: geometory
@@ -223,7 +223,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_1_a_union_find.test.py
       title: test/aoj/dsl_1_a_union_find.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_1_b_weighted_union_find.test.py
       title: test/aoj/dsl_1_b_weighted_union_find.test.py
     - icon: ':heavy_check_mark:'
@@ -292,7 +292,7 @@ data:
     - icon: ':x:'
       path: test/aoj/grl_4_b_topological_sort.test.py
       title: test/aoj/grl_4_b_topological_sort.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_a_diameter.test.py
       title: test/aoj/grl_5_a_diameter.test.py
     - icon: ':heavy_check_mark:'
@@ -363,7 +363,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/shortest_path.test.py
       title: test/library_checker/graph/shortest_path.test.py
   - name: test/library_checker/math
@@ -371,16 +371,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/sum_of_floor_of_linear.test.py
       title: test/library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/two_sat.test.py
       title: test/library_checker/math/two_sat.test.py
   - name: test/library_checker/matrix
@@ -410,10 +410,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/manacher.test.py
       title: test/library_checker/string/manacher.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
@@ -421,24 +421,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
 layout: toppage

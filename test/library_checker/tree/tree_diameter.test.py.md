@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/tree_diameter
     links:
@@ -17,14 +17,14 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/tree_diameter\n\
     \nfrom tree.diameter import diameter\n\nN = int(input())\nG = [[] for _ in range(N)]\n\
     for _ in range(N - 1):\n    a, b, c = map(int, input().split())\n    G[a].append((b,\
-    \ c))\n    G[b].append((a, c))\n\ndiam, path = diameter(N, G)\nprint(diam, len(path))\n\
-    print(*path)\n"
+    \ c))\n    G[b].append((a, c))\n\ndiam, path = diameter(N, G, True)\nprint(diam,\
+    \ len(path))\nprint(*path)\n"
   dependsOn: []
   isVerificationFile: true
   path: test/library_checker/tree/tree_diameter.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/tree_diameter.test.py
 layout: document
