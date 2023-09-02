@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/cycle_detection_undirected
     links:
@@ -43,7 +43,7 @@ data:
   path: test/library_checker/graph/cycle_detection_undirected.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/cycle_detection_undirected.test.py
 layout: document

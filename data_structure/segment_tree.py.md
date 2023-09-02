@@ -113,7 +113,7 @@ G = Segtree([0 for i in range(N)], func, ide_ele)
 | or | $0$ | bitwise or | 
 | and | $2^N-1$ | bitwise and（Nは制約に応じて十分大きな値を取る） | 
 | convolution | $[1]$ | 多項式の積（畳み込みを参照） | 
-(a,b)*(c,d)->(ac,ad+b) | $(1,0)$ | 1次関数の合成,(a,b)はx->ax+bに対応 | 
+(a,b)*(c,d)->(ac,bc+d) | $(1,0)$ | 1次関数の合成,(a,b)はx->ax+bに対応 | 
 | matrix | 単位行列 | 行列の積 | 
 
 ### 実装上の注意

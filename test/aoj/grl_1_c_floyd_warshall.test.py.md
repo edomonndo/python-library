@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_C
     links:
@@ -26,7 +26,7 @@ data:
   path: test/aoj/grl_1_c_floyd_warshall.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_1_c_floyd_warshall.test.py
 layout: document
