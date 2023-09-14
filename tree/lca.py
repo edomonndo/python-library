@@ -1,9 +1,8 @@
-from typing import List
 from collections import deque
 
 
 class LcaDoubling:
-    def __init__(self, N: int, G: List[List[int]], root: int = 0):
+    def __init__(self, N: int, G: list[list[int]], root: int = 0):
         self.parent = [-1] * N
         self.depth = [0] * N
         que = deque([root])

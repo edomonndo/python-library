@@ -1,9 +1,4 @@
-from typing import Tuple, List, Union
-
-
-def diameter(
-    N: int, G: List[List[Tuple[int, int]]], get_path: bool = False
-) -> Union[int, Tuple[int, List[int]]]:
+def diameter(N: int, G: list[list[tuple[int, int]]], get_path: bool = False):
     def dfs(start: int):
         dist = [-1 for _ in range(N)]
         dist[start] = 0

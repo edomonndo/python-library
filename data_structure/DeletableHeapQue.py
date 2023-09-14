@@ -1,5 +1,5 @@
 from collections import defaultdict
-from heapq import heappush, heappop, heapify
+import heapq
 
 
 class DeletableMaxHeapQ:
@@ -8,25 +8,25 @@ class DeletableMaxHeapQ:
         self.HC = defaultdict(int)
         if X:
             self.H = X
-            heapify(self.H)
+            heapq.heapify(self.H)
             for x in X:
                 self.HC[x] += 1
 
     def hpush(self, x):
-        heappush(self.H, -x)
+        heapq.heappush(self.H, -x)
         self.HC[x] += 1
 
     def hpop(self):
-        t = -heappop(self.H)
+        t = -heapq.heappop(self.H)
         while not self.HC[t]:
-            t = -heappop(self.H)
+            t = -heapq.heappop(self.H)
         self.HC[t] -= 1
         return t
 
     def hmax(self):
         t = -self.H[0]
         while not self.HC[t]:
-            heappop(self.H)
+            heapq.heappop(self.H)
             t = -self.H[0]
         return t
 
@@ -44,25 +44,25 @@ class DeletableMinHeapQ:
         self.HC = defaultdict(int)
         if X:
             self.H = X
-            heapify(self.H)
+            heapq.heapify(self.H)
             for x in X:
                 self.HC[x] += 1
 
     def hpush(self, x):
-        heappush(self.H, x)
+        heapq.heappush(self.H, x)
         self.HC[x] += 1
 
     def hpop(self):
-        t = heappop(self.H)
+        t = heapq.heappop(self.H)
         while not self.HC[t]:
-            t = heappop(self.H)
+            t = heapq.heappop(self.H)
         self.HC[t] -= 1
         return t
 
     def hmin(self):
         t = self.H[0]
         while not self.HC[t]:
-            heappop(self.H)
+            heapq.heappop(self.H)
             t = self.H[0]
         return t
 

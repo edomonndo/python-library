@@ -1,9 +1,6 @@
-from typing import List, Tuple
-
-
 def floyd_warshall(
-    N: int, edges: List[Tuple[int, int, int]], directed=False
-) -> List[List[int]]:
+    N: int, edges: list[tuple[int, int, int]], directed=False
+) -> list[list[int]]:
     INF = float("inf")
     dist = [[INF] * N for _ in range(N)]
     for i in range(N):

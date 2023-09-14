@@ -1,7 +1,4 @@
-from typing import List
-
-
-def z_algorithm(s: str) -> List[int]:
+def z_algorithm(s: str) -> list[int]:
     n = len(s)
     if n == 0:
         return []

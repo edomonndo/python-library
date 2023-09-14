@@ -1,6 +1,3 @@
-from typing import List
-
-
 def miller_rabin(n: int) -> bool:
     """Miller-Rabin: ≒ O(1)"""
     assert n <= 1 << 64
@@ -28,7 +25,7 @@ def miller_rabin(n: int) -> bool:
     return True
 
 
-def eratosthenes(N: int) -> List[bool]:
+def eratosthenes(N: int) -> list[bool]:
     # テーブル
     isprime = [True] * (N + 1)
 

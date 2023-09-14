@@ -1,7 +1,7 @@
 class FixedSizeHeapQue:
-    def __init__(self, arr=[], max_size=10**8):
+    def __init__(self, arr=None, max_size=10**8):
         self.size = 0
-        self.heap = arr
+        self.heap = arr if arr is not None else []
         self.max_size = max_size
 
         if arr:

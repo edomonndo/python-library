@@ -1,7 +1,4 @@
-from typing import List, Tuple
-
-
-def scc(N: int, M: int, edges: List[Tuple[int, int]]) -> List[int]:
+def scc(N: int, M: int, edges: list[tuple[int, int]]) -> list[int]:
     start = [0] * (N + 1)
     elist = [0] * M
     for e in edges:

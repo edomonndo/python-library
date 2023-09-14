@@ -1,8 +1,7 @@
-from typing import List, Tuple
-from heapq import heappush, heappop
+import heapq
 
 
-def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], List[int]]:
+def dijkstra(N: int, graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
     INF = float("inf")
     dist = [INF] * N
     dist[start] = 0
@@ -10,7 +9,7 @@ def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], Lis
 
     que = [(0, start)]  # 距離,頂点
     while que:
-        c, u = heappop(que)
+        c, u = heapq.heappop(que)
         if c > dist[u]:
             continue
         for nc, v in graph[u]:
@@ -18,12 +17,12 @@ def dijkstra(N: int, graph: List[List[int]], start: int) -> Tuple[List[int], Lis
             if cost < dist[v]:
                 dist[v] = cost
                 prev[v] = u
-                heappush(que, (cost, v))
+                heapq.heappush(que, (cost, v))
 
     return dist, prev
 
 
-def get_path(prev: List[int], start: int, goal: int) -> List[int]:
+def get_path(prev: list[int], start: int, goal: int) -> list[int]:
     path = [goal]
     while path[-1] != start:
         path.append(prev[path[-1]])

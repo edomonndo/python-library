@@ -1,4 +1,4 @@
-from heapq import heappush, heappop
+import heapq
 from collections import deque
 
 
@@ -199,7 +199,7 @@ class WaveletMatrix:
         res = []
         pq = [(-(r - l), 0, 0, l, r)]  # -width, depth, value, left, right
         while pq and k > 0:
-            _, depth, value, left, right = heappop(pq)
+            _, depth, value, left, right = heapq.heappop(pq)
             if depth >= self.bit_size:
                 res.append((value, right - left))
                 k -= 1
@@ -210,13 +210,13 @@ class WaveletMatrix:
             l0 = bv.rank0(left)
             r0 = bv.rank0(right)
             if l0 < r0:
-                heappush(pq, (-(r0 - l0), depth + 1, value, l0, r0))
+                heapq.heappush(pq, (-(r0 - l0), depth + 1, value, l0, r0))
             # 1
             l1 = z + bv.rank1(left)
             r1 = z + bv.rank1(right)
             if l1 < r1:
                 nv = value | (1 << (self.bit_size - depth - 1))
-                heappush(pq, (-(r1 - l1), depth + 1, nv, l1, r1))
+                heapq.heappush(pq, (-(r1 - l1), depth + 1, nv, l1, r1))
         return res
 
     def rangesum(self, l, r):

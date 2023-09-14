@@ -1,6 +1,3 @@
-# https://qiita.com/Pro_ktmr/items/4e1e051ea0561772afa3
-
-
 class HeavyLightDecomposition:
     def __init__(self, n, tree, parent, v_bfs_order):
         self.n = n  # 頂点数

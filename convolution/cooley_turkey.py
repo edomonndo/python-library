@@ -1,4 +1,4 @@
-from math import pi, sin, cos
+import math
 
 
 class CooleyTukey:
@@ -22,12 +22,12 @@ class CooleyTukey:
 
     def setw(self, k: int) -> None:
         k -= 1
-        arg = pi / (1 << k)
+        arg = math.pi / (1 << k)
         i = 0
         j = 1 << (k - 1)
         while j:
-            self.baser[i] = cos(arg * j)
-            self.basei[i] = sin(arg * j)
+            self.baser[i] = math.cos(arg * j)
+            self.basei[i] = math.sin(arg * j)
             i += 1
             j >>= 1
         self.genw(0, k - 1, 1, 0)

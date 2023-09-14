@@ -1,7 +1,4 @@
-from typing import List, Tuple, Optional
-
-
-def two_sat(n: int, clause: List[Tuple[int, bool, int, bool]]) -> Optional[List[bool]]:
+def two_sat(n: int, clause: list[tuple[int, bool, int, bool]]):
     answer = [0] * n
     edges = []
     N = 2 * n

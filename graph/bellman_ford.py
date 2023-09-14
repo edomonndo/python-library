@@ -1,9 +1,4 @@
-from typing import List, Tuple, Union
-
-
-def bellmanFord(
-    N: int, G: List[List[int]], start: int = 0
-) -> Union[Tuple[List[int], List[int]], Tuple[int, int]]:
+def bellmanFord(N: int, G: list[list[int]], start: int = 0):
     INF = float("inf")
     dist = [INF] * N
     pre = [-1] * N

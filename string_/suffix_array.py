@@ -1,7 +1,4 @@
-from typing import List
-
-
-def sa_is(s: List[int], upper: int) -> List[int]:
+def sa_is(s: list[int], upper: int) -> list[int]:
     n = len(s)
     if n == 0:
         return []
@@ -97,14 +94,14 @@ def sa_is(s: List[int], upper: int) -> List[int]:
     return sa
 
 
-def suffix_array_upper(s: List[int], upper: int) -> List[int]:
+def suffix_array_upper(s: list[int], upper: int) -> list[int]:
     assert 0 <= upper
     for d in s:
         assert 0 <= d and d <= upper
     return sa_is(s, upper)
 
 
-def suffix_array(s: str) -> List[int]:
+def suffix_array(s: str) -> list[int]:
     n = len(s)
     if type(s) == str:
         s2 = [ord(i) for i in s]
@@ -121,7 +118,7 @@ def suffix_array(s: str) -> List[int]:
         return sa_is(s2, now)
 
 
-def lcp_array(s: str, sa: List[int]) -> List[int]:
+def lcp_array(s: str, sa: list[int]) -> list[int]:
     n = len(s)
     assert n >= 1
     rnk = [0] * n

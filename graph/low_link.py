@@ -1,10 +1,11 @@
-from typing import List
 import sys
 
 sys.setrecursionlimit(10**5)
 
 
-def low_link(N: int, G: List[List[int]], start: int = 0) -> List[int]:
+def low_link(
+    N: int, G: list[list[int]], start: int = 0
+) -> tuple[list[int], list[tuple[int, int]]]:
     INF = float("inf")
     articulation = []
     bridge = []

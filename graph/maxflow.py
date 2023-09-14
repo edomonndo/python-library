@@ -61,7 +61,7 @@ class mf_graph:
             que.append(s)
             while que:
                 v = que.popleft()
-                for to, rev, cap in self.g[v]:
+                for to, _, cap in self.g[v]:
                     if cap == 0 or level[to] >= 0:
                         continue
                     level[to] = level[v] + 1
@@ -77,7 +77,7 @@ class mf_graph:
             level_v = level[v]
             for i in range(Iter[v], len(self.g[v])):
                 Iter[v] = i
-                to, rev, cap = self.g[v][i]
+                to, rev, _ = self.g[v][i]
                 if level_v <= level[to] or self.g[to][rev][2] == 0:
                     continue
                 d = dfs(to, min(up - res, self.g[to][rev][2]))
@@ -98,7 +98,7 @@ class mf_graph:
                 break
             Iter = [0 for i in range(self.n)]
             f = dfs(t, flow_limit - flow)
-            if not (f):
+            if not f:
                 break
             flow += f
         return flow
@@ -110,8 +110,8 @@ class mf_graph:
         while len(que) > 0:
             p = que.popleft()
             visited[p] = True
-            for to, rev, cap in self.g[p]:
-                if cap and not (visited[to]):
+            for to, _, cap in self.g[p]:
+                if cap and not visited[to]:
                     visited[to] = True
                     que.append(to)
         return visited

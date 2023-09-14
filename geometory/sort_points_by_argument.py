@@ -1,7 +1,4 @@
-from typing import List, Tuple
-
-
-def sortPointsByArgument(points: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
+def sortPointsByArgument(points: list[tuple[int, int]]) -> list[tuple[int, int]]:
     def msort(arr):
         if not arr:
             return
