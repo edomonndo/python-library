@@ -9,7 +9,7 @@ class SortedMultiset:
     def _build(self, a=None) -> None:
         "Evenly divide `a` into buckets."
         if a is None:
-            a = []
+            a = list(self)
         size = self.size = len(a)
         bucket_size = int(math.ceil(math.sqrt(size / self.BUCKET_RATIO)))
         self.a = [
