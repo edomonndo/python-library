@@ -7,12 +7,12 @@ documentation_of: ./li_chao_tree.py
 
 ### LCT = LiChaoTree(arr)
 
-初期化．$arr$はクエリの配列．(オフライン不可)
+初期化．$arr$はクエリの配列(オフライン不可)．
 
-### CHT.add_edge(a, b)
+### LCT.add_edge(a, b)
 
 直線$ax+b$を追加する．
 
-### CHT.query(x)
+### LCT.query(x)
 
 点$x$での最小値を求める．
