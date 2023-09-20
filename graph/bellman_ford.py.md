@@ -2,33 +2,36 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/grl_1_b_bellman_ford.test.py
+    title: test/aoj/grl_1_b_bellman_ford.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List, Tuple, Union\n\n\ndef bellmanFord(\n    N: int,\
-    \ G: List[List[int]], start: int = 0\n) -> Union[Tuple[List[int], List[int]],\
-    \ Tuple[int, int]]:\n    INF = float(\"inf\")\n    dist = [INF] * N\n    pre =\
-    \ [-1] * N\n    dist[start] = 0\n    loop = 0\n    for i in range(N):\n      \
-    \  loop += 1\n        updated = False\n        for u in range(N):\n          \
-    \  if dist[u] == INF:\n                continue\n            for w, v in G[u]:\n\
-    \                nd = dist[u] + w\n                if nd < dist[v]:\n        \
-    \            updated = True\n                    pre[v] = u\n                \
-    \    dist[v] = nd\n        if not updated:\n            break\n        if i ==\
-    \ N - 1:\n            return -1, -1\n    return dist, pre\n"
+  code: "def bellmanFord(N: int, G: list[list[int]], start: int = 0):\n    INF = float(\"\
+    inf\")\n    dist = [INF] * N\n    pre = [-1] * N\n    dist[start] = 0\n    loop\
+    \ = 0\n    for i in range(N):\n        loop += 1\n        updated = False\n  \
+    \      for u in range(N):\n            if dist[u] == INF:\n                continue\n\
+    \            for w, v in G[u]:\n                nd = dist[u] + w\n           \
+    \     if nd < dist[v]:\n                    updated = True\n                 \
+    \   pre[v] = u\n                    dist[v] = nd\n        if not updated:\n  \
+    \          break\n        if i == N - 1:\n            return -1, -1\n    return\
+    \ dist, pre\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/bellman_ford.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-09-15 08:31:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/grl_1_b_bellman_ford.test.py
 documentation_of: graph/bellman_ford.py
 layout: document
 title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"

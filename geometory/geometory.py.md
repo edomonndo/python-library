@@ -32,9 +32,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import math\n\n\nclass Point:\n    def __init__(self, x, y):\n        self.EPS\
     \ = 1e-10\n        self.x = x\n        self.y = y\n\n    def __add__(self, other):\n\
@@ -200,14 +200,14 @@ data:
   timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/cgl_1_c_counter_clockwise.test.py
-  - test/aoj/cgl_2_b_intersection.test.py
   - test/aoj/cgl_1_b_refrection.test.py
-  - test/aoj/cgl_2_c_cross_point.test.py
-  - test/aoj/cgl_2_d_distance.test.py
-  - test/aoj/dsl_4_a_union_of_rectangles.test.py
-  - test/aoj/cgl_2_a_parallel_orthogonal.test.py
   - test/aoj/cgl_1_a_projection.test.py
+  - test/aoj/cgl_2_b_intersection.test.py
+  - test/aoj/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl_2_c_cross_point.test.py
+  - test/aoj/dsl_4_a_union_of_rectangles.test.py
+  - test/aoj/cgl_2_d_distance.test.py
+  - test/aoj/cgl_2_a_parallel_orthogonal.test.py
 documentation_of: geometory/geometory.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

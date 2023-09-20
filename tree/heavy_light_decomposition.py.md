@@ -7,33 +7,31 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
   attributes:
-    links:
-    - https://qiita.com/Pro_ktmr/items/4e1e051ea0561772afa3
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+    links: []
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# https://qiita.com/Pro_ktmr/items/4e1e051ea0561772afa3\n\n\nclass HeavyLightDecomposition:\n\
-    \    def __init__(self, n, tree, parent, v_bfs_order):\n        self.n = n  #\
-    \ \u9802\u70B9\u6570\n        self.tree = tree  # \u5B50\u9802\u70B9\u306E\u30EA\
-    \u30B9\u30C8\n        self.parent = parent  # \u89AA\u9802\u70B9\u306E\u30EA\u30B9\
-    \u30C8\n        self.v_bfs_order = v_bfs_order  # \u6839\u304B\u3089BFS\u9806\u3067\
-    \u8FBF\u3063\u305F\u6642\u306E\u9806\u756A\n\n        # \u9802\u70B9\u3092\u6839\
-    \u3068\u3057\u305F\u90E8\u5206\u6728\u306E\u9802\u70B9\u6570\n        # \u90E8\
-    \u5206\u6728\u306E\u9802\u70B9\u6570\u3092\u91CD\u307F\u3068\u3059\u308B\n   \
-    \     size = [1] * n\n        for v in v_bfs_order[1:][::-1]:\n            size[parent[v]]\
-    \ += size[v]\n        self.size = size\n\n        # \u9802\u70B9\u304B\u3089\u6839\
-    \u307E\u3067\u306E\u8DDD\u96E2(\u5148\u7956\u306E\u9802\u70B9\u6570)\n       \
-    \ ancestor = [0] * n\n        for v in v_bfs_order[1:]:\n            ancestor[v]\
-    \ = ancestor[parent[v]] + 1\n        self.ancestor = ancestor\n\n        # Heavy\u306A\
-    \u8FBA\u3092\u8FBF\u308B\n        # H[v] :=\u3000\u9802\u70B9v\u304C\u6B21\u306B\
-    \u9023\u7D50\u3059\u308B\u9802\u70B9\u756A\u53F7(\u5B58\u5728\u3057\u306A\u3044\
-    \u5834\u5408-1)\n        H = [-1] * n\n        for v in range(n):\n          \
-    \  max_size, max_v = -1, -1\n            max_idx = -1\n            for idx, u\
-    \ in enumerate(tree[v]):\n                if size[u] > max_size:\n           \
-    \         max_size = size[u]\n                    max_v = u\n                \
-    \    max_idx = idx\n            if max_idx != len(tree[v]) - 1:\n            \
-    \    tree[v][-1], tree[v][max_idx] = (\n                    tree[v][max_idx],\n\
+  code: "class HeavyLightDecomposition:\n    def __init__(self, n, tree, parent, v_bfs_order):\n\
+    \        self.n = n  # \u9802\u70B9\u6570\n        self.tree = tree  # \u5B50\u9802\
+    \u70B9\u306E\u30EA\u30B9\u30C8\n        self.parent = parent  # \u89AA\u9802\u70B9\
+    \u306E\u30EA\u30B9\u30C8\n        self.v_bfs_order = v_bfs_order  # \u6839\u304B\
+    \u3089BFS\u9806\u3067\u8FBF\u3063\u305F\u6642\u306E\u9806\u756A\n\n        # \u9802\
+    \u70B9\u3092\u6839\u3068\u3057\u305F\u90E8\u5206\u6728\u306E\u9802\u70B9\u6570\
+    \n        # \u90E8\u5206\u6728\u306E\u9802\u70B9\u6570\u3092\u91CD\u307F\u3068\
+    \u3059\u308B\n        size = [1] * n\n        for v in v_bfs_order[1:][::-1]:\n\
+    \            size[parent[v]] += size[v]\n        self.size = size\n\n        #\
+    \ \u9802\u70B9\u304B\u3089\u6839\u307E\u3067\u306E\u8DDD\u96E2(\u5148\u7956\u306E\
+    \u9802\u70B9\u6570)\n        ancestor = [0] * n\n        for v in v_bfs_order[1:]:\n\
+    \            ancestor[v] = ancestor[parent[v]] + 1\n        self.ancestor = ancestor\n\
+    \n        # Heavy\u306A\u8FBA\u3092\u8FBF\u308B\n        # H[v] :=\u3000\u9802\
+    \u70B9v\u304C\u6B21\u306B\u9023\u7D50\u3059\u308B\u9802\u70B9\u756A\u53F7(\u5B58\
+    \u5728\u3057\u306A\u3044\u5834\u5408-1)\n        H = [-1] * n\n        for v in\
+    \ range(n):\n            max_size, max_v = -1, -1\n            max_idx = -1\n\
+    \            for idx, u in enumerate(tree[v]):\n                if size[u] > max_size:\n\
+    \                    max_size = size[u]\n                    max_v = u\n     \
+    \               max_idx = idx\n            if max_idx != len(tree[v]) - 1:\n \
+    \               tree[v][-1], tree[v][max_idx] = (\n                    tree[v][max_idx],\n\
     \                    tree[v][-1],\n                )\n            H[v] = max_v\n\
     \n        root_in_group = [0] * n\n        depth = [0] * n\n        group = [[0]]\n\
     \        group_id = [0] * n\n        depth_in_group = [0] * n\n\n        c = 1\n\
@@ -100,7 +98,7 @@ data:
   isVerificationFile: false
   path: tree/heavy_light_decomposition.py
   requiredBy: []
-  timestamp: '2023-08-07 00:21:40+09:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tree/heavy_light_decomposition.py
@@ -109,3 +107,7 @@ title: "HL\u5206\u89E3"
 ---
 
 木の高さを圧縮する.
+
+https://qiita.com/Pro_ktmr/items/4e1e051ea0561772afa3
+
+

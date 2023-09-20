@@ -11,28 +11,28 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from math import pi, sin, cos\n\n\nclass CooleyTukey:\n    wr = [0] * (1\
-    \ << 20)\n    wi = [0] * (1 << 20)\n    baser = [0] * 20\n    basei = [0] * 20\n\
-    \n    @staticmethod\n    def mul(xr: float, xi: float, yr: float, yi: float) ->\
-    \ tuple:\n        return xr * yr - xi * yi, xr * yi + yr * xi\n\n    def genw(self,\
-    \ i: int, b: int, zr: float, zi: float) -> None:\n        if b == -1:\n      \
-    \      self.wr[i] = zr\n            self.wi[i] = zi\n        else:\n         \
-    \   self.genw(i, b - 1, zr, zi)\n            wr, wi = self.baser[b], self.basei[b]\n\
-    \            self.genw(i | (1 << b), b - 1, zr * wr - zi * wi, zr * wi + zi *\
-    \ wr)\n\n    def setw(self, k: int) -> None:\n        k -= 1\n        arg = pi\
-    \ / (1 << k)\n        i = 0\n        j = 1 << (k - 1)\n        while j:\n    \
-    \        self.baser[i] = cos(arg * j)\n            self.basei[i] = sin(arg * j)\n\
-    \            i += 1\n            j >>= 1\n        self.genw(0, k - 1, 1, 0)\n\n\
-    \    def fft(self, ar: list, ai: list, k: int) -> None:\n        if k == 0:\n\
-    \            return\n        if k == 1:\n            ar[0], ar[1] = ar[0] + ar[1],\
-    \ ar[0] - ar[1]\n            ai[0], ai[1] = ai[0] + ai[1], ai[0] - ai[1]\n   \
-    \         return\n        if k & 1:\n            v = 1 << (k - 1)\n          \
-    \  for j in range(v):\n                ar[j], ar[j + v] = ar[j] + ar[j + v], ar[j]\
-    \ - ar[j + v]\n                ai[j], ai[j + v] = ai[j] + ai[j + v], ai[j] - ai[j\
+  code: "import math\n\n\nclass CooleyTukey:\n    wr = [0] * (1 << 20)\n    wi = [0]\
+    \ * (1 << 20)\n    baser = [0] * 20\n    basei = [0] * 20\n\n    @staticmethod\n\
+    \    def mul(xr: float, xi: float, yr: float, yi: float) -> tuple:\n        return\
+    \ xr * yr - xi * yi, xr * yi + yr * xi\n\n    def genw(self, i: int, b: int, zr:\
+    \ float, zi: float) -> None:\n        if b == -1:\n            self.wr[i] = zr\n\
+    \            self.wi[i] = zi\n        else:\n            self.genw(i, b - 1, zr,\
+    \ zi)\n            wr, wi = self.baser[b], self.basei[b]\n            self.genw(i\
+    \ | (1 << b), b - 1, zr * wr - zi * wi, zr * wi + zi * wr)\n\n    def setw(self,\
+    \ k: int) -> None:\n        k -= 1\n        arg = math.pi / (1 << k)\n       \
+    \ i = 0\n        j = 1 << (k - 1)\n        while j:\n            self.baser[i]\
+    \ = math.cos(arg * j)\n            self.basei[i] = math.sin(arg * j)\n       \
+    \     i += 1\n            j >>= 1\n        self.genw(0, k - 1, 1, 0)\n\n    def\
+    \ fft(self, ar: list, ai: list, k: int) -> None:\n        if k == 0:\n       \
+    \     return\n        if k == 1:\n            ar[0], ar[1] = ar[0] + ar[1], ar[0]\
+    \ - ar[1]\n            ai[0], ai[1] = ai[0] + ai[1], ai[0] - ai[1]\n         \
+    \   return\n        if k & 1:\n            v = 1 << (k - 1)\n            for j\
+    \ in range(v):\n                ar[j], ar[j + v] = ar[j] + ar[j + v], ar[j] -\
+    \ ar[j + v]\n                ai[j], ai[j + v] = ai[j] + ai[j + v], ai[j] - ai[j\
     \ + v]\n        u = 1 << (k & 1)\n        v = 1 << (k - 2 - (k & 1))\n       \
     \ wr1, wi1 = self.wr[1], self.wi[1]\n        while v:\n            for j0 in range(v):\n\
     \                t0r = ar[j0]\n                t0i = ai[j0]\n                t1r\
@@ -163,7 +163,7 @@ data:
   isVerificationFile: false
   path: convolution/cooley_turkey.py
   requiredBy: []
-  timestamp: '2023-06-21 08:58:45+09:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/convolution/convolution_mod_1000000007.test.py

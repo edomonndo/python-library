@@ -9,6 +9,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
       title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
+    - icon: ':warning:'
+      path: convolution/formal_power_series.py
+      title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   - name: data_structure
     pages:
     - icon: ':warning:'
@@ -23,12 +26,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/FoldableQue.py
       title: Foldable Queue(SWAG)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/SortedMultiset.py
       title: SortedMultiset
     - icon: ':warning:'
       path: data_structure/SortedSet.py
       title: SortedSet
+    - icon: ':warning:'
+      path: data_structure/convex_hull_trick.py
+      title: Convex Hull Trick
     - icon: ':warning:'
       path: data_structure/deque.py
       title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
@@ -45,12 +51,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
+    - icon: ':warning:'
+      path: data_structure/li_chao_tree.py
+      title: Li Chao Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/sparse_table.py
+      title: Sparse table
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
@@ -71,12 +83,12 @@ data:
     - icon: ':warning:'
       path: geometory/kd_tree.py
       title: KD tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - name: graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/bellman_ford.py
       title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
@@ -85,11 +97,11 @@ data:
     - icon: ':warning:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/floyd_warshall.py
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
     - icon: ':warning:'
@@ -101,12 +113,18 @@ data:
     - icon: ':warning:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  - name: heuristic
+    pages:
+    - icon: ':warning:'
+      path: heuristic/random_set.py
+      title: "\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u308B\u96C6\
+        \u5408"
   - name: math_
     pages:
     - icon: ':warning:'
@@ -137,13 +155,13 @@ data:
     - icon: ':warning:'
       path: math_/is_prime.py
       title: "\u7D20\u6570\u5224\u5B9A"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math_/min_of_linear.py
       title: Min of linear
     - icon: ':warning:'
       path: math_/sum_of_difference.py
       title: Sum of difference
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math_/two_sat.py
       title: 2 Sat
   - name: matrix
@@ -159,13 +177,13 @@ data:
     - icon: ':warning:'
       path: string_/rolling_hash.py
       title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: string_/suffix_array.py
       title: Suffix array
     - icon: ':warning:'
       path: string_/trie_tree.py
       title: Trie tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: string_/z_algorithm.py
       title: Z algorithm
   - name: tree
@@ -173,7 +191,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
@@ -188,6 +206,9 @@ data:
     - icon: ':warning:'
       path: tree/splay_tree.py
       title: Splay tree
+    - icon: ':heavy_check_mark:'
+      path: tree/tree_dp.py
+      title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: utility
     pages:
     - icon: ':warning:'
@@ -199,6 +220,9 @@ data:
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
+    - icon: ':warning:'
+      path: utility/modint.py
+      title: modint
     - icon: ':warning:'
       path: utility/permutations.py
       title: "\u9806\u5217"
@@ -263,6 +287,9 @@ data:
       path: test/aoj/dsl_3_a_smallest_window1.test.py
       title: test/aoj/dsl_3_a_smallest_window1.test.py
     - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_3_d_sliding_minimum_element_st.test.py
+      title: test/aoj/dsl_3_d_sliding_minimum_element_st.test.py
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
       title: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
     - icon: ':heavy_check_mark:'
@@ -304,6 +331,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_a_diameter.test.py
       title: test/aoj/grl_5_a_diameter.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/grl_5_b_tree_height.test.py
+      title: test/aoj/grl_5_b_tree_height.test.py
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
       title: test/aoj/grl_5_c_lowest_common_ancestor.test.py

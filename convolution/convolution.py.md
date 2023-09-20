@@ -11,9 +11,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "MOD = 998244353\n_IMAG = 911660635\n_IIMAG = 86583718\n_rate2 = (\n    0,\n\
     \    911660635,\n    509520358,\n    369330050,\n    332049552,\n    983190778,\n\
@@ -97,8 +97,6 @@ documentation_of: convolution/convolution.py
 layout: document
 title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
 ---
-
-内容は理解できていない.
 
 多項式 $a_0 + a_1x + a_2x^2 + a_{n-1}x^{n-1}$ を配列 $[a_0, a_1, ..., a_{n-1}]$　で表す.
 

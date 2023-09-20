@@ -2,29 +2,33 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/string/z_algorithm.test.py
+    title: test/library_checker/string/z_algorithm.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import List\n\n\ndef z_algorithm(s: str) -> List[int]:\n    n\
-    \ = len(s)\n    if n == 0:\n        return []\n    z = [0] * n\n    i = 1\n  \
-    \  j = 0\n    while i < n:\n        z[i] = 0 if (j + z[j] <= i) else min(j + z[j]\
-    \ - i, z[i - j])\n        while (i + z[i] < n) and (s[z[i]] == s[i + z[i]]):\n\
-    \            z[i] += 1\n        if j + z[j] < i + z[i]:\n            j = i\n \
-    \       i += 1\n    z[0] = n\n    return z\n"
+  code: "def z_algorithm(s: str) -> list[int]:\n    n = len(s)\n    if n == 0:\n \
+    \       return []\n    z = [0] * n\n    i = 1\n    j = 0\n    while i < n:\n \
+    \       z[i] = 0 if (j + z[j] <= i) else min(j + z[j] - i, z[i - j])\n       \
+    \ while (i + z[i] < n) and (s[z[i]] == s[i + z[i]]):\n            z[i] += 1\n\
+    \        if j + z[j] < i + z[i]:\n            j = i\n        i += 1\n    z[0]\
+    \ = n\n    return z\n"
   dependsOn: []
   isVerificationFile: false
   path: string_/z_algorithm.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-09-15 08:31:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/string/z_algorithm.test.py
 documentation_of: string_/z_algorithm.py
 layout: document
 title: Z algorithm

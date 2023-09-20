@@ -8,9 +8,9 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.7.13/x64/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from collections import deque\n\n\nclass mf_graph:\n    n = 1\n    g = [[]\
     \ for i in range(1)]\n    pos = []\n\n    def __init__(self, N):\n        self.n\
@@ -35,14 +35,14 @@ data:
     \        assert s != t\n\n        def bfs():\n            level = [-1 for i in\
     \ range(self.n)]\n            level[s] = 0\n            que = deque([])\n    \
     \        que.append(s)\n            while que:\n                v = que.popleft()\n\
-    \                for to, rev, cap in self.g[v]:\n                    if cap ==\
-    \ 0 or level[to] >= 0:\n                        continue\n                   \
-    \ level[to] = level[v] + 1\n                    if to == t:\n                \
-    \        return level\n                    que.append(to)\n            return\
-    \ level\n\n        def dfs(v, up):\n            if v == s:\n                return\
-    \ up\n            res = 0\n            level_v = level[v]\n            for i in\
-    \ range(Iter[v], len(self.g[v])):\n                Iter[v] = i\n             \
-    \   to, rev, cap = self.g[v][i]\n                if level_v <= level[to] or self.g[to][rev][2]\
+    \                for to, _, cap in self.g[v]:\n                    if cap == 0\
+    \ or level[to] >= 0:\n                        continue\n                    level[to]\
+    \ = level[v] + 1\n                    if to == t:\n                        return\
+    \ level\n                    que.append(to)\n            return level\n\n    \
+    \    def dfs(v, up):\n            if v == s:\n                return up\n    \
+    \        res = 0\n            level_v = level[v]\n            for i in range(Iter[v],\
+    \ len(self.g[v])):\n                Iter[v] = i\n                to, rev, _ =\
+    \ self.g[v][i]\n                if level_v <= level[to] or self.g[to][rev][2]\
     \ == 0:\n                    continue\n                d = dfs(to, min(up - res,\
     \ self.g[to][rev][2]))\n                if d <= 0:\n                    continue\n\
     \                self.g[v][i][2] += d\n                self.g[to][rev][2] -= d\n\
@@ -51,13 +51,13 @@ data:
     \  flow = 0\n        while flow < flow_limit:\n            level = bfs()\n   \
     \         if level[t] == -1:\n                break\n            Iter = [0 for\
     \ i in range(self.n)]\n            f = dfs(t, flow_limit - flow)\n           \
-    \ if not (f):\n                break\n            flow += f\n        return flow\n\
+    \ if not f:\n                break\n            flow += f\n        return flow\n\
     \n    def min_cut(self, s):\n        visited = [False for i in range(self.n)]\n\
     \        que = deque([])\n        que.append(s)\n        while len(que) > 0:\n\
     \            p = que.popleft()\n            visited[p] = True\n            for\
-    \ to, rev, cap in self.g[p]:\n                if cap and not (visited[to]):\n\
-    \                    visited[to] = True\n                    que.append(to)\n\
-    \        return visited\n"
+    \ to, _, cap in self.g[p]:\n                if cap and not visited[to]:\n    \
+    \                visited[to] = True\n                    que.append(to)\n    \
+    \    return visited\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/maxflow.py
