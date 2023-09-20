@@ -35,7 +35,7 @@ def prev_permutation(a: list, l: int = 0, r: int = None) -> bool:
 import bisect
 
 
-def nth_permutations(A: list, MOD: int = 10**18):
+def get_permutation_order(A: list, MOD: int = 10**18):
     """
     順列のうちaとなるのは何番目か？
     返り値は0-indexed
@@ -57,38 +57,21 @@ def nth_permutations(A: list, MOD: int = 10**18):
     return ans
 
 
-if __name__ == "__main__":
-    n = 3
-    a = [0, 1, 2]
-    res = []
-    while True:
-        res.append(a[:])
-        if not next_permutation(a, 0, n - 1):
-            break
-    assert res == [
-        [0, 1, 2],
-        [0, 2, 1],
-        [1, 0, 2],
-        [1, 2, 0],
-        [2, 0, 1],
-        [2, 1, 0],
-    ], res
+def kth_permutation(n: int, k: int) -> list:
+    """
+    0<=i<nからなる順列のk番目を返す. kは0-indexed
+    """
+    tmp = [i for i in range(n)]
 
-    a = [2, 1, 0]
-    res = []
-    while True:
-        res.append(a[:])
-        if not prev_permutation(a, 0, n - 1):
-            break
-    assert res == [
-        [2, 1, 0],
-        [2, 0, 1],
-        [1, 2, 0],
-        [1, 0, 2],
-        [0, 2, 1],
-        [0, 1, 2],
-    ], res
+    surplus = [-1] * n
+    for i in range(1, n):
+        surplus[n - i] = k % i
+        k = k // i
+    surplus[0] = k
 
-    n = 3
-    a = [3, 1, 5, 4, 2]
-    assert nth_permutations(a) == 53
+    res = [-1] * n
+    for i in range(n):
+        res[i] = tmp[surplus[i]]
+        for j in range(surplus[i], n - 1):
+            tmp[j] = tmp[j + 1]
+    return res
