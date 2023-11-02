@@ -54,6 +54,9 @@ data:
     - icon: ':warning:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
+    - icon: ':warning:'
+      path: data_structure/radix_heap.py
+      title: data_structure/radix_heap.py
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
@@ -119,6 +122,11 @@ data:
     - icon: ':warning:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+  - name: grid
+    pages:
+    - icon: ':warning:'
+      path: grid/grid.py
+      title: "\u30B0\u30EA\u30C3\u30C9"
   - name: heuristic
     pages:
     - icon: ':warning:'

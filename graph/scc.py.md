@@ -14,9 +14,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "def scc(N: int, M: int, edges: list[tuple[int, int]]) -> list[int]:\n   \
     \ start = [0] * (N + 1)\n    elist = [0] * M\n    for e in edges:\n        start[e[0]\
@@ -49,8 +49,8 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl_3_c_strongly_connected_components.test.py
   - test/library_checker/graph/scc.test.py
+  - test/aoj/grl_3_c_strongly_connected_components.test.py
 documentation_of: graph/scc.py
 layout: document
 title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"

@@ -14,9 +14,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.12/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import sys\n\nsys.setrecursionlimit(10**5)\n\n\ndef low_link(\n    N: int,\
     \ G: list[list[int]], start: int = 0\n) -> tuple[list[int], list[tuple[int, int]]]:\n\
@@ -40,8 +40,8 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl_3_b_bridges.test.py
   - test/aoj/grl_3_a_articulation_points.test.py
+  - test/aoj/grl_3_b_bridges.test.py
 documentation_of: graph/low_link.py
 layout: document
 title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
