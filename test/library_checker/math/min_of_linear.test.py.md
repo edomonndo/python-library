@@ -26,7 +26,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/math/min_of_linear.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/math/min_of_linear.test.py

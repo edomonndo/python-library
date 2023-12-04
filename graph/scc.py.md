@@ -3,32 +3,32 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl_3_c_strongly_connected_components.test.py
     title: test/aoj/grl_3_c_strongly_connected_components.test.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/graph/scc.test.py
     title: test/library_checker/graph/scc.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "def scc(N: int, M: int, edges: list[tuple[int, int]]) -> list[int]:\n   \
-    \ start = [0] * (N + 1)\n    elist = [0] * M\n    for e in edges:\n        start[e[0]\
-    \ + 1] += 1\n    for i in range(1, N + 1):\n        start[i] += start[i - 1]\n\
-    \    counter = start[:]\n    for e in edges:\n        elist[counter[e[0]]] = e[1]\n\
-    \        counter[e[0]] += 1\n    visited = []\n    low = [0] * N\n    Ord = [-1]\
-    \ * N\n    ids = [0] * N\n    NG = [0, 0]\n\n    def dfs(v: int):\n        stack\
-    \ = [(v, -1, 0), (v, -1, 1)]\n        while stack:\n            v, bef, t = stack.pop()\n\
-    \            if t:\n                if bef != -1 and Ord[v] != -1:\n         \
-    \           low[bef] = min(low[bef], Ord[v])\n                    stack.pop()\n\
-    \                    continue\n                low[v] = NG[0]\n              \
-    \  Ord[v] = NG[0]\n                NG[0] += 1\n                visited.append(v)\n\
+  code: "def scc(N: int, edges: list[tuple[int, int]]) -> list[int]:\n    start =\
+    \ [0] * (N + 1)\n    m = len(edges)\n    elist = [0] * m\n    for e in edges:\n\
+    \        start[e[0] + 1] += 1\n    for i in range(1, N + 1):\n        start[i]\
+    \ += start[i - 1]\n    counter = start[:]\n    for e in edges:\n        elist[counter[e[0]]]\
+    \ = e[1]\n        counter[e[0]] += 1\n    visited = []\n    low = [0] * N\n  \
+    \  Ord = [-1] * N\n    ids = [0] * N\n    NG = [0, 0]\n\n    def dfs(v: int):\n\
+    \        stack = [(v, -1, 0), (v, -1, 1)]\n        while stack:\n            v,\
+    \ bef, t = stack.pop()\n            if t:\n                if bef != -1 and Ord[v]\
+    \ != -1:\n                    low[bef] = min(low[bef], Ord[v])\n             \
+    \       stack.pop()\n                    continue\n                low[v] = NG[0]\n\
+    \                Ord[v] = NG[0]\n                NG[0] += 1\n                visited.append(v)\n\
     \                for i in range(start[v], start[v + 1]):\n                   \
     \ to = elist[i]\n                    if Ord[to] == -1:\n                     \
     \   stack.append((to, v, 0))\n                        stack.append((to, v, 1))\n\
@@ -46,8 +46,8 @@ data:
   isVerificationFile: false
   path: graph/scc.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2023-12-04 22:53:06+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/graph/scc.test.py
   - test/aoj/grl_3_c_strongly_connected_components.test.py

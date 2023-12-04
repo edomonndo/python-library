@@ -12,9 +12,9 @@ data:
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import heapq\n\n\ndef dijkstra(N: int, graph: list[list[int]], start: int)\
-    \ -> tuple[list[int], list[int]]:\n    INF = float(\"inf\")\n    dist = [INF]\
-    \ * N\n    dist[start] = 0\n    prev = [-1] * N\n\n    que = [(0, start)]  # \u8DDD\
+  code: "import heapq\n\n\ndef dijkstra(graph: list[list[int]], start: int) -> tuple[list[int],\
+    \ list[int]]:\n    INF = float(\"inf\")\n    n = len(graph)\n    dist = [INF]\
+    \ * n\n    dist[start] = 0\n    prev = [-1] * n\n\n    que = [(0, start)]  # \u8DDD\
     \u96E2,\u9802\u70B9\n    while que:\n        c, u = heapq.heappop(que)\n     \
     \   if c > dist[u]:\n            continue\n        for nc, v in graph[u]:\n  \
     \          cost = dist[u] + nc\n            if cost < dist[v]:\n             \

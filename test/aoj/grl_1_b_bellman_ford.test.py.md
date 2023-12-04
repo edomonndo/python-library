@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/bellman_ford.py
     title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B
     links:
@@ -29,8 +29,8 @@ data:
   isVerificationFile: true
   path: test/aoj/grl_1_b_bellman_ford.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-12-04 22:53:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_1_b_bellman_ford.test.py
 layout: document

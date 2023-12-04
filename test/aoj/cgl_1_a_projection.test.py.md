@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl_1_a_projection.test.py
   requiredBy: []
-  timestamp: '2023-08-20 13:14:27+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl_1_a_projection.test.py

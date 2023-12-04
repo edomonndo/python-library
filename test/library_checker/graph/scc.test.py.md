@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/scc
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-12-04 22:53:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc.test.py
 layout: document

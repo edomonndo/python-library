@@ -91,7 +91,7 @@ data:
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - name: graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/bellman_ford.py
       title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
@@ -104,7 +104,7 @@ data:
       path: graph/floyd_warshall.py
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
     - icon: ':warning:'
@@ -116,7 +116,7 @@ data:
     - icon: ':warning:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
@@ -175,6 +175,9 @@ data:
   - name: matrix
     pages:
     - icon: ':heavy_check_mark:'
+      path: matrix/determinant_arbitrary.py
+      title: "\u884C\u5217\u5F0F"
+    - icon: ':heavy_check_mark:'
       path: matrix/matrix.py
       title: "\u884C\u5217"
   - name: string_
@@ -228,6 +231,9 @@ data:
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
+    - icon: ':warning:'
+      path: utility/imos2d.py
+      title: "\u4E8C\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':warning:'
       path: utility/modint.py
       title: modint
@@ -306,10 +312,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl_4_a_union_of_rectangles.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_1_a_dijkstra.test.py
       title: test/aoj/grl_1_a_dijkstra.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_1_b_bellman_ford.test.py
       title: test/aoj/grl_1_b_bellman_ford.test.py
     - icon: ':heavy_check_mark:'
@@ -321,16 +327,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_2_b_minimum_cost_arborescence.test.py
       title: test/aoj/grl_2_b_minimum_cost_arborescence.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_3_a_articulation_points.test.py
       title: test/aoj/grl_3_a_articulation_points.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_3_b_bridges.test.py
       title: test/aoj/grl_3_b_bridges.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_3_c_strongly_connected_components.test.py
       title: test/aoj/grl_3_c_strongly_connected_components.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_4_a_cycle_detection.test.py
       title: test/aoj/grl_4_a_cycle_detection.test.py
     - icon: ':x:'
@@ -410,10 +416,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_undirected.test.py
       title: test/library_checker/graph/cycle_detection_undirected.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/shortest_path.test.py
       title: test/library_checker/graph/shortest_path.test.py
   - name: test/library_checker/math

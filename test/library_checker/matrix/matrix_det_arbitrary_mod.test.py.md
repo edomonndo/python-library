@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: matrix/matrix.py
-    title: "\u884C\u5217"
+    path: matrix/determinant_arbitrary.py
+    title: "\u884C\u5217\u5F0F"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
 
 
-    from matrix.matrix import determinant_arbitrary_mod
+    from matrix.determinant_arbitrary import determinant_arbitrary_mod
 
 
     N, M = map(int, input().split())
@@ -32,11 +32,11 @@ data:
 
     '
   dependsOn:
-  - matrix/matrix.py
+  - matrix/determinant_arbitrary.py
   isVerificationFile: true
   path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py

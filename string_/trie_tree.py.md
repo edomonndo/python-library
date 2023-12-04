@@ -42,19 +42,12 @@ data:
     \            return True, curr.matched_prefix_count\n        return curr.word_finieshed,\
     \ curr.matched_prefix_count\n\n    # \u30AD\u30FC\u3092prefix\u306B\u6301\u3064\
     \u5358\u8A9E\u304C\u5B58\u5728\u3059\u308B\u304B\u3092\u691C\u7D22\n    def starts_with(self,\
-    \ key: str):\n        return self.search(key, prefix=True)\n\n\nif __name__ ==\
-    \ \"__main__\":\n    trie = TrieTree()\n    trie.insert(\"a\")\n    trie.insert(\"\
-    to\")\n    trie.insert(\"tea\")\n    trie.insert(\"ted\")\n    trie.insert(\"\
-    ten\")\n    trie.insert(\"i\")\n    trie.insert(\"in\")\n    trie.insert(\"inn\"\
-    )\n    # (True, 1)\n    print(trie.search(\"a\"))\n    # (False, 4)\n    print(trie.search(\"\
-    t\"))\n    # (True, 1)\n    print(trie.search(\"ted\"))\n    # (False, 0)\n  \
-    \  print(trie.search(\"tel\"))\n    # (True, 2)\n    print(trie.search(\"in\"\
-    ))\n    # (True, 1)\n    print(trie.search(\"inn\"))\n"
+    \ key: str):\n        return self.search(key, prefix=True)\n"
   dependsOn: []
   isVerificationFile: false
   path: string_/trie_tree.py
   requiredBy: []
-  timestamp: '2023-08-06 23:53:12+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: string_/trie_tree.py

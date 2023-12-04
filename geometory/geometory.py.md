@@ -114,7 +114,7 @@ data:
     \ e * base\n            if p1.x == p2.x:\n                return (p1, p2) if p1.y\
     \ < p2.y else (p2, p1)\n            if p1.x < p2.x:\n                return (p1,\
     \ p2)\n            return (p2, p1)\n        raise TypeError\n\n\nclass Circle:\n\
-    \    def __init__(self, center: Point, radius):\n        self.center = center\n\
+    \    def __init__(self, center: Point, radius: int):\n        self.center = center\n\
     \        self.r = radius\n\n    def __str__(self):\n        return f\"<Circle({self.center.x}\
     \ {self.center.y} {self.r})>\"\n\n    def get_diameter(self):\n        return\
     \ self.r * 2\n\n    def get_area(self):\n        return math.pi * self.r * self.r\n\
@@ -138,10 +138,10 @@ data:
     \ p1.x > p2.x:\n                p1, p2 = p2, p1\n            return p1, p2\n \
     \       else:\n            raise TypeError\n\n    def _polar(self, a, r):\n  \
     \      return Point(math.cos(r) * a, math.sin(r) * a)\n\n\nclass Rectangle:\n\
-    \    def __init__(self, top_left, bottom_right):\n        self.top_left = top_left\n\
-    \        self.bottom_right = bottom_right\n\n    def __str__(self):\n        return\
-    \ f\"<Rect({self.top_left}, {self.bottom_right})>\"\n\n    def sub(self, other):\n\
-    \        xs1, ys1 = self.top_left.get()\n        xs2, ys2 = self.bottom_right.get()\n\
+    \    def __init__(self, top_left: Point, bottom_right: Point):\n        self.top_left\
+    \ = top_left\n        self.bottom_right = bottom_right\n\n    def __str__(self):\n\
+    \        return f\"<Rect({self.top_left}, {self.bottom_right})>\"\n\n    def sub(self,\
+    \ other):\n        xs1, ys1 = self.top_left.get()\n        xs2, ys2 = self.bottom_right.get()\n\
     \        xo1, yo1 = other.top_left.get()\n        xo2, yo2 = other.bottom_right.get()\n\
     \n        if xs1 < xo1:\n            yield Rectangle(Point(xs1, ys1), Point(xo1,\
     \ ys2))\n        if xs2 > xo2:\n            yield Rectangle(Point(xo2, ys1), Point(xs2,\
@@ -164,50 +164,53 @@ data:
     \ for r in self.rects)\n\n    def not_intersect(self):\n        N = len(self.rects)\n\
     \        for i in range(N - 1):\n            for j in range(i + 1, N):\n     \
     \           if self.rects[i].intersect(self.rects[j]):\n                    return\
-    \ False\n        return True\n\n\nclass Polygon:\n    def __init__(self, arr):\n\
-    \        \"\"\"\n        \u914D\u5217arr\u306F\uFF0C\u591A\u89D2\u5F62\u306E\u96A3\
-    \u308A\u5408\u3063\u305F\u70B9\u3092\u53CD\u6642\u8A08\u56DE\u308A\u306B\u8A2A\
-    \u554F\u3059\u308B\u9806\u756A\u3067\u3042\u308B\u3053\u3068\uFF0E\n        \"\
-    \"\"\n        self.arr = arr\n        self.n = len(arr)\n\n    def __len__(self):\n\
-    \        return self.n\n\n    def __getitem__(self, idx):\n        return self.arr[idx]\n\
-    \n    def contains(self, p):\n        \"\"\"\n        \u70B9p\u304C\u591A\u89D2\
-    \u5F62\u306B\u5185\u5305\u3055\u308C\u3066\u3044\u308B\u304B\u5224\u5B9A\n   \
-    \     IN 2\n        ON 1\n        OUT 0\n        \"\"\"\n        x = False\n \
-    \       for i in range(self.n):\n            a = self.arr[i] - p\n           \
-    \ b = self.arr[(i + 1) % self.n] - p\n            if abs(a.cross(b)) < p.EPS and\
-    \ a.dot(b) < p.EPS:\n                return 1\n            if a.y > b.y:\n   \
-    \             a, b = b, a\n            if a.y < p.EPS and p.EPS < b.y and a.cross(b)\
-    \ > p.EPS:\n                x = True\n        return 2 if x else 0\n\n    def\
-    \ convex_hull(self):\n        \"\"\"\n        \u30A2\u30F3\u30C9\u30EA\u30E5\u30FC\
-    \u306E\u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\uFF0E\n        \"\"\"\n        if self.n\
-    \ < 3:\n            return -1\n        arr = sorted(self.arr)\n        upper =\
-    \ [arr[0], arr[1]]  # x\u304C\u5C0F\u3055\u3044\u3082\u306E\u304B\u30892\u3064\
-    \u8FFD\u52A0\n        # \u51F8\u5305\u306E\u4E0A\u90E8\u3092\u5F62\u6210\n   \
-    \     for p in arr[2:]:\n            n = len(upper)\n            while n >= 2\
-    \ and upper[-2].ccw(upper[-1], p) == 1:\n                upper.pop()\n       \
-    \         n -= 1\n            upper.append(p)\n\n        lower = [arr[-1], arr[-2]]\
-    \  # x\u304C\u5927\u304D\u3044\u3082\u306E\u304B\u3089\uFF12\u3064\u8FFD\u52A0\
-    \n        # \u51F8\u5305\u306E\u4E0B\u90E8\u3092\u5F62\u6210\n        for p in\
-    \ arr[::-1][2::]:\n            n = len(lower)\n            while n >= 2 and lower[-2].ccw(lower[-1],\
-    \ p) == 1:\n                lower.pop()\n                n -= 1\n            lower.append(p)\n\
-    \        # \u6642\u8A08\u56DE\u308A\u306B\u306A\u308B\u3088\u3046\u306B\u51F8\u5305\
-    \u306E\u70B9\u306E\u5217\u3092\u5F62\u6210\n        res = upper[1:-1] + lower\n\
-    \        return res[::-1]\n"
+    \ False\n        return True\n\n\nclass Polygon:\n    def __init__(self, arr:\
+    \ list[Point]):\n        \"\"\"\n        \u914D\u5217arr\u306F\uFF0C\u591A\u89D2\
+    \u5F62\u306E\u96A3\u308A\u5408\u3063\u305F\u70B9\u3092\u53CD\u6642\u8A08\u56DE\
+    \u308A\u306B\u8A2A\u554F\u3059\u308B\u9806\u756A\u3067\u3042\u308B\u3053\u3068\
+    \uFF0E\n        \"\"\"\n        self.arr = arr\n        self.n = len(arr)\n\n\
+    \    def __len__(self):\n        return self.n\n\n    def __getitem__(self, idx):\n\
+    \        return self.arr[idx]\n\n    def contains(self, p):\n        \"\"\"\n\
+    \        \u70B9p\u304C\u591A\u89D2\u5F62\u306B\u5185\u5305\u3055\u308C\u3066\u3044\
+    \u308B\u304B\u5224\u5B9A\n        IN 2\n        ON 1\n        OUT 0\n        \"\
+    \"\"\n        x = False\n        for i in range(self.n):\n            a = self.arr[i]\
+    \ - p\n            b = self.arr[(i + 1) % self.n] - p\n            if abs(a.cross(b))\
+    \ < p.EPS and a.dot(b) < p.EPS:\n                return 1\n            if a.y\
+    \ > b.y:\n                a, b = b, a\n            if a.y < p.EPS and p.EPS <\
+    \ b.y and a.cross(b) > p.EPS:\n                x = True\n        return 2 if x\
+    \ else 0\n\n    def convex_hull(self):\n        \"\"\"\n        \u30A2\u30F3\u30C9\
+    \u30EA\u30E5\u30FC\u306E\u30A2\u30EB\u30B4\u30EA\u30BA\u30E0\uFF0E\n        \"\
+    \"\"\n        if self.n < 3:\n            return -1\n        arr = sorted(self.arr)\n\
+    \        upper = [arr[0], arr[1]]  # x\u304C\u5C0F\u3055\u3044\u3082\u306E\u304B\
+    \u30892\u3064\u8FFD\u52A0\n        # \u51F8\u5305\u306E\u4E0A\u90E8\u3092\u5F62\
+    \u6210\n        for p in arr[2:]:\n            n = len(upper)\n            while\
+    \ n >= 2 and upper[-2].ccw(upper[-1], p) == 1:\n                upper.pop()\n\
+    \                n -= 1\n            upper.append(p)\n\n        lower = [arr[-1],\
+    \ arr[-2]]  # x\u304C\u5927\u304D\u3044\u3082\u306E\u304B\u3089\uFF12\u3064\u8FFD\
+    \u52A0\n        # \u51F8\u5305\u306E\u4E0B\u90E8\u3092\u5F62\u6210\n        for\
+    \ p in arr[::-1][2::]:\n            n = len(lower)\n            while n >= 2 and\
+    \ lower[-2].ccw(lower[-1], p) == 1:\n                lower.pop()\n           \
+    \     n -= 1\n            lower.append(p)\n        # \u6642\u8A08\u56DE\u308A\u306B\
+    \u306A\u308B\u3088\u3046\u306B\u51F8\u5305\u306E\u70B9\u306E\u5217\u3092\u5F62\
+    \u6210\n        res = upper[1:-1] + lower\n        return res[::-1]\n\n    def\
+    \ divide_by_segment(self, seg: Line) -> int:\n        lines = [Line(self.arr[i],\
+    \ self.arr[(i + 1) % self.n]) for i in range(self.n)]\n        cnt = sum(1 for\
+    \ line in lines if line.intersect(seg))\n        return cnt // 2 + 1\n"
   dependsOn: []
   isVerificationFile: false
   path: geometory/geometory.py
   requiredBy: []
-  timestamp: '2023-08-19 03:09:04+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_4_a_union_of_rectangles.test.py
-  - test/aoj/cgl_1_a_projection.test.py
   - test/aoj/cgl_2_a_parallel_orthogonal.test.py
-  - test/aoj/cgl_1_b_refrection.test.py
-  - test/aoj/cgl_1_c_counter_clockwise.test.py
-  - test/aoj/cgl_2_c_cross_point.test.py
-  - test/aoj/cgl_2_d_distance.test.py
   - test/aoj/cgl_2_b_intersection.test.py
+  - test/aoj/cgl_1_b_refrection.test.py
+  - test/aoj/dsl_4_a_union_of_rectangles.test.py
+  - test/aoj/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl_1_a_projection.test.py
+  - test/aoj/cgl_2_d_distance.test.py
+  - test/aoj/cgl_2_c_cross_point.test.py
 documentation_of: geometory/geometory.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

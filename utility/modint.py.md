@@ -47,3 +47,4 @@ layout: document
 title: modint
 ---
 
+遅いのでコンテストでは非推奨．

@@ -7,9 +7,6 @@ data:
     path: test/library_checker/matrix/matrix_det.test.py
     title: test/library_checker/matrix/matrix_det.test.py
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  - icon: ':heavy_check_mark:'
     path: test/library_checker/matrix/matrix_inverse.test.py
     title: test/library_checker/matrix/matrix_inverse.test.py
   - icon: ':heavy_check_mark:'
@@ -107,27 +104,17 @@ data:
     \ for _ in range(dim)]\n        for i in range(dim):\n            vecs[i][q[i]]\
     \ = 1\n        for i in range(dim):\n            vecs_i = vecs[i]\n          \
     \  for j in range(rank):\n                vecs_i[p[j]] = -aug[j][q[i]] % self.MOD\n\
-    \        return dim, sol, vecs\n\n\ndef determinant_arbitrary_mod(N, A, mod=998244353):\n\
-    \    \"\"\"\n    A\u306F\u6B63\u65B9\u884C\u5217\u3092\u8868\u30592\u6B21\u5143\
-    \u914D\u5217\n    A\u3092\u7834\u58CA\u7684\u5909\u66F4\u3059\u308B\u3053\u3068\
-    \u306B\u6CE8\u610F\n    \"\"\"\n    res = 1\n    for i in range(N):\n        for\
-    \ j in range(i + 1, N):\n            while A[j][i]:\n                tmp = A[i][i]\
-    \ // A[j][i]\n                if tmp:\n                    for k in range(i, N):\n\
-    \                        A[i][k] -= tmp * A[j][k]\n                        A[i][k]\
-    \ %= mod\n                A[i], A[j] = A[j], A[i]\n                res *= -1\n\
-    \                res %= mod\n        res *= A[i][i]\n        res %= mod\n    \
-    \    if not res:\n            break\n    return res\n"
+    \        return dim, sol, vecs\n"
   dependsOn: []
   isVerificationFile: false
   path: matrix/matrix.py
   requiredBy: []
-  timestamp: '2023-07-05 16:20:47+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/matrix/matrix_det.test.py
   - test/library_checker/matrix/matrix_product.test.py
   - test/library_checker/matrix/matrix_inverse.test.py
-  - test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
 documentation_of: matrix/matrix.py
 layout: document
 title: "\u884C\u5217"
@@ -162,7 +149,3 @@ $+$,$-$,$\times$　がサポートされている.
 ### `Mat.linear_equations(b)`
 
 行列$A$とベクトル$b$から,$Ax=b$となるベクトル$x$を求める.
-
-### `determinant_arbitrary_mod(N, A, m=998244353)`
-
-$N$行$N$列の正方行列$A$と非負整数$m$から行列式を$\mod m$で求める.

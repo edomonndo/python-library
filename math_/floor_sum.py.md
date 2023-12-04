@@ -15,10 +15,9 @@ data:
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "def floor_sum(n: int, m: int, a: int, b: int) -> int:\n    \"\"\"\n    Sum\
-    \ of (floor((A * i + B)/M) for i in range(N))\n    \"\"\"\n\n    res = 0\n   \
-    \ if a < 0:\n        a2 = a % m\n        return floor_sum(n, m, a2, b) - n * (n\
-    \ - 1) * ((a2 - a) // m) // 2\n    if b < 0:\n        b2 = b % m\n        return\
+  code: "def floor_sum(n: int, m: int, a: int, b: int) -> int:\n    res = 0\n    if\
+    \ a < 0:\n        a2 = a % m\n        return floor_sum(n, m, a2, b) - n * (n -\
+    \ 1) * ((a2 - a) // m) // 2\n    if b < 0:\n        b2 = b % m\n        return\
     \ floor_sum(n, m, a, b2) - n * ((b2 - b) // m)\n    if a >= m:\n        res +=\
     \ (n - 1) * n * (a // m) // 2\n        a %= m\n    if b >= m:\n        res +=\
     \ n * (b // m)\n        b %= m\n    y_max = (a * n + b) // m\n    x_max = y_max\
@@ -29,7 +28,7 @@ data:
   isVerificationFile: false
   path: math_/floor_sum.py
   requiredBy: []
-  timestamp: '2023-08-06 23:53:12+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/math/sum_of_floor_of_linear.test.py

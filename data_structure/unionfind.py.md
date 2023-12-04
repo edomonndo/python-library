@@ -53,8 +53,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/unionfind.test.py
-  - test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
   - test/aoj/dsl_1_a_union_find.test.py
+  - test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
 documentation_of: data_structure/unionfind.py
 layout: document
 title: Union Find

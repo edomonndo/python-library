@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl_1_c_counter_clockwise.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl_1_c_counter_clockwise.test.py
