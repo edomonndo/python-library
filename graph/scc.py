@@ -1,6 +1,7 @@
-def scc(N: int, M: int, edges: list[tuple[int, int]]) -> list[int]:
+def scc(N: int, edges: list[tuple[int, int]]) -> list[int]:
     start = [0] * (N + 1)
-    elist = [0] * M
+    m = len(edges)
+    elist = [0] * m
     for e in edges:
         start[e[0] + 1] += 1
     for i in range(1, N + 1):

@@ -32,7 +32,3 @@ $+$,$-$,$\times$　がサポートされている.
 ### `Mat.linear_equations(b)`
 
 行列$A$とベクトル$b$から,$Ax=b$となるベクトル$x$を求める.
-
-### `determinant_arbitrary_mod(N, A, m=998244353)`
-
-$N$行$N$列の正方行列$A$と非負整数$m$から行列式を$\mod m$で求める.

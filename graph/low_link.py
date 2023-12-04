@@ -4,13 +4,14 @@ sys.setrecursionlimit(10**5)
 
 
 def low_link(
-    N: int, G: list[list[int]], start: int = 0
+    G: list[list[int]], start: int = 0
 ) -> tuple[list[int], list[tuple[int, int]]]:
     INF = float("inf")
+    n = len(G)
     articulation = []
     bridge = []
-    order = [None] * N
-    low = [INF] * N
+    order = [None] * n
+    low = [INF] * n
 
     def _dfs(cur, pre, k):
         order[cur] = low[cur] = k

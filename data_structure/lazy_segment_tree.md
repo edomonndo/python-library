@@ -7,23 +7,69 @@ documentation_of: ./lazy_segment_tree.py
 
 ### 初期化
 
+#### 区間加算・区間最小値取得
 ```
-G = LazySegtree([0 for i in range(N)], func, ide_ele, mapping, composition, identity)
+inf=float("inf")
+mapping = lambda f,x: f + x
+composition = lambda f,g: f + g
+ID = 0
+G = LazySegtree(A, min, inf, mapping, composition, ID)
 ```
+
+#### 区間加算・区間最大値取得
+```
+inf=float("inf")
+mapping = lambda f,x: f + x
+composition = lambda f,g: f + g
+ID = 0
+G = LazySegtree(A, max, -inf, mapping, composition, ID)
+```
+#### 区間加算・区間和取得
+
+区間幅が必要なので値をタプルで持つ．`(value,size)`
+
+```
+mapping = lambda f,x: (x[0]+f*x[1], x[1])
+composition = lambda f,g: f + g
+ID = 0
+G = LazySegtree(A, lambda x,y:x+y, 0, mapping, composition, ID)
+```
+
+#### 区間変更・区間最小値取得
+```
+inf=float("inf")
+mapping = lambda f,x: x if f==ID else f
+composition = lambda f,g: g if f==ID else f
+ID = inf
+G = LazySegtree(A, min, inf, mapping, composition, ID)
+```
+
+#### 区間変更・区間最大値取得
+
+```
+inf=float("inf")
+mapping = lambda f,x: x if f==ID else f
+composition = lambda f,g: g if f==ID else f
+ID = inf
+G = LazySegtree(A, max, -inf, mapping, composition, ID)
+```
+
+#### 区間変更・区間和取得
+
+区間幅が必要なので値をタプルで持つ．`(value,size)`
+
+```
+inf=float("inf")
+mapping = lambda f,x: x if f==ID else (f*x[1], x[1])
+composition = lambda f,g: g if f==ID else f
+ID = inf
+G = LazySegtree(A, lambda x,y:x+y, 0, mapping, composition, ID)
+```
+
 ここで,最初のリストは初期値である.ここは全部 $0$ である必要はない.必要に応じて変えてもいい. 例えば, `A` だったり, `list(range(N))` だったりを入れる. また,`func`, `ide_ele` は演算と単位元である.この演算はモノイドであることが要求される. （注：モノイドとは,結合法則が成り立って,単位元が存在するような演算のことである.）`mapping`は，$F$
-の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `idneitty`は$F$における単位元である.
-
-以下は遅延セグ木に載せることのできる演算の例である.これはあくまで具体例なので他にもたくさんある. 
+の元である$f$と$G$の元である$x$に対して，$mapping(f,x)=f(x)$を返す関数である（ここで，$x$は区間であることに注意）. `composition`は，$F$の元である$f$,$g$を取ってきたときに，$composiiton(f,g)=f○g$という関数である． `ID`は$F$における単位元である.
 
 
-| 分類 | mapping | composition | ID | 補足 |
-| ---- | ---- | ---- | ---- | ---- | 
-| 区間加算・区間最小値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
-| 区間加算・区間最大値取得 | `lambda f,x: f + x` | `lambda f,g: f + g` | $0$ |  | 
-| 区間加算・区間和取得 | `lambda f,x: (x[0]+f*x[1], x[1])` | `lambda f, g: f+g` | $0$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` | 
-| 区間変更・区間最小値取得 | `lambda f,x: x if f==ID else f` | `lambda f,g: g if f==ID else f` | $INF$ |  | 
-| 区間変更・区間最大値取得 | `lambda f,x: x if f==ID else f` | `lambda f, g: g if f==ID else f` | $INF$ |  | 
-| 区間変更・区間和取得 | `lambda f,x: x if f==ID else (f*x[1], x[1])` | `lambda f, g: g if f==ID else f` | $INF$ | 区間幅が必要なので値をタプルで持つ．`(value,size)` |
 
 
 ### set
@@ -90,7 +136,7 @@ G.apply_point(p, f)
 ### apply
 
 ```
-G.apply_point(l, r, f)
+G.apply(l, r, f)
 ```
 
 区間更新. 区間$[l,r)$の要素$A_l, ..., A_{r-1}$を$f(A_l), ..., f(A_{r-1})$に変更する.

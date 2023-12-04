@@ -1,8 +1,4 @@
 def floor_sum(n: int, m: int, a: int, b: int) -> int:
-    """
-    Sum of (floor((A * i + B)/M) for i in range(N))
-    """
-
     res = 0
     if a < 0:
         a2 = a % m

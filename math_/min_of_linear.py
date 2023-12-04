@@ -1,25 +1,6 @@
 import math
 
 
-def min_of_linear(L: int, R: int, a: int, b: int, mod: int) -> tuple[int, int]:
-    """
-    min((ax + b) % mod for x in range(L,R))
-    """
-    n = R - L
-    b = (b + a * L) % mod
-    X, DX = _min_of_linear_segments(a, b, mod)
-    x = 0
-    for i in range(len(X) - 1):
-        xl, xr = X[i], X[i + 1]
-        if xr < n:
-            x = xr
-            continue
-        x = xl + ((n - 1 - x) // DX[i]) * DX[i]
-        break
-    y = (a * x + b) % mod
-    return L + x, y
-
-
 def _min_of_linear_segments(a: int, b: int, mod: int) -> tuple[list[int], list[int]]:
     """
     `ax + b (x>=0)` が最小となるところの情報を返す.
@@ -71,3 +52,19 @@ def _min_of_linear_segments(a: int, b: int, mod: int) -> tuple[list[int], list[i
         q += k * s
         # assert min(p, q, r, s) >= 0
     return X, DX
+
+
+def min_of_linear(L: int, R: int, a: int, b: int, mod: int) -> tuple[int, int]:
+    n = R - L
+    b = (b + a * L) % mod
+    X, DX = _min_of_linear_segments(a, b, mod)
+    x = 0
+    for i in range(len(X) - 1):
+        xl, xr = X[i], X[i + 1]
+        if xr < n:
+            x = xr
+            continue
+        x = xl + ((n - 1 - x) // DX[i]) * DX[i]
+        break
+    y = (a * x + b) % mod
+    return L + x, y

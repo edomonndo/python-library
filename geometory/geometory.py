@@ -186,7 +186,7 @@ class Line:
 
 
 class Circle:
-    def __init__(self, center: Point, radius):
+    def __init__(self, center: Point, radius: int):
         self.center = center
         self.r = radius
 
@@ -242,7 +242,7 @@ class Circle:
 
 
 class Rectangle:
-    def __init__(self, top_left, bottom_right):
+    def __init__(self, top_left: Point, bottom_right: Point):
         self.top_left = top_left
         self.bottom_right = bottom_right
 
@@ -317,7 +317,7 @@ class Rectangles:
 
 
 class Polygon:
-    def __init__(self, arr):
+    def __init__(self, arr: list[Point]):
         """
         配列arrは，多角形の隣り合った点を反時計回りに訪問する順番であること．
         """
@@ -376,3 +376,8 @@ class Polygon:
         # 時計回りになるように凸包の点の列を形成
         res = upper[1:-1] + lower
         return res[::-1]
+
+    def divide_by_segment(self, seg: Line) -> int:
+        lines = [Line(self.arr[i], self.arr[(i + 1) % self.n]) for i in range(self.n)]
+        cnt = sum(1 for line in lines if line.intersect(seg))
+        return cnt // 2 + 1

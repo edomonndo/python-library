@@ -52,27 +52,3 @@ class TrieTree:
     # キーをprefixに持つ単語が存在するかを検索
     def starts_with(self, key: str):
         return self.search(key, prefix=True)
-
-
-if __name__ == "__main__":
-    trie = TrieTree()
-    trie.insert("a")
-    trie.insert("to")
-    trie.insert("tea")
-    trie.insert("ted")
-    trie.insert("ten")
-    trie.insert("i")
-    trie.insert("in")
-    trie.insert("inn")
-    # (True, 1)
-    print(trie.search("a"))
-    # (False, 4)
-    print(trie.search("t"))
-    # (True, 1)
-    print(trie.search("ted"))
-    # (False, 0)
-    print(trie.search("tel"))
-    # (True, 2)
-    print(trie.search("in"))
-    # (True, 1)
-    print(trie.search("inn"))

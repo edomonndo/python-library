@@ -1,11 +1,12 @@
 import heapq
 
 
-def dijkstra(N: int, graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
+def dijkstra(graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
     INF = float("inf")
-    dist = [INF] * N
+    n = len(graph)
+    dist = [INF] * n
     dist[start] = 0
-    prev = [-1] * N
+    prev = [-1] * n
 
     que = [(0, start)]  # 距離,頂点
     while que:

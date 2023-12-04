@@ -1,13 +1,14 @@
-def bellmanFord(N: int, G: list[list[int]], start: int = 0):
+def bellmanFord(G: list[list[int]], start: int = 0):
     INF = float("inf")
-    dist = [INF] * N
-    pre = [-1] * N
+    n = len(G)
+    dist = [INF] * n
+    pre = [-1] * n
     dist[start] = 0
     loop = 0
-    for i in range(N):
+    for i in range(n):
         loop += 1
         updated = False
-        for u in range(N):
+        for u in range(n):
             if dist[u] == INF:
                 continue
             for w, v in G[u]:
@@ -18,6 +19,6 @@ def bellmanFord(N: int, G: list[list[int]], start: int = 0):
                     dist[v] = nd
         if not updated:
             break
-        if i == N - 1:
+        if i == n - 1:
             return -1, -1
     return dist, pre

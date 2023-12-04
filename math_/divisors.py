@@ -1,4 +1,4 @@
-def make_divisors(n: int):
+def make_divisors(n: int) -> list[int]:
     lower_divisors, upper_divisors = [], []
     i = 1
     while i * i <= n:
