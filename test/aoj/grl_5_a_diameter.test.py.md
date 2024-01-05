@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tree/diameter.py
     title: "\u6728\u306E\u76F4\u5F84"
   _extendedRequiredBy: []

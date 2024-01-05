@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/cartesian_tree.test.py
     title: test/library_checker/tree/cartesian_tree.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -25,7 +25,7 @@ data:
   path: tree/cartesian_tree.py
   requiredBy: []
   timestamp: '2023-07-23 01:42:59+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/tree/cartesian_tree.test.py
 documentation_of: tree/cartesian_tree.py

@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/aplusb
     links:
@@ -27,7 +27,7 @@ data:
   path: test/library_checker/sample/aplusb.test.py
   requiredBy: []
   timestamp: '2023-08-01 14:51:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/sample/aplusb.test.py
 layout: document

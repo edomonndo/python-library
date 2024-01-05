@@ -21,18 +21,34 @@ data:
     \ r <= self.n\n            ), \"0<=l<=r<=n,l={0},r={1},n={2}\".format(l, r, self.n)\n\
     \            return self.sum0(r) - self.sum0(l)\n\n        def sum0(self, r):\n\
     \            s = 0\n            while r > 0:\n                s += self.data[r\
-    \ - 1]\n                r -= r & -r\n            return s\n\n    def __init__(self,\
-    \ s: list[int], mod: int = 10**9 + 7, base: int = None):\n        if base is None:\n\
-    \            import random\n\n            base = random.randrange(2, mod)\n  \
-    \      n = len(s)\n        self.mod = mod\n        self.power = [1] * (n + 1)\n\
-    \        v = 1\n        for i in range(n):\n            v = v * base % mod\n \
-    \           self.power[i + 1] = v\n\n        self.hash = self.FenwickTree(n)\n\
-    \        self.value = [0] * n\n        for i in range(n):\n            v = self.power[i]\
-    \ * s[i] % self.mod\n            self.hash.add(i, v)\n            self.value[i]\
-    \ = v\n\n    def update(self, p: int, x: int):\n        v = self.power[p] * x\
-    \ % self.mod\n        self.hash.add(p, (-self.value[p] + v) % self.mod)\n    \
-    \    self.value[p] = v\n\n    def get(self, l, r):\n        return self.hash.sum(l,\
-    \ r) * self.power[-l - 1] % self.mod\n"
+    \ - 1]\n                r -= r & -r\n            return s\n\n    def __init__(\n\
+    \        self,\n        s: list[int],\n        L: int = 2,\n        mods: tuple[int]\
+    \ = (10**9 + 7, 10**9 + 9),\n        bases: tuple[int] = None,\n    ):\n     \
+    \   if bases is None:\n            import random\n\n            bases = [random.randrange(2,\
+    \ mod) for mod in mods]\n        self.n = n = len(s)\n        self.L = L\n   \
+    \     self.mods = mods\n        self.power = [[1] * (n + 1) for _ in range(L)]\n\
+    \        for i in range(L):\n            v = 1\n            for j in range(n):\n\
+    \                v = v * bases[i] % mods[i]\n                self.power[i][j +\
+    \ 1] = v\n\n        self.hashs = [self.FenwickTree(n) for _ in range(L)]\n   \
+    \     self.values = [[0] * n for _ in range(L)]\n        for i in range(L):\n\
+    \            for j in range(n):\n                v = self.power[i][j] * s[j] %\
+    \ self.mods[i]\n                self.hashs[i].add(j, v)\n                self.values[i][j]\
+    \ = v\n\n    def update(self, p: int, x: int):\n        for i in range(self.L):\n\
+    \            v = self.power[i][p] * x % self.mods[i]\n            self.hashs[i].add(p,\
+    \ (-self.values[i][p] + v) % self.mods[i])\n            self.values[i][p] = v\n\
+    \n    def get(self, l: int, r: int) -> tuple[int]:\n        res = []\n       \
+    \ for i in range(self.L):\n            res.append(self.hashs[i].sum(l, r) * self.power[i][-l\
+    \ - 1] % self.mods[i])\n        return tuple(res)\n\n    def connect(self, h1:\
+    \ int, h2: int, h2len: int) -> tuple[int]:\n        res = []\n        for i in\
+    \ range(self.L):\n            res.append((h1 * self.power[i][h2len] + h2) % self.mods[i])\n\
+    \        return tuple(res)\n\n    def lcp(self, l, r) -> int:\n        def _ok(length)\
+    \ -> bool:\n            d = dict()\n            for i in range(self.n - length\
+    \ + 1):\n                h = self.get(i, i + length)\n                if h in\
+    \ d:\n                    if (i - d[h]) >= length:\n                        return\
+    \ True\n                else:\n                    d[h] = i\n            return\
+    \ False\n\n        while (r - l) > 1:\n            m = (r + l) >> 1\n        \
+    \    if _ok(m):\n                l = m\n            else:\n                r =\
+    \ m\n        return l\n"
   dependsOn: []
   isVerificationFile: false
   path: string_/rolling_hash.py

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: matrix/matrix.py
     title: "\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_det
     links:
@@ -39,7 +39,7 @@ data:
   path: test/library_checker/matrix/matrix_det.test.py
   requiredBy: []
   timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/matrix/matrix_det.test.py
 layout: document

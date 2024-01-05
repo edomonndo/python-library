@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl_5_a_diameter.test.py
     title: test/aoj/grl_5_a_diameter.test.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/tree_diameter.test.py
     title: test/library_checker/tree/tree_diameter.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -35,10 +35,10 @@ data:
   path: tree/diameter.py
   requiredBy: []
   timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/library_checker/tree/tree_diameter.test.py
   - test/aoj/grl_5_a_diameter.test.py
+  - test/library_checker/tree/tree_diameter.test.py
 documentation_of: tree/diameter.py
 layout: document
 title: "\u6728\u306E\u76F4\u5F84"

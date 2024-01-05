@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: math_/floor_sum.py
     title: Floor sum
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/sum_of_floor_of_linear
     links:
@@ -27,7 +27,7 @@ data:
   path: test/library_checker/math/sum_of_floor_of_linear.test.py
   requiredBy: []
   timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/math/sum_of_floor_of_linear.test.py
 layout: document

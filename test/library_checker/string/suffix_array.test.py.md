@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: string_/suffix_array.py
     title: Suffix array
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/suffixarray
     links:
@@ -36,7 +36,7 @@ data:
   path: test/library_checker/string/suffix_array.test.py
   requiredBy: []
   timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/suffix_array.test.py
 layout: document
