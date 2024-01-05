@@ -24,30 +24,69 @@ class RollingHash:
                 r -= r & -r
             return s
 
-    def __init__(self, s: list[int], mod: int = 10**9 + 7, base: int = None):
-        if base is None:
+    def __init__(
+        self,
+        s: list[int],
+        L: int = 2,
+        mods: tuple[int] = (10**9 + 7, 10**9 + 9),
+        bases: tuple[int] = None,
+    ):
+        if bases is None:
             import random
 
-            base = random.randrange(2, mod)
-        n = len(s)
-        self.mod = mod
-        self.power = [1] * (n + 1)
-        v = 1
-        for i in range(n):
-            v = v * base % mod
-            self.power[i + 1] = v
+            bases = [random.randrange(2, mod) for mod in mods]
+        self.n = n = len(s)
+        self.L = L
+        self.mods = mods
+        self.power = [[1] * (n + 1) for _ in range(L)]
+        for i in range(L):
+            v = 1
+            for j in range(n):
+                v = v * bases[i] % mods[i]
+                self.power[i][j + 1] = v
 
-        self.hash = self.FenwickTree(n)
-        self.value = [0] * n
-        for i in range(n):
-            v = self.power[i] * s[i] % self.mod
-            self.hash.add(i, v)
-            self.value[i] = v
+        self.hashs = [self.FenwickTree(n) for _ in range(L)]
+        self.values = [[0] * n for _ in range(L)]
+        for i in range(L):
+            for j in range(n):
+                v = self.power[i][j] * s[j] % self.mods[i]
+                self.hashs[i].add(j, v)
+                self.values[i][j] = v
 
     def update(self, p: int, x: int):
-        v = self.power[p] * x % self.mod
-        self.hash.add(p, (-self.value[p] + v) % self.mod)
-        self.value[p] = v
+        for i in range(self.L):
+            v = self.power[i][p] * x % self.mods[i]
+            self.hashs[i].add(p, (-self.values[i][p] + v) % self.mods[i])
+            self.values[i][p] = v
 
-    def get(self, l, r):
-        return self.hash.sum(l, r) * self.power[-l - 1] % self.mod
+    def get(self, l: int, r: int) -> tuple[int]:
+        res = []
+        for i in range(self.L):
+            res.append(self.hashs[i].sum(l, r) * self.power[i][-l - 1] % self.mods[i])
+        return tuple(res)
+
+    def connect(self, h1: int, h2: int, h2len: int) -> tuple[int]:
+        res = []
+        for i in range(self.L):
+            res.append((h1 * self.power[i][h2len] + h2) % self.mods[i])
+        return tuple(res)
+
+    def lcp(self, l, r) -> int:
+        def _ok(length) -> bool:
+            d = dict()
+            for i in range(self.n - length + 1):
+                h = self.get(i, i + length)
+                if h in d:
+                    if (i - d[h]) >= length:
+                        return True
+                else:
+                    d[h] = i
+            return False
+
+        while (r - l) > 1:
+            m = (r + l) >> 1
+            if _ok(m):
+                l = m
+            else:
+                r = m
+        return l
