@@ -5,29 +5,27 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
-    links:
-    - https://judge.yosupo.jp/problem/many_aplusb
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/many_aplusb\n\
-    \nT = int(input())\nfor _ in range(T):\n    A, B = map(int, input().split())\n\
-    \    print(A + B)\n"
+  code: "def _ceil_pow2(n: int) -> int:\n    x = 0\n    while (1 << x) < n:\n    \
+    \    x += 1\n\n    return x\n\n\ndef _bsf(n: int) -> int:\n    x = 0\n    while\
+    \ n % 2 == 0:\n        x += 1\n        n //= 2\n\n    return x\n"
   dependsOn: []
-  isVerificationFile: true
-  path: test/library_checker/sample/many_aplusb.test.py
+  isVerificationFile: false
+  path: atcoder/_bit.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-02-05 08:23:41+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: test/library_checker/sample/many_aplusb.test.py
+documentation_of: atcoder/_bit.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/sample/many_aplusb.test.py
-- /verify/test/library_checker/sample/many_aplusb.test.py.html
-title: test/library_checker/sample/many_aplusb.test.py
+- /library/atcoder/_bit.py
+- /library/atcoder/_bit.py.html
+title: atcoder/_bit.py
 ---

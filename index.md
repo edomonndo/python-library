@@ -1,6 +1,59 @@
 ---
 data:
   libraryCategories:
+  - name: atcoder
+    pages:
+    - icon: ':warning:'
+      path: atcoder/__init__.py
+      title: atcoder/__init__.py
+    - icon: ':warning:'
+      path: atcoder/__main__.py
+      title: atcoder/__main__.py
+    - icon: ':warning:'
+      path: atcoder/_bit.py
+      title: atcoder/_bit.py
+    - icon: ':warning:'
+      path: atcoder/_math.py
+      title: atcoder/_math.py
+    - icon: ':warning:'
+      path: atcoder/_scc.py
+      title: atcoder/_scc.py
+    - icon: ':warning:'
+      path: atcoder/convolution.py
+      title: atcoder/convolution.py
+    - icon: ':warning:'
+      path: atcoder/dsu.py
+      title: atcoder/dsu.py
+    - icon: ':warning:'
+      path: atcoder/fenwicktree.py
+      title: atcoder/fenwicktree.py
+    - icon: ':warning:'
+      path: atcoder/lazysegtree.py
+      title: atcoder/lazysegtree.py
+    - icon: ':warning:'
+      path: atcoder/math.py
+      title: atcoder/math.py
+    - icon: ':warning:'
+      path: atcoder/maxflow.py
+      title: atcoder/maxflow.py
+    - icon: ':warning:'
+      path: atcoder/mincostflow.py
+      title: atcoder/mincostflow.py
+    - icon: ':warning:'
+      path: atcoder/modint.py
+      title: atcoder/modint.py
+    - icon: ':warning:'
+      path: atcoder/scc.py
+      title: atcoder/scc.py
+    - icon: ':warning:'
+      path: atcoder/segtree.py
+      title: atcoder/segtree.py
+    - icon: ':warning:'
+      path: atcoder/string.py
+      title: atcoder/string.py
+    - icon: ':warning:'
+      path: atcoder/twosat.py
+      title: atcoder/twosat.py
   - name: convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -54,6 +107,12 @@ data:
     - icon: ':warning:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
+    - icon: ':warning:'
+      path: data_structure/merge_sort_tree.py
+      title: Merge Sort Tree
+    - icon: ':warning:'
+      path: data_structure/mo.py
+      title: Mo's Algorithm
     - icon: ':warning:'
       path: data_structure/radix_heap.py
       title: data_structure/radix_heap.py
@@ -157,55 +216,55 @@ data:
     - icon: ':warning:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/floor_sum.py
       title: Floor sum
     - icon: ':warning:'
       path: math_/is_prime.py
       title: "\u7D20\u6570\u5224\u5B9A"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/min_of_linear.py
       title: Min of linear
     - icon: ':warning:'
       path: math_/sum_of_difference.py
       title: Sum of difference
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/two_sat.py
       title: 2 Sat
   - name: matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: matrix/determinant_arbitrary.py
       title: "\u884C\u5217\u5F0F"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: matrix/matrix.py
       title: "\u884C\u5217"
   - name: string_
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string_/manacher.py
       title: Manacher
     - icon: ':warning:'
       path: string_/rolling_hash.py
       title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string_/suffix_array.py
       title: Suffix array
     - icon: ':warning:'
       path: string_/trie_tree.py
       title: Trie tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: string_/z_algorithm.py
       title: Z algorithm
   - name: tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':warning:'
@@ -348,7 +407,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_b_tree_height.test.py
       title: test/aoj/grl_5_b_tree_height.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
       title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
     - icon: ':heavy_check_mark:'
@@ -427,63 +486,63 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/sum_of_floor_of_linear.test.py
       title: test/library_checker/math/sum_of_floor_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/two_sat.test.py
       title: test/library_checker/math/two_sat.test.py
   - name: test/library_checker/matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det.test.py
       title: test/library_checker/matrix/matrix_det.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_inverse.test.py
       title: test/library_checker/matrix/matrix_inverse.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_product.test.py
       title: test/library_checker/matrix/matrix_product.test.py
   - name: test/library_checker/sample
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/aplusb.test.py
       title: test/library_checker/sample/aplusb.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/many_aplusb.test.py
       title: test/library_checker/sample/many_aplusb.test.py
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/manacher.test.py
       title: test/library_checker/string/manacher.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree.test.py
       title: test/library_checker/tree/jump_on_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
@@ -491,10 +550,10 @@ data:
     - icon: ':x:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
 layout: toppage

@@ -1,17 +1,11 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
-  - icon: ':heavy_check_mark:'
-    path: tree/euler_tour.py
-    title: Euler tour
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
     links:
@@ -30,14 +24,12 @@ data:
     \    continue\n    l, r = et.into[u], et.into[v]\n    if l > r:\n        l, r\
     \ = r, l\n    _, lca = seg.prod(l, r)\n    if lca < 0:\n        print(et.parent[~lca])\n\
     \    else:\n        print(lca)\n"
-  dependsOn:
-  - tree/euler_tour.py
-  - data_structure/segment_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
   requiredBy: []
-  timestamp: '2023-08-26 01:45:36+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '1970-01-01 00:00:00+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_5_c_lowest_common_ancestor.test.py
 layout: document

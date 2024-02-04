@@ -5,29 +5,30 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/many_aplusb
-    links:
-    - https://judge.yosupo.jp/problem/many_aplusb
+    links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/many_aplusb\n\
-    \nT = int(input())\nfor _ in range(T):\n    A, B = map(int, input().split())\n\
-    \    print(A + B)\n"
+  code: '# Python port of AtCoder Library.
+
+
+    __version__ = ''0.0.1''
+
+    '
   dependsOn: []
-  isVerificationFile: true
-  path: test/library_checker/sample/many_aplusb.test.py
+  isVerificationFile: false
+  path: atcoder/__init__.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-02-05 08:23:41+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: test/library_checker/sample/many_aplusb.test.py
+documentation_of: atcoder/__init__.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/sample/many_aplusb.test.py
-- /verify/test/library_checker/sample/many_aplusb.test.py.html
-title: test/library_checker/sample/many_aplusb.test.py
+- /library/atcoder/__init__.py
+- /library/atcoder/__init__.py.html
+title: atcoder/__init__.py
 ---
