@@ -64,6 +64,7 @@
 "test/library_checker/tree/jump_on_tree.test.py": "1970-01-01 00:00:00 +0000",
 "test/library_checker/tree/lowest_common_ancestor.test.py": "1970-01-01 00:00:00 +0000",
 "test/library_checker/tree/tree_diameter.test.py": "2023-09-15 08:31:51 +0900",
+"test/unit_test/euler_tour.test.py": "1970-01-01 00:00:00 +0000",
 "test/unit_test/heavy_light_decomposition.test.py": "1970-01-01 00:00:00 +0000",
 "test/unit_test/wavelet_matrix.test.py": "1970-01-01 00:00:00 +0000"
 }
