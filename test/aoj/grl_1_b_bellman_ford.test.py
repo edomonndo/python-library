@@ -9,7 +9,7 @@ for _ in range(M):
     u, v, w = map(int, input().split())
     G[u].append((w, v))
 
-dist, _ = bellmanFord(N, G, r)
+dist, _ = bellmanFord(G, r)
 if dist == -1:
     print("NEGATIVE CYCLE")
     exit()

@@ -84,7 +84,7 @@ class EulerTour:
             self.ecost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.ecost_st)
 
         self.ecost_path_sum.set(self.into[v], w)
-        if self.out[v] < self.ecost_path_sum.n:
+        if self.out[v] < self.ecost_path_sum._n:
             self.ecost_path_sum.set(self.out[v], -w)
         self.ecost_subtree_sum.set(self.into[v], w)
 
@@ -96,7 +96,7 @@ class EulerTour:
             self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)
 
         self.vcost_path_sum.set(self.into[v], w)
-        if self.out[v] < self.vcost_path_sum.n:
+        if self.out[v] < self.vcost_path_sum._n:
             self.vcost_path_sum.set(self.out[v], -w)
         self.vcost_subtree_sum.set(self.into[v], w)
 

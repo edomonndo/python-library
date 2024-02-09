@@ -9,6 +9,6 @@ for _ in range(M):
     u, v, w = map(int, input().split())
     G[u].append((w, v))
 
-dist, _ = dijkstra(N, G, r)
+dist, _ = dijkstra(G, r)
 for i in range(N):
     print(dist[i] if dist[i] != INF else "INF")

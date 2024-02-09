@@ -1,4 +1,4 @@
-from persistent_array import PersistentArray
+from persistent_data_structure.persistent_array import PersistentArray
 
 
 class PersistentUnionFind:

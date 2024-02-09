@@ -10,5 +10,5 @@ for _ in range(M):
     G[u].append(v)
     deg[v] += 1
 
-ans = topological_sort(N, G, deg)
+ans = topological_sort(G, deg)
 print(1 if ans == -1 else 0)

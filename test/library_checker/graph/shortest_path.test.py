@@ -9,7 +9,7 @@ for _ in range(M):
     u, v, c = map(int, input().split())
     G[u].append((c, v))
 
-dist, prev = dijkstra(N, G, s)
+dist, prev = dijkstra(G, s)
 
 if dist[t] == INF:
     print(-1)

@@ -5,7 +5,7 @@ from graph.scc import scc
 N, M = map(int, input().split())
 edges = [tuple(map(int, input().split())) for _ in range(M)]
 
-groups = scc(N, M, edges)
+groups = scc(N, edges)
 group_id = [0] * N
 for i, group in enumerate(groups):
     for v in group:

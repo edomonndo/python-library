@@ -7,7 +7,7 @@ for _ in range(Q):
     t, *query = map(int, input().split())
     if t == 0:
         k, x = query
-        q.append(t, x)
+        q.append(k, x)
     else:
-        k = query[0]
-        print(q.popleft(t))
+        (k,) = query
+        print(q.popleft(k))

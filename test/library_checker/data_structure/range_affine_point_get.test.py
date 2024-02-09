@@ -36,7 +36,7 @@ for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 0:
         l, r, b, c = q
-        g.apaly(l, r, b << 30 | c)
+        g.apply(l, r, b << 30 | c)
     else:
         i = q[0]
         ab = g.get(i)

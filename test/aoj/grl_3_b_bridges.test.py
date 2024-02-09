@@ -9,7 +9,7 @@ for _ in range(M):
     G[u].append(v)
     G[v].append(u)
 
-_, ans = low_link(N, G)
+_, ans = low_link(G)
 ans.sort()
 for u, v in ans:
     print(u, v)

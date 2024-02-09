@@ -9,10 +9,10 @@ for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 0:
         l, r, b = q
-        g.range_ch_max(l, r, b)
+        g.range_chmin(l, r, b)
     elif t == 1:
         l, r, b = q
-        g.range_ch_min(l, r, b)
+        g.range_chmax(l, r, b)
     elif t == 2:
         l, r, b = q
         g.range_add(l, r, b)

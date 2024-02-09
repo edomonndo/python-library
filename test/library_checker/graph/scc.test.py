@@ -7,7 +7,7 @@ edges = [None] * M
 for i in range(M):
     edges[i] = tuple(map(int, input().split()))
 
-groups = scc(N, M, edges)
+groups = scc(N, edges)
 print(len(groups))
 for group in groups:
     print(len(group), *group)
