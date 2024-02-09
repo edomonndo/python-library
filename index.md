@@ -85,6 +85,9 @@ data:
     - icon: ':warning:'
       path: data_structure/SortedSet.py
       title: SortedSet
+    - icon: ':heavy_check_mark:'
+      path: data_structure/binary_trie.py
+      title: data_structure/binary_trie.py
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
@@ -92,7 +95,7 @@ data:
       path: data_structure/deque.py
       title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
         \u5408\u8A08\uFF09"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -101,7 +104,7 @@ data:
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':warning:'
@@ -122,6 +125,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    - icon: ':x:'
+      path: data_structure/segment_tree_beats.py
+      title: data_structure/segment_tree_beats.py
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
@@ -156,6 +162,9 @@ data:
     - icon: ':warning:'
       path: graph/bfs.py
       title: "\u5E45\u512A\u5148\u63A2\u7D22"
+    - icon: ':heavy_check_mark:'
+      path: graph/bipartite_matching.py
+      title: graph/bipartite_matching.py
     - icon: ':warning:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
@@ -163,6 +172,9 @@ data:
       path: graph/floyd_warshall.py
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
+    - icon: ':heavy_check_mark:'
+      path: graph/hungarian.py
+      title: graph/hungarian.py
     - icon: ':x:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
@@ -239,6 +251,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: matrix/matrix.py
       title: "\u884C\u5217"
+  - name: persistent_data_structure
+    pages:
+    - icon: ':warning:'
+      path: persistent_data_structure/persistent_array.py
+      title: persistent_data_structure/persistent_array.py
+    - icon: ':x:'
+      path: persistent_data_structure/persistent_queue.py
+      title: persistent_data_structure/persistent_queue.py
+    - icon: ':x:'
+      path: persistent_data_structure/persistent_union_find.py
+      title: persistent_data_structure/persistent_union_find.py
   - name: string_
     pages:
     - icon: ':heavy_check_mark:'
@@ -441,15 +464,36 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/persistent_queue.test.py
+      title: test/library_checker/data_structure/persistent_queue.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_unionfind.test.py
       title: test/library_checker/data_structure/persistent_unionfind.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/persistent_unionfind2.test.py
+      title: test/library_checker/data_structure/persistent_unionfind2.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.py
       title: test/library_checker/data_structure/point_add_range_sum.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/point_set_range_composite.test.py
+      title: test/library_checker/data_structure/point_set_range_composite.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_affine_point_get.test.py
+      title: test/library_checker/data_structure/range_affine_point_get.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_affine_range_sum.test.py
+      title: test/library_checker/data_structure/range_affine_range_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
+      title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/set_xor_min.test.py
+      title: test/library_checker/data_structure/set_xor_min.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.py
       title: test/library_checker/data_structure/static_range_frequency.test.py
@@ -462,6 +506,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.py
       title: test/library_checker/data_structure/unionfind.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/vertex_add_path_sum.test.py
+      title: test/library_checker/data_structure/vertex_add_path_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+      title: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
   - name: test/library_checker/geometory
     pages:
     - icon: ':heavy_check_mark:'
@@ -469,6 +519,12 @@ data:
       title: test/library_checker/geometory/sort_points_by_argument.test.py
   - name: test/library_checker/graph
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/assignment.test.py
+      title: test/library_checker/graph/assignment.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/bipartitematching.test.py
+      title: test/library_checker/graph/bipartitematching.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection.test.py
       title: test/library_checker/graph/cycle_detection.test.py
@@ -547,13 +603,13 @@ data:
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
 layout: toppage

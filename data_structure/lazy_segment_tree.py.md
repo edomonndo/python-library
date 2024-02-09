@@ -15,9 +15,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_2_i_range_update_sum_query.test.py
     title: test/aoj/dsl_2_i_range_update_sum_query.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/data_structure/range_affine_range_sum.test.py
+    title: test/library_checker/data_structure/range_affine_range_sum.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -96,12 +99,13 @@ data:
   path: data_structure/lazy_segment_tree.py
   requiredBy: []
   timestamp: '2023-08-10 00:04:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/aoj/dsl_2_g_range_add_sum_query.test.py
-  - test/aoj/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl_2_f_range_update_min_query.test.py
   - test/aoj/dsl_2_h_range_add_min_query.test.py
+  - test/aoj/dsl_2_i_range_update_sum_query.test.py
+  - test/aoj/dsl_2_g_range_add_sum_query.test.py
+  - test/library_checker/data_structure/range_affine_range_sum.test.py
 documentation_of: data_structure/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
