@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: persistent_data_structure/persistent_array.py
+    title: persistent_data_structure/persistent_array.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
@@ -15,11 +18,11 @@ data:
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from persistent_array import PersistentArray\n\n\nclass PersistentUnionFind:\n\
-    \    def __init__(self, n: int):\n        self.n = n\n        self.parent_or_size\
-    \ = PersistentArray(n, -1, False)\n\n    def leader(self, t: int, a) -> int:\n\
-    \        assert 0 <= a < self.n, \"0<=a<n,a={0},n={1}\".format(a, self.n)\n  \
-    \      cur = a\n        while True:\n            nxt = self.parent_or_size.get(t,\
+  code: "from persistent_data_structure.persistent_array import PersistentArray\n\n\
+    \nclass PersistentUnionFind:\n    def __init__(self, n: int):\n        self.n\
+    \ = n\n        self.parent_or_size = PersistentArray(n, -1, False)\n\n    def\
+    \ leader(self, t: int, a) -> int:\n        assert 0 <= a < self.n, \"0<=a<n,a={0},n={1}\"\
+    .format(a, self.n)\n        cur = a\n        while True:\n            nxt = self.parent_or_size.get(t,\
     \ cur)\n            if nxt < 0:\n                return cur\n            cur =\
     \ nxt\n\n    def same(self, t: int, a: int, b: int) -> bool:\n        assert 0\
     \ <= a < self.n, \"0<=a<n,a={0},n={1}\".format(a, self.n)\n        assert 0 <=\
@@ -33,11 +36,12 @@ data:
     \ x\n            px, py = py, px\n        self.parent_or_size.set(t, x, px + py)\n\
     \        self.parent_or_size.set(t, y, x)\n        return x\n\n    def update(self):\n\
     \        return self.parent_or_size.update()\n"
-  dependsOn: []
+  dependsOn:
+  - persistent_data_structure/persistent_array.py
   isVerificationFile: false
   path: persistent_data_structure/persistent_union_find.py
   requiredBy: []
-  timestamp: '2024-02-09 16:12:14+09:00'
+  timestamp: '2024-02-09 17:45:13+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/data_structure/persistent_unionfind2.test.py

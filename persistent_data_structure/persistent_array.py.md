@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: persistent_data_structure/persistent_union_find.py
+    title: persistent_data_structure/persistent_union_find.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -46,7 +49,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: persistent_data_structure/persistent_array.py
-  requiredBy: []
+  requiredBy:
+  - persistent_data_structure/persistent_union_find.py
   timestamp: '2024-02-09 16:12:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

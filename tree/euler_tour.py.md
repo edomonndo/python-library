@@ -49,13 +49,13 @@ data:
     \   self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)\n       \
     \ if self.ecost_subtree_sum is None:\n            self.ecost_subtree_sum = SegTree(lambda\
     \ u, v: u + v, 0, self.ecost_st)\n\n        self.ecost_path_sum.set(self.into[v],\
-    \ w)\n        if self.out[v] < self.ecost_path_sum.n:\n            self.ecost_path_sum.set(self.out[v],\
+    \ w)\n        if self.out[v] < self.ecost_path_sum._n:\n            self.ecost_path_sum.set(self.out[v],\
     \ -w)\n        self.ecost_subtree_sum.set(self.into[v], w)\n\n    def update_verticle(self,\
     \ v, w):\n        \"\"\"v\u306E\u91CD\u307F\u3092w\u306B\u66F4\u65B0\"\"\"\n \
     \       if self.vcost_path_sum is None:\n            self.vcost_path_sum = SegTree(lambda\
     \ u, v: u + v, 0, self.vcost)\n        if self.vcost_subtree_sum is None:\n  \
     \          self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)\n\
-    \n        self.vcost_path_sum.set(self.into[v], w)\n        if self.out[v] < self.vcost_path_sum.n:\n\
+    \n        self.vcost_path_sum.set(self.into[v], w)\n        if self.out[v] < self.vcost_path_sum._n:\n\
     \            self.vcost_path_sum.set(self.out[v], -w)\n        self.vcost_subtree_sum.set(self.into[v],\
     \ w)\n\n    def is_ancestor(self, u, v):\n        \"\"\"True if u is ancestor\
     \ of v.\"\"\"\n        return self.into[u] <= self.into[v] < self.out[u]\n\n \

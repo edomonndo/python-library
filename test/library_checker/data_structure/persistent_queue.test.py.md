@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: persistent_data_structure/persistent_queue.py
     title: persistent_data_structure/persistent_queue.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/persistent_queue
     links:
@@ -20,15 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/persistent_queue\n\
     from persistent_data_structure.persistent_queue import PersistentQueue\n\nQ =\
     \ int(input())\nq = PersistentQueue(Q)\nfor _ in range(Q):\n    t, *query = map(int,\
-    \ input().split())\n    if t == 0:\n        k, x = query\n        q.append(t,\
-    \ x)\n    else:\n        k = query[0]\n        print(q.popleft(t))\n"
+    \ input().split())\n    if t == 0:\n        k, x = query\n        q.append(k,\
+    \ x)\n    else:\n        (k,) = query\n        print(q.popleft(k))\n"
   dependsOn:
   - persistent_data_structure/persistent_queue.py
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_queue.test.py
   requiredBy: []
-  timestamp: '2024-02-09 16:12:14+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-09 17:45:13+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/persistent_queue.test.py
 layout: document

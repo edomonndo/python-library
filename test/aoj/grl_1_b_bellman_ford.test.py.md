@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/bellman_ford.py
     title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B
     links:
@@ -21,7 +21,7 @@ data:
     \nfrom graph.bellman_ford import bellmanFord\n\nINF = float(\"inf\")\nN, M, r\
     \ = map(int, input().split())\nG = [[] for _ in range(N)]\nfor _ in range(M):\n\
     \    u, v, w = map(int, input().split())\n    G[u].append((w, v))\n\ndist, _ =\
-    \ bellmanFord(N, G, r)\nif dist == -1:\n    print(\"NEGATIVE CYCLE\")\n    exit()\n\
+    \ bellmanFord(G, r)\nif dist == -1:\n    print(\"NEGATIVE CYCLE\")\n    exit()\n\
     \nfor d in dist:\n    if d == INF:\n        print(\"INF\")\n    else:\n      \
     \  print(d)\n"
   dependsOn:
@@ -29,8 +29,8 @@ data:
   isVerificationFile: true
   path: test/aoj/grl_1_b_bellman_ford.test.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-09 17:45:13+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_1_b_bellman_ford.test.py
 layout: document

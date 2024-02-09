@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_unionfind2.test.py
   requiredBy: []
-  timestamp: '2024-02-09 16:12:14+09:00'
+  timestamp: '2024-02-09 17:45:13+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/persistent_unionfind2.test.py

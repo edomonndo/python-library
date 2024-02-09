@@ -15,15 +15,11 @@ data:
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\n\
-    \nfrom tree.euler_tour import EulerTour\nfrom data_structure.segment_tree import\
-    \ Segtree\n\nN = int(input())\nG = [[] for _ in range(N)]\nfor i in range(N):\n\
-    \    k, *es = map(int, input().split())\n    for e in es:\n        G[i].append((1,\
-    \ e))\n        G[e].append((1, i))\n\net = EulerTour(N, G, 0, [0] * N)\nseg =\
-    \ Segtree(et.depth, min, (10**9, -1))\nQ = int(input())\nfor _ in range(Q):\n\
-    \    u, v = map(int, input().split())\n    if u == v:\n        print(u)\n    \
-    \    continue\n    l, r = et.into[u], et.into[v]\n    if l > r:\n        l, r\
-    \ = r, l\n    _, lca = seg.prod(l, r)\n    if lca < 0:\n        print(et.parent[~lca])\n\
-    \    else:\n        print(lca)\n"
+    \nfrom tree.euler_tour import EulerTour\n\nN = int(input())\nG = [[] for _ in\
+    \ range(N)]\nfor i in range(N):\n    k, *es = map(int, input().split())\n    for\
+    \ e in es:\n        G[i].append((1, e))\n        G[e].append((1, i))\n\net = EulerTour(G,\
+    \ 0, [0] * N)\nQ = int(input())\nfor _ in range(Q):\n    u, v = map(int, input().split())\n\
+    \    print(et.lca(u, v))\n"
   dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl_5_c_lowest_common_ancestor.test.py

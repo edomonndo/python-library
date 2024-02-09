@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/range_affine_range_sum
     links:
@@ -28,7 +28,7 @@ data:
     \ e << 30 | f\n\n\nN, Q = map(int, input().split())\nA = [int(x) for x in input().split()]\n\
     g = LazySegtree([(a << 30) | 1 for a in A], op, e, mapping, composition, ID)\n\
     for _ in range(Q):\n    t, *q = map(int, input().split())\n    if t == 0:\n  \
-    \      l, r, b, c = q\n        g.apaly(l, r, b << 30 | c)\n    else:\n       \
+    \      l, r, b, c = q\n        g.apply(l, r, b << 30 | c)\n    else:\n       \
     \ l, r = q\n        ab = g.prod(l, r)\n        a, b = ab >> 30, ab & mask\n  \
     \      print(a)\n"
   dependsOn:
@@ -36,8 +36,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/range_affine_range_sum.test.py
   requiredBy: []
-  timestamp: '2024-02-09 16:12:14+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-09 17:45:13+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_affine_range_sum.test.py
 layout: document

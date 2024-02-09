@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/scc
     links:
@@ -20,15 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/scc\n\nfrom\
     \ graph.scc import scc\n\nN, M = map(int, input().split())\nedges = [None] * M\n\
     for i in range(M):\n    edges[i] = tuple(map(int, input().split()))\n\ngroups\
-    \ = scc(N, M, edges)\nprint(len(groups))\nfor group in groups:\n    print(len(group),\
+    \ = scc(N, edges)\nprint(len(groups))\nfor group in groups:\n    print(len(group),\
     \ *group)\n"
   dependsOn:
   - graph/scc.py
   isVerificationFile: true
   path: test/library_checker/graph/scc.test.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-09 17:45:13+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc.test.py
 layout: document

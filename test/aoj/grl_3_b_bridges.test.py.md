@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_B
     links:
@@ -20,15 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_B\n\
     \nfrom graph.low_link import low_link\n\nN, M = map(int, input().split())\nG =\
     \ [[] for _ in range(N)]\nfor _ in range(M):\n    u, v = map(int, input().split())\n\
-    \    G[u].append(v)\n    G[v].append(u)\n\n_, ans = low_link(N, G)\nans.sort()\n\
+    \    G[u].append(v)\n    G[v].append(u)\n\n_, ans = low_link(G)\nans.sort()\n\
     for u, v in ans:\n    print(u, v)\n"
   dependsOn:
   - graph/low_link.py
   isVerificationFile: true
   path: test/aoj/grl_3_b_bridges.test.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-09 17:45:13+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_3_b_bridges.test.py
 layout: document
