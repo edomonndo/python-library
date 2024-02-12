@@ -21,13 +21,13 @@ data:
     \nfrom persistent_data_structure.persistent_union_find import PersistentUnionFind\n\
     \nN, Q = map(int, input().split())\nG = PersistentUnionFind(N)\nfor _ in range(Q):\n\
     \    t, k, u, v = map(int, input().split())\n    if t == 0:\n        G.merge(k,\
-    \ u, v)\n    else:\n        print(1 if G.same(k, u, v) else 0)\n"
+    \ u, v)\n    else:\n        print(1 if G.same(k, u, v) else 0)\n    G.update()\n"
   dependsOn:
   - persistent_data_structure/persistent_union_find.py
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_unionfind2.test.py
   requiredBy: []
-  timestamp: '2024-02-09 17:45:13+09:00'
+  timestamp: '2024-02-12 19:03:51+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/persistent_unionfind2.test.py
