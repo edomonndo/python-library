@@ -10,3 +10,4 @@ for _ in range(Q):
         G.merge(k, u, v)
     else:
         print(1 if G.same(k, u, v) else 0)
+    G.update()
