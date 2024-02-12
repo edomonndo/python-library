@@ -7,8 +7,8 @@ G = [[] for _ in range(N)]
 for i in range(N):
     k, *es = map(int, input().split())
     for e in es:
-        G[i].append((1, e))
-        G[e].append((1, i))
+        G[i].append((e, 1))
+        G[e].append((i, 1))
 
 et = EulerTour(G, 0, [0] * N)
 Q = int(input())

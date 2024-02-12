@@ -126,7 +126,7 @@ class EulerTour:
         if self.vcost_path_sum is None:
             self.vcost_path_sum = SegTree(lambda u, v: u + v, 0, self.vcost)
         if v == None:
-            return self.vcost_path_sum.prod(0, self.into[v] + 1)
+            return self.vcost_path_sum.prod(0, self.into[u] + 1)
 
         """Path Query2 頂点uから頂点vまでの頂点の値の和"""
         if self.depth_min is None:

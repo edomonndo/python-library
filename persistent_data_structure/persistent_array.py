@@ -33,7 +33,7 @@ class PersistentArray:
             else:
                 self.data.append(None)
             self.children.append(None)
-        self._update()
+        self.update()
 
     def get(self, t: int, p):
         assert -1 <= t <= self.last
