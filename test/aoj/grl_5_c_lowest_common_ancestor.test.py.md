@@ -3,9 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
     links:
@@ -17,7 +17,7 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C\n\
     \nfrom tree.euler_tour import EulerTour\n\nN = int(input())\nG = [[] for _ in\
     \ range(N)]\nfor i in range(N):\n    k, *es = map(int, input().split())\n    for\
-    \ e in es:\n        G[i].append((1, e))\n        G[e].append((1, i))\n\net = EulerTour(G,\
+    \ e in es:\n        G[i].append((e, 1))\n        G[e].append((i, 1))\n\net = EulerTour(G,\
     \ 0, [0] * N)\nQ = int(input())\nfor _ in range(Q):\n    u, v = map(int, input().split())\n\
     \    print(et.lca(u, v))\n"
   dependsOn: []
@@ -25,7 +25,7 @@ data:
   path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_5_c_lowest_common_ancestor.test.py
 layout: document

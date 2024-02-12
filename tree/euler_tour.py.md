@@ -74,7 +74,7 @@ data:
     \ \u6839\u304B\u3089\u9802\u70B9u\u307E\u3067\u306E\u9802\u70B9\u306E\u5024\u306E\
     \u548C\"\"\"\n        if self.vcost_path_sum is None:\n            self.vcost_path_sum\
     \ = SegTree(lambda u, v: u + v, 0, self.vcost)\n        if v == None:\n      \
-    \      return self.vcost_path_sum.prod(0, self.into[v] + 1)\n\n        \"\"\"\
+    \      return self.vcost_path_sum.prod(0, self.into[u] + 1)\n\n        \"\"\"\
     Path Query2 \u9802\u70B9u\u304B\u3089\u9802\u70B9v\u307E\u3067\u306E\u9802\u70B9\
     \u306E\u5024\u306E\u548C\"\"\"\n        if self.depth_min is None:\n\n       \
     \     def op(u, v):\n                return u if self.depth[u] <= self.depth[v]\

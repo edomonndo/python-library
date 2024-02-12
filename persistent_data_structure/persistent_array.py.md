@@ -30,7 +30,7 @@ data:
     \ += 64**d\n        for i in range(offset, offset + 64 * self.depth):\n      \
     \      if i - self.offset < self.n:\n                self.data.append(V[i - self.offset])\n\
     \            else:\n                self.data.append(None)\n            self.children.append(None)\n\
-    \        self._update()\n\n    def get(self, t: int, p):\n        assert -1 <=\
+    \        self.update()\n\n    def get(self, t: int, p):\n        assert -1 <=\
     \ t <= self.last\n        assert 0 <= p < self.n\n        v = self.roots[t + 1]\n\
     \        cur = p + self.offset\n        order = []\n        for _ in range(self.depth):\n\
     \            cur, r = divmod(cur - 1, 64)\n            order.append(r)\n     \
@@ -51,7 +51,7 @@ data:
   path: persistent_data_structure/persistent_array.py
   requiredBy:
   - persistent_data_structure/persistent_union_find.py
-  timestamp: '2024-02-09 16:12:14+09:00'
+  timestamp: '2024-02-12 09:54:39+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: persistent_data_structure/persistent_array.py

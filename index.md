@@ -281,6 +281,9 @@ data:
       title: Z algorithm
   - name: tree
     pages:
+    - icon: ':warning:'
+      path: tree/auxiliary_tree.py
+      title: Auxiliary tree
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
@@ -430,7 +433,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_b_tree_height.test.py
       title: test/aoj/grl_5_b_tree_height.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
       title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
     - icon: ':heavy_check_mark:'
@@ -603,7 +606,7 @@ data:
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
     - icon: ':heavy_check_mark:'

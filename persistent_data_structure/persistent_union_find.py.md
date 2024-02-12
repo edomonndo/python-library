@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: persistent_data_structure/persistent_union_find.py
   requiredBy: []
-  timestamp: '2024-02-09 17:45:13+09:00'
+  timestamp: '2024-02-12 09:54:39+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/data_structure/persistent_unionfind2.test.py
