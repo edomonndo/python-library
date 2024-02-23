@@ -59,9 +59,9 @@ data:
   timestamp: '2023-08-10 00:04:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/range_affine_point_get.test.py
   - test/aoj/dsl_2_d_range_update_query.test.py
   - test/aoj/dsl_2_e_range_add_query.test.py
-  - test/library_checker/data_structure/range_affine_point_get.test.py
 documentation_of: data_structure/dual_segment_tree.py
 layout: document
 title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"

@@ -110,6 +110,9 @@ data:
     - icon: ':warning:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
+    - icon: ':x:'
+      path: data_structure/link_cut_tree.py
+      title: data_structure/link_cut_tree.py
     - icon: ':warning:'
       path: data_structure/merge_sort_tree.py
       title: Merge Sort Tree
@@ -151,6 +154,9 @@ data:
     - icon: ':warning:'
       path: geometory/kd_tree.py
       title: KD tree
+    - icon: ':warning:'
+      path: geometory/manhattan_mst.py
+      title: geometory/manhattan_mst.py
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
@@ -238,6 +244,9 @@ data:
       path: math_/min_of_linear.py
       title: Min of linear
     - icon: ':warning:'
+      path: math_/stern_brocot_tree.py
+      title: Stern Brocot tree
+    - icon: ':warning:'
       path: math_/sum_of_difference.py
       title: Sum of difference
     - icon: ':heavy_check_mark:'
@@ -259,7 +268,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_queue.py
       title: persistent_data_structure/persistent_queue.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_union_find.py
       title: persistent_data_structure/persistent_union_find.py
   - name: string_
@@ -465,15 +474,24 @@ data:
       path: test/library_checker/data_structure/associative_array.test.py
       title: test/library_checker/data_structure/associative_array.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/deque_operate_all_composite.test.py
+      title: test/library_checker/data_structure/deque_operate_all_composite.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+      title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
+      title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_queue.test.py
       title: test/library_checker/data_structure/persistent_queue.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_unionfind.test.py
       title: test/library_checker/data_structure/persistent_unionfind.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_unionfind2.test.py
       title: test/library_checker/data_structure/persistent_unionfind2.test.py
     - icon: ':heavy_check_mark:'
@@ -482,6 +500,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_composite.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/queue_operate_all_composite.test.py
+      title: test/library_checker/data_structure/queue_operate_all_composite.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_affine_point_get.test.py
       title: test/library_checker/data_structure/range_affine_point_get.test.py
@@ -534,6 +555,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_undirected.test.py
       title: test/library_checker/graph/cycle_detection_undirected.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/manhattanmst.test.py
+      title: test/library_checker/graph/manhattanmst.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py

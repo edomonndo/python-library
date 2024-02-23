@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: geometory/manhattan_mst.py
+    title: geometory/manhattan_mst.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -77,7 +80,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/SortedSet.py
-  requiredBy: []
+  requiredBy:
+  - geometory/manhattan_mst.py
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

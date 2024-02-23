@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
     title: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/queue_operate_all_composite.test.py
+    title: test/library_checker/data_structure/queue_operate_all_composite.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -37,6 +40,7 @@ data:
   timestamp: '2023-08-07 21:41:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/queue_operate_all_composite.test.py
   - test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
 documentation_of: data_structure/FoldableQue.py
 layout: document
