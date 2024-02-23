@@ -23,16 +23,10 @@ class PersistentArray:
         for d in range(self.depth):
             for i in range(offset, offset + 64**d):
                 self.data.append(None)
-                self.children.append([0] * 64)
-                for j in range(64):
-                    self.children[i][j] = i * 64 + j + 1
+                self.children.append(list(range(i * 64 + 1, (i + 1) * 64 + 1)))
             offset += 64**d
-        for i in range(offset, offset + 64 * self.depth):
-            if i - self.offset < self.n:
-                self.data.append(V[i - self.offset])
-            else:
-                self.data.append(None)
-            self.children.append(None)
+        self.data.extend(V + [None] * (64**self.depth - self.n))
+        self.children.extend([None] * (64**self.depth))
         self.update()
 
     def get(self, t: int, p):
