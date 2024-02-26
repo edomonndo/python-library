@@ -110,7 +110,7 @@ data:
     - icon: ':warning:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/link_cut_tree.py
       title: data_structure/link_cut_tree.py
     - icon: ':warning:'
@@ -482,7 +482,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
     - icon: ':heavy_check_mark:'

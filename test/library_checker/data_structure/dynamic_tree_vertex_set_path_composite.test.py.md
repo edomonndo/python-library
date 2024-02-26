@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/link_cut_tree.py
     title: data_structure/link_cut_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite
     links:
@@ -28,15 +28,15 @@ data:
     \    if t == 0:\n        u, v, w, x = q\n        T.evert(u)\n        T.cut(v)\n\
     \        T.evert(w)\n        T.link(w, x)\n    elif t == 1:\n        p, c, d =\
     \ q\n        T.set(p, (c << 32) | d)\n    else:\n        u, v, x = q\n       \
-    \ c = T.query(u, v)\n        a, b = c >> 32, c & mask\n        ans.append((a *\
-    \ x + b) % MOD)\n\nprint(*ans, sep=\"\\n\")\n"
+    \ c = T.path_query(u, v)\n        a, b = c >> 32, c & mask\n        ans.append((a\
+    \ * x + b) % MOD)\n\nprint(*ans, sep=\"\\n\")\n"
   dependsOn:
   - data_structure/link_cut_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-02-26 12:20:09+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-26 13:00:46+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
 layout: document
