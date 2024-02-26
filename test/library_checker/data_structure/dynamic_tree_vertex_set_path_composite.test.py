@@ -34,7 +34,7 @@ for _ in range(Q):
         T.set(p, (c << 32) | d)
     else:
         u, v, x = q
-        c = T.query(u, v)
+        c = T.path_query(u, v)
         a, b = c >> 32, c & mask
         ans.append((a * x + b) % MOD)
 
