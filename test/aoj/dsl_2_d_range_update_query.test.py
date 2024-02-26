@@ -7,7 +7,7 @@ INF = (1 << 31) - 1
 A = [INF] * N
 ID = float("inf")
 G = DualSegtree(
-    A, min, INF, lambda f, x: x if f == ID else f, lambda f, g: g if f == ID else f, ID
+    A, lambda f, x: x if f == ID else f, lambda f, g: g if f == ID else f, ID
 )
 
 for _ in range(Q):

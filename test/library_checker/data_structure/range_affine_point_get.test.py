@@ -4,15 +4,7 @@ from data_structure.dual_segment_tree import DualSegtree
 
 MOD = 998244353
 mask = (1 << 30) - 1
-e = 0
 ID = 1 << 30
-
-
-def op(x, y):
-    a, b = x >> 30, x & mask
-    c, d = y >> 30, y & mask
-    e, f = a * c % MOD, (c * b + d) % MOD
-    return e << 30 | f
 
 
 def mapping(F, x):
@@ -31,7 +23,7 @@ def composition(F, G):
 
 N, Q = map(int, input().split())
 A = [int(x) for x in input().split()]
-g = DualSegtree([(a << 30) | 1 for a in A], op, e, mapping, composition, ID)
+g = DualSegtree([(a << 30) | 1 for a in A], mapping, composition, ID)
 for _ in range(Q):
     t, *q = map(int, input().split())
     if t == 0:

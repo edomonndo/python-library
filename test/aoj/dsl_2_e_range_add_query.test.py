@@ -4,8 +4,7 @@ from data_structure.dual_segment_tree import DualSegtree
 
 N, Q = map(int, input().split())
 A = [0] * N
-INF = float("inf")
-G = DualSegtree(A, min, INF, lambda f, x: f + x, lambda f, g: f + g, 0)
+G = DualSegtree(A, lambda f, x: f + x, lambda f, g: f + g, 0)
 
 for _ in range(Q):
     t, *q = map(int, input().split())
