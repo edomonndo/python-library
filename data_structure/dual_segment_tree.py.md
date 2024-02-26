@@ -21,15 +21,14 @@ data:
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "class DualSegtree:\n    def __init__(self, V, OP, E, MAPPING, COMPOSITION,\
-    \ ID):\n        self.n = len(V)\n        self.op = OP\n        self.e = E\n  \
-    \      self.log = (self.n - 1).bit_length()\n        self.size = 1 << self.log\n\
-    \        # \u533A\u9593[0,self.size)\u3092\u9045\u5EF6\u4F1D\u64AD\u7528\uFF0C\
-    \u533A\u9593[self.size, self.size + n)\u304C\u5B9F\u30C7\u30FC\u30BF\n       \
-    \ self.d = [ID for i in range(self.size)] + [E for i in range(self.size)]\n  \
-    \      for i in range(self.n):\n            self.d[self.size + i] = V[i]\n   \
-    \     # \u9045\u5EF6\u4F1D\u64AD\u7528\n        self.mapping = MAPPING\n     \
-    \   self.composition = COMPOSITION\n        self.identity = ID\n\n    def set(self,\
+  code: "class DualSegtree:\n    def __init__(self, V, MAPPING, COMPOSITION, ID):\n\
+    \        self.n = len(V)\n        self.log = (self.n - 1).bit_length()\n     \
+    \   self.size = 1 << self.log\n        # \u533A\u9593[0,self.size)\u3092\u9045\
+    \u5EF6\u4F1D\u64AD\u7528\uFF0C\u533A\u9593[self.size, self.size + n)\u304C\u5B9F\
+    \u30C7\u30FC\u30BF\n        self.d = [ID for i in range(2 * self.size)]\n    \
+    \    for i in range(self.n):\n            self.d[self.size + i] = V[i]\n     \
+    \   # \u9045\u5EF6\u4F1D\u64AD\u7528\n        self.mapping = MAPPING\n       \
+    \ self.composition = COMPOSITION\n        self.identity = ID\n\n    def set(self,\
     \ p, x):\n        assert 0 <= p and p < self.n\n        p += self.size\n     \
     \   # \u9045\u5EF6\u4F1D\u64AD\n        for i in range(self.log, 0, -1):\n   \
     \         self._push(p >> i)\n        self.d[p] = x\n\n    def get(self, p):\n\
@@ -42,21 +41,19 @@ data:
     \ r and r <= self.n\n        if l == r:\n            return\n        l += self.size\n\
     \        r += self.size\n        for i in range(self.log, 0, -1):\n          \
     \  if ((l >> i) << i) != l:\n                self._push(l >> i)\n            if\
-    \ ((r >> i) << i) != r:\n                self._push((r - 1) >> i)\n        l2,\
-    \ r2 = l, r\n        while l < r:\n            if l & 1:\n                self._all_apply(l,\
-    \ f)\n                l += 1\n            if r & 1:\n                r -= 1\n\
-    \                self._all_apply(r, f)\n            l >>= 1\n            r >>=\
-    \ 1\n        l, r = l2, r2\n\n    def _update(self, k):\n        self.d[k] = self.op(self.d[2\
-    \ * k], self.d[2 * k + 1])\n\n    def _all_apply(self, k, f):\n        if k <\
-    \ self.size:\n            self.d[k] = self.composition(f, self.d[k])\n       \
-    \ else:\n            self.d[k] = self.mapping(f, self.d[k])\n\n    def _push(self,\
-    \ k):\n        self._all_apply(2 * k, self.d[k])\n        self._all_apply(2 *\
-    \ k + 1, self.d[k])\n        self.d[k] = self.identity\n"
+    \ ((r >> i) << i) != r:\n                self._push((r - 1) >> i)\n        while\
+    \ l < r:\n            if l & 1:\n                self._all_apply(l, f)\n     \
+    \           l += 1\n            if r & 1:\n                r -= 1\n          \
+    \      self._all_apply(r, f)\n            l >>= 1\n            r >>= 1\n\n   \
+    \ def _all_apply(self, k, f):\n        if k < self.size:\n            self.d[k]\
+    \ = self.composition(f, self.d[k])\n        else:\n            self.d[k] = self.mapping(f,\
+    \ self.d[k])\n\n    def _push(self, k):\n        self._all_apply(2 * k, self.d[k])\n\
+    \        self._all_apply(2 * k + 1, self.d[k])\n        self.d[k] = self.identity\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/dual_segment_tree.py
   requiredBy: []
-  timestamp: '2023-08-10 00:04:04+09:00'
+  timestamp: '2024-02-26 12:20:09+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_affine_point_get.test.py

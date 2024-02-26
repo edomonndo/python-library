@@ -20,8 +20,8 @@ data:
   code: "# verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D\n\
     \nfrom data_structure.dual_segment_tree import DualSegtree\n\nN, Q = map(int,\
     \ input().split())\nINF = (1 << 31) - 1\nA = [INF] * N\nID = float(\"inf\")\n\
-    G = DualSegtree(\n    A, min, INF, lambda f, x: x if f == ID else f, lambda f,\
-    \ g: g if f == ID else f, ID\n)\n\nfor _ in range(Q):\n    t, *q = map(int, input().split())\n\
+    G = DualSegtree(\n    A, lambda f, x: x if f == ID else f, lambda f, g: g if f\
+    \ == ID else f, ID\n)\n\nfor _ in range(Q):\n    t, *q = map(int, input().split())\n\
     \    if t == 0:\n        s, t, x = q\n        G.apply(s, t + 1, x)\n    else:\n\
     \        x = q[0]\n        print(G.get(x))\n"
   dependsOn:
@@ -29,7 +29,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_2_d_range_update_query.test.py
   requiredBy: []
-  timestamp: '2023-08-19 03:09:04+09:00'
+  timestamp: '2024-02-26 12:20:09+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_d_range_update_query.test.py

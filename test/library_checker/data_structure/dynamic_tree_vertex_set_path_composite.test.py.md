@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/link_cut_tree.py
     title: data_structure/link_cut_tree.py
   _extendedRequiredBy: []
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-02-24 06:05:31+09:00'
+  timestamp: '2024-02-26 12:20:09+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py

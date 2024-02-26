@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/link_cut_tree.py
     title: data_structure/link_cut_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum
     links:
@@ -31,8 +31,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
   requiredBy: []
-  timestamp: '2024-02-24 06:05:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-02-26 12:20:09+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
 layout: document
