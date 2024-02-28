@@ -20,7 +20,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install dependencies
-      run: pip3 install -U online-judge-verify-helper importlab
+      run: pip3 install -U git+https://github.com/edomonndo/verification-helper.git
       
     - name: Run tests
       env:
