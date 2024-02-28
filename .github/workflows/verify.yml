@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         python-version:
-        - 'pypy3.10' # 一番AtCoder環境に近いバージョン
+        - 'pypy3.12' # 一番AtCoder環境に近いバージョン
     steps:
     - uses: actions/checkout@v4
       with:
@@ -27,5 +27,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
         GH_PAT: ${{ secrets.GH_PAT }}
+        DROPBOX_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
         PYTHONPATH: /home/runner/work/edomonndo/python-library
       run: oj-verify all --timeout 1200
