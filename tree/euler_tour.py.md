@@ -1,11 +1,26 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/segtree.py
+    title: atcoder/segtree.py
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
+    title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertex_add_path_sum.test.py
+    title: test/library_checker/data_structure/vertex_add_path_sum.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+    title: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/unit_test/euler_tour.test.py
+    title: test/unit_test/euler_tour.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -87,13 +102,18 @@ data:
     \u306E\u548C\"\"\"\n        if self.ecost_path_sum is None:\n            self.ecost_path_sum\
     \ = SegTree(lambda u, v: u + v, 0, self.ecost)\n\n        return self.ecost_path_sum.prod(0,\
     \ self.into[v] + 1)\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/segtree.py
   isVerificationFile: false
   path: tree/euler_tour.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2024-02-12 09:54:39+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+  - test/library_checker/data_structure/vertex_add_path_sum.test.py
+  - test/aoj/grl_5_c_lowest_common_ancestor.test.py
+  - test/unit_test/euler_tour.test.py
 documentation_of: tree/euler_tour.py
 layout: document
 title: Euler tour

@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: graph/topological_sort.py
+    title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -18,11 +21,12 @@ data:
     for _ in range(M):\n    u, v = map(int, input().split())\n    G[u].append(v)\n\
     \    deg[v] += 1\n\nans = topological_sort(N, G, deg)\nprint(*ans, sep=\"\\n\"\
     )\n"
-  dependsOn: []
+  dependsOn:
+  - graph/topological_sort.py
   isVerificationFile: true
   path: test/aoj/grl_4_b_topological_sort.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_4_b_topological_sort.test.py

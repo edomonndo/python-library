@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/mincost_arborescence.py
+    title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -29,11 +32,12 @@ data:
     print(MCA.calc_min_cost())
 
     '
-  dependsOn: []
+  dependsOn:
+  - graph/mincost_arborescence.py
   isVerificationFile: true
   path: test/aoj/grl_2_b_minimum_cost_arborescence.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-07 08:38:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_2_b_minimum_cost_arborescence.test.py

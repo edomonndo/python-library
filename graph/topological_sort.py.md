@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/grl_4_a_cycle_detection.test.py
+    title: test/aoj/grl_4_a_cycle_detection.test.py
+  - icon: ':x:'
+    path: test/aoj/grl_4_b_topological_sort.test.py
+    title: test/aoj/grl_4_b_topological_sort.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -22,9 +28,11 @@ data:
   isVerificationFile: false
   path: graph/topological_sort.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-12-04 22:53:06+09:00'
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - test/aoj/grl_4_b_topological_sort.test.py
+  - test/aoj/grl_4_a_cycle_detection.test.py
 documentation_of: graph/topological_sort.py
 layout: document
 title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"

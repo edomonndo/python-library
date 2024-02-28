@@ -1,11 +1,17 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: math_/is_prime.py
+    title: "\u7D20\u6570\u5224\u5B9A"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/math/factorize.test.py
+    title: test/library_checker/math/factorize.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -32,13 +38,15 @@ data:
     \ miller_rabin(n) and n > 1:\n        p = find_prime_factor(n)\n        s = 0\n\
     \        while n % p == 0:\n            n //= p\n            s += 1\n        res[p]\
     \ = s\n    if n > 1:\n        res[n] = 1\n    return res\n"
-  dependsOn: []
+  dependsOn:
+  - math_/is_prime.py
   isVerificationFile: false
   path: math_/factorize.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-09-15 08:31:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/math/factorize.test.py
 documentation_of: math_/factorize.py
 layout: document
 title: "\u7D20\u56E0\u6570\u5206\u89E3"

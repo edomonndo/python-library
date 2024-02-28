@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: math_/factorize.py
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -34,7 +37,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: math_/is_prime.py
-  requiredBy: []
+  requiredBy:
+  - math_/factorize.py
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

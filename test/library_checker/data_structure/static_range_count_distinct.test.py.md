@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/wavelet_matrix.py
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -22,11 +25,12 @@ data:
     B = Counter()\nfor i, a in enumerate(A):\n    A[i] = B[a]\n    B[a] = i + 1\n\n\
     WM = WaveletMatrix(A)\nfor _ in range(Q):\n    l, r = map(int, input().split())\n\
     \    print(WM.rangefreq_to(l, r, l + 1))\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/wavelet_matrix.py
   isVerificationFile: true
   path: test/library_checker/data_structure/static_range_count_distinct.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-28 11:58:42+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_range_count_distinct.test.py

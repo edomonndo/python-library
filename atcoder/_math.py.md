@@ -1,7 +1,16 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: atcoder/convolution.py
+    title: atcoder/convolution.py
+  - icon: ':warning:'
+    path: atcoder/math.py
+    title: atcoder/math.py
+  - icon: ':warning:'
+    path: atcoder/modint.py
+    title: atcoder/modint.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -43,8 +52,11 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: atcoder/_math.py
-  requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  requiredBy:
+  - atcoder/modint.py
+  - atcoder/convolution.py
+  - atcoder/math.py
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/_math.py

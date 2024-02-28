@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/maxflow.py
+    title: "\u6700\u5927\u30D5\u30ED\u30FC"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,11 +23,12 @@ data:
     \    G.add_edge(x, y + X, 1)\nfor i in range(N):\n    if i < X:\n        G.add_edge(N,\
     \ i, 1)\n    else:\n        G.add_edge(i, N + 1, 1)\n\nf = G.flow(N, N + 1)\n\
     print(f)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/maxflow.py
   isVerificationFile: true
   path: test/aoj/grl_7_a_bipartite_matching.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_7_a_bipartite_matching.test.py

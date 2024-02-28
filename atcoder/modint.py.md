@@ -1,7 +1,13 @@
 ---
 data:
-  _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_math.py
+    title: atcoder/_math.py
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: atcoder/convolution.py
+    title: atcoder/convolution.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -61,11 +67,13 @@ data:
     \ bool:  # type: ignore\n        if isinstance(rhs, Modint):\n            return\
     \ self._v != rhs._v\n        else:\n            return self._v != rhs\n\n\ndef\
     \ raw(v: int) -> Modint:\n    x = Modint()\n    x._v = v\n    return x\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_math.py
   isVerificationFile: false
   path: atcoder/modint.py
-  requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  requiredBy:
+  - atcoder/convolution.py
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/modint.py

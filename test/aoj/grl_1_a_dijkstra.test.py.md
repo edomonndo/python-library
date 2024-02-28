@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.py
+    title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     \ input().split())\nG = [[] for _ in range(N)]\nfor _ in range(M):\n    u, v,\
     \ w = map(int, input().split())\n    G[u].append((w, v))\n\ndist, _ = dijkstra(G,\
     \ r)\nfor i in range(N):\n    print(dist[i] if dist[i] != INF else \"INF\")\n"
-  dependsOn: []
+  dependsOn:
+  - graph/dijkstra.py
   isVerificationFile: true
   path: test/aoj/grl_1_a_dijkstra.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-09 17:45:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_1_a_dijkstra.test.py

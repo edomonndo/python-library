@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: tree/lca.py
+    title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     \ for _ in range(N)]\nfor _ in range(N - 1):\n    a, b = map(int, input().split())\n\
     \    G[a].append(b)\n    G[b].append(a)\n\nlca = LcaDoubling(N, G)\nfor _ in range(Q):\n\
     \    s, t, i = map(int, input().split())\n    print(lca.jump(s, t, i))\n"
-  dependsOn: []
+  dependsOn:
+  - tree/lca.py
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree.test.py

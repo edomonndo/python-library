@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/wavelet_matrix.py
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \nfrom data_structure.wavelet_matrix import WaveletMatrix\n\nN, L = map(int, input().split())\n\
     A = list(map(int, input().split()))\nWM = WaveletMatrix(A)\nans = []\nfor l in\
     \ range(N - L + 1):\n    ans.append(WM.quantile(l, l + L, 0))\nprint(*ans)\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/wavelet_matrix.py
   isVerificationFile: true
   path: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py

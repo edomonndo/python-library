@@ -1,7 +1,16 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: atcoder/convolution.py
+    title: atcoder/convolution.py
+  - icon: ':warning:'
+    path: atcoder/lazysegtree.py
+    title: atcoder/lazysegtree.py
+  - icon: ':warning:'
+    path: atcoder/segtree.py
+    title: atcoder/segtree.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -18,7 +27,10 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: atcoder/_bit.py
-  requiredBy: []
+  requiredBy:
+  - atcoder/lazysegtree.py
+  - atcoder/segtree.py
+  - atcoder/convolution.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

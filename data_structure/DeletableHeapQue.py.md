@@ -38,7 +38,7 @@ data:
   isVerificationFile: false
   path: data_structure/DeletableHeapQue.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/DeletableHeapQue.py

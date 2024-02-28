@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_scc.py
+    title: atcoder/_scc.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -25,11 +28,12 @@ data:
     \            if scc_id[2 * i] == scc_id[2 * i + 1]:\n                return False\n\
     \            self._answer[i] = scc_id[2 * i] < scc_id[2 * i + 1]\n        return\
     \ True\n\n    def answer(self) -> typing.List[bool]:\n        return self._answer\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_scc.py
   isVerificationFile: false
   path: atcoder/twosat.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/twosat.py

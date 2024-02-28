@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: tree/heavy_light_decomposition.py
+    title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -35,11 +38,12 @@ data:
     \ assert hld.path_ranges_e(0, 4) == [(1, 3), (4, 5)]\n    assert hld.subtree_range(4)\
     \ == (4, 5)\n    assert hld.subtree_range_e(4) == (5, 5)\n\n    print(\"Hello\
     \ World\")\n"
-  dependsOn: []
+  dependsOn:
+  - tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/unit_test/heavy_light_decomposition.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/heavy_light_decomposition.test.py

@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/wavelet_matrix.py
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -101,11 +104,12 @@ data:
     \          (l, r, x, y),\n                        greedy_nextvalue(l, r, x, y),\n\
     \                        WM.nextvalue(l, r, x, y),\n                    )\n\n\
     \    print(\"Hello World\")\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/wavelet_matrix.py
   isVerificationFile: true
   path: test/unit_test/wavelet_matrix.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/wavelet_matrix.test.py

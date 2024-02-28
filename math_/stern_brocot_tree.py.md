@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: math_/stern_brocot_tree.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-24 06:05:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math_/stern_brocot_tree.py

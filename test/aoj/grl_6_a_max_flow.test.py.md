@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/maxflow.py
+    title: "\u6700\u5927\u30D5\u30ED\u30FC"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \nfrom graph.maxflow import mf_graph\n\nN, M = map(int, input().split())\nG =\
     \ mf_graph(N)\nfor _ in range(M):\n    u, v, c = map(int, input().split())\n \
     \   G.add_edge(u, v, c)\n\nans = G.flow(0, N - 1)\nprint(ans)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/maxflow.py
   isVerificationFile: true
   path: test/aoj/grl_6_a_max_flow.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_6_a_max_flow.test.py

@@ -21,7 +21,7 @@ data:
     - icon: ':warning:'
       path: atcoder/convolution.py
       title: atcoder/convolution.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
     - icon: ':warning:'
@@ -137,7 +137,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
-    - icon: ':warning:'
+    - icon: ':question:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
@@ -151,10 +151,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/geometory.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: geometory/manhattan_mst.py
       title: geometory/manhattan_mst.py
     - icon: ':heavy_check_mark:'
@@ -171,7 +171,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
       title: graph/bipartite_matching.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':heavy_check_mark:'
@@ -184,19 +184,19 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/mincost_arborescence.py
       title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':warning:'
+    - icon: ':question:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: grid
@@ -231,7 +231,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: math_/ext_gcd.py
       title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -299,13 +299,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
     - icon: ':warning:'

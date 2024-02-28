@@ -1,6 +1,15 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_bit.py
+    title: atcoder/_bit.py
+  - icon: ':warning:'
+    path: atcoder/_math.py
+    title: atcoder/_math.py
+  - icon: ':warning:'
+    path: atcoder/modint.py
+    title: atcoder/modint.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -74,11 +83,14 @@ data:
     \    c = [0] * (n + m - 1)\n    for i in range(n + m - 1):\n        c[i] += (c1[i]\
     \ * i1) % mod1 * m2m3\n        c[i] += (c2[i] * i2) % mod2 * m1m3\n        c[i]\
     \ += (c3[i] * i3) % mod3 * m1m2\n        c[i] %= m1m2m3\n\n    return c\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_bit.py
+  - atcoder/_math.py
+  - atcoder/modint.py
   isVerificationFile: false
   path: atcoder/convolution.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/convolution.py

@@ -2,10 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+    title: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/range_kth_smallest.test.py
+    title: test/library_checker/data_structure/range_kth_smallest.test.py
+  - icon: ':x:'
+    path: test/library_checker/data_structure/static_range_count_distinct.test.py
+    title: test/library_checker/data_structure/static_range_count_distinct.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/static_range_frequency.test.py
+    title: test/library_checker/data_structure/static_range_frequency.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/unit_test/wavelet_matrix.test.py
+    title: test/unit_test/wavelet_matrix.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -181,9 +196,14 @@ data:
   isVerificationFile: false
   path: data_structure/wavelet_matrix.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-09-15 08:31:51+09:00'
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - test/library_checker/data_structure/static_range_frequency.test.py
+  - test/library_checker/data_structure/static_range_count_distinct.test.py
+  - test/library_checker/data_structure/range_kth_smallest.test.py
+  - test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+  - test/unit_test/wavelet_matrix.test.py
 documentation_of: data_structure/wavelet_matrix.py
 layout: document
 title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"

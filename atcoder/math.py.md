@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_math.py
+    title: atcoder/_math.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -39,11 +42,12 @@ data:
     \ b\n\n    if y_max == 0:\n        return ans\n\n    ans += (n - (x_max + a -\
     \ 1) // a) * y_max\n    ans += floor_sum(y_max, a, m, (a - x_max % a) % a)\n\n\
     \    return ans\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_math.py
   isVerificationFile: false
   path: atcoder/math.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/math.py

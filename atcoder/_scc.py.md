@@ -1,7 +1,13 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: atcoder/scc.py
+    title: atcoder/scc.py
+  - icon: ':warning:'
+    path: atcoder/twosat.py
+    title: atcoder/twosat.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -51,8 +57,10 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: atcoder/_scc.py
-  requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  requiredBy:
+  - atcoder/twosat.py
+  - atcoder/scc.py
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/_scc.py

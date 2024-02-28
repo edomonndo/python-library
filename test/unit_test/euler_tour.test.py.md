@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: tree/euler_tour.py
+    title: Euler tour
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -85,11 +88,12 @@ data:
     \ 15 + vdiff, et.path_verticle_sum(3)\n    assert et.path_verticle_sum(4) == 19,\
     \ et.path_verticle_sum(4)\n    assert et.path_verticle_sum(5) == 33, et.path_verticle_sum(5)\n\
     \n    print(\"Hello World\")\n"
-  dependsOn: []
+  dependsOn:
+  - tree/euler_tour.py
   isVerificationFile: true
   path: test/unit_test/euler_tour.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-12 09:54:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/euler_tour.test.py

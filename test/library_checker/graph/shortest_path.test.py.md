@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/dijkstra.py
+    title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -21,11 +24,12 @@ data:
     \ = dijkstra(G, s)\n\nif dist[t] == INF:\n    print(-1)\n    exit()\n\npath =\
     \ get_path(prev, s, t)\nprint(dist[t], len(path) - 1)\nfor i in range(len(path)\
     \ - 1):\n    print(path[i], path[i + 1])\n"
-  dependsOn: []
+  dependsOn:
+  - graph/dijkstra.py
   isVerificationFile: true
   path: test/library_checker/graph/shortest_path.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-09 17:45:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/shortest_path.test.py

@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/mincostflow.py
+    title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     G = mcf_graph(N)\nfor _ in range(M):\n    u, v, c, d = map(int, input().split())\n\
     \    G.add_edge(u, v, c, d)\n\nf, c = G.flow(0, N - 1, F)\nprint(c if f == F else\
     \ -1)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/mincostflow.py
   isVerificationFile: true
   path: test/aoj/grl_6_b_min_cost_flow.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-26 01:45:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_6_b_min_cost_flow.test.py

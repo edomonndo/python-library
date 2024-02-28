@@ -1,6 +1,12 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: atcoder/dsu.py
+    title: atcoder/dsu.py
+  - icon: ':heavy_check_mark:'
+    path: geometory/manhattan_mst.py
+    title: geometory/manhattan_mst.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -21,11 +27,13 @@ data:
     uf = DSU(n)\ntot = 0\nans = []\nfor w, x, y in mt.edges:\n    if uf.same(x, y):\n\
     \        continue\n    uf.merge(x, y)\n    tot += w\n    ans.append(f\"{x} {y}\"\
     )\nprint(tot)\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn: []
+  dependsOn:
+  - geometory/manhattan_mst.py
+  - atcoder/dsu.py
   isVerificationFile: true
   path: test/library_checker/graph/manhattanmst.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-24 06:05:31+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/manhattanmst.test.py

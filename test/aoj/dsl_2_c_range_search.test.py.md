@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: geometory/kd_tree.py
+    title: KD tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,11 +23,12 @@ data:
     for _ in range(Q):\n    sx, tx, sy, ty = map(int, input().split())\n    ans =\
     \ kd.query(sx, sy, tx, ty)\n    for id in sorted(ans):\n        print(id)\n  \
     \  print()\n"
-  dependsOn: []
+  dependsOn:
+  - geometory/kd_tree.py
   isVerificationFile: true
   path: test/aoj/dsl_2_c_range_search.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-19 03:09:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_2_c_range_search.test.py

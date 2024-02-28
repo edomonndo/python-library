@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/segtree.py
+    title: atcoder/segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -41,11 +44,12 @@ data:
     \ stack.pop()\n            if stack:\n                res[stack[-1]].append(v)\n\
     \            res[v] = []\n            stack.append(v)\n            p = v\n   \
     \     return root, res\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/segtree.py
   isVerificationFile: false
   path: tree/auxiliary_tree.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-12 09:54:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tree/auxiliary_tree.py

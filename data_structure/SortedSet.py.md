@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: geometory/manhattan_mst.py
     title: geometory/manhattan_mst.py
   _extendedVerifiedWith: []

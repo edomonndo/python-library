@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/unit_test/heavy_light_decomposition.test.py
+    title: test/unit_test/heavy_light_decomposition.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -99,8 +102,9 @@ data:
   path: tree/heavy_light_decomposition.py
   requiredBy: []
   timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/unit_test/heavy_light_decomposition.test.py
 documentation_of: tree/heavy_light_decomposition.py
 layout: document
 title: "HL\u5206\u89E3"

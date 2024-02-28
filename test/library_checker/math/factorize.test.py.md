@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: math_/factorize.py
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,11 +23,12 @@ data:
     \    factors = [i for i, j in sorted(x.items()) for _ in range(j)]\n    ans[i]\
     \ = \" \".join(map(str, [len(factors)] + factors))\n\nprint(*ans, sep=\"\\n\"\
     )\n"
-  dependsOn: []
+  dependsOn:
+  - math_/factorize.py
   isVerificationFile: true
   path: test/library_checker/math/factorize.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-08-01 14:51:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/math/factorize.test.py

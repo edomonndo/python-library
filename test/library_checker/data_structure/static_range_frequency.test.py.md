@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: data_structure/wavelet_matrix.py
+    title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     A = list(map(int, input().split()))\n\nWM = WaveletMatrix(A)\n\nfor _ in range(Q):\n\
     \    l, r, x = map(int, input().split())\n    print(WM.rangefreq(l, r, x, x +\
     \ 1))\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/wavelet_matrix.py
   isVerificationFile: true
   path: test/library_checker/data_structure/static_range_frequency.test.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_range_frequency.test.py

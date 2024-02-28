@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_bit.py
+    title: atcoder/_bit.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -92,11 +95,12 @@ data:
     \         self._lz[k] = self._composition(f, self._lz[k])\n\n    def _push(self,\
     \ k: int) -> None:\n        self._all_apply(2 * k, self._lz[k])\n        self._all_apply(2\
     \ * k + 1, self._lz[k])\n        self._lz[k] = self._id\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_bit.py
   isVerificationFile: false
   path: atcoder/lazysegtree.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/lazysegtree.py

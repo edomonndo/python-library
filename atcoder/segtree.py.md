@@ -1,7 +1,16 @@
 ---
 data:
-  _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_bit.py
+    title: atcoder/_bit.py
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: tree/auxiliary_tree.py
+    title: Auxiliary tree
+  - icon: ':heavy_check_mark:'
+    path: tree/euler_tour.py
+    title: Euler tour
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -56,11 +65,14 @@ data:
     \ 1\n                return right + 1 - self._size\n            sm = self._op(self._d[right],\
     \ sm)\n\n        return 0\n\n    def _update(self, k: int) -> None:\n        self._d[k]\
     \ = self._op(self._d[2 * k], self._d[2 * k + 1])\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_bit.py
   isVerificationFile: false
   path: atcoder/segtree.py
-  requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  requiredBy:
+  - tree/euler_tour.py
+  - tree/auxiliary_tree.py
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/segtree.py

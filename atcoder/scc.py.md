@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/_scc.py
+    title: atcoder/_scc.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \ = self._internal.num_vertices()\n        assert 0 <= from_vertex < n\n     \
     \   assert 0 <= to_vertex < n\n        self._internal.add_edge(from_vertex, to_vertex)\n\
     \n    def scc(self) -> typing.List[typing.List[int]]:\n        return self._internal.scc()\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/_scc.py
   isVerificationFile: false
   path: atcoder/scc.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/scc.py

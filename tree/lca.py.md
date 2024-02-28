@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/jump_on_tree.test.py
+    title: test/library_checker/tree/jump_on_tree.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/lowest_common_ancestor.test.py
+    title: test/library_checker/tree/lowest_common_ancestor.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -44,9 +50,11 @@ data:
   isVerificationFile: false
   path: tree/lca.py
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-09-15 08:31:51+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/tree/lowest_common_ancestor.test.py
+  - test/library_checker/tree/jump_on_tree.test.py
 documentation_of: tree/lca.py
 layout: document
 title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
