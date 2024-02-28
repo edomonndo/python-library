@@ -25,7 +25,7 @@ class Mo:
         self.state = state
 
     def add_query(self, l, r):
-        """(l, r]"""
+        """[l, r)"""
         self.qs.append((l, r))
         self.n_min = min(self.n_min, l)
         self.n_max = max(self.n_max, r)
