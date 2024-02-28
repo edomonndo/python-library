@@ -116,7 +116,7 @@ data:
     - icon: ':warning:'
       path: data_structure/merge_sort_tree.py
       title: Merge Sort Tree
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/mo.py
       title: Mo's Algorithm
     - icon: ':warning:'
@@ -460,6 +460,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/ntl_1_e_extended_euclidean.test.py
       title: test/aoj/ntl_1_e_extended_euclidean.test.py
+  - name: test/atcoder
+    pages:
+    - icon: ':x:'
+      path: test/atcoder/abc242g.test.py
+      title: test/atcoder/abc242g.test.py
+    - icon: ':x:'
+      path: test/atcoder/abc293g.test.py
+      title: test/atcoder/abc293g.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -518,6 +526,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_range_count_distinct.test.py
+      title: test/library_checker/data_structure/static_range_count_distinct.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.py
       title: test/library_checker/data_structure/static_range_frequency.test.py
