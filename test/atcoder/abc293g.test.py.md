@@ -10,14 +10,14 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://atcoder.jp/contests/abc293/tasks/abc293_g
+    IGNORE: https://atcoder.jp/contests/abc293/tasks/abc293_g
     links:
     - https://atcoder.jp/contests/abc293/tasks/abc293_g
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc293/tasks/abc293_g\n\
+  code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc293/tasks/abc293_g\n\
     \n\nfrom data_structure.mo import Mo\n\n\nclass MoState:\n    def __init__(self,\
     \ max_value):\n        self.cnt = [0] * (max_value + 1)\n        self.res = 0\n\
     \n    def add(self, x):\n        \"\u533A\u9593\u306E\u7AEF\u306B x \u3092\u8FFD\
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc293g.test.py
   requiredBy: []
-  timestamp: '2024-02-28 11:58:42+09:00'
+  timestamp: '2024-03-01 13:03:21+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/abc293g.test.py

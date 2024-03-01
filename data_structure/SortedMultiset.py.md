@@ -3,12 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/atcoder/abc342g.test.py
+    title: test/atcoder/abc342g.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/double-ended_priority_queue.test.py
     title: test/library_checker/data_structure/double-ended_priority_queue.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -82,9 +85,10 @@ data:
   path: data_structure/SortedMultiset.py
   requiredBy: []
   timestamp: '2023-09-15 09:38:49+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/data_structure/double-ended_priority_queue.test.py
+  - test/atcoder/abc342g.test.py
 documentation_of: data_structure/SortedMultiset.py
 layout: document
 title: SortedMultiset

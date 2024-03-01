@@ -79,7 +79,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/FoldableQue.py
       title: Foldable Queue(SWAG)
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/SortedMultiset.py
       title: SortedMultiset
     - icon: ':warning:'
@@ -98,6 +98,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
+    - icon: ':x:'
+      path: data_structure/dual_segment_tree_commutative.py
+      title: data_structure/dual_segment_tree_commutative.py
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
@@ -468,6 +471,9 @@ data:
     - icon: ':x:'
       path: test/atcoder/abc293g.test.py
       title: test/atcoder/abc293g.test.py
+    - icon: ':x:'
+      path: test/atcoder/abc342g.test.py
+      title: test/atcoder/abc342g.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'
