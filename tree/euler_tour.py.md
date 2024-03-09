@@ -110,9 +110,9 @@ data:
   timestamp: '2024-02-12 09:54:39+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/grl_5_c_lowest_common_ancestor.test.py
   - test/library_checker/data_structure/vertex_add_subtree_sum.test.py
   - test/library_checker/data_structure/vertex_add_path_sum.test.py
-  - test/aoj/grl_5_c_lowest_common_ancestor.test.py
   - test/unit_test/euler_tour.test.py
 documentation_of: tree/euler_tour.py
 layout: document

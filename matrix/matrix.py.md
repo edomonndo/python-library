@@ -112,9 +112,9 @@ data:
   timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/matrix/matrix_inverse.test.py
   - test/library_checker/matrix/matrix_det.test.py
   - test/library_checker/matrix/matrix_product.test.py
-  - test/library_checker/matrix/matrix_inverse.test.py
 documentation_of: matrix/matrix.py
 layout: document
 title: "\u884C\u5217"

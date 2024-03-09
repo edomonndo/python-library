@@ -95,6 +95,9 @@ data:
       path: data_structure/deque.py
       title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
         \u5408\u8A08\uFF09"
+    - icon: ':warning:'
+      path: data_structure/doubly_linked_list.py
+      title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: data_structure/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
@@ -279,6 +282,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: string_/manacher.py
       title: Manacher
+    - icon: ':warning:'
+      path: string_/overlap.py
+      title: "\u6587\u5B57\u5217\u9023\u7D50\u6642\u306E\u91CD\u8907"
     - icon: ':warning:'
       path: string_/rolling_hash.py
       title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"

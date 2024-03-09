@@ -199,10 +199,10 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/library_checker/data_structure/static_range_frequency.test.py
-  - test/library_checker/data_structure/static_range_count_distinct.test.py
-  - test/library_checker/data_structure/range_kth_smallest.test.py
   - test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
+  - test/library_checker/data_structure/range_kth_smallest.test.py
+  - test/library_checker/data_structure/static_range_count_distinct.test.py
+  - test/library_checker/data_structure/static_range_frequency.test.py
   - test/unit_test/wavelet_matrix.test.py
 documentation_of: data_structure/wavelet_matrix.py
 layout: document
