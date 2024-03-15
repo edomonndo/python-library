@@ -305,6 +305,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
+    - icon: ':x:'
+      path: tree/centroid_decomposition.py
+      title: "\u91CD\u5FC3\u5206\u89E3"
+    - icon: ':warning:'
+      path: tree/centroids.py
+      title: "\u91CD\u5FC3\u5224\u5B9A"
     - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
@@ -474,6 +480,9 @@ data:
     - icon: ':x:'
       path: test/atcoder/abc242g.test.py
       title: test/atcoder/abc242g.test.py
+    - icon: ':x:'
+      path: test/atcoder/abc291h.test.py
+      title: test/atcoder/abc291h.test.py
     - icon: ':x:'
       path: test/atcoder/abc293g.test.py
       title: test/atcoder/abc293g.test.py

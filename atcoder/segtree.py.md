@@ -70,8 +70,8 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - tree/euler_tour.py
   - tree/auxiliary_tree.py
+  - tree/euler_tour.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -53,8 +53,8 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/jump_on_tree.test.py
   - test/library_checker/tree/lowest_common_ancestor.test.py
+  - test/library_checker/tree/jump_on_tree.test.py
 documentation_of: tree/lca.py
 layout: document
 title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"

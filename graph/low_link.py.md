@@ -40,8 +40,8 @@ data:
   timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl_3_b_bridges.test.py
   - test/aoj/grl_3_a_articulation_points.test.py
+  - test/aoj/grl_3_b_bridges.test.py
 documentation_of: graph/low_link.py
 layout: document
 title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"

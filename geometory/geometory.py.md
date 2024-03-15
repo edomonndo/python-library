@@ -203,14 +203,14 @@ data:
   timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/cgl_1_b_refrection.test.py
-  - test/aoj/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl_2_a_parallel_orthogonal.test.py
   - test/aoj/cgl_1_a_projection.test.py
+  - test/aoj/cgl_1_b_refrection.test.py
+  - test/aoj/dsl_4_a_union_of_rectangles.test.py
+  - test/aoj/cgl_2_c_cross_point.test.py
   - test/aoj/cgl_2_b_intersection.test.py
   - test/aoj/cgl_2_d_distance.test.py
-  - test/aoj/cgl_2_a_parallel_orthogonal.test.py
-  - test/aoj/cgl_2_c_cross_point.test.py
-  - test/aoj/dsl_4_a_union_of_rectangles.test.py
+  - test/aoj/cgl_1_c_counter_clockwise.test.py
 documentation_of: geometory/geometory.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
