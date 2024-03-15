@@ -9,6 +9,9 @@ data:
   - icon: ':grey_question:'
     path: test/atcoder/abc035c.test.py
     title: test/atcoder/abc035c.test.py
+  - icon: ':grey_question:'
+    path: test/atcoder/abc341c.test.py
+    title: test/atcoder/abc341c.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
@@ -106,6 +109,7 @@ data:
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
+  - test/atcoder/abc341c.test.py
   - test/atcoder/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document

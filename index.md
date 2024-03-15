@@ -490,6 +490,9 @@ data:
       path: test/atcoder/abc293g.test.py
       title: test/atcoder/abc293g.test.py
     - icon: ':grey_question:'
+      path: test/atcoder/abc341c.test.py
+      title: test/atcoder/abc341c.test.py
+    - icon: ':grey_question:'
       path: test/atcoder/abc342g.test.py
       title: test/atcoder/abc342g.test.py
   - name: test/library_checker/convolution
