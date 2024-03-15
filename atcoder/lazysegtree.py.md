@@ -5,7 +5,10 @@ data:
     path: atcoder/_bit.py
     title: atcoder/_bit.py
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':grey_question:'
+    path: test/atcoder/abc035c.test.py
+    title: test/atcoder/abc035c.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
@@ -102,7 +105,8 @@ data:
   requiredBy: []
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verifiedWith:
+  - test/atcoder/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document
 redirect_from:

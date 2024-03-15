@@ -478,6 +478,9 @@ data:
   - name: test/atcoder
     pages:
     - icon: ':grey_question:'
+      path: test/atcoder/abc035c.test.py
+      title: test/atcoder/abc035c.test.py
+    - icon: ':grey_question:'
       path: test/atcoder/abc242g.test.py
       title: test/atcoder/abc242g.test.py
     - icon: ':grey_question:'

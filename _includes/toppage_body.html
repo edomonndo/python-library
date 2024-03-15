@@ -1,29 +1,35 @@
-<h2>Library Files</h2>
+<div class="container">
+    <div class="item">
+        <h2>Library Files</h2>
 
-{% for category in page.data.libraryCategories %}
-    <details>
-        <summary>{{ category.name }}</summary>
-        <ul>
-            {% for item in category.pages %}
-            <li><a href="{{ item.path | absolute_url }}">{{ item.icon }} {{ item.title }}
-                {% if item.title != item.path %}<small>({{ item.path }})</small>{% endif %}
-            </a></li>
-            {% endfor %}
-        </ul>
-    </details>
-{% endfor %}
+        {% for category in page.data.libraryCategories %}
+        <details>
+            <summary>{{ category.name }}</summary>
+            <ul>
+                {% for item in category.pages %}
+                <li><a href="{{ item.path | absolute_url }}">{{ item.icon }} {{ item.title }}
+                    {% if item.title != item.path %}<small>({{ item.path }})</small>{% endif %}
+                </a></li>
+                {% endfor %}
+            </ul>
+        </details>
+        {% endfor %}
+    </div>
 
-<h2>Verification Files</h2>
+    <div class="item">
+        <h2>Verification Files</h2>
 
-{% for category in page.data.verificationCategories %}
-    <details>
-        <summary>{{ category.name }}</summary>
-        <ul>
-            {% for item in category.pages %}
-            <li><a href="{{ item.path | absolute_url }}">{{ item.icon }} {{ item.title }}
-                {% if item.title != item.path %}<small>({{ item.path }})</small>{% endif %}
-            </a></li>
-            {% endfor %}
-        </ul>
-    </details>
-{% endfor %}
+        {% for category in page.data.verificationCategories %}
+        <details>
+            <summary>{{ category.name }}</summary>
+            <ul>
+                {% for item in category.pages %}
+                <li><a href="{{ item.path | absolute_url }}">{{ item.icon }} {{ item.title }}
+                    {% if item.title != item.path %}<small>({{ item.path }})</small>{% endif %}
+                </a></li>
+                {% endfor %}
+            </ul>
+        </details>
+        {% endfor %}
+    </div>
+</div>
