@@ -3,20 +3,20 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/abc342g.test.py
     title: test/atcoder/abc342g.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/double-ended_priority_queue.test.py
     title: test/library_checker/data_structure/double-ended_priority_queue.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import math\nimport bisect\n\n\nclass SortedMultiset:\n    BUCKET_RATIO =\
     \ 50\n    REBUILD_RATIO = 170\n\n    def _build(self, a=None) -> None:\n     \
@@ -85,7 +85,7 @@ data:
   path: data_structure/SortedMultiset.py
   requiredBy: []
   timestamp: '2023-09-15 09:38:49+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/double-ended_priority_queue.test.py
   - test/atcoder/abc342g.test.py

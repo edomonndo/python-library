@@ -1,21 +1,21 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/mo.py
     title: Mo's Algorithm
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
     IGNORE: https://atcoder.jp/contests/abc242/tasks/abc242_g
     links:
     - https://atcoder.jp/contests/abc242/tasks/abc242_g
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc242/tasks/abc242_g\n\
     \n\nfrom data_structure.mo import Mo\n\n\nclass MoState:\n    def __init__(self,\
@@ -36,7 +36,7 @@ data:
   path: test/atcoder/abc242g.test.py
   requiredBy: []
   timestamp: '2024-03-01 13:03:21+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc242g.test.py
 layout: document

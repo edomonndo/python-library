@@ -79,7 +79,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/FoldableQue.py
       title: Foldable Queue(SWAG)
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/SortedMultiset.py
       title: SortedMultiset
     - icon: ':warning:'
@@ -101,7 +101,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
-    - icon: ':x:'
+    - icon: ':warning:'
       path: data_structure/dual_segment_tree_commutative.py
       title: data_structure/dual_segment_tree_commutative.py
     - icon: ':heavy_check_mark:'
@@ -122,7 +122,7 @@ data:
     - icon: ':warning:'
       path: data_structure/merge_sort_tree.py
       title: Merge Sort Tree
-    - icon: ':x:'
+    - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
     - icon: ':warning:'
@@ -143,7 +143,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
@@ -202,7 +202,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: grid
@@ -305,7 +305,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
-    - icon: ':x:'
+    - icon: ':warning:'
       path: tree/centroid_decomposition.py
       title: "\u91CD\u5FC3\u5206\u89E3"
     - icon: ':warning:'
@@ -448,7 +448,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_4_a_cycle_detection.test.py
       title: test/aoj/grl_4_a_cycle_detection.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/aoj/grl_4_b_topological_sort.test.py
       title: test/aoj/grl_4_b_topological_sort.test.py
     - icon: ':heavy_check_mark:'
@@ -477,16 +477,16 @@ data:
       title: test/aoj/ntl_1_e_extended_euclidean.test.py
   - name: test/atcoder
     pages:
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc242g.test.py
       title: test/atcoder/abc242g.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc291h.test.py
       title: test/atcoder/abc291h.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc293g.test.py
       title: test/atcoder/abc293g.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc342g.test.py
       title: test/atcoder/abc342g.test.py
   - name: test/library_checker/convolution
@@ -547,7 +547,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/library_checker/data_structure/static_range_count_distinct.test.py
       title: test/library_checker/data_structure/static_range_count_distinct.test.py
     - icon: ':heavy_check_mark:'

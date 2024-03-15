@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_kth_smallest.test.py
     title: test/library_checker/data_structure/range_kth_smallest.test.py
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/library_checker/data_structure/static_range_count_distinct.test.py
     title: test/library_checker/data_structure/static_range_count_distinct.test.py
   - icon: ':heavy_check_mark:'
@@ -18,14 +18,14 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/unit_test/wavelet_matrix.test.py
     title: test/unit_test/wavelet_matrix.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import heapq\nfrom collections import deque\n\n\nclass BitVector:\n    #\
     \ \u7C21\u6F54\u30C7\u30FC\u30BF\u69CB\u9020\n    # B := \u9577\u3055n\u306E01\u5217\
@@ -197,7 +197,7 @@ data:
   path: data_structure/wavelet_matrix.py
   requiredBy: []
   timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
   - test/library_checker/data_structure/range_kth_smallest.test.py

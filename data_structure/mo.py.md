@@ -3,20 +3,20 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/abc242g.test.py
     title: test/atcoder/abc242g.test.py
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/abc293g.test.py
     title: test/atcoder/abc293g.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "class MoState:\n    def __init__(self, max_value):\n        self.cnt = [0]\
     \ * (max_value + 1)\n        self.res = 0\n\n    def add(self, x):\n        \"\
@@ -53,7 +53,7 @@ data:
   path: data_structure/mo.py
   requiredBy: []
   timestamp: '2024-02-28 11:58:42+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
   - test/atcoder/abc242g.test.py
   - test/atcoder/abc293g.test.py

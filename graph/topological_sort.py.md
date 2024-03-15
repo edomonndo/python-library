@@ -6,17 +6,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl_4_a_cycle_detection.test.py
     title: test/aoj/grl_4_a_cycle_detection.test.py
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/aoj/grl_4_b_topological_sort.test.py
     title: test/aoj/grl_4_b_topological_sort.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from collections import deque\n\n\ndef topological_sort(G, deg):\n    n =\
     \ len(G)\n    cands = [v for v in range(n) if deg[v] == 0]\n    ans = []\n   \
@@ -29,7 +29,7 @@ data:
   path: graph/topological_sort.py
   requiredBy: []
   timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl_4_a_cycle_detection.test.py
   - test/aoj/grl_4_b_topological_sort.test.py
