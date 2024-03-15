@@ -2,11 +2,11 @@
 #from itertools import permutations, combinations
 #from collections import defaultdict, deque
 #from math import gcd,lcm
-#from heapq import heapify, heappush, heappop
+#from heapq import *
 #from atcoder.dsu import DSU
 #from atcoder.segtree import SegTree
 import sys
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10**6)
 sys.set_int_max_str_digits(0)
 def ii(): return int(input())
 def mi(d=0): return map(lambda x:int(x)-d,input().split())
