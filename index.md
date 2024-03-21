@@ -149,6 +149,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
+  - name: embed_cpp
+    pages:
+    - icon: ':warning:'
+      path: embed_cpp/lazy_segtree_template.py
+      title: embed_cpp/lazy_segtree_template.py
   - name: geometory
     pages:
     - icon: ':warning:'
@@ -350,6 +355,14 @@ data:
       path: utility/permutations.py
       title: "\u9806\u5217"
   verificationCategories:
+  - name: embed_cpp
+    pages:
+    - icon: ':grey_question:'
+      path: embed_cpp/abc322f.test.py
+      title: embed_cpp/abc322f.test.py
+    - icon: ':grey_question:'
+      path: embed_cpp/practice2k.test.py
+      title: embed_cpp/practice2k.test.py
   - name: test/aoj
     pages:
     - icon: ':heavy_check_mark:'
