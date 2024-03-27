@@ -108,6 +108,12 @@ data:
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
     - icon: ':warning:'
+      path: data_structure/hu_tucker.py
+      title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
+    - icon: ':warning:'
+      path: data_structure/interval_manager.py
+      title: data_structure/interval_manager.py
+    - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
     - icon: ':heavy_check_mark:'
@@ -508,6 +514,9 @@ data:
     - icon: ':grey_question:'
       path: test/atcoder/abc342g.test.py
       title: test/atcoder/abc342g.test.py
+    - icon: ':grey_question:'
+      path: test/atcoder/past6m.test.py
+      title: test/atcoder/past6m.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'

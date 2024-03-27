@@ -43,8 +43,7 @@ $x \equiv b_1 \pmod {m_1}$
 $x \equiv b_2 \pmod {m_2}$  
 を満たす$x$が$0$以上$m_1m_2$未満にただ1つ存在する．特にそれを$r$とすると，  
 
-$x \equiv b_1 \pmod {m_1} ,   
-$x \equiv b_2 \pmod {m_2} \Leftrightarrow x \equiv r \pmod {m_1m_2}$  
+$x \equiv b_1 \pmod {m_1}, x \equiv b_2 \pmod {m_2} \Leftrightarrow x \equiv r \pmod {m_1m_2}$  
 が成立する．
 
 ## 使用例

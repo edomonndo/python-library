@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: data_structure/interval_manager.py
+    title: data_structure/interval_manager.py
   - icon: ':heavy_check_mark:'
     path: geometory/manhattan_mst.py
     title: geometory/manhattan_mst.py
@@ -82,6 +85,7 @@ data:
   path: data_structure/SortedSet.py
   requiredBy:
   - geometory/manhattan_mst.py
+  - data_structure/interval_manager.py
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
