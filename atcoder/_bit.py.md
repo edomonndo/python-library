@@ -28,9 +28,9 @@ data:
   isVerificationFile: false
   path: atcoder/_bit.py
   requiredBy:
+  - atcoder/segtree.py
   - atcoder/lazysegtree.py
   - atcoder/convolution.py
-  - atcoder/segtree.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

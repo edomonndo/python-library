@@ -56,8 +56,8 @@ data:
   timestamp: '2024-02-26 12:20:09+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_2_e_range_add_query.test.py
   - test/aoj/dsl_2_d_range_update_query.test.py
+  - test/aoj/dsl_2_e_range_add_query.test.py
   - test/library_checker/data_structure/range_affine_point_get.test.py
 documentation_of: data_structure/dual_segment_tree.py
 layout: document

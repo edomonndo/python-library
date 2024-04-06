@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl_1_b_bellman_ford.test.py
   requiredBy: []
-  timestamp: '2024-04-06 20:56:55+09:00'
+  timestamp: '2024-04-07 01:04:34+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_1_b_bellman_ford.test.py
