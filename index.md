@@ -179,7 +179,7 @@ data:
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - name: graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/bellman_ford.py
       title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
@@ -443,7 +443,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_1_a_dijkstra.test.py
       title: test/aoj/grl_1_a_dijkstra.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_1_b_bellman_ford.test.py
       title: test/aoj/grl_1_b_bellman_ford.test.py
     - icon: ':heavy_check_mark:'
