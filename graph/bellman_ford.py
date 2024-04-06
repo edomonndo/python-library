@@ -26,7 +26,6 @@ class BellmanFord:
     def solve(self, s: int) -> tuple[bool, list[int]]:
         n = self.n
         assert 0 <= s < n
-        assert 0 <= t < n
         rs = self._can_reach(self.adj, s)
         rt = self._can_reach(self.adj_rev, t)
         edges = [
