@@ -24,8 +24,8 @@ data:
     \      stack = [v]\n        while stack:\n            v = stack.pop()\n      \
     \      for u in adj[v]:\n                if not res[u]:\n                    res[u]\
     \ = True\n                    stack.append(u)\n        return res\n\n    def solve(self,\
-    \ s: int) -> tuple[bool, list[int]]:\n        n = self.n\n        assert 0 <=\
-    \ s < n\n        rs = self._can_reach(self.adj, s)\n        rt = self._can_reach(self.adj_rev,\
+    \ s: int, t: int) -> tuple[bool, list[int]]:\n        n = self.n\n        assert\
+    \ 0 <= s < n\n        rs = self._can_reach(self.adj, s)\n        rt = self._can_reach(self.adj_rev,\
     \ t)\n        edges = [\n            (u, v, w) for u, v, w in self.edges if rs[u]\
     \ and rt[u] and rs[v] and rt[v]\n        ]\n\n        inf = float(\"inf\")\n \
     \       dist = [inf] * n\n        dist[s] = 0\n        for i in range(n):\n  \
@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: graph/bellman_ford.py
   requiredBy: []
-  timestamp: '2024-04-07 01:04:34+09:00'
+  timestamp: '2024-04-07 15:13:04+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/aoj/grl_1_b_bellman_ford.test.py

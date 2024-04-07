@@ -20,15 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_B\n\
     \nfrom graph.bellman_ford import BellmanFord\n\ninf = float(\"inf\")\nn, m, r\
     \ = map(int, input().split())\ng = BellmanFord(n)\nfor _ in range(m):\n    u,\
-    \ v, w = map(int, input().split())\n    g.add_edge(u, v, w)\n\nf, dist = g.solve(0)\n\
-    if not f:\n    print(\"NEGATIVE CYCLE\")\n    exit()\n\nfor d in dist:\n    if\
-    \ d == inf:\n        print(\"INF\")\n    else:\n        print(d)\n"
+    \ v, w = map(int, input().split())\n    g.add_edge(u, v, w)\n\nf, dist = g.solve(0,\
+    \ n - 1)\nif not f:\n    print(\"NEGATIVE CYCLE\")\n    exit()\n\nfor d in dist:\n\
+    \    if d == inf:\n        print(\"INF\")\n    else:\n        print(d)\n"
   dependsOn:
   - graph/bellman_ford.py
   isVerificationFile: true
   path: test/aoj/grl_1_b_bellman_ford.test.py
   requiredBy: []
-  timestamp: '2024-04-07 01:04:34+09:00'
+  timestamp: '2024-04-07 15:13:04+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_1_b_bellman_ford.test.py

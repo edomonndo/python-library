@@ -346,6 +346,9 @@ data:
       path: utility/binary_search.py
       title: "\u4E8C\u5206\u6CD5"
     - icon: ':warning:'
+      path: utility/bitset.py
+      title: utility/bitset.py
+    - icon: ':warning:'
       path: utility/compress.py
       title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':warning:'
