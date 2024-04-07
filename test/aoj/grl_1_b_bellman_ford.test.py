@@ -9,7 +9,7 @@ for _ in range(m):
     u, v, w = map(int, input().split())
     g.add_edge(u, v, w)
 
-f, dist = g.solve(0)
+f, dist = g.solve(0, n - 1)
 if not f:
     print("NEGATIVE CYCLE")
     exit()

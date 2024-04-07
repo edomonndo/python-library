@@ -23,7 +23,7 @@ class BellmanFord:
                     stack.append(u)
         return res
 
-    def solve(self, s: int) -> tuple[bool, list[int]]:
+    def solve(self, s: int, t: int) -> tuple[bool, list[int]]:
         n = self.n
         assert 0 <= s < n
         rs = self._can_reach(self.adj, s)
