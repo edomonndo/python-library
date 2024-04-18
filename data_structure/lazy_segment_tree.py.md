@@ -101,8 +101,8 @@ data:
   timestamp: '2023-08-10 00:04:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl_2_h_range_add_min_query.test.py
+  - test/aoj/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl_2_g_range_add_sum_query.test.py
   - test/aoj/dsl_2_f_range_update_min_query.test.py
   - test/library_checker/data_structure/range_affine_range_sum.test.py

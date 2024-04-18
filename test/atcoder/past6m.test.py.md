@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/interval_manager.py
-    title: data_structure/interval_manager.py
+    title: "\u533A\u9593\u7BA1\u7406"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

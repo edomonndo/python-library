@@ -58,8 +58,8 @@ data:
   isVerificationFile: false
   path: atcoder/_scc.py
   requiredBy:
-  - atcoder/twosat.py
   - atcoder/scc.py
+  - atcoder/twosat.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

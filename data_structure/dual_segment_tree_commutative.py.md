@@ -40,8 +40,8 @@ data:
   - test/atcoder/abc342g.test.py
 documentation_of: data_structure/dual_segment_tree_commutative.py
 layout: document
-redirect_from:
-- /library/data_structure/dual_segment_tree_commutative.py
-- /library/data_structure/dual_segment_tree_commutative.py.html
-title: data_structure/dual_segment_tree_commutative.py
+title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual\
+  \ Segment Tree)"
 ---
+
+区間操作が可換な場合に遅延伝搬処理を省略し,定数倍高速化を図った双対セグ木.

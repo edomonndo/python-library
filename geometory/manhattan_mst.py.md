@@ -53,8 +53,6 @@ data:
   - test/library_checker/graph/manhattanmst.test.py
 documentation_of: geometory/manhattan_mst.py
 layout: document
-redirect_from:
-- /library/geometory/manhattan_mst.py
-- /library/geometory/manhattan_mst.py.html
-title: geometory/manhattan_mst.py
+title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\u57DF\
+  \u6728"
 ---

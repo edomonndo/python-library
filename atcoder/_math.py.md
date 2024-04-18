@@ -53,9 +53,9 @@ data:
   isVerificationFile: false
   path: atcoder/_math.py
   requiredBy:
-  - atcoder/math.py
-  - atcoder/modint.py
   - atcoder/convolution.py
+  - atcoder/modint.py
+  - atcoder/math.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

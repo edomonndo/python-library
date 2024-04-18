@@ -42,8 +42,5 @@ data:
   - test/library_checker/data_structure/persistent_queue.test.py
 documentation_of: persistent_data_structure/persistent_queue.py
 layout: document
-redirect_from:
-- /library/persistent_data_structure/persistent_queue.py
-- /library/persistent_data_structure/persistent_queue.py.html
-title: persistent_data_structure/persistent_queue.py
+title: "\u6C38\u7D9A\u30AD\u30E5\u30FC"
 ---

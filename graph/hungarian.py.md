@@ -69,8 +69,5 @@ data:
   - test/library_checker/graph/assignment.test.py
 documentation_of: graph/hungarian.py
 layout: document
-redirect_from:
-- /library/graph/hungarian.py
-- /library/graph/hungarian.py.html
-title: graph/hungarian.py
+title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
 ---

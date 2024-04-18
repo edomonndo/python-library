@@ -147,8 +147,5 @@ data:
   - test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
 documentation_of: data_structure/segment_tree_beats.py
 layout: document
-redirect_from:
-- /library/data_structure/segment_tree_beats.py
-- /library/data_structure/segment_tree_beats.py.html
-title: data_structure/segment_tree_beats.py
+title: Segment Tree Beats
 ---

@@ -87,7 +87,7 @@ data:
       title: SortedSet
     - icon: ':heavy_check_mark:'
       path: data_structure/binary_trie.py
-      title: data_structure/binary_trie.py
+      title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
@@ -103,7 +103,8 @@ data:
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
     - icon: ':warning:'
       path: data_structure/dual_segment_tree_commutative.py
-      title: data_structure/dual_segment_tree_commutative.py
+      title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+        \ (Dual Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree.py
       title: Fenwick Tree
@@ -112,7 +113,7 @@ data:
       title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
     - icon: ':warning:'
       path: data_structure/interval_manager.py
-      title: data_structure/interval_manager.py
+      title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
@@ -124,7 +125,7 @@ data:
       title: Li Chao Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/link_cut_tree.py
-      title: data_structure/link_cut_tree.py
+      title: Link Cut Tree
     - icon: ':warning:'
       path: data_structure/merge_sort_tree.py
       title: Merge Sort Tree
@@ -133,7 +134,7 @@ data:
       title: Mo's Algorithm
     - icon: ':warning:'
       path: data_structure/radix_heap.py
-      title: data_structure/radix_heap.py
+      title: Radix Heap
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
@@ -142,7 +143,7 @@ data:
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree_beats.py
-      title: data_structure/segment_tree_beats.py
+      title: Segment Tree Beats
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
@@ -173,13 +174,14 @@ data:
       title: KD tree
     - icon: ':heavy_check_mark:'
       path: geometory/manhattan_mst.py
-      title: geometory/manhattan_mst.py
+      title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
+        \u57DF\u6728"
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/bellman_ford.py
       title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
@@ -187,7 +189,7 @@ data:
       title: "\u5E45\u512A\u5148\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
-      title: graph/bipartite_matching.py
+      title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
@@ -197,7 +199,7 @@ data:
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
-      title: graph/hungarian.py
+      title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
     - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
@@ -281,13 +283,13 @@ data:
     pages:
     - icon: ':warning:'
       path: persistent_data_structure/persistent_array.py
-      title: persistent_data_structure/persistent_array.py
+      title: "\u6C38\u7D9A\u914D\u5217"
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_queue.py
-      title: persistent_data_structure/persistent_queue.py
+      title: "\u6C38\u7D9A\u30AD\u30E5\u30FC"
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_union_find.py
-      title: persistent_data_structure/persistent_union_find.py
+      title: "\u6C38\u7D9A Union Find"
   - name: string_
     pages:
     - icon: ':heavy_check_mark:'
@@ -347,7 +349,7 @@ data:
       title: "\u4E8C\u5206\u6CD5"
     - icon: ':warning:'
       path: utility/bitset.py
-      title: utility/bitset.py
+      title: Bitset
     - icon: ':warning:'
       path: utility/compress.py
       title: "\u5EA7\u6A19\u5727\u7E2E"
@@ -446,7 +448,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_1_a_dijkstra.test.py
       title: test/aoj/grl_1_a_dijkstra.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl_1_b_bellman_ford.test.py
       title: test/aoj/grl_1_b_bellman_ford.test.py
     - icon: ':heavy_check_mark:'
