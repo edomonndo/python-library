@@ -23,7 +23,8 @@ class BellmanFord:
                     stack.append(u)
         return res
 
-    def solve(self, s: int, t: int) -> tuple[bool, list[int]]:
+    def solve_spsp(self, s: int, t: int) -> tuple[bool, int]:
+        """Single-Pair Shortest Path"""
         n = self.n
         assert 0 <= s < n
         rs = self._can_reach(self.adj, s)
@@ -40,4 +41,21 @@ class BellmanFord:
                 if i == n - 1 and dist[v] > dist[u] + w:
                     return False, -1
                 dist[v] = min(dist[v], dist[u] + w)
-        return True, dist
+        return True, dist[t]
+
+    def solve_sssp(self, s: int) -> list[int] | int:
+        """Single-Source Shortest Path"""
+        n = self.n
+        assert 0 <= s < n
+        rs = self._can_reach(self.adj, s)
+        edges = [(u, v, w) for u, v, w in self.edges if rs[u] and rs[v]]
+
+        inf = float("inf")
+        dist = [inf] * n
+        dist[s] = 0
+        for i in range(n):
+            for u, v, w in edges:
+                if i == n - 1 and dist[v] > dist[u] + w:
+                    return -1
+                dist[v] = min(dist[v], dist[u] + w)
+        return dist
