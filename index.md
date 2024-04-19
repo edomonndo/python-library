@@ -135,6 +135,9 @@ data:
     - icon: ':warning:'
       path: data_structure/radix_heap.py
       title: Radix Heap
+    - icon: ':warning:'
+      path: data_structure/range_union_find.py
+      title: Range Union Find
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
@@ -147,6 +150,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
+    - icon: ':warning:'
+      path: data_structure/static_range_parallel_union_find.py
+      title: Static Range Parallel Union Find
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
