@@ -45,30 +45,22 @@ class EulerTour:
                 self.ecost_st.append(0)
                 self.out[v] = len(self.ET)
 
-        self.depth_min = None
-        self.vcost_subtree_sum = None
-        self.ecost_subtree_sum = None
-        self.vcost_path_sum = None
-        self.ecost_path_sum = None
+        self.depth_min = SegTree(
+            lambda u, v: u if self.depth[u] <= self.depth[v] else v, self.N, self.ET
+        )
+        self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)
+        self.ecost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.ecost_st)
+        self.vcost_path_sum = SegTree(lambda u, v: u + v, 0, self.vcost)
+        self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)
 
     def lca(self, u, v):
         """uとvの最近共通祖先"""
-        if self.depth_min is None:
-
-            def op(u, v):
-                return u if self.depth[u] <= self.depth[v] else v
-
-            self.depth_min = SegTree(op, self.N, self.ET)
-
         if self.into[u] > self.into[v]:
             u, v = v, u
         return self.depth_min.prod(self.into[u], self.out[v])
 
     def dist(self, u, v):
         """uとvの距離"""
-        if self.ecost_path_sum is None:
-            self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)
-
         a = self.lca(u, v)
         return (
             self.ecost_path_sum.prod(0, self.out[u])
@@ -78,27 +70,37 @@ class EulerTour:
 
     def update_parent_edge(self, v, w):
         """vとその親を繋ぐ辺の重みをwに更新"""
-        if self.ecost_path_sum is None:
-            self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)
-        if self.ecost_subtree_sum is None:
-            self.ecost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.ecost_st)
+        l, r = self.into[v], self.out[v]
+        self.ecost_path_sum.set(l, w)
+        if r < self.ecost_path_sum._n:
+            self.ecost_path_sum.set(r, -w)
+        self.ecost_subtree_sum.set(l, w)
 
-        self.ecost_path_sum.set(self.into[v], w)
-        if self.out[v] < self.ecost_path_sum._n:
-            self.ecost_path_sum.set(self.out[v], -w)
-        self.ecost_subtree_sum.set(self.into[v], w)
+    def add_parent_edge(self, v, w):
+        """vとその親を繋ぐ辺の重みにwを加算"""
+        l, r = self.into[v], self.out[v]
+        cur = self.ecost_path_sum.get(l)
+        self.ecost_path_sum.set(l, w + cur)
+        if r < self.ecost_path_sum._n:
+            self.ecost_path_sum.set(r, -(w + cur))
+        self.ecost_subtree_sum.set(l, w + self.ecost_subtree_sum.get(l))
 
     def update_verticle(self, v, w):
         """vの重みをwに更新"""
-        if self.vcost_path_sum is None:
-            self.vcost_path_sum = SegTree(lambda u, v: u + v, 0, self.vcost)
-        if self.vcost_subtree_sum is None:
-            self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)
+        l, r = self.into[v], self.out[v]
+        self.vcost_path_sum.set(l, w)
+        if r < self.vcost_path_sum._n:
+            self.vcost_path_sum.set(r, -w)
+        self.vcost_subtree_sum.set(l, w)
 
-        self.vcost_path_sum.set(self.into[v], w)
-        if self.out[v] < self.vcost_path_sum._n:
-            self.vcost_path_sum.set(self.out[v], -w)
-        self.vcost_subtree_sum.set(self.into[v], w)
+    def add_verticle(self, v, w):
+        """vの重みにwを加算"""
+        l, r = self.into[v], self.out[v]
+        cur = self.vcost_path_sum.get(l)
+        self.vcost_path_sum.set(l, w + cur)
+        if r < self.vcost_path_sum._n:
+            self.vcost_path_sum.set(r, -(w + cur))
+        self.vcost_subtree_sum.set(l, w + self.vcost_subtree_sum.get(l))
 
     def is_ancestor(self, u, v):
         """True if u is ancestor of v."""
@@ -106,35 +108,21 @@ class EulerTour:
 
     def subtree_verticle_sum(self, v):
         """Range Sum Query1 頂点vを根とする部分木の頂点の値の和"""
-        if self.vcost_subtree_sum is None:
-            self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)
-
         l, r = self.into[v], self.out[v]
         return self.vcost_subtree_sum.prod(l, r)
 
     def subtree_edge_sum(self, v):
         """Range Sum Query2 頂点vを根とする部分木の辺の値の和"""
-        if self.ecost_subtree_sum is None:
-            self.ecost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.ecost_st)
-
         l, r = self.into[v], self.out[v]
         # 頂点vから親への辺を除去するためにlを１つずらす
         return self.ecost_subtree_sum.prod(l + 1, r)
 
     def path_verticle_sum(self, u, v=None):
         """Path Query1 根から頂点uまでの頂点の値の和"""
-        if self.vcost_path_sum is None:
-            self.vcost_path_sum = SegTree(lambda u, v: u + v, 0, self.vcost)
         if v == None:
             return self.vcost_path_sum.prod(0, self.into[u] + 1)
 
         """Path Query2 頂点uから頂点vまでの頂点の値の和"""
-        if self.depth_min is None:
-
-            def op(u, v):
-                return u if self.depth[u] <= self.depth[v] else v
-
-            self.depth_min = SegTree(op, self.N, self.ET)
         a = self.lca(u, v)
         return (
             self.vcost_path_sum.prod(0, self.into[u] + 1)
@@ -145,7 +133,4 @@ class EulerTour:
 
     def path_edge_sum(self, v):
         """Path Query3 根から頂点vまでの辺の値の和"""
-        if self.ecost_path_sum is None:
-            self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)
-
         return self.ecost_path_sum.prod(0, self.into[v] + 1)
