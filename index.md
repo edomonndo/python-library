@@ -112,6 +112,9 @@ data:
       path: data_structure/hu_tucker.py
       title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
     - icon: ':warning:'
+      path: data_structure/implicit_treap.py
+      title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
+    - icon: ':warning:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
@@ -259,6 +262,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
+    - icon: ':warning:'
+      path: math_/factorize_linux.py
+      title: "\u7D20\u56E0\u6570\u5206\u89E3(Linux OS\u30B3\u30DE\u30F3\u30C9)"
     - icon: ':heavy_check_mark:'
       path: math_/floor_sum.py
       title: Floor sum

@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
   requiredBy: []
-  timestamp: '2024-02-12 09:54:39+09:00'
+  timestamp: '2024-04-24 11:17:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/vertex_add_subtree_sum.test.py

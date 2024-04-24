@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
   requiredBy: []
-  timestamp: '2024-02-26 12:20:09+09:00'
+  timestamp: '2024-04-24 11:17:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
