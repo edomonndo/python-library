@@ -3,11 +3,11 @@ title: 典型問題（足し上げ）
 documentation_of: ./typical_problems_of_sum.py
 ---
 
-制約: $1 \le N \le 2 \times 10^5, \quad 1 \le A_i \le 10^9$
+制約:$1 \le N \le 2 \times 10^5, \quad 1 \le A_i \le 10^9$
 
 $S_i := \displaystyle\sum^{i}_{j=1} A_jとする.$
-
-[1] $`\quad \displaystyle\sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i A_j `$
+---
+$\displaystyle\sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i A_j$
 
 $$
 \begin{align}
@@ -15,7 +15,8 @@ $$
 \end{align}
 $$
 
- [2] $`\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} \min (A_i, A_j)`$
+---
+$\displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} \min (A_i, A_j)$
 
 $A_i < A_j (i<j)$にソートし,昇順に寄与度を考える.
 
@@ -26,7 +27,8 @@ $$
 \end{align}
 $$
 
- [3] $`\quad \displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} A_i A_j A_k`$
+---
+$\displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} A_i A_j A_k$
 
 $$
 \begin{align}
@@ -38,7 +40,8 @@ $$
 \end{align}
 $$
 
- [4] $`\quad \displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} \min (A_i, A_j, A_k)`$
+---
+$\displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} \min (A_i, A_j, A_k)$
 
 $A_i < A_j < A_k \quad (i<j<k)$にソートし、昇順に寄与度を考える.
 
@@ -48,7 +51,8 @@ $$
 \end{align}
 $$
 
- [5] $`\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i \oplus A_j`$
+---
+$\displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i \oplus A_j$
 
 $A_{i,k}をA_iのkビット目とする.$
 $A_{1,k},A_{2,k},...,A_{i,k}のうち, cnt0_{i,k}, cnt1_{i,k}をそれぞれ0と1の数とする.$
@@ -64,9 +68,8 @@ $$
 \end{align}
 $$
 
-
-
- [6] $`$\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} (A_i - A_j)^2`$
+---
+$\displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} (A_i - A_j)^2$
 
 
 $$
@@ -78,7 +81,8 @@ $$
 \end{align}
 $$
 
- [7] $`\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} \lvert A_i - A_j \rvert`$
+---
+$\displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} \lvert A_i - A_j \rvert$
 
 数列を並べ替えても答えは変わらないため、昇順にソートして考える.
 
@@ -91,14 +95,17 @@ $$
 \end{align}
 $$
 
- [*] $`\quad 空でないAの部分列の和の総和`$
+---
+$空でないAの部分列の和の総和$
 
 TBD
 
- [*] $`\quad 空でないAの連続部分列の和の総和`$
+---
+$空でないAの連続部分列の和の総和$
 
 TBD
 
- [*] $`\quad 空でないAの部分列の積の総和(mod \space 998244353)`$
+---
+$空でないAの部分列の積の総和(mod \space 998244353)$
 
 TBD
