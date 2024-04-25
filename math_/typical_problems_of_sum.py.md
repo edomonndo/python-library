@@ -50,11 +50,11 @@ layout: document
 title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
 ---
 
-制約: $1 \le N \le 2 \times 10^5$, $1 \le A_i \le 10^9$
+制約: $1 \le N \le 2 \times 10^5, \quad 1 \le A_i \le 10^9$
 
 $S_i := \displaystyle\sum^{i}_{j=1} A_jとする.$
 
-$[1]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} A_iA_j$
+$\displaystyle [1]\quad \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i A_j$
 
 $$
 \begin{align}
@@ -69,7 +69,7 @@ $A_i < A_j (i<j)$にソートし,昇順に寄与度を考える.
 $$
 \begin{align}
 与式 &= \displaystyle\sum^{N-1}_{i=1} A_i ({N-i})
-&= \displaystyle\sum^{N}_{i=1} A_i ({N-i})
+= \displaystyle\sum^{N}_{i=1} A_i ({N-i})
 \end{align}
 $$
 
@@ -132,7 +132,8 @@ $[7]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} | A_i - A_j |$
 $$
 \begin{align}
 与式 &= \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} A_j - A_i \\
-&= \displaystyle\sum^{N-1}_{i=1} S_n - S_i - A_i(N-i)  &= \displaystyle\sum^{N}_{i=1} S_n - S_i - A_i(N-i)  \\
+&= \displaystyle\sum^{N-1}_{i=1} S_n - S_i - A_i(N-i)  \\
+&= \displaystyle\sum^{N}_{i=1} S_n - S_i - A_i(N-i)  \\
 &= \displaystyle NS_N - \sum^{N}_{i=1} S_i + A_i (N-i)  \\
 \end{align}
 $$
