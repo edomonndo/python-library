@@ -54,7 +54,7 @@ title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
 
 $S_i := \displaystyle\sum^{i}_{j=1} A_jとする.$
 
-$\displaystyle [1]\quad \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i A_j$
+[1] $\quad \displaystyle\sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i A_j$
 
 $$
 \begin{align}
@@ -62,7 +62,7 @@ $$
 \end{align}
 $$
 
-$[2]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} \min(A_i,A_j)$
+[2] $\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} \min (A_i, A_j)$
 
 $A_i < A_j (i<j)$にソートし,昇順に寄与度を考える.
 
@@ -73,7 +73,7 @@ $$
 \end{align}
 $$
 
-$[3]\quad \displaystyle\sum^{N-2}_{i=1}\sum^{N-1}_{j=i+1}\sum^{N}_{k=j+1} A_iA_jA_k$
+[3] $\quad \displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} A_i A_j A_k$
 
 $$
 \begin{align}
@@ -85,7 +85,7 @@ $$
 \end{align}
 $$
 
-$[4]\quad \displaystyle\sum^{N-2}_{i=1}\sum^{N-1}_{j=i+1}\sum^{N}_{k=j+1} \min(A_i,A_j,A_k)$
+[4] $\quad \displaystyle \sum^{N-2}_{i=1} \sum^{N-1}_{j=i+1} \sum^{N}_{k=j+1} \min (A_i, A_j, A_k)$
 
 $A_i < A_j < A_k \quad (i<j<k)$にソートし、昇順に寄与度を考える.
 
@@ -95,7 +95,7 @@ $$
 \end{align}
 $$
 
-$[5]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} A_i \oplus A_j$
+[5] $\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i \oplus A_j$
 
 $A_{i,k}をA_iのkビット目とする.$
 $A_{1,k},A_{2,k},...,A_{i,k}のうち, cnt0_{i,k}, cnt1_{i,k}をそれぞれ0と1の数とする.$
@@ -113,7 +113,7 @@ $$
 
 
 
-$[6]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} (A_i - A_j)^2$
+[6] $\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} (A_i - A_j)^2$
 
 
 $$
@@ -125,7 +125,7 @@ $$
 \end{align}
 $$
 
-$[7]\quad \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} | A_i - A_j |$
+[7] $\quad \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} |A_i - A_j|$
 
 数列を並べ替えても答えは変わらないため、昇順にソートして考える.
 
@@ -138,14 +138,14 @@ $$
 \end{align}
 $$
 
-$[*]\quad 空でないAの部分列の和の総和$
+[*] $\quad 空でないAの部分列の和の総和$
 
 TBD
 
-$[*]\quad 空でないAの連続部分列の和の総和$
+[*] $\quad 空でないAの連続部分列の和の総和$
 
 TBD
 
-$[*]\quad 空でないAの部分列の積の総和(mod \space 998244353)$
+[*] $\quad 空でないAの部分列の積の総和(mod \space 998244353)$
 
 TBD
