@@ -283,6 +283,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: math_/two_sat.py
       title: 2 Sat
+    - icon: ':heavy_check_mark:'
+      path: math_/typical_problems_of_sum.py
+      title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   - name: matrix
     pages:
     - icon: ':heavy_check_mark:'
@@ -713,6 +716,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/unit_test/typical_problems_of_sum.test.py
+      title: test/unit_test/typical_problems_of_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py

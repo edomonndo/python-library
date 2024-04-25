@@ -1,0 +1,134 @@
+---
+data:
+  _extendedDependsOn: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/unit_test/typical_problems_of_sum.test.py
+    title: test/unit_test/typical_problems_of_sum.test.py
+  _isVerificationFailed: false
+  _pathExtension: py
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    links: []
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
+  code: "def solve1(A):\n    n = len(A)\n    Sn = sum(A)\n    res = Si = 0\n    for\
+    \ i in range(n - 1):\n        Si += A[i]\n        res += A[i] * (Sn - Si)\n  \
+    \  return res\n\n\ndef solve2(A):\n    n = len(A)\n    res = 0\n    for i, a in\
+    \ enumerate(sorted(A), 1):\n        res += a * (n - i)\n    return res\n\n\ndef\
+    \ solve3(A):\n    n = len(A)\n    Sn1 = Tn1 = 0\n    for i in range(n - 1):\n\
+    \        Sn1 += A[i]\n        Tn1 += A[i] * Sn1\n    Sn = Sn1 + A[n - 1]\n   \
+    \ Si = Ti = 0\n    res = 0\n    for i in range(n - 2):\n        Si += A[i]\n \
+    \       Ti += A[i] * Si\n        res += A[i] * (Sn * (Sn1 - Si) - (Tn1 - Ti))\n\
+    \    return res\n\n\ndef solve4(A):\n    n = len(A)\n    res = 0\n    for i, a\
+    \ in enumerate(sorted(A), 1):\n        res += a * (n - i) * (n - 1 - i) // 2\n\
+    \    return res\n\n\ndef solve5(A):\n    n = len(A)\n    cnt = [0] * 31\n    for\
+    \ a in A:\n        for k in range(31):\n            if a >> k & 1:\n         \
+    \       cnt[k] += 1\n    res = 0\n    for i, a in enumerate(A, 1):\n        for\
+    \ k in range(31):\n            if a >> k & 1:\n                cnt[k] -= 1\n \
+    \               res += (n - i - cnt[k]) * (1 << k)\n            else:\n      \
+    \          res += cnt[k] * (1 << k)\n    return res\n\n\ndef solve6(A):\n    n\
+    \ = len(A)\n    Sn = sum(A)\n    Tn = sum(a**2 for a in A)\n    res = 0\n    Si\
+    \ = Ti = 0\n    for i, a in enumerate(A, 1):\n        Si += a\n        Ti += a**2\n\
+    \        res += a * a * (n - i) - 2 * a * (Sn - Si) + Tn - Ti\n    return res\n"
+  dependsOn: []
+  isVerificationFile: false
+  path: math_/typical_problems_of_sum.py
+  requiredBy: []
+  timestamp: '2024-04-25 14:26:08+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/unit_test/typical_problems_of_sum.test.py
+documentation_of: math_/typical_problems_of_sum.py
+layout: document
+title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
+---
+
+制約: $1 \le N \le 2 \times 10^5$, $1 \le {A_i} \le 10^9$
+
+${S_i} = \displaystyle\sum^{i}_{j=1} {A_j}とする.$
+
+#### 1. $\displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} {A_i}{A_j}$
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N-1}_{i=1} {A_i} \times ({S_N} - {S_i})
+\end{align}
+$$
+
+#### 2. $\displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} \min({A_i},{A_j})$
+
+${A_i} < {A_j} (i<j)$にソートし,昇順に寄与度を考える.
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N}_{i=1} {A_i} \times ({N-i})
+\end{align}
+$$
+
+#### 3. $\displaystyle\sum^{N-2}_{i=1}\sum^{N-1}_{j=i+1}\sum^{N}_{k=j+1} {A_i}{A_j}{A_k}$
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N-2}_{i=1}\sum^{N-1}_{j=i+1} {A_i}{A_j}({S_N-S_j}) \\
+&= \displaystyle\sum^{N-2}_{i=1} {A_i} \space ({S_N} \sum^{N-1}_{j=i+1} {A_j} - \sum^{N-1}_{j=i+1} {A_j}{S_j}) \\
+&= \displaystyle\sum^{N-2}_{i=1} {A_i} \space ({S_N} ({S_{N-1}} - {S_i})  - \sum^{N-1}_{j=i+1} {A_j}{S_j})\\
+&ここで, \displaystyle {T_i} = \sum^{i}_{j=1} {A_j}{S_j} とすると, \\
+&= \displaystyle\sum^{N-2}_{i=1} {A_i} \space ({S_N} ({S_{N-1}} - {S_i})  - ({T_{N-1} - T_i}))\\
+\end{align}
+$$
+
+#### 4. $\displaystyle\sum^{N-2}_{i=1}\sum^{N-1}_{j=i+1}\sum^{N}_{k=j+1} \min({A_i},{A_j},{A_k})$
+
+${A_i} < {A_j} < {A_k} (i<j<k)$にソートし、昇順に寄与度を考える.
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N}_{i=1} {A_i} \times \frac{(N-i)(N-1-i)}{2}
+\end{align}
+$$
+
+#### 5. $\displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} {A_i} \oplus {A_j}$
+
+${A_{i,k}}を{A_i}のkビット目とする. \space {A_{1,k}},{A_{2,k}},...,{A_{i,k}}のうち, {cnt0_{i,k}}, {cnt1_{i,k}}をそれぞれ0と1の数とする.$
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N-1}_{i=1} ({A_i} \oplus {A_{i+1}}) + ({A_i} \oplus {A_{i+2}}) + ... + ({A_i} \oplus {A_N}) \\
+&= \displaystyle\sum^{N-1}_{i=1}\sum^{}_{k=1}
+    \begin{cases}
+    2^{k-1} (cnt1_{N,k} - cnt1_{i,k}) \space {(A_{i,k} = 0)} \\
+    2^{k-1} (cnt0_{N,k} - cnt0_{i,k}) \space {(A_{i,k} = 1)} 
+    \end{cases}
+\end{align}
+$$
+
+
+
+#### 6. $\displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} ({A_i} - {A_j})^2$
+
+
+$$
+\begin{align}
+与式 &= \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} {A_i}^2 - 2{A_i}{A_j} + {A_j}^2 \\
+&= \displaystyle\sum^{N-1}_{i=1}\sum^{N}_{j=i+1} {A_i}^2 -  \sum^{N-1}_{i=1}\sum^{N}_{j=i+1} 2{A_i}{A_j} + \sum^{N-1}_{i=1}\sum^{N}_{j=i+1} {A_j}^2 \\
+&= \displaystyle\sum^{N-1}_{i=1} {A_i}^2 \times (N-i) -  2\sum^{N-1}_{i=1} {A_i} \sum^{N}_{j=i+1} {A_j} + \sum^{N-1}_{i=1}(\sum^{N}_{j=1} {A_j}^2 - \sum^{i}_{j=1} {A_j}^2) \\
+&ここで, \displaystyle {T_i} = \sum^{i}_{j=1} {A_j}^2とすると, \\
+&= \displaystyle\sum^{N-1}_{i=1} {A_i}^2 \times (N-i) -  2{A_i} ({S_N}-{S_i}) + {T_N} - {T_i} \\
+\end{align}
+$$
+
+#### 7. $空でないAの部分列の和の総和$
+
+TBD
+
+#### 8. $空でないAの連続部分列の和の総和$
+
+TBD
+
+#### ９. $空でないAの部分列の積の総和(mod \space 998244353)$
+
+TBD
