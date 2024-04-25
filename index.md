@@ -277,9 +277,6 @@ data:
     - icon: ':warning:'
       path: math_/stern_brocot_tree.py
       title: Stern Brocot tree
-    - icon: ':warning:'
-      path: math_/sum_of_difference.py
-      title: Sum of difference
     - icon: ':heavy_check_mark:'
       path: math_/two_sat.py
       title: 2 Sat
