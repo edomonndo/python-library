@@ -69,3 +69,14 @@ def solve6(A):
         Ti += a**2
         res += a * a * (n - i) - 2 * a * (Sn - Si) + Tn - Ti
     return res
+
+
+def solve7(A):
+    n = len(A)
+    Sn = sum(A)
+    res = n * Sn
+    Si = 0
+    for i, a in enumerate(sorted(A), 1):
+        Si += a
+        res -= Si + a * (n - i)
+    return res

@@ -57,6 +57,15 @@ def greedy6(A):
     return res
 
 
+def greedy7(A):
+    n = len(A)
+    res = 0
+    for i in range(n - 1):
+        for j in range(i + 1, n):
+            res += abs(A[i] - A[j])
+    return res
+
+
 if __name__ == "__main__":
     from pathlib import Path
     import sys
@@ -76,5 +85,6 @@ if __name__ == "__main__":
         assert greedy4(A) == solve4(A)
         assert greedy5(A) == solve5(A)
         assert greedy6(A) == solve6(A)
+        assert greedy7(A) == solve7(A)
 
     print("Hello World")
