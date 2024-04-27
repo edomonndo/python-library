@@ -1,3 +1,3 @@
 alias submit='acc s main.py -- --guess-python-interpreter pypy'
 alias test='oj t -c "python3 main.py" -d tests/'
-alias debug='python3 main.py <'
+alias debug='python3 main.py < '
