@@ -53,6 +53,7 @@ $$
 ## 5. 2項の排他的論理和
 
 $A_{i,k}をA_iのkビット目とする.$
+
 $A_{1,k},A_{2,k},...,A_{i,k}のうち, cnt0_{i,k}, cnt1_{i,k}をそれぞれ0と1の数とする.$
 
 $$
@@ -60,8 +61,8 @@ $$
 \displaystyle \sum^{N-1}_{i=1} \sum^{N}_{j=i+1} A_i \oplus A_j &= \displaystyle\sum^{N-1}_{i=1} (A_i \oplus A_{i+1}) + (A_i \oplus A_{i+2}) + ... + (A_i \oplus A_N) \\
 &= \displaystyle\sum^{N-1}_{i=1}\sum^{}_{k=1}
 \begin{cases}
-2^{k-1} (cnt1_{N,k} - cnt1_{i,k}) \quad A_{i,k} = 0 \\
-2^{k-1} (cnt0_{N,k} - cnt0_{i,k}) \quad A_{i,k} = 1 
+2^{k-1} (cnt1_{N,k} - cnt1_{i,k}) &\quad A_{i,k} = 0 \\
+2^{k-1} (cnt0_{N,k} - cnt0_{i,k}) &\quad A_{i,k} = 1 
 \end{cases}
 \end{align}
 $$
@@ -110,6 +111,7 @@ $$
 ## 空でないAの部分列の和の総和
 
 各項の寄与度を考えると,各項は$2^n-1$回足される.
+
 $$
 \begin{align}
 (2^N-1) \displaystyle \sum^{N}_{i=1} A_i
@@ -123,12 +125,12 @@ $$
 $$
 \begin{align}
 \displaystyle \sum^{N}_{i=1} \begin{cases}
-n + 2(i-1) \quad i \le n/2 \\
-2(n - i) \quad i \gt n/2 
+n + 2(i-1) &\quad i \le n/2 \\
+2(n - i) &\quad i \gt n/2 
 \end{cases}
 \end{align}
 $$
 
-## 空でないAの部分列の積の総和$`(mod \space 998244353)`$
+## 空でないAの部分列の積の総和$
 
 TBD
