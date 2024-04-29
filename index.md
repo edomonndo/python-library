@@ -156,6 +156,9 @@ data:
     - icon: ':warning:'
       path: data_structure/static_range_parallel_union_find.py
       title: Static Range Parallel Union Find
+    - icon: ':warning:'
+      path: data_structure/static_top_tree.py
+      title: Static Top Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/unionfind.py
       title: Union Find
