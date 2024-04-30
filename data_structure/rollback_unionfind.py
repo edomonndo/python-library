@@ -3,8 +3,10 @@ class RollbackUnionFind:
         self.n = n
         self.parent_or_size = [-1] * n
         self.history = []
-        self.sum = [0] * n
         self.snap = 0
+        self.sum = [0] * n
+        self.all_sum = [0] * n
+        self.group_count = n
 
     def merge(self, a: int, b: int) -> bool:
         assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
@@ -12,16 +14,18 @@ class RollbackUnionFind:
         x = self.leader(a)
         y = self.leader(b)
         if x == y:
-            self.history.append((-1, -1))
-            self.history.append((-1, -1))
+            self.history.append((-1, -1, -1))
+            self.history.append((-1, -1, -1))
             return False
         if -self.parent_or_size[x] < -self.parent_or_size[y]:
             x, y = y, x
-        self.history.append((x, self.parent_or_size[x]))
-        self.history.append((y, self.parent_or_size[y]))
+        self.group_count -= 1
+        self.history.append((x, self.parent_or_size[x], self.all_sum[x]))
+        self.history.append((y, self.parent_or_size[y], self.all_sum[y]))
+        self.all_sum[x] += self.all_sum[y]
+        self.sum[x] += self.sum[y]
         self.parent_or_size[x] += self.parent_or_size[y]
         self.parent_or_size[y] = x
-        self.sum[x] += self.sum[y]
         return True
 
     def same(self, a: int, b: int) -> bool:
@@ -41,6 +45,9 @@ class RollbackUnionFind:
         assert 0 <= a < self.n, "0<=a<n,a={0},n={1}".format(a, self.n)
         return -self.parent_or_size[self.leader(a)]
 
+    def group_count(self):
+        return self.group_count
+
     def groups(self):
         leader_buf = [0 for i in range(self.n)]
         group_size = [0 for i in range(self.n)]
@@ -57,14 +64,17 @@ class RollbackUnionFind:
         return result2
 
     def undo(self) -> None:
-        y, py = self.history.pop()
-        x, px = self.history.pop()
+        y, py, all_sum_y = self.history.pop()
+        x, px, all_sum_x = self.history.pop()
         if y == -1:
             return
-        if self.parent_or_size[x] != px:
-            self.sum[x] -= self.sum[y]
+        self.group_count += 1
         self.parent_or_size[y] = py
         self.parent_or_size[x] = px
+        s = (self.all_sum[x] - all_sum_y - all_sum_x) // (-py - px) * (-py)
+        self.all_sum[y] += s
+        self.all_sum[x] -= all_sum_y + s
+        self.sum[x] -= self.sum[y]
         return
 
     def snapshot(self):
@@ -87,5 +97,10 @@ class RollbackUnionFind:
             self.sum[a] += x
             a = self.parent_or_size[a]
 
+    def add_group(self, a: int, x: int) -> None:
+        a = self.leader(a)
+        self.all_sum[a] += x * self.size(a)
+
     def group_sum(self, a: int) -> int:
-        return self.sum[self.leader(a)]
+        a = self.leader(a)
+        return self.sum[a] + self.all_sum[a]

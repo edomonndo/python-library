@@ -6,20 +6,30 @@ from data_structure.rollback_unionfind import RollbackUnionFind
 
 class OfflineDynamicConnectivity:
 
-    def __init__(self, n: int, q: int):
+    def __init__(self, n: int):
         self.n = n
-        self.q = q
         self.bit = n.bit_length() + 1
         self.msk = (1 << self.bit) - 1
         self.query_count = 0
-        self.log = (self.q - 1).bit_length()
-        self.size = 1 << self.log
-        self.data = [[] for _ in range(self.size + self.size)]
         self.edge = defaultdict(list)
         self.uf = RollbackUnionFind(n)
 
+    def build(self, edges: list[tuple[int, int]]):
+        bit, edge = self.bit, self.edge
+        for u, v in edges:
+            if u > v:
+                u, v = v, u
+            edge[u << bit | v].append(0)
+        self.query_count += 1
+
     def add_value(self, u: int, w: int) -> None:
         self.uf.add(u, w)
+
+    def add_value_group(self, u: int, w: int) -> None:
+        self.uf.add_group(u, w)
+
+    def group_sum(self, u: int) -> int:
+        return self.uf.group_sum(u)
 
     def add_edge(self, u: int, v: int) -> None:
         assert 0 <= u < self.n and 0 <= v < self.n
@@ -40,17 +50,10 @@ class OfflineDynamicConnectivity:
 
     def run(self, out: Callable[[int], None]) -> None:
         # O(qlogqlogn)
-        assert (
-            self.query_count == self.q
-        ), f"query_count=({self.query_count}) is not equal to q=({self.q})"
-        data, uf, bit, msk, size, q = (
-            self.data,
-            self.uf,
-            self.bit,
-            self.msk,
-            self.size,
-            self.q,
-        )
+        uf, bit, msk, q = self.uf, self.bit, self.msk, self.query_count
+        log = (q - 1).bit_length()
+        size = 1 << log
+        data = [[] for _ in range(size << 1)]
         for k, v in self.edge.items():
             LR = []
             i = 0
