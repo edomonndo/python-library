@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/offline_dynamic_connectivity.py
     title: data_structure/offline_dynamic_connectivity.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum
     links:
@@ -32,8 +32,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
   requiredBy: []
-  timestamp: '2024-04-30 11:25:39+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-04-30 17:18:01+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
 layout: document

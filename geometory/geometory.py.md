@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: atcoder/lazysegtree.py
+    title: atcoder/lazysegtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -27,9 +30,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_4_a_union_of_rectangles.test.py
     title: test/aoj/dsl_4_a_union_of_rectangles.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+    title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -157,19 +163,41 @@ data:
     \ * (\n            self.bottom_right.y - self.top_left.y\n        )\n\n\nclass\
     \ Rectangles:\n    def __init__(self):\n        self.rects = []\n\n    def __str__(self):\n\
     \        return \"<Rects(\" + \"\\n \".join(str(r) for r in self.rects) + \")>\"\
-    \n\n    def add(self, rect):\n        rects = []\n        for r in self.rects:\n\
-    \            if rect.intersect(r):\n                rects.extend(r.sub(rect))\n\
+    \n\n    def add(self, rect: Rectangle):\n        rects = []\n        for r in\
+    \ self.rects:\n            if rect.intersect(r):\n                rects.extend(r.sub(rect))\n\
     \            else:\n                rects.append(r)\n        rects.append(rect)\n\
     \        self.rects = rects\n\n    def area(self):\n        return sum(r.get_area()\
     \ for r in self.rects)\n\n    def not_intersect(self):\n        N = len(self.rects)\n\
     \        for i in range(N - 1):\n            for j in range(i + 1, N):\n     \
     \           if self.rects[i].intersect(self.rects[j]):\n                    return\
-    \ False\n        return True\n\n\nclass Polygon:\n    def __init__(self, arr:\
-    \ list[Point]):\n        \"\"\"\n        \u914D\u5217arr\u306F\uFF0C\u591A\u89D2\
-    \u5F62\u306E\u96A3\u308A\u5408\u3063\u305F\u70B9\u3092\u53CD\u6642\u8A08\u56DE\
-    \u308A\u306B\u8A2A\u554F\u3059\u308B\u9806\u756A\u3067\u3042\u308B\u3053\u3068\
-    \uFF0E\n        \"\"\"\n        self.arr = arr\n        self.n = len(arr)\n\n\
-    \    def __len__(self):\n        return self.n\n\n    def __getitem__(self, idx):\n\
+    \ False\n        return True\n\n    def union_area(self):\n        from atcoder.lazysegtree\
+    \ import LazySegTree\n\n        mask = (1 << 31) - 1\n\n        def op(x, y):\n\
+    \            x0, x1 = x >> 31, x & mask\n            y0, y1 = y >> 31, y & mask\n\
+    \            if x0 < y0:\n                return x\n            elif x0 > y0:\n\
+    \                return y\n            else:\n                return (x0 << 31)\
+    \ + x1 + y1\n\n        def mapping(x, y):\n            y0, y1 = y >> 31, y & mask\n\
+    \            return ((y0 + x) << 31) + y1\n\n        def composition(x, y):\n\
+    \            return x + y\n\n        A, X, Y = [], [], []\n        for rect in\
+    \ self.rects:\n            tl, br = rect.top_left, rect.bottom_right\n       \
+    \     l, d, r, u = tl.x, tl.y, br.x, br.y\n            X += [l, r]\n         \
+    \   Y += [d, u]\n            A.append((l, d, r, u))\n        X = list(set(X))\n\
+    \        X.sort()\n        dX = {x: i for i, x in enumerate(X)}\n        Y = list(set(Y))\n\
+    \        Y.sort()\n        dY = {y: i for i, y in enumerate(Y)}\n        L = [[]\
+    \ for _ in range(len(Y))]\n        R = [[] for _ in range(len(Y))]\n        for\
+    \ l, d, r, u in A:\n            l, r, d, u = dX[l], dX[r], dY[d], dY[u]\n    \
+    \        L[d].append((l, r))\n            R[u].append((l, r))\n\n        v = [(X[i\
+    \ + 1] - X[i]) for i in range(len(X) - 1)]\n        lst = LazySegTree(op, 1 <<\
+    \ 61, mapping, composition, 0, v)\n        s = X[-1] - X[0]\n        res = 0\n\
+    \        for i in range(len(Y) - 1):\n            for l, r in L[i]:\n        \
+    \        lst.apply(l, r, 1)\n            z = lst.all_prod()\n            z0, z1\
+    \ = z >> 31, z & mask\n            z = s - z1 if z0 == 0 else s\n            res\
+    \ += z * (Y[i + 1] - Y[i])\n            for l, r in R[i + 1]:\n              \
+    \  lst.apply(l, r, -1)\n        return res\n\n\nclass Polygon:\n    def __init__(self,\
+    \ arr: list[Point]):\n        \"\"\"\n        \u914D\u5217arr\u306F\uFF0C\u591A\
+    \u89D2\u5F62\u306E\u96A3\u308A\u5408\u3063\u305F\u70B9\u3092\u53CD\u6642\u8A08\
+    \u56DE\u308A\u306B\u8A2A\u554F\u3059\u308B\u9806\u756A\u3067\u3042\u308B\u3053\
+    \u3068\uFF0E\n        \"\"\"\n        self.arr = arr\n        self.n = len(arr)\n\
+    \n    def __len__(self):\n        return self.n\n\n    def __getitem__(self, idx):\n\
     \        return self.arr[idx]\n\n    def contains(self, p):\n        \"\"\"\n\
     \        \u70B9p\u304C\u591A\u89D2\u5F62\u306B\u5185\u5305\u3055\u308C\u3066\u3044\
     \u308B\u304B\u5224\u5B9A\n        IN 2\n        ON 1\n        OUT 0\n        \"\
@@ -196,12 +224,13 @@ data:
     \ divide_by_segment(self, seg: Line) -> int:\n        lines = [Line(self.arr[i],\
     \ self.arr[(i + 1) % self.n]) for i in range(self.n)]\n        cnt = sum(1 for\
     \ line in lines if line.intersect(seg))\n        return cnt // 2 + 1\n"
-  dependsOn: []
+  dependsOn:
+  - atcoder/lazysegtree.py
   isVerificationFile: false
   path: geometory/geometory.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-04-30 17:18:01+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/cgl_2_b_intersection.test.py
   - test/aoj/cgl_2_c_cross_point.test.py
@@ -211,6 +240,7 @@ data:
   - test/aoj/cgl_2_d_distance.test.py
   - test/aoj/cgl_1_a_projection.test.py
   - test/aoj/cgl_2_a_parallel_orthogonal.test.py
+  - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
 documentation_of: geometory/geometory.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

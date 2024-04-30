@@ -135,7 +135,7 @@ data:
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/offline_dynamic_connectivity.py
       title: data_structure/offline_dynamic_connectivity.py
     - icon: ':warning:'
@@ -181,7 +181,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_full.py
       title: Convex full
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: geometory/geometory.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
@@ -556,6 +556,9 @@ data:
       title: test/library_checker/convolution/convolution_mod_1000000007.test.py
   - name: test/library_checker/data_structure
     pages:
+    - icon: ':x:'
+      path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+      title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/associative_array.test.py
       title: test/library_checker/data_structure/associative_array.test.py
@@ -565,12 +568,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
       title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
+      title: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
+      title: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py

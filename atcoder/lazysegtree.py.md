@@ -4,7 +4,10 @@ data:
   - icon: ':warning:'
     path: atcoder/_bit.py
     title: atcoder/_bit.py
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':question:'
+    path: geometory/geometory.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc035c.test.py
@@ -105,7 +108,8 @@ data:
   - atcoder/_bit.py
   isVerificationFile: false
   path: atcoder/lazysegtree.py
-  requiredBy: []
+  requiredBy:
+  - geometory/geometory.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:

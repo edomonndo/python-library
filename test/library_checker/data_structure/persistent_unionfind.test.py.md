@@ -33,7 +33,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_unionfind.test.py
   requiredBy: []
-  timestamp: '2024-04-30 11:25:39+09:00'
+  timestamp: '2024-04-30 17:18:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/persistent_unionfind.test.py
