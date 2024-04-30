@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
-    path: geometory/geometory.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+  - icon: ':x:'
+    path: geometory/union_area_rectangle.py
+    title: geometory/union_area_rectangle.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -18,15 +18,15 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/area_of_union_of_rectangles\n\
-    \nfrom geometory.geometory import Rectangles, Rectangle, Point\n\nn = int(input())\n\
-    rects = Rectangles()\nfor _ in range(n):\n    l, d, r, u = map(int, input().split())\n\
-    \    rects.add(Rectangle(Point(l, d), Point(r, u)))\nprint(rects.union_area())\n"
+    \nfrom geometory.union_area_rectangle import union_area\n\nn = int(input())\n\
+    rects = []\nfor _ in range(n):\n    l, d, r, u = map(int, input().split())\n \
+    \   rects.append((l, d, r, u))\nprint(union_area(rects))\n"
   dependsOn:
-  - geometory/geometory.py
+  - geometory/union_area_rectangle.py
   isVerificationFile: true
   path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
   requiredBy: []
-  timestamp: '2024-04-30 17:18:01+09:00'
+  timestamp: '2024-05-01 08:13:10+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/area_of_union_of_rectangles.test.py

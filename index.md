@@ -135,7 +135,7 @@ data:
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
-    - icon: ':x:'
+    - icon: ':question:'
       path: data_structure/offline_dynamic_connectivity.py
       title: data_structure/offline_dynamic_connectivity.py
     - icon: ':warning:'
@@ -181,7 +181,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_full.py
       title: Convex full
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/geometory.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
@@ -194,6 +194,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
+    - icon: ':x:'
+      path: geometory/union_area_rectangle.py
+      title: geometory/union_area_rectangle.py
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -568,7 +571,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
       title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
     - icon: ':x:'
@@ -577,7 +580,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
     - icon: ':heavy_check_mark:'

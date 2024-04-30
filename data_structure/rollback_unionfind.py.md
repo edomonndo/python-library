@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/offline_dynamic_connectivity.py
     title: data_structure/offline_dynamic_connectivity.py
   _extendedVerifiedWith:

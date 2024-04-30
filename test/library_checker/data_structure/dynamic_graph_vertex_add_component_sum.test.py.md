@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: data_structure/offline_dynamic_connectivity.py
     title: data_structure/offline_dynamic_connectivity.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum
     links:
@@ -20,7 +20,7 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum\n\
     \nfrom data_structure.offline_dynamic_connectivity import OfflineDynamicConnectivity\n\
     \nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\ndc\
-    \ = OfflineDynamicConnectivity(n, q)\nfor i, a in enumerate(A):\n    dc.add_value(i,\
+    \ = OfflineDynamicConnectivity(n)\nfor i, a in enumerate(A):\n    dc.add_value(i,\
     \ a)\nqs = [list(map(int, input().split())) for _ in range(q)]\nfor t, *qu in\
     \ qs:\n    if t == 0:\n        u, v = qu\n        dc.add_edge(u, v)\n    elif\
     \ t == 1:\n        u, v = qu\n        dc.delete_edge(u, v)\n    else:\n      \
@@ -32,8 +32,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
   requiredBy: []
-  timestamp: '2024-04-30 17:18:01+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-01 08:13:10+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
 layout: document

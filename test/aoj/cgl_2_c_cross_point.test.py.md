@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/geometory.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
   _extendedRequiredBy: []
@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl_2_c_cross_point.test.py
   requiredBy: []
-  timestamp: '2024-04-30 17:18:01+09:00'
+  timestamp: '2024-05-01 08:13:10+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl_2_c_cross_point.test.py
