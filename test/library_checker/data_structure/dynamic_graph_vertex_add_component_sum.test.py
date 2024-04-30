@@ -4,7 +4,7 @@ from data_structure.offline_dynamic_connectivity import OfflineDynamicConnectivi
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
-dc = OfflineDynamicConnectivity(n, q)
+dc = OfflineDynamicConnectivity(n)
 for i, a in enumerate(A):
     dc.add_value(i, a)
 qs = [list(map(int, input().split())) for _ in range(q)]

@@ -305,6 +305,7 @@ class Rectangles:
         self.rects = rects
 
     def area(self):
+        """O(n^2)"""
         return sum(r.get_area() for r in self.rects)
 
     def not_intersect(self):
@@ -314,63 +315,6 @@ class Rectangles:
                 if self.rects[i].intersect(self.rects[j]):
                     return False
         return True
-
-    def union_area(self):
-        from atcoder.lazysegtree import LazySegTree
-
-        mask = (1 << 31) - 1
-
-        def op(x, y):
-            x0, x1 = x >> 31, x & mask
-            y0, y1 = y >> 31, y & mask
-            if x0 < y0:
-                return x
-            elif x0 > y0:
-                return y
-            else:
-                return (x0 << 31) + x1 + y1
-
-        def mapping(x, y):
-            y0, y1 = y >> 31, y & mask
-            return ((y0 + x) << 31) + y1
-
-        def composition(x, y):
-            return x + y
-
-        A, X, Y = [], [], []
-        for rect in self.rects:
-            tl, br = rect.top_left, rect.bottom_right
-            l, d, r, u = tl.x, tl.y, br.x, br.y
-            X += [l, r]
-            Y += [d, u]
-            A.append((l, d, r, u))
-        X = list(set(X))
-        X.sort()
-        dX = {x: i for i, x in enumerate(X)}
-        Y = list(set(Y))
-        Y.sort()
-        dY = {y: i for i, y in enumerate(Y)}
-        L = [[] for _ in range(len(Y))]
-        R = [[] for _ in range(len(Y))]
-        for l, d, r, u in A:
-            l, r, d, u = dX[l], dX[r], dY[d], dY[u]
-            L[d].append((l, r))
-            R[u].append((l, r))
-
-        v = [(X[i + 1] - X[i]) for i in range(len(X) - 1)]
-        lst = LazySegTree(op, 1 << 61, mapping, composition, 0, v)
-        s = X[-1] - X[0]
-        res = 0
-        for i in range(len(Y) - 1):
-            for l, r in L[i]:
-                lst.apply(l, r, 1)
-            z = lst.all_prod()
-            z0, z1 = z >> 31, z & mask
-            z = s - z1 if z0 == 0 else s
-            res += z * (Y[i + 1] - Y[i])
-            for l, r in R[i + 1]:
-                lst.apply(l, r, -1)
-        return res
 
 
 class Polygon:

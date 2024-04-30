@@ -6,7 +6,7 @@ n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
 edges = [tuple(map(int, input().split())) for _ in range(n - 1)]
 
-dc = OfflineDynamicConnectivity(n, q * 2)
+dc = OfflineDynamicConnectivity(n)
 for i, a in enumerate(A):
     dc.add_value(i, a)
 dc.build(edges)
