@@ -9,6 +9,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/manhattanmst.test.py
     title: test/library_checker/graph/manhattanmst.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/minimum_spanning_tree.test.py
+    title: test/library_checker/graph/minimum_spanning_tree.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -51,6 +54,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/manhattanmst.test.py
+  - test/library_checker/graph/minimum_spanning_tree.test.py
 documentation_of: atcoder/dsu.py
 layout: document
 redirect_from:

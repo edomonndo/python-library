@@ -343,6 +343,9 @@ data:
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
+      path: tree/dominator_tree.py
+      title: Dominator Tree
+    - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':heavy_check_mark:'
@@ -636,8 +639,14 @@ data:
       path: test/library_checker/graph/cycle_detection_undirected.test.py
       title: test/library_checker/graph/cycle_detection_undirected.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/dominator_tree.test.py
+      title: test/library_checker/graph/dominator_tree.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/manhattanmst.test.py
       title: test/library_checker/graph/manhattanmst.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/minimum_spanning_tree.test.py
+      title: test/library_checker/graph/minimum_spanning_tree.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: test/library_checker/graph/scc.test.py
