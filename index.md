@@ -135,6 +135,9 @@ data:
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
+    - icon: ':heavy_check_mark:'
+      path: data_structure/offline_dynamic_connectivity.py
+      title: data_structure/offline_dynamic_connectivity.py
     - icon: ':warning:'
       path: data_structure/radix_heap.py
       title: Radix Heap
@@ -355,6 +358,9 @@ data:
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
     - icon: ':warning:'
+      path: tree/rooted_tree.py
+      title: "\u6839\u4ED8\u304D\u6728"
+    - icon: ':warning:'
       path: tree/splay_tree.py
       title: Splay tree
     - icon: ':heavy_check_mark:'
@@ -559,6 +565,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
       title: test/library_checker/data_structure/double-ended_priority_queue.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
+      title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
