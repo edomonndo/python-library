@@ -46,6 +46,7 @@
 "test/library_checker/data_structure/deque_operate_all_composite.test.py": "2024-02-24 06:05:31 +0900",
 "test/library_checker/data_structure/double-ended_priority_queue.test.py": "2023-09-15 09:38:49 +0900",
 "test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py": "2024-05-01 08:13:10 +0900",
+"test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py": "2024-05-01 09:54:30 +0900",
 "test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py": "2024-04-30 17:18:01 +0900",
 "test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py": "2024-05-01 08:13:10 +0900",
 "test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py": "2024-04-30 17:18:01 +0900",
