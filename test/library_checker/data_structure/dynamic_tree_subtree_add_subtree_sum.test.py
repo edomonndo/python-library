@@ -18,8 +18,11 @@ for t, *qu in qs:
         dc.delete_edge(u, v)
         dc.add_edge(w, x)
     else:
-        dc.add_relax()
-        dc.add_relax()
+        v, p = qu[:2]
+        dc.delete_edge(v, p)
+        dc.add_edge(v, p)
+
+        
 
 
 def out(k):
