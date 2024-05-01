@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/offline_dynamic_connectivity.py
     title: data_structure/offline_dynamic_connectivity.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_tree_subtree_add_subtree_sum
     links:
@@ -24,18 +24,18 @@ data:
     for i, a in enumerate(A):\n    dc.add_value(i, a)\ndc.build(edges)\n\nqs = [list(map(int,\
     \ input().split())) for _ in range(q)]\nfor t, *qu in qs:\n    if t == 0:\n  \
     \      u, v, w, x = qu\n        dc.delete_edge(u, v)\n        dc.add_edge(w, x)\n\
-    \    else:\n        dc.add_relax()\n        dc.add_relax()\n\n\ndef out(k):\n\
-    \    if k == 0:\n        return\n    k -= 1\n    t, *qu = qs[k // 2]\n    if t\
-    \ == 0 or k & 1:\n        return\n    if t == 1:\n        v, p, x = qu\n     \
-    \   dc.add_value_group(v, x)\n    else:\n        v, p = qu\n        print(dc.uf.group_sum(v))\n\
-    \n\ndc.run(out)\n"
+    \    else:\n        v, p = qu[:2]\n        dc.delete_edge(v, p)\n        dc.add_edge(v,\
+    \ p)\n\n        \n\n\ndef out(k):\n    if k == 0:\n        return\n    k -= 1\n\
+    \    t, *qu = qs[k // 2]\n    if t == 0 or k & 1:\n        return\n    if t ==\
+    \ 1:\n        v, p, x = qu\n        dc.add_value_group(v, x)\n    else:\n    \
+    \    v, p = qu\n        print(dc.uf.group_sum(v))\n\n\ndc.run(out)\n"
   dependsOn:
   - data_structure/offline_dynamic_connectivity.py
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-01 09:54:30+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
 layout: document

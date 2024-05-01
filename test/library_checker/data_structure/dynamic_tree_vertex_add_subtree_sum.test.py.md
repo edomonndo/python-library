@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/offline_dynamic_connectivity.py
     title: data_structure/offline_dynamic_connectivity.py
   _extendedRequiredBy: []

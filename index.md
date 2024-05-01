@@ -135,7 +135,7 @@ data:
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/offline_dynamic_connectivity.py
       title: data_structure/offline_dynamic_connectivity.py
     - icon: ':warning:'
@@ -574,7 +574,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
       title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
     - icon: ':heavy_check_mark:'
