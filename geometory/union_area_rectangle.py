@@ -41,7 +41,7 @@ def union_area(rectangles: list[tuple[int, int, int, int]]):
     L = [[] for _ in range(len(Y))]
     R = [[] for _ in range(len(Y))]
     for x1, y1, x2, y2 in rectangles:
-        x1, y1, x2, y2 = dX[x1], dX[x2], dY[y1], dY[y2]
+        x1, x2, y1, y2 = dX[x1], dX[x2], dY[y1], dY[y2]
         L[y1].append((x1, x2))
         R[y2].append((x1, x2))
 
