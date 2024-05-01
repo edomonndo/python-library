@@ -41,6 +41,7 @@
 "test/aoj/ntl_1_e_extended_euclidean.test.py": "2023-08-26 01:45:36 +0900",
 "test/library_checker/convolution/convolution_mod.test.py": "2023-08-01 14:51:05 +0900",
 "test/library_checker/convolution/convolution_mod_1000000007.test.py": "2023-09-15 08:31:51 +0900",
+"test/library_checker/data_structure/area_of_union_of_rectangles.test.py": "2024-05-01 09:39:03 +0900",
 "test/library_checker/data_structure/associative_array.test.py": "2023-08-06 23:53:12 +0900",
 "test/library_checker/data_structure/deque_operate_all_composite.test.py": "2024-02-24 06:05:31 +0900",
 "test/library_checker/data_structure/double-ended_priority_queue.test.py": "2023-09-15 09:38:49 +0900",
