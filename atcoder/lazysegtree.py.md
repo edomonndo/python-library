@@ -5,7 +5,7 @@ data:
     path: atcoder/_bit.py
     title: atcoder/_bit.py
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/union_area_rectangle.py
     title: geometory/union_area_rectangle.py
   _extendedVerifiedWith:

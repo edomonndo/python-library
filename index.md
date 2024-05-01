@@ -194,7 +194,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/union_area_rectangle.py
       title: geometory/union_area_rectangle.py
   - name: graph
@@ -559,7 +559,7 @@ data:
       title: test/library_checker/convolution/convolution_mod_1000000007.test.py
   - name: test/library_checker/data_structure
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
       title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
     - icon: ':heavy_check_mark:'

@@ -6,12 +6,12 @@ data:
     title: atcoder/lazysegtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
     title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -30,7 +30,7 @@ data:
     \ += [y1, y2]\n    X = list(set(X))\n    X.sort()\n    dX = {x: i for i, x in\
     \ enumerate(X)}\n    Y = list(set(Y))\n    Y.sort()\n    dY = {y: i for i, y in\
     \ enumerate(Y)}\n    L = [[] for _ in range(len(Y))]\n    R = [[] for _ in range(len(Y))]\n\
-    \    for x1, y1, x2, y2 in rectangles:\n        x1, y1, x2, y2 = dX[x1], dX[x2],\
+    \    for x1, y1, x2, y2 in rectangles:\n        x1, x2, y1, y2 = dX[x1], dX[x2],\
     \ dY[y1], dY[y2]\n        L[y1].append((x1, x2))\n        R[y2].append((x1, x2))\n\
     \n    v = [(X[i + 1] - X[i]) for i in range(len(X) - 1)]\n    lst = LazySegTree(op,\
     \ 1 << 61, mapping, composition, 0, v)\n    s = X[-1] - X[0]\n    res = 0\n  \
@@ -43,8 +43,8 @@ data:
   isVerificationFile: false
   path: geometory/union_area_rectangle.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-01 09:39:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
 documentation_of: geometory/union_area_rectangle.py

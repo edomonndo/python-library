@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/union_area_rectangle.py
     title: geometory/union_area_rectangle.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/area_of_union_of_rectangles
     links:
@@ -26,8 +26,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-01 09:39:03+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
 layout: document
