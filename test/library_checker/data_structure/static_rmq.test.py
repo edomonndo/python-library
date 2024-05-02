@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/staticrmq
 
-from data_structure.segment_tree import Segtree
+from data_structure_basic.segment_tree import Segtree
 
 N, Q = map(int, input().split())
 A = list(map(int, input().split()))

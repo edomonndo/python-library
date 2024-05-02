@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_A
 
-from data_structure.unionfind import UnionFind
+from data_structure_basic.unionfind import UnionFind
 
 N, M = map(int, input().split())
 edges = [tuple(map(int, input().split())) for _ in range(M)]

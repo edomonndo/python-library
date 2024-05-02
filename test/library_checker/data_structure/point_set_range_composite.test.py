@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite
 
-from data_structure.segment_tree import Segtree
+from data_structure_basic.segment_tree import Segtree
 
 MOD = 998244353
 mask = (1 << 30) - 1
