@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/fenwick_tree.py
-    title: Fenwick Tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,8 +19,7 @@ data:
     A = list(map(int, input().split()))\n\nFT = FenwickTree(N)\nfor i, a in enumerate(A):\n\
     \    FT.add(i, a)\n\nfor _ in range(Q):\n    l, r = map(int, input().split())\n\
     \    print(FT.sum(l, r))\n"
-  dependsOn:
-  - data_structure/fenwick_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/static_range_sum.test.py
   requiredBy: []

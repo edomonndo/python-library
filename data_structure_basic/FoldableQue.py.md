@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
-    title: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/queue_operate_all_composite.test.py
-    title: test/library_checker/data_structure/queue_operate_all_composite.test.py
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -35,14 +29,12 @@ data:
     \                self._pushtop(x)\n        return self.top[-1]\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/FoldableQue.py
+  path: data_structure_basic/FoldableQue.py
   requiredBy: []
-  timestamp: '2023-08-07 21:41:31+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
-  - test/library_checker/data_structure/queue_operate_all_composite.test.py
-documentation_of: data_structure/FoldableQue.py
+  timestamp: '2024-05-02 15:05:51+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: data_structure_basic/FoldableQue.py
 layout: document
 title: Foldable Queue(SWAG)
 ---

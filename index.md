@@ -65,39 +65,28 @@ data:
     - icon: ':warning:'
       path: convolution/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - name: data_structure
+  - name: data_structure/binary_search_tree
     pages:
     - icon: ':warning:'
-      path: data_structure/DeletableHeapQue.py
-      title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+      path: data_structure/binary_search_tree/hu_tucker.py
+      title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
     - icon: ':warning:'
-      path: data_structure/FixedSizeHeapQue.py
-      title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
-    - icon: ':heavy_check_mark:'
-      path: data_structure/FoldableDeque.py
-      title: Foldable Deque(DSWAG)
-    - icon: ':heavy_check_mark:'
-      path: data_structure/FoldableQue.py
-      title: Foldable Queue(SWAG)
-    - icon: ':heavy_check_mark:'
-      path: data_structure/SortedMultiset.py
-      title: SortedMultiset
+      path: data_structure/binary_search_tree/implicit_treap.py
+      title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
     - icon: ':warning:'
-      path: data_structure/SortedSet.py
-      title: SortedSet
+      path: data_structure/binary_search_tree/red_black_tree.py
+      title: data_structure/binary_search_tree/red_black_tree.py
+    - icon: ':warning:'
+      path: data_structure/binary_search_tree/splay_tree.py
+      title: Splay tree
+  - name: data_structure
+    pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/binary_trie.py
       title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
-    - icon: ':warning:'
-      path: data_structure/deque.py
-      title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
-        \u5408\u8A08\uFF09"
-    - icon: ':warning:'
-      path: data_structure/doubly_linked_list.py
-      title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
     - icon: ':heavy_check_mark:'
       path: data_structure/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
@@ -105,15 +94,6 @@ data:
       path: data_structure/dual_segment_tree_commutative.py
       title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (Dual Segment Tree)"
-    - icon: ':heavy_check_mark:'
-      path: data_structure/fenwick_tree.py
-      title: Fenwick Tree
-    - icon: ':warning:'
-      path: data_structure/hu_tucker.py
-      title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
-    - icon: ':warning:'
-      path: data_structure/implicit_treap.py
-      title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
     - icon: ':warning:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
@@ -137,19 +117,13 @@ data:
       title: Mo's Algorithm
     - icon: ':heavy_check_mark:'
       path: data_structure/offline_dynamic_connectivity.py
-      title: data_structure/offline_dynamic_connectivity.py
-    - icon: ':warning:'
-      path: data_structure/radix_heap.py
-      title: Radix Heap
+      title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
     - icon: ':warning:'
       path: data_structure/range_union_find.py
       title: Range Union Find
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
-    - icon: ':heavy_check_mark:'
-      path: data_structure/segment_tree.py
-      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree_beats.py
       title: Segment Tree Beats
@@ -163,14 +137,50 @@ data:
       path: data_structure/static_top_tree.py
       title: Static Top Tree
     - icon: ':heavy_check_mark:'
-      path: data_structure/unionfind.py
-      title: Union Find
-    - icon: ':heavy_check_mark:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
     - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
+  - name: data_structure_basic
+    pages:
+    - icon: ':warning:'
+      path: data_structure_basic/DeletableHeapQue.py
+      title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+    - icon: ':warning:'
+      path: data_structure_basic/FixedSizeHeapQue.py
+      title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+    - icon: ':warning:'
+      path: data_structure_basic/FoldableDeque.py
+      title: Foldable Deque(DSWAG)
+    - icon: ':warning:'
+      path: data_structure_basic/FoldableQue.py
+      title: Foldable Queue(SWAG)
+    - icon: ':warning:'
+      path: data_structure_basic/SortedMultiset.py
+      title: SortedMultiset
+    - icon: ':warning:'
+      path: data_structure_basic/SortedSet.py
+      title: SortedSet
+    - icon: ':warning:'
+      path: data_structure_basic/deque.py
+      title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
+        \u5408\u8A08\uFF09"
+    - icon: ':warning:'
+      path: data_structure_basic/doubly_linked_list.py
+      title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
+    - icon: ':warning:'
+      path: data_structure_basic/fenwick_tree.py
+      title: Fenwick Tree
+    - icon: ':warning:'
+      path: data_structure_basic/radix_heap.py
+      title: Radix Heap
+    - icon: ':heavy_check_mark:'
+      path: data_structure_basic/segment_tree.py
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure_basic/unionfind.py
+      title: Union Find
   - name: embed_cpp
     pages:
     - icon: ':warning:'
@@ -354,6 +364,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
+    - icon: ':warning:'
+      path: tree/euler_tour_tree.py
+      title: tree/euler_tour_tree.py
     - icon: ':heavy_check_mark:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
@@ -363,9 +376,6 @@ data:
     - icon: ':warning:'
       path: tree/rooted_tree.py
       title: "\u6839\u4ED8\u304D\u6728"
-    - icon: ':warning:'
-      path: tree/splay_tree.py
-      title: Splay tree
     - icon: ':heavy_check_mark:'
       path: tree/tree_dp.py
       title: "(\u5168\u65B9\u4F4D)\u6728DP"
@@ -380,6 +390,9 @@ data:
     - icon: ':warning:'
       path: utility/compress.py
       title: "\u5EA7\u6A19\u5727\u7E2E"
+    - icon: ':warning:'
+      path: utility/convert_base.py
+      title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"

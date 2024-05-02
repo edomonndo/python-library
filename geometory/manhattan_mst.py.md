@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':warning:'
-    path: data_structure/SortedSet.py
-    title: SortedSet
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -42,8 +39,7 @@ data:
     \              self.points[j << 1],\n                    )\n            if not\
     \ i:\n                for j in range(self.n):\n                    self.points[j\
     \ << 1] *= -1\n        self.edges.sort(key=lambda x: x[0])\n"
-  dependsOn:
-  - data_structure/SortedSet.py
+  dependsOn: []
   isVerificationFile: false
   path: geometory/manhattan_mst.py
   requiredBy: []

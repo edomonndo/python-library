@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':grey_question:'
-    path: test/atcoder/abc342g.test.py
-    title: test/atcoder/abc342g.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/double-ended_priority_queue.test.py
-    title: test/library_checker/data_structure/double-ended_priority_queue.test.py
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -82,14 +76,12 @@ data:
     \ + bisect.bisect_right(a, x)\n            ans += len(a)\n        return ans\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/SortedMultiset.py
+  path: data_structure_basic/SortedMultiset.py
   requiredBy: []
-  timestamp: '2023-09-15 09:38:49+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/atcoder/abc342g.test.py
-  - test/library_checker/data_structure/double-ended_priority_queue.test.py
-documentation_of: data_structure/SortedMultiset.py
+  timestamp: '2024-05-02 15:05:51+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: data_structure_basic/SortedMultiset.py
 layout: document
 title: SortedMultiset
 ---

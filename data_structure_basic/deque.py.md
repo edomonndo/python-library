@@ -42,12 +42,12 @@ data:
     \ = value\n\n    def __str__(self):\n        return \"Deque({0})\".format(str(list(self)))\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/deque.py
+  path: data_structure_basic/deque.py
   requiredBy: []
-  timestamp: '2023-07-06 11:56:00+09:00'
+  timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/deque.py
+documentation_of: data_structure_basic/deque.py
 layout: document
 title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\u5408\
   \u8A08\uFF09"

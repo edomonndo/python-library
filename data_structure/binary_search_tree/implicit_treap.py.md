@@ -101,12 +101,12 @@ data:
     \  yield self.val[v]\n            v = self.ptr[v * 3 + 1]\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/implicit_treap.py
+  path: data_structure/binary_search_tree/implicit_treap.py
   requiredBy: []
-  timestamp: '2024-04-24 11:17:49+09:00'
+  timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/implicit_treap.py
+documentation_of: data_structure/binary_search_tree/implicit_treap.py
 layout: document
 title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
 ---

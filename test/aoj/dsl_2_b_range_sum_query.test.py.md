@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/fenwick_tree.py
-    title: Fenwick Tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,8 +19,7 @@ data:
     FT = FenwickTree(N)\n\nans = []\nfor _ in range(Q):\n    t, x, y = map(int, input().split())\n\
     \    if t == 0:\n        FT.add(x - 1, y)\n    else:\n        ans.append(FT.sum(x\
     \ - 1, y))\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn:
-  - data_structure/fenwick_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/dsl_2_b_range_sum_query.test.py
   requiredBy: []

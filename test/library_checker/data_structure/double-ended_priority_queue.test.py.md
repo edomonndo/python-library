@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/SortedMultiset.py
-    title: SortedMultiset
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -23,12 +20,11 @@ data:
     \nfor _ in range(Q):\n    query = list(map(int, input().split()))\n    if query[0]\
     \ == 0:\n        MultiSet.add(query[1])\n    elif query[0] == 1:\n        print(MultiSet.pop(0))\n\
     \    elif query[0] == 2:\n        print(MultiSet.pop(-1))\n"
-  dependsOn:
-  - data_structure/SortedMultiset.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/double-ended_priority_queue.test.py
   requiredBy: []
-  timestamp: '2023-09-15 09:38:49+09:00'
+  timestamp: '2023-08-01 14:51:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/double-ended_priority_queue.test.py

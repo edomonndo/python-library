@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/FoldableDeque.py
-    title: Foldable Deque(DSWAG)
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -27,8 +24,7 @@ data:
     \ << 32 | b)\n    elif t == 2:\n        que.popleft()\n    elif t == 3:\n    \
     \    que.pop()\n    else:\n        x = q[0]\n        c = que.fold()\n        a,\
     \ b = c >> 32, c & mask\n        print((a * x + b) % MOD)\n"
-  dependsOn:
-  - data_structure/FoldableDeque.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/deque_operate_all_composite.test.py
   requiredBy: []

@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_3_a_smallest_window1.test.py
-    title: test/aoj/dsl_3_a_smallest_window1.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/deque_operate_all_composite.test.py
-    title: test/library_checker/data_structure/deque_operate_all_composite.test.py
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -45,14 +39,12 @@ data:
     \       return self._popbottom()\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/FoldableDeque.py
+  path: data_structure_basic/FoldableDeque.py
   requiredBy: []
-  timestamp: '2023-08-07 21:41:31+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/aoj/dsl_3_a_smallest_window1.test.py
-  - test/library_checker/data_structure/deque_operate_all_composite.test.py
-documentation_of: data_structure/FoldableDeque.py
+  timestamp: '2024-05-02 15:05:51+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: data_structure_basic/FoldableDeque.py
 layout: document
 title: Foldable Deque(DSWAG)
 ---

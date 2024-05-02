@@ -53,12 +53,12 @@ data:
     \ * n + i)\n        return res\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/hu_tucker.py
+  path: data_structure/binary_search_tree/hu_tucker.py
   requiredBy: []
-  timestamp: '2024-03-28 07:49:10+09:00'
+  timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/hu_tucker.py
+documentation_of: data_structure/binary_search_tree/hu_tucker.py
 layout: document
 title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
 ---

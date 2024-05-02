@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/FoldableDeque.py
-    title: Foldable Deque(DSWAG)
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -24,8 +21,7 @@ data:
     \    n += 1\n    if que.fold() < S:\n        continue\n    while que:\n      \
     \  que.popleft()\n        n -= 1\n        if que.fold() < S:\n            ans\
     \ = min(ans, n + 1)\n            break\nprint(ans if ans != INF else 0)\n"
-  dependsOn:
-  - data_structure/FoldableDeque.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/dsl_3_a_smallest_window1.test.py
   requiredBy: []

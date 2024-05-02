@@ -65,12 +65,12 @@ data:
     \     self.inorder(n.right)\n"
   dependsOn: []
   isVerificationFile: false
-  path: tree/splay_tree.py
+  path: data_structure/binary_search_tree/splay_tree.py
   requiredBy: []
-  timestamp: '2023-07-06 22:40:38+09:00'
+  timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: tree/splay_tree.py
+documentation_of: data_structure/binary_search_tree/splay_tree.py
 layout: document
 title: Splay tree
 ---

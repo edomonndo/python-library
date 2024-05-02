@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/FoldableQue.py
-    title: Foldable Queue(SWAG)
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -26,8 +23,7 @@ data:
     \  que.push(a << 32 | b)\n    elif t == 1:\n        que.pop()\n    else:\n   \
     \     x = q[0]\n        c = que.fold()\n        a, b = c >> 32, c & mask\n   \
     \     print((a * x + b) % MOD)\n"
-  dependsOn:
-  - data_structure/FoldableQue.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/queue_operate_all_composite.test.py
   requiredBy: []

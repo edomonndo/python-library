@@ -2,19 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_b_range_sum_query.test.py
-    title: test/aoj/dsl_2_b_range_sum_query.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/point_add_range_sum.test.py
-    title: test/library_checker/data_structure/point_add_range_sum.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/static_range_sum.test.py
-    title: test/library_checker/data_structure/static_range_sum.test.py
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -32,15 +23,12 @@ data:
     \ self.data[r - 1]\n            r -= r & -r\n        return s\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/fenwick_tree.py
+  path: data_structure_basic/fenwick_tree.py
   requiredBy: []
-  timestamp: '2023-06-09 12:11:59+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/aoj/dsl_2_b_range_sum_query.test.py
-  - test/library_checker/data_structure/static_range_sum.test.py
-  - test/library_checker/data_structure/point_add_range_sum.test.py
-documentation_of: data_structure/fenwick_tree.py
+  timestamp: '2024-05-02 15:05:51+09:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: data_structure_basic/fenwick_tree.py
 layout: document
 title: Fenwick Tree
 ---

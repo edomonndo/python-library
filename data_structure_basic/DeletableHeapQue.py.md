@@ -36,12 +36,12 @@ data:
     \ 1 if x in self.HC and self.HC[x] else 0\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/DeletableHeapQue.py
+  path: data_structure_basic/DeletableHeapQue.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/DeletableHeapQue.py
+documentation_of: data_structure_basic/DeletableHeapQue.py
 layout: document
 title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
 ---

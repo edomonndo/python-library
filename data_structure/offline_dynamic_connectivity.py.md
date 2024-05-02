@@ -81,8 +81,5 @@ data:
   - test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
 documentation_of: data_structure/offline_dynamic_connectivity.py
 layout: document
-redirect_from:
-- /library/data_structure/offline_dynamic_connectivity.py
-- /library/data_structure/offline_dynamic_connectivity.py.html
-title: data_structure/offline_dynamic_connectivity.py
+title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
 ---

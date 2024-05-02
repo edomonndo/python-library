@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/FoldableQue.py
-    title: Foldable Queue(SWAG)
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -23,8 +20,7 @@ data:
     \ INF)\nans = []\nfor i in range(L):\n    que.push(A[i])\nans.append(que.fold())\n\
     for i in range(L, N):\n    que.pop()\n    que.push(A[i])\n    ans.append(que.fold())\n\
     print(*ans)\n"
-  dependsOn:
-  - data_structure/FoldableQue.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/dsl_3_d_sliding_minimum_element_swag.test.py
   requiredBy: []

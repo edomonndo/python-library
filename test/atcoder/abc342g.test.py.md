@@ -1,9 +1,6 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/SortedMultiset.py
-    title: SortedMultiset
   - icon: ':warning:'
     path: data_structure/dual_segment_tree_commutative.py
     title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
@@ -36,7 +33,6 @@ data:
     \ - 1, r, -x)\n    else:\n        print(seg.get(q[0] - 1))\n"
   dependsOn:
   - data_structure/dual_segment_tree_commutative.py
-  - data_structure/SortedMultiset.py
   isVerificationFile: true
   path: test/atcoder/abc342g.test.py
   requiredBy: []

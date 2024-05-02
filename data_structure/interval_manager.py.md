@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':warning:'
-    path: data_structure/SortedSet.py
-    title: SortedSet
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':grey_question:'
@@ -60,8 +57,7 @@ data:
     \          s.add(z)\n                    it = z\n        self._add(l, r, x)\n\
     \        s.add(self.Node(l, r, x))\n\n    def __repr__(self):\n        return\
     \ \"\".join(*self.s)\n"
-  dependsOn:
-  - data_structure/SortedSet.py
+  dependsOn: []
   isVerificationFile: false
   path: data_structure/interval_manager.py
   requiredBy: []
