@@ -1,7 +1,25 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: tree/count_stable_set.py
+    title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
+  - icon: ':warning:'
+    path: tree/maximum_matching.py
+    title: "\u6728\u306E\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+  - icon: ':warning:'
+    path: tree/maximum_stable_set.py
+    title: "\u6728\u306E\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+  - icon: ':warning:'
+    path: tree/maximum_weighted_stable_set.py
+    title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+  - icon: ':warning:'
+    path: tree/minimum_edge_cover.py
+    title: "\u6728\u306E\u6700\u5C0F\u8FBA\u88AB\u8986"
+  - icon: ':warning:'
+    path: tree/minimum_vertex_cover.py
+    title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -22,7 +40,13 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: tree/rooted_tree.py
-  requiredBy: []
+  requiredBy:
+  - tree/count_stable_set.py
+  - tree/maximum_stable_set.py
+  - tree/minimum_edge_cover.py
+  - tree/maximum_matching.py
+  - tree/maximum_weighted_stable_set.py
+  - tree/minimum_vertex_cover.py
   timestamp: '2024-04-30 11:25:39+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

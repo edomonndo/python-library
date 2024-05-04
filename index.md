@@ -355,6 +355,9 @@ data:
     - icon: ':warning:'
       path: tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
+    - icon: ':warning:'
+      path: tree/count_stable_set.py
+      title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
     - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
@@ -373,6 +376,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
+    - icon: ':warning:'
+      path: tree/maximum_matching.py
+      title: "\u6728\u306E\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+    - icon: ':warning:'
+      path: tree/maximum_stable_set.py
+      title: "\u6728\u306E\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+    - icon: ':warning:'
+      path: tree/maximum_weighted_stable_set.py
+      title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+    - icon: ':warning:'
+      path: tree/minimum_edge_cover.py
+      title: "\u6728\u306E\u6700\u5C0F\u8FBA\u88AB\u8986"
+    - icon: ':warning:'
+      path: tree/minimum_vertex_cover.py
+      title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
     - icon: ':warning:'
       path: tree/rooted_tree.py
       title: "\u6839\u4ED8\u304D\u6728"
