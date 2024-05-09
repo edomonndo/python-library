@@ -1,29 +1,19 @@
-from tree.rooted_tree import rooted_tree
-
-
-def min_edge_cover(adj: list[list[int]]) -> tuple[int, list[int]]:
+def min_edge_cover(adj: list[list[int]], r: int = 0) -> tuple[int, list[int]]:
     n = len(adj)
-    children, par = rooted_tree(adj, 0)
-
-    deg = [0] * n
-    stack = []
-    for v in range(n):
-        deg[v] = len(children[v])
-        if deg[v] == 0:
-            stack.append(v)
 
     selected = [0] * n
     cnt_selected_edge = 0
+    stack = [(~r, -1), (r, -1)]
     while stack:
-        v = stack.pop()
-        p = par[v]
-
+        v, p = stack.pop()
+        if v >= 0 and selected[v] == 0:
+            for u in adj[v]:
+                if u != p:
+                    stack += [(~u, v), (u, v)]
+            continue
+        v = ~v
         if selected[v] == 0:
             selected[v] = selected[p] = 1
             cnt_selected_edge += 1
-
-        deg[p] -= 1
-        if deg[p] == 0:
-            stack.append(p)
 
     return cnt_selected_edge, selected
