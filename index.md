@@ -332,6 +332,29 @@ data:
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_union_find.py
       title: "\u6C38\u7D9A Union Find"
+  - name: sort
+    pages:
+    - icon: ':warning:'
+      path: sort/bubble_sort.py
+      title: sort/bubble_sort.py
+    - icon: ':warning:'
+      path: sort/heap_sort.py
+      title: sort/heap_sort.py
+    - icon: ':warning:'
+      path: sort/insert_sort.py
+      title: sort/insert_sort.py
+    - icon: ':warning:'
+      path: sort/merge_sort.py
+      title: sort/merge_sort.py
+    - icon: ':warning:'
+      path: sort/quick_sort.py
+      title: sort/quick_sort.py
+    - icon: ':warning:'
+      path: sort/select_sort.py
+      title: sort/select_sort.py
+    - icon: ':warning:'
+      path: sort/tim_sort.py
+      title: sort/tim_sort.py
   - name: string_
     pages:
     - icon: ':heavy_check_mark:'
