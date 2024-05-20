@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_A
 
-from data_structure_basic.unionfind import UnionFind
+from data_structure.basic.unionfind import UnionFind
 
 N, Q = map(int, input().split())
 G = UnionFind(N)

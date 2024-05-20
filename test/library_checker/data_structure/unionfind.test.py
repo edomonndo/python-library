@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind
 
-from data_structure_basic.unionfind import UnionFind
+from data_structure.basic.unionfind import UnionFind
 
 N, Q = map(int, input().split())
 UF = UnionFind(N)
