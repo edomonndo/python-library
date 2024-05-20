@@ -338,6 +338,12 @@ data:
       path: sort/bubble_sort.py
       title: sort/bubble_sort.py
     - icon: ':warning:'
+      path: sort/bucket_sort.py
+      title: sort/bucket_sort.py
+    - icon: ':warning:'
+      path: sort/count_sort.py
+      title: sort/count_sort.py
+    - icon: ':warning:'
       path: sort/heap_sort.py
       title: sort/heap_sort.py
     - icon: ':warning:'
@@ -349,6 +355,12 @@ data:
     - icon: ':warning:'
       path: sort/quick_sort.py
       title: sort/quick_sort.py
+    - icon: ':warning:'
+      path: sort/radix_sort.py
+      title: sort/radix_sort.py
+    - icon: ':warning:'
+      path: sort/random_quick_sort.py
+      title: sort/random_quick_sort.py
     - icon: ':warning:'
       path: sort/select_sort.py
       title: sort/select_sort.py
