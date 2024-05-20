@@ -17,9 +17,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
-    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "class DualSegtree:\n    def __init__(self, V, MAPPING, COMPOSITION, ID):\n\
     \        self.n = len(V)\n        self.log = (self.n - 1).bit_length()\n     \
@@ -56,9 +56,9 @@ data:
   timestamp: '2024-02-26 12:20:09+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/range_affine_point_get.test.py
   - test/aoj/dsl_2_e_range_add_query.test.py
   - test/aoj/dsl_2_d_range_update_query.test.py
-  - test/library_checker/data_structure/range_affine_point_get.test.py
 documentation_of: data_structure/dual_segment_tree.py
 layout: document
 title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"

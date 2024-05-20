@@ -23,9 +23,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
-    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "class LazySegtree:\n    def __init__(self, V, OP, E, MAPPING, COMPOSITION,\
     \ ID):\n        self.n = len(V)\n        self.op = OP\n        self.e = E\n  \
@@ -101,11 +101,11 @@ data:
   timestamp: '2023-08-10 00:04:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/range_affine_range_sum.test.py
   - test/aoj/dsl_2_h_range_add_min_query.test.py
   - test/aoj/dsl_2_i_range_update_sum_query.test.py
-  - test/aoj/dsl_2_g_range_add_sum_query.test.py
   - test/aoj/dsl_2_f_range_update_min_query.test.py
-  - test/library_checker/data_structure/range_affine_range_sum.test.py
+  - test/aoj/dsl_2_g_range_add_sum_query.test.py
 documentation_of: data_structure/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"

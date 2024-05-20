@@ -23,9 +23,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
-    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import heapq\nfrom collections import deque\n\n\nclass BitVector:\n    #\
     \ \u7C21\u6F54\u30C7\u30FC\u30BF\u69CB\u9020\n    # B := \u9577\u3055n\u306E01\u5217\
@@ -199,10 +199,10 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
-  - test/library_checker/data_structure/static_range_frequency.test.py
   - test/library_checker/data_structure/range_kth_smallest.test.py
   - test/library_checker/data_structure/static_range_count_distinct.test.py
+  - test/library_checker/data_structure/static_range_frequency.test.py
+  - test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
   - test/unit_test/wavelet_matrix.test.py
 documentation_of: data_structure/wavelet_matrix.py
 layout: document

@@ -181,6 +181,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure_basic/unionfind.py
       title: Union Find
+  - name: dynamic_programming
+    pages:
+    - icon: ':warning:'
+      path: dynamic_programming/edit_distance.py
+      title: dynamic_programming/edit_distance.py
+    - icon: ':warning:'
+      path: dynamic_programming/knapsack.py
+      title: dynamic_programming/knapsack.py
+    - icon: ':warning:'
+      path: dynamic_programming/longest_increase_subsequence.py
+      title: dynamic_programming/longest_increase_subsequence.py
   - name: embed_cpp
     pages:
     - icon: ':warning:'

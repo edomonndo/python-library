@@ -6,6 +6,9 @@ data:
     title: atcoder/_bit.py
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: dynamic_programming/longest_increase_subsequence.py
+    title: dynamic_programming/longest_increase_subsequence.py
+  - icon: ':warning:'
     path: tree/auxiliary_tree.py
     title: Auxiliary tree
   - icon: ':heavy_check_mark:'
@@ -17,9 +20,9 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
-    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import typing\n\nimport atcoder._bit\n\n\nclass SegTree:\n    def __init__(self,\n\
     \                 op: typing.Callable[[typing.Any, typing.Any], typing.Any],\n\
@@ -70,8 +73,9 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - tree/auxiliary_tree.py
+  - dynamic_programming/longest_increase_subsequence.py
   - tree/euler_tour.py
+  - tree/auxiliary_tree.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

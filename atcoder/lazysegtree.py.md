@@ -20,9 +20,9 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
-    \  File \"/opt/hostedtoolcache/PyPy/3.10.13/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
+    \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import typing\n\nimport atcoder._bit\n\n\nclass LazySegTree:\n    def __init__(\n\
     \            self,\n            op: typing.Callable[[typing.Any, typing.Any],\
@@ -113,8 +113,8 @@ data:
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
-  - test/atcoder/abc341c.test.py
   - test/atcoder/abc035c.test.py
+  - test/atcoder/abc341c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document
 redirect_from:
