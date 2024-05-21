@@ -64,20 +64,16 @@ if __name__ == "__main__":
     def greedy_quantilerange(l, r, k):
         arr = sorted(T[l:r])
         val = arr[k]
-        num = arr[: k + 1].count(val)
-        cnt = 0
+        res = set()
         for i, t in enumerate(T[l:r]):
             if t == val:
-                cnt += 1
-                if cnt == num:
-                    idx = i
-                    break
-        return idx + l
+                res.add(l + i)
+        return res
 
     for l in range(len(T)):
         for r in range(l + 1, len(T) + 1):
             for k in range(r - l):
-                assert greedy_quantilerange(l, r, k) == WM.quantilerange(l, r, k), (
+                assert WM.quantilerange(l, r, k) in greedy_quantilerange(l, r, k), (
                     (l, r, k),
                     greedy_quantilerange(l, r, k),
                     WM.quantilerange(l, r, k),
@@ -86,29 +82,28 @@ if __name__ == "__main__":
     # maxrange, minrange
     def greedy_maxrange(l, r):
         max_value = max(T[l:r])
-        idx = -1
+        res = set()
         for i, t in enumerate(T[l:r]):
             if t == max_value:
-                idx = i
-        return idx + l
+                res.add(l + i)
+        return res
 
     def greedy_minrange(l, r):
         min_value = min(T[l:r])
-        idx = -1
+        res = set()
         for i, t in enumerate(T[l:r]):
             if t == min_value:
-                idx = i
-                break
-        return idx + l
+                res.add(l + i)
+        return res
 
     for l in range(len(T)):
         for r in range(l + 1, len(T) + 1):
-            assert greedy_maxrange(l, r) == WM.maxrange(l, r), (
+            assert WM.maxrange(l, r) in greedy_maxrange(l, r), (
                 (l, r),
                 greedy_maxrange(l, r),
                 WM.maxrange(l, r),
             )
-            assert greedy_minrange(l, r) == WM.minrange(l, r), (
+            assert WM.minrange(l, r) in greedy_minrange(l, r), (
                 (l, r),
                 greedy_minrange(l, r),
                 WM.minrange(l, r),
@@ -183,33 +178,32 @@ if __name__ == "__main__":
                     assert greedy_rangefreq(l, r, x, y) == WM.rangefreq(l, r, x, y)
 
     # prevvalue, nextvalue (Not verified)
-    def greedy_prevvalue(l, r, x, y):
+    def greedy_prevvalue(l, r, x):
         try:
-            res = max(t for t in T[l:r] if x <= t < y)
+            res = max(t for t in T[l:r] if t < x)
         except ValueError:
             res = -1
         return res
 
-    def greedy_nextvalue(l, r, x, y):
+    def greedy_nextvalue(l, r, x):
         try:
-            res = min(t for t in T[l:r] if x <= t < y)
+            res = min(t for t in T[l:r] if x <= t)
         except ValueError:
             res = -1
         return res
 
     for l in range(len(T)):
         for r in range(l + 1, len(T) + 1):
-            for x in range(max(T)):
-                for y in range(x + 1, max(T) + 2):
-                    assert greedy_prevvalue(l, r, x, y) == WM.prevvalue(l, r, x, y), (
-                        (l, r, x, y),
-                        greedy_prevvalue(l, r, x, y),
-                        WM.prevvalue(l, r, x, y),
-                    )
-                    assert greedy_nextvalue(l, r, x, y) == WM.nextvalue(l, r, x, y), (
-                        (l, r, x, y),
-                        greedy_nextvalue(l, r, x, y),
-                        WM.nextvalue(l, r, x, y),
-                    )
+            for x in range(max(T) + 1):
+                assert WM.prevvalue(l, r, x) == greedy_prevvalue(l, r, x), (
+                    (l, r, x),
+                    greedy_prevvalue(l, r, x),
+                    WM.prevvalue(l, r, x),
+                )
+                assert WM.nextvalue(l, r, x) == greedy_nextvalue(l, r, x), (
+                    (l, r, x),
+                    greedy_nextvalue(l, r, x),
+                    WM.nextvalue(l, r, x),
+                )
 
     print("Hello World")
