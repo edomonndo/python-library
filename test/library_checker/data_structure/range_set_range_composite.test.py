@@ -29,7 +29,7 @@ for _ in range(n):
     A.append(a << 30 | b)
 seg = RangeSetRangeComposite(op, 1 << 30, pow_, 1 << 30, A)
 for _ in range(q):
-    t, *qu = map(int, input().spilt())
+    t, *qu = map(int, input().split())
     if t == 0:
         l, r, c, d = qu
         seg.apply(l, r, c << 30 | d)
