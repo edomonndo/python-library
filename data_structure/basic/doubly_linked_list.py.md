@@ -62,12 +62,12 @@ data:
     \ = cur.next\n        return arr\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/doubly_linked_list.py
+  path: data_structure/basic/doubly_linked_list.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/doubly_linked_list.py
+documentation_of: data_structure/basic/doubly_linked_list.py
 layout: document
 title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
 ---

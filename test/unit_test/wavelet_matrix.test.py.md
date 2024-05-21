@@ -41,24 +41,22 @@ data:
     \           (l, r, k),\n                    greedy_quantile(l, r, k),\n      \
     \              WM.quantile(l, r, k),\n                )\n\n    # quantilerange\n\
     \    def greedy_quantilerange(l, r, k):\n        arr = sorted(T[l:r])\n      \
-    \  val = arr[k]\n        num = arr[: k + 1].count(val)\n        cnt = 0\n    \
-    \    for i, t in enumerate(T[l:r]):\n            if t == val:\n              \
-    \  cnt += 1\n                if cnt == num:\n                    idx = i\n   \
-    \                 break\n        return idx + l\n\n    for l in range(len(T)):\n\
-    \        for r in range(l + 1, len(T) + 1):\n            for k in range(r - l):\n\
-    \                assert greedy_quantilerange(l, r, k) == WM.quantilerange(l, r,\
-    \ k), (\n                    (l, r, k),\n                    greedy_quantilerange(l,\
-    \ r, k),\n                    WM.quantilerange(l, r, k),\n                )\n\n\
-    \    # maxrange, minrange\n    def greedy_maxrange(l, r):\n        max_value =\
-    \ max(T[l:r])\n        idx = -1\n        for i, t in enumerate(T[l:r]):\n    \
-    \        if t == max_value:\n                idx = i\n        return idx + l\n\
-    \n    def greedy_minrange(l, r):\n        min_value = min(T[l:r])\n        idx\
-    \ = -1\n        for i, t in enumerate(T[l:r]):\n            if t == min_value:\n\
-    \                idx = i\n                break\n        return idx + l\n\n  \
-    \  for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n     \
-    \       assert greedy_maxrange(l, r) == WM.maxrange(l, r), (\n               \
-    \ (l, r),\n                greedy_maxrange(l, r),\n                WM.maxrange(l,\
-    \ r),\n            )\n            assert greedy_minrange(l, r) == WM.minrange(l,\
+    \  val = arr[k]\n        res = set()\n        for i, t in enumerate(T[l:r]):\n\
+    \            if t == val:\n                res.add(l + i)\n        return res\n\
+    \n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n  \
+    \          for k in range(r - l):\n                assert WM.quantilerange(l,\
+    \ r, k) in greedy_quantilerange(l, r, k), (\n                    (l, r, k),\n\
+    \                    greedy_quantilerange(l, r, k),\n                    WM.quantilerange(l,\
+    \ r, k),\n                )\n\n    # maxrange, minrange\n    def greedy_maxrange(l,\
+    \ r):\n        max_value = max(T[l:r])\n        res = set()\n        for i, t\
+    \ in enumerate(T[l:r]):\n            if t == max_value:\n                res.add(l\
+    \ + i)\n        return res\n\n    def greedy_minrange(l, r):\n        min_value\
+    \ = min(T[l:r])\n        res = set()\n        for i, t in enumerate(T[l:r]):\n\
+    \            if t == min_value:\n                res.add(l + i)\n        return\
+    \ res\n\n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n\
+    \            assert WM.maxrange(l, r) in greedy_maxrange(l, r), (\n          \
+    \      (l, r),\n                greedy_maxrange(l, r),\n                WM.maxrange(l,\
+    \ r),\n            )\n            assert WM.minrange(l, r) in greedy_minrange(l,\
     \ r), (\n                (l, r),\n                greedy_minrange(l, r),\n   \
     \             WM.minrange(l, r),\n            )\n\n    # topk\n    def greedy_topk(l,\
     \ r, k):\n        dic = dict()\n        for t in T[l:r]:\n            if t in\
@@ -90,26 +88,24 @@ data:
     \ r, y) == WM.rangefreq_to(l, r, y)\n                for x in range(0, y):\n \
     \                   assert greedy_rangefreq(l, r, x, y) == WM.rangefreq(l, r,\
     \ x, y)\n\n    # prevvalue, nextvalue (Not verified)\n    def greedy_prevvalue(l,\
-    \ r, x, y):\n        try:\n            res = max(t for t in T[l:r] if x <= t <\
-    \ y)\n        except ValueError:\n            res = -1\n        return res\n\n\
-    \    def greedy_nextvalue(l, r, x, y):\n        try:\n            res = min(t\
-    \ for t in T[l:r] if x <= t < y)\n        except ValueError:\n            res\
-    \ = -1\n        return res\n\n    for l in range(len(T)):\n        for r in range(l\
-    \ + 1, len(T) + 1):\n            for x in range(max(T)):\n                for\
-    \ y in range(x + 1, max(T) + 2):\n                    assert greedy_prevvalue(l,\
-    \ r, x, y) == WM.prevvalue(l, r, x, y), (\n                        (l, r, x, y),\n\
-    \                        greedy_prevvalue(l, r, x, y),\n                     \
-    \   WM.prevvalue(l, r, x, y),\n                    )\n                    assert\
-    \ greedy_nextvalue(l, r, x, y) == WM.nextvalue(l, r, x, y), (\n              \
-    \          (l, r, x, y),\n                        greedy_nextvalue(l, r, x, y),\n\
-    \                        WM.nextvalue(l, r, x, y),\n                    )\n\n\
-    \    print(\"Hello World\")\n"
+    \ r, x):\n        try:\n            res = max(t for t in T[l:r] if t < x)\n  \
+    \      except ValueError:\n            res = -1\n        return res\n\n    def\
+    \ greedy_nextvalue(l, r, x):\n        try:\n            res = min(t for t in T[l:r]\
+    \ if x <= t)\n        except ValueError:\n            res = -1\n        return\
+    \ res\n\n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n\
+    \            for x in range(max(T) + 1):\n                assert WM.prevvalue(l,\
+    \ r, x) == greedy_prevvalue(l, r, x), (\n                    (l, r, x),\n    \
+    \                greedy_prevvalue(l, r, x),\n                    WM.prevvalue(l,\
+    \ r, x),\n                )\n                assert WM.nextvalue(l, r, x) == greedy_nextvalue(l,\
+    \ r, x), (\n                    (l, r, x),\n                    greedy_nextvalue(l,\
+    \ r, x),\n                    WM.nextvalue(l, r, x),\n                )\n\n  \
+    \  print(\"Hello World\")\n"
   dependsOn:
   - data_structure/wavelet_matrix.py
   isVerificationFile: true
   path: test/unit_test/wavelet_matrix.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-05-21 17:51:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/wavelet_matrix.test.py

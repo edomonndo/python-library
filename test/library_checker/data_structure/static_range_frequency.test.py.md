@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/static_range_frequency.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-05-21 17:51:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_range_frequency.test.py

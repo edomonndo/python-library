@@ -23,12 +23,12 @@ data:
     \ self.data[r - 1]\n            r -= r & -r\n        return s\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/fenwick_tree.py
+  path: data_structure/basic/fenwick_tree.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/fenwick_tree.py
+documentation_of: data_structure/basic/fenwick_tree.py
 layout: document
 title: Fenwick Tree
 ---

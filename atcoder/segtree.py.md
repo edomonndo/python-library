@@ -5,6 +5,9 @@ data:
     path: atcoder/_bit.py
     title: atcoder/_bit.py
   _extendedRequiredBy:
+  - icon: ':x:'
+    path: data_structure/range_set_range_composite.py
+    title: data_structure/range_set_range_composite.py
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
     title: dynamic_programming/longest_increase_subsequence.py
@@ -73,6 +76,7 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
+  - data_structure/range_set_range_composite.py
   - dynamic_programming/longest_increase_subsequence.py
   - tree/euler_tour.py
   - tree/auxiliary_tree.py

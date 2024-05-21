@@ -65,6 +65,45 @@ data:
     - icon: ':warning:'
       path: convolution/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+  - name: data_structure/basic
+    pages:
+    - icon: ':warning:'
+      path: data_structure/basic/DeletableHeapQue.py
+      title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+    - icon: ':warning:'
+      path: data_structure/basic/FixedSizeHeapQue.py
+      title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+    - icon: ':warning:'
+      path: data_structure/basic/FoldableDeque.py
+      title: Foldable Deque(DSWAG)
+    - icon: ':warning:'
+      path: data_structure/basic/FoldableQue.py
+      title: Foldable Queue(SWAG)
+    - icon: ':warning:'
+      path: data_structure/basic/SortedMultiset.py
+      title: SortedMultiset
+    - icon: ':warning:'
+      path: data_structure/basic/SortedSet.py
+      title: SortedSet
+    - icon: ':warning:'
+      path: data_structure/basic/deque.py
+      title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
+        \u5408\u8A08\uFF09"
+    - icon: ':warning:'
+      path: data_structure/basic/doubly_linked_list.py
+      title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
+    - icon: ':warning:'
+      path: data_structure/basic/fenwick_tree.py
+      title: Fenwick Tree
+    - icon: ':warning:'
+      path: data_structure/basic/radix_heap.py
+      title: Radix Heap
+    - icon: ':heavy_check_mark:'
+      path: data_structure/basic/segment_tree.py
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/basic/unionfind.py
+      title: Union Find
   - name: data_structure/binary_search_tree
     pages:
     - icon: ':warning:'
@@ -118,6 +157,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/offline_dynamic_connectivity.py
       title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
+    - icon: ':x:'
+      path: data_structure/range_set_range_composite.py
+      title: data_structure/range_set_range_composite.py
     - icon: ':warning:'
       path: data_structure/range_union_find.py
       title: Range Union Find
@@ -130,6 +172,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
+    - icon: ':heavy_check_mark:'
+      path: data_structure/static_range_mode_query.py
+      title: "\u533A\u9593\u6700\u983B\u5024"
     - icon: ':warning:'
       path: data_structure/static_range_parallel_union_find.py
       title: Static Range Parallel Union Find
@@ -142,45 +187,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
-  - name: data_structure_basic
-    pages:
-    - icon: ':warning:'
-      path: data_structure_basic/DeletableHeapQue.py
-      title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
-    - icon: ':warning:'
-      path: data_structure_basic/FixedSizeHeapQue.py
-      title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
-    - icon: ':warning:'
-      path: data_structure_basic/FoldableDeque.py
-      title: Foldable Deque(DSWAG)
-    - icon: ':warning:'
-      path: data_structure_basic/FoldableQue.py
-      title: Foldable Queue(SWAG)
-    - icon: ':warning:'
-      path: data_structure_basic/SortedMultiset.py
-      title: SortedMultiset
-    - icon: ':warning:'
-      path: data_structure_basic/SortedSet.py
-      title: SortedSet
-    - icon: ':warning:'
-      path: data_structure_basic/deque.py
-      title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
-        \u5408\u8A08\uFF09"
-    - icon: ':warning:'
-      path: data_structure_basic/doubly_linked_list.py
-      title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
-    - icon: ':warning:'
-      path: data_structure_basic/fenwick_tree.py
-      title: Fenwick Tree
-    - icon: ':warning:'
-      path: data_structure_basic/radix_heap.py
-      title: Radix Heap
-    - icon: ':heavy_check_mark:'
-      path: data_structure_basic/segment_tree.py
-      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
-    - icon: ':heavy_check_mark:'
-      path: data_structure_basic/unionfind.py
-      title: Union Find
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -693,6 +699,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_set_range_composite.test.py
+      title: test/library_checker/data_structure/range_set_range_composite.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py
@@ -702,6 +711,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.py
       title: test/library_checker/data_structure/static_range_frequency.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/static_range_mode_query.test.py
+      title: test/library_checker/data_structure/static_range_mode_query.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum.test.py
       title: test/library_checker/data_structure/static_range_sum.test.py

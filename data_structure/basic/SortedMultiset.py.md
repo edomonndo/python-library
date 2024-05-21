@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: data_structure/range_set_range_composite.py
+    title: data_structure/range_set_range_composite.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -76,12 +79,13 @@ data:
     \ + bisect.bisect_right(a, x)\n            ans += len(a)\n        return ans\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/SortedMultiset.py
-  requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  path: data_structure/basic/SortedMultiset.py
+  requiredBy:
+  - data_structure/range_set_range_composite.py
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/SortedMultiset.py
+documentation_of: data_structure/basic/SortedMultiset.py
 layout: document
 title: SortedMultiset
 ---

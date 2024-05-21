@@ -76,15 +76,15 @@ data:
     \        return str([self.get(i) for i in range(self.n)])\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/segment_tree.py
+  path: data_structure/basic/segment_tree.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_set_range_composite.test.py
   - test/library_checker/data_structure/static_rmq.test.py
   - test/aoj/dsl_2_a_range_min_query.test.py
-documentation_of: data_structure_basic/segment_tree.py
+documentation_of: data_structure/basic/segment_tree.py
 layout: document
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
 ---

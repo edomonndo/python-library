@@ -39,12 +39,12 @@ data:
     \       return self._popbottom()\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/FoldableDeque.py
+  path: data_structure/basic/FoldableDeque.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/FoldableDeque.py
+documentation_of: data_structure/basic/FoldableDeque.py
 layout: document
 title: Foldable Deque(DSWAG)
 ---

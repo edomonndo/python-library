@@ -47,15 +47,15 @@ data:
     \        return result2\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/unionfind.py
+  path: data_structure/basic/unionfind.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/unionfind.test.py
   - test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
   - test/aoj/dsl_1_a_union_find.test.py
-documentation_of: data_structure_basic/unionfind.py
+documentation_of: data_structure/basic/unionfind.py
 layout: document
 title: Union Find
 ---

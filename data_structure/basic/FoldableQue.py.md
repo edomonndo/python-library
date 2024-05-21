@@ -29,12 +29,12 @@ data:
     \                self._pushtop(x)\n        return self.top[-1]\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/FoldableQue.py
+  path: data_structure/basic/FoldableQue.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/FoldableQue.py
+documentation_of: data_structure/basic/FoldableQue.py
 layout: document
 title: Foldable Queue(SWAG)
 ---

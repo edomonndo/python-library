@@ -52,12 +52,12 @@ data:
     \          continue\n            break\n        self.heap[pos] = newitem\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure_basic/FixedSizeHeapQue.py
+  path: data_structure/basic/FixedSizeHeapQue.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure_basic/FixedSizeHeapQue.py
+documentation_of: data_structure/basic/FixedSizeHeapQue.py
 layout: document
 title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
 ---
