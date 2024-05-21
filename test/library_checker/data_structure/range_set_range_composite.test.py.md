@@ -27,7 +27,7 @@ data:
     \    return a << 30 | b\n\n\nn, q = map(int, input().split())\nA = []\nfor _ in\
     \ range(n):\n    a, b = map(int, input().split())\n    A.append(a << 30 | b)\n\
     seg = RangeSetRangeComposite(op, 1 << 30, pow_, 1 << 30, A)\nfor _ in range(q):\n\
-    \    t, *qu = map(int, input().spilt())\n    if t == 0:\n        l, r, c, d =\
+    \    t, *qu = map(int, input().split())\n    if t == 0:\n        l, r, c, d =\
     \ qu\n        seg.apply(l, r, c << 30 | d)\n    else:\n        l, r, x = qu\n\
     \        res = seg.prod(l, r)\n        a, b = res >> 30, res & mask\n        print((a\
     \ * x + b) % MOD)\n"
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/range_set_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-21 17:51:29+09:00'
+  timestamp: '2024-05-21 22:52:28+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py
