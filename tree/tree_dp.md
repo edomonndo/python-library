@@ -10,7 +10,7 @@ documentation_of: ./tree_dp.py
 
 頂点数$n$の隣接リストで初期化する．デフォルトでは，頂点$0$を根とする．
 
-### `TDP.calc(MAX, mod=10**9+7)`
+### `TDP.calc(MAX)`
 
 組み合わせ計算の前処理.
 

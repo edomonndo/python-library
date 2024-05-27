@@ -34,8 +34,10 @@ def prev_permutation(a: list, l: int = 0, r: int = None) -> bool:
 
 import bisect
 
+MOD = 998244353
 
-def get_permutation_order(A: list, MOD: int = 10**18):
+
+def get_permutation_order(A: list):
     """
     順列のうちaとなるのは何番目か？
     返り値は0-indexed

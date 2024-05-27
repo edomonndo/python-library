@@ -1,27 +1,27 @@
+MOD = 998244353
+
+
 class Comb:
-    def __init__(self, n: int, mod=10**9 + 7):
+    def __init__(self, n: int):
         fact = [1] * (n + 1)
         for i in range(1, n + 1):
-            fact[i] = fact[i - 1] * i % mod
+            fact[i] = fact[i - 1] * i % MOD
         inv_fact = [1] * (n + 1)
-        inv_fact[n] = pow(fact[n], -1, mod)
+        inv_fact[n] = pow(fact[n], -1, MOD)
         for i in range(n - 1, -1, -1):
-            inv_fact[i] = inv_fact[i + 1] * (i + 1) % mod
+            inv_fact[i] = inv_fact[i + 1] * (i + 1) % MOD
         self.fact = fact
         self.inv_fact = inv_fact
-        self.mod = mod
 
     def nCr(self, n: int, r: int) -> int:
         if not 0 <= r <= n:
             return 0
-        return (
-            self.fact[n] * self.inv_fact[r] % self.mod * self.inv_fact[n - r] % self.mod
-        )
+        return self.fact[n] * self.inv_fact[r] % MOD * self.inv_fact[n - r] % MOD
 
     def nPr(self, n: int, r: int) -> int:
         if not 0 <= r <= n:
             return 0
-        return self.fact[n] * self.inv_fact[n - r] % self.mod
+        return self.fact[n] * self.inv_fact[n - r] % MOD
 
     def nHr(self, n: int, r: int) -> int:
         if n == 0 and r == 0:

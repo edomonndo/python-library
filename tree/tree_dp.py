@@ -1,3 +1,6 @@
+MOD = 998244353
+
+
 class TreeDp:
     def __init__(self, n, adj, r=0):
         par = [-1] * n
@@ -17,15 +20,15 @@ class TreeDp:
         self.children = children
         self.order = order
 
-    def calc(self, MAX, mod=10**9 + 7):
+    def calc(self, MAX):
         fa = [1] * (MAX + 1)
         fainv = [1] * (MAX + 1)
         inv = [1] * (MAX + 1)
         for i in range(MAX):
-            fa[i + 1] = fa[i] * (i + 1) % mod
-        fainv[-1] = pow(fa[-1], mod - 2, mod)
+            fa[i + 1] = fa[i] * (i + 1) % MOD
+        fainv[-1] = pow(fa[-1], MOD - 2, MOD)
         for i in range(MAX)[::-1]:
-            fainv[i] = fainv[i + 1] * (i + 1) % mod
+            fainv[i] = fainv[i + 1] * (i + 1) % MOD
         for i in range(1, MAX)[::-1]:
             inv[i] = fainv[i] * fa[i - 1]
         return fa, fainv, inv
