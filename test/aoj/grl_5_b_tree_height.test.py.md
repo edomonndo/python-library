@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl_5_b_tree_height.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-05-27 17:45:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_5_b_tree_height.test.py

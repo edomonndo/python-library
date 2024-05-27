@@ -5,6 +5,9 @@ data:
     path: atcoder/_bit.py
     title: atcoder/_bit.py
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: data_structure/compressed_segtree.py
+    title: data_structure/compressed_segtree.py
   - icon: ':x:'
     path: data_structure/range_set_range_composite.py
     title: data_structure/range_set_range_composite.py
@@ -77,6 +80,7 @@ data:
   path: atcoder/segtree.py
   requiredBy:
   - data_structure/range_set_range_composite.py
+  - data_structure/compressed_segtree.py
   - dynamic_programming/longest_increase_subsequence.py
   - tree/euler_tour.py
   - tree/auxiliary_tree.py

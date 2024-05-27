@@ -124,6 +124,9 @@ data:
       path: data_structure/binary_trie.py
       title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
     - icon: ':warning:'
+      path: data_structure/compressed_segtree.py
+      title: data_structure/compressed_segtree.py
+    - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
     - icon: ':heavy_check_mark:'
@@ -133,6 +136,9 @@ data:
       path: data_structure/dual_segment_tree_commutative.py
       title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (Dual Segment Tree)"
+    - icon: ':x:'
+      path: data_structure/dynamic_segtree.py
+      title: data_structure/dynamic_segtree.py
     - icon: ':warning:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
@@ -187,6 +193,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
+  - name: data_structure/td
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: data_structure/td/dynamic_fenwick_tree_2d.py
+      title: data_structure/td/dynamic_fenwick_tree_2d.py
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -218,6 +229,12 @@ data:
       path: geometory/manhattan_mst.py
       title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
         \u57DF\u6728"
+    - icon: ':x:'
+      path: geometory/offline_point_add_rectangle_sum.py
+      title: geometory/offline_point_add_rectangle_sum.py
+    - icon: ':heavy_check_mark:'
+      path: geometory/offline_static_rectangle_sum.py
+      title: geometory/offline_static_rectangle_sum.py
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
@@ -321,7 +338,7 @@ data:
       title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   - name: matrix
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: matrix/determinant_arbitrary.py
       title: "\u884C\u5217\u5F0F"
     - icon: ':heavy_check_mark:'
@@ -556,6 +573,9 @@ data:
       path: test/aoj/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl_4_a_union_of_rectangles.test.py
     - icon: ':heavy_check_mark:'
+      path: test/aoj/dsl_5_b_the_maximum_number_of_overlaps.test.py
+      title: test/aoj/dsl_5_b_the_maximum_number_of_overlaps.test.py
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl_1_a_dijkstra.test.py
       title: test/aoj/grl_1_a_dijkstra.test.py
     - icon: ':heavy_check_mark:'
@@ -630,6 +650,12 @@ data:
       path: test/atcoder/abc342g.test.py
       title: test/atcoder/abc342g.test.py
     - icon: ':grey_question:'
+      path: test/atcoder/arc008d_dyn_segtree.test.py
+      title: test/atcoder/arc008d_dyn_segtree.test.py
+    - icon: ':grey_question:'
+      path: test/atcoder/arc008d_segtree.test.py
+      title: test/atcoder/arc008d_segtree.test.py
+    - icon: ':grey_question:'
       path: test/atcoder/past6m.test.py
       title: test/atcoder/past6m.test.py
   - name: test/library_checker/convolution
@@ -681,6 +707,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.py
       title: test/library_checker/data_structure/point_add_range_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/point_add_rectangle_sum.test.py
+      title: test/library_checker/data_structure/point_add_rectangle_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_composite.test.py
@@ -703,6 +732,9 @@ data:
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: test/library_checker/data_structure/range_set_range_composite.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/rectangle_sum.test.py
+      title: test/library_checker/data_structure/rectangle_sum.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py
     - icon: ':grey_question:'
@@ -720,6 +752,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq.test.py
       title: test/library_checker/data_structure/static_rmq.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
+      title: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.py
       title: test/library_checker/data_structure/unionfind.test.py
@@ -785,7 +820,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det.test.py
       title: test/library_checker/matrix/matrix_det.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
     - icon: ':heavy_check_mark:'

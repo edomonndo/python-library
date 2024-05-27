@@ -1,7 +1,13 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: geometory/offline_point_add_rectangle_sum.py
+    title: geometory/offline_point_add_rectangle_sum.py
+  - icon: ':heavy_check_mark:'
+    path: geometory/offline_static_rectangle_sum.py
+    title: geometory/offline_static_rectangle_sum.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -25,7 +31,9 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: atcoder/fenwicktree.py
-  requiredBy: []
+  requiredBy:
+  - geometory/offline_static_rectangle_sum.py
+  - geometory/offline_point_add_rectangle_sum.py
   timestamp: '2024-02-05 08:23:41+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

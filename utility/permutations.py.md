@@ -26,7 +26,7 @@ data:
     \              p, q = i + 1, r\n                    while p < q:\n           \
     \             a[p], a[q] = a[q], a[p]\n                        p += 1\n      \
     \                  q -= 1\n                    return True\n    return False\n\
-    \n\nimport bisect\n\n\ndef get_permutation_order(A: list, MOD: int = 10**18):\n\
+    \n\nimport bisect\n\nMOD = 998244353\n\n\ndef get_permutation_order(A: list):\n\
     \    \"\"\"\n    \u9806\u5217\u306E\u3046\u3061a\u3068\u306A\u308B\u306E\u306F\
     \u4F55\u756A\u76EE\u304B\uFF1F\n    \u8FD4\u308A\u5024\u306F0-indexed\n    \"\"\
     \"\n    n = len(A)\n    fact = [1]\n    for i in range(n - 1):\n        x = (fact[-1]\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: utility/permutations.py
   requiredBy: []
-  timestamp: '2023-09-20 16:27:32+09:00'
+  timestamp: '2024-05-27 17:45:23+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/permutations.py

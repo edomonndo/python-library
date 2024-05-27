@@ -15,18 +15,18 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "class TreeDp:\n    def __init__(self, n, adj, r=0):\n        par = [-1] *\
-    \ n\n        children = [[] for _ in range(n)]\n        stack = [r]\n        order\
-    \ = []\n        while stack:\n            u = stack.pop()\n            order.append(u)\n\
-    \            for v in adj[u]:\n                if par[u] != v:\n             \
-    \       par[v] = u\n                    children[u].append(v)\n              \
-    \      stack.append(v)\n        self.n = n\n        self.par = par\n        self.children\
-    \ = children\n        self.order = order\n\n    def calc(self, MAX, mod=10**9\
-    \ + 7):\n        fa = [1] * (MAX + 1)\n        fainv = [1] * (MAX + 1)\n     \
+  code: "MOD = 998244353\n\n\nclass TreeDp:\n    def __init__(self, n, adj, r=0):\n\
+    \        par = [-1] * n\n        children = [[] for _ in range(n)]\n        stack\
+    \ = [r]\n        order = []\n        while stack:\n            u = stack.pop()\n\
+    \            order.append(u)\n            for v in adj[u]:\n                if\
+    \ par[u] != v:\n                    par[v] = u\n                    children[u].append(v)\n\
+    \                    stack.append(v)\n        self.n = n\n        self.par = par\n\
+    \        self.children = children\n        self.order = order\n\n    def calc(self,\
+    \ MAX):\n        fa = [1] * (MAX + 1)\n        fainv = [1] * (MAX + 1)\n     \
     \   inv = [1] * (MAX + 1)\n        for i in range(MAX):\n            fa[i + 1]\
-    \ = fa[i] * (i + 1) % mod\n        fainv[-1] = pow(fa[-1], mod - 2, mod)\n   \
+    \ = fa[i] * (i + 1) % MOD\n        fainv[-1] = pow(fa[-1], MOD - 2, MOD)\n   \
     \     for i in range(MAX)[::-1]:\n            fainv[i] = fainv[i + 1] * (i + 1)\
-    \ % mod\n        for i in range(1, MAX)[::-1]:\n            inv[i] = fainv[i]\
+    \ % MOD\n        for i in range(1, MAX)[::-1]:\n            inv[i] = fainv[i]\
     \ * fa[i - 1]\n        return fa, fainv, inv\n\n    def size(self):\n        res\
     \ = [1] * self.n\n        for v in self.order[1:][::-1]:\n            res[self.par[v]]\
     \ += res[v]\n        return res\n\n    def dp(self, e, op):\n        res = [e]\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: false
   path: tree/tree_dp.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-05-27 17:45:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl_5_b_tree_height.test.py
@@ -63,7 +63,7 @@ title: "(\u5168\u65B9\u4F4D)\u6728DP"
 
 頂点数$n$の隣接リストで初期化する．デフォルトでは，頂点$0$を根とする．
 
-### `TDP.calc(MAX, mod=10**9+7)`
+### `TDP.calc(MAX)`
 
 組み合わせ計算の前処理.
 

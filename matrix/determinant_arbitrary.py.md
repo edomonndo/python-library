@@ -3,31 +3,32 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "def determinant_arbitrary_mod(N, A, mod=998244353):\n    res = 1\n    for\
-    \ i in range(N):\n        for j in range(i + 1, N):\n            while A[j][i]:\n\
-    \                tmp = A[i][i] // A[j][i]\n                if tmp:\n         \
-    \           for k in range(i, N):\n                        A[i][k] -= tmp * A[j][k]\n\
-    \                        A[i][k] %= mod\n                A[i], A[j] = A[j], A[i]\n\
-    \                res *= -1\n                res %= mod\n        res *= A[i][i]\n\
-    \        res %= mod\n        if not res:\n            break\n    return res\n"
+  code: "MOD = 998244353\n\n\ndef determinant_arbitrary_mod(N, A):\n    res = 1\n\
+    \    for i in range(N):\n        for j in range(i + 1, N):\n            while\
+    \ A[j][i]:\n                tmp = A[i][i] // A[j][i]\n                if tmp:\n\
+    \                    for k in range(i, N):\n                        A[i][k] -=\
+    \ tmp * A[j][k]\n                        A[i][k] %= MOD\n                A[i],\
+    \ A[j] = A[j], A[i]\n                res *= -1\n                res %= MOD\n \
+    \       res *= A[i][i]\n        res %= MOD\n        if not res:\n            break\n\
+    \    return res\n"
   dependsOn: []
   isVerificationFile: false
   path: matrix/determinant_arbitrary.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-05-27 17:45:23+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
 documentation_of: matrix/determinant_arbitrary.py
