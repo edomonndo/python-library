@@ -1,6 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_set_range_composite
 
 from data_structure.range_set_range_composite import RangeSetRangeComposite
+from utility.fast_power import fast_power
 
 MOD = 998244353
 mask = (1 << 30) - 1
@@ -14,7 +15,7 @@ def op(x, y):
 
 def pow_(x: int, y: int):
     x0, x1 = x >> 30, x & mask
-    a = pow(x0, y, MOD)
+    a = fast_power(x0, y)
     if x0 <= 1:
         b = y * x0 * x1 % MOD
     else:

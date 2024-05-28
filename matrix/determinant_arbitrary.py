@@ -1,7 +1,7 @@
 MOD = 998244353
 
 
-def determinant_arbitrary_mod(N, A):
+def determinant_arbitrary_mod(N, A, MOD):
     res = 1
     for i in range(N):
         for j in range(i + 1, N):

@@ -98,14 +98,3 @@ class DynamicSegtree:
 
     def all_prod(self):
         return self.root.product if self.root else self.e
-
-
-n, q = map(int, input().split())
-inf = 10**10
-A = [int(x) for x in input().split()]
-seg = DynamicSegtree(n, min, inf)
-for i, a in enumerate(A):
-    seg.set(i, a)
-for _ in range(q):
-    l, r = map(int, input().split())
-    print(seg.prod(l, r))
