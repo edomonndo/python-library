@@ -1,16 +1,18 @@
-from typing import Callable
+from typing import TypeVar, Callable
 from atcoder.segtree import SegTree
 from data_structure.basic.SortedMultiset import SortedMultiset
+
+T = TypeVar("T")
 
 
 class RangeSetRangeComposite:
     def __init__(
         self,
-        op: Callable[[int, int], int],
-        e: int,
-        pow_: Callable[[int, int], int],
-        id_: int,
-        A: list[int],
+        op: Callable[[T, T], T],
+        e: T,
+        pow_: Callable[[T, int], T],
+        id_: T,
+        A: list[T],
     ):
         self.op = op
         self.e = e
@@ -37,7 +39,7 @@ class RangeSetRangeComposite:
             res = self.op(res, self.pow(self.val[r1], r - r1))
         return res
 
-    def apply(self, l: int, r: int, f: int) -> None:
+    def apply(self, l: int, r: int, f: T) -> None:
         idx, val, beki, seg = self.idx, self.val, self.beki, self.seg
 
         l0, r0 = idx.le(l), idx.le(r)

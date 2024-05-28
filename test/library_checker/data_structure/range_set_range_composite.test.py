@@ -9,7 +9,7 @@ mask = (1 << 30) - 1
 def op(x, y):
     x0, x1 = x >> 30, x & mask
     y0, y1 = y >> 30, y & mask
-    return (x0 * y0 % MOD) << 30 | (y0 * x1 + y1) % MOD
+    return (x0 * y0 % MOD) << 30 | ((y0 * x1 + y1) % MOD)
 
 
 def pow_(x: int, y: int):
@@ -18,7 +18,7 @@ def pow_(x: int, y: int):
     if x0 <= 1:
         b = y * x0 * x1 % MOD
     else:
-        b = (a - 1) * pow(a - 1, -1, MOD) * x1 % MOD
+        b = (a - 1) * pow(a - 1, MOD - 2, MOD) * x1 % MOD
     return a << 30 | b
 
 

@@ -44,7 +44,7 @@ class OfflinePointAddRectangleSum:
             for i in range(l, m):
                 if self.qs[i][0] == -1:
                     toY.append(self.qs[i][2])
-                    P.append(self.q[i])
+                    P.append(self.qs[i])
             toY.sort()
             for i in range(l_point):
                 _, x, y, w = P[i]

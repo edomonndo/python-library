@@ -10,6 +10,6 @@ seg = DynamicSegtree(n, min, inf)
 for i, a in enumerate(A):
     seg[i] = a
 
-for _ in range(Q):
+for _ in range(q):
     l, r = map(int, input().split())
     print(seg.prod(l, r))
