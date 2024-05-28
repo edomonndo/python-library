@@ -21,14 +21,14 @@ data:
     \nfrom data_structure.dynamic_segtree import DynamicSegtree\n\nn, q = map(int,\
     \ input().split())\nA = list(map(int, input().split()))\n\ninf = 1 << 60\nseg\
     \ = DynamicSegtree(n, min, inf)\nfor i, a in enumerate(A):\n    seg[i] = a\n\n\
-    for _ in range(Q):\n    l, r = map(int, input().split())\n    print(seg.prod(l,\
+    for _ in range(q):\n    l, r = map(int, input().split())\n    print(seg.prod(l,\
     \ r))\n"
   dependsOn:
   - data_structure/dynamic_segtree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-28 15:29:52+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py

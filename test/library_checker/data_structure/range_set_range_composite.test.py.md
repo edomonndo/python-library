@@ -21,9 +21,9 @@ data:
     \nfrom data_structure.range_set_range_composite import RangeSetRangeComposite\n\
     \nMOD = 998244353\nmask = (1 << 30) - 1\n\n\ndef op(x, y):\n    x0, x1 = x >>\
     \ 30, x & mask\n    y0, y1 = y >> 30, y & mask\n    return (x0 * y0 % MOD) <<\
-    \ 30 | (y0 * x1 + y1) % MOD\n\n\ndef pow_(x: int, y: int):\n    x0, x1 = x >>\
+    \ 30 | ((y0 * x1 + y1) % MOD)\n\n\ndef pow_(x: int, y: int):\n    x0, x1 = x >>\
     \ 30, x & mask\n    a = pow(x0, y, MOD)\n    if x0 <= 1:\n        b = y * x0 *\
-    \ x1 % MOD\n    else:\n        b = (a - 1) * pow(a - 1, -1, MOD) * x1 % MOD\n\
+    \ x1 % MOD\n    else:\n        b = (a - 1) * pow(a - 1, MOD - 2, MOD) * x1 % MOD\n\
     \    return a << 30 | b\n\n\nn, q = map(int, input().split())\nA = []\nfor _ in\
     \ range(n):\n    a, b = map(int, input().split())\n    A.append(a << 30 | b)\n\
     seg = RangeSetRangeComposite(op, 1 << 30, pow_, 1 << 30, A)\nfor _ in range(q):\n\
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/range_set_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-21 22:52:28+09:00'
+  timestamp: '2024-05-28 15:29:52+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_point_add_rectangle_sum.py
     title: geometory/offline_point_add_rectangle_sum.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/point_add_rectangle_sum
     links:
@@ -30,8 +30,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/point_add_rectangle_sum.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-28 15:29:52+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/point_add_rectangle_sum.test.py
 layout: document

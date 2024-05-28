@@ -29,7 +29,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/arc008d_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-28 15:29:52+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc008d_dyn_segtree.test.py

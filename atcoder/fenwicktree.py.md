@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_point_add_rectangle_sum.py
     title: geometory/offline_point_add_rectangle_sum.py
   - icon: ':heavy_check_mark:'

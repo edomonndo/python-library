@@ -179,6 +179,12 @@ data:
       path: data_structure/sparse_table.py
       title: Sparse table
     - icon: ':heavy_check_mark:'
+      path: data_structure/static_range_inversion_query.py
+      title: data_structure/static_range_inversion_query.py
+    - icon: ':heavy_check_mark:'
+      path: data_structure/static_range_lis_query.py
+      title: data_structure/static_range_lis_query.py
+    - icon: ':heavy_check_mark:'
       path: data_structure/static_range_mode_query.py
       title: "\u533A\u9593\u6700\u983B\u5024"
     - icon: ':warning:'
@@ -229,7 +235,7 @@ data:
       path: geometory/manhattan_mst.py
       title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
         \u57DF\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/offline_point_add_rectangle_sum.py
       title: geometory/offline_point_add_rectangle_sum.py
     - icon: ':heavy_check_mark:'
@@ -707,7 +713,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.py
       title: test/library_checker/data_structure/point_add_range_sum.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_rectangle_sum.test.py
       title: test/library_checker/data_structure/point_add_rectangle_sum.test.py
     - icon: ':heavy_check_mark:'
@@ -744,11 +750,20 @@ data:
       path: test/library_checker/data_structure/static_range_frequency.test.py
       title: test/library_checker/data_structure/static_range_frequency.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/static_range_inversion_query.test.py
+      title: test/library_checker/data_structure/static_range_inversion_query.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/static_range_lis_query.test.py
+      title: test/library_checker/data_structure/static_range_lis_query.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_mode_query.test.py
       title: test/library_checker/data_structure/static_range_mode_query.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum.test.py
       title: test/library_checker/data_structure/static_range_sum.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
+      title: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq.test.py
       title: test/library_checker/data_structure/static_rmq.test.py

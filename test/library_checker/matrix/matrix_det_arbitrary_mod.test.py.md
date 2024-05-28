@@ -23,12 +23,12 @@ data:
     from matrix.determinant_arbitrary import determinant_arbitrary_mod
 
 
-    N, M = map(int, input().split())
+    N, MOD = map(int, input().split())
 
     A = [list(map(int, input().split())) for _ in range(N)]
 
 
-    print(determinant_arbitrary_mod(N, A, M))
+    print(determinant_arbitrary_mod(N, A))
 
     '
   dependsOn:
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-28 15:29:52+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py

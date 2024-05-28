@@ -6,12 +6,12 @@ data:
     title: atcoder/fenwicktree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_add_rectangle_sum.test.py
     title: test/library_checker/data_structure/point_add_rectangle_sum.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -39,15 +39,15 @@ data:
     \u5BFE\u3057\u3066\uFF0Cy\u5EA7\u6A19\u3067\u30BD\u30FC\u30C8&\u5EA7\u5727\n \
     \           toY, P = [], []\n            for i in range(l, m):\n             \
     \   if self.qs[i][0] == -1:\n                    toY.append(self.qs[i][2])\n \
-    \                   P.append(self.q[i])\n            toY.sort()\n            for\
-    \ i in range(l_point):\n                _, x, y, w = P[i]\n                y_\
-    \ = bisect_left(toY, y)\n                P[i] = (x, y_, w)\n\n            # \u30A4\
-    \u30D9\u30F3\u30C8\u30BD\u30FC\u30C8\n            Q = []\n            for i in\
-    \ range(m, r):\n                if self.qs[i][0] != -1:\n                    qi,\
-    \ x1, y1, x2, y2 = self.qs[i]\n                    y1_ = bisect_left(toY, y1)\n\
-    \                    y2_ = bisect_left(toY, y2)\n                    Q += [(~qi,\
-    \ x1, y1_, y2_), (qi, x2, y1_, y2_)]\n\n            # x\u5EA7\u6A19\u3067\u30BD\
-    \u30FC\u30C8\n            P.sort(key=lambda p: p[0])\n            Q.sort(key=lambda\
+    \                   P.append(self.qs[i])\n            toY.sort()\n           \
+    \ for i in range(l_point):\n                _, x, y, w = P[i]\n              \
+    \  y_ = bisect_left(toY, y)\n                P[i] = (x, y_, w)\n\n           \
+    \ # \u30A4\u30D9\u30F3\u30C8\u30BD\u30FC\u30C8\n            Q = []\n         \
+    \   for i in range(m, r):\n                if self.qs[i][0] != -1:\n         \
+    \           qi, x1, y1, x2, y2 = self.qs[i]\n                    y1_ = bisect_left(toY,\
+    \ y1)\n                    y2_ = bisect_left(toY, y2)\n                    Q +=\
+    \ [(~qi, x1, y1_, y2_), (qi, x2, y1_, y2_)]\n\n            # x\u5EA7\u6A19\u3067\
+    \u30BD\u30FC\u30C8\n            P.sort(key=lambda p: p[0])\n            Q.sort(key=lambda\
     \ q: q[1])\n\n            # \u5E73\u9762\u8D70\u67FB\n            fw = FenwickTree(len(toY))\n\
     \            pi, qi = 0, 0\n            while qi < len(Q):\n                if\
     \ pi == len(P) or Q[qi][1] <= P[pi][0]:\n                    i, x, y1, y2 = Q[qi]\n\
@@ -61,8 +61,8 @@ data:
   isVerificationFile: false
   path: geometory/offline_point_add_rectangle_sum.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-28 15:29:52+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_add_rectangle_sum.test.py
 documentation_of: geometory/offline_point_add_rectangle_sum.py
