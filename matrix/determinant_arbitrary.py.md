@@ -3,20 +3,20 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
     title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "MOD = 998244353\n\n\ndef determinant_arbitrary_mod(N, A):\n    res = 1\n\
-    \    for i in range(N):\n        for j in range(i + 1, N):\n            while\
+  code: "MOD = 998244353\n\n\ndef determinant_arbitrary_mod(N, A, MOD):\n    res =\
+    \ 1\n    for i in range(N):\n        for j in range(i + 1, N):\n            while\
     \ A[j][i]:\n                tmp = A[i][i] // A[j][i]\n                if tmp:\n\
     \                    for k in range(i, N):\n                        A[i][k] -=\
     \ tmp * A[j][k]\n                        A[i][k] %= MOD\n                A[i],\
@@ -27,8 +27,8 @@ data:
   isVerificationFile: false
   path: matrix/determinant_arbitrary.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-29 07:39:33+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
 documentation_of: matrix/determinant_arbitrary.py

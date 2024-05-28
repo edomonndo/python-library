@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/dynamic_segtree.py
     title: data_structure/dynamic_segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
@@ -28,8 +28,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-28 15:29:52+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-29 07:39:33+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/dynamic_segtree.py
     title: data_structure/dynamic_segtree.py
   _extendedRequiredBy: []
@@ -29,7 +29,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/arc008d_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-28 15:29:52+09:00'
+  timestamp: '2024-05-29 07:39:33+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc008d_dyn_segtree.test.py

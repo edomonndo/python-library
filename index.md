@@ -136,7 +136,7 @@ data:
       path: data_structure/dual_segment_tree_commutative.py
       title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (Dual Segment Tree)"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/dynamic_segtree.py
       title: data_structure/dynamic_segtree.py
     - icon: ':warning:'
@@ -344,7 +344,7 @@ data:
       title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   - name: matrix
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: matrix/determinant_arbitrary.py
       title: "\u884C\u5217\u5F0F"
     - icon: ':heavy_check_mark:'
@@ -486,7 +486,7 @@ data:
     - icon: ':warning:'
       path: utility/convert_base.py
       title: "\u9032\u6570\u5909\u63DB"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
     - icon: ':warning:'
@@ -761,13 +761,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum.test.py
       title: test/library_checker/data_structure/static_range_sum.test.py
-    - icon: ':x:'
-      path: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
-      title: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq.test.py
       title: test/library_checker/data_structure/static_rmq.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
       title: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
     - icon: ':heavy_check_mark:'
@@ -835,7 +832,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det.test.py
       title: test/library_checker/matrix/matrix_det.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
       title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
     - icon: ':heavy_check_mark:'

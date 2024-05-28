@@ -6,12 +6,12 @@ data:
   - icon: ':grey_question:'
     path: test/atcoder/arc008d_dyn_segtree.test.py
     title: test/atcoder/arc008d_dyn_segtree.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
     title: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -57,16 +57,13 @@ data:
     \           if l <= cur.idx < r:\n                res = self.op(res, cur.value)\n\
     \            c = (a + b) >> 1\n            stack += [(cur.l, a, c), (cur.r, c,\
     \ b)]\n        return res\n\n    def all_prod(self):\n        return self.root.product\
-    \ if self.root else self.e\n\n\nn, q = map(int, input().split())\ninf = 10**10\n\
-    A = [int(x) for x in input().split()]\nseg = DynamicSegtree(n, min, inf)\nfor\
-    \ i, a in enumerate(A):\n    seg.set(i, a)\nfor _ in range(q):\n    l, r = map(int,\
-    \ input().split())\n    print(seg.prod(l, r))\n"
+    \ if self.root else self.e\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/dynamic_segtree.py
   requiredBy: []
-  timestamp: '2024-05-28 15:29:52+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-29 07:39:33+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   - test/atcoder/arc008d_dyn_segtree.test.py

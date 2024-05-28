@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: matrix/determinant_arbitrary.py
     title: "\u884C\u5217\u5F0F"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_det_arbitrary_mod
     links:
@@ -28,7 +28,7 @@ data:
     A = [list(map(int, input().split())) for _ in range(N)]
 
 
-    print(determinant_arbitrary_mod(N, A))
+    print(determinant_arbitrary_mod(N, A, MOD))
 
     '
   dependsOn:
@@ -36,8 +36,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2024-05-28 15:29:52+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-29 07:39:33+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
 layout: document
