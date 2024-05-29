@@ -419,6 +419,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: string_/z_algorithm.py
       title: Z algorithm
+  - name: test/library_checker/data_structure
+    pages:
+    - icon: ':warning:'
+      path: test/library_checker/data_structure/predecessor_problem.py
+      title: test/library_checker/data_structure/predecessor_problem.py
   - name: tree
     pages:
     - icon: ':warning:'
