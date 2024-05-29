@@ -166,7 +166,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/offline_dynamic_connectivity.py
       title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/range_set_range_composite.py
       title: data_structure/range_set_range_composite.py
     - icon: ':warning:'
@@ -494,7 +494,7 @@ data:
     - icon: ':warning:'
       path: utility/convert_base.py
       title: "\u9032\u6570\u5909\u63DB"
-    - icon: ':x:'
+    - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
     - icon: ':warning:'
@@ -742,7 +742,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: test/library_checker/data_structure/range_set_range_composite.test.py
     - icon: ':heavy_check_mark:'

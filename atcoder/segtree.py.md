@@ -8,7 +8,7 @@ data:
   - icon: ':warning:'
     path: data_structure/compressed_segtree.py
     title: data_structure/compressed_segtree.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/range_set_range_composite.py
     title: data_structure/range_set_range_composite.py
   - icon: ':warning:'

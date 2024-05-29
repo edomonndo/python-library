@@ -30,7 +30,7 @@ data:
   isVerificationFile: false
   path: test/library_checker/data_structure/predecessor_problem.py
   requiredBy: []
-  timestamp: '2024-05-29 11:44:58+09:00'
+  timestamp: '2024-05-29 13:44:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/predecessor_problem.py

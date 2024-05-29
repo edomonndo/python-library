@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/library_checker/data_structure/range_set_range_composite.test.py
-    title: test/library_checker/data_structure/range_set_range_composite.test.py
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -25,9 +22,8 @@ data:
   path: utility/fast_power.py
   requiredBy: []
   timestamp: '2024-05-29 07:39:33+09:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/library_checker/data_structure/range_set_range_composite.test.py
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: utility/fast_power.py
 layout: document
 title: "\u51AA\u4E57"

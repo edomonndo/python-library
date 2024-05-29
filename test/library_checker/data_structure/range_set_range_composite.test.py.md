@@ -1,17 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/range_set_range_composite.py
     title: data_structure/range_set_range_composite.py
-  - icon: ':x:'
-    path: utility/fast_power.py
-    title: "\u51AA\u4E57"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/range_set_range_composite
     links:
@@ -22,26 +19,25 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_set_range_composite\n\
     \nfrom data_structure.range_set_range_composite import RangeSetRangeComposite\n\
-    from utility.fast_power import fast_power\n\nMOD = 998244353\nmask = (1 << 30)\
-    \ - 1\n\n\ndef op(x, y):\n    x0, x1 = x >> 30, x & mask\n    y0, y1 = y >> 30,\
-    \ y & mask\n    return (x0 * y0 % MOD) << 30 | ((y0 * x1 + y1) % MOD)\n\n\ndef\
-    \ pow_(x: int, y: int):\n    x0, x1 = x >> 30, x & mask\n    a = fast_power(x0,\
-    \ y)\n    if x0 <= 1:\n        b = y * x0 * x1 % MOD\n    else:\n        b = (a\
-    \ - 1) * pow(a - 1, MOD - 2, MOD) * x1 % MOD\n    return a << 30 | b\n\n\nn, q\
-    \ = map(int, input().split())\nA = []\nfor _ in range(n):\n    a, b = map(int,\
-    \ input().split())\n    A.append(a << 30 | b)\nseg = RangeSetRangeComposite(op,\
-    \ 1 << 30, pow_, 1 << 30, A)\nfor _ in range(q):\n    t, *qu = map(int, input().split())\n\
-    \    if t == 0:\n        l, r, c, d = qu\n        seg.apply(l, r, c << 30 | d)\n\
-    \    else:\n        l, r, x = qu\n        res = seg.prod(l, r)\n        a, b =\
-    \ res >> 30, res & mask\n        print((a * x + b) % MOD)\n"
+    \nMOD = 998244353\nmask = (1 << 30) - 1\n\n\ndef op(x, y):\n    x0, x1 = x >>\
+    \ 30, x & mask\n    y0, y1 = y >> 30, y & mask\n    return (x0 * y0 % MOD) <<\
+    \ 30 | ((y0 * x1 + y1) % MOD)\n\n\ndef pow_(x: int, y: int):\n    x0, x1 = x >>\
+    \ 30, x & mask\n    a = pow(x0, y, MOD)\n    if x0 <= 1:\n        b = y * x0 *\
+    \ x1 % MOD\n    else:\n        b = (a - 1) * pow(x0 - 1, -1, MOD) * x1 % MOD\n\
+    \    return a << 30 | b\n\n\nn, q = map(int, input().split())\nA = []\nfor _ in\
+    \ range(n):\n    a, b = map(int, input().split())\n    A.append(a << 30 | b)\n\
+    seg = RangeSetRangeComposite(op, 1 << 30, pow_, 1 << 30, A)\nfor _ in range(q):\n\
+    \    t, *qu = map(int, input().split())\n    if t == 0:\n        l, r, c, d =\
+    \ qu\n        seg.apply(l, r, c << 30 | d)\n    else:\n        l, r, x = qu\n\
+    \        res = seg.prod(l, r)\n        a, b = res >> 30, res & mask\n        print((a\
+    \ * x + b) % MOD)\n"
   dependsOn:
   - data_structure/range_set_range_composite.py
-  - utility/fast_power.py
   isVerificationFile: true
   path: test/library_checker/data_structure/range_set_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-29 09:59:50+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-29 13:44:06+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py
 layout: document
