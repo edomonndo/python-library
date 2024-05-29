@@ -12,7 +12,7 @@ class WordsizeTreeSet:
             n >>= 5
             A = array("I", bytes(4 * (n + 1)))
             for a_ in a:
-                assert 0 <= a_ < n
+                assert 0 <= a_ < self.n
                 if A[a_ >> 5] >> (a_ & 31) & 1 == 0:
                     size += 1
                     A[a_ >> 5] |= 1 << (a_ & 31)
@@ -99,7 +99,7 @@ class WordsizeTreeSet:
                 d -= 1
         return x
 
-    def le(self, x: int) -> int:
+    def lt(self, x: int) -> int:
         assert 0 <= x < self.n
         if x - 1 == 0:
             return -1
