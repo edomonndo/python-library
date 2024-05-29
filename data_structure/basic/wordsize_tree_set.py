@@ -4,15 +4,17 @@ from array import array
 class WordsizeTreeSet:
 
     def __init__(self, n: int, a: list[int] = None):
+        assert n > 0
         self.n = n
         data = []
-        len_ = 0
+        size = 0
         if a:
             n >>= 5
             A = array("I", bytes(4 * (n + 1)))
             for a_ in a:
+                assert 0 <= a_ < n
                 if A[a_ >> 5] >> (a_ & 31) & 1 == 0:
-                    len_ += 1
+                    size += 1
                     A[a_ >> 5] |= 1 << (a_ & 31)
             data.append(A)
             while n:
@@ -28,23 +30,24 @@ class WordsizeTreeSet:
                 n >>= 5
                 data.append(array("I", bytes(4 * (n + 1))))
         self.data = data
-        self.len = len_
-        self.len_data = len(data)
+        self.size = size
 
     def add(self, x: int) -> bool:
-        if self.data[0][x >> 5] >> (x & 31) & 1:
+        data = self.data
+        if data[0][x >> 5] >> (x & 31) & 1:
             return False
-        for a in self.data:
+        for a in data:
             a[x >> 5] |= 1 << (x & 31)
             x >>= 5
-        self.len += 1
+        self.size += 1
         return True
 
     def discard(self, x: int) -> bool:
-        if self.data[0][x >> 5] >> (x & 31) & 1 == 0:
+        data = self.data
+        if data[0][x >> 5] >> (x & 31) & 1 == 0:
             return False
-        self.len -= 1
-        for a in self.data:
+        self.size -= 1
+        for a in data:
             a[x >> 5] &= ~(1 << (x & 31))
             x >>= 5
             if a[x]:
@@ -56,7 +59,7 @@ class WordsizeTreeSet:
         d = 0
         data = self.data
         while True:
-            if d >= self.len_data or x >> 5 >= len(data[d]):
+            if d >= len(data) or x >> 5 >= len(data[d]):
                 return -1
             m = data[d][x >> 5] & ((~0) << (x & 31))
             if m == 0:
@@ -81,7 +84,7 @@ class WordsizeTreeSet:
         d = 0
         data = self.data
         while True:
-            if x < 0 or d >= self.len_data:
+            if x < 0 or d >= len(data):
                 return -1
             m = data[d][x >> 5] & ~((~1) << (x & 31))
             if m == 0:
@@ -98,7 +101,14 @@ class WordsizeTreeSet:
 
     def le(self, x: int) -> int:
         assert 0 <= x < self.n
+        if x - 1 == 0:
+            return -1
         return self.le(x - 1)
 
-    def member(self, x):
+    def member(self, x: int) -> int:
         return self.data[0][x >> 5] >> (x & 31) & 1
+
+    __contains__ = member
+
+    def __len__(self):
+        return self.size
