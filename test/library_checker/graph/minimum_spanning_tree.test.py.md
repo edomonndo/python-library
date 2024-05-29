@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: atcoder/dsu.py
     title: atcoder/dsu.py
   _extendedRequiredBy: []
@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/minimum_spanning_tree.test.py
   requiredBy: []
-  timestamp: '2024-04-30 09:44:21+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/minimum_spanning_tree.test.py

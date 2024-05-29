@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc341c.test.py
   requiredBy: []
-  timestamp: '2024-03-16 01:29:20+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc341c.test.py

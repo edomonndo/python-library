@@ -40,7 +40,7 @@ data:
   isVerificationFile: false
   path: geometory/offline_static_rectangle_sum.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/rectangle_sum.test.py

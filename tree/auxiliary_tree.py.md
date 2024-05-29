@@ -49,7 +49,7 @@ data:
   isVerificationFile: false
   path: tree/auxiliary_tree.py
   requiredBy: []
-  timestamp: '2024-02-12 09:54:43+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tree/auxiliary_tree.py

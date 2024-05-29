@@ -34,7 +34,7 @@ data:
   isVerificationFile: false
   path: data_structure/compressed_segtree.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
   - test/atcoder/arc008d_segtree.test.py

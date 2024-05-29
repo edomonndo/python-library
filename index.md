@@ -10,18 +10,9 @@ data:
       path: atcoder/__main__.py
       title: atcoder/__main__.py
     - icon: ':warning:'
-      path: atcoder/_bit.py
-      title: atcoder/_bit.py
-    - icon: ':warning:'
-      path: atcoder/_math.py
-      title: atcoder/_math.py
-    - icon: ':warning:'
-      path: atcoder/_scc.py
-      title: atcoder/_scc.py
-    - icon: ':warning:'
       path: atcoder/convolution.py
       title: atcoder/convolution.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
     - icon: ':warning:'
@@ -234,7 +225,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: geometory/manhattan_mst.py
       title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
         \u57DF\u6728"
@@ -806,7 +797,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dominator_tree.test.py
       title: test/library_checker/graph/dominator_tree.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/manhattanmst.test.py
       title: test/library_checker/graph/manhattanmst.test.py
     - icon: ':heavy_check_mark:'

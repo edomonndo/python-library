@@ -47,7 +47,7 @@ data:
   isVerificationFile: false
   path: dynamic_programming/longest_increase_subsequence.py
   requiredBy: []
-  timestamp: '2024-05-20 11:42:23+09:00'
+  timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: dynamic_programming/longest_increase_subsequence.py
