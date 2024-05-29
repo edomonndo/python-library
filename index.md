@@ -104,6 +104,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
+    - icon: ':warning:'
+      path: data_structure/basic/wordsize_tree_set.py
+      title: data_structure/basic/wordsize_tree_set.py
   - name: data_structure/binary_search_tree
     pages:
     - icon: ':warning:'

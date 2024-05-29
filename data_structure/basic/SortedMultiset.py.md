@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':x:'
-    path: data_structure/range_set_range_composite.py
-    title: data_structure/range_set_range_composite.py
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -80,8 +77,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/basic/SortedMultiset.py
-  requiredBy:
-  - data_structure/range_set_range_composite.py
+  requiredBy: []
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
