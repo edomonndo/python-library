@@ -1,17 +1,28 @@
-import typing
+from typing import Callable, TypeVar
 
-import atcoder._bit
+
+def _ceil_pow2(n: int) -> int:
+    x = 0
+    while (1 << x) < n:
+        x += 1
+
+    return x
+
+
+S = TypeVar("S")
+F = TypeVar("F")
 
 
 class LazySegTree:
     def __init__(
-            self,
-            op: typing.Callable[[typing.Any, typing.Any], typing.Any],
-            e: typing.Any,
-            mapping: typing.Callable[[typing.Any, typing.Any], typing.Any],
-            composition: typing.Callable[[typing.Any, typing.Any], typing.Any],
-            id_: typing.Any,
-            v: typing.Union[int, typing.List[typing.Any]]) -> None:
+        self,
+        op: Callable[[S, S], S],
+        e: S,
+        mapping: Callable[[S, F], S],
+        composition: Callable[[F, F], F],
+        id_: F,
+        v: int | list[S],
+    ) -> None:
         self._op = op
         self._e = e
         self._mapping = mapping
@@ -22,7 +33,7 @@ class LazySegTree:
             v = [e] * v
 
         self._n = len(v)
-        self._log = atcoder._bit._ceil_pow2(self._n)
+        self._log = _ceil_pow2(self._n)
         self._size = 1 << self._log
         self._d = [e] * (2 * self._size)
         self._lz = [self._id] * self._size
@@ -31,7 +42,7 @@ class LazySegTree:
         for i in range(self._size - 1, 0, -1):
             self._update(i)
 
-    def set(self, p: int, x: typing.Any) -> None:
+    def set(self, p: int, x: S) -> None:
         assert 0 <= p < self._n
 
         p += self._size
@@ -41,7 +52,7 @@ class LazySegTree:
         for i in range(1, self._log + 1):
             self._update(p >> i)
 
-    def get(self, p: int) -> typing.Any:
+    def get(self, p: int) -> S:
         assert 0 <= p < self._n
 
         p += self._size
@@ -49,7 +60,7 @@ class LazySegTree:
             self._push(p >> i)
         return self._d[p]
 
-    def prod(self, left: int, right: int) -> typing.Any:
+    def prod(self, left: int, right: int) -> S:
         assert 0 <= left <= right <= self._n
 
         if left == right:
@@ -78,11 +89,15 @@ class LazySegTree:
 
         return self._op(sml, smr)
 
-    def all_prod(self) -> typing.Any:
+    def all_prod(self) -> S:
         return self._d[1]
 
-    def apply(self, left: int, right: typing.Optional[int] = None,
-              f: typing.Optional[typing.Any] = None) -> None:
+    def apply(
+        self,
+        left: int,
+        right: int | None = None,
+        f: F | None = None,
+    ) -> None:
         assert f is not None
 
         if right is None:
@@ -129,8 +144,7 @@ class LazySegTree:
                 if ((right >> i) << i) != right:
                     self._update((right - 1) >> i)
 
-    def max_right(
-            self, left: int, g: typing.Callable[[typing.Any], bool]) -> int:
+    def max_right(self, left: int, g: Callable[[S], bool]) -> int:
         assert 0 <= left <= self._n
         assert g(self._e)
 
@@ -160,7 +174,7 @@ class LazySegTree:
 
         return self._n
 
-    def min_left(self, right: int, g: typing.Any) -> int:
+    def min_left(self, right: int, g: Callable[[S], bool]) -> int:
         assert 0 <= right <= self._n
         assert g(self._e)
 
@@ -193,7 +207,7 @@ class LazySegTree:
     def _update(self, k: int) -> None:
         self._d[k] = self._op(self._d[2 * k], self._d[2 * k + 1])
 
-    def _all_apply(self, k: int, f: typing.Any) -> None:
+    def _all_apply(self, k: int, f: F) -> None:
         self._d[k] = self._mapping(f, self._d[k])
         if k < self._size:
             self._lz[k] = self._composition(f, self._lz[k])

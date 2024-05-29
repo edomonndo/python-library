@@ -1,22 +1,20 @@
-import typing
-
-import atcoder._scc
+import atcoder.scc
 
 
 class TwoSAT:
-    '''
+    """
     2-SAT
 
     Reference:
     B. Aspvall, M. Plass, and R. Tarjan,
     A Linear-Time Algorithm for Testing the Truth of Certain Quantified Boolean
     Formulas
-    '''
+    """
 
     def __init__(self, n: int = 0) -> None:
         self._n = n
         self._answer = [False] * n
-        self._scc = atcoder._scc.SCCGraph(2 * n)
+        self._scc = atcoder.scc.SCCGraph(2 * n)
 
     def add_clause(self, i: int, f: bool, j: int, g: bool) -> None:
         assert 0 <= i < self._n
@@ -33,5 +31,5 @@ class TwoSAT:
             self._answer[i] = scc_id[2 * i] < scc_id[2 * i + 1]
         return True
 
-    def answer(self) -> typing.List[bool]:
+    def answer(self) -> list[bool]:
         return self._answer

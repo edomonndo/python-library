@@ -1,8 +1,24 @@
 import typing
 
-import atcoder._bit
 import atcoder._math
 from atcoder.modint import ModContext, Modint
+
+
+def _ceil_pow2(n: int) -> int:
+    x = 0
+    while (1 << x) < n:
+        x += 1
+
+    return x
+
+
+def _bsf(n: int) -> int:
+    x = 0
+    while n % 2 == 0:
+        x += 1
+        n //= 2
+
+    return x
 
 
 _sum_e = {}  # _sum_e[i] = ies[0] * ... * ies[i - 1] * es[i]
@@ -11,12 +27,12 @@ _sum_e = {}  # _sum_e[i] = ies[0] * ... * ies[i - 1] * es[i]
 def _butterfly(a: typing.List[Modint]) -> None:
     g = atcoder._math._primitive_root(a[0].mod())
     n = len(a)
-    h = atcoder._bit._ceil_pow2(n)
+    h = _ceil_pow2(n)
 
     if a[0].mod() not in _sum_e:
         es = [Modint(0)] * 30  # es[i]^(2^(2+i)) == 1
         ies = [Modint(0)] * 30
-        cnt2 = atcoder._bit._bsf(a[0].mod() - 1)
+        cnt2 = _bsf(a[0].mod() - 1)
         e = Modint(g) ** ((a[0].mod() - 1) >> cnt2)
         ie = e.inv()
         for i in range(cnt2, 1, -1):
@@ -45,7 +61,7 @@ def _butterfly(a: typing.List[Modint]) -> None:
                 right = a[i + offset + p] * now
                 a[i + offset] = left + right
                 a[i + offset + p] = left - right
-            now *= sum_e[atcoder._bit._bsf(~s)]
+            now *= sum_e[_bsf(~s)]
 
 
 _sum_ie = {}  # _sum_ie[i] = es[0] * ... * es[i - 1] * ies[i]
@@ -54,12 +70,12 @@ _sum_ie = {}  # _sum_ie[i] = es[0] * ... * es[i - 1] * ies[i]
 def _butterfly_inv(a: typing.List[Modint]) -> None:
     g = atcoder._math._primitive_root(a[0].mod())
     n = len(a)
-    h = atcoder._bit._ceil_pow2(n)
+    h = _ceil_pow2(n)
 
     if a[0].mod() not in _sum_ie:
         es = [Modint(0)] * 30  # es[i]^(2^(2+i)) == 1
         ies = [Modint(0)] * 30
-        cnt2 = atcoder._bit._bsf(a[0].mod() - 1)
+        cnt2 = _bsf(a[0].mod() - 1)
         e = Modint(g) ** ((a[0].mod() - 1) >> cnt2)
         ie = e.inv()
         for i in range(cnt2, 1, -1):
@@ -88,12 +104,14 @@ def _butterfly_inv(a: typing.List[Modint]) -> None:
                 right = a[i + offset + p]
                 a[i + offset] = left + right
                 a[i + offset + p] = Modint(
-                    (a[0].mod() + left.val() - right.val()) * inow.val())
-            inow *= sum_ie[atcoder._bit._bsf(~s)]
+                    (a[0].mod() + left.val() - right.val()) * inow.val()
+                )
+            inow *= sum_ie[_bsf(~s)]
 
 
-def convolution_mod(a: typing.List[Modint],
-                    b: typing.List[Modint]) -> typing.List[Modint]:
+def convolution_mod(
+    a: typing.List[Modint], b: typing.List[Modint]
+) -> typing.List[Modint]:
     n = len(a)
     m = len(b)
 
@@ -110,7 +128,7 @@ def convolution_mod(a: typing.List[Modint],
                 ans[i + j] += a[i] * b[j]
         return ans
 
-    z = 1 << atcoder._bit._ceil_pow2(n + m - 1)
+    z = 1 << _ceil_pow2(n + m - 1)
 
     while len(a) < z:
         a.append(Modint(0))
@@ -123,7 +141,7 @@ def convolution_mod(a: typing.List[Modint],
     for i in range(z):
         a[i] *= b[i]
     _butterfly_inv(a)
-    a = a[:n + m - 1]
+    a = a[: n + m - 1]
 
     iz = Modint(z).inv()
     for i in range(n + m - 1):
@@ -132,8 +150,9 @@ def convolution_mod(a: typing.List[Modint],
     return a
 
 
-def convolution(mod: int, a: typing.List[typing.Any],
-                b: typing.List[typing.Any]) -> typing.List[typing.Any]:
+def convolution(
+    mod: int, a: typing.List[typing.Any], b: typing.List[typing.Any]
+) -> typing.List[typing.Any]:
     n = len(a)
     m = len(b)
 
@@ -147,8 +166,7 @@ def convolution(mod: int, a: typing.List[typing.Any],
         return list(map(lambda c: c.val(), convolution_mod(a2, b2)))
 
 
-def convolution_int(
-        a: typing.List[int], b: typing.List[int]) -> typing.List[int]:
+def convolution_int(a: typing.List[int], b: typing.List[int]) -> typing.List[int]:
     n = len(a)
     m = len(b)
 
