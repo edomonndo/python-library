@@ -343,7 +343,7 @@ class SortableSegtree:
         tl, tm, tr = self._cut_outer(self.root, i)
         tm.key = key
         tm.val = value
-        tm.update()
+        self._update(tm)
         self.root = self._merge_outer(tl, self._merge_outer(tm, tr))
 
     def prod(self, l: int, r: int) -> T:
