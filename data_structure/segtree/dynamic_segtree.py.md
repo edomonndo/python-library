@@ -60,17 +60,17 @@ data:
     \ if self.root else self.e\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/dynamic_segtree.py
+  path: data_structure/segtree/dynamic_segtree.py
   requiredBy: []
-  timestamp: '2024-05-29 07:39:33+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   - test/atcoder/arc008d_dyn_segtree.test.py
-documentation_of: data_structure/dynamic_segtree.py
+documentation_of: data_structure/segtree/dynamic_segtree.py
 layout: document
 redirect_from:
-- /library/data_structure/dynamic_segtree.py
-- /library/data_structure/dynamic_segtree.py.html
-title: data_structure/dynamic_segtree.py
+- /library/data_structure/segtree/dynamic_segtree.py
+- /library/data_structure/segtree/dynamic_segtree.py.html
+title: data_structure/segtree/dynamic_segtree.py
 ---

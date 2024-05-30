@@ -1,18 +1,18 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: atcoder/dsu.py
     title: atcoder/dsu.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/manhattan_mst.py
     title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
       \u57DF\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/manhattanmst
     links:
@@ -34,8 +34,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/manhattanmst.test.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-30 15:25:43+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/manhattanmst.test.py
 layout: document

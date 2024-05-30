@@ -51,15 +51,15 @@ data:
     \        self._all_apply(2 * k + 1, self.d[k])\n        self.d[k] = self.identity\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/dual_segment_tree.py
+  path: data_structure/segtree/dual_segment_tree.py
   requiredBy: []
-  timestamp: '2024-02-26 12:20:09+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_affine_point_get.test.py
   - test/aoj/dsl_2_e_range_add_query.test.py
   - test/aoj/dsl_2_d_range_update_query.test.py
-documentation_of: data_structure/dual_segment_tree.py
+documentation_of: data_structure/segtree/dual_segment_tree.py
 layout: document
 title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
 ---

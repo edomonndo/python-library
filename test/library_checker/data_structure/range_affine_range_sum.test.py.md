@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/lazy_segment_tree.py
+    path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
@@ -18,7 +18,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_affine_range_sum\n\
-    from data_structure.lazy_segment_tree import LazySegtree\n\nMOD = 998244353\n\
+    from data_structure.segtree.lazy_segment_tree import LazySegtree\n\nMOD = 998244353\n\
     mask = (1 << 30) - 1\ne = 0\nID = 1 << 30\n\n\ndef op(x, y):\n    a, b = x >>\
     \ 30, x & mask\n    c, d = y >> 30, y & mask\n    e, f = (a + c) % MOD, b + d\n\
     \    return e << 30 | f\n\n\ndef mapping(F, x):\n    a, b = F >> 30, F & mask\n\
@@ -32,11 +32,11 @@ data:
     \ l, r = q\n        ab = g.prod(l, r)\n        a, b = ab >> 30, ab & mask\n  \
     \      print(a)\n"
   dependsOn:
-  - data_structure/lazy_segment_tree.py
+  - data_structure/segtree/lazy_segment_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/range_affine_range_sum.test.py
   requiredBy: []
-  timestamp: '2024-02-09 17:45:13+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_affine_range_sum.test.py

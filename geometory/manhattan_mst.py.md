@@ -1,21 +1,24 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: data_structure/basic/SortedSet.py
+    title: SortedSet
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/manhattanmst.test.py
     title: test/library_checker/graph/manhattanmst.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from data_structure.SortedSet import SortedSet\n\n\nclass ManhattanMST:\n\
+  code: "from data_structure.basic.SortedSet import SortedSet\n\n\nclass ManhattanMST:\n\
     \    def __init__(self) -> None:\n        self.n = 0\n        self.points = []\n\
     \        self.edges = []\n\n    def add_point(self, i, j):\n        self.n +=\
     \ 1\n        self.points.append(i)\n        self.points.append(j)\n\n    def _sweep(self):\n\
@@ -39,12 +42,13 @@ data:
     \              self.points[j << 1],\n                    )\n            if not\
     \ i:\n                for j in range(self.n):\n                    self.points[j\
     \ << 1] *= -1\n        self.edges.sort(key=lambda x: x[0])\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/basic/SortedSet.py
   isVerificationFile: false
   path: geometory/manhattan_mst.py
   requiredBy: []
-  timestamp: '2024-02-24 06:05:31+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-30 15:25:43+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/manhattanmst.test.py
 documentation_of: geometory/manhattan_mst.py

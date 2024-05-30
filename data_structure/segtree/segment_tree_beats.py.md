@@ -139,13 +139,13 @@ data:
     \ __str__(self):\n        return str([self.get(i) for i in range(self.n)])\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segment_tree_beats.py
+  path: data_structure/segtree/segment_tree_beats.py
   requiredBy: []
-  timestamp: '2024-02-09 17:45:13+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
-documentation_of: data_structure/segment_tree_beats.py
+documentation_of: data_structure/segtree/segment_tree_beats.py
 layout: document
 title: Segment Tree Beats
 ---

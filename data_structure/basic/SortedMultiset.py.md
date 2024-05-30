@@ -2,7 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':grey_question:'
+    path: test/atcoder/abc342g.test.py
+    title: test/atcoder/abc342g.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
@@ -80,7 +83,8 @@ data:
   requiredBy: []
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verifiedWith:
+  - test/atcoder/abc342g.test.py
 documentation_of: data_structure/basic/SortedMultiset.py
 layout: document
 title: SortedMultiset

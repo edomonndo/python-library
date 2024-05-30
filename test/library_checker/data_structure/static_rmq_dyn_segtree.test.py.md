@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_segtree.py
-    title: data_structure/dynamic_segtree.py
+    path: data_structure/segtree/dynamic_segtree.py
+    title: data_structure/segtree/dynamic_segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,17 +18,17 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/staticrmq\n\
-    \nfrom data_structure.dynamic_segtree import DynamicSegtree\n\nn, q = map(int,\
-    \ input().split())\nA = list(map(int, input().split()))\n\ninf = 1 << 60\nseg\
-    \ = DynamicSegtree(n, min, inf)\nfor i, a in enumerate(A):\n    seg[i] = a\n\n\
-    for _ in range(q):\n    l, r = map(int, input().split())\n    print(seg.prod(l,\
+    \nfrom data_structure.segtree.dynamic_segtree import DynamicSegtree\n\nn, q =\
+    \ map(int, input().split())\nA = list(map(int, input().split()))\n\ninf = 1 <<\
+    \ 60\nseg = DynamicSegtree(n, min, inf)\nfor i, a in enumerate(A):\n    seg[i]\
+    \ = a\n\nfor _ in range(q):\n    l, r = map(int, input().split())\n    print(seg.prod(l,\
     \ r))\n"
   dependsOn:
-  - data_structure/dynamic_segtree.py
+  - data_structure/segtree/dynamic_segtree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-29 07:39:33+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py

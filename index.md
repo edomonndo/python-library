@@ -12,7 +12,7 @@ data:
     - icon: ':warning:'
       path: atcoder/convolution.py
       title: atcoder/convolution.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
     - icon: ':warning:'
@@ -84,14 +84,8 @@ data:
       path: data_structure/basic/doubly_linked_list.py
       title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
     - icon: ':warning:'
-      path: data_structure/basic/fenwick_tree.py
-      title: Fenwick Tree
-    - icon: ':warning:'
       path: data_structure/basic/radix_heap.py
       title: Radix Heap
-    - icon: ':heavy_check_mark:'
-      path: data_structure/basic/segment_tree.py
-      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
@@ -123,34 +117,18 @@ data:
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
-    - icon: ':heavy_check_mark:'
-      path: data_structure/dual_segment_tree.py
-      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
-    - icon: ':warning:'
-      path: data_structure/dual_segment_tree_commutative.py
-      title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
-        \ (Dual Segment Tree)"
-    - icon: ':heavy_check_mark:'
-      path: data_structure/dynamic_segtree.py
-      title: data_structure/dynamic_segtree.py
     - icon: ':warning:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
-    - icon: ':heavy_check_mark:'
-      path: data_structure/lazy_segment_tree.py
-      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':warning:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/link_cut_tree.py
       title: Link Cut Tree
-    - icon: ':warning:'
-      path: data_structure/merge_sort_tree.py
-      title: Merge Sort Tree
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
@@ -166,9 +144,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/rollback_unionfind.py
       title: Rollback Union Find
-    - icon: ':heavy_check_mark:'
-      path: data_structure/segment_tree_beats.py
-      title: Segment Tree Beats
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
@@ -193,11 +168,41 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
-  - name: data_structure/td
+  - name: data_structure/fenwick_tree
     pages:
     - icon: ':heavy_check_mark:'
-      path: data_structure/td/dynamic_fenwick_tree_2d.py
-      title: data_structure/td/dynamic_fenwick_tree_2d.py
+      path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+      title: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+    - icon: ':warning:'
+      path: data_structure/fenwick_tree/fenwick_tree.py
+      title: Fenwick Tree
+  - name: data_structure/segtree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segtree/dual_segment_tree.py
+      title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
+    - icon: ':warning:'
+      path: data_structure/segtree/dual_segment_tree_commutative.py
+      title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+        \ (Dual Segment Tree)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segtree/dynamic_segtree.py
+      title: data_structure/segtree/dynamic_segtree.py
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segtree/lazy_segment_tree.py
+      title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
+    - icon: ':warning:'
+      path: data_structure/segtree/merge_sort_tree.py
+      title: Merge Sort Tree
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segtree/segment_tree.py
+      title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/segtree/segment_tree_beats.py
+      title: Segment Tree Beats
+    - icon: ':x:'
+      path: data_structure/segtree/sortable_segtree.py
+      title: data_structure/segtree/sortable_segtree.py
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -225,7 +230,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/manhattan_mst.py
       title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
         \u57DF\u6728"
@@ -718,6 +723,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_composite.test.py
+    - icon: ':x:'
+      path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
+      title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/queue_operate_all_composite.test.py
       title: test/library_checker/data_structure/queue_operate_all_composite.test.py
@@ -797,7 +805,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dominator_tree.test.py
       title: test/library_checker/graph/dominator_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/manhattanmst.test.py
       title: test/library_checker/graph/manhattanmst.test.py
     - icon: ':heavy_check_mark:'

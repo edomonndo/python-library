@@ -34,12 +34,12 @@ data:
     \ 1\n        return res"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/merge_sort_tree.py
+  path: data_structure/segtree/merge_sort_tree.py
   requiredBy: []
-  timestamp: '2024-02-05 08:23:41+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/merge_sort_tree.py
+documentation_of: data_structure/segtree/merge_sort_tree.py
 layout: document
 title: Merge Sort Tree
 ---

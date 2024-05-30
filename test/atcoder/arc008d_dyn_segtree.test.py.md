@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/dynamic_segtree.py
-    title: data_structure/dynamic_segtree.py
+    path: data_structure/segtree/dynamic_segtree.py
+    title: data_structure/segtree/dynamic_segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,18 +18,18 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
-    \nfrom data_structure.dynamic_segtree import DynamicSegtree\n\n\ndef op(x, y):\n\
-    \    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\ne = (1, 0)\n\n\
-    n, m = map(int, input().split())\nseg = DynamicSegtree(n, op, e)\ninf = float(\"\
-    inf\")\nmx = 1\nmn = 1\nfor i in range(m):\n    p, a, b = input().split()\n  \
-    \  seg[int(p) - 1] = (float(a), float(b))\n    a, b = seg.all_prod()\n    x =\
-    \ a + b\n    mx = max(mx, x)\n    mn = min(mn, x)\n\nprint(mn)\nprint(mx)\n"
+    \nfrom data_structure.segtree.dynamic_segtree import DynamicSegtree\n\n\ndef op(x,\
+    \ y):\n    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\ne = (1,\
+    \ 0)\n\nn, m = map(int, input().split())\nseg = DynamicSegtree(n, op, e)\ninf\
+    \ = float(\"inf\")\nmx = 1\nmn = 1\nfor i in range(m):\n    p, a, b = input().split()\n\
+    \    seg[int(p) - 1] = (float(a), float(b))\n    a, b = seg.all_prod()\n    x\
+    \ = a + b\n    mx = max(mx, x)\n    mn = min(mn, x)\n\nprint(mn)\nprint(mx)\n"
   dependsOn:
-  - data_structure/dynamic_segtree.py
+  - data_structure/segtree/dynamic_segtree.py
   isVerificationFile: true
   path: test/atcoder/arc008d_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-29 07:39:33+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc008d_dyn_segtree.test.py

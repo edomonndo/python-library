@@ -12,23 +12,24 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "class FenwickTree:\n    n = 1\n    data = [0 for i in range(n)]\n\n    def\
-    \ __init__(self, N):\n        self.n = N\n        self.data = [0 for i in range(N)]\n\
-    \n    def add(self, p, x):\n        assert 0 <= p < self.n, \"0<=p<n,p={0},n={1}\"\
-    .format(p, self.n)\n        p += 1\n        while p <= self.n:\n            self.data[p\
-    \ - 1] += x\n            p += p & -p\n\n    def sum(self, l, r):\n        assert\
+  code: "from typing import TypeVar\n\nT = TypeVar(\"T\")\n\n\nclass FenwickTree:\n\
+    \    def __init__(self, N: int, e: T = 0):\n        self.n = N\n        self.data\
+    \ = [e for i in range(N)]\n\n    def add(self, p: int, x: T) -> None:\n      \
+    \  assert 0 <= p < self.n, \"0<=p<n,p={0},n={1}\".format(p, self.n)\n        p\
+    \ += 1\n        while p <= self.n:\n            self.data[p - 1] += x\n      \
+    \      p += p & -p\n\n    def sum(self, l: int, r: int) -> T:\n        assert\
     \ 0 <= l and l <= r and r <= self.n, \"0<=l<=r<=n,l={0},r={1},n={2}\".format(\n\
     \            l, r, self.n\n        )\n        return self.sum0(r) - self.sum0(l)\n\
-    \n    def sum0(self, r):\n        s = 0\n        while r > 0:\n            s +=\
-    \ self.data[r - 1]\n            r -= r & -r\n        return s\n"
+    \n    def sum0(self, r: int) -> T:\n        s = 0\n        while r > 0:\n    \
+    \        s += self.data[r - 1]\n            r -= r & -r\n        return s\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/basic/fenwick_tree.py
+  path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy: []
-  timestamp: '2024-05-21 07:51:26+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/basic/fenwick_tree.py
+documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
 title: Fenwick Tree
 ---
@@ -41,9 +42,9 @@ title: Fenwick Tree
 ### 初期化
 
 ```
-FT = fenwick_tree(N)
+FT = fenwick_tree(N, e = 0)
 ```
-$N$は配列のサイズです. 初期化した時,最初の配列のサイズは全て$0$になっています. 【注意】もしバグったら,まずは初期値を間違えてないか確認しましょう.
+$N$は配列のサイズです. モノイドをのせるときは,eにモノイドの単位元を指定します．
 
 ### 更新
 

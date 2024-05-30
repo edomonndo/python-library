@@ -36,16 +36,16 @@ data:
     \ - sum0(x2, y1 - 1) + sum0(x1 - 1, y1 - 1)\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/td/dynamic_fenwick_tree_2d.py
+  path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl_5_b_the_maximum_number_of_overlaps.test.py
-documentation_of: data_structure/td/dynamic_fenwick_tree_2d.py
+documentation_of: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
 layout: document
 redirect_from:
-- /library/data_structure/td/dynamic_fenwick_tree_2d.py
-- /library/data_structure/td/dynamic_fenwick_tree_2d.py.html
-title: data_structure/td/dynamic_fenwick_tree_2d.py
+- /library/data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+- /library/data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py.html
+title: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
 ---

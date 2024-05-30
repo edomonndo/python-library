@@ -1,7 +1,11 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: geometory/manhattan_mst.py
+    title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
+      \u57DF\u6728"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -77,7 +81,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/basic/SortedSet.py
-  requiredBy: []
+  requiredBy:
+  - geometory/manhattan_mst.py
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

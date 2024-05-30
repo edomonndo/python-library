@@ -32,13 +32,13 @@ data:
     \ self.d[r])\n            l >>= 1\n            r >>= 1\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/dual_segment_tree_commutative.py
+  path: data_structure/segtree/dual_segment_tree_commutative.py
   requiredBy: []
-  timestamp: '2024-03-01 13:03:21+09:00'
+  timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
   - test/atcoder/abc342g.test.py
-documentation_of: data_structure/dual_segment_tree_commutative.py
+documentation_of: data_structure/segtree/dual_segment_tree_commutative.py
 layout: document
 title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual\
   \ Segment Tree)"
