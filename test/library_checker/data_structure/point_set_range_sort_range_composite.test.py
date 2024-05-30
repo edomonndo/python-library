@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_sort_range_composite
 
 from data_structure.segtree.sortable_segtree import SortableSegtree
 
