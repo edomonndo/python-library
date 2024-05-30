@@ -25,17 +25,17 @@ data:
     \ * y3 % MOD + x3) % MOD,\n    )\n\n\ne_ = (1, 0)\n\n\ndef toggle(x):\n    x1,\
     \ x2 = x\n    return (x1, (x2 & mask) << 30 | x2 >> 30)\n\n\nn, q = map(int, input().split())\n\
     P = []\nfor _ in range(n):\n    p, a, b = map(int, input().split())\n    P.append((p,\
-    \ (a, b << 30 | b)))\n\nseg = SortableSegtree(P)\nfor _ in range(q):\n    t, *qu\
-    \ = map(int, input().split())\n    if t == 0:\n        i, p, a, b = qu\n     \
-    \   seg.set(i, p, (a, b << 30 | b))\n    elif t == 1:\n        l, r, x = qu\n\
-    \        a, b = seg.prod(l, r)\n        print((a * x + (b >> 30)) % MOD)\n   \
-    \ else:\n        l, r = qu\n        seg.sort(l, r, t == 3)\n"
+    \ (a, b << 30 | b)))\n\nseg = SortableSegtree(op, e_, toggle, P)\nfor _ in range(q):\n\
+    \    t, *qu = map(int, input().split())\n    if t == 0:\n        i, p, a, b =\
+    \ qu\n        seg.set(i, p, (a, b << 30 | b))\n    elif t == 1:\n        l, r,\
+    \ x = qu\n        a, b = seg.prod(l, r)\n        print((a * x + (b >> 30)) % MOD)\n\
+    \    else:\n        l, r = qu\n        seg.sort(l, r, t == 3)\n"
   dependsOn:
   - data_structure/segtree/sortable_segtree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-30 15:58:55+09:00'
+  timestamp: '2024-05-30 17:14:28+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
