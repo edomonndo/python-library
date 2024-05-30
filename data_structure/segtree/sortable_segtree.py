@@ -1,24 +1,8 @@
 from heapq import *
-from typing import TypeVar
+from typing import Callable, TypeVar
 
 T = TypeVar("T")
-"""
-Global variables
-op: Callable[[T,T],T]
-e_: T
-toggle: Callable[[T],T]
-"""
-
-
-def op(x: T, y: T) -> T:
-    pass
-
-
-e_ = None
-
-
-def toggle(x: T) -> T:
-    pass
+S = TypeVar("S", bound="SegNode")
 
 
 def xor64():
@@ -45,59 +29,27 @@ class SegNode:
     def __str__(self):
         return f"<SegNode(key={self.key}, val={self.val}, sum={self.sum}, inner=({type(self.inner_l).__name__},{type(self.inner_r).__name__}), outer=({type(self.outer_l).__name__},{type(self.outer_r).__name__}), flip={self.flip})>"
 
-    def toggle(self) -> None:
-        self.inner_l, self.inner_r = self.inner_r, self.inner_l
-        self.outer_l, self.outer_r = self.outer_r, self.outer_l
-        self.sum = toggle(self.sum)
-        self.flip ^= 1
-
-    def push_down(self) -> None:
-        if not self.flip:
-            return
-        for SegNode in [self.inner_l, self.inner_r, self.outer_l, self.outer_r]:
-            if SegNode:
-                SegNode.toggle()
-        self.flip = 0
-
-    def update(self) -> None:
-        self.sz, self.inner_sz = 0, 1
-        self.kmin = self.kmax = self.key
-        self.sum = e_
-        if self.outer_l:
-            self.sum = self.outer_l.sum
-            self.sz += self.outer_l.sz
-        if self.inner_l:
-            self.inner_sz += self.inner_l.inner_sz
-            self.sum = op(self.sum, self.inner_l.sum)
-            self.kmin = min(self.kmin, self.inner_l.kmin)
-            self.kmax = max(self.kmax, self.inner_l.kmax)
-        self.sum = op(self.sum, self.val)
-        if self.inner_r:
-            self.inner_sz += self.inner_r.inner_sz
-            self.sum = op(self.sum, self.inner_r.sum)
-            self.kmin = min(self.kmin, self.inner_r.kmin)
-            self.kmax = max(self.kmax, self.inner_r.kmax)
-        if self.outer_r:
-            self.sum = op(self.sum, self.outer_r.sum)
-            self.sz += self.outer_r.sz
-        self.sz += self.inner_sz
-
 
 class SortableSegtree:
-    def __init__(self, V: list[T]):
+    def __init__(
+        self, op: Callable[[T, T], T], e_: T, toggle: Callable[[T], T], V: list[T]
+    ):
+        self.op = op
+        self.e = e_
+        self.toggle = toggle
         self.V = V
         self.root = self._build(0, len(V))
 
-    def _build(self, l: int, r: int) -> SegNode:
+    def _build(self, l: int, r: int) -> S:
         m = (l + r) >> 1
         t = SegNode(self.V[m][0], self.V[m][1])
         t.outer_l = self._build(l, m) if l < m else None
         t.outer_r = self._build(m + 1, r) if m + 1 < r else None
         self._pri_satisfy(t)
-        t.update()
+        self._update(t)
         return t
 
-    def _pri_satisfy(self, t: SegNode) -> None:
+    def _pri_satisfy(self, t: S) -> None:
         if not t.outer_l:
             if not t.outer_r or t.pri > t.outer_r.pri:
                 return
@@ -120,249 +72,271 @@ class SortableSegtree:
             self._pri_satisfy(t.outer_r)
 
     @staticmethod
-    def _size(t: SegNode) -> int:
+    def _size(t: S) -> int:
         return t.sz if t else 0
 
-    @classmethod
-    def _merge_outer(cls, l: SegNode, r: SegNode) -> SegNode:
+    def _toggle(self, t: S) -> None:
+        t.inner_l, t.inner_r = t.inner_r, t.inner_l
+        t.outer_l, t.outer_r = t.outer_r, t.outer_l
+        t.sum = self.toggle(t.sum)
+        t.flip ^= 1
+
+    def _push_down(self, t: S) -> None:
+        if not t.flip:
+            return
+        for node in [t.inner_l, t.inner_r, t.outer_l, t.outer_r]:
+            if node:
+                self._toggle(node)
+        t.flip = 0
+
+    def _update(self, t: S) -> None:
+        t.sz, t.inner_sz = 0, 1
+        t.kmin = t.kmax = t.key
+        t.sum = self.e
+        if t.outer_l:
+            t.sum = t.outer_l.sum
+            t.sz += t.outer_l.sz
+        if t.inner_l:
+            t.inner_sz += t.inner_l.inner_sz
+            t.sum = self.op(t.sum, t.inner_l.sum)
+            t.kmin = min(t.kmin, t.inner_l.kmin)
+            t.kmax = max(t.kmax, t.inner_l.kmax)
+        t.sum = self.op(t.sum, t.val)
+        if t.inner_r:
+            t.inner_sz += t.inner_r.inner_sz
+            t.sum = self.op(t.sum, t.inner_r.sum)
+            t.kmin = min(t.kmin, t.inner_r.kmin)
+            t.kmax = max(t.kmax, t.inner_r.kmax)
+        if t.outer_r:
+            t.sum = self.op(t.sum, t.outer_r.sum)
+            t.sz += t.outer_r.sz
+        t.sz += t.inner_sz
+
+    def _merge_outer(self, l: S, r: S) -> S:
         if not l:
             return r
         if not r:
             return l
-        l.push_down()
-        r.push_down()
+        self._push_down(l)
+        self._push_down(r)
         if l.pri > r.pri:
-            l.outer_r = cls._merge_outer(l.outer_r, r)
-            l.update()
+            l.outer_r = self._merge_outer(l.outer_r, r)
+            self._update(l)
             return l
         else:
-            r.outer_l = cls._merge_outer(l, r.outer_l)
-            r.update()
+            r.outer_l = self._merge_outer(l, r.outer_l)
+            self._update(r)
             return r
 
-    @classmethod
-    def _merge_compress(cls, l: SegNode, r: SegNode) -> SegNode:
+    def _merge_compress(self, l: S, r: S) -> S:
         if not l:
             return r
         if not r:
             return l
-        l.push_down()
-        r.push_down()
+        self._push_down(l)
+        self._push_down(r)
         if l.pri < r.pri:
             l, r = r, l
         if l.key < r.kmin:
-            l.inner_r = cls._merge_compress(l.inner_r, r)
+            l.inner_r = self._merge_compress(l.inner_r, r)
         elif r.kmax < l.key:
-            l.inner_l = cls._merge_compress(l.inner_l, r)
+            l.inner_l = self._merge_compress(l.inner_l, r)
         else:
-            rl, rr = cls._split_key(r, l.key)
-            l.inner_l = cls._merge_compress(l.inner_l, rl)
-            l.inner_r = cls._merge_compress(l.inner_r, rr)
-        l.update()
+            rl, rr = self._split_key(r, l.key)
+            l.inner_l = self._merge_compress(l.inner_l, rl)
+            l.inner_r = self._merge_compress(l.inner_r, rr)
+        self._update(l)
         return l
 
-    @classmethod
-    def _split_key(cls, t: SegNode, key: int) -> tuple[SegNode, SegNode]:
+    def _split_key(self, t: S, key: int) -> tuple[S, S]:
         if not t:
             return None, None
         if key < t.kmin:
             return None, t
         if t.kmax <= key:
             return t, None
-        t.push_down()
+        self._push_down(t)
         if key < t.key:
-            tl, tr = cls._split_key(t.inner_l, key)
+            tl, tr = self._split_key(t.inner_l, key)
             t.inner_l = tr
-            t.update()
+            self._update(t)
             return tl, t
         else:
-            tl, tr = cls._split_key(t.inner_r, key)
+            tl, tr = self._split_key(t.inner_r, key)
             t.inner_r = tl
-            t.update()
+            self._update(t)
             return t, tr
 
-    @classmethod
-    def _split_outer(cls, t: SegNode, i: int) -> tuple[SegNode, SegNode]:
+    def _split_outer(self, t: S, i: int) -> tuple[S, S]:
         if not t:
             return None, None
-        t.push_down()
-        szl = cls._size(t.outer_l)
+        self._push_down(t)
+        szl = self._size(t.outer_l)
         szr = szl + t.inner_sz
         if i < szl:
-            tl, tr = cls._split_outer(t.outer_l, i)
+            tl, tr = self._split_outer(t.outer_l, i)
             t.outer_l = tr
-            t.update()
+            self._update(t)
             return tl, t
         elif szr <= i:
-            tl, tr = cls._split_outer(t.outer_r, i - szr)
+            tl, tr = self._split_outer(t.outer_r, i - szr)
             t.outer_r = tl
-            t.update()
+            self._update(t)
             return t, tr
         else:
             tmp_l, tmp_r = t.outer_l, t.outer_r
             t.outer_l = t.outer_r = None
-            t1, t2 = cls._split_inner(t, i - szl)
-            tl = cls._merge_outer(tmp_l, t1)
-            tr = cls._merge_outer(t2, tmp_r)
+            t1, t2 = self._split_inner(t, i - szl)
+            tl = self._merge_outer(tmp_l, t1)
+            tr = self._merge_outer(t2, tmp_r)
             return tl, tr
 
-    @classmethod
-    def _split_range_outer(
-        cls, t: SegNode, l: int, r: int
-    ) -> tuple[SegNode, SegNode, SegNode]:
-        tl, tr = cls._split_outer(t, l)
-        trl, trr = cls._split_outer(tr, r - l)
+    def _split_range_outer(self, t: S, l: int, r: int) -> tuple[S, S, S]:
+        tl, tr = self._split_outer(t, l)
+        trl, trr = self._split_outer(tr, r - l)
         return tl, trl, trr
 
-    @classmethod
-    def _split_inner(cls, t: SegNode, i: int) -> tuple[SegNode, SegNode]:
+    def _split_inner(self, t: S, i: int) -> tuple[S, S]:
         if not t:
             return None, None
-        t.push_down()
-        szl = cls._size(t.inner_l)
+        self._push_down(t)
+        szl = self._size(t.inner_l)
         if i <= szl:
-            tl, tr = cls._split_inner(t.inner_l, i)
+            tl, tr = self._split_inner(t.inner_l, i)
             t.inner_l = tr
-            t.update()
+            self._update(t)
             return tl, t
         else:
-            tl, tr = cls._split_inner(t.inner_r, i - szl - 1)
+            tl, tr = self._split_inner(t.inner_r, i - szl - 1)
             t.inner_r = tl
-            t.update()
+            self._update(t)
             return t, tr
 
-    @classmethod
-    def _cut_outer(cls, t: SegNode, i: int) -> tuple[SegNode, SegNode, SegNode]:
+    def _cut_outer(self, t: S, i: int) -> tuple[S, S, S]:
         if not t:
             return None, None, None
-        t.push_down()
-        szl = cls._size(t.outer_l)
+        self._push_down(t)
+        szl = self._size(t.outer_l)
         szr = szl + t.inner_sz
         if i < szl:
-            tl, tm, tr = cls._cut_outer(t.outer_l, i)
+            tl, tm, tr = self._cut_outer(t.outer_l, i)
             t.outer_l = tr
-            t.update()
+            self._update(t)
             return tl, tm, t
         elif szr <= i:
-            tl, tm, tr = cls._cut_outer(t.outer_r, i - szr)
+            tl, tm, tr = self._cut_outer(t.outer_r, i - szr)
             t.outer_r = tl
-            t.update()
+            self._update(t)
             return t, tm, tr
         else:
             tmp_l, tmp_r = t.outer_l, t.outer_r
             t.outer_l = t.outer_r = None
-            tl, tm, tr = cls._cut_inner(t, i - szl)
-            tl = cls._merge_outer(tmp_l, tl)
-            tr = cls._merge_outer(tr, tmp_r)
+            tl, tm, tr = self._cut_inner(t, i - szl)
+            tl = self._merge_outer(tmp_l, tl)
+            tr = self._merge_outer(tr, tmp_r)
             return tl, tm, tr
 
-    @classmethod
-    def _cut_inner(cls, t: SegNode, i: int) -> tuple[SegNode, SegNode, SegNode]:
+    def _cut_inner(self, t: S, i: int) -> tuple[S, S, S]:
         if not t:
             return None, None, None
-        t.push_down()
-        szl = cls._size(t.inner_l)
+        self._push_down(t)
+        szl = self._size(t.inner_l)
         if i < szl:
-            tl, tm, tr = cls._cut_inner(t.inner_l, i)
+            tl, tm, tr = self._cut_inner(t.inner_l, i)
             t.inner_l = tr
-            t.update()
+            self._update(t)
             return tl, tm, t
         elif i == szl:
             res = t.inner_l, t, t.inner_r
             t.inner_l = t.inner_r = None
-            t.update()
+            self._update(t)
             return res
         else:
-            tl, tm, tr = cls._cut_inner(t.inner_r, i - szl - 1)
+            tl, tm, tr = self._cut_inner(t.inner_r, i - szl - 1)
             t.inner_r = tl
-            t.update()
+            self._update(t)
             return t, tm, tr
 
-    @classmethod
-    def _query_range_outer(cls, t: SegNode, l: int, r: int) -> T:
+    def _query_range_outer(self, t: S, l: int, r: int) -> T:
         if not t:
-            return e_
+            return self.e
         if l == 0 and r == t.sz:
             return t.sum
-        t.push_down()
-        szl = cls._size(t.outer_l)
+        self._push_down(t)
+        szl = self._size(t.outer_l)
         szr = szl + t.inner_sz
-        left_q = right_q = e_
+        left_q = right_q = self.e
         if l < szl:
             if r <= szl:
-                return cls._query_range_outer(t.outer_l, l, r)
-            left_q = cls._query_range_outer(t.outer_l, l, szl)
+                return self._query_range_outer(t.outer_l, l, r)
+            left_q = self._query_range_outer(t.outer_l, l, szl)
             l = szl
         if szr < r:
             if szr <= l:
-                return cls._query_range_outer(t.outer_r, l - szr, r - szr)
-            right_q = cls._query_range_outer(t.outer_r, 0, r - szr)
+                return self._query_range_outer(t.outer_r, l - szr, r - szr)
+            right_q = self._query_range_outer(t.outer_r, 0, r - szr)
             r = szr
-        res = e_ if l == r else cls._query_range_inner(t, l - szl, r - szl)
-        res = op(left_q, res)
-        res = op(res, right_q)
+        res = self.e if l == r else self._query_range_inner(t, l - szl, r - szl)
+        res = self.op(left_q, res)
+        res = self.op(res, right_q)
         return res
 
-    @classmethod
-    def _query_range_inner(cls, t: SegNode, l: int, r: int) -> T:
+    def _query_range_inner(self, t: S, l: int, r: int) -> T:
         if not t:
-            return e_
+            return self.e
         if l == 0 and r == t.sz:
             return t.sum
-        t.push_down()
-        szl = cls._size(t.inner_l)
+        self._push_down(t)
+        szl = self._size(t.inner_l)
         szr = szl + 1
-        left_q = right_q = e_
+        left_q = right_q = self.e
         if l < szl:
             if r <= szl:
-                return cls._query_range_inner(t.inner_l, l, r)
-            left_q = cls._query_range_inner(t.inner_l, l, szl)
+                return self._query_range_inner(t.inner_l, l, r)
+            left_q = self._query_range_inner(t.inner_l, l, szl)
             l = szl
         if szr < r:
             if szr <= l:
-                return cls._query_range_inner(t.inner_r, l - szr, r - szr)
-            right_q = cls._query_range_inner(t.inner_r, 0, r - szr)
+                return self._query_range_inner(t.inner_r, l - szr, r - szr)
+            right_q = self._query_range_inner(t.inner_r, 0, r - szr)
             r = szr
-        res = e_ if l == r else t.val
-        res = op(left_q, res)
-        res = op(res, right_q)
+        res = self.e if l == r else t.val
+        res = self.op(left_q, res)
+        res = self.op(res, right_q)
         return res
 
-    @classmethod
-    def _enumerate_outer(cls, t: SegNode, res: list[tuple[int, T]]) -> None:
+    def _enumerate_outer(self, t: S, res: list[tuple[int, T]]) -> None:
         if not t:
             return
-        t.push_down()
+        self._push_down(t)
         if t.outer_l:
-            cls._enumerate_outer(t.outer_l, res)
-        cls.enumerate_inner(t, res)
+            self._enumerate_outer(t.outer_l, res)
+        self._enumerate_inner(t, res)
         if t.outer_r:
-            cls._enumerate_outer(t.outer_r, res)
+            self._enumerate_outer(t.outer_r, res)
 
-    @classmethod
-    def _enumerate_inner(cls, t: SegNode, res: list[tuple[int, T]]) -> None:
+    def _enumerate_inner(self, t: S, res: list[tuple[int, T]]) -> None:
         if not t:
             return
-        t.push_down()
+        self._push_down(t)
         if t.inner_l:
-            cls._enumerate_inner(t.inner_l, res)
+            self._enumerate_inner(t.inner_l, res)
         res.append((t.key, t.val))
         if t.inner_r:
-            cls._enumerate_inner(t.inner_r, res)
+            self._enumerate_inner(t.inner_r, res)
 
-    @classmethod
-    def _sort_inner(cls, t: SegNode) -> SegNode:
+    def _sort_inner(self, t: S) -> S:
         if not t:
             return None
         tl, tr = t.outer_l, t.outer_r
         t.outer_l = t.outer_r = None
-        t.push_down()
+        self._push_down(t)
         if (t.inner_l and t.key < t.inner_l.kmax) or (
             t.inner_r and t.inner_r.kmin < t.key
         ):
-            t.toggle()
-        res = cls._merge_compress(cls._sort_inner(tl), t)
-        res = cls._merge_compress(res, cls._sort_inner(tr))
+            self._toggle(t)
+        res = self._merge_compress(self._sort_inner(tl), t)
+        res = self._merge_compress(res, self._sort_inner(tr))
         return res
 
     def set(self, i: int, key: int, value: T) -> None:
@@ -374,7 +348,7 @@ class SortableSegtree:
 
     def prod(self, l: int, r: int) -> T:
         if l == r:
-            return e_
+            return self.e
         return self._query_range_outer(self.root, l, r)
 
     def prod_all(self) -> T:
@@ -386,7 +360,7 @@ class SortableSegtree:
         tl, tm, tr = self._split_range_outer(self.root, l, r)
         tm = self._sort_inner(tm)
         if descending:
-            tm.toggle()
+            self._toggle(tm)
         self.root = self._merge_outer(tl, self._merge_outer(tm, tr))
 
     def to_list(self):

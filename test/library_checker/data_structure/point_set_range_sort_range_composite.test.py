@@ -29,7 +29,7 @@ for _ in range(n):
     p, a, b = map(int, input().split())
     P.append((p, (a, b << 30 | b)))
 
-seg = SortableSegtree(P)
+seg = SortableSegtree(op, e_, toggle, P)
 for _ in range(q):
     t, *qu = map(int, input().split())
     if t == 0:
