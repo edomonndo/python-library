@@ -10,14 +10,14 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/point_set_range_composite
+    PROBLEM: https://judge.yosupo.jp/problem/point_set_range_sort_range_composite
     links:
-    - https://judge.yosupo.jp/problem/point_set_range_composite
+    - https://judge.yosupo.jp/problem/point_set_range_sort_range_composite
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_composite\n\
+  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/point_set_range_sort_range_composite\n\
     \nfrom data_structure.segtree.sortable_segtree import SortableSegtree\n\nMOD =\
     \ 998244353\nmask = (1 << 30) - 1\n\n\ndef op(x, y):\n    x1, x2, x3 = x[0], x[1]\
     \ >> 30, x[1] & mask\n    y1, y2, y3 = y[0], y[1] >> 30, y[1] & mask\n    return\
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-30 15:25:43+09:00'
+  timestamp: '2024-05-30 15:58:55+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
