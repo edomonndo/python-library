@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_affine_range_sum
-from data_structure.lazy_segment_tree import LazySegtree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 MOD = 998244353
 mask = (1 << 30) - 1

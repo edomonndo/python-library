@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_affine_point_get
 
-from data_structure.dual_segment_tree import DualSegtree
+from data_structure.segtree.dual_segment_tree import DualSegtree
 
 MOD = 998244353
 mask = (1 << 30) - 1

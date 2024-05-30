@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_B
 
-from data_structure.td.dynamic_fenwick_tree_2d import DynamicFenwickTree2d
+from data_structure.fenwick_tree.dynamic_fenwick_tree_2d import DynamicFenwickTree2d
 
 n = int(input())
 fw = DynamicFenwickTree2d(1000, 1000, 0)

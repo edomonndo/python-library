@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_I
 
-from data_structure.lazy_segment_tree import LazySegtree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 N, Q = map(int, input().split())
 A = [(0, 1)] * N

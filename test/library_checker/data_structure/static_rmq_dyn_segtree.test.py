@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/staticrmq
 
-from data_structure.dynamic_segtree import DynamicSegtree
+from data_structure.segtree.dynamic_segtree import DynamicSegtree
 
 n, q = map(int, input().split())
 A = list(map(int, input().split()))

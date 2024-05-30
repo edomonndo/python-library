@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_D
 
-from data_structure.dual_segment_tree import DualSegtree
+from data_structure.segtree.dual_segment_tree import DualSegtree
 
 N, Q = map(int, input().split())
 INF = (1 << 31) - 1

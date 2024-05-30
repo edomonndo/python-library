@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_A
 
-from data_structure.basic.segment_tree import RangeMinQuery
+from data_structure.segtree.segment_tree import RangeMinQuery
 
 N, Q = map(int, input().split())
 INF = (1 << 31) - 1

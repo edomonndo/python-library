@@ -1,7 +1,7 @@
 # verification-helper: IGNORE https://atcoder.jp/contests/abc342/tasks/abc342_g
 
-from data_structure.dual_segment_tree_commutative import DualSegtreeCommutative
-from data_structure.SortedMultiset import SortedMultiset
+from data_structure.segtree.dual_segment_tree_commutative import DualSegtreeCommutative
+from data_structure.basic.SortedMultiset import SortedMultiset
 
 
 def op(f: int, S: SortedMultiset):

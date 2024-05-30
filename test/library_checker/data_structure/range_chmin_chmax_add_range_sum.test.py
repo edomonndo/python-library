@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_chmin_chmax_add_range_sum
 
-from data_structure.segment_tree_beats import SegtreeBeats
+from data_structure.segtree.segment_tree_beats import SegtreeBeats
 
 N, Q = map(int, input().split())
 A = [int(x) for x in input().split()]

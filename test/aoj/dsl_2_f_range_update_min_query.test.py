@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_2_F
 
-from data_structure.lazy_segment_tree import LazySegtree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 N, Q = map(int, input().split())
 INF = (1 << 31) - 1
