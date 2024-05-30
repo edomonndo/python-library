@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/sortable_segtree.py
     title: data_structure/segtree/sortable_segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/point_set_range_sort_range_composite
     links:
@@ -35,8 +35,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-30 17:14:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-30 17:43:25+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
 layout: document

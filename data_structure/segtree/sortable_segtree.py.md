@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
     title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -155,11 +155,11 @@ data:
     \  res = self._merge_compress(self._sort_inner(tl), t)\n        res = self._merge_compress(res,\
     \ self._sort_inner(tr))\n        return res\n\n    def set(self, i: int, key:\
     \ int, value: T) -> None:\n        tl, tm, tr = self._cut_outer(self.root, i)\n\
-    \        tm.key = key\n        tm.val = value\n        tm.update()\n        self.root\
-    \ = self._merge_outer(tl, self._merge_outer(tm, tr))\n\n    def prod(self, l:\
-    \ int, r: int) -> T:\n        if l == r:\n            return self.e\n        return\
-    \ self._query_range_outer(self.root, l, r)\n\n    def prod_all(self) -> T:\n \
-    \       return self.root.sum\n\n    def sort(self, l: int, r: int, descending:\
+    \        tm.key = key\n        tm.val = value\n        self._update(tm)\n    \
+    \    self.root = self._merge_outer(tl, self._merge_outer(tm, tr))\n\n    def prod(self,\
+    \ l: int, r: int) -> T:\n        if l == r:\n            return self.e\n     \
+    \   return self._query_range_outer(self.root, l, r)\n\n    def prod_all(self)\
+    \ -> T:\n        return self.root.sum\n\n    def sort(self, l: int, r: int, descending:\
     \ bool = False) -> None:\n        if l == r:\n            return\n        tl,\
     \ tm, tr = self._split_range_outer(self.root, l, r)\n        tm = self._sort_inner(tm)\n\
     \        if descending:\n            self._toggle(tm)\n        self.root = self._merge_outer(tl,\
@@ -169,8 +169,8 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/sortable_segtree.py
   requiredBy: []
-  timestamp: '2024-05-30 17:14:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-05-30 17:43:25+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
 documentation_of: data_structure/segtree/sortable_segtree.py

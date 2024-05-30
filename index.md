@@ -200,7 +200,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree_beats.py
       title: Segment Tree Beats
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/sortable_segtree.py
       title: data_structure/segtree/sortable_segtree.py
   - name: dynamic_programming
@@ -723,7 +723,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_composite.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
     - icon: ':heavy_check_mark:'
