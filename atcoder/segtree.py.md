@@ -10,7 +10,7 @@ data:
     title: data_structure/range_set_range_composite.py
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
-    title: dynamic_programming/longest_increase_subsequence.py
+    title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
   - icon: ':warning:'
     path: tree/auxiliary_tree.py
     title: Auxiliary tree

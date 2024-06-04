@@ -4,10 +4,11 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: geometory/offline_point_add_rectangle_sum.py
-    title: geometory/offline_point_add_rectangle_sum.py
+    title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
+      \u30F3)"
   - icon: ':heavy_check_mark:'
     path: geometory/offline_static_rectangle_sum.py
-    title: geometory/offline_static_rectangle_sum.py
+    title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py

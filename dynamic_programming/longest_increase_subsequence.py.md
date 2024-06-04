@@ -52,8 +52,5 @@ data:
   verifiedWith: []
 documentation_of: dynamic_programming/longest_increase_subsequence.py
 layout: document
-redirect_from:
-- /library/dynamic_programming/longest_increase_subsequence.py
-- /library/dynamic_programming/longest_increase_subsequence.py.html
-title: dynamic_programming/longest_increase_subsequence.py
+title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
 ---

@@ -84,6 +84,9 @@ data:
       path: data_structure/basic/doubly_linked_list.py
       title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
     - icon: ':warning:'
+      path: data_structure/basic/leftist_heap.py
+      title: data_structure/basic/leftist_heap.py
+    - icon: ':warning:'
       path: data_structure/basic/radix_heap.py
       title: Radix Heap
     - icon: ':heavy_check_mark:'
@@ -91,7 +94,7 @@ data:
       title: Union Find
     - icon: ':warning:'
       path: data_structure/basic/wordsize_tree_set.py
-      title: data_structure/basic/wordsize_tree_set.py
+      title: "32\u5206\u6728"
   - name: data_structure/binary_search_tree
     pages:
     - icon: ':warning:'
@@ -207,13 +210,13 @@ data:
     pages:
     - icon: ':warning:'
       path: dynamic_programming/edit_distance.py
-      title: dynamic_programming/edit_distance.py
+      title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':warning:'
       path: dynamic_programming/knapsack.py
-      title: dynamic_programming/knapsack.py
+      title: "\u30CA\u30C3\u30D7\u30B5\u30C3\u30AF\u554F\u984C"
     - icon: ':warning:'
       path: dynamic_programming/longest_increase_subsequence.py
-      title: dynamic_programming/longest_increase_subsequence.py
+      title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
   - name: embed_cpp
     pages:
     - icon: ':warning:'
@@ -236,16 +239,17 @@ data:
         \u57DF\u6728"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_point_add_rectangle_sum.py
-      title: geometory/offline_point_add_rectangle_sum.py
+      title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
+        \u30F3)"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_static_rectangle_sum.py
-      title: geometory/offline_static_rectangle_sum.py
+      title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
     - icon: ':heavy_check_mark:'
       path: geometory/sort_points_by_argument.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
       path: geometory/union_area_rectangle.py
-      title: geometory/union_area_rectangle.py
+      title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -257,6 +261,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
       title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
+    - icon: ':heavy_check_mark:'
+      path: graph/chromatic_number.py
+      title: "\u5F69\u8272\u6570"
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
@@ -274,6 +281,9 @@ data:
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
+      path: graph/maximum_independent_set.py
+      title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
+    - icon: ':heavy_check_mark:'
       path: graph/mincost_arborescence.py
       title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
     - icon: ':heavy_check_mark:'
@@ -282,6 +292,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    - icon: ':heavy_check_mark:'
+      path: graph/shortest_paths.py
+      title: Shortest paths
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
@@ -479,8 +492,14 @@ data:
   - name: utility
     pages:
     - icon: ':warning:'
+      path: utility/antirec.py
+      title: utility/antirec.py
+    - icon: ':warning:'
       path: utility/binary_search.py
       title: "\u4E8C\u5206\u6CD5"
+    - icon: ':warning:'
+      path: utility/bit32_operation.py
+      title: "\u30D3\u30C3\u30C8\u6F14\u7B97(32bit)"
     - icon: ':warning:'
       path: utility/bitset.py
       title: Bitset
@@ -797,6 +816,9 @@ data:
       path: test/library_checker/graph/bipartitematching.test.py
       title: test/library_checker/graph/bipartitematching.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/chromatic_number.test.py
+      title: test/library_checker/graph/chromatic_number.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection.test.py
       title: test/library_checker/graph/cycle_detection.test.py
     - icon: ':heavy_check_mark:'
@@ -806,8 +828,14 @@ data:
       path: test/library_checker/graph/dominator_tree.test.py
       title: test/library_checker/graph/dominator_tree.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/k_shortest_walk.test.py
+      title: test/library_checker/graph/k_shortest_walk.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/manhattanmst.test.py
       title: test/library_checker/graph/manhattanmst.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/maximum_independent_set.test.py
+      title: test/library_checker/graph/maximum_independent_set.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/minimum_spanning_tree.test.py
       title: test/library_checker/graph/minimum_spanning_tree.test.py

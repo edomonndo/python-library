@@ -70,8 +70,5 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/wordsize_tree_set.py
 layout: document
-redirect_from:
-- /library/data_structure/basic/wordsize_tree_set.py
-- /library/data_structure/basic/wordsize_tree_set.py.html
-title: data_structure/basic/wordsize_tree_set.py
+title: "32\u5206\u6728"
 ---

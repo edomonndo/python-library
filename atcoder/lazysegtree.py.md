@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: geometory/union_area_rectangle.py
-    title: geometory/union_area_rectangle.py
+    title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc035c.test.py

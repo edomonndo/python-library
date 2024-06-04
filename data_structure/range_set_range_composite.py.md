@@ -6,7 +6,7 @@ data:
     title: atcoder/segtree.py
   - icon: ':warning:'
     path: data_structure/basic/wordsize_tree_set.py
-    title: data_structure/basic/wordsize_tree_set.py
+    title: "32\u5206\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
