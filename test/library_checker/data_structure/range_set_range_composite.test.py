@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_set_range_composite
 
-from data_structure.range_set_range_composite import RangeSetRangeComposite
+from data_structure.segtree.range_set_range_composite import RangeSetRangeComposite
 
 MOD = 998244353
 mask = (1 << 30) - 1

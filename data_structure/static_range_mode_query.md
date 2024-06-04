@@ -1,5 +1,5 @@
 ---
-title: 区間最頻値
+title: 区間最頻値クエリ
 documentation_of: ./static_range_mode_query.py
 ---
 

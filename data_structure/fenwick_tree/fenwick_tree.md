@@ -1,5 +1,5 @@
 ---
-title: Fenwick Tree
+title: 抽象化Fenwick Tree
 documentation_of: ./fenwick_tree.py
 ---
 

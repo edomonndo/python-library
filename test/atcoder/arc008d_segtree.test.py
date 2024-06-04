@@ -1,6 +1,6 @@
 # verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4
 
-from data_structure.compressed_segtree import CompressedSegtree
+from data_structure.segtree.compressed_segtree import CompressedSegtree
 
 
 def op(x, y):
