@@ -1,7 +1,11 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: geometory/offline_rectangle_add_rectangle_sum.py
+    title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
+      \u30E9\u30A4\u30F3)"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -25,7 +29,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
-  requiredBy: []
+  requiredBy:
+  - geometory/offline_rectangle_add_rectangle_sum.py
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
