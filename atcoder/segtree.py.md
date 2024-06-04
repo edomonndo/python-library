@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: data_structure/compressed_segtree.py
-    title: data_structure/compressed_segtree.py
-  - icon: ':heavy_check_mark:'
-    path: data_structure/range_set_range_composite.py
-    title: data_structure/range_set_range_composite.py
+    path: data_structure/segtree/compressed_segtree.py
+    title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+  - icon: ':x:'
+    path: data_structure/segtree/range_set_range_composite.py
+    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
     title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
@@ -73,8 +73,8 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - data_structure/range_set_range_composite.py
-  - data_structure/compressed_segtree.py
+  - data_structure/segtree/range_set_range_composite.py
+  - data_structure/segtree/compressed_segtree.py
   - dynamic_programming/longest_increase_subsequence.py
   - tree/euler_tour.py
   - tree/auxiliary_tree.py

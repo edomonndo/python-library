@@ -69,8 +69,5 @@ data:
   - test/atcoder/arc008d_dyn_segtree.test.py
 documentation_of: data_structure/segtree/dynamic_segtree.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/dynamic_segtree.py
-- /library/data_structure/segtree/dynamic_segtree.py.html
-title: data_structure/segtree/dynamic_segtree.py
+title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
 ---

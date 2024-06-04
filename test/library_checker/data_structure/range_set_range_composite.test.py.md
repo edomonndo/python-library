@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/range_set_range_composite.py
-    title: data_structure/range_set_range_composite.py
+  - icon: ':x:'
+    path: data_structure/segtree/range_set_range_composite.py
+    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/range_set_range_composite
     links:
@@ -18,7 +18,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_set_range_composite\n\
-    \nfrom data_structure.range_set_range_composite import RangeSetRangeComposite\n\
+    \nfrom data_structure.segtree.range_set_range_composite import RangeSetRangeComposite\n\
     \nMOD = 998244353\nmask = (1 << 30) - 1\n\n\ndef op(x, y):\n    x0, x1 = x >>\
     \ 30, x & mask\n    y0, y1 = y >> 30, y & mask\n    return (x0 * y0 % MOD) <<\
     \ 30 | ((y0 * x1 + y1) % MOD)\n\n\ndef pow_(x: int, y: int):\n    x0, x1 = x >>\
@@ -32,12 +32,12 @@ data:
     \        res = seg.prod(l, r)\n        a, b = res >> 30, res & mask\n        print((a\
     \ * x + b) % MOD)\n"
   dependsOn:
-  - data_structure/range_set_range_composite.py
+  - data_structure/segtree/range_set_range_composite.py
   isVerificationFile: true
   path: test/library_checker/data_structure/range_set_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-05-29 13:44:06+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-06-04 16:16:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py
 layout: document

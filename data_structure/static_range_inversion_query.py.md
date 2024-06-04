@@ -50,8 +50,5 @@ data:
   - test/library_checker/data_structure/static_range_inversion_query.test.py
 documentation_of: data_structure/static_range_inversion_query.py
 layout: document
-redirect_from:
-- /library/data_structure/static_range_inversion_query.py
-- /library/data_structure/static_range_inversion_query.py.html
-title: data_structure/static_range_inversion_query.py
+title: "\u9759\u7684\u533A\u9593\u53CD\u8EE2\u30AF\u30A8\u30EA"
 ---

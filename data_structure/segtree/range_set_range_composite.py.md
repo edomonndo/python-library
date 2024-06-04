@@ -9,12 +9,12 @@ data:
     title: "32\u5206\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/data_structure/range_set_range_composite.test.py
     title: test/library_checker/data_structure/range_set_range_composite.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -50,16 +50,28 @@ data:
   - atcoder/segtree.py
   - data_structure/basic/wordsize_tree_set.py
   isVerificationFile: false
-  path: data_structure/range_set_range_composite.py
+  path: data_structure/segtree/range_set_range_composite.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-06-04 16:16:37+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/data_structure/range_set_range_composite.test.py
-documentation_of: data_structure/range_set_range_composite.py
+documentation_of: data_structure/segtree/range_set_range_composite.py
 layout: document
-redirect_from:
-- /library/data_structure/range_set_range_composite.py
-- /library/data_structure/range_set_range_composite.py.html
-title: data_structure/range_set_range_composite.py
+title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
 ---
+
+セグメント木にソート済みの配列をのせたもの.
+
+
+### mst = MergeSortTree(arr)
+
+初期化．$arr$はクエリの配列であり変更不可．
+
+### mst.sum_le(l, r, x)
+
+配列$arr$の半開区間$[l,r)$で、$x$以下の値の合計を計算する.
+
+### mst.sum_lt(l, r, x)
+
+配列$arr$の半開区間$[l,r)$で、$x$未満の値の合計を計算する.

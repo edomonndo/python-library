@@ -7,6 +7,10 @@ data:
     title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
       \u30F3)"
   - icon: ':heavy_check_mark:'
+    path: geometory/offline_rectangle_add_point_get.py
+    title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
+      \u30A4\u30F3)"
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_static_rectangle_sum.py
     title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
   _extendedVerifiedWith: []
@@ -33,6 +37,7 @@ data:
   isVerificationFile: false
   path: atcoder/fenwicktree.py
   requiredBy:
+  - geometory/offline_rectangle_add_point_get.py
   - geometory/offline_static_rectangle_sum.py
   - geometory/offline_point_add_rectangle_sum.py
   timestamp: '2024-05-29 14:24:11+09:00'

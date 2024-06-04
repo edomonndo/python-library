@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
-    title: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+    title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

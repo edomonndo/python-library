@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/static_range_mode_query.py
-    title: "\u533A\u9593\u6700\u983B\u5024"
+    title: "\u533A\u9593\u6700\u983B\u5024\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

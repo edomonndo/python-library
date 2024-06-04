@@ -105,7 +105,7 @@ data:
       title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
     - icon: ':warning:'
       path: data_structure/binary_search_tree/red_black_tree.py
-      title: data_structure/binary_search_tree/red_black_tree.py
+      title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(\u8D64\u9ED2\u6728)"
     - icon: ':warning:'
       path: data_structure/binary_search_tree/splay_tree.py
       title: Splay tree
@@ -114,9 +114,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/binary_trie.py
       title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
-    - icon: ':warning:'
-      path: data_structure/compressed_segtree.py
-      title: data_structure/compressed_segtree.py
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
@@ -138,9 +135,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/offline_dynamic_connectivity.py
       title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
-    - icon: ':heavy_check_mark:'
-      path: data_structure/range_set_range_composite.py
-      title: data_structure/range_set_range_composite.py
     - icon: ':warning:'
       path: data_structure/range_union_find.py
       title: Range Union Find
@@ -152,13 +146,14 @@ data:
       title: Sparse table
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_inversion_query.py
-      title: data_structure/static_range_inversion_query.py
+      title: "\u9759\u7684\u533A\u9593\u53CD\u8EE2\u30AF\u30A8\u30EA"
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_lis_query.py
-      title: data_structure/static_range_lis_query.py
+      title: "\u9759\u7684\u533A\u9593\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217\u30AF\
+        \u30A8\u30EA"
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_mode_query.py
-      title: "\u533A\u9593\u6700\u983B\u5024"
+      title: "\u533A\u9593\u6700\u983B\u5024\u30AF\u30A8\u30EA"
     - icon: ':warning:'
       path: data_structure/static_range_parallel_union_find.py
       title: Static Range Parallel Union Find
@@ -175,12 +170,15 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
-      title: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+      title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
     - icon: ':warning:'
       path: data_structure/fenwick_tree/fenwick_tree.py
-      title: Fenwick Tree
+      title: "\u62BD\u8C61\u5316Fenwick Tree"
   - name: data_structure/segtree
     pages:
+    - icon: ':warning:'
+      path: data_structure/segtree/compressed_segtree.py
+      title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
@@ -190,13 +188,16 @@ data:
         \ (Dual Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
-      title: data_structure/segtree/dynamic_segtree.py
+      title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':warning:'
       path: data_structure/segtree/merge_sort_tree.py
       title: Merge Sort Tree
+    - icon: ':x:'
+      path: data_structure/segtree/range_set_range_composite.py
+      title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
@@ -205,7 +206,8 @@ data:
       title: Segment Tree Beats
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/sortable_segtree.py
-      title: data_structure/segtree/sortable_segtree.py
+      title: "\uFF11\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u30BD\u30FC\u30C8\u30BB\u30B0\
+        \u30E1\u30F3\u30C8\u6728"
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -241,6 +243,10 @@ data:
       path: geometory/offline_point_add_rectangle_sum.py
       title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
         \u30F3)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/offline_rectangle_add_point_get.py
+      title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
+        \u30A4\u30F3)"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_static_rectangle_sum.py
       title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
@@ -760,9 +766,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: test/library_checker/data_structure/range_set_range_composite.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/rectangle_add_point_get.test.py
+      title: test/library_checker/data_structure/rectangle_add_point_get.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/rectangle_sum.test.py
       title: test/library_checker/data_structure/rectangle_sum.test.py

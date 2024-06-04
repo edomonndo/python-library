@@ -31,7 +31,7 @@ data:
   verifiedWith: []
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
-title: Fenwick Tree
+title: "\u62BD\u8C61\u5316Fenwick Tree"
 ---
 
 数列 $a_i (i=0,...,n-1)$ に対して以下のクエリを高速に行えます.

@@ -190,8 +190,5 @@ data:
   verifiedWith: []
 documentation_of: data_structure/binary_search_tree/red_black_tree.py
 layout: document
-redirect_from:
-- /library/data_structure/binary_search_tree/red_black_tree.py
-- /library/data_structure/binary_search_tree/red_black_tree.py.html
-title: data_structure/binary_search_tree/red_black_tree.py
+title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(\u8D64\u9ED2\u6728)"
 ---

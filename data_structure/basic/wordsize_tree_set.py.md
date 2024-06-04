@@ -2,9 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/range_set_range_composite.py
-    title: data_structure/range_set_range_composite.py
+  - icon: ':x:'
+    path: data_structure/segtree/range_set_range_composite.py
+    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
   - icon: ':warning:'
     path: test/library_checker/data_structure/predecessor_problem.py
     title: test/library_checker/data_structure/predecessor_problem.py
@@ -64,7 +64,7 @@ data:
   path: data_structure/basic/wordsize_tree_set.py
   requiredBy:
   - test/library_checker/data_structure/predecessor_problem.py
-  - data_structure/range_set_range_composite.py
+  - data_structure/segtree/range_set_range_composite.py
   timestamp: '2024-05-29 13:44:06+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

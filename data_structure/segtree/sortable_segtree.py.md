@@ -175,8 +175,6 @@ data:
   - test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
 documentation_of: data_structure/segtree/sortable_segtree.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/sortable_segtree.py
-- /library/data_structure/segtree/sortable_segtree.py.html
-title: data_structure/segtree/sortable_segtree.py
+title: "\uFF11\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u30BD\u30FC\u30C8\u30BB\u30B0\u30E1\
+  \u30F3\u30C8\u6728"
 ---

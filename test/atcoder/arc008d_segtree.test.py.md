@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':warning:'
-    path: data_structure/compressed_segtree.py
-    title: data_structure/compressed_segtree.py
+    path: data_structure/segtree/compressed_segtree.py
+    title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,20 +18,20 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
-    \nfrom data_structure.compressed_segtree import CompressedSegtree\n\n\ndef op(x,\
-    \ y):\n    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\ne = (1,\
-    \ 0)\n\nn, m = map(int, input().split())\nA = []\nPs = dict()\nfor i in range(m):\n\
-    \    p, a, b = input().split()\n    p = int(p) - 1\n    a = float(a)\n    b =\
-    \ float(b)\n    A.append((p, a, b))\n    Ps[p] = (1, 0)\n\nmx = 1\nmn = 1\nseg\
-    \ = CompressedSegtree(op, e, Ps)\nfor p, a, b in A:\n    seg[p] = (a, b)\n   \
-    \ a, b = seg.all_prod()\n    x = a + b\n    mx = max(mx, x)\n    mn = min(mn,\
+    \nfrom data_structure.segtree.compressed_segtree import CompressedSegtree\n\n\n\
+    def op(x, y):\n    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\n\
+    e = (1, 0)\n\nn, m = map(int, input().split())\nA = []\nPs = dict()\nfor i in\
+    \ range(m):\n    p, a, b = input().split()\n    p = int(p) - 1\n    a = float(a)\n\
+    \    b = float(b)\n    A.append((p, a, b))\n    Ps[p] = (1, 0)\n\nmx = 1\nmn =\
+    \ 1\nseg = CompressedSegtree(op, e, Ps)\nfor p, a, b in A:\n    seg[p] = (a, b)\n\
+    \    a, b = seg.all_prod()\n    x = a + b\n    mx = max(mx, x)\n    mn = min(mn,\
     \ x)\nprint(mn)\nprint(mx)\n"
   dependsOn:
-  - data_structure/compressed_segtree.py
+  - data_structure/segtree/compressed_segtree.py
   isVerificationFile: true
   path: test/atcoder/arc008d_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-06-04 16:16:37+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc008d_segtree.test.py
