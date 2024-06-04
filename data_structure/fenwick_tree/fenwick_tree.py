@@ -7,6 +7,7 @@ class FenwickTree:
     def __init__(self, N: int, e: T = 0):
         self.n = N
         self.data = [e for i in range(N)]
+        self.e = e
 
     def add(self, p: int, x: T) -> None:
         assert 0 <= p < self.n, "0<=p<n,p={0},n={1}".format(p, self.n)
@@ -22,7 +23,7 @@ class FenwickTree:
         return self.sum0(r) - self.sum0(l)
 
     def sum0(self, r: int) -> T:
-        s = 0
+        s = self.e
         while r > 0:
             s += self.data[r - 1]
             r -= r & -r
