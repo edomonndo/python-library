@@ -5,7 +5,7 @@ data:
   - icon: ':warning:'
     path: data_structure/segtree/compressed_segtree.py
     title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/range_set_range_composite.py
     title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
   - icon: ':warning:'
@@ -29,9 +29,9 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Callable, TypeVar\n\n\ndef _ceil_pow2(n: int) -> int:\n\
     \    x = 0\n    while (1 << x) < n:\n        x += 1\n\n    return x\n\n\nT = TypeVar(\"\
-    T\")\n\n\nclass SegTree:\n    def __init__(self,op: Callable[[T, T], T],e: T,v:\
-    \ int, list[T]) -> None:\n        self._op = op\n        self._e = e\n\n     \
-    \   if isinstance(v, int):\n            v = [e] * v\n\n        self._n = len(v)\n\
+    T\")\n\n\nclass SegTree:\n    def __init__(self, op: Callable[[T, T], T], e: T,\
+    \ v: list[T]) -> None:\n        self._op = op\n        self._e = e\n\n       \
+    \ if isinstance(v, int):\n            v = [e] * v\n\n        self._n = len(v)\n\
     \        self._log = _ceil_pow2(self._n)\n        self._size = 1 << self._log\n\
     \        self._d = [e] * (2 * self._size)\n\n        for i in range(self._n):\n\
     \            self._d[self._size + i] = v[i]\n        for i in range(self._size\
@@ -78,7 +78,7 @@ data:
   - dynamic_programming/longest_increase_subsequence.py
   - tree/euler_tour.py
   - tree/auxiliary_tree.py
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/segtree.py

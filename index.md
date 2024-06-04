@@ -195,7 +195,7 @@ data:
     - icon: ':warning:'
       path: data_structure/segtree/merge_sort_tree.py
       title: Merge Sort Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/range_set_range_composite.py
       title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
     - icon: ':heavy_check_mark:'
@@ -766,7 +766,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: test/library_checker/data_structure/range_set_range_composite.test.py
     - icon: ':heavy_check_mark:'

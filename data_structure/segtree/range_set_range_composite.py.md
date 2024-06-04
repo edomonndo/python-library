@@ -9,12 +9,12 @@ data:
     title: "32\u5206\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_set_range_composite.test.py
     title: test/library_checker/data_structure/range_set_range_composite.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -52,8 +52,8 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/range_set_range_composite.py
   requiredBy: []
-  timestamp: '2024-06-04 16:16:37+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-06-04 17:27:40+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_set_range_composite.test.py
 documentation_of: data_structure/segtree/range_set_range_composite.py

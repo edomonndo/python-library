@@ -103,7 +103,7 @@ data:
   isVerificationFile: false
   path: tree/euler_tour.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/vertex_add_path_sum.test.py
