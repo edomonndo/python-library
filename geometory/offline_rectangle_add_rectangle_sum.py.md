@@ -6,12 +6,12 @@ data:
     title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
     title: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -64,8 +64,8 @@ data:
   isVerificationFile: false
   path: geometory/offline_rectangle_add_rectangle_sum.py
   requiredBy: []
-  timestamp: '2024-06-04 17:44:40+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-06-04 17:51:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
 documentation_of: geometory/offline_rectangle_add_rectangle_sum.py

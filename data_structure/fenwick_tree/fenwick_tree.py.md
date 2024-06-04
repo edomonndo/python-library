@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_rectangle_sum.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
       \u30E9\u30A4\u30F3)"
@@ -18,20 +18,20 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import TypeVar\n\nT = TypeVar(\"T\")\n\n\nclass FenwickTree:\n\
     \    def __init__(self, N: int, e: T = 0):\n        self.n = N\n        self.data\
-    \ = [e for i in range(N)]\n\n    def add(self, p: int, x: T) -> None:\n      \
-    \  assert 0 <= p < self.n, \"0<=p<n,p={0},n={1}\".format(p, self.n)\n        p\
-    \ += 1\n        while p <= self.n:\n            self.data[p - 1] += x\n      \
-    \      p += p & -p\n\n    def sum(self, l: int, r: int) -> T:\n        assert\
-    \ 0 <= l and l <= r and r <= self.n, \"0<=l<=r<=n,l={0},r={1},n={2}\".format(\n\
-    \            l, r, self.n\n        )\n        return self.sum0(r) - self.sum0(l)\n\
-    \n    def sum0(self, r: int) -> T:\n        s = 0\n        while r > 0:\n    \
-    \        s += self.data[r - 1]\n            r -= r & -r\n        return s\n"
+    \ = [e for i in range(N)]\n        self.e = e\n\n    def add(self, p: int, x:\
+    \ T) -> None:\n        assert 0 <= p < self.n, \"0<=p<n,p={0},n={1}\".format(p,\
+    \ self.n)\n        p += 1\n        while p <= self.n:\n            self.data[p\
+    \ - 1] += x\n            p += p & -p\n\n    def sum(self, l: int, r: int) -> T:\n\
+    \        assert 0 <= l and l <= r and r <= self.n, \"0<=l<=r<=n,l={0},r={1},n={2}\"\
+    .format(\n            l, r, self.n\n        )\n        return self.sum0(r) - self.sum0(l)\n\
+    \n    def sum0(self, r: int) -> T:\n        s = self.e\n        while r > 0:\n\
+    \            s += self.data[r - 1]\n            r -= r & -r\n        return s\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
   - geometory/offline_rectangle_add_rectangle_sum.py
-  timestamp: '2024-05-30 15:25:43+09:00'
+  timestamp: '2024-06-04 17:51:04+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
