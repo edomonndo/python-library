@@ -40,15 +40,17 @@ class StaticRectangleAddPointGet:
         j = 0
         bit = FenwickTree(len(toY) + 1)
         for i in qs:
-            while j < n + n and event[j][0] <= self.qs[i][0]:
-                if event[j][3]:
-                    bit.add(event[j][1], -event[j][4])
-                    bit.add(event[j][2], event[j][4])
+            x, y = self.qs[i]
+            while j < n + n and event[j][0] <= x:
+                _, y1, y2, f, w = event[j][1:]
+                if f:
+                    bit.add(y1, -w)
+                    bit.add(y2, w)
                 else:
-                    bit.add(event[j][1], event[j][4])
-                    bit.add(event[j][2], -event[j][4])
+                    bit.add(y1, w)
+                    bit.add(y2, -w)
                 j += 1
-            y = bisect_left(toY, self.qs[i][1])
+            y = bisect_left(toY, y)
             res[i] = bit._sum(y + 1)
 
         return res
