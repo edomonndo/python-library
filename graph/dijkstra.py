@@ -1,4 +1,4 @@
-import heapq
+from heapq import *
 
 
 def dijkstra(graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
@@ -10,7 +10,7 @@ def dijkstra(graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
 
     que = [(0, start)]  # 距離,頂点
     while que:
-        c, u = heapq.heappop(que)
+        c, u = heappop(que)
         if c > dist[u]:
             continue
         for nc, v in graph[u]:
@@ -18,7 +18,7 @@ def dijkstra(graph: list[list[int]], start: int) -> tuple[list[int], list[int]]:
             if cost < dist[v]:
                 dist[v] = cost
                 prev[v] = u
-                heapq.heappush(que, (cost, v))
+                heappush(que, (cost, v))
 
     return dist, prev
 
