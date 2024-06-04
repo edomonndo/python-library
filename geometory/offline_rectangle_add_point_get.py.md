@@ -6,12 +6,12 @@ data:
     title: atcoder/fenwicktree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/rectangle_add_point_get.test.py
     title: test/library_checker/data_structure/rectangle_add_point_get.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -33,9 +33,9 @@ data:
     \     event.sort()\n\n        qs = list(range(q))\n        qs.sort(key=lambda\
     \ i: self.qs[i][0])\n\n        j = 0\n        bit = FenwickTree(len(toY) + 1)\n\
     \        for i in qs:\n            x, y = self.qs[i]\n            while j < n\
-    \ + n and event[j][0] <= x:\n                _, y1, y2, f, w = event[j][1:]\n\
-    \                if f:\n                    bit.add(y1, -w)\n                \
-    \    bit.add(y2, w)\n                else:\n                    bit.add(y1, w)\n\
+    \ + n and event[j][0] <= x:\n                y1, y2, f, w = event[j][1:]\n   \
+    \             if f:\n                    bit.add(y1, -w)\n                   \
+    \ bit.add(y2, w)\n                else:\n                    bit.add(y1, w)\n\
     \                    bit.add(y2, -w)\n                j += 1\n            y =\
     \ bisect_left(toY, y)\n            res[i] = bit._sum(y + 1)\n\n        return\
     \ res\n\n\nclass OfflineRectangleAddPointGet:\n    def __init__(self):\n     \
@@ -63,8 +63,8 @@ data:
   isVerificationFile: false
   path: geometory/offline_rectangle_add_point_get.py
   requiredBy: []
-  timestamp: '2024-06-04 17:44:40+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-06-04 17:56:08+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/rectangle_add_point_get.test.py
 documentation_of: geometory/offline_rectangle_add_point_get.py
