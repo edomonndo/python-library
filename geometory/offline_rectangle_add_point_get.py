@@ -42,7 +42,7 @@ class StaticRectangleAddPointGet:
         for i in qs:
             x, y = self.qs[i]
             while j < n + n and event[j][0] <= x:
-                _, y1, y2, f, w = event[j][1:]
+                y1, y2, f, w = event[j][1:]
                 if f:
                     bit.add(y1, -w)
                     bit.add(y2, w)
