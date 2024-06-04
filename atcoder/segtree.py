@@ -13,7 +13,7 @@ T = TypeVar("T")
 
 
 class SegTree:
-    def __init__(self,op: Callable[[T, T], T],e: T,v: int, list[T]) -> None:
+    def __init__(self, op: Callable[[T, T], T], e: T, v: list[T]) -> None:
         self._op = op
         self._e = e
 
