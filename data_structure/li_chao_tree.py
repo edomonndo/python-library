@@ -1,77 +1,67 @@
 class LiChaoTree:
-    def __init__(self, xs, inf=10**19):
-        """最小値(最大値)を求める頂点の数"""
-        xs = sorted(set(xs))
+    def __init__(self, points: list[int], inf: int = 1 << 60):
+        """最小値(最大値)を求める頂点集合"""
+        xs = sorted(set(points)) if points else [0]
+        self.n = n = len(xs)
         self.inf = inf
-        self.size = 1 << (len(xs) - 1).bit_length()
-        self.dat = [None] * (self.size * 2)
-        self.xs = xs + [inf] * (self.size - len(xs))  # 長さを揃える
-        self.idx = {num: id for id, num in enumerate(xs)}
+        self.sz = sz = 2 << n.bit_length() if n & (n - 1) else n
+        sz2 = self.sz << 1
+        self.bl = [0] * sz2
+        self.br = [0] * sz2
+        self.dat = [(0, inf)] * sz2
+        for i in range(n):
+            self.bl[sz + i] = self.br[sz + i] = xs[i]
+        for i in range(n, self.sz):
+            self.bl[sz + i] = self.br[sz + i] = xs[n - 1]
+        for i in range(sz - 1, 0, -1):
+            self.bl[i] = self.bl[i << 1]
+            self.br[i] = self.br[i << 1 | 1]
 
-    def _f(self, line, x):
-        """line=(a,b),a*x+bを返す"""
-        a, b = line
-        return a * x + b
-
-    def _judge(self, line1, line2, x):
-        """座標がxの点でline1の方が大きければTrueをそうでないならFalseを返す"""
-        return self._f(line1, x) > self._f(line2, x)
-
-    def _add(self, line, idx, l, r):
-        while True:
-            if self.dat[idx] is None:
-                self.dat[idx] = line
-                return
-            m = (l + r) // 2
-            line_d = self.dat[idx]
-            lx, mx, rx = self.xs[l], self.xs[m], self.xs[r - 1]
-            f_l = self._judge(line_d, line, lx)
-            f_m = self._judge(line_d, line, mx)
-            f_r = self._judge(line_d, line, rx)
-            if f_l and f_r:
-                self.dat[idx] = line
-                return
-            if not f_l and not f_r:
-                return
-            if f_m:
-                line, self.dat[idx] = self.dat[idx], line
-            if f_l != f_m:
-                r = m
-                idx *= 2
-            else:
-                l = m
-                idx = 2 * idx + 1
-
-    def add_line(self, a, b):
+    def add_line(self, a: int, b: int, idx: int = 1) -> None:
         """ax+bの直線を追加する"""
-        self._add((a, b), 1, 0, self.size)
+        bl, br, dat = self.bl, self.br, self.dat
+        while True:
+            a2, b2 = dat[idx]
+            l, r = bl[idx], br[idx]
+            lv = a2 * l + b2
+            rv = a2 * r + b2
+            nlv = a * l + b
+            nrv = a * r + b
+            if (lv <= nlv) == (rv <= nrv):
+                if nlv < lv:
+                    dat[idx] = (a, b)
+                return
+            m = br[idx << 1]
+            mv = a2 * m + b2
+            nmv = a * m + b
+            if nmv < mv:
+                dat[idx], (a, b) = (a, b), dat[idx]
+                lv, nlv = nlv, lv
+            idx = (idx << 1) if nlv < lv else (idx << 1 | 1)
 
-    def add_segment(self, a, b, l, r):
-        """線分ax+b(l<=x<r)を追加する"""
-        line = (a, b)
-        lidx, ridx = self.idx[l] + self.size, self.idx[r] + self.size
-        l, r = self.idx[l], self.idx[r]
-        size = 1
-        while lidx < ridx:
-            if lidx & 1:
-                self._add(line, lidx, l, l + size)
-                lidx += 1
-                l += size
-            if ridx & 1:
-                self._add(line, ridx, r, r + size)
-                ridx -= 1
-                r -= size
-                self._add(line, ridx, r, r + size)
-            lidx >>= 1
-            ridx >>= 1
-            size <<= 1
+    def add_segment(self, a: int, b: int, l: int, r: int, idx: int = 1) -> None:
+        """線分ax+b(l<=x<=r)を追加する"""
+        L, R, bl, br, add_line = l, r, self.bl, self.br, self.add_line
+        st = [idx]
+        while st:
+            idx = st.pop()
+            l, r = bl[idx], br[idx]
+            if R < l or r < L:
+                continue
+            if L <= l and r <= R:
+                add_line(a, b, idx)
+                continue
+            st += [idx << 1 | 1, idx << 1]
 
-    def query(self, x):
+    def query(self, x: int) -> int:
         """座標xにおける直線群の最小値を返す"""
-        idx = self.idx[x] + self.size
-        ans = self.inf
-        while idx > 0:
-            if self.dat[idx]:
-                ans = min(ans, self._f(self.dat[idx], x))
-            idx >>= 1
-        return ans
+        idx = 1
+        a, b = self.dat[idx]
+        res = a * x + b
+        while idx < self.sz:
+            idx <<= 1
+            if x > self.br[idx]:
+                idx += 1
+            a, b = self.dat[idx]
+            res = min(res, a * x + b)
+        return res
