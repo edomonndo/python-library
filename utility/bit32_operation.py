@@ -20,6 +20,8 @@ def bit_reverse(x: int) -> int:
 
 def ctz(x: int) -> int:
     """Count trailing zeros"""
+    if x == 0:
+        return -1
     return popcount(~x & (x - 1))
 
 

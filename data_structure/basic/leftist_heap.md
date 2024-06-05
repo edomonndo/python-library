@@ -1,4 +1,4 @@
 ---
 title: Leftist Heap
-documentation_of: ./leftis_heap.py
+documentation_of: ./leftist_heap.py
 ---

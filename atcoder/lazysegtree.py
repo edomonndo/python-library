@@ -1,4 +1,4 @@
-from typing import Callable, TypeVar
+from typing import Callable, TypeVar, Union, Optional
 
 
 def _ceil_pow2(n: int) -> int:
@@ -21,7 +21,7 @@ class LazySegTree:
         mapping: Callable[[S, F], S],
         composition: Callable[[F, F], F],
         id_: F,
-        v: int | list[S],
+        v: Union[int, list[S]],
     ) -> None:
         self._op = op
         self._e = e
@@ -95,8 +95,8 @@ class LazySegTree:
     def apply(
         self,
         left: int,
-        right: int | None = None,
-        f: F | None = None,
+        right: Optional[int] = None,
+        f: Optional[F] = None,
     ) -> None:
         assert f is not None
 

@@ -1,5 +1,10 @@
+from typing import Callable, TypeVar
+
+T = TypeVar("T")
+
+
 class LinkCutTree:
-    def __init__(self, op, e, arr: list[int]):
+    def __init__(self, op: Callable[[T, T], T], e: T, arr: list[T]):
         self.op = op
         self.e = e
         self.n = n = len(arr)
@@ -10,7 +15,7 @@ class LinkCutTree:
         self.sum = [e] * (n + 1)
         self.rev = [e] * (n + 1)
 
-    def __toggle(self, v: int):
+    def __toggle(self, v: int) -> None:
         if v == -1:
             return
         sum_, rev, ptr = self.sum, self.rev, self.ptr
@@ -20,7 +25,7 @@ class LinkCutTree:
         ptr[l], ptr[r] = ptr[r], ptr[l]
         ptr[rv] ^= 1
 
-    def __push(self, v: int):
+    def __push(self, v: int) -> None:
         ptr = self.ptr
         l = v << 2
         rv = l + 3
@@ -31,7 +36,7 @@ class LinkCutTree:
         self.__toggle(ptr[r])
         ptr[rv] = 0
 
-    def __update(self, v: int):
+    def __update(self, v: int) -> None:
         sum_, op, ptr, val, rev = self.sum, self.op, self.ptr, self.val, self.rev
         l = v << 2
         r = l + 1
@@ -39,7 +44,7 @@ class LinkCutTree:
         sum_[v] = op(op(sum_[lp], val[v]), sum_[rp])
         rev[v] = op(op(rev[rp], val[v]), rev[lp])
 
-    def __state(self, v: int):
+    def __state(self, v: int) -> int:
         ptr = self.ptr
         p = ptr[v << 2 | 2]
         pl = p << 2
@@ -50,7 +55,7 @@ class LinkCutTree:
         else:
             return 0
 
-    def __rotate(self, v: int):
+    def __rotate(self, v: int) -> None:
         s = self.__state(v)
         if s == 0:
             return
@@ -81,7 +86,7 @@ class LinkCutTree:
         else:
             ptr[pp << 2 | 1] = v
 
-    def __splay(self, v: int):
+    def __splay(self, v: int) -> None:
         ptr, push, state, rotate = self.ptr, self.__push, self.__state, self.__rotate
         push(v)
         while True:
@@ -161,17 +166,17 @@ class LinkCutTree:
         self.__toggle(v)
         self.__push(v)
 
-    def set(self, v: int, x: int) -> None:
+    def set(self, v: int, x: T) -> None:
         """頂点vの値をxにする."""
         self.__access(v)
         self.val[v] = x
 
-    def add(self, v: int, x: int) -> None:
+    def add(self, v: int, x: T) -> None:
         """頂点vの値にxを加算する."""
         self.__access(v)
         self.val[v] += x
 
-    def path_query(self, u: int, v: int) -> int:
+    def path_query(self, u: int, v: int) -> T:
         """頂点u,v間のパスクエリを返す. ただし,uとvは連結である必要がある."""
         self.evert(u)
         self.__access(v)
