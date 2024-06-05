@@ -92,7 +92,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/basic/wordsize_tree_set.py
       title: "32\u5206\u6728"
   - name: data_structure/binary_search_tree
@@ -123,7 +123,7 @@ data:
     - icon: ':warning:'
       path: data_structure/inversion_number.py
       title: "\u8EE2\u7F6E\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
     - icon: ':heavy_check_mark:'
@@ -438,11 +438,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: string_/z_algorithm.py
       title: Z algorithm
-  - name: test/library_checker/data_structure
-    pages:
-    - icon: ':warning:'
-      path: test/library_checker/data_structure/predecessor_problem.py
-      title: test/library_checker/data_structure/predecessor_problem.py
   - name: tree
     pages:
     - icon: ':warning:'
@@ -735,6 +730,9 @@ data:
       path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
       title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/line_add_get_min.test.py
+      title: test/library_checker/data_structure/line_add_get_min.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_queue.test.py
       title: test/library_checker/data_structure/persistent_queue.test.py
     - icon: ':heavy_check_mark:'
@@ -755,6 +753,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
       title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/predecessor_problem.test.py
+      title: test/library_checker/data_structure/predecessor_problem.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/queue_operate_all_composite.test.py
       title: test/library_checker/data_structure/queue_operate_all_composite.test.py
@@ -779,6 +780,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/rectangle_sum.test.py
       title: test/library_checker/data_structure/rectangle_sum.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/segment_add_get_min.test.py
+      title: test/library_checker/data_structure/segment_add_get_min.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/basic/wordsize_tree_set.py
     title: "32\u5206\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/predecessor_problem
     links:
@@ -27,16 +27,16 @@ data:
     \nfor k in ans:\n    print(k)\n"
   dependsOn:
   - data_structure/basic/wordsize_tree_set.py
-  isVerificationFile: false
-  path: test/library_checker/data_structure/predecessor_problem.py
+  isVerificationFile: true
+  path: test/library_checker/data_structure/predecessor_problem.test.py
   requiredBy: []
-  timestamp: '2024-05-29 13:44:06+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-06-05 09:56:18+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/data_structure/predecessor_problem.py
+documentation_of: test/library_checker/data_structure/predecessor_problem.test.py
 layout: document
 redirect_from:
-- /library/test/library_checker/data_structure/predecessor_problem.py
-- /library/test/library_checker/data_structure/predecessor_problem.py.html
-title: test/library_checker/data_structure/predecessor_problem.py
+- /verify/test/library_checker/data_structure/predecessor_problem.test.py
+- /verify/test/library_checker/data_structure/predecessor_problem.test.py.html
+title: test/library_checker/data_structure/predecessor_problem.test.py
 ---
