@@ -21,54 +21,54 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import Callable, TypeVar\n\n\ndef _ceil_pow2(n: int) -> int:\n\
-    \    x = 0\n    while (1 << x) < n:\n        x += 1\n\n    return x\n\n\nS = TypeVar(\"\
-    S\")\nF = TypeVar(\"F\")\n\n\nclass LazySegTree:\n    def __init__(\n        self,\n\
-    \        op: Callable[[S, S], S],\n        e: S,\n        mapping: Callable[[S,\
-    \ F], S],\n        composition: Callable[[F, F], F],\n        id_: F,\n      \
-    \  v: int | list[S],\n    ) -> None:\n        self._op = op\n        self._e =\
-    \ e\n        self._mapping = mapping\n        self._composition = composition\n\
-    \        self._id = id_\n\n        if isinstance(v, int):\n            v = [e]\
-    \ * v\n\n        self._n = len(v)\n        self._log = _ceil_pow2(self._n)\n \
-    \       self._size = 1 << self._log\n        self._d = [e] * (2 * self._size)\n\
-    \        self._lz = [self._id] * self._size\n        for i in range(self._n):\n\
-    \            self._d[self._size + i] = v[i]\n        for i in range(self._size\
-    \ - 1, 0, -1):\n            self._update(i)\n\n    def set(self, p: int, x: S)\
-    \ -> None:\n        assert 0 <= p < self._n\n\n        p += self._size\n     \
-    \   for i in range(self._log, 0, -1):\n            self._push(p >> i)\n      \
-    \  self._d[p] = x\n        for i in range(1, self._log + 1):\n            self._update(p\
-    \ >> i)\n\n    def get(self, p: int) -> S:\n        assert 0 <= p < self._n\n\n\
+  code: "from typing import Callable, TypeVar, Union, Optional\n\n\ndef _ceil_pow2(n:\
+    \ int) -> int:\n    x = 0\n    while (1 << x) < n:\n        x += 1\n\n    return\
+    \ x\n\n\nS = TypeVar(\"S\")\nF = TypeVar(\"F\")\n\n\nclass LazySegTree:\n    def\
+    \ __init__(\n        self,\n        op: Callable[[S, S], S],\n        e: S,\n\
+    \        mapping: Callable[[S, F], S],\n        composition: Callable[[F, F],\
+    \ F],\n        id_: F,\n        v: Union[int, list[S]],\n    ) -> None:\n    \
+    \    self._op = op\n        self._e = e\n        self._mapping = mapping\n   \
+    \     self._composition = composition\n        self._id = id_\n\n        if isinstance(v,\
+    \ int):\n            v = [e] * v\n\n        self._n = len(v)\n        self._log\
+    \ = _ceil_pow2(self._n)\n        self._size = 1 << self._log\n        self._d\
+    \ = [e] * (2 * self._size)\n        self._lz = [self._id] * self._size\n     \
+    \   for i in range(self._n):\n            self._d[self._size + i] = v[i]\n   \
+    \     for i in range(self._size - 1, 0, -1):\n            self._update(i)\n\n\
+    \    def set(self, p: int, x: S) -> None:\n        assert 0 <= p < self._n\n\n\
     \        p += self._size\n        for i in range(self._log, 0, -1):\n        \
-    \    self._push(p >> i)\n        return self._d[p]\n\n    def prod(self, left:\
-    \ int, right: int) -> S:\n        assert 0 <= left <= right <= self._n\n\n   \
-    \     if left == right:\n            return self._e\n\n        left += self._size\n\
-    \        right += self._size\n\n        for i in range(self._log, 0, -1):\n  \
-    \          if ((left >> i) << i) != left:\n                self._push(left >>\
-    \ i)\n            if ((right >> i) << i) != right:\n                self._push(right\
+    \    self._push(p >> i)\n        self._d[p] = x\n        for i in range(1, self._log\
+    \ + 1):\n            self._update(p >> i)\n\n    def get(self, p: int) -> S:\n\
+    \        assert 0 <= p < self._n\n\n        p += self._size\n        for i in\
+    \ range(self._log, 0, -1):\n            self._push(p >> i)\n        return self._d[p]\n\
+    \n    def prod(self, left: int, right: int) -> S:\n        assert 0 <= left <=\
+    \ right <= self._n\n\n        if left == right:\n            return self._e\n\n\
+    \        left += self._size\n        right += self._size\n\n        for i in range(self._log,\
+    \ 0, -1):\n            if ((left >> i) << i) != left:\n                self._push(left\
+    \ >> i)\n            if ((right >> i) << i) != right:\n                self._push(right\
     \ >> i)\n\n        sml = self._e\n        smr = self._e\n        while left <\
     \ right:\n            if left & 1:\n                sml = self._op(sml, self._d[left])\n\
     \                left += 1\n            if right & 1:\n                right -=\
     \ 1\n                smr = self._op(self._d[right], smr)\n            left >>=\
     \ 1\n            right >>= 1\n\n        return self._op(sml, smr)\n\n    def all_prod(self)\
     \ -> S:\n        return self._d[1]\n\n    def apply(\n        self,\n        left:\
-    \ int,\n        right: int | None = None,\n        f: F | None = None,\n    )\
-    \ -> None:\n        assert f is not None\n\n        if right is None:\n      \
-    \      p = left\n            assert 0 <= left < self._n\n\n            p += self._size\n\
-    \            for i in range(self._log, 0, -1):\n                self._push(p >>\
-    \ i)\n            self._d[p] = self._mapping(f, self._d[p])\n            for i\
-    \ in range(1, self._log + 1):\n                self._update(p >> i)\n        else:\n\
-    \            assert 0 <= left <= right <= self._n\n            if left == right:\n\
-    \                return\n\n            left += self._size\n            right +=\
-    \ self._size\n\n            for i in range(self._log, 0, -1):\n              \
-    \  if ((left >> i) << i) != left:\n                    self._push(left >> i)\n\
-    \                if ((right >> i) << i) != right:\n                    self._push((right\
-    \ - 1) >> i)\n\n            l2 = left\n            r2 = right\n            while\
-    \ left < right:\n                if left & 1:\n                    self._all_apply(left,\
-    \ f)\n                    left += 1\n                if right & 1:\n         \
-    \           right -= 1\n                    self._all_apply(right, f)\n      \
-    \          left >>= 1\n                right >>= 1\n            left = l2\n  \
-    \          right = r2\n\n            for i in range(1, self._log + 1):\n     \
-    \           if ((left >> i) << i) != left:\n                    self._update(left\
+    \ int,\n        right: Optional[int] = None,\n        f: Optional[F] = None,\n\
+    \    ) -> None:\n        assert f is not None\n\n        if right is None:\n \
+    \           p = left\n            assert 0 <= left < self._n\n\n            p\
+    \ += self._size\n            for i in range(self._log, 0, -1):\n             \
+    \   self._push(p >> i)\n            self._d[p] = self._mapping(f, self._d[p])\n\
+    \            for i in range(1, self._log + 1):\n                self._update(p\
+    \ >> i)\n        else:\n            assert 0 <= left <= right <= self._n\n   \
+    \         if left == right:\n                return\n\n            left += self._size\n\
+    \            right += self._size\n\n            for i in range(self._log, 0, -1):\n\
+    \                if ((left >> i) << i) != left:\n                    self._push(left\
+    \ >> i)\n                if ((right >> i) << i) != right:\n                  \
+    \  self._push((right - 1) >> i)\n\n            l2 = left\n            r2 = right\n\
+    \            while left < right:\n                if left & 1:\n             \
+    \       self._all_apply(left, f)\n                    left += 1\n            \
+    \    if right & 1:\n                    right -= 1\n                    self._all_apply(right,\
+    \ f)\n                left >>= 1\n                right >>= 1\n            left\
+    \ = l2\n            right = r2\n\n            for i in range(1, self._log + 1):\n\
+    \                if ((left >> i) << i) != left:\n                    self._update(left\
     \ >> i)\n                if ((right >> i) << i) != right:\n                  \
     \  self._update((right - 1) >> i)\n\n    def max_right(self, left: int, g: Callable[[S],\
     \ bool]) -> int:\n        assert 0 <= left <= self._n\n        assert g(self._e)\n\
@@ -105,7 +105,7 @@ data:
   path: atcoder/lazysegtree.py
   requiredBy:
   - geometory/union_area_rectangle.py
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
   - test/atcoder/abc035c.test.py

@@ -85,7 +85,7 @@ data:
       title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
     - icon: ':warning:'
       path: data_structure/basic/leftist_heap.py
-      title: data_structure/basic/leftist_heap.py
+      title: Leftist Heap
     - icon: ':warning:'
       path: data_structure/basic/radix_heap.py
       title: Radix Heap
@@ -505,6 +505,9 @@ data:
     - icon: ':warning:'
       path: utility/bit32_operation.py
       title: "\u30D3\u30C3\u30C8\u6F14\u7B97(32bit)"
+    - icon: ':warning:'
+      path: utility/bit64_operation.py
+      title: "\u30D3\u30C3\u30C8\u6F14\u7B97(64bit)"
     - icon: ':warning:'
       path: utility/bitset.py
       title: Bitset

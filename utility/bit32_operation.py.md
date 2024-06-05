@@ -24,15 +24,15 @@ data:
     \ 0x00FF00FF) | ((x << 8) & 0xFF00FF00)\n    x = ((x >> 4) & 0x0F0F0F0F) | ((x\
     \ << 4) & 0xF0F0F0F0)\n    x = ((x >> 2) & 0x33333333) | ((x << 2) & 0xCCCCCCCC)\n\
     \    x = ((x >> 1) & 0x55555555) | ((x << 1) & 0xAAAAAAAA)\n    return x\n\n\n\
-    def ctz(x: int) -> int:\n    \"\"\"Count trailing zeros\"\"\"\n    return popcount(~x\
-    \ & (x - 1))\n\n\ndef clz(x: int) -> int:\n    \"\"\"Count leading zeros\"\"\"\
-    \n    return ctz(bit_reverse(x))\n"
+    def ctz(x: int) -> int:\n    \"\"\"Count trailing zeros\"\"\"\n    if x == 0:\n\
+    \        return -1\n    return popcount(~x & (x - 1))\n\n\ndef clz(x: int) ->\
+    \ int:\n    \"\"\"Count leading zeros\"\"\"\n    return ctz(bit_reverse(x))\n"
   dependsOn: []
   isVerificationFile: false
   path: utility/bit32_operation.py
   requiredBy:
   - graph/chromatic_number.py
-  timestamp: '2024-06-04 09:09:32+09:00'
+  timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/bit32_operation.py

@@ -43,7 +43,7 @@ data:
   isVerificationFile: false
   path: geometory/union_area_rectangle.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
