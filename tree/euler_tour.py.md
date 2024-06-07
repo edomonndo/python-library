@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
   _extendedRequiredBy: []
@@ -10,11 +10,11 @@ data:
     path: test/aoj/grl_5_c_lowest_common_ancestor.test.py
     title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/vertex_add_path_sum.test.py
-    title: test/library_checker/data_structure/vertex_add_path_sum.test.py
+    path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+    title: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
-    title: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+    path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+    title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
   - icon: ':heavy_check_mark:'
     path: test/unit_test/euler_tour.test.py
     title: test/unit_test/euler_tour.test.py
@@ -106,8 +106,8 @@ data:
   timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/vertex_add_path_sum.test.py
-  - test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+  - test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+  - test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
   - test/aoj/grl_5_c_lowest_common_ancestor.test.py
   - test/unit_test/euler_tour.test.py
 documentation_of: tree/euler_tour.py

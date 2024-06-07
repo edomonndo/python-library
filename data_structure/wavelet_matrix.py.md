@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_kth_smallest.test.py
     title: test/library_checker/data_structure/range_kth_smallest.test.py
-  - icon: ':grey_question:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_range_count_distinct.test.py
     title: test/library_checker/data_structure/static_range_count_distinct.test.py
   - icon: ':heavy_check_mark:'

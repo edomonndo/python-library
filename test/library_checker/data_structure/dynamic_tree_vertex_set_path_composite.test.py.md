@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-06-05 17:57:14+09:00'
+  timestamp: '2024-06-07 10:09:10+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py

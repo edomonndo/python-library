@@ -17,10 +17,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: tree/euler_tour.py
     title: Euler tour
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertext_set_path_composite.test.py
+    title: test/library_checker/data_structure/vertext_set_path_composite.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -79,8 +82,9 @@ data:
   - tree/euler_tour.py
   - tree/auxiliary_tree.py
   timestamp: '2024-06-04 17:27:40+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/data_structure/vertext_set_path_composite.test.py
 documentation_of: atcoder/segtree.py
 layout: document
 redirect_from:

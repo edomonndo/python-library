@@ -19,22 +19,31 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Callable, TypeVar\n\nT = TypeVar(\"T\")\n\n\nclass LinkCutTree:\n\
-    \    def __init__(self, op: Callable[[T, T], T], e: T, arr: list[T]):\n      \
-    \  self.op = op\n        self.e = e\n        self.n = n = len(arr)\n        self.ptr\
-    \ = [-1] * (n << 2)  # l, r, p, rev\n        for i in range(n):\n            self.ptr[i\
-    \ << 2 | 3] = 0\n        self.val = arr[:]\n        self.sum = [e] * (n + 1)\n\
-    \        self.rev = [e] * (n + 1)\n\n    def __toggle(self, v: int) -> None:\n\
-    \        if v == -1:\n            return\n        sum_, rev, ptr = self.sum, self.rev,\
-    \ self.ptr\n        sum_[v], rev[v] = rev[v], sum_[v]\n        l = v << 2\n  \
-    \      r, rv = l + 1, l + 3\n        ptr[l], ptr[r] = ptr[r], ptr[l]\n       \
-    \ ptr[rv] ^= 1\n\n    def __push(self, v: int) -> None:\n        ptr = self.ptr\n\
-    \        l = v << 2\n        rv = l + 3\n        if v == -1 or not ptr[rv]:\n\
-    \            return\n        r = l + 1\n        self.__toggle(ptr[l])\n      \
-    \  self.__toggle(ptr[r])\n        ptr[rv] = 0\n\n    def __update(self, v: int)\
-    \ -> None:\n        sum_, op, ptr, val, rev = self.sum, self.op, self.ptr, self.val,\
-    \ self.rev\n        l = v << 2\n        r = l + 1\n        lp, rp = ptr[l], ptr[r]\n\
-    \        sum_[v] = op(op(sum_[lp], val[v]), sum_[rp])\n        rev[v] = op(op(rev[rp],\
-    \ val[v]), rev[lp])\n\n    def __state(self, v: int) -> int:\n        ptr = self.ptr\n\
+    \    def __init__(\n        self,\n        op: Callable[[T, T], T],\n        e:\
+    \ T,\n        arr: list[T],\n        edges: list[tuple[int, int]] = None,\n  \
+    \      root: int = 0,\n    ):\n        self.op = op\n        self.e = e\n    \
+    \    self.n = n = len(arr)\n        self.ptr = [-1] * (n << 2)  # l, r, p, rev\n\
+    \        for i in range(n):\n            self.ptr[i << 2 | 3] = 0\n        self.val\
+    \ = arr[:]\n        self.sum = [e] * (n + 1)\n        self.rev = [e] * (n + 1)\n\
+    \        if edges:\n            ptr = self.ptr\n            adj = [[] for _ in\
+    \ range(n)]\n            for u, v in edges:\n                adj[u].append(v)\n\
+    \                adj[v].append(u)\n            used = [0] * n\n            used[root]\
+    \ = 1\n            st = [root]\n            while st:\n                v = st.pop()\n\
+    \                for u in adj[v]:\n                    if used[u]:\n         \
+    \               continue\n                    used[u] = 1\n                  \
+    \  ptr[u << 2 | 2] = v\n                    ptr[v << 2 | 1] = u\n            \
+    \        st.append(u)\n\n    def __toggle(self, v: int) -> None:\n        if v\
+    \ == -1:\n            return\n        sum_, rev, ptr = self.sum, self.rev, self.ptr\n\
+    \        sum_[v], rev[v] = rev[v], sum_[v]\n        l = v << 2\n        r, rv\
+    \ = l + 1, l + 3\n        ptr[l], ptr[r] = ptr[r], ptr[l]\n        ptr[rv] ^=\
+    \ 1\n\n    def __push(self, v: int) -> None:\n        ptr = self.ptr\n       \
+    \ l = v << 2\n        rv = l + 3\n        if v == -1 or not ptr[rv]:\n       \
+    \     return\n        r = l + 1\n        self.__toggle(ptr[l])\n        self.__toggle(ptr[r])\n\
+    \        ptr[rv] = 0\n\n    def __update(self, v: int) -> None:\n        sum_,\
+    \ op, ptr, val, rev = self.sum, self.op, self.ptr, self.val, self.rev\n      \
+    \  l = v << 2\n        r = l + 1\n        lp, rp = ptr[l], ptr[r]\n        sum_[v]\
+    \ = op(op(sum_[lp], val[v]), sum_[rp])\n        rev[v] = op(op(rev[rp], val[v]),\
+    \ rev[lp])\n\n    def __state(self, v: int) -> int:\n        ptr = self.ptr\n\
     \        p = ptr[v << 2 | 2]\n        pl = p << 2\n        if ptr[pl] == v:\n\
     \            return 1\n        elif ptr[pl | 1] == v:\n            return -1\n\
     \        else:\n            return 0\n\n    def __rotate(self, v: int) -> None:\n\
@@ -98,7 +107,7 @@ data:
   isVerificationFile: false
   path: data_structure/link_cut_tree.py
   requiredBy: []
-  timestamp: '2024-06-05 17:57:14+09:00'
+  timestamp: '2024-06-07 10:09:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py

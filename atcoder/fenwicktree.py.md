@@ -13,10 +13,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/offline_static_rectangle_sum.py
     title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
+    title: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+    title: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Fenwick_tree"""
@@ -41,8 +47,10 @@ data:
   - geometory/offline_static_rectangle_sum.py
   - geometory/offline_point_add_rectangle_sum.py
   timestamp: '2024-05-29 14:24:11+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+  - test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
 documentation_of: atcoder/fenwicktree.py
 layout: document
 redirect_from:

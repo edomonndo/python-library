@@ -5,6 +5,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/union_area_rectangle.py
     title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
+  - icon: ':warning:'
+    path: tree/permutation_tree.py
+    title: tree/permutation_tree.py
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc035c.test.py
@@ -105,6 +108,7 @@ data:
   path: atcoder/lazysegtree.py
   requiredBy:
   - geometory/union_area_rectangle.py
+  - tree/permutation_tree.py
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:

@@ -29,15 +29,15 @@ data:
   dependsOn:
   - tree/euler_tour.py
   isVerificationFile: true
-  path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+  path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
   requiredBy: []
-  timestamp: '2024-04-24 11:17:49+09:00'
+  timestamp: '2024-06-07 10:09:10+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+documentation_of: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/data_structure/vertex_add_subtree_sum.test.py
-- /verify/test/library_checker/data_structure/vertex_add_subtree_sum.test.py.html
-title: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+- /verify/test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+- /verify/test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py.html
+title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
 ---

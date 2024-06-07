@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
     - icon: ':warning:'
@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: atcoder/scc.py
       title: atcoder/scc.py
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/segtree.py
       title: atcoder/segtree.py
     - icon: ':warning:'
@@ -100,7 +100,7 @@ data:
     - icon: ':warning:'
       path: data_structure/binary_search_tree/hu_tucker.py
       title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/binary_search_tree/implicit_treap.py
       title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
     - icon: ':warning:'
@@ -467,7 +467,7 @@ data:
     - icon: ':warning:'
       path: tree/euler_tour_tree.py
       title: tree/euler_tour_tree.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -488,6 +488,9 @@ data:
     - icon: ':warning:'
       path: tree/minimum_vertex_cover.py
       title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
+    - icon: ':warning:'
+      path: tree/permutation_tree.py
+      title: tree/permutation_tree.py
     - icon: ':warning:'
       path: tree/rooted_tree.py
       title: "\u6839\u4ED8\u304D\u6728"
@@ -721,6 +724,9 @@ data:
       path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
       title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
+      title: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
       title: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
     - icon: ':heavy_check_mark:'
@@ -775,6 +781,9 @@ data:
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: test/library_checker/data_structure/range_kth_smallest.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+      title: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: test/library_checker/data_structure/range_set_range_composite.test.py
     - icon: ':heavy_check_mark:'
@@ -789,7 +798,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
       title: test/library_checker/data_structure/set_xor_min.test.py
-    - icon: ':grey_question:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_count_distinct.test.py
       title: test/library_checker/data_structure/static_range_count_distinct.test.py
     - icon: ':heavy_check_mark:'
@@ -820,11 +829,20 @@ data:
       path: test/library_checker/data_structure/unionfind.test.py
       title: test/library_checker/data_structure/unionfind.test.py
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/vertex_add_path_sum.test.py
-      title: test/library_checker/data_structure/vertex_add_path_sum.test.py
+      path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+      title: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
-      title: test/library_checker/data_structure/vertex_add_subtree_sum.test.py
+      path: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
+      title: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+      title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+      title: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/vertext_set_path_composite.test.py
+      title: test/library_checker/data_structure/vertext_set_path_composite.test.py
   - name: test/library_checker/geometory
     pages:
     - icon: ':heavy_check_mark:'
@@ -937,7 +955,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit_test/euler_tour.test.py
       title: test/unit_test/euler_tour.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/unit_test/heavy_light_decomposition.test.py
       title: test/unit_test/heavy_light_decomposition.test.py
     - icon: ':heavy_check_mark:'
