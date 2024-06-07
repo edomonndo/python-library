@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/queue_operate_all_composite
-from data_structure.FoldableQue import FoldableQue
+from data_structure.basic.FoldableQue import FoldableQue
 
 MOD = 998244353
 mask = (1 << 32) - 1

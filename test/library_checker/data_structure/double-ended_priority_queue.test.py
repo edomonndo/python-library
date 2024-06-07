@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/double_ended_priority_queue
 
-from data_structure.SortedMultiset import SortedMultiset
+from data_structure.basic.SortedMultiset import SortedMultiset
 
 N, Q = map(int, input().split())
 S = list(map(int, input().split()))

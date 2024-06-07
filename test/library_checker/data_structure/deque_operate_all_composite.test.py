@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/deque_operate_all_composite
 
-from data_structure.FoldableDeque import FoldableDeque
+from data_structure.basic.FoldableDeque import FoldableDeque
 
 MOD = 998244353
 mask = (1 << 32) - 1

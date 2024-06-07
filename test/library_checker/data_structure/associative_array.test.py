@@ -1,19 +1,17 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/associative_array
 
-import sys
+from data_structure.basic.safe_int_dict import SafeIntDict
 
-input = sys.stdin.readline
-
-Q = int(input())
-dic = dict()
-for _ in range(Q):
+q = int(input())
+dic = SafeIntDict()
+for _ in range(q):
     # インプットを整数に変換するとTLEになる.strのままの方が速い.
-    query = input().split()
-    if query[0] == "0":
-        k, v = query[1], query[2]
+    t, *qu = map(int, input().split())
+    if t == 0:
+        k, v = qu
         dic[k] = v
-    elif query[0] == "1":
-        k = query[1]
+    else:
+        k = qu[0]
         if k in dic:
             print(dic[k])
         else:
