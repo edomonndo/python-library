@@ -15,9 +15,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
     title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/unit_test/euler_tour.test.py
-    title: test/unit_test/euler_tour.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -109,7 +106,6 @@ data:
   - test/library_checker/data_structure/vertex_add_path_sum_et.test.py
   - test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
   - test/aoj/grl_5_c_lowest_common_ancestor.test.py
-  - test/unit_test/euler_tour.test.py
 documentation_of: tree/euler_tour.py
 layout: document
 title: Euler tour

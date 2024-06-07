@@ -12,12 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertext_set_path_composite.test.py
     title: test/library_checker/data_structure/vertext_set_path_composite.test.py
-  - icon: ':x:'
-    path: test/unit_test/heavy_light_decomposition.test.py
-    title: test/unit_test/heavy_light_decomposition.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -81,12 +78,11 @@ data:
   path: tree/heavy_light_decomposition.py
   requiredBy: []
   timestamp: '2024-06-07 10:09:10+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/vertext_set_path_composite.test.py
   - test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
-  - test/unit_test/heavy_light_decomposition.test.py
 documentation_of: tree/heavy_light_decomposition.py
 layout: document
 title: "HL\u5206\u89E3"

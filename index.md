@@ -467,7 +467,7 @@ data:
     - icon: ':warning:'
       path: tree/euler_tour_tree.py
       title: tree/euler_tour_tree.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -705,7 +705,7 @@ data:
       title: test/library_checker/convolution/convolution_mod.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/convolution/convolution_mod_1000000007.test.py
-      title: test/library_checker/convolution/convolution_mod_1000000007.test.py
+      title: Convolution Mod 10^9 + 7
   - name: test/library_checker/data_structure
     pages:
     - icon: ':heavy_check_mark:'
@@ -952,12 +952,6 @@ data:
       title: test/library_checker/tree/tree_diameter.test.py
   - name: test/unit_test
     pages:
-    - icon: ':heavy_check_mark:'
-      path: test/unit_test/euler_tour.test.py
-      title: test/unit_test/euler_tour.test.py
-    - icon: ':x:'
-      path: test/unit_test/heavy_light_decomposition.test.py
-      title: test/unit_test/heavy_light_decomposition.test.py
     - icon: ':heavy_check_mark:'
       path: test/unit_test/typical_problems_of_sum.test.py
       title: test/unit_test/typical_problems_of_sum.test.py
