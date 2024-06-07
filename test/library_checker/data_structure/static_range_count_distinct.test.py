@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://judge.yosupo.jp/problem/static_range_count_distinct
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/static_range_count_distinct
 
 from data_structure.wavelet_matrix import WaveletMatrix
 from collections import Counter

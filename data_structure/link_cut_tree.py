@@ -4,7 +4,14 @@ T = TypeVar("T")
 
 
 class LinkCutTree:
-    def __init__(self, op: Callable[[T, T], T], e: T, arr: list[T]):
+    def __init__(
+        self,
+        op: Callable[[T, T], T],
+        e: T,
+        arr: list[T],
+        edges: list[tuple[int, int]] = None,
+        root: int = 0,
+    ):
         self.op = op
         self.e = e
         self.n = n = len(arr)
@@ -14,6 +21,24 @@ class LinkCutTree:
         self.val = arr[:]
         self.sum = [e] * (n + 1)
         self.rev = [e] * (n + 1)
+        if edges:
+            ptr = self.ptr
+            adj = [[] for _ in range(n)]
+            for u, v in edges:
+                adj[u].append(v)
+                adj[v].append(u)
+            used = [0] * n
+            used[root] = 1
+            st = [root]
+            while st:
+                v = st.pop()
+                for u in adj[v]:
+                    if used[u]:
+                        continue
+                    used[u] = 1
+                    ptr[u << 2 | 2] = v
+                    ptr[v << 2 | 1] = u
+                    st.append(u)
 
     def __toggle(self, v: int) -> None:
         if v == -1:

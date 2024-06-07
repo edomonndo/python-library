@@ -1,8 +1,10 @@
-class ImplicitTreap:
-    from typing import Callable, TypeVar
+from typing import Callable, TypeVar
 
-    S = TypeVar("S")
-    F = TypeVar("F")
+S = TypeVar("S")
+F = TypeVar("F")
+
+
+class ImplicitTreap:
 
     def __init__(
         self,
@@ -37,7 +39,7 @@ class ImplicitTreap:
         self.ptr = ptr = [0] * (n * 3 + 3)
         self.cnt = cnt = [0] + [1] * n
         self.cum = cum = [self.e] * (n + 1)
-        self.lazy = lazy = [self.id] * (n + 1)
+        self.lazy = [self.id] * (n + 1)
         op = self.op
         par = [0] * (n + 1)
         for i in range(2, n + 1):
@@ -104,10 +106,10 @@ class ImplicitTreap:
             lazy[t] = self.id
 
     def __update(self, t: int) -> None:
-        ptr, cnt, cum, val = self.ptr, self.cnt, self.cum, self.val
+        ptr, cnt, cum, val, op = self.ptr, self.cnt, self.cum, self.val, self.op
         l, r = ptr[t * 3], ptr[t * 3 + 1]
         cnt[t] = cnt[l] + cnt[r] + 1
-        cum[t] = self.op(self.op(cum[l], val[t]), cum[r])
+        cum[t] = op(op(cum[l], val[t]), cum[r])
 
     def __split(self, t: int, k: int, update: bool = True) -> tuple[int, int]:
         ptr, cnt = self.ptr, self.cnt
@@ -153,29 +155,28 @@ class ImplicitTreap:
                 self.__push(r)
             v, ptr[r * 3] = ptr[r * 3], s
             s, r = r, v
-        r, s = s, 0
+        r, t = s, 0
         while l or r:
             if pri[l] < pri[r]:
-                v, ptr[l * 3 + 1] = ptr[l * 3 + 1], s
+                v, ptr[l * 3 + 1] = ptr[l * 3 + 1], t
                 self.__update(l)
-                s, l = l, v
+                t, l = l, v
             else:
-                v, ptr[r * 3] = ptr[r * 3], s
+                v, ptr[r * 3] = ptr[r * 3], t
                 self.__update(r)
-                s, r = r, v
-        return s
+                t, r = r, v
+        return t
 
     def size(self) -> int:
         return self.cnt[self.root]
 
     def insert(self, p: int, x: S) -> None:
-        l, r = self.__split(self.root, p + 1)
-        l, _ = self.__split(l, p)
+        l, r = self.__split(self.root, p, True)
         self.root = self.__merge(self.__merge(l, self.__newnode(x)), r)
 
     def erase(self, p: int) -> None:
-        l, r = self.__split(self.root, p + 1)
-        l, _ = self.__split(l, p)
+        l, r = self.__split(self.root, p + 1, True)
+        l, _ = self.__split(l, p, True)
         self.root = self.__merge(l, r)
 
     def get(self, p: int) -> S:
@@ -186,20 +187,20 @@ class ImplicitTreap:
         return res
 
     def reverse(self, l: int, r: int) -> None:
-        t2, t3 = self.__split(self.root, r)
-        t1, t2 = self.__split(t2, l)
+        t2, t3 = self.__split(self.root, r, True)
+        t1, t2 = self.__split(t2, l, True)
         self.ptr[t2 * 3 + 2] ^= 1
         self.root = self.__merge(self.__merge(t1, t2, False, True), t3, True, False)
 
     def apply(self, l: int, r: int, f: F) -> None:
-        t2, t3 = self.__split(self.root, r)
-        t1, t2 = self.__split(t2, l)
+        t2, t3 = self.__split(self.root, r, True)
+        t1, t2 = self.__split(t2, l, True)
         self.lazy[t2] = self.composition(f, self.lazy[t2])
         self.root = self.__merge(self.__merge(t1, t2, False, True), t3, True, False)
 
     def prod(self, l: int, r: int) -> S:
-        t2, t3 = self.__split(self.root, r)
-        t1, t2 = self.__split(t2, l)
+        t2, t3 = self.__split(self.root, r, True)
+        t1, t2 = self.__split(t2, l, True)
         res = self.cum[t2]
         self.root = self.__merge(self.__merge(t1, t2), t3)
         return res
