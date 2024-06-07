@@ -8,13 +8,13 @@ data:
     title: test/aoj/dsl_3_d_sliding_minimum_element_wm.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_kth_smallest.test.py
-    title: test/library_checker/data_structure/range_kth_smallest.test.py
+    title: Range Kth Smallest
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_range_count_distinct.test.py
-    title: test/library_checker/data_structure/static_range_count_distinct.test.py
+    title: Static Range Count Distinct
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_range_frequency.test.py
-    title: test/library_checker/data_structure/static_range_frequency.test.py
+    title: Static Range Frequency
   - icon: ':heavy_check_mark:'
     path: test/unit_test/wavelet_matrix.test.py
     title: test/unit_test/wavelet_matrix.test.py

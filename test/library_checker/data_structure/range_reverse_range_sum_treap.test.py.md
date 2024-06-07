@@ -34,8 +34,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
-- /verify/test/library_checker/data_structure/range_reverse_range_sum_treap.test.py.html
-title: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+title: Range Reverse Range Sum (Treap)
 ---

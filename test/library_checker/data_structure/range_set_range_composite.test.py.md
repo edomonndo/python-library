@@ -41,8 +41,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/range_set_range_composite.test.py
-- /verify/test/library_checker/data_structure/range_set_range_composite.test.py.html
-title: test/library_checker/data_structure/range_set_range_composite.test.py
+title: Range Set Range Composite
 ---

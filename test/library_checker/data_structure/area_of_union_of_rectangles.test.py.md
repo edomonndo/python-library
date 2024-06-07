@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/area_of_union_of_rectangles.test.py
-- /verify/test/library_checker/data_structure/area_of_union_of_rectangles.test.py.html
-title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+title: Area of Union of Rectangles
 ---

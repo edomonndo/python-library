@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/rectangle_sum.test.py
-    title: test/library_checker/data_structure/rectangle_sum.test.py
+    title: Rectangle Sum
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

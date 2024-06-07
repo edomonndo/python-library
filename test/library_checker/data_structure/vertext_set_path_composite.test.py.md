@@ -49,8 +49,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/vertext_set_path_composite.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/vertext_set_path_composite.test.py
-- /verify/test/library_checker/data_structure/vertext_set_path_composite.test.py.html
-title: test/library_checker/data_structure/vertext_set_path_composite.test.py
+title: Vertex Set Path Composite
 ---

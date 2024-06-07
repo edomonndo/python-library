@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
-    title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+    title: Dynamic Tree Vertex Add Path Sum
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
-    title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
+    title: Dynamic Tree Vertex Set Path Composite
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

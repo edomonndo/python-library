@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
-    title: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
+    title: Dynamic Sequence Range Affine Range Sum (Treap)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
-    title: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+    title: Range Reverse Range Sum (Treap)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

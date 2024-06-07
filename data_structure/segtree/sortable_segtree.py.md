@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
-    title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
+    title: Point Set Range Sort Composite
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

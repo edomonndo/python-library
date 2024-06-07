@@ -8,10 +8,10 @@ data:
     title: test/aoj/dsl_2_a_range_min_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_set_range_composite.test.py
-    title: test/library_checker/data_structure/point_set_range_composite.test.py
+    title: Point Set Range Composite
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/static_rmq.test.py
-    title: test/library_checker/data_structure/static_rmq.test.py
+    path: test/library_checker/data_structure/static_rmq_segtree.test.py
+    title: Static RMQ (Segment Tree)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -81,8 +81,8 @@ data:
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/static_rmq_segtree.test.py
   - test/library_checker/data_structure/point_set_range_composite.test.py
-  - test/library_checker/data_structure/static_rmq.test.py
   - test/aoj/dsl_2_a_range_min_query.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document

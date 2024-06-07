@@ -17,7 +17,7 @@ data:
     title: test/aoj/dsl_2_i_range_update_sum_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
-    title: test/library_checker/data_structure/range_affine_range_sum.test.py
+    title: Range Affine Range Sum
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

@@ -11,7 +11,7 @@ data:
     title: test/aoj/dsl_2_e_range_add_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_point_get.test.py
-    title: test/library_checker/data_structure/range_affine_point_get.test.py
+    title: Range Affine Point Get
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

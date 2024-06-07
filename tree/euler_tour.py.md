@@ -11,10 +11,10 @@ data:
     title: test/aoj/grl_5_c_lowest_common_ancestor.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
-    title: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+    title: Vertex Add Path Sum (Euler Tour)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
-    title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+    title: Vertex Add Subtree Sum (Euler Tour)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

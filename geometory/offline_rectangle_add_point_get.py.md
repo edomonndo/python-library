@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/rectangle_add_point_get.test.py
-    title: test/library_checker/data_structure/rectangle_add_point_get.test.py
+    title: Range Add Point Get
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

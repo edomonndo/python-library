@@ -34,8 +34,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
-- /verify/test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py.html
-title: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
+title: Static Rectangle Add Rectangle Sum
 ---

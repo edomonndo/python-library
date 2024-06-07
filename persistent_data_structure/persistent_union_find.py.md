@@ -7,8 +7,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/persistent_unionfind2.test.py
-    title: test/library_checker/data_structure/persistent_unionfind2.test.py
+    path: test/library_checker/data_structure/persistent_unionfind.test.py
+    title: Persistent UnionFind
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,7 +47,7 @@ data:
   timestamp: '2024-02-24 06:05:31+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/persistent_unionfind2.test.py
+  - test/library_checker/data_structure/persistent_unionfind.test.py
 documentation_of: persistent_data_structure/persistent_union_find.py
 layout: document
 title: "\u6C38\u7D9A Union Find"

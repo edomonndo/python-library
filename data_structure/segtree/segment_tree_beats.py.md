@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
-    title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
+    title: Range Chmin Chmax Add Range Sum
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

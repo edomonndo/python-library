@@ -32,8 +32,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_kth_smallest.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/range_kth_smallest.test.py
-- /verify/test/library_checker/data_structure/range_kth_smallest.test.py.html
-title: test/library_checker/data_structure/range_kth_smallest.test.py
+title: Range Kth Smallest
 ---

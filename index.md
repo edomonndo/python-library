@@ -64,13 +64,13 @@ data:
     - icon: ':warning:'
       path: data_structure/basic/FixedSizeHeapQue.py
       title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/basic/FoldableDeque.py
       title: Foldable Deque(DSWAG)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/basic/FoldableQue.py
       title: Foldable Queue(SWAG)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/basic/SortedMultiset.py
       title: SortedMultiset
     - icon: ':warning:'
@@ -89,6 +89,9 @@ data:
     - icon: ':warning:'
       path: data_structure/basic/radix_heap.py
       title: Radix Heap
+    - icon: ':heavy_check_mark:'
+      path: data_structure/basic/safe_int_dict.py
+      title: data_structure/basic/safe_int_dict.py
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
@@ -702,7 +705,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/convolution/convolution_mod.test.py
-      title: test/library_checker/convolution/convolution_mod.test.py
+      title: Convolution Mod
     - icon: ':heavy_check_mark:'
       path: test/library_checker/convolution/convolution_mod_1000000007.test.py
       title: Convolution Mod 10^9 + 7
@@ -710,139 +713,139 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
-      title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+      title: Area of Union of Rectangles
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/associative_array.test.py
-      title: test/library_checker/data_structure/associative_array.test.py
+      title: Assosiative Array
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/deque_operate_all_composite.test.py
-      title: test/library_checker/data_structure/deque_operate_all_composite.test.py
+      title: Deque Operate All Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/double-ended_priority_queue.test.py
-      title: test/library_checker/data_structure/double-ended_priority_queue.test.py
+      title: Double-Ended Priority Queue
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
-      title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
+      title: Dynamic Graph Vertex Add Component Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
-      title: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
+      title: Dynamic Sequence Range Affine Range Sum (Treap)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
-      title: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
+      title: Dynamic Tree Subtree Add Subtree Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
-      title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+      title: Dynamic Tree Vertex Add Path Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
-      title: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
+      title: Dynamic Tree Vertex Add Subtree Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
-      title: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
+      title: Dynamic Tree Vertex Set Path Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/line_add_get_min.test.py
-      title: test/library_checker/data_structure/line_add_get_min.test.py
+      title: Line Add Get Min
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_queue.test.py
-      title: test/library_checker/data_structure/persistent_queue.test.py
+      title: Persistent Queue
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/persistent_unionfind.test.py
-      title: test/library_checker/data_structure/persistent_unionfind.test.py
+      title: Persistent UnionFind
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/persistent_unionfind2.test.py
-      title: test/library_checker/data_structure/persistent_unionfind2.test.py
+      path: test/library_checker/data_structure/persistent_unionfind_rb.test.py
+      title: Persistent UnionFind (Rollback Union Find)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_range_sum.test.py
-      title: test/library_checker/data_structure/point_add_range_sum.test.py
+      title: Point Add Range Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_add_rectangle_sum.test.py
-      title: test/library_checker/data_structure/point_add_rectangle_sum.test.py
+      title: Point Add Rectangle Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_composite.test.py
-      title: test/library_checker/data_structure/point_set_range_composite.test.py
+      title: Point Set Range Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
-      title: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
+      title: Point Set Range Sort Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/predecessor_problem.test.py
-      title: test/library_checker/data_structure/predecessor_problem.test.py
+      title: Predecessor Problem
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/queue_operate_all_composite.test.py
-      title: test/library_checker/data_structure/queue_operate_all_composite.test.py
+      title: Queue Operate All Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_affine_point_get.test.py
-      title: test/library_checker/data_structure/range_affine_point_get.test.py
+      title: Range Affine Point Get
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_affine_range_sum.test.py
-      title: test/library_checker/data_structure/range_affine_range_sum.test.py
+      title: Range Affine Range Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
-      title: test/library_checker/data_structure/range_chmin_chmax_add_range_sum.test.py
+      title: Range Chmin Chmax Add Range Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
-      title: test/library_checker/data_structure/range_kth_smallest.test.py
+      title: Range Kth Smallest
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
-      title: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+      title: Range Reverse Range Sum (Treap)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
-      title: test/library_checker/data_structure/range_set_range_composite.test.py
+      title: Range Set Range Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/rectangle_add_point_get.test.py
-      title: test/library_checker/data_structure/rectangle_add_point_get.test.py
+      title: Range Add Point Get
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/rectangle_sum.test.py
-      title: test/library_checker/data_structure/rectangle_sum.test.py
+      title: Rectangle Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/segment_add_get_min.test.py
-      title: test/library_checker/data_structure/segment_add_get_min.test.py
+      title: Segment Add Get Min
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/set_xor_min.test.py
-      title: test/library_checker/data_structure/set_xor_min.test.py
+      title: Set Xor-Min
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_count_distinct.test.py
-      title: test/library_checker/data_structure/static_range_count_distinct.test.py
+      title: Static Range Count Distinct
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_frequency.test.py
-      title: test/library_checker/data_structure/static_range_frequency.test.py
+      title: Static Range Frequency
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_inversion_query.test.py
-      title: test/library_checker/data_structure/static_range_inversion_query.test.py
+      title: Static Range Inversion Query
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_lis_query.test.py
-      title: test/library_checker/data_structure/static_range_lis_query.test.py
+      title: Static Range LIS Query
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_mode_query.test.py
-      title: test/library_checker/data_structure/static_range_mode_query.test.py
+      title: Static Range Mode Query
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_range_sum.test.py
-      title: test/library_checker/data_structure/static_range_sum.test.py
+      title: Static Range Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
-      title: test/library_checker/data_structure/static_rectangle_add_rectangle_sum.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/data_structure/static_rmq.test.py
-      title: test/library_checker/data_structure/static_rmq.test.py
+      title: Static Rectangle Add Rectangle Sum
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
-      title: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
+      title: Static RMQ (Dynamic Segment Tree)
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/static_rmq_segtree.test.py
+      title: Static RMQ (Segment Tree)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/unionfind.test.py
-      title: test/library_checker/data_structure/unionfind.test.py
+      title: Unionfind
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
-      title: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+      title: Vertex Add Path Sum (Euler Tour)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
-      title: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
+      title: Vertex Add Path Sum (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
-      title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+      title: Vertex Add Subtree Sum (Euler Tour)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
-      title: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+      title: Vertex Add Subtree Sum (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertext_set_path_composite.test.py
-      title: test/library_checker/data_structure/vertext_set_path_composite.test.py
+      title: Vertex Set Path Composite
   - name: test/library_checker/geometory
     pages:
     - icon: ':heavy_check_mark:'

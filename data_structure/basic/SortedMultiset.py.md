@@ -6,9 +6,12 @@ data:
   - icon: ':grey_question:'
     path: test/atcoder/abc342g.test.py
     title: test/atcoder/abc342g.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/double-ended_priority_queue.test.py
+    title: Double-Ended Priority Queue
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -82,8 +85,9 @@ data:
   path: data_structure/basic/SortedMultiset.py
   requiredBy: []
   timestamp: '2024-05-21 07:51:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/data_structure/double-ended_priority_queue.test.py
   - test/atcoder/abc342g.test.py
 documentation_of: data_structure/basic/SortedMultiset.py
 layout: document

@@ -36,8 +36,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
-- /verify/test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py.html
-title: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+title: Dynamic Tree Vertex Add Path Sum
 ---

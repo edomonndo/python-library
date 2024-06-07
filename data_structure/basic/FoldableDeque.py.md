@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/deque_operate_all_composite.test.py
+    title: Deque Operate All Composite
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -42,8 +45,9 @@ data:
   path: data_structure/basic/FoldableDeque.py
   requiredBy: []
   timestamp: '2024-05-21 07:51:26+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/data_structure/deque_operate_all_composite.test.py
 documentation_of: data_structure/basic/FoldableDeque.py
 layout: document
 title: Foldable Deque(DSWAG)

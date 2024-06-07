@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_range_mode_query.test.py
-    title: test/library_checker/data_structure/static_range_mode_query.test.py
+    title: Static Range Mode Query
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

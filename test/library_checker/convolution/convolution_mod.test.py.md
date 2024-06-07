@@ -45,8 +45,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/convolution/convolution_mod.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/convolution/convolution_mod.test.py
-- /verify/test/library_checker/convolution/convolution_mod.test.py.html
-title: test/library_checker/convolution/convolution_mod.test.py
+title: Convolution Mod
 ---

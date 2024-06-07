@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: data_structure/rollback_unionfind.py
-    title: Rollback Union Find
+    path: persistent_data_structure/persistent_union_find.py
+    title: "\u6C38\u7D9A Union Find"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,28 +18,19 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/persistent_unionfind\n\
-    \nfrom data_structure.rollback_unionfind import RollbackUnionFind\n\nN, Q = map(int,\
-    \ input().split())\nG = [[] for _ in range(Q + 1)]\n\nfor i in range(1, Q + 1):\n\
-    \    t, k, u, v = map(int, input().split())\n    k += 1\n    G[k].append((t, i,\
-    \ u, v, 1))\n\nuf = RollbackUnionFind(N)\nans = [-1] * (Q + 1)\nstack = [(-1,\
-    \ 0, -1, 0, 1)]\nwhile stack:\n    t, k, u, v, flag = stack.pop()\n    if t ==\
-    \ 1:\n        ans[k] = uf.same(u, v)\n        continue\n    if flag:\n       \
-    \ stack.append((t, k, u, v, 0))\n        if t == 0:\n            uf.merge(u, v)\n\
-    \        for item in G[k]:\n            stack.append(item)\n        continue\n\
-    \    if t == 0:\n        uf.undo()\n\nfor x in ans:\n    if x != -1:\n       \
-    \ print(1 if x else 0)\n"
+    from persistent_data_structure.persistent_union_find import PersistentUnionFind\n\
+    \nN, Q = map(int, input().split())\nG = PersistentUnionFind(N)\nfor _ in range(Q):\n\
+    \    t, k, u, v = map(int, input().split())\n    if t == 0:\n        G.merge(k,\
+    \ u, v)\n    else:\n        print(1 if G.same(k, u, v) else 0)\n        G.update()\n"
   dependsOn:
-  - data_structure/rollback_unionfind.py
+  - persistent_data_structure/persistent_union_find.py
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_unionfind.test.py
   requiredBy: []
-  timestamp: '2024-04-30 17:18:01+09:00'
+  timestamp: '2024-06-07 11:47:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/persistent_unionfind.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/persistent_unionfind.test.py
-- /verify/test/library_checker/data_structure/persistent_unionfind.test.py.html
-title: test/library_checker/data_structure/persistent_unionfind.test.py
+title: Persistent UnionFind
 ---

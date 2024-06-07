@@ -11,7 +11,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_set_range_composite.test.py
-    title: test/library_checker/data_structure/range_set_range_composite.test.py
+    title: Range Set Range Composite
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

@@ -25,15 +25,12 @@ data:
   dependsOn:
   - data_structure/segtree/segment_tree.py
   isVerificationFile: true
-  path: test/library_checker/data_structure/static_rmq.test.py
+  path: test/library_checker/data_structure/static_rmq_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-30 15:25:43+09:00'
+  timestamp: '2024-06-07 11:47:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/data_structure/static_rmq.test.py
+documentation_of: test/library_checker/data_structure/static_rmq_segtree.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/static_rmq.test.py
-- /verify/test/library_checker/data_structure/static_rmq.test.py.html
-title: test/library_checker/data_structure/static_rmq.test.py
+title: Static RMQ (Segment Tree)
 ---

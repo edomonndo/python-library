@@ -45,8 +45,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
-- /verify/test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py.html
-title: test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
+title: Dynamic Sequence Range Affine Range Sum (Treap)
 ---

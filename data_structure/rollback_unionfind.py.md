@@ -7,8 +7,8 @@ data:
     title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/persistent_unionfind.test.py
-    title: test/library_checker/data_structure/persistent_unionfind.test.py
+    path: test/library_checker/data_structure/persistent_unionfind_rb.test.py
+    title: Persistent UnionFind (Rollback Union Find)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -72,7 +72,7 @@ data:
   timestamp: '2024-04-30 17:18:01+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/persistent_unionfind.test.py
+  - test/library_checker/data_structure/persistent_unionfind_rb.test.py
 documentation_of: data_structure/rollback_unionfind.py
 layout: document
 title: Rollback Union Find

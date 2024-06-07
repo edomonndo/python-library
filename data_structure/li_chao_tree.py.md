@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/line_add_get_min.test.py
-    title: test/library_checker/data_structure/line_add_get_min.test.py
+    title: Line Add Get Min
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/segment_add_get_min.test.py
-    title: test/library_checker/data_structure/segment_add_get_min.test.py
+    title: Segment Add Get Min
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

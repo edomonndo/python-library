@@ -11,7 +11,7 @@ data:
     title: test/aoj/grl_2_a_minimum_spanning_tree_kruskal.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/unionfind.test.py
-    title: test/library_checker/data_structure/unionfind.test.py
+    title: Unionfind
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

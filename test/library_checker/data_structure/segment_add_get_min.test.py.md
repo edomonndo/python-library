@@ -38,8 +38,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/segment_add_get_min.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/segment_add_get_min.test.py
-- /verify/test/library_checker/data_structure/segment_add_get_min.test.py.html
-title: test/library_checker/data_structure/segment_add_get_min.test.py
+title: Segment Add Get Min
 ---

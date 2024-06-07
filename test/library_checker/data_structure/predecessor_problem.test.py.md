@@ -35,8 +35,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/predecessor_problem.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/predecessor_problem.test.py
-- /verify/test/library_checker/data_structure/predecessor_problem.test.py.html
-title: test/library_checker/data_structure/predecessor_problem.test.py
+title: Predecessor Problem
 ---

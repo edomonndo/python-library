@@ -32,8 +32,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/set_xor_min.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/set_xor_min.test.py
-- /verify/test/library_checker/data_structure/set_xor_min.test.py.html
-title: test/library_checker/data_structure/set_xor_min.test.py
+title: Set Xor-Min
 ---

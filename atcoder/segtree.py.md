@@ -20,7 +20,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertext_set_path_composite.test.py
-    title: test/library_checker/data_structure/vertext_set_path_composite.test.py
+    title: Vertex Set Path Composite
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

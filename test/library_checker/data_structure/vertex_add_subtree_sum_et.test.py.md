@@ -36,8 +36,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
-- /verify/test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py.html
-title: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+title: Vertex Add Subtree Sum (Euler Tour)
 ---

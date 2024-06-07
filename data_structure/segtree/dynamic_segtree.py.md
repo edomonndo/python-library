@@ -8,7 +8,7 @@ data:
     title: test/atcoder/arc008d_dyn_segtree.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
-    title: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
+    title: Static RMQ (Dynamic Segment Tree)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

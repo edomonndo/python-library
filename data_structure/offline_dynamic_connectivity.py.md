@@ -8,13 +8,13 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
-    title: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
+    title: Dynamic Graph Vertex Add Component Sum
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
-    title: test/library_checker/data_structure/dynamic_tree_subtree_add_subtree_sum.test.py
+    title: Dynamic Tree Subtree Add Subtree Sum
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
-    title: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
+    title: Dynamic Tree Vertex Add Subtree Sum
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

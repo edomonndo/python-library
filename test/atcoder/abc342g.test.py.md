@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/basic/SortedMultiset.py
     title: SortedMultiset
   - icon: ':warning:'

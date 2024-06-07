@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
-    title: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+    title: Area of Union of Rectangles
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

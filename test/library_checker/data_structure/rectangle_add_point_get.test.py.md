@@ -36,8 +36,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/rectangle_add_point_get.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/data_structure/rectangle_add_point_get.test.py
-- /verify/test/library_checker/data_structure/rectangle_add_point_get.test.py.html
-title: test/library_checker/data_structure/rectangle_add_point_get.test.py
+title: Range Add Point Get
 ---
