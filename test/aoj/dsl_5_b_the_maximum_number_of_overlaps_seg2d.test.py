@@ -3,7 +3,7 @@
 from data_structure.segtree.segtree_2d import Segtree2d
 
 n = int(input())
-seg = Segtree2d(1000, 1000, max, 0, [])
+seg = Segtree2d(1000, 1000, lambda x, y: x + y, 0, [])
 for _ in range(n):
     x1, y1, x2, y2 = map(int, input().split())
     seg.set(x1, y1, seg.get(x1, y1) + 1)
