@@ -8,7 +8,7 @@ class HeavyLightDecomposition:
         self.depth = [0] * n
         self.into = [-1] * n
         self.out = [-1] * n
-        self.nxt = [root] * n
+        self.head = [root] * n
         self.par = [root] * n
         self.adj = [[] for _ in range(n)]
         for u, v in edges:
@@ -44,7 +44,7 @@ class HeavyLightDecomposition:
 
     def _dfs_hld(self):
         # calc hld
-        adj, into, out, par, nxt = self.adj, self.into, self.out, self.par, self.nxt
+        adj, into, out, par, head = self.adj, self.into, self.out, self.par, self.head
         idx = 0
         st = [~self.root, self.root]
         while st:
@@ -55,38 +55,38 @@ class HeavyLightDecomposition:
                 for u in adj[v]:
                     if u == par[v]:
                         continue
-                    nxt[u] = nxt[v] if u == adj[v][-1] else u
+                    head[u] = head[v] if u == adj[v][-1] else u
                     st += [~u, u]
                 continue
             out[~v] = idx
 
     def ascend(self, u: int, v: int) -> list[tuple[int, int]]:
-        into, par, nxt = self.into, self.par, self.nxt
+        into, par, head = self.into, self.par, self.head
         res = []
-        while nxt[u] != nxt[v]:
-            res.append((into[u], into[nxt[u]]))
-            u = par[nxt[u]]
+        while head[u] != head[v]:
+            res.append((into[u], into[head[u]]))
+            u = par[head[u]]
         if u != v:
             res.append((into[u], into[v] + 1))
         return res
 
     def descend(self, u: int, v: int) -> list[tuple[int, int]]:
-        into, par, nxt = self.into, self.par, self.nxt
+        into, par, head = self.into, self.par, self.head
         res = []
         while u != v:
-            if nxt[u] == nxt[v]:
+            if head[u] == head[v]:
                 res.append((into[u] + 1, into[v]))
                 break
-            res.append((into[nxt[v]], into[v]))
-            v = par[nxt[v]]
+            res.append((into[head[v]], into[v]))
+            v = par[head[v]]
         return res[::-1]
 
     def lca(self, u: int, v: int) -> int:
-        into, par, nxt, depth = self.into, self.par, self.nxt, self.depth
-        while nxt[u] != nxt[v]:
+        into, par, head, depth = self.into, self.par, self.head, self.depth
+        while head[u] != head[v]:
             if into[u] < into[v]:
                 u, v = v, u
-            u = par[nxt[u]]
+            u = par[head[u]]
         return u if depth[u] < depth[v] else v
 
     def dist(self, u: int, v: int) -> int:
@@ -96,13 +96,12 @@ class HeavyLightDecomposition:
     def path_query(
         self, u: int, v: int, f: Callable[[int, int], None], edge: bool = False
     ) -> None:
-        into = self.into
         l = self.lca(u, v)
         for a, b in self.ascend(u, l):
             s, t = a + 1, b
             f(s, t) if s < t else f(t, s)
         if not edge:
-            f(into[l], into[l] + 1)
+            f(self.into[l], self.into[l] + 1)
         for a, b in self.descend(l, v):
             s, t = a, b + 1
             f(s, t) if s < t else f(t, s)
@@ -110,12 +109,11 @@ class HeavyLightDecomposition:
     def path_noncommutative_query(
         self, u: int, v: int, f: Callable[[int, int], None], edge: bool = False
     ) -> None:
-        into = self.into
         l = self.lca(u, v)
         for a, b in self.ascend(u, l):
             f(a + 1, b)
         if not edge:
-            f(into[l], into[l] + 1)
+            f(self.into[l], self.into[l] + 1)
         for a, b in self.descend(l, v):
             f(a, b + 1)
 
