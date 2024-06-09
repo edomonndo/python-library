@@ -207,7 +207,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree_beats.py
       title: Segment Tree Beats
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segtree_2d.py
       title: "\u4E8C\u6B21\u5143\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     - icon: ':heavy_check_mark:'
@@ -623,7 +623,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl_4_a_union_of_rectangles.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
       title: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
     - icon: ':heavy_check_mark:'

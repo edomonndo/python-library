@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
     title: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -55,7 +55,7 @@ data:
   path: data_structure/segtree/segtree_2d.py
   requiredBy: []
   timestamp: '2024-06-09 10:02:15+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
 documentation_of: data_structure/segtree/segtree_2d.py
