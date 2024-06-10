@@ -18,6 +18,9 @@ data:
     path: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/vertex_add_range_contour_sum_on_tree.test.py
+    title: Vertex Add Range Contour Sum on Tree
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: false
@@ -50,6 +53,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
+  - test/library_checker/data_structure/vertex_add_range_contour_sum_on_tree.test.py
   - test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
 documentation_of: atcoder/fenwicktree.py
 layout: document

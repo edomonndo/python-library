@@ -172,11 +172,20 @@ data:
   - name: data_structure/fenwick_tree
     pages:
     - icon: ':warning:'
+      path: data_structure/fenwick_tree/cumulative_sum.py
+      title: "\u7D2F\u7A4D\u548C"
+    - icon: ':warning:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
     - icon: ':warning:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
+    - icon: ':heavy_check_mark:'
+      path: data_structure/fenwick_tree/range_add_point_get.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
+    - icon: ':warning:'
+      path: data_structure/fenwick_tree/range_add_range_sum.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
   - name: data_structure/segtree
     pages:
     - icon: ':warning:'
@@ -463,6 +472,9 @@ data:
     - icon: ':warning:'
       path: tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
+    - icon: ':heavy_check_mark:'
+      path: tree/contour_query.py
+      title: tree/contour_query.py
     - icon: ':warning:'
       path: tree/count_stable_set.py
       title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
@@ -846,11 +858,17 @@ data:
       path: test/library_checker/data_structure/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/vertex_add_range_contour_sum_on_tree.test.py
+      title: Vertex Add Range Contour Sum on Tree
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/vertex_get_range_contour_add_on_tree.test.py
+      title: Vertex Get Range Contour Add on Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
