@@ -21,12 +21,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yukicoder/875_range_mindex_query.test.py
     title: No.875 Range Mindex Query
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -85,7 +85,7 @@ data:
   - tree/euler_tour.py
   - tree/auxiliary_tree.py
   timestamp: '2024-06-04 17:27:40+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/vertext_set_path_composite.test.py
   - test/yukicoder/875_range_mindex_query.test.py

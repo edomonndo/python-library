@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: atcoder/scc.py
       title: atcoder/scc.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/segtree.py
       title: atcoder/segtree.py
     - icon: ':warning:'
@@ -228,7 +228,7 @@ data:
         \u30E1\u30F3\u30C8\u6728"
   - name: data_structure/segtree/monoids
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
       title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
   - name: data_structure/segtree/monoids_action
@@ -1014,7 +1014,7 @@ data:
       title: test/unit_test/wavelet_matrix.test.py
   - name: test/yukicoder
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/875_range_mindex_query.test.py
       title: No.875 Range Mindex Query
 layout: toppage

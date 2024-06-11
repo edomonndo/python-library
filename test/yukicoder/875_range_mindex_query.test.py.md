@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
     title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://yukicoder.me/problems/no/875
     links:
@@ -36,7 +36,7 @@ data:
   path: test/yukicoder/875_range_mindex_query.test.py
   requiredBy: []
   timestamp: '2024-06-11 17:27:30+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yukicoder/875_range_mindex_query.test.py
 layout: document
