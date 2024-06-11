@@ -12,14 +12,14 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import functools\nfrom typing import cast\n\n\ndef _sa_naive(s: list[int])\
-    \ -> list[int]:\n    sa = list(range(len(s)))\n    return sorted(sa, key=lambda\
-    \ i: s[i:])\n\n\ndef _sa_doubling(s: list[int]) -> list[int]:\n    n = len(s)\n\
-    \    sa = list(range(n))\n    rnk = s.copy()\n    tmp = [0] * n\n    k = 1\n \
-    \   while k < n:\n\n        def cmp(x: int, y: int) -> int:\n            if rnk[x]\
-    \ != rnk[y]:\n                return rnk[x] - rnk[y]\n            rx = rnk[x +\
-    \ k] if x + k < n else -1\n            ry = rnk[y + k] if y + k < n else -1\n\
-    \            return rx - ry\n\n        sa.sort(key=functools.cmp_to_key(cmp))\n\
+  code: "import functools\nfrom typing import cast, Union, Optional\n\n\ndef _sa_naive(s:\
+    \ list[int]) -> list[int]:\n    sa = list(range(len(s)))\n    return sorted(sa,\
+    \ key=lambda i: s[i:])\n\n\ndef _sa_doubling(s: list[int]) -> list[int]:\n   \
+    \ n = len(s)\n    sa = list(range(n))\n    rnk = s.copy()\n    tmp = [0] * n\n\
+    \    k = 1\n    while k < n:\n\n        def cmp(x: int, y: int) -> int:\n    \
+    \        if rnk[x] != rnk[y]:\n                return rnk[x] - rnk[y]\n      \
+    \      rx = rnk[x + k] if x + k < n else -1\n            ry = rnk[y + k] if y\
+    \ + k < n else -1\n            return rx - ry\n\n        sa.sort(key=functools.cmp_to_key(cmp))\n\
     \        tmp[sa[0]] = 0\n        for i in range(1, n):\n            tmp[sa[i]]\
     \ = tmp[sa[i - 1]] + (1 if cmp(sa[i - 1], sa[i]) else 0)\n        tmp, rnk = rnk,\
     \ tmp\n        k *= 2\n    return sa\n\n\ndef _sa_is(s: list[int], upper: int)\
@@ -63,8 +63,8 @@ data:
     \            if not same:\n                rec_upper += 1\n            rec_s[lms_map[sorted_lms[i]]]\
     \ = rec_upper\n\n        rec_sa = _sa_is(rec_s, rec_upper)\n\n        for i in\
     \ range(m):\n            sorted_lms[i] = lms[rec_sa[i]]\n        induce(sorted_lms)\n\
-    \n    return sa\n\n\ndef suffix_array(s: str | list[int], upper: int | None =\
-    \ None) -> list[int]:\n    \"\"\"\n    SA-IS, linear-time suffix array construction\n\
+    \n    return sa\n\n\ndef suffix_array(s: Union[str, list[int]], upper: Optional[int]\
+    \ = None) -> list[int]:\n    \"\"\"\n    SA-IS, linear-time suffix array construction\n\
     \    Reference:\n    G. Nong, S. Zhang, and W. H. Chan,\n    Two Efficient Algorithms\
     \ for Linear Time Suffix Array Construction\n    \"\"\"\n\n    if isinstance(s,\
     \ str):\n        return _sa_is([ord(c) for c in s], 255)\n    elif upper is None:\n\
@@ -75,9 +75,9 @@ data:
     \ s[idx[i]]:\n                now += 1\n            s2[idx[i]] = now\n       \
     \ return _sa_is(s2, now)\n    else:\n        assert 0 <= upper\n        for d\
     \ in s:\n            assert 0 <= d <= upper\n\n        return _sa_is(s, upper)\n\
-    \n\ndef lcp_array(s: str | list[int], sa: list[int]) -> list[int]:\n    \"\"\"\
-    \n    Longest-Common-Prefix computation\n    Reference:\n    T. Kasai, G. Lee,\
-    \ H. Arimura, S. Arikawa, and K. Park,\n    Linear-Time Longest-Common-Prefix\
+    \n\ndef lcp_array(s: Union[str, list[int]], sa: list[int]) -> list[int]:\n   \
+    \ \"\"\"\n    Longest-Common-Prefix computation\n    Reference:\n    T. Kasai,\
+    \ G. Lee, H. Arimura, S. Arikawa, and K. Park,\n    Linear-Time Longest-Common-Prefix\
     \ Computation in Suffix Arrays and Its\n    Applications\n    \"\"\"\n\n    if\
     \ isinstance(s, str):\n        s = [ord(c) for c in s]\n\n    n = len(s)\n   \
     \ assert n >= 1\n\n    rnk = [0] * n\n    for i in range(n):\n        rnk[sa[i]]\
@@ -85,20 +85,20 @@ data:
     \ h > 0:\n            h -= 1\n        if rnk[i] == 0:\n            continue\n\
     \        j = sa[rnk[i] - 1]\n        while j + h < n and i + h < n:\n        \
     \    if s[j + h] != s[i + h]:\n                break\n            h += 1\n   \
-    \     lcp[rnk[i] - 1] = h\n\n    return lcp\n\n\ndef z_algorithm(s: str | list[int])\
-    \ -> list[int]:\n    \"\"\"\n    Z algorithm\n    Reference:\n    D. Gusfield,\n\
-    \    Algorithms on Strings, Trees, and Sequences: Computer Science and\n    Computational\
-    \ Biology\n    \"\"\"\n\n    if isinstance(s, str):\n        s = [ord(c) for c\
-    \ in s]\n\n    n = len(s)\n    if n == 0:\n        return []\n\n    z = [0] *\
-    \ n\n    j = 0\n    for i in range(1, n):\n        z[i] = 0 if j + z[j] <= i else\
-    \ min(j + z[j] - i, z[i - j])\n        while i + z[i] < n and s[z[i]] == s[i +\
-    \ z[i]]:\n            z[i] += 1\n        if j + z[j] < i + z[i]:\n           \
-    \ j = i\n    z[0] = n\n\n    return z\n"
+    \     lcp[rnk[i] - 1] = h\n\n    return lcp\n\n\ndef z_algorithm(s: Union[str,\
+    \ list[int]]) -> list[int]:\n    \"\"\"\n    Z algorithm\n    Reference:\n   \
+    \ D. Gusfield,\n    Algorithms on Strings, Trees, and Sequences: Computer Science\
+    \ and\n    Computational Biology\n    \"\"\"\n\n    if isinstance(s, str):\n \
+    \       s = [ord(c) for c in s]\n\n    n = len(s)\n    if n == 0:\n        return\
+    \ []\n\n    z = [0] * n\n    j = 0\n    for i in range(1, n):\n        z[i] =\
+    \ 0 if j + z[j] <= i else min(j + z[j] - i, z[i - j])\n        while i + z[i]\
+    \ < n and s[z[i]] == s[i + z[i]]:\n            z[i] += 1\n        if j + z[j]\
+    \ < i + z[i]:\n            j = i\n    z[0] = n\n\n    return z\n"
   dependsOn: []
   isVerificationFile: false
   path: atcoder/string.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-11 12:43:47+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: atcoder/string.py

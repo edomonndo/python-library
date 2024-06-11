@@ -24,15 +24,15 @@ data:
   dependsOn:
   - string_/manacher.py
   isVerificationFile: true
-  path: test/library_checker/string/manacher.test.py
+  path: test/library_checker/string/enumerate_palindroms.test.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
+  timestamp: '2024-06-11 12:43:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/string/manacher.test.py
+documentation_of: test/library_checker/string/enumerate_palindroms.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/string/manacher.test.py
-- /verify/test/library_checker/string/manacher.test.py.html
-title: test/library_checker/string/manacher.test.py
+- /verify/test/library_checker/string/enumerate_palindroms.test.py
+- /verify/test/library_checker/string/enumerate_palindroms.test.py.html
+title: test/library_checker/string/enumerate_palindroms.test.py
 ---

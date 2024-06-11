@@ -181,6 +181,9 @@ data:
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
+      path: data_structure/fenwick_tree/point_set_range_frequency.py
+      title: data_structure/fenwick_tree/point_set_range_frequency.py
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
     - icon: ':warning:'
@@ -435,6 +438,9 @@ data:
       title: sort/tim_sort.py
   - name: string_
     pages:
+    - icon: ':heavy_check_mark:'
+      path: string_/longest_common_substring.py
+      title: Longest Common Substring
     - icon: ':heavy_check_mark:'
       path: string_/manacher.py
       title: Manacher
@@ -783,6 +789,9 @@ data:
       path: test/library_checker/data_structure/point_set_range_composite.test.py
       title: Point Set Range Composite
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/data_structure/point_set_range_frequency.test.py
+      title: Point Set Range Frequency
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/point_set_range_sort_range_composite.test.py
       title: Point Set Range Sort Composite
     - icon: ':heavy_check_mark:'
@@ -957,8 +966,14 @@ data:
   - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/string/manacher.test.py
-      title: test/library_checker/string/manacher.test.py
+      path: test/library_checker/string/enumerate_palindroms.test.py
+      title: test/library_checker/string/enumerate_palindroms.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/string/longeset_common_substring.test.py
+      title: test/library_checker/string/longeset_common_substring.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/string/number_of_substrings.test.py
+      title: test/library_checker/string/number_of_substrings.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py

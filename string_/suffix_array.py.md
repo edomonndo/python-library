@@ -1,8 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: string_/longest_common_substring.py
+    title: Longest Common Substring
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/string/number_of_substrings.test.py
+    title: test/library_checker/string/number_of_substrings.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/suffix_array.test.py
     title: test/library_checker/string/suffix_array.test.py
@@ -68,10 +74,12 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: string_/suffix_array.py
-  requiredBy: []
+  requiredBy:
+  - string_/longest_common_substring.py
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/string/number_of_substrings.test.py
   - test/library_checker/string/suffix_array.test.py
 documentation_of: string_/suffix_array.py
 layout: document

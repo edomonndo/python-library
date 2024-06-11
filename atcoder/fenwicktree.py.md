@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: data_structure/fenwick_tree/point_set_range_frequency.py
+    title: data_structure/fenwick_tree/point_set_range_frequency.py
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_point_add_rectangle_sum.py
     title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
       \u30F3)"
@@ -46,6 +49,7 @@ data:
   isVerificationFile: false
   path: atcoder/fenwicktree.py
   requiredBy:
+  - data_structure/fenwick_tree/point_set_range_frequency.py
   - geometory/offline_rectangle_add_point_get.py
   - geometory/offline_static_rectangle_sum.py
   - geometory/offline_point_add_rectangle_sum.py
