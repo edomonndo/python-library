@@ -1,5 +1,5 @@
 import functools
-from typing import cast
+from typing import cast, Union, Optional
 
 
 def _sa_naive(s: list[int]) -> list[int]:
@@ -157,7 +157,7 @@ def _sa_is(s: list[int], upper: int) -> list[int]:
     return sa
 
 
-def suffix_array(s: str | list[int], upper: int | None = None) -> list[int]:
+def suffix_array(s: Union[str, list[int]], upper: Optional[int] = None) -> list[int]:
     """
     SA-IS, linear-time suffix array construction
     Reference:
@@ -190,7 +190,7 @@ def suffix_array(s: str | list[int], upper: int | None = None) -> list[int]:
         return _sa_is(s, upper)
 
 
-def lcp_array(s: str | list[int], sa: list[int]) -> list[int]:
+def lcp_array(s: Union[str, list[int]], sa: list[int]) -> list[int]:
     """
     Longest-Common-Prefix computation
     Reference:
@@ -226,7 +226,7 @@ def lcp_array(s: str | list[int], sa: list[int]) -> list[int]:
     return lcp
 
 
-def z_algorithm(s: str | list[int]) -> list[int]:
+def z_algorithm(s: Union[str, list[int]]) -> list[int]:
     """
     Z algorithm
     Reference:
