@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: atcoder/scc.py
       title: atcoder/scc.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: atcoder/segtree.py
       title: atcoder/segtree.py
     - icon: ':warning:'
@@ -226,6 +226,16 @@ data:
       path: data_structure/segtree/sortable_segtree.py
       title: "\uFF11\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u30BD\u30FC\u30C8\u30BB\u30B0\
         \u30E1\u30F3\u30C8\u6728"
+  - name: data_structure/segtree/monoids
+    pages:
+    - icon: ':x:'
+      path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+      title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+  - name: data_structure/segtree/monoids_action
+    pages:
+    - icon: ':warning:'
+      path: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
+      title: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -1002,5 +1012,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
       title: test/unit_test/wavelet_matrix.test.py
+  - name: test/yukicoder
+    pages:
+    - icon: ':x:'
+      path: test/yukicoder/875_range_mindex_query.test.py
+      title: No.875 Range Mindex Query
 layout: toppage
 ---

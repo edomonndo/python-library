@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
   - icon: ':heavy_check_mark:'
