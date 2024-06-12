@@ -28,3 +28,30 @@ class FenwickTree:
             s += self.data[r - 1]
             r -= r & -r
         return s
+
+    def bisect_left(self, x: T) -> int:
+        """minimize i s.t. sum[0, i) >= x. Note x should be integer."""
+
+        if x <= self.e:
+            return 0
+        p = 0
+        k = 1 << (self.n.bit_length() - 1)
+        while k:
+            if p + k <= self.n and self.data[p + k - 1] < x:
+                x -= self.data[p + k - 1]
+                p += k
+            k >>= 1
+        return p + 1
+
+    def bisect_right(self, x: T) -> int:
+        """minimize i s.t. sum[0,i) > x. Note x should be integer."""
+        if x <= self.e:
+            return 0
+        p = 0
+        k = 1 << (self.n.bit_length() - 1)
+        while k:
+            if p + k <= self.n and self.data[p + k - 1] <= x:
+                x -= self.data[p + k - 1]
+                p += k
+            k >>= 1
+        return p + 1

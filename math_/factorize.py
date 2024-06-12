@@ -1,7 +1,7 @@
 import math
 import random
 
-from math_.is_prime import miller_rabin
+from math_.miller_rabin import miller_rabin
 
 
 def find_prime_factor(n):
