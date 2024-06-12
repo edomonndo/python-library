@@ -312,7 +312,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
     - icon: ':heavy_check_mark:'
@@ -669,10 +669,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl_2_b_minimum_cost_arborescence.test.py
       title: test/aoj/grl_2_b_minimum_cost_arborescence.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_3_a_articulation_points.test.py
       title: test/aoj/grl_3_a_articulation_points.test.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl_3_b_bridges.test.py
       title: test/aoj/grl_3_b_bridges.test.py
     - icon: ':heavy_check_mark:'
@@ -934,6 +934,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/shortest_path.test.py
       title: test/library_checker/graph/shortest_path.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/two_edge_connected_components.test.py
+      title: test/library_checker/graph/two_edge_connected_components.test.py
   - name: test/library_checker/math
     pages:
     - icon: ':heavy_check_mark:'

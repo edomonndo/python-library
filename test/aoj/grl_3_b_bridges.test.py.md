@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/low_link.py
     title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_B
     links:
@@ -18,17 +18,17 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_B\n\
-    \nfrom graph.low_link import low_link\n\nN, M = map(int, input().split())\nG =\
-    \ [[] for _ in range(N)]\nfor _ in range(M):\n    u, v = map(int, input().split())\n\
-    \    G[u].append(v)\n    G[v].append(u)\n\n_, ans = low_link(G)\nans.sort()\n\
-    for u, v in ans:\n    print(u, v)\n"
+    \nfrom graph.low_link import LowLink\n\nn, m = map(int, input().split())\ng =\
+    \ [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
+    \    g[u].append(v)\n    g[v].append(u)\n\nLL = LowLink(g)\nbridges = LL.get_bridge()\n\
+    for u, v in bridges:\n    print(u, v)\n"
   dependsOn:
   - graph/low_link.py
   isVerificationFile: true
   path: test/aoj/grl_3_b_bridges.test.py
   requiredBy: []
-  timestamp: '2024-02-09 17:45:13+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-06-12 09:49:37+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl_3_b_bridges.test.py
 layout: document
