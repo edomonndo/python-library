@@ -1,15 +1,16 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_A
 
-from graph.low_link import low_link
+from graph.low_link import LowLink
 
-N, M = map(int, input().split())
-G = [[] for _ in range(N)]
-for _ in range(M):
+n, m = map(int, input().split())
+g = [[] for _ in range(n)]
+for _ in range(m):
     u, v = map(int, input().split())
-    G[u].append(v)
-    G[v].append(u)
+    g[u].append(v)
+    g[v].append(u)
 
-ans, _ = low_link(G)
-ans.sort()
+LL = LowLink(g)
+articulation = LL.get_articulation()
+ans = [i for i, v in articulation if v]
 if ans:
     print(*ans, sep="\n")
