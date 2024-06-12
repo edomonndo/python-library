@@ -3,18 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl_3_a_articulation_points.test.py
     title: test/aoj/grl_3_a_articulation_points.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl_3_b_bridges.test.py
     title: test/aoj/grl_3_b_bridges.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/two_edge_connected_components.test.py
     title: test/library_checker/graph/two_edge_connected_components.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -51,28 +51,31 @@ data:
     \ self.children\n        res = []\n        for v in roots:\n            st = [v]\n\
     \            while st:\n                v = st.pop()\n                for u in\
     \ children[v]:\n                    if order[v] < low[u]:\n                  \
-    \      res.append((v, u))\n                    st.append(u)\n        return res\n\
-    \n    def two_edge_connected_components(self) -> tuple[list[int], list[tuple[int,\
-    \ int]]]:\n        order, low, roots, children = self.order, self.low, self.roots,\
-    \ self.children\n\n        components = [-1] * self.n\n        new_edges = []\n\
-    \        idx = 0\n        for v in roots:\n            components[v] = idx\n \
-    \           st = [v]\n            while st:\n                v = st.pop()\n  \
-    \              for u in children[v]:\n                    if order[v] < low[u]:\n\
-    \                        idx += 1\n                        components[u] = idx\n\
-    \                        new_edges.append((components[v], idx))\n            \
-    \        else:\n                        components[u] = components[v]\n      \
-    \              st.append(u)\n            idx += 1\n        return components,\
-    \ new_edges\n\n    def three_edge_connected_components(self) -> list[int]:\n \
-    \       order, low, roots, children = self.order, self.low, self.roots, self.children\n\
-    \        raise NotImplementedError\n\n    def biconnected_components(self) ->\
-    \ list[int]:\n        order, low, roots, children = self.order, self.low, self.roots,\
+    \      if u < v:\n                            res.append((u, v))\n           \
+    \             else:\n                            res.append((v, u))\n        \
+    \            st.append(u)\n        return res\n\n    def two_edge_connected_components(self)\
+    \ -> tuple[list[int], list[tuple[int, int]]]:\n        order, low, roots, children\
+    \ = self.order, self.low, self.roots, self.children\n\n        components = [-1]\
+    \ * self.n\n        new_edges = []\n        idx = 0\n        for v in roots:\n\
+    \            components[v] = idx\n            st = [v]\n            while st:\n\
+    \                v = st.pop()\n                for u in children[v]:\n       \
+    \             if order[v] < low[u]:\n                        idx += 1\n      \
+    \                  components[u] = idx\n                        if components[v]\
+    \ < idx:\n                            new_edges.append((components[v], idx))\n\
+    \                        else:\n                            new_edges.append((idx,\
+    \ components[v]))\n                    else:\n                        components[u]\
+    \ = components[v]\n                    st.append(u)\n            idx += 1\n  \
+    \      return components, new_edges\n\n    def three_edge_connected_components(self)\
+    \ -> list[int]:\n        order, low, roots, children = self.order, self.low, self.roots,\
+    \ self.children\n        raise NotImplementedError\n\n    def biconnected_components(self)\
+    \ -> list[int]:\n        order, low, roots, children = self.order, self.low, self.roots,\
     \ self.children\n        raise NotImplementedError\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/low_link.py
   requiredBy: []
-  timestamp: '2024-06-12 09:49:37+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-06-12 10:06:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/two_edge_connected_components.test.py
   - test/aoj/grl_3_a_articulation_points.test.py

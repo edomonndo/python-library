@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
   _extendedRequiredBy: []
@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/two_edge_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-06-12 09:49:37+09:00'
+  timestamp: '2024-06-12 10:06:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/two_edge_connected_components.test.py

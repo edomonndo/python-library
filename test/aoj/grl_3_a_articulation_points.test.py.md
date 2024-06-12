@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_A
     links:
@@ -21,15 +21,15 @@ data:
     \nfrom graph.low_link import LowLink\n\nn, m = map(int, input().split())\ng =\
     \ [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
     \    g[u].append(v)\n    g[v].append(u)\n\nLL = LowLink(g)\narticulation = LL.get_articulation()\n\
-    ans = [i for i, v in articulation if v]\nif ans:\n    print(*ans, sep=\"\\n\"\
-    )\n"
+    ans = [i for i, v in enumerate(articulation) if v]\nif ans:\n    print(*ans, sep=\"\
+    \\n\")\n"
   dependsOn:
   - graph/low_link.py
   isVerificationFile: true
   path: test/aoj/grl_3_a_articulation_points.test.py
   requiredBy: []
-  timestamp: '2024-06-12 09:49:37+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-12 10:06:46+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl_3_a_articulation_points.test.py
 layout: document
