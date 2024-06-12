@@ -37,7 +37,7 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/range_add_range_sum.py
   requiredBy: []
-  timestamp: '2024-06-10 12:42:43+09:00'
+  timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/fenwick_tree/range_add_range_sum.py

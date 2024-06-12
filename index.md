@@ -310,6 +310,9 @@ data:
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
     - icon: ':heavy_check_mark:'
+      path: graph/general_matching.py
+      title: "\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+    - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
     - icon: ':heavy_check_mark:'
@@ -361,6 +364,10 @@ data:
     - icon: ':warning:'
       path: math_/divisors.py
       title: "\u7D04\u6570\u5217\u6319"
+    - icon: ':warning:'
+      path: math_/eratosthenes.py
+      title: "\u7D20\u6570\u5224\u5B9A(\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
+        \u7BE9)"
     - icon: ':heavy_check_mark:'
       path: math_/euler_phi.py
       title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\
@@ -368,6 +375,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: math_/ext_gcd.py
       title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
+    - icon: ':heavy_check_mark:'
+      path: math_/factorial_iter_mod.py
+      title: "\u968E\u4E57\u30AF\u30A8\u30EA mod 998244353"
+    - icon: ':heavy_check_mark:'
+      path: math_/factorial_mod.py
+      title: "\u968E\u4E57 mod 998244353"
     - icon: ':heavy_check_mark:'
       path: math_/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
@@ -378,11 +391,15 @@ data:
       path: math_/floor_sum.py
       title: Floor sum
     - icon: ':warning:'
-      path: math_/is_prime.py
-      title: "\u7D20\u6570\u5224\u5B9A"
+      path: math_/miller_rabin.py
+      title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
+        )"
     - icon: ':heavy_check_mark:'
       path: math_/min_of_linear.py
       title: Min of linear
+    - icon: ':warning:'
+      path: math_/primitive_root.py
+      title: "\u539F\u59CB\u6839"
     - icon: ':warning:'
       path: math_/stern_brocot_tree.py
       title: Stern Brocot tree
@@ -474,6 +491,11 @@ data:
     - icon: ':warning:'
       path: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
       title: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+  - name: test/library_checker/math
+    pages:
+    - icon: ':warning:'
+      path: test/library_checker/math/primitive_root.py
+      title: test/library_checker/math/primitive_root.py
   - name: tree
     pages:
     - icon: ':warning:'
@@ -923,6 +945,9 @@ data:
       path: test/library_checker/graph/manhattanmst.test.py
       title: test/library_checker/graph/manhattanmst.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/matching_on_general_graph.test.py
+      title: test/library_checker/graph/matching_on_general_graph.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/maximum_independent_set.test.py
       title: test/library_checker/graph/maximum_independent_set.test.py
     - icon: ':heavy_check_mark:'
@@ -943,8 +968,14 @@ data:
       path: test/library_checker/math/count_primes.test.py
       title: test/library_checker/math/count_primes.test.py
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/math/factorial.test.py
+      title: test/library_checker/math/factorial.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/math/factorize.test.py
       title: test/library_checker/math/factorize.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/math/many_factorials.test.py
+      title: test/library_checker/math/many_factorials.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/math/min_of_linear.test.py
       title: test/library_checker/math/min_of_linear.test.py

@@ -31,7 +31,18 @@ data:
     \        assert 0 <= l and l <= r and r <= self.n, \"0<=l<=r<=n,l={0},r={1},n={2}\"\
     .format(\n            l, r, self.n\n        )\n        return self.sum0(r) - self.sum0(l)\n\
     \n    def sum0(self, r: int) -> T:\n        s = self.e\n        while r > 0:\n\
-    \            s += self.data[r - 1]\n            r -= r & -r\n        return s\n"
+    \            s += self.data[r - 1]\n            r -= r & -r\n        return s\n\
+    \n    def bisect_left(self, x: T) -> int:\n        \"\"\"minimize i s.t. sum[0,\
+    \ i) >= x. Note x should be integer.\"\"\"\n\n        if x <= self.e:\n      \
+    \      return 0\n        p = 0\n        k = 1 << (self.n.bit_length() - 1)\n \
+    \       while k:\n            if p + k <= self.n and self.data[p + k - 1] < x:\n\
+    \                x -= self.data[p + k - 1]\n                p += k\n         \
+    \   k >>= 1\n        return p + 1\n\n    def bisect_right(self, x: T) -> int:\n\
+    \        \"\"\"minimize i s.t. sum[0,i) > x. Note x should be integer.\"\"\"\n\
+    \        if x <= self.e:\n            return 0\n        p = 0\n        k = 1 <<\
+    \ (self.n.bit_length() - 1)\n        while k:\n            if p + k <= self.n\
+    \ and self.data[p + k - 1] <= x:\n                x -= self.data[p + k - 1]\n\
+    \                p += k\n            k >>= 1\n        return p + 1\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
@@ -39,7 +50,7 @@ data:
   - data_structure/fenwick_tree/range_add_range_sum.py
   - data_structure/fenwick_tree/range_add_point_get.py
   - geometory/offline_rectangle_add_rectangle_sum.py
-  timestamp: '2024-06-04 17:51:04+09:00'
+  timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py

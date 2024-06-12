@@ -31,7 +31,7 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/range_add_point_get.py
   requiredBy: []
-  timestamp: '2024-06-10 12:42:43+09:00'
+  timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/vertex_get_range_contour_add_on_tree.test.py

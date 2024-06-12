@@ -2,9 +2,13 @@
 data:
   _extendedDependsOn:
   - icon: ':warning:'
-    path: math_/is_prime.py
-    title: "\u7D20\u6570\u5224\u5B9A"
-  _extendedRequiredBy: []
+    path: math_/miller_rabin.py
+    title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
+      )"
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: math_/primitive_root.py
+    title: "\u539F\u59CB\u6839"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/math/factorize.test.py
@@ -18,9 +22,9 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import math\nimport random\n\nfrom math_.is_prime import miller_rabin\n\n\
-    \ndef find_prime_factor(n):\n    b = n.bit_length() - 1\n    b = (b >> 2) << 2\n\
-    \    m = 2 * int(2 ** (b / 8))\n\n    while True:\n        c = random.randrange(1,\
+  code: "import math\nimport random\n\nfrom math_.miller_rabin import miller_rabin\n\
+    \n\ndef find_prime_factor(n):\n    b = n.bit_length() - 1\n    b = (b >> 2) <<\
+    \ 2\n    m = 2 * int(2 ** (b / 8))\n\n    while True:\n        c = random.randrange(1,\
     \ n)\n        f = lambda a: (pow(a, 2, n) + c) % n\n        y = 0\n        g =\
     \ q = r = 1\n        while g == 1:\n            x = y\n            for _ in range(r):\n\
     \                y = f(y)\n            k = 0\n            while k < r and g ==\
@@ -39,11 +43,12 @@ data:
     \        while n % p == 0:\n            n //= p\n            s += 1\n        res[p]\
     \ = s\n    if n > 1:\n        res[n] = 1\n    return res\n"
   dependsOn:
-  - math_/is_prime.py
+  - math_/miller_rabin.py
   isVerificationFile: false
   path: math_/factorize.py
-  requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  requiredBy:
+  - math_/primitive_root.py
+  timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/math/factorize.test.py
