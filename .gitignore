@@ -2,3 +2,5 @@
 in.txt
 .vscode/settings.json
 */__pycache__
+main.py
+input.txt
