@@ -11,6 +11,6 @@ for _ in range(m):
 
 LL = LowLink(g)
 articulation = LL.get_articulation()
-ans = [i for i, v in articulation if v]
+ans = [i for i, v in enumerate(articulation) if v]
 if ans:
     print(*ans, sep="\n")

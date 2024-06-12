@@ -67,7 +67,10 @@ class LowLink:
                 v = st.pop()
                 for u in children[v]:
                     if order[v] < low[u]:
-                        res.append((v, u))
+                        if u < v:
+                            res.append((u, v))
+                        else:
+                            res.append((v, u))
                     st.append(u)
         return res
 
@@ -86,7 +89,10 @@ class LowLink:
                     if order[v] < low[u]:
                         idx += 1
                         components[u] = idx
-                        new_edges.append((components[v], idx))
+                        if components[v] < idx:
+                            new_edges.append((components[v], idx))
+                        else:
+                            new_edges.append((idx, components[v]))
                     else:
                         components[u] = components[v]
                     st.append(u)

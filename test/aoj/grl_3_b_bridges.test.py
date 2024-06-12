@@ -11,5 +11,5 @@ for _ in range(m):
 
 LL = LowLink(g)
 bridges = LL.get_bridge()
-for u, v in bridges:
+for u, v in sorted(bridges):
     print(u, v)
