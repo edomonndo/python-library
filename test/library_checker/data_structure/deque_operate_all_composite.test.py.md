@@ -32,7 +32,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/deque_operate_all_composite.test.py
   requiredBy: []
-  timestamp: '2024-06-07 11:47:04+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/deque_operate_all_composite.test.py

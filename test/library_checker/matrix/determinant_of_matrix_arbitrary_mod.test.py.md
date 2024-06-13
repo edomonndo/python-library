@@ -34,15 +34,15 @@ data:
   dependsOn:
   - matrix/determinant_arbitrary.py
   isVerificationFile: true
-  path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
+  path: test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
   requiredBy: []
-  timestamp: '2024-05-29 07:39:33+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
+documentation_of: test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-- /verify/test/library_checker/matrix/matrix_det_arbitrary_mod.test.py.html
-title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
+- /verify/test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
+- /verify/test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py.html
+title: test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
 ---

@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: convolution/formal_power_series.py
+    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/convolution/convolution_mod.test.py
@@ -88,7 +91,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: convolution/convolution.py
-  requiredBy: []
+  requiredBy:
+  - convolution/formal_power_series.py
   timestamp: '2023-06-21 08:58:45+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

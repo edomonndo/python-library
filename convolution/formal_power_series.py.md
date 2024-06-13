@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -12,89 +15,89 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from convolution import *\n\n\nclass FPS:\n    @staticmethod\n    def shrink(a:\
-    \ list) -> None:\n        while a and not a[-1]:\n            a.pop()\n\n    @staticmethod\n\
-    \    def add(a: list, b: list) -> list:\n        if len(a) < len(b):\n       \
-    \     res = b[::]\n            for i, x in enumerate(a):\n                res[i]\
-    \ += x\n        else:\n            res = a[::]\n            for i, x in enumerate(b):\n\
-    \                res[i] += x\n        return [x % MOD for x in res]\n\n    @staticmethod\n\
-    \    def add_scalar(a: list, k: int) -> list:\n        res = a[:]\n        res[0]\
-    \ = (res[0] + k) % MOD\n        return res\n\n    @classmethod\n    def sub(cls,\
-    \ a: list, b: list) -> list:\n        if len(a) < len(b):\n            res = b[::]\n\
-    \            for i, x in enumerate(a):\n                res[i] -= x\n        \
-    \    res = cls.neg(res)\n        else:\n            res = a[::]\n            for\
-    \ i, x in enumerate(b):\n                res[i] -= x\n        return [x % MOD\
-    \ for x in res]\n\n    @classmethod\n    def sub_scalar(cls, a: list, k: int)\
-    \ -> list:\n        return cls.add_scalar(a, -k)\n\n    @staticmethod\n    def\
-    \ neg(a: list) -> list:\n        return [MOD - x if x else 0 for x in a]\n\n \
-    \   @staticmethod\n    def mul_scalar(a: list, k: int) -> list:\n        return\
-    \ [x * k % MOD for x in a]\n\n    @staticmethod\n    def matmul(a: list, b: list)\
-    \ -> list:\n        \"not verified\"\n        return [x * b[i] % MOD for i, x\
-    \ in enumerate(a)]\n\n    @classmethod\n    def div(cls, a: list, b: list) ->\
-    \ list:\n        if len(a) < len(b):\n            return []\n        n = len(a)\
-    \ - len(b) + 1\n        cnt = 0\n        if len(b) > 64:\n            return multiply(a[::-1][:n],\
-    \ cls.inv(b[::-1], n))[:n][::-1]\n        f, g = a[::], b[::]\n        while g\
-    \ and not g[-1]:\n            g.pop()\n            cnt += 1\n        coef = pow(g[-1],\
-    \ MOD - 2, MOD)\n        g = cls.mul_scalar(g, coef)\n        deg = len(f) - len(g)\
-    \ + 1\n        gs = len(g)\n        quo = [0] * deg\n        for i in range(deg)[::-1]:\n\
-    \            quo[i] = x = f[i + gs - 1] % MOD\n            for j, y in enumerate(g):\n\
-    \                f[i + j] -= x * y\n        return cls.mul_scalar(quo, coef) +\
-    \ [0] * cnt\n\n    @classmethod\n    def mod(cls, a: list, b: list) -> list:\n\
-    \        res = cls.sub(a, multiply(cls.div(a, b), b))\n        while res and not\
-    \ res[-1]:\n            res.pop()\n        return res\n\n    @classmethod\n  \
-    \  def divmod(cls, a: list, b: list):\n        q = cls.div(a, b)\n        r =\
-    \ cls.sub(a, multiply(q, b))\n        while r and not r[-1]:\n            r.pop()\n\
-    \        return q, r\n\n    @staticmethod\n    def mod_sqrt(a: int, p: int):\n\
-    \        \"x s.t. x**2 == a (mod p) if exist else -1\"\n        if a < 2:\n  \
-    \          return a\n        if pow(a, (p - 1) >> 1, p) != 1:\n            return\
-    \ -1\n        b = 1\n        while pow(b, (p - 1) >> 1, p) == 1:\n           \
-    \ b += 1\n        m = p - 1\n        e = 0\n        while not m & 1:\n       \
-    \     m >>= 1\n            e += 1\n        x = pow(a, (m - 1) >> 1, p)\n     \
-    \   y = (a * x % p) * x % p\n        x = a * x % p\n        z = pow(b, m, p)\n\
-    \        while y != 1:\n            j = 0\n            t = y\n            while\
-    \ t != 1:\n                j += 1\n                t = t * t % p\n           \
-    \ z = pow(z, 1 << (e - j - 1), p)\n            x = x * z % p\n            z =\
-    \ z * z % p\n            y = y * z % p\n            e = j\n        return x\n\n\
-    \    @classmethod\n    def sqrt(cls, a: list, deg=-1) -> list:\n        if deg\
-    \ == -1:\n            deg = len(a)\n        if len(a) == 0:\n            return\
-    \ [0] * deg\n        if a[0] == 0:\n            for i in range(1, len(a)):\n \
-    \               if a[i] != 0:\n                    if i & 1:\n               \
-    \         return []\n                    if deg - i // 2 <= 0:\n             \
-    \           break\n                    ret = cls.sqrt(a[i:], deg - i // 2)\n \
-    \                   if not ret:\n                        return []\n         \
-    \           ret[:0] = [0] * (i >> 1)\n                    if len(ret) < deg:\n\
-    \                        ret[len(ret) :] = [0] * (deg - len(ret))\n          \
-    \          return ret\n            return [0] * deg\n        sqr = cls.mod_sqrt(a[0],\
-    \ MOD)\n        if sqr == -1:\n            return []\n        ret = [sqr]\n  \
-    \      inv2 = 499122177\n        i = 1\n        while i < deg:\n            i\
-    \ <<= 1\n            ret = cls.mul_scalar(cls.add(ret, multiply(a[:i], cls.inv(ret,\
-    \ i))), inv2)\n        return ret[:deg]\n\n    @staticmethod\n    def eval(a:\
-    \ list, x: int) -> int:\n        r = 0\n        w = 1\n        for v in a:\n \
-    \           r += w * v % MOD\n            w = w * x % MOD\n        return r %\
-    \ MOD\n\n    @staticmethod\n    def inv(a: list, deg: int = -1) -> list:\n   \
-    \     # assert(self[0] != 0)\n        if deg == -1:\n            deg = len(a)\n\
-    \        res = [0] * deg\n        res[0] = pow(a[0], MOD - 2, MOD)\n        d\
-    \ = 1\n        while d < deg:\n            f = [0] * (d << 1)\n            tmp\
-    \ = min(len(a), d << 1)\n            f[:tmp] = a[:tmp]\n            g = [0] *\
-    \ (d << 1)\n            g[:d] = res[:d]\n            ntt(f)\n            ntt(g)\n\
-    \            for i, x in enumerate(g):\n                f[i] = f[i] * x % MOD\n\
-    \            intt(f)\n            f[:d] = [0] * d\n            ntt(f)\n      \
-    \      for i, x in enumerate(g):\n                f[i] = f[i] * x % MOD\n    \
-    \        intt(f)\n            for j in range(d, min(d << 1, deg)):\n         \
-    \       if f[j]:\n                    res[j] = MOD - f[j]\n                else:\n\
-    \                    res[j] = 0\n            d <<= 1\n        return res\n\n \
-    \   @classmethod\n    def pow(cls, a: list, k: int, deg=-1) -> list:\n       \
-    \ n = len(a)\n        if deg == -1:\n            deg = n\n        if k == 0:\n\
-    \            if not deg:\n                return []\n            ret = [0] * deg\n\
-    \            ret[0] = 1\n            return ret\n        for i, x in enumerate(a):\n\
-    \            if x:\n                rev = pow(x, MOD - 2, MOD)\n             \
-    \   ret = cls.mul_scalar(\n                    cls.exp(\n                    \
-    \    cls.mul_scalar(cls.log(cls.mul_scalar(a, rev)[i:], deg), k), deg\n      \
-    \              ),\n                    pow(x, k, MOD),\n                )\n  \
-    \              ret[:0] = [0] * (i * k)\n                if len(ret) < deg:\n \
-    \                   ret[len(ret) :] = [0] * (deg - len(ret))\n               \
-    \     return ret\n                return ret[:deg]\n            if (i + 1) * k\
-    \ >= deg:\n                break\n        return [0] * deg\n\n    @staticmethod\n\
+  code: "from convolution.convolution import *\n\n\nclass FPS:\n    @staticmethod\n\
+    \    def shrink(a: list) -> None:\n        while a and not a[-1]:\n          \
+    \  a.pop()\n\n    @staticmethod\n    def add(a: list, b: list) -> list:\n    \
+    \    if len(a) < len(b):\n            res = b[::]\n            for i, x in enumerate(a):\n\
+    \                res[i] += x\n        else:\n            res = a[::]\n       \
+    \     for i, x in enumerate(b):\n                res[i] += x\n        return [x\
+    \ % MOD for x in res]\n\n    @staticmethod\n    def add_scalar(a: list, k: int)\
+    \ -> list:\n        res = a[:]\n        res[0] = (res[0] + k) % MOD\n        return\
+    \ res\n\n    @classmethod\n    def sub(cls, a: list, b: list) -> list:\n     \
+    \   if len(a) < len(b):\n            res = b[::]\n            for i, x in enumerate(a):\n\
+    \                res[i] -= x\n            res = cls.neg(res)\n        else:\n\
+    \            res = a[::]\n            for i, x in enumerate(b):\n            \
+    \    res[i] -= x\n        return [x % MOD for x in res]\n\n    @classmethod\n\
+    \    def sub_scalar(cls, a: list, k: int) -> list:\n        return cls.add_scalar(a,\
+    \ -k)\n\n    @staticmethod\n    def neg(a: list) -> list:\n        return [MOD\
+    \ - x if x else 0 for x in a]\n\n    @staticmethod\n    def mul_scalar(a: list,\
+    \ k: int) -> list:\n        return [x * k % MOD for x in a]\n\n    @staticmethod\n\
+    \    def matmul(a: list, b: list) -> list:\n        \"not verified\"\n       \
+    \ return [x * b[i] % MOD for i, x in enumerate(a)]\n\n    @classmethod\n    def\
+    \ div(cls, a: list, b: list) -> list:\n        if len(a) < len(b):\n         \
+    \   return []\n        n = len(a) - len(b) + 1\n        cnt = 0\n        if len(b)\
+    \ > 64:\n            return multiply(a[::-1][:n], cls.inv(b[::-1], n))[:n][::-1]\n\
+    \        f, g = a[::], b[::]\n        while g and not g[-1]:\n            g.pop()\n\
+    \            cnt += 1\n        coef = pow(g[-1], MOD - 2, MOD)\n        g = cls.mul_scalar(g,\
+    \ coef)\n        deg = len(f) - len(g) + 1\n        gs = len(g)\n        quo =\
+    \ [0] * deg\n        for i in range(deg)[::-1]:\n            quo[i] = x = f[i\
+    \ + gs - 1] % MOD\n            for j, y in enumerate(g):\n                f[i\
+    \ + j] -= x * y\n        return cls.mul_scalar(quo, coef) + [0] * cnt\n\n    @classmethod\n\
+    \    def mod(cls, a: list, b: list) -> list:\n        res = cls.sub(a, multiply(cls.div(a,\
+    \ b), b))\n        while res and not res[-1]:\n            res.pop()\n       \
+    \ return res\n\n    @classmethod\n    def divmod(cls, a: list, b: list):\n   \
+    \     q = cls.div(a, b)\n        r = cls.sub(a, multiply(q, b))\n        while\
+    \ r and not r[-1]:\n            r.pop()\n        return q, r\n\n    @staticmethod\n\
+    \    def mod_sqrt(a: int, p: int):\n        \"x s.t. x**2 == a (mod p) if exist\
+    \ else -1\"\n        if a < 2:\n            return a\n        if pow(a, (p - 1)\
+    \ >> 1, p) != 1:\n            return -1\n        b = 1\n        while pow(b, (p\
+    \ - 1) >> 1, p) == 1:\n            b += 1\n        m = p - 1\n        e = 0\n\
+    \        while not m & 1:\n            m >>= 1\n            e += 1\n        x\
+    \ = pow(a, (m - 1) >> 1, p)\n        y = (a * x % p) * x % p\n        x = a *\
+    \ x % p\n        z = pow(b, m, p)\n        while y != 1:\n            j = 0\n\
+    \            t = y\n            while t != 1:\n                j += 1\n      \
+    \          t = t * t % p\n            z = pow(z, 1 << (e - j - 1), p)\n      \
+    \      x = x * z % p\n            z = z * z % p\n            y = y * z % p\n \
+    \           e = j\n        return x\n\n    @classmethod\n    def sqrt(cls, a:\
+    \ list, deg=-1) -> list:\n        if deg == -1:\n            deg = len(a)\n  \
+    \      if len(a) == 0:\n            return [0] * deg\n        if a[0] == 0:\n\
+    \            for i in range(1, len(a)):\n                if a[i] != 0:\n     \
+    \               if i & 1:\n                        return []\n               \
+    \     if deg - (i >> 1) <= 0:\n                        break\n               \
+    \     ret = cls.sqrt(a[i:], deg - (i >> 1))\n                    if not ret:\n\
+    \                        return []\n                    ret[:0] = [0] * (i >>\
+    \ 1)\n                    if len(ret) < deg:\n                        ret[len(ret)\
+    \ :] = [0] * (deg - len(ret))\n                    return ret\n            return\
+    \ [0] * deg\n        sqr = cls.mod_sqrt(a[0], MOD)\n        if sqr == -1:\n  \
+    \          return []\n        ret = [sqr]\n        inv2 = 499122177\n        i\
+    \ = 1\n        while i < deg:\n            i <<= 1\n            ret = cls.mul_scalar(cls.add(ret,\
+    \ multiply(a[:i], cls.inv(ret, i))), inv2)\n        return ret[:deg]\n\n    @staticmethod\n\
+    \    def eval(a: list, x: int) -> int:\n        r = 0\n        w = 1\n       \
+    \ for v in a:\n            r += w * v % MOD\n            w = w * x % MOD\n   \
+    \     return r % MOD\n\n    @staticmethod\n    def inv(a: list, deg: int = -1)\
+    \ -> list:\n        # assert(self[0] != 0)\n        if deg == -1:\n          \
+    \  deg = len(a)\n        res = [0] * deg\n        res[0] = pow(a[0], MOD - 2,\
+    \ MOD)\n        d = 1\n        while d < deg:\n            f = [0] * (d << 1)\n\
+    \            tmp = min(len(a), d << 1)\n            f[:tmp] = a[:tmp]\n      \
+    \      g = [0] * (d << 1)\n            g[:d] = res[:d]\n            ntt(f)\n \
+    \           ntt(g)\n            for i, x in enumerate(g):\n                f[i]\
+    \ = f[i] * x % MOD\n            intt(f)\n            f[:d] = [0] * d\n       \
+    \     ntt(f)\n            for i, x in enumerate(g):\n                f[i] = f[i]\
+    \ * x % MOD\n            intt(f)\n            for j in range(d, min(d << 1, deg)):\n\
+    \                if f[j]:\n                    res[j] = MOD - f[j]\n         \
+    \       else:\n                    res[j] = 0\n            d <<= 1\n        return\
+    \ res\n\n    @classmethod\n    def pow(cls, a: list, k: int, deg=-1) -> list:\n\
+    \        n = len(a)\n        if deg == -1:\n            deg = n\n        if k\
+    \ == 0:\n            if not deg:\n                return []\n            ret =\
+    \ [0] * deg\n            ret[0] = 1\n            return ret\n        for i, x\
+    \ in enumerate(a):\n            if x:\n                rev = pow(x, MOD - 2, MOD)\n\
+    \                ret = cls.mul_scalar(\n                    cls.exp(\n       \
+    \                 cls.mul_scalar(cls.log(cls.mul_scalar(a, rev)[i:], deg), k),\
+    \ deg\n                    ),\n                    pow(x, k, MOD),\n         \
+    \       )\n                ret[:0] = [0] * (i * k)\n                if len(ret)\
+    \ < deg:\n                    ret[len(ret) :] = [0] * (deg - len(ret))\n     \
+    \               return ret\n                return ret[:deg]\n            if (i\
+    \ + 1) * k >= deg:\n                break\n        return [0] * deg\n\n    @staticmethod\n\
     \    def exp(a: list, deg=-1) -> list:\n        # assert(not self or self[0] ==\
     \ 0)\n        if deg == -1:\n            deg = len(a)\n        inv = [0, 1]\n\n\
     \        def inplace_integral(F: list) -> list:\n            n = len(F)\n    \
@@ -198,11 +201,12 @@ data:
     \ 0]\n            for j in range(length):\n                tmp[j] = tmp[j] * g[j]\
     \ % MOD\n            intt(tmp)\n            calc(i << 1 | 1, m, r, tmp[length\
     \ >> 1 :])\n\n        calc(1, 0, N, root)\n        return ans\n"
-  dependsOn: []
+  dependsOn:
+  - convolution/convolution.py
   isVerificationFile: false
   path: convolution/formal_power_series.py
   requiredBy: []
-  timestamp: '2023-09-16 18:27:05+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: convolution/formal_power_series.py

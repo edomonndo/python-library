@@ -26,13 +26,13 @@ data:
     \        if n <= 0 or r < 0:\n            return 0\n        return self.nCr(n\
     \ + r - 1, r)\n\n    def pairCombination(self, n: int) -> int:\n        \"\"\"\
     combination of paris for n\"\"\"\n        if n % 2:\n            return 1\n  \
-    \      return self.fact[n] * self.inv_fact[n // 2] // (2 ^ (n // 2))\n\n    def\
+    \      return self.fact[n] * self.inv_fact[n >> 1] // (2 ^ (n >> 1))\n\n    def\
     \ move(self, r: int, c: int) -> int:\n        return self.nCr(r + c, r)\n"
   dependsOn: []
   isVerificationFile: false
   path: math_/combination_mod.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: math_/combination_mod.py

@@ -23,16 +23,16 @@ data:
     \ S) -> S:\n    if l < r:\n        return l\n    return r\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+  path: data_structure/segtree/monoids/RangeMinIndex.py
   requiredBy: []
-  timestamp: '2024-06-11 17:27:30+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/875_range_mindex_query.test.py
-documentation_of: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+documentation_of: data_structure/segtree/monoids/RangeMinIndex.py
 layout: document
 redirect_from:
-- /library/data_structure/segtree/monoids/PointSwapRangeMinIndex.py
-- /library/data_structure/segtree/monoids/PointSwapRangeMinIndex.py.html
-title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+- /library/data_structure/segtree/monoids/RangeMinIndex.py
+- /library/data_structure/segtree/monoids/RangeMinIndex.py.html
+title: data_structure/segtree/monoids/RangeMinIndex.py
 ---

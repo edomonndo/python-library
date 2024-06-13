@@ -16,7 +16,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc032/tasks/abc032_d\n\
     \n\ndef solve1(n: int, w: int, vs: list[int], ws: list[int]) -> int:\n    \"\"\
-    \"\u534A\u5206\u524D\u5217\u6319 n <= 30\"\"\"\n    n1 = n // 2\n    n2 = n -\
+    \"\u534A\u5206\u524D\u5217\u6319 n <= 30\"\"\"\n    n1 = n >> 1\n    n2 = n -\
     \ n1\n\n    cands1 = set()\n    for bit in range(1 << n1):\n        vw = [0, 0]\n\
     \        for i in range(n1):\n            if (bit >> i) & 1:\n               \
     \ vw[0] += vs[i]\n                vw[1] += ws[i]\n            if vw[1] <= w:\n\
@@ -45,7 +45,7 @@ data:
   isVerificationFile: false
   path: dynamic_programming/knapsack.py
   requiredBy: []
-  timestamp: '2024-05-20 11:42:23+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: dynamic_programming/knapsack.py

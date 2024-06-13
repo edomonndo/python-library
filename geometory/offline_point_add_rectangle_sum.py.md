@@ -27,7 +27,7 @@ data:
     \ + 1)\n\n    def solve(self) -> list[int]:\n        res = [0] * self.q_cnt[-1]\n\
     \        stack = [(0, len(self.qs))]\n        while stack:\n            l, r =\
     \ stack.pop()\n            if r - l < 2:\n                continue\n         \
-    \   m = (l + r) // 2\n            stack += [(l, m), (m, r)]\n\n            l_point\
+    \   m = (l + r) >> 1\n            stack += [(l, m), (m, r)]\n\n            l_point\
     \ = (m - l) - (self.q_cnt[m] - self.q_cnt[l])\n            r_query = self.q_cnt[r]\
     \ - self.q_cnt[m]\n\n            # \u72ED\u3044\u5834\u5408\u306F\u611A\u76F4\n\
     \            if l_point * r_query < 200:\n                tmp = [self.qs[i] for\
@@ -61,7 +61,7 @@ data:
   isVerificationFile: false
   path: geometory/offline_point_add_rectangle_sum.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_add_rectangle_sum.test.py

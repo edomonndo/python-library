@@ -26,8 +26,8 @@ data:
     \      u, v, w, x = qu\n        dc.delete_edge(u, v)\n        dc.add_edge(w, x)\n\
     \    elif t == 1:\n        dc.add_relax()\n        dc.add_relax()\n    else:\n\
     \        v, p = qu\n        dc.delete_edge(v, p)\n        dc.add_edge(v, p)\n\n\
-    \ndef out(k):\n    if k == 0:\n        return\n    k -= 1\n    t, *qu = qs[k //\
-    \ 2]\n    if t == 0 or k & 1:\n        return\n    if t == 1:\n        v, x =\
+    \ndef out(k):\n    if k == 0:\n        return\n    k -= 1\n    t, *qu = qs[k >>\
+    \ 1]\n    if t == 0 or k & 1:\n        return\n    if t == 1:\n        v, x =\
     \ qu\n        dc.add_value(v, x)\n    else:\n        v, _ = qu\n        print(dc.group_sum(v))\n\
     \n\ndc.run(out)\n"
   dependsOn:
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_add_subtree_sum.test.py

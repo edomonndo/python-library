@@ -196,12 +196,12 @@ data:
     \    return res[::-1]\n\n    def divide_by_segment(self, seg: Line) -> int:\n\
     \        lines = [Line(self.arr[i], self.arr[(i + 1) % self.n]) for i in range(self.n)]\n\
     \        cnt = sum(1 for line in lines if line.intersect(seg))\n        return\
-    \ cnt // 2 + 1\n"
+    \ (cnt >> 1) + 1\n"
   dependsOn: []
   isVerificationFile: false
   path: geometory/geometory.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl_2_d_distance.test.py

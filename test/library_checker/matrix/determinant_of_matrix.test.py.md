@@ -36,15 +36,15 @@ data:
   dependsOn:
   - matrix/matrix.py
   isVerificationFile: true
-  path: test/library_checker/matrix/matrix_det.test.py
+  path: test/library_checker/matrix/determinant_of_matrix.test.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/matrix/matrix_det.test.py
+documentation_of: test/library_checker/matrix/determinant_of_matrix.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/matrix/matrix_det.test.py
-- /verify/test/library_checker/matrix/matrix_det.test.py.html
-title: test/library_checker/matrix/matrix_det.test.py
+- /verify/test/library_checker/matrix/determinant_of_matrix.test.py
+- /verify/test/library_checker/matrix/determinant_of_matrix.test.py.html
+title: test/library_checker/matrix/determinant_of_matrix.test.py
 ---

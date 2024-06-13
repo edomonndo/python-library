@@ -28,23 +28,23 @@ data:
     \n    def popleft(self):\n        if not self.top:\n            stack = []\n \
     \           while self.bottom:\n                x = self._popbottom()\n      \
     \          stack.append(x)\n            n = len(stack)\n            stack = stack[::-1]\n\
-    \            stack1 = stack[: (n + 1) // 2]\n            stack2 = stack[(n + 1)\
-    \ // 2 :][::-1]\n            for _ in range((n + 1) // 2):\n                self._pushtop(stack1.pop())\n\
-    \            for _ in range(n // 2):\n                self._pushbottom(stack2.pop())\n\
+    \            stack1 = stack[: (n + 1) >> 1]\n            stack2 = stack[(n + 1)\
+    \ >> 1 :][::-1]\n            for _ in range((n + 1) >> 1):\n                self._pushtop(stack1.pop())\n\
+    \            for _ in range(n >> 1):\n                self._pushbottom(stack2.pop())\n\
     \        if not self.top:\n            return self.e\n        else:\n        \
     \    return self._poptop()\n\n    def pop(self):\n        if not self.bottom:\n\
     \            stack = []\n            while self.top:\n                x = self._poptop()\n\
     \                stack.append(x)\n            n = len(stack)\n            stack1\
-    \ = stack[: n // 2]\n            stack2 = stack[n // 2 :][::-1]\n            for\
-    \ _ in range((n + 1) // 2):\n                self._pushbottom(stack2.pop())\n\
-    \            for _ in range(n // 2):\n                self._pushtop(stack1.pop())\n\
+    \ = stack[: n >> 1]\n            stack2 = stack[n >> 1 :][::-1]\n            for\
+    \ _ in range((n + 1) >> 1):\n                self._pushbottom(stack2.pop())\n\
+    \            for _ in range(n >> 1):\n                self._pushtop(stack1.pop())\n\
     \        if not self.bottom:\n            return self.e\n        else:\n     \
     \       return self._popbottom()\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/basic/FoldableDeque.py
   requiredBy: []
-  timestamp: '2024-05-21 07:51:26+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/deque_operate_all_composite.test.py

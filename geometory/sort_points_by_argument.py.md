@@ -20,12 +20,12 @@ data:
     \   n = len(arr)\n        a = [arr, arr[:]]\n        # \u975E\u518D\u5E30DFS\n\
     \        stack = [(0, n, 1, 0)]  # \u533A\u9593[l,r),DFS\u306E\u30D5\u30E9\u30B0\
     f,\u5BFE\u8C61\u306E\u30EA\u30B9\u30C8\n        while stack:\n            l, r,\
-    \ f, g = stack.pop()\n            m = (l + r) // 2\n            if f:\n      \
+    \ f, g = stack.pop()\n            m = (l + r) >> 1\n            if f:\n      \
     \          stack.append((l, r, 0, g))\n                if m - l > 1:\n       \
     \             stack.append((l, m, 1, g ^ 1))\n                if r - m > 1:\n\
     \                    stack.append((m, r, 1, g ^ 1))\n            else:\n     \
     \           i, j, p, q = l, m, m - 1, r - 1\n                a1 = a[g]\n     \
-    \           a2 = a[g ^ 1]\n                for k in range((r - l) // 2):\n   \
+    \           a2 = a[g ^ 1]\n                for k in range((r - l) >> 1):\n   \
     \                 x, y = a2[i]\n                    s, t = a2[j]\n           \
     \         if s * y - t * x > 0:\n                        a1[l + k] = a2[j]\n \
     \                       j += 1\n                    else:\n                  \
@@ -46,7 +46,7 @@ data:
   isVerificationFile: false
   path: geometory/sort_points_by_argument.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/geometory/sort_points_by_argument.test.py

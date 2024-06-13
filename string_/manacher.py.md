@@ -26,15 +26,15 @@ data:
     \u306Ei\u3092\u4E2D\u5FC3\u3068\u3059\u308B\u6700\u9577\u56DE\u5206\u306E\u534A\
     \u5F84\n    # p[2*(i+1)+1]//2: \u3082\u3068\u306E\u6587\u5B57\u5217\u306Ei,i+1\u3092\
     \u4E2D\u5FC3\u3068\u3059\u308B\u6700\u9577\u56DE\u5206\u306E\u534A\u5F84\n   \
-    \ return [p[2 * (i + 1)] // 2 for i in range(n)], [\n        p[2 * (i + 1) + 1]\
-    \ // 2 for i in range(n)\n    ]\n    # \u6700\u9577\u56DE\u5206\u306E[s,t)\u304C\
+    \ return [p[2 * (i + 1)] >> 1 for i in range(n)], [\n        p[2 * (i + 1) + 1]\
+    \ >> 1 for i in range(n)\n    ]\n    # \u6700\u9577\u56DE\u5206\u306E[s,t)\u304C\
     \u6B32\u3057\u3044\u5834\u5408\n    # k, i = max((p[i], i) for i in range(1, m\
     \ - 1))\n    # return (i - k) // 2, (i + k) // 2\n"
   dependsOn: []
   isVerificationFile: false
   path: string_/manacher.py
   requiredBy: []
-  timestamp: '2023-12-04 22:53:06+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/string/enumerate_palindroms.test.py

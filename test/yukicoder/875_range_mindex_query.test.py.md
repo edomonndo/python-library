@@ -5,8 +5,8 @@ data:
     path: atcoder/segtree.py
     title: atcoder/segtree.py
   - icon: ':heavy_check_mark:'
-    path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
-    title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+    path: data_structure/segtree/monoids/RangeMinIndex.py
+    title: data_structure/segtree/monoids/RangeMinIndex.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -21,7 +21,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://yukicoder.me/problems/no/875\n\n\n\
-    from data_structure.segtree.monoids.PointSwapRangeMinIndex import *\nfrom atcoder.segtree\
+    from data_structure.segtree.monoids.RangeMinIndex import *\nfrom atcoder.segtree\
     \ import SegTree\n\nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\n\
     seg = SegTree(op, S(), [S(A[i], i + 1) for i in range(n)])\nfor _ in range(q):\n\
     \    t, l, r = map(int, input().split())\n    if t == 1:\n        l -= 1\n   \
@@ -30,12 +30,12 @@ data:
     \ S(rv, li))\n        seg.set(r, S(lv, ri))\n    else:\n        l -= 1\n     \
     \   print(seg.prod(l, r).index)\n"
   dependsOn:
-  - data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+  - data_structure/segtree/monoids/RangeMinIndex.py
   - atcoder/segtree.py
   isVerificationFile: true
   path: test/yukicoder/875_range_mindex_query.test.py
   requiredBy: []
-  timestamp: '2024-06-11 17:27:30+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yukicoder/875_range_mindex_query.test.py

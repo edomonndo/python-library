@@ -18,7 +18,7 @@ data:
     \        v, p = stack.pop()\n        if v >= 0:\n            for u in adj[v]:\n\
     \                if u != p:\n                    stack += [(~u, v), (u, v)]\n\
     \        elif p != -1:\n            size[p] += size[~v]\n\n    half = size[root]\
-    \ // 2\n    stack = [(root, -1)]\n    res = []\n    while stack:\n        v, p\
+    \ >> 1\n    stack = [(root, -1)]\n    res = []\n    while stack:\n        v, p\
     \ = stack.pop()\n        if v >= 0:\n            for u in adj[v]:\n          \
     \      if u != p:\n                    stack += [(~u, v), (u, v)]\n        else:\n\
     \            v = ~v\n            if any(u != p and size[u] > half for u in adj[v]):\n\
@@ -28,7 +28,7 @@ data:
   isVerificationFile: false
   path: tree/centroids.py
   requiredBy: []
-  timestamp: '2024-04-07 01:04:34+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: tree/centroids.py

@@ -17,7 +17,7 @@ data:
     \       self.max_size = max_size\n\n        if arr:\n            n = len(arr)\n\
     \            self.size = n\n            self.heapify()\n\n    def heapify(self):\n\
     \        \"\"\"Transform list into a heap, in-place, in O(len(x)) time.\"\"\"\n\
-    \        for i in reversed(range(self.size // 2)):\n            self._siftup(i)\n\
+    \        for i in reversed(range(self.size >> 1)):\n            self._siftup(i)\n\
     \n    def push(self, item):\n        \"\"\"Push item onto heap, maintaining the\
     \ heap invariant.\"\"\"\n        if self.size < self.max_size:\n            self.heap.append(item)\n\
     \            self.size += 1\n            self._siftdown(0, self.size - 1)\n  \
@@ -54,7 +54,7 @@ data:
   isVerificationFile: false
   path: data_structure/basic/FixedSizeHeapQue.py
   requiredBy: []
-  timestamp: '2024-05-21 07:51:26+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/basic/FixedSizeHeapQue.py

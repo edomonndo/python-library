@@ -2,50 +2,38 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: string_/suffix_array.py
-    title: Suffix array
+    path: matrix/matrix.py
+    title: "\u884C\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/number_of_substrings
+    PROBLEM: https://judge.yosupo.jp/problem/pow_of_matrix
     links:
-    - https://judge.yosupo.jp/problem/number_of_substrings
+    - https://judge.yosupo.jp/problem/pow_of_matrix
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/number_of_substrings
-
-
-    from string_.suffix_array import suffix_array, lcp_array
-
-
-    S = "_" + input()
-
-    n = len(S)
-
-    sa = suffix_array(S)
-
-    lcp = lcp_array(S, sa)
-
-    print((n * (n - 1) >> 1) - sum(lcp))
-
-    '
+  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/pow_of_matrix\n\
+    \nfrom matrix.matrix import Matrix\n\nn, k = map(int, input().split())\nA = [[int(x)\
+    \ for x in input().split()] for _ in range(n)]\nM = Matrix(n, n, A)\nM = M**k\n\
+    for i in range(n):\n    tmp = [M[i][j] for j in range(n)]\n    print(\" \".join(map(str,\
+    \ tmp)))\n"
   dependsOn:
-  - string_/suffix_array.py
+  - matrix/matrix.py
   isVerificationFile: true
-  path: test/library_checker/string/number_of_substrings.test.py
+  path: test/library_checker/matrix/pow_of_matrix.test.py
   requiredBy: []
   timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/string/number_of_substrings.test.py
+documentation_of: test/library_checker/matrix/pow_of_matrix.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/string/number_of_substrings.test.py
-- /verify/test/library_checker/string/number_of_substrings.test.py.html
-title: test/library_checker/string/number_of_substrings.test.py
+- /verify/test/library_checker/matrix/pow_of_matrix.test.py
+- /verify/test/library_checker/matrix/pow_of_matrix.test.py.html
+title: test/library_checker/matrix/pow_of_matrix.test.py
 ---

@@ -34,7 +34,7 @@ data:
     \ = cur\n            cur.next = self.head\n            self.head = cur\n     \
     \   self.length += 1\n\n    def __getitem__(self, index) -> Node:\n        if\
     \ (index < 0) or (index > self.length):\n            raise IndexError\n      \
-    \  halfOfLength = self.length // 2\n        if index <= halfOfLength:\n      \
+    \  halfOfLength = self.length >> 1\n        if index <= halfOfLength:\n      \
     \      cnt = 0\n            cur = self.head\n            while cnt != index:\n\
     \                cur = cur.next\n                cnt = cnt + 1\n            return\
     \ cur\n        elif index > halfOfLength:\n            cnt = self.length - 1\n\
@@ -64,7 +64,7 @@ data:
   isVerificationFile: false
   path: data_structure/basic/doubly_linked_list.py
   requiredBy: []
-  timestamp: '2024-05-21 07:51:26+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/basic/doubly_linked_list.py

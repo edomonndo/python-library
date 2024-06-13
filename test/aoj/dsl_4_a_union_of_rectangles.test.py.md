@@ -26,7 +26,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl_4_a_union_of_rectangles.test.py
   requiredBy: []
-  timestamp: '2024-05-01 08:13:10+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl_4_a_union_of_rectangles.test.py

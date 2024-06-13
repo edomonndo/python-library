@@ -22,10 +22,10 @@ data:
     \ max_value):\n        self.cnt = [0] * (max_value + 1)\n        self.res = 0\n\
     \n    def add(self, x):\n        \"\u533A\u9593\u306E\u7AEF\u306B x \u3092\u8FFD\
     \u52A0\u3059\u308B\u3068\u304D\u306E\u51E6\u7406\"\n        cnt = self.cnt[x]\n\
-    \        self.res += cnt * (cnt - 1) // 2\n        self.cnt[x] += 1\n\n    def\
+    \        self.res += cnt * (cnt - 1) >> 1\n        self.cnt[x] += 1\n\n    def\
     \ delete(self, x):\n        \"\u533A\u9593\u306E\u7AEF\u304B\u3089 x \u3092\u524A\
     \u9664\u3059\u308B\u3068\u304D\u306E\u51E6\u7406\"\n        self.cnt[x] -= 1\n\
-    \        cnt = self.cnt[x]\n        self.res -= cnt * (cnt - 1) // 2\n\n\nN, Q\
+    \        cnt = self.cnt[x]\n        self.res -= cnt * (cnt - 1) >> 1\n\n\nN, Q\
     \ = map(int, input().split())\nA = [int(x) for x in input().split()]\nstate =\
     \ MoState(max(A))\nmo = Mo(A, state)\nfor _ in range(Q):\n    l, r = map(int,\
     \ input().split())\n    mo.add_query(l - 1, r)\n\nans = mo.calc()\nprint(*ans,\
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc293g.test.py
   requiredBy: []
-  timestamp: '2024-03-01 13:03:21+09:00'
+  timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc293g.test.py

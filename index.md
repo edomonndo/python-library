@@ -229,10 +229,16 @@ data:
   - name: data_structure/segtree/monoids
     pages:
     - icon: ':heavy_check_mark:'
-      path: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
-      title: data_structure/segtree/monoids/PointSwapRangeMinIndex.py
+      path: data_structure/segtree/monoids/RangeMinIndex.py
+      title: data_structure/segtree/monoids/RangeMinIndex.py
   - name: data_structure/segtree/monoids_action
     pages:
+    - icon: ':warning:'
+      path: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+      title: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+    - icon: ':warning:'
+      path: data_structure/segtree/monoids_action/RangeAddRangeSum.py
+      title: data_structure/segtree/monoids_action/RangeAddRangeSum.py
     - icon: ':warning:'
       path: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
       title: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
@@ -312,6 +318,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/general_matching.py
       title: "\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+    - icon: ':warning:'
+      path: graph/general_weighted_matching.py
+      title: graph/general_weighted_matching.py
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
@@ -988,17 +997,26 @@ data:
   - name: test/library_checker/matrix
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/matrix/matrix_det.test.py
-      title: test/library_checker/matrix/matrix_det.test.py
+      path: test/library_checker/matrix/determinant_of_matrix.test.py
+      title: test/library_checker/matrix/determinant_of_matrix.test.py
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
-      title: test/library_checker/matrix/matrix_det_arbitrary_mod.test.py
+      path: test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
+      title: test/library_checker/matrix/determinant_of_matrix_arbitrary_mod.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_inverse.test.py
       title: test/library_checker/matrix/matrix_inverse.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/matrix/matrix_product.test.py
       title: test/library_checker/matrix/matrix_product.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/matrix/pow_of_matrix.test.py
+      title: test/library_checker/matrix/pow_of_matrix.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/matrix/rank_of_matrix.test.py
+      title: test/library_checker/matrix/rank_of_matrix.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/matrix/system_of_linear_equations.test.py
+      title: test/library_checker/matrix/system_of_linear_equations.test.py
   - name: test/library_checker/sample
     pages:
     - icon: ':heavy_check_mark:'
