@@ -40,11 +40,11 @@ class FoldableDeque:
                 stack.append(x)
             n = len(stack)
             stack = stack[::-1]
-            stack1 = stack[: (n + 1) // 2]
-            stack2 = stack[(n + 1) // 2 :][::-1]
-            for _ in range((n + 1) // 2):
+            stack1 = stack[: (n + 1) >> 1]
+            stack2 = stack[(n + 1) >> 1 :][::-1]
+            for _ in range((n + 1) >> 1):
                 self._pushtop(stack1.pop())
-            for _ in range(n // 2):
+            for _ in range(n >> 1):
                 self._pushbottom(stack2.pop())
         if not self.top:
             return self.e
@@ -58,11 +58,11 @@ class FoldableDeque:
                 x = self._poptop()
                 stack.append(x)
             n = len(stack)
-            stack1 = stack[: n // 2]
-            stack2 = stack[n // 2 :][::-1]
-            for _ in range((n + 1) // 2):
+            stack1 = stack[: n >> 1]
+            stack2 = stack[n >> 1 :][::-1]
+            for _ in range((n + 1) >> 1):
                 self._pushbottom(stack2.pop())
-            for _ in range(n // 2):
+            for _ in range(n >> 1):
                 self._pushtop(stack1.pop())
         if not self.bottom:
             return self.e

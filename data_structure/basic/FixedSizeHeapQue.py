@@ -11,7 +11,7 @@ class FixedSizeHeapQue:
 
     def heapify(self):
         """Transform list into a heap, in-place, in O(len(x)) time."""
-        for i in reversed(range(self.size // 2)):
+        for i in reversed(range(self.size >> 1)):
             self._siftup(i)
 
     def push(self, item):

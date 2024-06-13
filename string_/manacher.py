@@ -17,8 +17,8 @@ def manacher(s):
     # p[i]: ^#0#1#2...#n-1#$における位置iを中心とする最長回分の半径
     # p[2*(i+1)]//2: もとの文字列のiを中心とする最長回分の半径
     # p[2*(i+1)+1]//2: もとの文字列のi,i+1を中心とする最長回分の半径
-    return [p[2 * (i + 1)] // 2 for i in range(n)], [
-        p[2 * (i + 1) + 1] // 2 for i in range(n)
+    return [p[2 * (i + 1)] >> 1 for i in range(n)], [
+        p[2 * (i + 1) + 1] >> 1 for i in range(n)
     ]
     # 最長回分の[s,t)が欲しい場合
     # k, i = max((p[i], i) for i in range(1, m - 1))

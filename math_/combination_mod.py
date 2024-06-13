@@ -34,7 +34,7 @@ class Comb:
         """combination of paris for n"""
         if n % 2:
             return 1
-        return self.fact[n] * self.inv_fact[n // 2] // (2 ^ (n // 2))
+        return self.fact[n] * self.inv_fact[n >> 1] // (2 ^ (n >> 1))
 
     def move(self, r: int, c: int) -> int:
         return self.nCr(r + c, r)

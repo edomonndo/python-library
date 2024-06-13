@@ -11,31 +11,39 @@ for i in range(200_000):
 
 class S:
     def __init__(self, value=0, size=0):
-        self.value = value
+        self.value = value % MOD
         self.size = size
 
     def __str__(self) -> str:
-        return f"({self.value},{self.size})"
+        return f"S({self.value},{self.size})"
 
     __repr__ = __str__
+
+    def __add__(self, other: "S"):
+        return __class__(
+            self.value * power10[other.size] + other.value,
+            self.size + other.size,
+        )
 
 
 class F:
     def __init__(self, digit=0):
         self.digit = digit
 
+    def __str__(self) -> str:
+        return f"F({self.digit})"
+
+    __repr__ = __str__
+
 
 def op(l: S, r: S) -> S:
-    value = (l.value * power10[r.size] + r.value) % MOD
-    size = l.size + r.size
-    return S(value, size)
+    return l + r
 
 
 def mapping(f: F, x: S) -> S:
     if f.digit == 0:
         return x
-    value = f.digit * one[x.size] % MOD
-    return S(value, x.size)
+    return S(f.digit * one[x.size], x.size)
 
 
 def composition(f: F, g: F) -> F:
@@ -45,7 +53,6 @@ def composition(f: F, g: F) -> F:
 
 
 """
-from data_structure.segtree.monoids_action.RangeStrUpdateRangeIntSum import *
 from atcoder.lazysegtree import LazySegTree
 
 n, q = map(int, input().split())

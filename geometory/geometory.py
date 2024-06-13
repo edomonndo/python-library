@@ -381,4 +381,4 @@ class Polygon:
     def divide_by_segment(self, seg: Line) -> int:
         lines = [Line(self.arr[i], self.arr[(i + 1) % self.n]) for i in range(self.n)]
         cnt = sum(1 for line in lines if line.intersect(seg))
-        return cnt // 2 + 1
+        return (cnt >> 1) + 1

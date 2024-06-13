@@ -12,14 +12,14 @@ class MoState:
     def add(self, x):
         "区間の端に x を追加するときの処理"
         cnt = self.cnt[x]
-        self.res += cnt * (cnt - 1) // 2
+        self.res += cnt * (cnt - 1) >> 1
         self.cnt[x] += 1
 
     def delete(self, x):
         "区間の端から x を削除するときの処理"
         self.cnt[x] -= 1
         cnt = self.cnt[x]
-        self.res -= cnt * (cnt - 1) // 2
+        self.res -= cnt * (cnt - 1) >> 1
 
 
 N, Q = map(int, input().split())

@@ -1,4 +1,4 @@
-from convolution import *
+from convolution.convolution import *
 
 
 class FPS:
@@ -136,9 +136,9 @@ class FPS:
                 if a[i] != 0:
                     if i & 1:
                         return []
-                    if deg - i // 2 <= 0:
+                    if deg - (i >> 1) <= 0:
                         break
-                    ret = cls.sqrt(a[i:], deg - i // 2)
+                    ret = cls.sqrt(a[i:], deg - (i >> 1))
                     if not ret:
                         return []
                     ret[:0] = [0] * (i >> 1)

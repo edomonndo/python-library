@@ -63,7 +63,7 @@ class DoublyLinkedList:
     def __getitem__(self, index) -> Node:
         if (index < 0) or (index > self.length):
             raise IndexError
-        halfOfLength = self.length // 2
+        halfOfLength = self.length >> 1
         if index <= halfOfLength:
             cnt = 0
             cur = self.head

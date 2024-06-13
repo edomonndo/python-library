@@ -22,7 +22,7 @@ class OfflinePointAddRectangleSum:
             l, r = stack.pop()
             if r - l < 2:
                 continue
-            m = (l + r) // 2
+            m = (l + r) >> 1
             stack += [(l, m), (m, r)]
 
             l_point = (m - l) - (self.q_cnt[m] - self.q_cnt[l])

@@ -30,7 +30,7 @@ def out(k):
     if k == 0:
         return
     k -= 1
-    t, *qu = qs[k // 2]
+    t, *qu = qs[k >> 1]
     if t == 0 or k & 1:
         return
     if t == 1:

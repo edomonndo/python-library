@@ -7,7 +7,7 @@ def quick_sort(A: list[int]) -> list[int]:
     n = len(A)
     if n <= 1:
         return A
-    pivot = A[n // 2]
+    pivot = A[n >> 1]
     L, M, R = [], [], []
     for a in A:
         if a < pivot:

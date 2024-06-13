@@ -16,7 +16,7 @@ def centroids(
         elif p != -1:
             size[p] += size[~v]
 
-    half = size[root] // 2
+    half = size[root] >> 1
     stack = [(root, -1)]
     res = []
     while stack:

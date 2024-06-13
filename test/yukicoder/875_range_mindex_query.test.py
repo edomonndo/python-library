@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://yukicoder.me/problems/no/875
 
 
-from data_structure.segtree.monoids.PointSwapRangeMinIndex import *
+from data_structure.segtree.monoids.RangeMinIndex import *
 from atcoder.segtree import SegTree
 
 n, q = map(int, input().split())

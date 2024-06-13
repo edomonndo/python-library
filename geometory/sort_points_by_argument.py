@@ -8,7 +8,7 @@ def sortPointsByArgument(points: list[tuple[int, int]]) -> list[tuple[int, int]]
         stack = [(0, n, 1, 0)]  # 区間[l,r),DFSのフラグf,対象のリスト
         while stack:
             l, r, f, g = stack.pop()
-            m = (l + r) // 2
+            m = (l + r) >> 1
             if f:
                 stack.append((l, r, 0, g))
                 if m - l > 1:
@@ -19,7 +19,7 @@ def sortPointsByArgument(points: list[tuple[int, int]]) -> list[tuple[int, int]]
                 i, j, p, q = l, m, m - 1, r - 1
                 a1 = a[g]
                 a2 = a[g ^ 1]
-                for k in range((r - l) // 2):
+                for k in range((r - l) >> 1):
                     x, y = a2[i]
                     s, t = a2[j]
                     if s * y - t * x > 0:

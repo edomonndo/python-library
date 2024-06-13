@@ -3,7 +3,7 @@
 
 def solve1(n: int, w: int, vs: list[int], ws: list[int]) -> int:
     """半分前列挙 n <= 30"""
-    n1 = n // 2
+    n1 = n >> 1
     n2 = n - n1
 
     cands1 = set()

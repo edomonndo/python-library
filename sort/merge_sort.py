@@ -7,7 +7,7 @@ def merge_sort(A: list[int]) -> list[int]:
     n = len(A)
     if n <= 1:
         return A
-    m = n // 2
+    m = n >> 1
     L = merge_sort(A[:m])
     R = merge_sort(A[m:])
     res = []
