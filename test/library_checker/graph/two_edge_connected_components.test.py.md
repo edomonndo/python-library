@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
   _extendedRequiredBy: []

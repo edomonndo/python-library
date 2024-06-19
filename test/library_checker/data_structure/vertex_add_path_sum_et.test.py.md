@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: tree/euler_tour.py
     title: Euler tour
   _extendedRequiredBy: []

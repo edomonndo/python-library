@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/topological_sort.py
     title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
     IGNORE: ''
     links: []
@@ -27,7 +27,7 @@ data:
   path: test/aoj/grl/grl_4_b_topological_sort.test.py
   requiredBy: []
   timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_4_b_topological_sort.test.py
 layout: document

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/mincost_arborescence.py
     title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_B
     links:
@@ -38,7 +38,7 @@ data:
   path: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
   requiredBy: []
   timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
 layout: document

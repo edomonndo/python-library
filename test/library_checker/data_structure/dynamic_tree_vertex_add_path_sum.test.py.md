@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/connectivity/link_cut_tree.py
+    title: Link Cut Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -24,11 +27,12 @@ data:
     \   elif t == 1:\n        p, x = qu\n        T.add(p, x)\n    else:\n        u,\
     \ v = qu\n        ans.append(str(T.path_query(u, v)))\nprint(*ans, sep=\"\\n\"\
     )\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/connectivity/link_cut_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
   requiredBy: []
-  timestamp: '2024-04-30 17:18:01+09:00'
+  timestamp: '2024-06-19 11:57:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py

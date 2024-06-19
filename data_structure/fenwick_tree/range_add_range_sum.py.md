@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/cumulative_sum.py
     title: "\u7D2F\u7A4D\u548C"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []

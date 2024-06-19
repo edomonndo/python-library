@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: data_structure/connectivity/link_cut_tree.py
+    title: Link Cut Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -27,11 +30,12 @@ data:
     \ q\n        T.set(p, (c << 32) | d)\n    else:\n        u, v, x = q\n       \
     \ c = T.path_query(u, v)\n        a, b = c >> 32, c & mask\n        ans.append((a\
     \ * x + b) % MOD)\n\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/connectivity/link_cut_tree.py
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-02-26 13:00:46+09:00'
+  timestamp: '2024-06-19 11:57:13+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py

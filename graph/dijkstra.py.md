@@ -6,15 +6,15 @@ data:
     path: graph/shortest_paths.py
     title: Shortest paths
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_1_a_dijkstra.test.py
     title: test/aoj/grl/grl_1_a_dijkstra.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/shortest_path.test.py
     title: test/library_checker/graph/shortest_path.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -37,7 +37,7 @@ data:
   requiredBy:
   - graph/shortest_paths.py
   timestamp: '2024-06-04 09:09:32+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/shortest_path.test.py
   - test/aoj/grl/grl_1_a_dijkstra.test.py

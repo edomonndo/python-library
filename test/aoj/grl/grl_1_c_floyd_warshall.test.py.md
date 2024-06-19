@@ -1,15 +1,15 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/floyd_warshall.py
     title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
       \u5BFE\u6700\u77ED\u8DDD\u96E2)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_1_C
     links:
@@ -31,7 +31,7 @@ data:
   path: test/aoj/grl/grl_1_c_floyd_warshall.test.py
   requiredBy: []
   timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_1_c_floyd_warshall.test.py
 layout: document

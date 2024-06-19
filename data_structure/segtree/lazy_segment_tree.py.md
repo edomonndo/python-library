@@ -3,24 +3,24 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
     title: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
     title: test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
     title: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
     title: test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
     title: Range Affine Range Sum
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -99,7 +99,7 @@ data:
   path: data_structure/segtree/lazy_segment_tree.py
   requiredBy: []
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_affine_range_sum.test.py
   - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py

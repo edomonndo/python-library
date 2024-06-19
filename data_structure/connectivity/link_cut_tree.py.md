@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+    title: Dynamic Tree Vertex Add Path Sum
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
+    title: Dynamic Tree Vertex Set Path Composite
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -102,8 +108,10 @@ data:
   path: data_structure/connectivity/link_cut_tree.py
   requiredBy: []
   timestamp: '2024-06-13 17:21:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/library_checker/data_structure/dynamic_tree_vertex_add_path_sum.test.py
+  - test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
 documentation_of: data_structure/connectivity/link_cut_tree.py
 layout: document
 title: Link Cut Tree

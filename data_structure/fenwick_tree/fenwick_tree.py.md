@@ -8,17 +8,20 @@ data:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
     title: data_structure/fenwick_tree/value_range_sum.py
   - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_rectangle_sum.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
       \u30E9\u30A4\u30F3)"
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
+    title: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -55,8 +58,9 @@ data:
   - data_structure/fenwick_tree/range_add_point_get.py
   - geometory/offline_rectangle_add_rectangle_sum.py
   timestamp: '2024-06-12 17:23:04+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/dsl/dsl_2_b_range_sum_query.test.py
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
 title: "\u62BD\u8C61\u5316Fenwick Tree"

@@ -3,33 +3,33 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_a_projection.test.py
     title: test/aoj/cgl/cgl_1_a_projection.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_b_refrection.test.py
     title: test/aoj/cgl/cgl_1_b_refrection.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
     title: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
     title: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_b_intersection.test.py
     title: test/aoj/cgl/cgl_2_b_intersection.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_c_cross_point.test.py
     title: test/aoj/cgl/cgl_2_c_cross_point.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_d_distance.test.py
     title: test/aoj/cgl/cgl_2_d_distance.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
     title: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -202,7 +202,7 @@ data:
   path: geometory/geometory.py
   requiredBy: []
   timestamp: '2024-06-13 11:50:32+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_2_d_distance.test.py
   - test/aoj/cgl/cgl_2_c_cross_point.test.py

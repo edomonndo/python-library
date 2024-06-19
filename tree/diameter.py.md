@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_a_diameter.test.py
     title: test/aoj/grl/grl_5_a_diameter.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/tree_diameter.test.py
     title: test/library_checker/tree/tree_diameter.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -35,7 +35,7 @@ data:
   path: tree/diameter.py
   requiredBy: []
   timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/tree_diameter.test.py
   - test/aoj/grl/grl_5_a_diameter.test.py

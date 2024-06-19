@@ -92,7 +92,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/safe_int_dict.py
       title: data_structure/basic/safe_int_dict.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
     - icon: ':heavy_check_mark:'
@@ -132,7 +132,7 @@ data:
     - icon: ':warning:'
       path: data_structure/mo.py
       title: Mo's Algorithm
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
       title: Sparse table
     - icon: ':heavy_check_mark:'
@@ -148,12 +148,12 @@ data:
     - icon: ':warning:'
       path: data_structure/static_top_tree.py
       title: Static Top Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/wavelet_matrix.py
       title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
   - name: data_structure/connectivity
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/connectivity/link_cut_tree.py
       title: Link Cut Tree
     - icon: ':warning:'
@@ -168,7 +168,7 @@ data:
     - icon: ':warning:'
       path: data_structure/connectivity/static_range_parallel_union_find.py
       title: Static Range Parallel Union Find
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/connectivity/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: data_structure/fenwick_tree
@@ -179,7 +179,7 @@ data:
     - icon: ':warning:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
@@ -191,7 +191,7 @@ data:
     - icon: ':warning:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':warning:'
       path: data_structure/fenwick_tree/value_range_sum.py
       title: data_structure/fenwick_tree/value_range_sum.py
   - name: data_structure/segtree
@@ -199,7 +199,7 @@ data:
     - icon: ':warning:'
       path: data_structure/segtree/compressed_segtree.py
       title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
     - icon: ':warning:'
@@ -209,7 +209,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':warning:'
@@ -218,13 +218,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/range_set_range_composite.py
       title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree_beats.py
       title: Segment Tree Beats
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segtree_2d.py
       title: "\u4E8C\u6B21\u5143\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
     - icon: ':heavy_check_mark:'
@@ -268,10 +268,10 @@ data:
     - icon: ':warning:'
       path: geometory/convex_full.py
       title: Convex full
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/geometory.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
     - icon: ':heavy_check_mark:'
@@ -301,7 +301,7 @@ data:
       title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   - name: graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/bellman_ford.py
       title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
@@ -316,10 +316,10 @@ data:
     - icon: ':warning:'
       path: graph/csr.py
       title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/floyd_warshall.py
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
         \u5BFE\u6700\u77ED\u8DDD\u96E2)"
@@ -332,28 +332,28 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
       path: graph/maximum_independent_set.py
       title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/mincost_arborescence.py
       title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: graph/shortest_paths.py
       title: Shortest paths
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: grid
@@ -385,11 +385,11 @@ data:
       path: math_/eratosthenes.py
       title: "\u7D20\u6570\u5224\u5B9A(\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
         \u7BE9)"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/euler_phi.py
       title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\
         \u30F3\u30C8\u95A2\u6570)"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: math_/ext_gcd.py
       title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
     - icon: ':heavy_check_mark:'
@@ -533,13 +533,13 @@ data:
     - icon: ':warning:'
       path: tree/count_stable_set.py
       title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/diameter.py
       title: "\u6728\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
       path: tree/dominator_tree.py
       title: Dominator Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':warning:'
@@ -572,7 +572,7 @@ data:
     - icon: ':warning:'
       path: tree/rooted_tree.py
       title: "\u6839\u4ED8\u304D\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/tree_dp.py
       title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: utility
@@ -621,136 +621,136 @@ data:
       title: embed_cpp/practice2k.test.py
   - name: test/aoj/cgl
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_a_projection.test.py
       title: test/aoj/cgl/cgl_1_a_projection.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_b_refrection.test.py
       title: test/aoj/cgl/cgl_1_b_refrection.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
       title: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
       title: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_b_intersection.test.py
       title: test/aoj/cgl/cgl_2_b_intersection.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_c_cross_point.test.py
       title: test/aoj/cgl/cgl_2_c_cross_point.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_d_distance.test.py
       title: test/aoj/cgl/cgl_2_d_distance.test.py
   - name: test/aoj/dsl
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_1_a_union_find.test.py
       title: test/aoj/dsl/dsl_1_a_union_find.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
       title: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_a_range_min_query.test.py
       title: test/aoj/dsl/dsl_2_a_range_min_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
       title: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_c_range_search.test.py
       title: test/aoj/dsl/dsl_2_c_range_search.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_d_range_update_query.test.py
       title: test/aoj/dsl/dsl_2_d_range_update_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_e_range_add_query.test.py
       title: test/aoj/dsl/dsl_2_e_range_add_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
       title: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
       title: test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
       title: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
       title: test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
       title: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_3_d_sliding_minimum_element_st.test.py
       title: test/aoj/dsl/dsl_3_d_sliding_minimum_element_st.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
       title: test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_3_d_sliding_minimum_element_wm.test.py
       title: test/aoj/dsl/dsl_3_d_sliding_minimum_element_wm.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
       title: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
       title: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_seg2d.test.py
   - name: test/aoj/grl
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_1_a_dijkstra.test.py
       title: test/aoj/grl/grl_1_a_dijkstra.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_1_b_bellman_ford.test.py
       title: test/aoj/grl/grl_1_b_bellman_ford.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_1_c_floyd_warshall.test.py
       title: test/aoj/grl/grl_1_c_floyd_warshall.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
       title: test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
       title: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_a_articulation_points.test.py
       title: test/aoj/grl/grl_3_a_articulation_points.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b_bridges.test.py
       title: test/aoj/grl/grl_3_b_bridges.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
       title: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_4_a_cycle_detection.test.py
       title: test/aoj/grl/grl_4_a_cycle_detection.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/aoj/grl/grl_4_b_topological_sort.test.py
       title: test/aoj/grl/grl_4_b_topological_sort.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_a_diameter.test.py
       title: test/aoj/grl/grl_5_a_diameter.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_b_tree_height.test.py
       title: test/aoj/grl/grl_5_b_tree_height.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
       title: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_6_a_max_flow.test.py
       title: test/aoj/grl/grl_6_a_max_flow.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_6_b_min_cost_flow.test.py
       title: test/aoj/grl/grl_6_b_min_cost_flow.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_7_a_bipartite_matching.test.py
       title: test/aoj/grl/grl_7_a_bipartite_matching.test.py
   - name: test/aoj/ntl
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/ntl/ntl_1_d_euler_phi.test.py
       title: test/aoj/ntl/ntl_1_d_euler_phi.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
       title: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
   - name: test/atcoder
@@ -779,7 +779,7 @@ data:
     - icon: ':grey_question:'
       path: test/atcoder/arc008d_segtree.test.py
       title: test/atcoder/arc008d_segtree.test.py
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/past17o.test.py
       title: test/atcoder/past17o.test.py
     - icon: ':grey_question:'

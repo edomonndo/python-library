@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
     title: data_structure/fenwick_tree/value_range_sum.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
     IGNORE: https://atcoder.jp/contests/past17-open/tasks/past17_o
     links:
@@ -20,18 +20,18 @@ data:
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/past17-open/tasks/past17_o\n\
     \nfrom data_structure.fenwick_tree.value_range_sum import CompressedValueRangeSum\n\
     \nn = int(input())\nA = [int(x) for x in input().split()]\nps = set(A)\nq = int(input())\n\
-    qs = [tuple(map(int, input().split())) for _ in range(q)]\nB = A[:]\nfor t, *qu\
-    \ in qs:\n    if t == 1:\n        k, d = qu\n        k -= 1\n        B[k] += d\n\
-    \        ps.add(B[k])\n    else:\n        ps.add(qu[0])\nS = CompressedValueRangeSum(A,\
-    \ ps)\nfor t, *qu in qs:\n    if t == 1:\n        k, d = qu\n        k -= 1\n\
-    \        S.add(k, d)\n    else:\n        x = qu[0]\n        print(S.sum_abs_from(x))\n"
+    qs = [tuple(map(int, input().split())) for _ in range(q)]\nxs = set()\nB = A[:]\n\
+    for t, *qu in qs:\n    if t == 1:\n        k, d = qu\n        k -= 1\n       \
+    \ B[k] += d\n        ps.add(B[k])\n    else:\n        xs.add(qu[0])\nS = CompressedValueRangeSum(A,\
+    \ ps, xs)\nfor t, *qu in qs:\n    if t == 1:\n        k, d = qu\n        k -=\
+    \ 1\n        S.add(k, d)\n    else:\n        x = qu[0]\n        print(S.sum_abs_from(x))\n"
   dependsOn:
   - data_structure/fenwick_tree/value_range_sum.py
   isVerificationFile: true
   path: test/atcoder/past17o.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-19 13:18:51+09:00'
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/past17o.test.py
 layout: document
