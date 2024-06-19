@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/grl_6_b_min_cost_flow.test.py
-    title: test/aoj/grl_6_b_min_cost_flow.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/aoj/grl/grl_6_b_min_cost_flow.test.py
+    title: test/aoj/grl/grl_6_b_min_cost_flow.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -70,9 +70,9 @@ data:
   path: graph/mincostflow.py
   requiredBy: []
   timestamp: '2023-08-06 23:53:35+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/aoj/grl_6_b_min_cost_flow.test.py
+  - test/aoj/grl/grl_6_b_min_cost_flow.test.py
 documentation_of: graph/mincostflow.py
 layout: document
 title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"

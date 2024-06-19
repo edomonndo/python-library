@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/offline_dynamic_connectivity.py
-    title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -27,8 +24,7 @@ data:
     \  dc.add_relax()\n\n\ndef out(k):\n    t, *qu = qs[k]\n    if t == 2:\n     \
     \   v, x = qu\n        dc.uf.add(v, x)\n    elif t == 3:\n        v = qu[0]\n\
     \        print(dc.uf.group_sum(v))\n\n\ndc.run(out)\n"
-  dependsOn:
-  - data_structure/offline_dynamic_connectivity.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_graph_vertex_add_component_sum.test.py
   requiredBy: []

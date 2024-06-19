@@ -3,18 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_a_range_min_query.test.py
-    title: test/aoj/dsl_2_a_range_min_query.test.py
+  - icon: ':x:'
+    path: test/aoj/dsl/dsl_2_a_range_min_query.test.py
+    title: test/aoj/dsl/dsl_2_a_range_min_query.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/point_set_range_composite.test.py
     title: Point Set Range Composite
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_segtree.test.py
     title: Static RMQ (Segment Tree)
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -79,11 +79,11 @@ data:
   path: data_structure/segtree/segment_tree.py
   requiredBy: []
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/data_structure/static_rmq_segtree.test.py
   - test/library_checker/data_structure/point_set_range_composite.test.py
-  - test/aoj/dsl_2_a_range_min_query.test.py
+  - test/aoj/dsl/dsl_2_a_range_min_query.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/grl_5_b_tree_height.test.py
-    title: test/aoj/grl_5_b_tree_height.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/aoj/grl/grl_5_b_tree_height.test.py
+    title: test/aoj/grl/grl_5_b_tree_height.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -48,9 +48,9 @@ data:
   path: tree/tree_dp.py
   requiredBy: []
   timestamp: '2024-05-27 17:45:23+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/aoj/grl_5_b_tree_height.test.py
+  - test/aoj/grl/grl_5_b_tree_height.test.py
 documentation_of: tree/tree_dp.py
 layout: document
 title: "(\u5168\u65B9\u4F4D)\u6728DP"

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl_2_c_range_search.test.py
-    title: test/aoj/dsl_2_c_range_search.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/aoj/dsl/dsl_2_c_range_search.test.py
+    title: test/aoj/dsl/dsl_2_c_range_search.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -31,9 +31,9 @@ data:
   path: geometory/kd_tree.py
   requiredBy: []
   timestamp: '2023-08-19 03:09:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/aoj/dsl_2_c_range_search.test.py
+  - test/aoj/dsl/dsl_2_c_range_search.test.py
 documentation_of: geometory/kd_tree.py
 layout: document
 title: KD tree

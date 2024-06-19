@@ -3,18 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/grl_3_a_articulation_points.test.py
-    title: test/aoj/grl_3_a_articulation_points.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/grl_3_b_bridges.test.py
-    title: test/aoj/grl_3_b_bridges.test.py
+  - icon: ':x:'
+    path: test/aoj/grl/grl_3_a_articulation_points.test.py
+    title: test/aoj/grl/grl_3_a_articulation_points.test.py
+  - icon: ':x:'
+    path: test/aoj/grl/grl_3_b_bridges.test.py
+    title: test/aoj/grl/grl_3_b_bridges.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/two_edge_connected_components.test.py
     title: test/library_checker/graph/two_edge_connected_components.test.py
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -75,11 +75,11 @@ data:
   path: graph/low_link.py
   requiredBy: []
   timestamp: '2024-06-12 10:06:46+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/graph/two_edge_connected_components.test.py
-  - test/aoj/grl_3_a_articulation_points.test.py
-  - test/aoj/grl_3_b_bridges.test.py
+  - test/aoj/grl/grl_3_a_articulation_points.test.py
+  - test/aoj/grl/grl_3_b_bridges.test.py
 documentation_of: graph/low_link.py
 layout: document
 title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"

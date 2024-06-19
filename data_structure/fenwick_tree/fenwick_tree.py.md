@@ -8,6 +8,9 @@ data:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
+  - icon: ':x:'
+    path: data_structure/fenwick_tree/value_range_sum.py
+    title: data_structure/fenwick_tree/value_range_sum.py
   - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_rectangle_sum.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
@@ -47,6 +50,7 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
+  - data_structure/fenwick_tree/value_range_sum.py
   - data_structure/fenwick_tree/range_add_range_sum.py
   - data_structure/fenwick_tree/range_add_point_get.py
   - geometory/offline_rectangle_add_rectangle_sum.py

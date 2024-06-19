@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aoj/ntl_1_d_euler_phi.test.py
-    title: test/aoj/ntl_1_d_euler_phi.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/aoj/ntl/ntl_1_d_euler_phi.test.py
+    title: test/aoj/ntl/ntl_1_d_euler_phi.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -24,9 +24,9 @@ data:
   path: math_/euler_phi.py
   requiredBy: []
   timestamp: '2023-08-26 01:45:36+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/aoj/ntl_1_d_euler_phi.test.py
+  - test/aoj/ntl/ntl_1_d_euler_phi.test.py
 documentation_of: math_/euler_phi.py
 layout: document
 title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\u30F3\

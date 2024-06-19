@@ -3,7 +3,7 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: data_structure/static_range_parallel_union_find.py
+    path: data_structure/connectivity/static_range_parallel_union_find.py
     title: Static Range Parallel Union Find
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -48,7 +48,7 @@ data:
   isVerificationFile: false
   path: atcoder/dsu.py
   requiredBy:
-  - data_structure/static_range_parallel_union_find.py
+  - data_structure/connectivity/static_range_parallel_union_find.py
   timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

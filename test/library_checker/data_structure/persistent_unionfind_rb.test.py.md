@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/rollback_unionfind.py
-    title: Rollback Union Find
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -28,8 +25,7 @@ data:
     \        for item in G[k]:\n            stack.append(item)\n        continue\n\
     \    if t == 0:\n        uf.undo()\n\nfor x in ans:\n    if x != -1:\n       \
     \ print(1 if x else 0)\n"
-  dependsOn:
-  - data_structure/rollback_unionfind.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/persistent_unionfind_rb.test.py
   requiredBy: []

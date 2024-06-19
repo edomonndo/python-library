@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: data_structure/basic/leftist_heap.py
     title: Leftist Heap
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/dijkstra.py
     title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
   _extendedRequiredBy: []

@@ -3,8 +3,8 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
-    title: test/aoj/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+    path: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+    title: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -38,7 +38,7 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
   requiredBy:
-  - test/aoj/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+  - test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

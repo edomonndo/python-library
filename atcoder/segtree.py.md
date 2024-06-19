@@ -14,7 +14,7 @@ data:
   - icon: ':warning:'
     path: tree/auxiliary_tree.py
     title: Auxiliary tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tree/euler_tour.py
     title: Euler tour
   _extendedVerifiedWith:

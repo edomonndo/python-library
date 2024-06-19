@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/link_cut_tree.py
-    title: Link Cut Tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,8 +15,8 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite\n\
-    from data_structure.link_cut_tree import LinkCutTree\n\nMOD = 998244353\nN, Q\
-    \ = map(int, input().split())\nA = [(a << 32) | b for a, b in (map(int, input().split())\
+    from data_structure.connectivity.link_cut_tree import LinkCutTree\n\nMOD = 998244353\n\
+    N, Q = map(int, input().split())\nA = [(a << 32) | b for a, b in (map(int, input().split())\
     \ for _ in range(N))]\n\nmask = (1 << 32) - 1\n\n\ndef op(x, y):\n    ax, bx =\
     \ x >> 32, x & mask\n    ay, by = y >> 32, y & mask\n    return (ax * ay % MOD)\
     \ << 32 | (ay * bx + by) % MOD\n\n\nT = LinkCutTree(op, 1 << 32, A)\nfor _ in\
@@ -30,12 +27,11 @@ data:
     \ q\n        T.set(p, (c << 32) | d)\n    else:\n        u, v, x = q\n       \
     \ c = T.path_query(u, v)\n        a, b = c >> 32, c & mask\n        ans.append((a\
     \ * x + b) % MOD)\n\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn:
-  - data_structure/link_cut_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-06-07 10:09:10+09:00'
+  timestamp: '2024-02-26 13:00:46+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/dynamic_tree_vertex_set_path_composite.test.py
