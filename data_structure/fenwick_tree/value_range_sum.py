@@ -1,3 +1,9 @@
+from pathlib import Path
+import sys
+
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+
+
 from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from typing import TypeVar
 
@@ -93,9 +99,13 @@ class ValueRangeSum:
 
 class CompressedValueRangeSum:
 
-    def __init__(self, arr: list[T], possible_values: set[T]):
+    def __init__(self, arr: list[T], possible_values: set[T], possible_vs: set[T]):
         self.src = arr[:]
-        self.to = {v: i for i, v in enumerate(sorted(possible_values))}
+        candidates = possible_values | possible_vs
+        for v in possible_vs:
+            candidates.add(v + 1)
+            candidates.add(v - 1)
+        self.to = {v: i for i, v in enumerate(sorted(candidates))}
         dat = [[] for _ in range(2)]
         self.tot = [0, 0]
         self.num = [0, 0]
@@ -129,7 +139,7 @@ class CompressedValueRangeSum:
         if v >= 0:
             return -self.tot[0] + self.bit[1].sum0(self.to[v]).value
         else:
-            return -self.tot[0] + self.bit[0].sum0(self.to[v] + 1).value
+            return -self.bit[0].sum0(self.to[v]).value
 
     def sum_le(self, v: T) -> T:
         """Sum of A[i] where A[i] <= v, 0 <= i < n"""
@@ -140,7 +150,7 @@ class CompressedValueRangeSum:
         if v >= 0:
             return self.tot[1] - self.bit[1].sum0(self.to[v] + 1).value
         else:
-            return self.tot[1] - self.bit[0].sum0(self.to[v]).value
+            return self.tot[1] - self.tot[0] + self.bit[0].sum0(self.to[v]).value
 
     def sum_ge(self, v: T) -> T:
         """Sum of A[i] where A[i] >= v, 0 <= i < n"""

@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/3/DSL_3_A
 
-from data_structure.FoldableDeque import FoldableDeque
+from data_structure.basic.FoldableDeque import FoldableDeque
 
 que = FoldableDeque(lambda x, y: x + y, 0)
 N, S = map(int, input().split())

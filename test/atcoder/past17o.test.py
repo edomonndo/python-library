@@ -7,6 +7,7 @@ A = [int(x) for x in input().split()]
 ps = set(A)
 q = int(input())
 qs = [tuple(map(int, input().split())) for _ in range(q)]
+xs = set()
 B = A[:]
 for t, *qu in qs:
     if t == 1:
@@ -15,8 +16,8 @@ for t, *qu in qs:
         B[k] += d
         ps.add(B[k])
     else:
-        ps.add(qu[0])
-S = CompressedValueRangeSum(A, ps)
+        xs.add(qu[0])
+S = CompressedValueRangeSum(A, ps, xs)
 for t, *qu in qs:
     if t == 1:
         k, d = qu
