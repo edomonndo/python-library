@@ -1,4 +1,4 @@
-# verification-helper: IGNORE
+# verification-helper: IGNORE https://onlinejudge.u-aizu.ac.jp/problems/GRL_4_B
 
 from graph.topological_sort import topological_sort
 
