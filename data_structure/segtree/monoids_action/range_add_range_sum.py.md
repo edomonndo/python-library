@@ -26,15 +26,12 @@ data:
     \ x.size, x.size)\n\n\ndef composition(f: F, g: F) -> F:\n    return f + g\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segtree/monoids_action/RangeAddRangeSum.py
+  path: data_structure/segtree/monoids_action/range_add_range_sum.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
+  timestamp: '2024-06-19 14:17:10+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/segtree/monoids_action/RangeAddRangeSum.py
+documentation_of: data_structure/segtree/monoids_action/range_add_range_sum.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/monoids_action/RangeAddRangeSum.py
-- /library/data_structure/segtree/monoids_action/RangeAddRangeSum.py.html
-title: data_structure/segtree/monoids_action/RangeAddRangeSum.py
+title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C"
 ---

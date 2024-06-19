@@ -10,7 +10,7 @@ data:
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
   - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
-    title: data_structure/fenwick_tree/value_range_sum.py
+    title: ValueRangeSum
   - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_rectangle_sum.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\

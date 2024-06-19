@@ -28,8 +28,5 @@ data:
   verifiedWith: []
 documentation_of: utility/antirec.py
 layout: document
-redirect_from:
-- /library/utility/antirec.py
-- /library/utility/antirec.py.html
-title: utility/antirec.py
+title: "\u518D\u5E30\u9AD8\u901F\u5316"
 ---

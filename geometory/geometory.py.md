@@ -5,25 +5,25 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_a_projection.test.py
-    title: test/aoj/cgl/cgl_1_a_projection.test.py
+    title: CGL1A Projection
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_b_refrection.test.py
-    title: test/aoj/cgl/cgl_1_b_refrection.test.py
+    title: CGL1B Refrection
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-    title: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+    title: CGL1C Counter Clockwise
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-    title: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+    title: CGL2A Parallel Orthogonal
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_b_intersection.test.py
-    title: test/aoj/cgl/cgl_2_b_intersection.test.py
+    title: CGL2B Intersection
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_c_cross_point.test.py
-    title: test/aoj/cgl/cgl_2_c_cross_point.test.py
+    title: CGL2C Cross Point
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_d_distance.test.py
-    title: test/aoj/cgl/cgl_2_d_distance.test.py
+    title: CGL2D Distance
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
     title: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py

@@ -25,8 +25,5 @@ data:
   verifiedWith: []
 documentation_of: sort/select_sort.py
 layout: document
-redirect_from:
-- /library/sort/select_sort.py
-- /library/sort/select_sort.py.html
-title: sort/select_sort.py
+title: "\u9078\u629E\u30BD\u30FC\u30C8"
 ---

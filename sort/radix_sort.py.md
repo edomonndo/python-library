@@ -28,8 +28,5 @@ data:
   verifiedWith: []
 documentation_of: sort/radix_sort.py
 layout: document
-redirect_from:
-- /library/sort/radix_sort.py
-- /library/sort/radix_sort.py.html
-title: sort/radix_sort.py
+title: "Radix\u30BD\u30FC\u30C8"
 ---

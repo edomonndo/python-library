@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_d_distance.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_2_d_distance.test.py
-- /verify/test/aoj/cgl/cgl_2_d_distance.test.py.html
-title: test/aoj/cgl/cgl_2_d_distance.test.py
+title: CGL2D Distance
 ---
+

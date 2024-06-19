@@ -38,15 +38,12 @@ data:
     \ 1, r, f)\n\"\"\"\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+  path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
+  timestamp: '2024-06-19 14:17:10+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+documentation_of: data_structure/segtree/monoids_action/range_add_range_product_sum.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
-- /library/data_structure/segtree/monoids_action/RangeAddRangeProductSum.py.html
-title: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
 ---

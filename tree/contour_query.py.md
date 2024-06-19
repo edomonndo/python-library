@@ -119,8 +119,5 @@ data:
   - test/library_checker/data_structure/vertex_get_range_contour_add_on_tree.test.py
 documentation_of: tree/contour_query.py
 layout: document
-redirect_from:
-- /library/tree/contour_query.py
-- /library/tree/contour_query.py.html
-title: tree/contour_query.py
+title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
 ---

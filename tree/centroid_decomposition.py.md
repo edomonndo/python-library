@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: tree/contour_query.py
-    title: tree/contour_query.py
+    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc291h.test.py

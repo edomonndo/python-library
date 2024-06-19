@@ -28,8 +28,5 @@ data:
   verifiedWith: []
 documentation_of: sort/merge_sort.py
 layout: document
-redirect_from:
-- /library/sort/merge_sort.py
-- /library/sort/merge_sort.py.html
-title: sort/merge_sort.py
+title: "\u30DE\u30FC\u30B8\u30BD\u30FC\u30C8"
 ---

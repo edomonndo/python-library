@@ -23,16 +23,13 @@ data:
     \ S) -> S:\n    if l < r:\n        return l\n    return r\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segtree/monoids/RangeMinIndex.py
+  path: data_structure/segtree/monoids/range_min_index.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
+  timestamp: '2024-06-19 14:17:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/875_range_mindex_query.test.py
-documentation_of: data_structure/segtree/monoids/RangeMinIndex.py
+documentation_of: data_structure/segtree/monoids/range_min_index.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/monoids/RangeMinIndex.py
-- /library/data_structure/segtree/monoids/RangeMinIndex.py.html
-title: data_structure/segtree/monoids/RangeMinIndex.py
+title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
 ---

@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_c_cross_point.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_2_c_cross_point.test.py
-- /verify/test/aoj/cgl/cgl_2_c_cross_point.test.py.html
-title: test/aoj/cgl/cgl_2_c_cross_point.test.py
+title: CGL2C Cross Point
 ---
+

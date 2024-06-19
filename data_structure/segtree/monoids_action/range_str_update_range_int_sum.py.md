@@ -33,15 +33,12 @@ data:
     \"\"\"\n"
   dependsOn: []
   isVerificationFile: false
-  path: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
+  path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
+  timestamp: '2024-06-19 14:17:10+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
+documentation_of: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
-- /library/data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py.html
-title: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
+title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
 ---

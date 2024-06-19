@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-- /verify/test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py.html
-title: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+title: CGL2A Parallel Orthogonal
 ---
+

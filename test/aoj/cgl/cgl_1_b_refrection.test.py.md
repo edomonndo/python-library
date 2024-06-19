@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_b_refrection.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_1_b_refrection.test.py
-- /verify/test/aoj/cgl/cgl_1_b_refrection.test.py.html
-title: test/aoj/cgl/cgl_1_b_refrection.test.py
+title: CGL1B Refrection
 ---
+

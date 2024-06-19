@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_a_projection.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_1_a_projection.test.py
-- /verify/test/aoj/cgl/cgl_1_a_projection.test.py.html
-title: test/aoj/cgl/cgl_1_a_projection.test.py
+title: CGL1A Projection
 ---
+

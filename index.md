@@ -184,7 +184,8 @@ data:
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/point_set_range_frequency.py
-      title: data_structure/fenwick_tree/point_set_range_frequency.py
+      title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
+        \u30A4\u30F3\uFF09"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
@@ -193,7 +194,7 @@ data:
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
     - icon: ':warning:'
       path: data_structure/fenwick_tree/value_range_sum.py
-      title: data_structure/fenwick_tree/value_range_sum.py
+      title: ValueRangeSum
   - name: data_structure/segtree
     pages:
     - icon: ':warning:'
@@ -234,19 +235,19 @@ data:
   - name: data_structure/segtree/monoids
     pages:
     - icon: ':heavy_check_mark:'
-      path: data_structure/segtree/monoids/RangeMinIndex.py
-      title: data_structure/segtree/monoids/RangeMinIndex.py
+      path: data_structure/segtree/monoids/range_min_index.py
+      title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
   - name: data_structure/segtree/monoids_action
     pages:
     - icon: ':warning:'
-      path: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
-      title: data_structure/segtree/monoids_action/RangeAddRangeProductSum.py
+      path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
     - icon: ':warning:'
-      path: data_structure/segtree/monoids_action/RangeAddRangeSum.py
-      title: data_structure/segtree/monoids_action/RangeAddRangeSum.py
+      path: data_structure/segtree/monoids_action/range_add_range_sum.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C"
     - icon: ':warning:'
-      path: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
-      title: data_structure/segtree/monoids_action/RangeStrUpdateRangeIntSum.py
+      path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
+      title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
   - name: dynamic_programming
     pages:
     - icon: ':warning:'
@@ -328,7 +329,7 @@ data:
       title: "\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':warning:'
       path: graph/general_weighted_matching.py
-      title: graph/general_weighted_matching.py
+      title: "\u91CD\u307F\u4ED8\u304D\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
@@ -449,37 +450,37 @@ data:
     pages:
     - icon: ':warning:'
       path: sort/bubble_sort.py
-      title: sort/bubble_sort.py
+      title: "\u30D0\u30D6\u30EB\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/bucket_sort.py
-      title: sort/bucket_sort.py
+      title: "\u30D0\u30B1\u30C3\u30C8\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/count_sort.py
-      title: sort/count_sort.py
+      title: "\u30AB\u30A6\u30F3\u30C8\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/heap_sort.py
-      title: sort/heap_sort.py
+      title: "\u30D2\u30FC\u30D7\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/insert_sort.py
-      title: sort/insert_sort.py
+      title: "\u633F\u5165\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/merge_sort.py
-      title: sort/merge_sort.py
+      title: "\u30DE\u30FC\u30B8\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/quick_sort.py
-      title: sort/quick_sort.py
+      title: "\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/radix_sort.py
-      title: sort/radix_sort.py
+      title: "Radix\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/random_quick_sort.py
-      title: sort/random_quick_sort.py
+      title: "\u4E71\u629E\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/select_sort.py
-      title: sort/select_sort.py
+      title: "\u9078\u629E\u30BD\u30FC\u30C8"
     - icon: ':warning:'
       path: sort/tim_sort.py
-      title: sort/tim_sort.py
+      title: "Tim\u30BD\u30FC\u30C8"
   - name: string_
     pages:
     - icon: ':heavy_check_mark:'
@@ -529,7 +530,7 @@ data:
       title: "\u91CD\u5FC3\u5224\u5B9A"
     - icon: ':heavy_check_mark:'
       path: tree/contour_query.py
-      title: tree/contour_query.py
+      title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
       path: tree/count_stable_set.py
       title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
@@ -579,7 +580,7 @@ data:
     pages:
     - icon: ':warning:'
       path: utility/antirec.py
-      title: utility/antirec.py
+      title: "\u518D\u5E30\u9AD8\u901F\u5316"
     - icon: ':warning:'
       path: utility/binary_search.py
       title: "\u4E8C\u5206\u6CD5"
@@ -623,25 +624,25 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_a_projection.test.py
-      title: test/aoj/cgl/cgl_1_a_projection.test.py
+      title: CGL1A Projection
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_b_refrection.test.py
-      title: test/aoj/cgl/cgl_1_b_refrection.test.py
+      title: CGL1B Refrection
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-      title: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+      title: CGL1C Counter Clockwise
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-      title: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+      title: CGL2A Parallel Orthogonal
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_b_intersection.test.py
-      title: test/aoj/cgl/cgl_2_b_intersection.test.py
+      title: CGL2B Intersection
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_c_cross_point.test.py
-      title: test/aoj/cgl/cgl_2_c_cross_point.test.py
+      title: CGL2C Cross Point
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_d_distance.test.py
-      title: test/aoj/cgl/cgl_2_d_distance.test.py
+      title: CGL2D Distance
   - name: test/aoj/dsl
     pages:
     - icon: ':heavy_check_mark:'

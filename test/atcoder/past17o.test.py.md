@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
-    title: data_structure/fenwick_tree/value_range_sum.py
+    title: ValueRangeSum
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/past17o.test.py
   requiredBy: []
-  timestamp: '2024-06-19 13:18:51+09:00'
+  timestamp: '2024-06-19 14:17:10+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/past17o.test.py

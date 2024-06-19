@@ -35,8 +35,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-- /verify/test/aoj/cgl/cgl_1_c_counter_clockwise.test.py.html
-title: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+title: CGL1C Counter Clockwise
 ---
+

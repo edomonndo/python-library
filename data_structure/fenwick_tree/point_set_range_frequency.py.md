@@ -44,8 +44,7 @@ data:
   - test/library_checker/data_structure/point_set_range_frequency.test.py
 documentation_of: data_structure/fenwick_tree/point_set_range_frequency.py
 layout: document
-redirect_from:
-- /library/data_structure/fenwick_tree/point_set_range_frequency.py
-- /library/data_structure/fenwick_tree/point_set_range_frequency.py.html
-title: data_structure/fenwick_tree/point_set_range_frequency.py
+title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\u30A4\
+  \u30F3\uFF09"
 ---
+

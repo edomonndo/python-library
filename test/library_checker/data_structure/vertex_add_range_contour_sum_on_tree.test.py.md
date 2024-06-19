@@ -6,7 +6,7 @@ data:
     title: atcoder/fenwicktree.py
   - icon: ':heavy_check_mark:'
     path: tree/contour_query.py
-    title: tree/contour_query.py
+    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

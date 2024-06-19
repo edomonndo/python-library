@@ -26,8 +26,5 @@ data:
   verifiedWith: []
 documentation_of: sort/bucket_sort.py
 layout: document
-redirect_from:
-- /library/sort/bucket_sort.py
-- /library/sort/bucket_sort.py.html
-title: sort/bucket_sort.py
+title: "\u30D0\u30B1\u30C3\u30C8\u30BD\u30FC\u30C8"
 ---

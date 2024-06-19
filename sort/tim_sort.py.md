@@ -37,8 +37,5 @@ data:
   verifiedWith: []
 documentation_of: sort/tim_sort.py
 layout: document
-redirect_from:
-- /library/sort/tim_sort.py
-- /library/sort/tim_sort.py.html
-title: sort/tim_sort.py
+title: "Tim\u30BD\u30FC\u30C8"
 ---

@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_b_intersection.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/cgl/cgl_2_b_intersection.test.py
-- /verify/test/aoj/cgl/cgl_2_b_intersection.test.py.html
-title: test/aoj/cgl/cgl_2_b_intersection.test.py
+title: CGL2B Intersection
 ---
+
