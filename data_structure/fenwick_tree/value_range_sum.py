@@ -1,9 +1,3 @@
-from pathlib import Path
-import sys
-
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
-
-
 from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from typing import TypeVar
 
@@ -103,8 +97,8 @@ class CompressedValueRangeSum:
         self.src = arr[:]
         candidates = possible_values | possible_vs
         for v in possible_vs:
-            candidates.add(v + 1)
-            candidates.add(v - 1)
+            candidates.add(v + 1)  # for sum_le
+            candidates.add(v - 1)  # for sum_ge
         self.to = {v: i for i, v in enumerate(sorted(candidates))}
         dat = [[] for _ in range(2)]
         self.tot = [0, 0]
