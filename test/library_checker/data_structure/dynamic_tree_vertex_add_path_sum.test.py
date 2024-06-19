@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/dynamic_tree_vertex_add_path_sum
-from data_structure.link_cut_tree import LinkCutTree
+from data_structure.connectivity.link_cut_tree import LinkCutTree
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]

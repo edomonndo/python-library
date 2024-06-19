@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/1/DSL_1_B
 
-from data_structure.weighted_union_find import WeightedUnionFind
+from data_structure.connectivity.weighted_union_find import WeightedUnionFind
 
 N, Q = map(int, input().split())
 G = WeightedUnionFind(N)

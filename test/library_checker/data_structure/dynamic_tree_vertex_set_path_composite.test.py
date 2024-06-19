@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/dynamic_tree_vertex_set_path_composite
-from data_structure.link_cut_tree import LinkCutTree
+from data_structure.connectivity.link_cut_tree import LinkCutTree
 
 MOD = 998244353
 N, Q = map(int, input().split())
