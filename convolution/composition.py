@@ -9,18 +9,17 @@ def _composition_preprocess(b: list[int], d: int, k: int, deg: int) -> list[int]
         if i == k:
             break
         X[i + 1] = multiply(x, b)[: deg + 1]
-    X[d + 1 :] = []
     return X
 
 
 def _composition_main(
-    X: list[list[int]], a: list[int], xd: int, d: int, k: int, deg: int
+    X: list[list[int]], a: list[int], sz_y: int, xd: int, d: int, k: int, deg: int
 ) -> None:
     sz = len(a)
     Z = [1]
     F = [0] * (deg + 1)
     for i in range(k):
-        Y = [0] * len(X[-1])
+        Y = [0] * sz_y
         for j, x_ in enumerate(X):
             if i * d + j >= sz:
                 break
@@ -42,9 +41,10 @@ def composition(a: list[int], b: list[int]) -> list[int]:
     d = (deg + k) // k
 
     X = _composition_preprocess(b, d, k, deg)
-
+    sz_y = len(X[-1])
+    X[d + 1 :] = []
     xd = X.pop()
-    return _composition_main(X, a, xd, d, k, deg)
+    return _composition_main(X, a, sz_y, xd, d, k, deg)
 
 
 def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[int]]:
@@ -52,9 +52,10 @@ def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[
     d = (deg + k) // k
 
     X = _composition_preprocess(b, d, k, deg)
-
+    sz_y = len(X[-1])
+    X[d + 1 :] = []
     xd = X.pop()
-    return [_composition_main(X, a, xd, d, k, deg) for a in a_]
+    return [_composition_main(X, a, sz_y, xd, d, k, deg) for a in a_]
 
 
 def composition_inverse(f: list[int], deg: int = -1) -> list[int]:
