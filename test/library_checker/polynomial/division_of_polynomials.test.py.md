@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
-    path: convolution/composition.py
-    title: convolution/composition.py
+  - icon: ':question:'
+    path: convolution/formal_power_series.py
+    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: true
@@ -19,28 +19,36 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/compositional_inverse_of_formal_power_series
 
-    from convolution.composition import *
+    from convolution.formal_power_series import FPS
 
 
-    n = int(input())
+    n, m = map(int, input().split())
 
     A = [int(x) for x in input().split()]
 
-    print(*composition_inverse(A))
+    B = [int(x) for x in input().split()]
+
+    q, r = FPS.divmod(A, B)
+
+    print(len(q), len(r))
+
+    print(*q)
+
+    print(*r)
 
     '
   dependsOn:
-  - convolution/composition.py
+  - convolution/formal_power_series.py
   isVerificationFile: true
-  path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+  path: test/library_checker/polynomial/division_of_polynomials.test.py
   requiredBy: []
-  timestamp: '2024-06-20 10:59:04+09:00'
+  timestamp: '2024-06-20 12:15:41+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+documentation_of: test/library_checker/polynomial/division_of_polynomials.test.py
 layout: document
 redirect_from:
-- /verify/test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
-- /verify/test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py.html
-title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+- /verify/test/library_checker/polynomial/division_of_polynomials.test.py
+- /verify/test/library_checker/polynomial/division_of_polynomials.test.py.html
+title: test/library_checker/polynomial/division_of_polynomials.test.py
 ---

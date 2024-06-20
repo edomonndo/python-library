@@ -37,7 +37,7 @@ data:
   isVerificationFile: false
   path: convolution/chirp_z.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py

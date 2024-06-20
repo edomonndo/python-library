@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
   requiredBy: []
-  timestamp: '2024-06-20 09:46:52+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/composition_of_formal_power_series.test.py

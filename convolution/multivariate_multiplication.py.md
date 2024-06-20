@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: convolution/multivariate_multiplication.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: convolution/multivariate_multiplication.py

@@ -59,18 +59,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
       title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: convolution/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/multipoint_evaluation.py
       title: convolution/multipoint_evaluation.py
     - icon: ':warning:'
       path: convolution/multivariate_multiplication.py
       title: convolution/multivariate_multiplication.py
-    - icon: ':warning:'
+    - icon: ':x:'
       path: convolution/product_tree.py
       title: convolution/product_tree.py
+    - icon: ':x:'
+      path: convolution/sample_point_shift.py
+      title: convolution/sample_point_shift.py
     - icon: ':heavy_check_mark:'
       path: convolution/tayler_shift.py
       title: convolution/tayler_shift.py
@@ -1067,6 +1070,9 @@ data:
     - icon: ':x:'
       path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
+    - icon: ':x:'
+      path: test/library_checker/polynomial/division_of_polynomials.test.py
+      title: test/library_checker/polynomial/division_of_polynomials.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/exp_of_formal_power_series.test.py
       title: test/library_checker/polynomial/exp_of_formal_power_series.test.py
@@ -1085,12 +1091,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
       title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation.test.py
       title: test/library_checker/polynomial/multipoint_evaluation.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
+    - icon: ':x:'
+      path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
+      title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
+    - icon: ':x:'
+      path: test/library_checker/polynomial/polynomial_interpolation.test.py
+      title: test/library_checker/polynomial/polynomial_interpolation.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_tayler_shift.test.py
       title: test/library_checker/polynomial/polynomial_tayler_shift.test.py
@@ -1103,6 +1115,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
       title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+    - icon: ':x:'
+      path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
+      title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
       title: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py

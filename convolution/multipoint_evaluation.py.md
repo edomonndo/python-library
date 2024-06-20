@@ -4,17 +4,17 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
     title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: convolution/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/multipoint_evaluation.test.py
     title: test/library_checker/polynomial/multipoint_evaluation.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -50,8 +50,8 @@ data:
   isVerificationFile: false
   path: convolution/multipoint_evaluation.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-06-20 12:15:41+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/multipoint_evaluation.test.py
 documentation_of: convolution/multipoint_evaluation.py

@@ -8,18 +8,21 @@ data:
   - icon: ':x:'
     path: convolution/composition.py
     title: convolution/composition.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: convolution/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/multipoint_evaluation.py
     title: convolution/multipoint_evaluation.py
   - icon: ':warning:'
     path: convolution/multivariate_multiplication.py
     title: convolution/multivariate_multiplication.py
-  - icon: ':warning:'
+  - icon: ':x:'
     path: convolution/product_tree.py
     title: convolution/product_tree.py
+  - icon: ':x:'
+    path: convolution/sample_point_shift.py
+    title: convolution/sample_point_shift.py
   - icon: ':heavy_check_mark:'
     path: convolution/tayler_shift.py
     title: convolution/tayler_shift.py
@@ -103,9 +106,9 @@ data:
     \ 1\n        k += 1\n    s = a + [0] * (M - len(a))\n    _fft(s, k)\n    s = [x\
     \ * x % MOD for x in s]\n    _ifft(s, k)\n    s[l:] = []\n    invm = pow(M, MOD\
     \ - 2, MOD)\n    return [x * invm % MOD for x in s]\n\n\ndef ntt_doubling(a: list)\
-    \ -> None:\n    M = len(a)\n    intt(a)\n    r = 1\n    zeta = pow(3, (MOD - 1)\
-    \ // (M << 1), MOD)\n    for i, x in enumerate(a):\n        a[i] = x * r % MOD\n\
-    \        r = r * zeta % MOD\n    ntt(a)\n"
+    \ -> None:\n    M = len(a)\n    b = a[:]\n    intt(b)\n    r = 1\n    zeta = pow(3,\
+    \ (MOD - 1) // (M << 1), MOD)\n    for i, x in enumerate(b):\n        b[i] = x\
+    \ * r % MOD\n        r = r * zeta % MOD\n    ntt(b)\n    a += b\n"
   dependsOn: []
   isVerificationFile: false
   path: convolution/convolution.py
@@ -113,11 +116,12 @@ data:
   - convolution/multipoint_evaluation.py
   - convolution/product_tree.py
   - convolution/composition.py
+  - convolution/sample_point_shift.py
   - convolution/chirp_z.py
   - convolution/tayler_shift.py
   - convolution/formal_power_series.py
   - convolution/multivariate_multiplication.py
-  timestamp: '2023-06-21 08:58:45+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/convolution/convolution_mod.test.py

@@ -40,7 +40,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/convolution/convolution_mod.test.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/convolution/convolution_mod.test.py

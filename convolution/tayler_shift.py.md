@@ -33,7 +33,7 @@ data:
   isVerificationFile: false
   path: convolution/tayler_shift.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
+  timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/polynomial_tayler_shift.test.py
