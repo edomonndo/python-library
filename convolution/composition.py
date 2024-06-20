@@ -13,7 +13,9 @@ def _composition_preprocess(b: list[int], d: int, k: int, deg: int) -> list[int]
     return X
 
 
-def _composition_main(a: list[int], xd: int, d: int, k: int, deg: int) -> None:
+def _composition_main(
+    X: list[list[int]], a: list[int], xd: int, d: int, k: int, deg: int
+) -> None:
     sz = len(a)
     Z = [1]
     F = [0] * (deg + 1)
@@ -42,7 +44,7 @@ def composition(a: list[int], b: list[int]) -> list[int]:
     X = _composition_preprocess(b, d, k, deg)
 
     xd = X.pop()
-    return _composition_main(a, xd, d, k, deg)
+    return _composition_main(X, a, xd, d, k, deg)
 
 
 def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[int]]:
@@ -52,7 +54,7 @@ def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[
     X = _composition_preprocess(b, d, k, deg)
 
     xd = X.pop()
-    return [_composition_main(a, xd, d, k, deg) for a in a_]
+    return [_composition_main(X, a, xd, d, k, deg) for a in a_]
 
 
 def composition_inverse(f: list[int], deg: int = -1) -> list[int]:

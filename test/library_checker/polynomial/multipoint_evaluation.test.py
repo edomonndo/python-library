@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/multipoint_evaluation_on_geometric_sequence
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/multipoint_evaluation
 from convolution.multipoint_evaluation import *
 
 n, m = map(int, input().split())
