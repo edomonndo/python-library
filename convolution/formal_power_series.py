@@ -85,8 +85,7 @@ class FPS:
     @classmethod
     def mod(cls, a: list[int], b: list[int]) -> list[int]:
         res = cls.sub(a, multiply(cls.div(a, b), b))
-        while res and not res[-1]:
-            res.pop()
+        cls.shrink(res)
         return res
 
     @classmethod
