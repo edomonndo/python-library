@@ -32,6 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_c_cross_point.test.py
 layout: document
-title: CGL2C Cross Point
+title: "CGL2C \u4EA4\u70B9"
 ---
 

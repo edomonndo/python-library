@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_4_a_cycle_detection.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_4_a_cycle_detection.test.py
-- /verify/test/aoj/grl/grl_4_a_cycle_detection.test.py.html
-title: test/aoj/grl/grl_4_a_cycle_detection.test.py
+title: "GRL4A \u6709\u5411\u30B0\u30E9\u30D5\u306E\u9589\u8DEF\u691C\u67FB"
 ---
+

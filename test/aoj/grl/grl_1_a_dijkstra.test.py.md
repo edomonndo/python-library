@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_1_a_dijkstra.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_1_a_dijkstra.test.py
-- /verify/test/aoj/grl/grl_1_a_dijkstra.test.py.html
-title: test/aoj/grl/grl_1_a_dijkstra.test.py
+title: "GRL1A \u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF"
 ---
+

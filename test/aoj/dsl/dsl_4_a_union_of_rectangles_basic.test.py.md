@@ -24,15 +24,14 @@ data:
   dependsOn:
   - geometory/geometory.py
   isVerificationFile: true
-  path: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
+  path: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-06-19 17:52:38+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
+documentation_of: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
-- /verify/test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py.html
-title: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
+title: "DSL4A Union of Rectangles (\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
+  )"
 ---
+

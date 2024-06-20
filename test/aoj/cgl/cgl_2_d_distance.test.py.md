@@ -32,6 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_d_distance.test.py
 layout: document
-title: CGL2D Distance
+title: "CGL2D \u8DDD\u96E2"
 ---
 

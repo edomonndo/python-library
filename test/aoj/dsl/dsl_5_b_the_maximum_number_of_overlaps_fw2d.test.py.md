@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
     title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_5_B
     links:
@@ -25,16 +25,14 @@ data:
     \        ans = max(ans, fw.sum0(x, y))\nprint(ans)\n"
   dependsOn:
   - data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
-  isVerificationFile: false
-  path: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+  isVerificationFile: true
+  path: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-06-19 17:52:38+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+documentation_of: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test.py
 layout: document
-redirect_from:
-- /library/test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
-- /library/test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py.html
-title: test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test copy.py
+title: "DSL5B The Maximum Number of Overlaps (\u4E8C\u6B21\u5143BIT)"
 ---
+

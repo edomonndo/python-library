@@ -39,8 +39,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/ntl/ntl_1_d_euler_phi.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/ntl/ntl_1_d_euler_phi.test.py
-- /verify/test/aoj/ntl/ntl_1_d_euler_phi.test.py.html
-title: test/aoj/ntl/ntl_1_d_euler_phi.test.py
+title: "NTL1D \u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
 ---
+

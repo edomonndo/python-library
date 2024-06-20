@@ -35,8 +35,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_1_c_floyd_warshall.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_1_c_floyd_warshall.test.py
-- /verify/test/aoj/grl/grl_1_c_floyd_warshall.test.py.html
-title: test/aoj/grl/grl_1_c_floyd_warshall.test.py
+title: "GRL1C \u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF"
 ---
+

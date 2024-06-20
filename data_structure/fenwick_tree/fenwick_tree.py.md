@@ -18,7 +18,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
-    title: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
+    title: DSL2B Range Sum Query
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -53,10 +53,10 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
-  - data_structure/fenwick_tree/value_range_sum.py
-  - data_structure/fenwick_tree/range_add_range_sum.py
-  - data_structure/fenwick_tree/range_add_point_get.py
   - geometory/offline_rectangle_add_rectangle_sum.py
+  - data_structure/fenwick_tree/value_range_sum.py
+  - data_structure/fenwick_tree/range_add_point_get.py
+  - data_structure/fenwick_tree/range_add_range_sum.py
   timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

@@ -79,8 +79,8 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/string/number_of_substrings.test.py
   - test/library_checker/string/suffix_array.test.py
+  - test/library_checker/string/number_of_substrings.test.py
 documentation_of: string_/suffix_array.py
 layout: document
 title: Suffix array

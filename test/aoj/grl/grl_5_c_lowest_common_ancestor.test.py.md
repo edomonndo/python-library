@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
-- /verify/test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py.html
-title: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
+title: GRL5C LCA (Lowest Common Ancestor)
 ---
+

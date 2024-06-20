@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_a_articulation_points.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_3_a_articulation_points.test.py
-- /verify/test/aoj/grl/grl_3_a_articulation_points.test.py.html
-title: test/aoj/grl/grl_3_a_articulation_points.test.py
+title: "GRL3A \u95A2\u7BC0\u70B9"
 ---
+

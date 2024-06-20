@@ -34,8 +34,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
-- /verify/test/aoj/dsl/dsl_2_h_range_add_min_query.test.py.html
-title: test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
+title: DSL2H RMQ and RAQ
 ---
+

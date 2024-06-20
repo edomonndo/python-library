@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_1_a_union_find.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_1_a_union_find.test.py
-- /verify/test/aoj/dsl/dsl_1_a_union_find.test.py.html
-title: test/aoj/dsl/dsl_1_a_union_find.test.py
+title: "DSL1A \u4E92\u3044\u306B\u7D20\u306A\u96C6\u5408"
 ---
+

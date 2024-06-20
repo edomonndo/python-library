@@ -33,8 +33,7 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_1_b_bellman_ford.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_1_b_bellman_ford.test.py
-- /verify/test/aoj/grl/grl_1_b_bellman_ford.test.py.html
-title: test/aoj/grl/grl_1_b_bellman_ford.test.py
+title: "GRL1B \u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\uFF08\u8CA0\u306E\u91CD\
+  \u307F\u3092\u3082\u3064\u8FBA\u3092\u542B\u3080\uFF09"
 ---
+

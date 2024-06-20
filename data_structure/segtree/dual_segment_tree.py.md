@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_d_range_update_query.test.py
-    title: test/aoj/dsl/dsl_2_d_range_update_query.test.py
+    title: DSL2D Range Update Query(RUQ)
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_e_range_add_query.test.py
-    title: test/aoj/dsl/dsl_2_e_range_add_query.test.py
+    title: DSL2E Range Add Query(RAQ)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_point_get.test.py
     title: Range Affine Point Get
@@ -56,9 +56,9 @@ data:
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/range_affine_point_get.test.py
   - test/aoj/dsl/dsl_2_e_range_add_query.test.py
   - test/aoj/dsl/dsl_2_d_range_update_query.test.py
+  - test/library_checker/data_structure/range_affine_point_get.test.py
 documentation_of: data_structure/segtree/dual_segment_tree.py
 layout: document
 title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"

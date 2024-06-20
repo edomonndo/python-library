@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_b_bridges.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_3_b_bridges.test.py
-- /verify/test/aoj/grl/grl_3_b_bridges.test.py.html
-title: test/aoj/grl/grl_3_b_bridges.test.py
+title: "GRL3B \u6A4B"
 ---
+

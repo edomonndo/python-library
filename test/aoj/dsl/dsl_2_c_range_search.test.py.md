@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_2_c_range_search.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_2_c_range_search.test.py
-- /verify/test/aoj/dsl/dsl_2_c_range_search.test.py.html
-title: test/aoj/dsl/dsl_2_c_range_search.test.py
+title: "DSL2C \u9818\u57DF\u63A2\u7D22(kD\u6728)"
 ---
+

@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
-- /verify/test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py.html
-title: test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
+title: "GRL2A \u6700\u5C0F\u5168\u57DF\u6728\uFF08\u30AF\u30E9\u30B9\u30AB\u30EB\uFF09"
 ---
+

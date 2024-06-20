@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_3_d_sliding_minimum_element_st.test.py
-    title: test/aoj/dsl/dsl_3_d_sliding_minimum_element_st.test.py
+    title: DSL3D Sliding Minimum Element (Sparse Table)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

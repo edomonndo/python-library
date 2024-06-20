@@ -33,6 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
 layout: document
-title: CGL2A Parallel Orthogonal
+title: "CGL2A \u5E73\u884C\u30FB\u5782\u76F4"
 ---
 

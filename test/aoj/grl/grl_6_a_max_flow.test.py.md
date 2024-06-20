@@ -31,8 +31,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_6_a_max_flow.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_6_a_max_flow.test.py
-- /verify/test/aoj/grl/grl_6_a_max_flow.test.py.html
-title: test/aoj/grl/grl_6_a_max_flow.test.py
+title: "GRL6A \u6700\u5927\u6D41"
 ---
+

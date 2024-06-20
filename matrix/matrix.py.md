@@ -135,12 +135,12 @@ data:
   timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/matrix/pow_of_matrix.test.py
-  - test/library_checker/matrix/rank_of_matrix.test.py
   - test/library_checker/matrix/matrix_product.test.py
   - test/library_checker/matrix/determinant_of_matrix.test.py
-  - test/library_checker/matrix/system_of_linear_equations.test.py
+  - test/library_checker/matrix/rank_of_matrix.test.py
   - test/library_checker/matrix/matrix_inverse.test.py
+  - test/library_checker/matrix/pow_of_matrix.test.py
+  - test/library_checker/matrix/system_of_linear_equations.test.py
 documentation_of: matrix/matrix.py
 layout: document
 title: "\u884C\u5217"

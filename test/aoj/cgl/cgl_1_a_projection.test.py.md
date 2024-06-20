@@ -32,6 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_a_projection.test.py
 layout: document
-title: CGL1A Projection
+title: "CGL1A \u5C04\u5F71"
 ---
 

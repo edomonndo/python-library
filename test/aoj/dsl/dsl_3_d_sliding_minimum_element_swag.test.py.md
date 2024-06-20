@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
-- /verify/test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py.html
-title: test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
+title: DSL3D Sliding Minimum Element (SWAG)
 ---
+

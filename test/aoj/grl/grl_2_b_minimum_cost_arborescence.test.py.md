@@ -42,8 +42,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
-- /verify/test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py.html
-title: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
+title: "GRL2B \u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
 ---
+

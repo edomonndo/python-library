@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_6_b_min_cost_flow.test.py
-    title: test/aoj/grl/grl_6_b_min_cost_flow.test.py
+    title: "GRL6B \u6700\u5C0F\u8CBB\u7528\u6D41"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

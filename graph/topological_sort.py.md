@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_4_a_cycle_detection.test.py
-    title: test/aoj/grl/grl_4_a_cycle_detection.test.py
+    title: "GRL4A \u6709\u5411\u30B0\u30E9\u30D5\u306E\u9589\u8DEF\u691C\u67FB"
   - icon: ':grey_question:'
     path: test/aoj/grl/grl_4_b_topological_sort.test.py
-    title: test/aoj/grl/grl_4_b_topological_sort.test.py
+    title: "GRL4B \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -31,8 +31,8 @@ data:
   timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl/grl_4_b_topological_sort.test.py
   - test/aoj/grl/grl_4_a_cycle_detection.test.py
+  - test/aoj/grl/grl_4_b_topological_sort.test.py
 documentation_of: graph/topological_sort.py
 layout: document
 title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"

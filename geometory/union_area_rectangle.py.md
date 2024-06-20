@@ -7,6 +7,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
+    title: "DSL4A Union of Rectangles (\u9045\u5EF6\u30BB\u30B0\u6728)"
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
     title: Area of Union of Rectangles
   _isVerificationFailed: false
@@ -46,6 +49,7 @@ data:
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
   - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
 documentation_of: geometory/union_area_rectangle.py
 layout: document

@@ -34,8 +34,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_3_a_smallest_window1.test.py
-- /verify/test/aoj/dsl/dsl_3_a_smallest_window1.test.py.html
-title: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
+title: DSL3A Tha Smallest Window I
 ---
+

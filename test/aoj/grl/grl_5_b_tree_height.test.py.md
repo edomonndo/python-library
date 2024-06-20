@@ -30,13 +30,11 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_5_b_tree_height.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-06-20 09:29:05+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_b_tree_height.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_5_b_tree_height.test.py
-- /verify/test/aoj/grl/grl_5_b_tree_height.test.py.html
-title: test/aoj/grl/grl_5_b_tree_height.test.py
+title: "GRL5B \u6728\u306E\u9AD8\u3055"
 ---
+

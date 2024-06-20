@@ -50,10 +50,10 @@ data:
   isVerificationFile: false
   path: atcoder/fenwicktree.py
   requiredBy:
-  - data_structure/fenwick_tree/point_set_range_frequency.py
+  - geometory/offline_point_add_rectangle_sum.py
   - geometory/offline_rectangle_add_point_get.py
   - geometory/offline_static_rectangle_sum.py
-  - geometory/offline_point_add_rectangle_sum.py
+  - data_structure/fenwick_tree/point_set_range_frequency.py
   timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

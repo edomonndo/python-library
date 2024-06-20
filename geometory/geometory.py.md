@@ -5,28 +5,29 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_a_projection.test.py
-    title: CGL1A Projection
+    title: "CGL1A \u5C04\u5F71"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_b_refrection.test.py
-    title: CGL1B Refrection
+    title: "CGL1B \u53CD\u5C04"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-    title: CGL1C Counter Clockwise
+    title: "CGL1C \u53CD\u6642\u8A08\u56DE\u308A"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-    title: CGL2A Parallel Orthogonal
+    title: "CGL2A \u5E73\u884C\u30FB\u5782\u76F4"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_b_intersection.test.py
-    title: CGL2B Intersection
+    title: "CGL2B \u4EA4\u5DEE\u5224\u5B9A"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_c_cross_point.test.py
-    title: CGL2C Cross Point
+    title: "CGL2C \u4EA4\u70B9"
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_d_distance.test.py
-    title: CGL2D Distance
+    title: "CGL2D \u8DDD\u96E2"
   - icon: ':heavy_check_mark:'
-    path: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
-    title: test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
+    path: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
+    title: "DSL4A Union of Rectangles (\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
+      )"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -204,14 +205,14 @@ data:
   timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
+  - test/aoj/cgl/cgl_1_b_refrection.test.py
+  - test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl/cgl_2_b_intersection.test.py
   - test/aoj/cgl/cgl_2_d_distance.test.py
   - test/aoj/cgl/cgl_2_c_cross_point.test.py
-  - test/aoj/cgl/cgl_2_b_intersection.test.py
-  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
   - test/aoj/cgl/cgl_1_a_projection.test.py
-  - test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
-  - test/aoj/cgl/cgl_1_b_refrection.test.py
-  - test/aoj/dsl/dsl_4_a_union_of_rectangles.test.py
 documentation_of: geometory/geometory.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"

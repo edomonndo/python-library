@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
-    title: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
+    title: "GRL2B \u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

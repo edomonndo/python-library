@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
-    title: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
+    title: GRL5C LCA (Lowest Common Ancestor)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
     title: Vertex Add Path Sum (Euler Tour)
@@ -103,9 +103,9 @@ data:
   timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
   - test/library_checker/data_structure/vertex_add_path_sum_et.test.py
   - test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
-  - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
 documentation_of: tree/euler_tour.py
 layout: document
 title: Euler tour

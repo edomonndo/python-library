@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
-    title: test/aoj/dsl/dsl_3_a_smallest_window1.test.py
+    title: DSL3A Tha Smallest Window I
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/deque_operate_all_composite.test.py
     title: Deque Operate All Composite
@@ -50,8 +50,8 @@ data:
   timestamp: '2024-06-13 11:50:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/deque_operate_all_composite.test.py
   - test/aoj/dsl/dsl_3_a_smallest_window1.test.py
+  - test/library_checker/data_structure/deque_operate_all_composite.test.py
 documentation_of: data_structure/basic/FoldableDeque.py
 layout: document
 title: Foldable Deque(DSWAG)

@@ -65,8 +65,8 @@ data:
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
   - test/atcoder/arc008d_dyn_segtree.test.py
+  - test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
 documentation_of: data_structure/segtree/dynamic_segtree.py
 layout: document
 title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"

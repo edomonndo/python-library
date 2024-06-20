@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ntl/ntl_1_d_euler_phi.test.py
-    title: test/aoj/ntl/ntl_1_d_euler_phi.test.py
+    title: "NTL1D \u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

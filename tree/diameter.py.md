@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_a_diameter.test.py
-    title: test/aoj/grl/grl_5_a_diameter.test.py
+    title: "GRL5A \u6728\u306E\u76F4\u5F84"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/tree_diameter.test.py
     title: test/library_checker/tree/tree_diameter.test.py
@@ -37,8 +37,8 @@ data:
   timestamp: '2023-09-15 08:31:51+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/tree_diameter.test.py
   - test/aoj/grl/grl_5_a_diameter.test.py
+  - test/library_checker/tree/tree_diameter.test.py
 documentation_of: tree/diameter.py
 layout: document
 title: "\u6728\u306E\u76F4\u5F84"

@@ -79,16 +79,16 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - data_structure/segtree/range_set_range_composite.py
-  - data_structure/segtree/compressed_segtree.py
   - dynamic_programming/longest_increase_subsequence.py
-  - tree/euler_tour.py
+  - data_structure/segtree/compressed_segtree.py
+  - data_structure/segtree/range_set_range_composite.py
   - tree/auxiliary_tree.py
+  - tree/euler_tour.py
   timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/vertext_set_path_composite.test.py
   - test/yukicoder/875_range_mindex_query.test.py
+  - test/library_checker/data_structure/vertext_set_path_composite.test.py
 documentation_of: atcoder/segtree.py
 layout: document
 redirect_from:

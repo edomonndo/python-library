@@ -32,6 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_b_refrection.test.py
 layout: document
-title: CGL1B Refrection
+title: "CGL1B \u53CD\u5C04"
 ---
 

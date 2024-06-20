@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_c_range_search.test.py
-    title: test/aoj/dsl/dsl_2_c_range_search.test.py
+    title: "DSL2C \u9818\u57DF\u63A2\u7D22(kD\u6728)"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

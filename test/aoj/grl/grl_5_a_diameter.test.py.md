@@ -31,8 +31,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_a_diameter.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_5_a_diameter.test.py
-- /verify/test/aoj/grl/grl_5_a_diameter.test.py.html
-title: test/aoj/grl/grl_5_a_diameter.test.py
+title: "GRL5A \u6728\u306E\u76F4\u5F84"
 ---
+

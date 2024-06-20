@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_a_articulation_points.test.py
-    title: test/aoj/grl/grl_3_a_articulation_points.test.py
+    title: "GRL3A \u95A2\u7BC0\u70B9"
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_b_bridges.test.py
-    title: test/aoj/grl/grl_3_b_bridges.test.py
+    title: "GRL3B \u6A4B"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/two_edge_connected_components.test.py
     title: test/library_checker/graph/two_edge_connected_components.test.py
@@ -77,9 +77,9 @@ data:
   timestamp: '2024-06-12 10:06:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/two_edge_connected_components.test.py
   - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
+  - test/library_checker/graph/two_edge_connected_components.test.py
 documentation_of: graph/low_link.py
 layout: document
 title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"

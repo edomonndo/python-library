@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
-- /verify/test/aoj/dsl/dsl_1_b_weighted_union_find.test.py.html
-title: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
+title: "DSL1B \u91CD\u307F\u4ED8\u304DUnion Find\u6728"
 ---
+

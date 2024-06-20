@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_3_c_strongly_connected_components.test.py
-- /verify/test/aoj/grl/grl_3_c_strongly_connected_components.test.py.html
-title: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
+title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
 ---
+

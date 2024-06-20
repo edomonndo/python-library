@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_6_b_min_cost_flow.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_6_b_min_cost_flow.test.py
-- /verify/test/aoj/grl/grl_6_b_min_cost_flow.test.py.html
-title: test/aoj/grl/grl_6_b_min_cost_flow.test.py
+title: "GRL6B \u6700\u5C0F\u8CBB\u7528\u6D41"
 ---
+

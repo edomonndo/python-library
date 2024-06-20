@@ -32,6 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_b_intersection.test.py
 layout: document
-title: CGL2B Intersection
+title: "CGL2B \u4EA4\u5DEE\u5224\u5B9A"
 ---
 

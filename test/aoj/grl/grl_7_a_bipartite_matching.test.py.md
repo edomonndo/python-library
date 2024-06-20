@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_7_a_bipartite_matching.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_7_a_bipartite_matching.test.py
-- /verify/test/aoj/grl/grl_7_a_bipartite_matching.test.py.html
-title: test/aoj/grl/grl_7_a_bipartite_matching.test.py
+title: "GRL7A 2\u90E8\u30DE\u30C3\u30C1\u30F3\u30B0"
 ---
+

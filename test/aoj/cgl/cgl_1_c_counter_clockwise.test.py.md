@@ -35,6 +35,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
 layout: document
-title: CGL1C Counter Clockwise
+title: "CGL1C \u53CD\u6642\u8A08\u56DE\u308A"
 ---
 

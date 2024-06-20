@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
-    title: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
+    title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/scc.test.py
     title: test/library_checker/graph/scc.test.py
@@ -49,8 +49,8 @@ data:
   timestamp: '2023-12-04 22:53:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/scc.test.py
   - test/aoj/grl/grl_3_c_strongly_connected_components.test.py
+  - test/library_checker/graph/scc.test.py
 documentation_of: graph/scc.py
 layout: document
 title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"

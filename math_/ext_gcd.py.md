@@ -5,7 +5,8 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
-    title: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
+    title: "NTL1E \u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\
+      \u6CD5"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

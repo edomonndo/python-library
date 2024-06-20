@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
-    title: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
+    title: "DSL1B \u91CD\u307F\u4ED8\u304DUnion Find\u6728"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
