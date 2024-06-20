@@ -3,15 +3,20 @@ MOD = 998244353
 
 class Comb:
     def __init__(self, n: int):
-        fact = [1] * (n + 1)
+        fact = [0] * (n + 1)
+        inv_fact = [0] * (n + 1)
+        inv = [0] * (n + 1)
+        fact[0] = inv_fact[0] = inv[0] = 1
         for i in range(1, n + 1):
             fact[i] = fact[i - 1] * i % MOD
-        inv_fact = [1] * (n + 1)
         inv_fact[n] = pow(fact[n], -1, MOD)
-        for i in range(n - 1, -1, -1):
+        inv[n] = inv_fact[-1] * fact[-2] % MOD
+        for i in range(n - 1, 0, -1):
             inv_fact[i] = inv_fact[i + 1] * (i + 1) % MOD
+            inv[i] = inv_fact[i] * fact[i - 1] % MOD
         self.fact = fact
         self.inv_fact = inv_fact
+        self.inv = inv
 
     def nCr(self, n: int, r: int) -> int:
         if not 0 <= r <= n:

@@ -1,26 +1,31 @@
 MOD = 998244353
 
+from typing import Callable, TypeVar
+
+T = TypeVar("T")
+V = TypeVar("V")
+
 
 class TreeDp:
-    def __init__(self, n, adj, r=0):
+    def __init__(self, n: int, adj: list[list[int]], r: int = 0):
         par = [-1] * n
         children = [[] for _ in range(n)]
-        stack = [r]
         order = []
-        while stack:
-            u = stack.pop()
+        st = [r]
+        while st:
+            u = st.pop()
             order.append(u)
             for v in adj[u]:
                 if par[u] != v:
                     par[v] = u
                     children[u].append(v)
-                    stack.append(v)
+                    st.append(v)
         self.n = n
         self.par = par
         self.children = children
         self.order = order
 
-    def calc(self, MAX):
+    def calc(self, MAX: int = 200001) -> tuple[list[int], list[int], list[int]]:
         fa = [1] * (MAX + 1)
         fainv = [1] * (MAX + 1)
         inv = [1] * (MAX + 1)
@@ -33,39 +38,50 @@ class TreeDp:
             inv[i] = fainv[i] * fa[i - 1]
         return fa, fainv, inv
 
-    def size(self):
+    def size(self) -> list[int]:
+        order, par = self.order, self.par
         res = [1] * self.n
-        for v in self.order[1:][::-1]:
-            res[self.par[v]] += res[v]
+        for v in order[1:][::-1]:
+            res[par[v]] += res[v]
         return res
 
-    def dp(self, e, op):
+    def dp(self, e: T, merge: Callable[[T, T], T]) -> list[T]:
+        order, par = self.order, self.par
         res = [e] * self.n
-        for v in self.order[1:][::-1]:
-            p = self.par[v]
-            res[p] = op(res[p], res[v])
+        for v in order[1:][::-1]:
+            p = par[v]
+            res[p] = merge(res[p], res[v])
         return res
 
-    def rerooting(self, e, merge, adj_bu, adj_td, adj_fin):
+    def rerooting(
+        self,
+        e: T,
+        merge: Callable[[T, T], T],
+        op_bu: Callable[[T, V, V], T],
+        op_td: Callable[[T, V, V], T],
+        op_fin: Callable[[T, V], T],
+    ):
+        order, par, children = self.order, self.par, self.children
+
         cum_bu = [e] * self.n
         cum_td = [e] * self.n
         res = [0] * self.n
 
-        for u in self.order[1:][::-1]:
-            res[u] = adj_bu(cum_bu[u], u, self.par[u])
-            p = self.par[u]
+        for u in order[1:][::-1]:
+            p = par[u]
+            res[u] = op_bu(cum_bu[u], u, p)
             cum_bu[p] = merge(cum_bu[p], res[u])
-        r = self.order[0]
-        res[r] = adj_fin(cum_bu[r], r)
+        r = order[0]
+        res[r] = op_fin(cum_bu[r], r)
 
-        for u in self.order:
+        for u in order:
             cum = cum_td[u]
-            for v in self.children[u]:
+            for v in children[u]:
                 cum_td[v] = cum
                 cum = merge(cum, res[v])
             cum = e
-            for v in self.children[u][::-1]:
-                cum_td[v] = adj_td(merge(cum_td[v], cum), v, u)
+            for v in children[u][::-1]:
+                cum_td[v] = op_td(merge(cum_td[v], cum), v, u)
                 cum = merge(cum, res[v])
-                res[v] = adj_fin(merge(cum_bu[v], cum_td[v]), v)
+                res[v] = op_fin(merge(cum_bu[v], cum_td[v]), v)
         return res

@@ -3,12 +3,17 @@ from convolution.convolution import *
 
 class FPS:
     @staticmethod
-    def shrink(a: list) -> None:
+    def shrink(a: list[int]) -> None:
         while a and not a[-1]:
             a.pop()
 
     @staticmethod
-    def add(a: list, b: list) -> list:
+    def resize(a: list[int], size: int, val: int = 0) -> None:
+        a[size:] = []
+        a[len(a) :] = [val] * (size - len(a))
+
+    @staticmethod
+    def add(a: list[int], b: list[int]) -> list[int]:
         if len(a) < len(b):
             res = b[::]
             for i, x in enumerate(a):
@@ -20,13 +25,13 @@ class FPS:
         return [x % MOD for x in res]
 
     @staticmethod
-    def add_scalar(a: list, k: int) -> list:
+    def add_scalar(a: list[int], k: int) -> list[int]:
         res = a[:]
         res[0] = (res[0] + k) % MOD
         return res
 
     @classmethod
-    def sub(cls, a: list, b: list) -> list:
+    def sub(cls, a: list[int], b: list[int]) -> list[int]:
         if len(a) < len(b):
             res = b[::]
             for i, x in enumerate(a):
@@ -39,24 +44,23 @@ class FPS:
         return [x % MOD for x in res]
 
     @classmethod
-    def sub_scalar(cls, a: list, k: int) -> list:
+    def sub_scalar(cls, a: list[int], k: int) -> list[int]:
         return cls.add_scalar(a, -k)
 
     @staticmethod
-    def neg(a: list) -> list:
+    def neg(a: list[int]) -> list[int]:
         return [MOD - x if x else 0 for x in a]
 
     @staticmethod
-    def mul_scalar(a: list, k: int) -> list:
+    def mul_scalar(a: list[int], k: int) -> list[int]:
         return [x * k % MOD for x in a]
 
     @staticmethod
-    def matmul(a: list, b: list) -> list:
-        "not verified"
+    def matmul(a: list[int], b: list[int]) -> list[int]:
         return [x * b[i] % MOD for i, x in enumerate(a)]
 
     @classmethod
-    def div(cls, a: list, b: list) -> list:
+    def div(cls, a: list[int], b: list[int]) -> list[int]:
         if len(a) < len(b):
             return []
         n = len(a) - len(b) + 1
@@ -79,14 +83,14 @@ class FPS:
         return cls.mul_scalar(quo, coef) + [0] * cnt
 
     @classmethod
-    def mod(cls, a: list, b: list) -> list:
+    def mod(cls, a: list[int], b: list[int]) -> list[int]:
         res = cls.sub(a, multiply(cls.div(a, b), b))
         while res and not res[-1]:
             res.pop()
         return res
 
     @classmethod
-    def divmod(cls, a: list, b: list):
+    def divmod(cls, a: list[int], b: list[int]) -> tuple[list[int], list[int]]:
         q = cls.div(a, b)
         r = cls.sub(a, multiply(q, b))
         while r and not r[-1]:
@@ -94,7 +98,7 @@ class FPS:
         return q, r
 
     @staticmethod
-    def mod_sqrt(a: int, p: int):
+    def mod_sqrt(a: int, p: int) -> int:
         "x s.t. x**2 == a (mod p) if exist else -1"
         if a < 2:
             return a
@@ -126,7 +130,7 @@ class FPS:
         return x
 
     @classmethod
-    def sqrt(cls, a: list, deg=-1) -> list:
+    def sqrt(cls, a: list[int], deg=-1) -> list[int]:
         if deg == -1:
             deg = len(a)
         if len(a) == 0:
@@ -158,7 +162,7 @@ class FPS:
         return ret[:deg]
 
     @staticmethod
-    def eval(a: list, x: int) -> int:
+    def eval(a: list[int], x: int) -> int:
         r = 0
         w = 1
         for v in a:
@@ -167,7 +171,7 @@ class FPS:
         return r % MOD
 
     @staticmethod
-    def inv(a: list, deg: int = -1) -> list:
+    def inv(a: list[int], deg: int = -1) -> list[int]:
         # assert(self[0] != 0)
         if deg == -1:
             deg = len(a)
@@ -199,49 +203,49 @@ class FPS:
         return res
 
     @classmethod
-    def pow(cls, a: list, k: int, deg=-1) -> list:
+    def pow(cls, a: list[int], k: int, deg=-1) -> list[int]:
         n = len(a)
         if deg == -1:
             deg = n
         if k == 0:
             if not deg:
                 return []
-            ret = [0] * deg
-            ret[0] = 1
-            return ret
+            res = [0] * deg
+            res[0] = 1
+            return res
         for i, x in enumerate(a):
             if x:
                 rev = pow(x, MOD - 2, MOD)
-                ret = cls.mul_scalar(
+                res = cls.mul_scalar(
                     cls.exp(
                         cls.mul_scalar(cls.log(cls.mul_scalar(a, rev)[i:], deg), k), deg
                     ),
                     pow(x, k, MOD),
                 )
-                ret[:0] = [0] * (i * k)
-                if len(ret) < deg:
-                    ret[len(ret) :] = [0] * (deg - len(ret))
-                    return ret
-                return ret[:deg]
+                res[:0] = [0] * (i * k)
+                if len(res) < deg:
+                    res[len(res) :] = [0] * (deg - len(res))
+                    return res
+                return res[:deg]
             if (i + 1) * k >= deg:
                 break
         return [0] * deg
 
     @staticmethod
-    def exp(a: list, deg=-1) -> list:
+    def exp(a: list[int], deg=-1) -> list[int]:
         # assert(not self or self[0] == 0)
         if deg == -1:
             deg = len(a)
         inv = [0, 1]
 
-        def inplace_integral(F: list) -> list:
+        def inplace_integral(F: list[int]) -> list[int]:
             n = len(F)
             while len(inv) <= n:
                 j, k = divmod(MOD, len(inv))
                 inv.append((-inv[k] * j) % MOD)
             return [0] + [x * inv[i + 1] % MOD for i, x in enumerate(F)]
 
-        def inplace_diff(F: list) -> list:
+        def inplace_diff(F: list[int]) -> list[int]:
             return [x * i % MOD for i, x in enumerate(F) if i]
 
         b = [1, (a[1] if 1 < len(a) else 0)]
@@ -296,14 +300,14 @@ class FPS:
         return b[:deg]
 
     @classmethod
-    def log(cls, a: list, deg=-1) -> list:
+    def log(cls, a: list[int], deg=-1) -> list[int]:
         # assert(a[0] == 1)
         if deg == -1:
             deg = len(a)
         return cls.integral(multiply(cls.fps_diff(a), cls.inv(a, deg))[: deg - 1])
 
     @staticmethod
-    def integral(a: list) -> list:
+    def integral(a: list[int]) -> list[int]:
         n = len(a)
         res = [0] * (n + 1)
         if n:
@@ -316,178 +320,5 @@ class FPS:
         return res
 
     @staticmethod
-    def fps_diff(a: list) -> list:
+    def fps_diff(a: list[int]) -> list[int]:
         return [i * x % MOD for i, x in enumerate(a) if i]
-
-    @staticmethod
-    def composition(a: list, b: list) -> list:
-        deg = min(len(a), len(b))
-        k = int(deg**0.5 + 1)
-        d = (deg + k) // k
-
-        X = [[] for _ in range(k + 1)]
-        X[0] = [1]
-        for i, x in enumerate(X):
-            if i == k:
-                break
-            X[i + 1] = multiply(x, b)[: deg + 1]
-
-        Y = [[0] * len(X[-1]) for _ in range(k)]
-        X[d + 1 :] = []
-        xd = X.pop()
-        for i, y in enumerate(Y):
-            for j, x in enumerate(X):
-                if i * d + j >= deg:
-                    break
-                for t in range(min(deg + 1, len(x))):
-                    if t < len(y):
-                        y[t] += x[t] * a[i * d + j] % MOD
-
-        F = [0] * (deg + 1)
-        Z = [1]
-        for i, y in enumerate(Y):
-            tmp = multiply(y, Z)[: deg + 1]
-            for j, yy in enumerate(tmp):
-                F[j] += yy
-            Z = multiply(Z, xd)[: deg + 1]
-        res = [x % MOD for x in F]
-        res.pop()
-        return res
-
-    @staticmethod
-    def chirp_z(f: list, W: int, N: int = -1, A: int = 1) -> list:
-        if N == -1:
-            N = len(f)
-        if not f or N == 0:
-            return []
-        M = len(f)
-        if A != -1:
-            x = 1
-            for i in range(M):
-                f[i] = f[i] * x % MOD
-                x = x * A % MOD
-        if W == 0:
-            F = [f[0]] * N
-            F[0] = sum(f) % MOD
-            return F
-        wc = [0] * (N + M)
-        iwc = [0] * max(N, M)
-        ws = 1
-        iW = pow(W, MOD - 2, MOD)
-        iws = 1
-        wc[0] = iwc[0] = 1
-        tmp = 1
-        for i in range(1, N + M):
-            wc[i] = tmp = ws * tmp % MOD
-            ws = ws * W % MOD
-        tmp = 1
-        for i in range(1, max(N, M)):
-            iwc[i] = tmp = iws * tmp % MOD
-            iws = iws * iW % MOD
-        for i, x in enumerate(f):
-            f[i] = x * iwc[i] % MOD
-        f.reverse()
-        g = multiply(f, wc)
-        F = [0] * N
-        for i, x in enumerate(iwc):
-            if i == N:
-                break
-            F[i] = g[M - 1 + i] * x % MOD
-        return F
-
-    @staticmethod
-    def multivariate_multiplication(f: list, g: list, base: list) -> list:
-        n = len(f)
-        s = len(base)
-        W = 1
-        if s == 0:
-            return [f[0] * g[0] % MOD]
-        while W < n << 1:
-            W <<= 1
-        chi = [0] * n
-        for i in range(n):
-            x = i
-            for j in range(s - 1):
-                x //= base[j]
-                chi[i] += x
-            chi[i] %= s
-        F = [[0] * W for _ in range(s)]
-        G = [[0] * W for _ in range(s)]
-        for i, j in enumerate(chi):
-            F[j][i] = f[i]
-            G[j][i] = g[i]
-        for i in range(s):
-            ntt(F[i])
-            ntt(G[i])
-        for k in range(W):
-            a = [0] * s
-            for i, f in enumerate(F):
-                tmp = f[k]
-                for j, g in enumerate(G):
-                    a[i + j - (s if i + j >= s else 0)] += tmp * g[k] % MOD
-            for i, f in enumerate(F):
-                f[k] = a[i] % MOD
-        for f in F:
-            intt(f)
-        return [F[j][i] for i, j in enumerate(chi)]
-
-    @classmethod
-    def multipoint_evaluation(cls, f: list, xs: list) -> list:
-        s = len(xs)
-        N = 1 << (s - 1).bit_length() if s != 1 else 2
-        if not f or not xs:
-            return [0] * s
-        buf = [[] for _ in range(N << 1)]
-        for i in range(N):
-            n = -xs[i] if i < s else 0
-            buf[i + N] = [n + 1, n - 1]
-        for i in range(N - 1, 0, -1):
-            g = buf[i << 1 | 0]
-            h = buf[i << 1 | 1]
-            n = len(g)
-            m = n << 1
-            buf[i][n:] = []
-            buf[i][len(buf[i]) :] = [0] * (n - len(buf[i]))
-            for j in range(n):
-                buf[i][j] = g[j] * h[j] % MOD - 1
-            if i != 1:
-                ntt_doubling(buf[i])
-                buf[i][len(buf[i]) :] = [0] * (m - len(buf[i]))
-                for j in range(m):
-                    buf[i][j] += 1 if j < n else -1
-        fs = len(f)
-        root = buf[1]
-        intt(root)
-        root.append(1)
-        root.reverse()
-        tmp = cls.inv(root, fs)
-        tmp.reverse()
-        root = multiply(tmp, f)
-        root[: fs - 1] = []
-        root[N:] = []
-        root[len(root) :] = [0] * (N - len(root))
-
-        ans = [0] * s
-
-        def calc(i: int, l: int, r: int, g: list) -> None:
-            if i >= N:
-                ans[i - N] = g[0]
-                return
-            length = len(g)
-            m = l + r >> 1
-            ntt(g)
-            tmp = buf[i << 1 | 1]
-            for j in range(length):
-                tmp[j] = tmp[j] * g[j] % MOD
-            intt(tmp)
-            calc(i << 1, l, m, tmp[length >> 1 :])
-            if m >= s:
-                return
-            tmp = buf[i << 1 | 0]
-            for j in range(length):
-                tmp[j] = tmp[j] * g[j] % MOD
-            intt(tmp)
-            calc(i << 1 | 1, m, r, tmp[length >> 1 :])
-
-        calc(1, 0, N, root)
-        return ans
