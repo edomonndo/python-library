@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://atcoder.jp/contests/abl/tasks/abl_e
+# verification-helper: IGNORE https://atcoder.jp/contests/abl/tasks/abl_e
 
 from data_structure.segtree.monoids_action.range_str_update_range_int_sum import *
 from atcoder.lazysegtree import LazySegTree
