@@ -7,10 +7,15 @@ Point = TypeVar("Point")
 class StaticTopTree:
     def __init__(
         self,
+        # 頂点 v のみからなる path cluster を生成する.
         vertex: Callable[[int], Path],
+        # path cluster t に virtual な根を生やして point cluster にする.
         add_edge: Callable[[Path], Point],
+        # point cluster t の根に頂点 v を代入して path cluster にする.
         add_vertex: Callable[[Path], Point],
+        # path cluster p,c (p が根に近い側にある) をマージする.
         compress: Callable[[Path, Path], Path],
+        # point cluster x,y をマージする.
         rake: Callable[[Point, Point], Point],
         e_path: Path,
         e_point: Point,
@@ -143,7 +148,7 @@ class StaticTopTree:
     def update(self, k: int) -> None:
         t = self.vtype[k]
         if t == 0:
-            self.path_cluster_val[k] = vertex(k)
+            self.path_cluster_val[k] = self.vertex(k)
         elif t == 1:
             self.point_cluster_val[k] = self.add_edge(self.path_cluster_val[self.L[k]])
         elif t == 2:
@@ -161,27 +166,3 @@ class StaticTopTree:
 
     def solve(self) -> Path:
         return self.path_cluster_val[self.stt_root]
-
-
-def vertex(v: int) -> Path:
-    """頂点 v のみからなる path cluster を生成する."""
-    pass
-
-
-def add_edge(t: Path) -> Point:
-    """path cluster t に virtual な根を生やして point cluster にする."""
-    pass
-
-
-def add_vertex(t: Point, v: int) -> Path:
-    """point cluster t の根に頂点 v を代入して path cluster にする."""
-
-
-def compress(p: Path, c: Path) -> Path:
-    """path cluster p,c (p が根に近い側にある) をマージする."""
-    pass
-
-
-def rake(l: Point, r: Point) -> Point:
-    """point cluster x,y をマージする."""
-    pass
