@@ -5,7 +5,7 @@ data:
     path: convolution/convolution.py
     title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/composition.py
     title: convolution/composition.py
   - icon: ':heavy_check_mark:'

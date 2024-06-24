@@ -5,7 +5,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/chirp_z.py
     title: convolution/chirp_z.py
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/composition.py
     title: convolution/composition.py
   - icon: ':heavy_check_mark:'

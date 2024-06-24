@@ -50,7 +50,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/chirp_z.py
       title: convolution/chirp_z.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: convolution/composition.py
       title: convolution/composition.py
     - icon: ':heavy_check_mark:'
@@ -1067,7 +1067,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
     - icon: ':heavy_check_mark:'

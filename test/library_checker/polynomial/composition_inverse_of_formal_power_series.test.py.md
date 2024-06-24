@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/composition.py
     title: convolution/composition.py
   _extendedRequiredBy: []
@@ -34,7 +34,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
   requiredBy: []
-  timestamp: '2024-06-24 10:43:50+09:00'
+  timestamp: '2024-06-24 11:13:31+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
