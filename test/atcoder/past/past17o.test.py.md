@@ -35,8 +35,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/past/past17o.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/past/past17o.test.py
-- /verify/test/atcoder/past/past17o.test.py.html
-title: test/atcoder/past/past17o.test.py
+title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
 ---

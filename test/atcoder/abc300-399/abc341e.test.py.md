@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':question:'
     path: atcoder/lazysegtree.py
     title: atcoder/lazysegtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':grey_question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    IGNORE: https://atcoder.jp/contests/abc341/tasks/abc341_e
+    PROBLEM: https://atcoder.jp/contests/abc341/tasks/abc341_e
     links:
     - https://atcoder.jp/contests/abc341/tasks/abc341_e
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc341/tasks/abc341_e\n\
+  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc341/tasks/abc341_e\n\
     from atcoder.lazysegtree import LazySegTree\n\n\ndef op(x, y):\n    if x == -1:\n\
     \        return y\n    if y == -1:\n        return x\n    ok1, l1, r1 = x >> 2\
     \ & 1, x >> 1 & 1, x & 1\n    ok2, l2, r2 = y >> 2 & 1, y >> 1 & 1, y & 1\n  \
@@ -34,15 +34,12 @@ data:
   dependsOn:
   - atcoder/lazysegtree.py
   isVerificationFile: true
-  path: test/atcoder/abc341c.test.py
+  path: test/atcoder/abc300-399/abc341e.test.py
   requiredBy: []
-  timestamp: '2024-06-05 17:57:14+09:00'
-  verificationStatus: TEST_IGNORED
+  timestamp: '2024-06-24 17:00:04+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/atcoder/abc341c.test.py
+documentation_of: test/atcoder/abc300-399/abc341e.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc341c.test.py
-- /verify/test/atcoder/abc341c.test.py.html
-title: test/atcoder/abc341c.test.py
+title: E - Alternating String
 ---

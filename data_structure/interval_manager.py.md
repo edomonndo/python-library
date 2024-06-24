@@ -1,21 +1,24 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: data_structure/basic/SortedSet.py
+    title: SortedSet
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past6m.test.py
-    title: test/atcoder/past/past6m.test.py
-  _isVerificationFailed: true
+    title: "M - \u7B49\u3057\u3044\u6570"
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from data_structure.SortedSet import SortedSet\n\n\nclass IntervalManager:\n\
+  code: "from data_structure.basic.SortedSet import SortedSet\n\n\nclass IntervalManager:\n\
     \    class Node:\n        def __init__(self, l: int, r: int, x: int):\n      \
     \      self.l = l\n            self.r = r\n            self.x = x\n\n        def\
     \ __lt__(self, other):\n            if self.l == other.l:\n                return\
@@ -57,12 +60,13 @@ data:
     \          s.add(z)\n                    it = z\n        self._add(l, r, x)\n\
     \        s.add(self.Node(l, r, x))\n\n    def __repr__(self):\n        return\
     \ \"\".join(*self.s)\n"
-  dependsOn: []
+  dependsOn:
+  - data_structure/basic/SortedSet.py
   isVerificationFile: false
   path: data_structure/interval_manager.py
   requiredBy: []
-  timestamp: '2024-03-28 07:49:10+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-06-24 17:00:04+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past6m.test.py
 documentation_of: data_structure/interval_manager.py

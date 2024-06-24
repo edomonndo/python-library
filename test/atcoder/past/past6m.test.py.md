@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/interval_manager.py
     title: "\u533A\u9593\u7BA1\u7406"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://atcoder.jp/contests/past202104-open/tasks/past202104_m
     links:
@@ -30,13 +30,10 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past6m.test.py
   requiredBy: []
-  timestamp: '2024-06-24 15:14:33+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-24 17:00:04+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/past/past6m.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/past/past6m.test.py
-- /verify/test/atcoder/past/past6m.test.py.html
-title: test/atcoder/past/past6m.test.py
+title: "M - \u7B49\u3057\u3044\u6570"
 ---

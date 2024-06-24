@@ -7,8 +7,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':grey_question:'
-    path: test/atcoder/arc008d_segtree.test.py
-    title: test/atcoder/arc008d_segtree.test.py
+    path: test/atcoder/arc/arc008d_segtree.test.py
+    title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
+      \uFF08\u30BB\u30B0\u6728\uFF09"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
@@ -37,7 +38,7 @@ data:
   timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
-  - test/atcoder/arc008d_segtree.test.py
+  - test/atcoder/arc/arc008d_segtree.test.py
 documentation_of: data_structure/segtree/compressed_segtree.py
 layout: document
 title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"

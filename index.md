@@ -18,7 +18,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
-    - icon: ':warning:'
+    - icon: ':question:'
       path: atcoder/lazysegtree.py
       title: atcoder/lazysegtree.py
     - icon: ':warning:'
@@ -141,7 +141,7 @@ data:
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
@@ -150,7 +150,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/li_chao_tree.py
       title: Li Chao Tree
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/mo.py
       title: Mo's Algorithm
     - icon: ':heavy_check_mark:'
@@ -224,11 +224,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dual_segment_tree.py
       title: "\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dual Segment Tree)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dual_segment_tree_commutative.py
       title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (Dual Segment Tree)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -538,7 +538,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
-    - icon: ':warning:'
+    - icon: ':x:'
       path: tree/centroid_decomposition.py
       title: "\u91CD\u5FC3\u5206\u89E3"
     - icon: ':warning:'
@@ -781,40 +781,48 @@ data:
       path: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
       title: "NTL1E \u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\
         \u6CD5"
-  - name: test/atcoder
+  - name: test/atcoder/abc001-99
     pages:
+    - icon: ':x:'
+      path: test/atcoder/abc001-99/abc035c.test.py
+      title: "C - \u30AA\u30BB\u30ED"
+  - name: test/atcoder/abc200-299
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc200-299/abc242g.test.py
+      title: G - Range Pairing Query
+    - icon: ':x:'
+      path: test/atcoder/abc200-299/abc291h.test.py
+      title: H - Balanced Tree
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc200-299/abc293g.test.py
+      title: test/atcoder/abc200-299/abc293g.test.py
+  - name: test/atcoder/abc300-399
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc300-399/abc341e.test.py
+      title: E - Alternating String
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc300-399/abc342g.test.py
+      title: G - Retroactive Range Chmax
+  - name: test/atcoder/arc
+    pages:
+    - icon: ':x:'
+      path: test/atcoder/arc/arc008d_dyn_segtree.test.py
+      title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
+        \uFF08\u52D5\u7684\u30BB\u30B0\u6728\uFF09"
     - icon: ':grey_question:'
-      path: test/atcoder/abc035c.test.py
-      title: test/atcoder/abc035c.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/abc242g.test.py
-      title: test/atcoder/abc242g.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/abc291h.test.py
-      title: test/atcoder/abc291h.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/abc293g.test.py
-      title: test/atcoder/abc293g.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/abc341c.test.py
-      title: test/atcoder/abc341c.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/abc342g.test.py
-      title: test/atcoder/abc342g.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/arc008d_dyn_segtree.test.py
-      title: test/atcoder/arc008d_dyn_segtree.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/arc008d_segtree.test.py
-      title: test/atcoder/arc008d_segtree.test.py
+      path: test/atcoder/arc/arc008d_segtree.test.py
+      title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
+        \uFF08\u30BB\u30B0\u6728\uFF09"
   - name: test/atcoder/past
     pages:
     - icon: ':x:'
       path: test/atcoder/past/past17o.test.py
-      title: test/atcoder/past/past17o.test.py
-    - icon: ':x:'
+      title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/past/past6m.test.py
-      title: test/atcoder/past/past6m.test.py
+      title: "M - \u7B49\u3057\u3044\u6570"
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'

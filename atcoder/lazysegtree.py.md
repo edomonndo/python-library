@@ -9,15 +9,15 @@ data:
     path: tree/permutation_tree.py
     title: tree/permutation_tree.py
   _extendedVerifiedWith:
-  - icon: ':grey_question:'
-    path: test/atcoder/abc035c.test.py
-    title: test/atcoder/abc035c.test.py
-  - icon: ':grey_question:'
-    path: test/atcoder/abc341c.test.py
-    title: test/atcoder/abc341c.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/atcoder/abc001-99/abc035c.test.py
+    title: "C - \u30AA\u30BB\u30ED"
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc300-399/abc341e.test.py
+    title: E - Alternating String
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -110,10 +110,10 @@ data:
   - geometory/union_area_rectangle.py
   - tree/permutation_tree.py
   timestamp: '2024-06-05 17:57:14+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/atcoder/abc035c.test.py
-  - test/atcoder/abc341c.test.py
+  - test/atcoder/abc300-399/abc341e.test.py
+  - test/atcoder/abc001-99/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document
 redirect_from:

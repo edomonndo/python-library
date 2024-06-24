@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':grey_question:'
-    path: test/atcoder/abc242g.test.py
-    title: test/atcoder/abc242g.test.py
-  - icon: ':grey_question:'
-    path: test/atcoder/abc293g.test.py
-    title: test/atcoder/abc293g.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc200-299/abc242g.test.py
+    title: G - Range Pairing Query
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc200-299/abc293g.test.py
+    title: test/atcoder/abc200-299/abc293g.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -53,10 +53,10 @@ data:
   path: data_structure/mo.py
   requiredBy: []
   timestamp: '2024-02-28 11:58:42+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/abc242g.test.py
-  - test/atcoder/abc293g.test.py
+  - test/atcoder/abc200-299/abc242g.test.py
+  - test/atcoder/abc200-299/abc293g.test.py
 documentation_of: data_structure/mo.py
 layout: document
 title: Mo's Algorithm

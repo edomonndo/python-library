@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segtree/dynamic_segtree.py
     title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':grey_question:'
+  _verificationStatusIcon: ':x:'
   attributes:
-    IGNORE: https://atcoder.jp/contests/arc008/tasks/arc008_4
+    PROBLEM: https://atcoder.jp/contests/arc008/tasks/arc008_4
     links:
     - https://atcoder.jp/contests/arc008/tasks/arc008_4
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
+  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
     \nfrom data_structure.segtree.dynamic_segtree import DynamicSegtree\n\n\ndef op(x,\
     \ y):\n    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\ne = (1,\
     \ 0)\n\nn, m = map(int, input().split())\nseg = DynamicSegtree(n, op, e)\ninf\
@@ -27,15 +27,13 @@ data:
   dependsOn:
   - data_structure/segtree/dynamic_segtree.py
   isVerificationFile: true
-  path: test/atcoder/arc008d_dyn_segtree.test.py
+  path: test/atcoder/arc/arc008d_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: TEST_IGNORED
+  timestamp: '2024-06-24 17:00:04+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/atcoder/arc008d_dyn_segtree.test.py
+documentation_of: test/atcoder/arc/arc008d_dyn_segtree.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/arc008d_dyn_segtree.test.py
-- /verify/test/atcoder/arc008d_dyn_segtree.test.py.html
-title: test/atcoder/arc008d_dyn_segtree.test.py
+title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\uFF08\
+  \u52D5\u7684\u30BB\u30B0\u6728\uFF09"
 ---

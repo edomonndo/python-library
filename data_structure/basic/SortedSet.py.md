@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: data_structure/interval_manager.py
+    title: "\u533A\u9593\u7BA1\u7406"
+  - icon: ':heavy_check_mark:'
     path: geometory/manhattan_mst.py
     title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
       \u57DF\u6728"
@@ -83,6 +86,7 @@ data:
   path: data_structure/basic/SortedSet.py
   requiredBy:
   - geometory/manhattan_mst.py
+  - data_structure/interval_manager.py
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

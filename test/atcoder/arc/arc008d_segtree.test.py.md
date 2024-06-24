@@ -29,15 +29,13 @@ data:
   dependsOn:
   - data_structure/segtree/compressed_segtree.py
   isVerificationFile: true
-  path: test/atcoder/arc008d_segtree.test.py
+  path: test/atcoder/arc/arc008d_segtree.test.py
   requiredBy: []
-  timestamp: '2024-06-04 16:16:37+09:00'
+  timestamp: '2024-06-24 17:00:04+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
-documentation_of: test/atcoder/arc008d_segtree.test.py
+documentation_of: test/atcoder/arc/arc008d_segtree.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/arc008d_segtree.test.py
-- /verify/test/atcoder/arc008d_segtree.test.py.html
-title: test/atcoder/arc008d_segtree.test.py
+title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\uFF08\
+  \u30BB\u30B0\u6728\uFF09"
 ---

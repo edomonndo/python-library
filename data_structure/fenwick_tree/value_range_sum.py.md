@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':x:'
     path: test/atcoder/past/past17o.test.py
-    title: test/atcoder/past/past17o.test.py
+    title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':x:'

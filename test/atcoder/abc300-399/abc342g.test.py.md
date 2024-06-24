@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/SortedMultiset.py
     title: SortedMultiset
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/dual_segment_tree_commutative.py
     title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
       \ (Dual Segment Tree)"
@@ -12,16 +12,16 @@ data:
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':grey_question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    IGNORE: https://atcoder.jp/contests/abc342/tasks/abc342_g
+    PROBLEM: https://atcoder.jp/contests/abc342/tasks/abc342_g
     links:
     - https://atcoder.jp/contests/abc342/tasks/abc342_g
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc342/tasks/abc342_g\n\
+  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc342/tasks/abc342_g\n\
     \nfrom data_structure.segtree.dual_segment_tree_commutative import DualSegtreeCommutative\n\
     from data_structure.basic.SortedMultiset import SortedMultiset\n\n\ndef op(f:\
     \ int, S: SortedMultiset):\n    if f > 0:\n        S.add(f)\n    elif f < 0:\n\
@@ -38,15 +38,12 @@ data:
   - data_structure/segtree/dual_segment_tree_commutative.py
   - data_structure/basic/SortedMultiset.py
   isVerificationFile: true
-  path: test/atcoder/abc342g.test.py
+  path: test/atcoder/abc300-399/abc342g.test.py
   requiredBy: []
-  timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: TEST_IGNORED
+  timestamp: '2024-06-24 17:00:04+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/atcoder/abc342g.test.py
+documentation_of: test/atcoder/abc300-399/abc342g.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc342g.test.py
-- /verify/test/atcoder/abc342g.test.py.html
-title: test/atcoder/abc342g.test.py
+title: G - Retroactive Range Chmax
 ---
