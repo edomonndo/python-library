@@ -50,7 +50,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/chirp_z.py
       title: convolution/chirp_z.py
-    - icon: ':x:'
+    - icon: ':question:'
       path: convolution/composition.py
       title: convolution/composition.py
     - icon: ':heavy_check_mark:'
@@ -59,7 +59,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
       title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: convolution/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':heavy_check_mark:'
@@ -68,10 +68,10 @@ data:
     - icon: ':warning:'
       path: convolution/multivariate_multiplication.py
       title: convolution/multivariate_multiplication.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/product_tree.py
       title: convolution/product_tree.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/sample_point_shift.py
       title: convolution/sample_point_shift.py
     - icon: ':heavy_check_mark:'
@@ -1064,13 +1064,13 @@ data:
       title: test/library_checker/matrix/system_of_linear_equations.test.py
   - name: test/library_checker/polynomial
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
     - icon: ':x:'
       path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/division_of_polynomials.test.py
       title: test/library_checker/polynomial/division_of_polynomials.test.py
     - icon: ':heavy_check_mark:'
@@ -1097,10 +1097,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_interpolation.test.py
       title: test/library_checker/polynomial/polynomial_interpolation.test.py
     - icon: ':heavy_check_mark:'
@@ -1115,7 +1115,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
       title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
       title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
     - icon: ':heavy_check_mark:'

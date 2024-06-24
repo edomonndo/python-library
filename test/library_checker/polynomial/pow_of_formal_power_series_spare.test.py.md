@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
@@ -26,7 +26,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
+  timestamp: '2024-06-20 12:15:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py

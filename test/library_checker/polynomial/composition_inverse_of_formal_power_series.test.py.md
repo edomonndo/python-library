@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: convolution/composition.py
     title: convolution/composition.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/compositional_inverse_of_formal_power_series
     links:
@@ -34,8 +34,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
   requiredBy: []
-  timestamp: '2024-06-20 10:59:04+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-24 10:43:50+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
 layout: document

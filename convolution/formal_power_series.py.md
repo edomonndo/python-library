@@ -5,17 +5,17 @@ data:
     path: convolution/convolution.py
     title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: convolution/composition.py
     title: convolution/composition.py
   - icon: ':heavy_check_mark:'
     path: convolution/multipoint_evaluation.py
     title: convolution/multipoint_evaluation.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/product_tree.py
     title: convolution/product_tree.py
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
     title: test/library_checker/polynomial/division_of_polynomials.test.py
   - icon: ':heavy_check_mark:'
@@ -51,9 +51,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/sqrt_of_formal_power_series_spare.test.py
     title: test/library_checker/polynomial/sqrt_of_formal_power_series_spare.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -192,7 +192,7 @@ data:
   - convolution/product_tree.py
   - convolution/composition.py
   timestamp: '2024-06-20 12:15:41+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/log_of_formal_power_series.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series.test.py

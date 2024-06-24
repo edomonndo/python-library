@@ -5,10 +5,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/chirp_z.py
     title: convolution/chirp_z.py
-  - icon: ':x:'
+  - icon: ':question:'
     path: convolution/composition.py
     title: convolution/composition.py
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: convolution/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   - icon: ':heavy_check_mark:'
@@ -17,10 +17,10 @@ data:
   - icon: ':warning:'
     path: convolution/multivariate_multiplication.py
     title: convolution/multivariate_multiplication.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/product_tree.py
     title: convolution/product_tree.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/sample_point_shift.py
     title: convolution/sample_point_shift.py
   - icon: ':heavy_check_mark:'
