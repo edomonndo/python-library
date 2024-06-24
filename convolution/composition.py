@@ -20,7 +20,6 @@ def _composition_main(
     d: int,
     k: int,
     deg: int,
-    multi: bool = False,
 ) -> None:
     sz = len(a)
     Z = [1]
@@ -32,15 +31,10 @@ def _composition_main(
                 break
             for t, x in enumerate(x_):
                 Y[t] += x * a[i * d + j] % MOD
-        Y = multiply(Y, Z)
-        Y[deg + 1 :] = []
+        Y = multiply(Y, Z)[: deg + 1]
         for j, y in enumerate(Y):
             F[j] += y
-        Z = multiply(Z, xd)
-        if multi:
-            Z[deg + 1 :] = []
-        else:
-            Z[deg + 1] = []
+        Z = multiply(Z, xd)[: deg + 1]
     F.pop()
     return [x % MOD for x in F]
 
@@ -65,7 +59,7 @@ def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[
     X[d + 1 :] = []
     xd = X.pop()
     sz_y = len(X[-1])
-    return [_composition_main(X, a, sz_y, xd, d, k, deg, True) for a in a_]
+    return [_composition_main(X, a, sz_y, xd, d, k, deg) for a in a_]
 
 
 def composition_inverse(f: list[int], deg: int = -1) -> list[int]:
