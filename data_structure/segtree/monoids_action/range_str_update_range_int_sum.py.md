@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':x:'
     path: test/atcoder/other/able.test.py
-    title: test/atcoder/other/able.test.py
+    title: E - Replace Digits
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':x:'

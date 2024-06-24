@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/static_top_tree.py
     title: Static Top Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://atcoder.jp/contests/abc351/tasks/abc351_g
     links:
@@ -35,8 +35,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc351g.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:29:04+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-24 17:46:05+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc351g.test.py
 layout: document

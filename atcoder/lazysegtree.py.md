@@ -20,7 +20,7 @@ data:
     title: F - Two Sequence Queries
   - icon: ':x:'
     path: test/atcoder/other/able.test.py
-    title: test/atcoder/other/able.test.py
+    title: E - Replace Digits
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':question:'

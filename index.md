@@ -166,7 +166,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_mode_query.py
       title: "\u533A\u9593\u6700\u983B\u5024\u30AF\u30A8\u30EA"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/static_top_tree.py
       title: Static Top Tree
     - icon: ':heavy_check_mark:'
@@ -813,7 +813,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc300-399/abc342g.test.py
       title: G - Retroactive Range Chmax
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/abc300-399/abc351g.test.py
       title: G - Hash on Tree
     - icon: ':x:'
@@ -833,7 +833,7 @@ data:
     pages:
     - icon: ':x:'
       path: test/atcoder/other/able.test.py
-      title: test/atcoder/other/able.test.py
+      title: E - Replace Digits
   - name: test/atcoder/past
     pages:
     - icon: ':grey_question:'

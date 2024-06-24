@@ -13,14 +13,14 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://atcoder.jp/contests/abc339/tasks/abc339_g
+    PROBLEM: https://atcoder.jp/contests/abc357/tasks/abc357_f
     links:
-    - https://atcoder.jp/contests/abc339/tasks/abc339_g
+    - https://atcoder.jp/contests/abc357/tasks/abc357_f
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc339/tasks/abc339_g\n\
+  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc357/tasks/abc357_f\n\
     \nfrom data_structure.segtree.monoids_action.range_add_range_product_sum import\
     \ *\nfrom atcoder.lazysegtree import LazySegTree\n\nn, q = map(int, input().split())\n\
     A = [int(x) for x in input().split()]\nB = [int(x) for x in input().split()]\n\
@@ -35,7 +35,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc357f.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:29:04+09:00'
+  timestamp: '2024-06-24 17:46:05+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc357f.test.py
