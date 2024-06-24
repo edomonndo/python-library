@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/compositional_inverse_of_formal_power_series
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/division_of_polynomials
 from convolution.formal_power_series import FPS
 
 n, m = map(int, input().split())

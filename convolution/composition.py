@@ -2,7 +2,7 @@ from convolution.convolution import *
 from convolution.formal_power_series import FPS
 
 
-def _composition_preprocess(b: list[int], d: int, k: int, deg: int) -> list[int]:
+def _composition_preprocess(b: list[int], k: int, deg: int) -> list[int]:
     X = [[] for _ in range(k + 1)]
     X[0] = [1]
     for i, x in enumerate(X):
@@ -13,7 +13,14 @@ def _composition_preprocess(b: list[int], d: int, k: int, deg: int) -> list[int]
 
 
 def _composition_main(
-    X: list[list[int]], a: list[int], sz_y: int, xd: int, d: int, k: int, deg: int
+    X: list[list[int]],
+    a: list[int],
+    sz_y: int,
+    xd: int,
+    d: int,
+    k: int,
+    deg: int,
+    multi: bool = False,
 ) -> None:
     sz = len(a)
     Z = [1]
@@ -30,7 +37,10 @@ def _composition_main(
         for j, y in enumerate(Y):
             F[j] += y
         Z = multiply(Z, xd)
-        Z[deg + 1] = []
+        if multi:
+            Z[deg + 1 :] = []
+        else:
+            Z[deg + 1] = []
     F.pop()
     return [x % MOD for x in F]
 
@@ -40,7 +50,7 @@ def composition(a: list[int], b: list[int]) -> list[int]:
     k = int(deg**0.5 + 1)
     d = (deg + k) // k
 
-    X = _composition_preprocess(b, d, k, deg)
+    X = _composition_preprocess(b, k, deg)
     sz_y = len(X[-1])
     X[d + 1 :] = []
     xd = X.pop()
@@ -51,11 +61,11 @@ def composition_multi(a_: list[list[int]], b: list[int], deg: int) -> list[list[
     k = int(deg**0.5 + 1)
     d = (deg + k) // k
 
-    X = _composition_preprocess(b, d, k, deg)
-    sz_y = len(X[-1])
+    X = _composition_preprocess(b, k, deg)
     X[d + 1 :] = []
     xd = X.pop()
-    return [_composition_main(X, a, sz_y, xd, d, k, deg) for a in a_]
+    sz_y = len(X[-1])
+    return [_composition_main(X, a, sz_y, xd, d, k, deg, True) for a in a_]
 
 
 def composition_inverse(f: list[int], deg: int = -1) -> list[int]:
