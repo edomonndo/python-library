@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':grey_question:'
-    path: test/atcoder/past6m.test.py
-    title: test/atcoder/past6m.test.py
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/atcoder/past/past6m.test.py
+    title: test/atcoder/past/past6m.test.py
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -62,9 +62,9 @@ data:
   path: data_structure/interval_manager.py
   requiredBy: []
   timestamp: '2024-03-28 07:49:10+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/atcoder/past6m.test.py
+  - test/atcoder/past/past6m.test.py
 documentation_of: data_structure/interval_manager.py
 layout: document
 title: "\u533A\u9593\u7BA1\u7406"

@@ -141,7 +141,7 @@ data:
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
       title: Convex Hull Trick
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/interval_manager.py
       title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
@@ -213,7 +213,7 @@ data:
     - icon: ':warning:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/fenwick_tree/value_range_sum.py
       title: ValueRangeSum
   - name: data_structure/segtree
@@ -807,12 +807,14 @@ data:
     - icon: ':grey_question:'
       path: test/atcoder/arc008d_segtree.test.py
       title: test/atcoder/arc008d_segtree.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/past17o.test.py
-      title: test/atcoder/past17o.test.py
-    - icon: ':grey_question:'
-      path: test/atcoder/past6m.test.py
-      title: test/atcoder/past6m.test.py
+  - name: test/atcoder/past
+    pages:
+    - icon: ':x:'
+      path: test/atcoder/past/past17o.test.py
+      title: test/atcoder/past/past17o.test.py
+    - icon: ':x:'
+      path: test/atcoder/past/past6m.test.py
+      title: test/atcoder/past/past6m.test.py
   - name: test/library_checker/convolution
     pages:
     - icon: ':heavy_check_mark:'

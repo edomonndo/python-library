@@ -63,13 +63,13 @@ data:
     \ other):\n        for k in range(self.__block):\n            if self.__bit[k]\
     \ != other.__bit[k]:\n                return False\n        return True\n\n  \
     \  def __neq__(self, other):\n        return not (self == other)\n\n    def copy(self):\n\
-    \        X = Bitset()\n        X.__bit = self.__bit.copy()\n        return X\n\
-    \n    count = __len__\n"
+    \        X = Bitset(self.N)\n        X.__bit = self.__bit.copy()\n        return\
+    \ X\n\n    count = __len__\n"
   dependsOn: []
   isVerificationFile: false
   path: utility/bitset.py
   requiredBy: []
-  timestamp: '2024-04-07 15:13:04+09:00'
+  timestamp: '2024-06-24 15:14:33+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: utility/bitset.py

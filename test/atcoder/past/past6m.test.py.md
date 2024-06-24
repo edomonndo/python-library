@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: data_structure/interval_manager.py
     title: "\u533A\u9593\u7BA1\u7406"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':grey_question:'
+  _verificationStatusIcon: ':x:'
   attributes:
-    IGNORE: https://atcoder.jp/contests/past202104-open/tasks/past202104_m
+    PROBLEM: https://atcoder.jp/contests/past202104-open/tasks/past202104_m
     links:
     - https://atcoder.jp/contests/past202104-open/tasks/past202104_m
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: IGNORE https://atcoder.jp/contests/past202104-open/tasks/past202104_m\n\
+  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/past202104-open/tasks/past202104_m\n\
     \nfrom data_structure.interval_manager import IntervalManager\n\nfrom collections\
     \ import defaultdict\n\nn = int(input())\nA = [int(x) for x in input().split()]\n\
     \n\nd = defaultdict(int)\n\n\ndef add(l, r, x):\n    global score\n    score -=\
@@ -28,15 +28,15 @@ data:
   dependsOn:
   - data_structure/interval_manager.py
   isVerificationFile: true
-  path: test/atcoder/past6m.test.py
+  path: test/atcoder/past/past6m.test.py
   requiredBy: []
-  timestamp: '2024-03-28 07:49:10+09:00'
-  verificationStatus: TEST_IGNORED
+  timestamp: '2024-06-24 15:14:33+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/atcoder/past6m.test.py
+documentation_of: test/atcoder/past/past6m.test.py
 layout: document
 redirect_from:
-- /verify/test/atcoder/past6m.test.py
-- /verify/test/atcoder/past6m.test.py.html
-title: test/atcoder/past6m.test.py
+- /verify/test/atcoder/past/past6m.test.py
+- /verify/test/atcoder/past/past6m.test.py.html
+title: test/atcoder/past/past6m.test.py
 ---
