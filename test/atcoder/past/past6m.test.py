@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://atcoder.jp/contests/past202104-open/tasks/past202104_m
+# verification-helper: PROBLEM https://atcoder.jp/contests/past202104-open/tasks/past202104_m
 
 from data_structure.interval_manager import IntervalManager
 

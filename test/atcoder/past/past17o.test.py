@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://atcoder.jp/contests/past17-open/tasks/past17_o
+# verification-helper: PROBLEM https://atcoder.jp/contests/past17-open/tasks/past17_o
 
 from data_structure.fenwick_tree.value_range_sum import CompressedValueRangeSum
 

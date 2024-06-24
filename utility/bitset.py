@@ -138,7 +138,7 @@ class Bitset:
         return not (self == other)
 
     def copy(self):
-        X = Bitset()
+        X = Bitset(self.N)
         X.__bit = self.__bit.copy()
         return X
 
