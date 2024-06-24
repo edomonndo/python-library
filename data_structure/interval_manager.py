@@ -1,4 +1,4 @@
-from data_structure.SortedSet import SortedSet
+from data_structure.basic.SortedSet import SortedSet
 
 
 class IntervalManager:

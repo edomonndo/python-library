@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://atcoder.jp/contests/abc035/tasks/abc035_c
+# verification-helper: PROBLEM https://atcoder.jp/contests/abc035/tasks/abc035_c
 from atcoder.lazysegtree import LazySegTree
 
 

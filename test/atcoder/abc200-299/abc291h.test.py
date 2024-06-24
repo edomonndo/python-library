@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://atcoder.jp/contests/abc291/tasks/abc291_h
+# verification-helper: PROBLEM https://atcoder.jp/contests/abc291/tasks/abc291_h
 
 
 from tree.centroid_decomposition import CentroidDecomposition

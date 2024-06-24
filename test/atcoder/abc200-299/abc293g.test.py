@@ -1,4 +1,4 @@
-# verification-helper: IGNORE https://atcoder.jp/contests/abc293/tasks/abc293_g
+# verification-helper: PROBLEM https://atcoder.jp/contests/abc293/tasks/abc293_g
 
 
 from data_structure.mo import Mo
