@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/dynamic_segtree.py
     title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
-    PROBLEM: https://atcoder.jp/contests/arc008/tasks/arc008_4
+    IGNORE: https://atcoder.jp/contests/arc008/tasks/arc008_4
     links:
     - https://atcoder.jp/contests/arc008/tasks/arc008_4
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
+  code: "# verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4\n\
     \nfrom data_structure.segtree.dynamic_segtree import DynamicSegtree\n\n\ndef op(x,\
     \ y):\n    a, b = x\n    c, d = y\n    return (a * c, b * c + d)\n\n\ne = (1,\
     \ 0)\n\nn, m = map(int, input().split())\nseg = DynamicSegtree(n, op, e)\ninf\
@@ -29,8 +29,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/arc/arc008d_dyn_segtree.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:00:04+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-24 17:29:04+09:00'
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc/arc008d_dyn_segtree.test.py
 layout: document

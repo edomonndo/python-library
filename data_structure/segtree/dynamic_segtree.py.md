@@ -3,16 +3,16 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/arc/arc008d_dyn_segtree.test.py
     title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
       \uFF08\u52D5\u7684\u30BB\u30B0\u6728\uFF09"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_dyn_segtree.test.py
     title: Static RMQ (Dynamic Segment Tree)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -64,7 +64,7 @@ data:
   path: data_structure/segtree/dynamic_segtree.py
   requiredBy: []
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/arc/arc008d_dyn_segtree.test.py
   - test/library_checker/data_structure/static_rmq_dyn_segtree.test.py

@@ -8,7 +8,7 @@ data:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
     title: ValueRangeSum
   - icon: ':heavy_check_mark:'

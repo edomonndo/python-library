@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc100-199/abc185e.test.py
+    title: E - Sequence Matching
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     IGNORE: https://atcoder.jp/contests/abc185/tasks/abc185_e
     links:
@@ -32,8 +35,9 @@ data:
   path: dynamic_programming/edit_distance.py
   requiredBy: []
   timestamp: '2024-05-20 11:42:23+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/atcoder/abc100-199/abc185e.test.py
 documentation_of: dynamic_programming/edit_distance.py
 layout: document
 title: "\u7DE8\u96C6\u8DDD\u96E2"

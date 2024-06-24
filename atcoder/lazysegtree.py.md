@@ -9,12 +9,18 @@ data:
     path: tree/permutation_tree.py
     title: tree/permutation_tree.py
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/abc001-99/abc035c.test.py
     title: "C - \u30AA\u30BB\u30ED"
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc300-399/abc341e.test.py
     title: E - Alternating String
+  - icon: ':x:'
+    path: test/atcoder/abc300-399/abc357f.test.py
+    title: F - Two Sequence Queries
+  - icon: ':x:'
+    path: test/atcoder/other/able.test.py
+    title: test/atcoder/other/able.test.py
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':question:'
@@ -112,7 +118,9 @@ data:
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/atcoder/other/able.test.py
   - test/atcoder/abc300-399/abc341e.test.py
+  - test/atcoder/abc300-399/abc357f.test.py
   - test/atcoder/abc001-99/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document

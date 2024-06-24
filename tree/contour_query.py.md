@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: tree/centroid_decomposition.py
     title: "\u91CD\u5FC3\u5206\u89E3"
   _extendedRequiredBy: []

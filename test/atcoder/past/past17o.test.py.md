@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
     title: ValueRangeSum
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
-    PROBLEM: https://atcoder.jp/contests/past17-open/tasks/past17_o
+    IGNORE: https://atcoder.jp/contests/past17-open/tasks/past17_o
     links:
     - https://atcoder.jp/contests/past17-open/tasks/past17_o
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/past17-open/tasks/past17_o\n\
+  code: "# verification-helper: IGNORE https://atcoder.jp/contests/past17-open/tasks/past17_o\n\
     \nfrom data_structure.fenwick_tree.value_range_sum import CompressedValueRangeSum\n\
     \nn = int(input())\nA = [int(x) for x in input().split()]\nps = set(A)\nq = int(input())\n\
     qs = [tuple(map(int, input().split())) for _ in range(q)]\nxs = set()\nB = A[:]\n\
@@ -30,8 +30,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past17o.test.py
   requiredBy: []
-  timestamp: '2024-06-24 15:14:33+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-24 17:29:04+09:00'
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/past/past17o.test.py
 layout: document

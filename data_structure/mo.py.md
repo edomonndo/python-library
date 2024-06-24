@@ -6,7 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc200-299/abc242g.test.py
     title: G - Range Pairing Query
-  - icon: ':heavy_check_mark:'
+  - icon: ':grey_question:'
     path: test/atcoder/abc200-299/abc293g.test.py
     title: test/atcoder/abc200-299/abc293g.test.py
   _isVerificationFailed: false

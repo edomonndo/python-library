@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc300-399/abc339g.test.py
+    title: test/atcoder/abc300-399/abc339g.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -37,8 +40,9 @@ data:
   path: data_structure/segtree/merge_sort_tree.py
   requiredBy: []
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/atcoder/abc300-399/abc339g.test.py
 documentation_of: data_structure/segtree/merge_sort_tree.py
 layout: document
 title: Merge Sort Tree

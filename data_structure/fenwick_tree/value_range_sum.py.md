@@ -6,12 +6,12 @@ data:
     title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/past/past17o.test.py
     title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -95,7 +95,7 @@ data:
   path: data_structure/fenwick_tree/value_range_sum.py
   requiredBy: []
   timestamp: '2024-06-19 14:17:10+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_NO_TESTS
   verifiedWith:
   - test/atcoder/past/past17o.test.py
 documentation_of: data_structure/fenwick_tree/value_range_sum.py

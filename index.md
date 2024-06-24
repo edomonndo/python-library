@@ -166,7 +166,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_mode_query.py
       title: "\u533A\u9593\u6700\u983B\u5024\u30AF\u30A8\u30EA"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/static_top_tree.py
       title: Static Top Tree
     - icon: ':heavy_check_mark:'
@@ -213,7 +213,7 @@ data:
     - icon: ':warning:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':warning:'
       path: data_structure/fenwick_tree/value_range_sum.py
       title: ValueRangeSum
   - name: data_structure/segtree
@@ -228,13 +228,13 @@ data:
       path: data_structure/segtree/dual_segment_tree_commutative.py
       title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
         \ (Dual Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/merge_sort_tree.py
       title: Merge Sort Tree
     - icon: ':heavy_check_mark:'
@@ -260,18 +260,18 @@ data:
       title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
   - name: data_structure/segtree/monoids_action
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
     - icon: ':warning:'
       path: data_structure/segtree/monoids_action/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
       title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
   - name: dynamic_programming
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: dynamic_programming/edit_distance.py
       title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':warning:'
@@ -538,7 +538,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/cartesian_tree.py
       title: Cartesian tree
-    - icon: ':x:'
+    - icon: ':warning:'
       path: tree/centroid_decomposition.py
       title: "\u91CD\u5FC3\u5206\u89E3"
     - icon: ':warning:'
@@ -783,31 +783,45 @@ data:
         \u6CD5"
   - name: test/atcoder/abc001-99
     pages:
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc001-99/abc035c.test.py
       title: "C - \u30AA\u30BB\u30ED"
+  - name: test/atcoder/abc100-199
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc100-199/abc185e.test.py
+      title: E - Sequence Matching
   - name: test/atcoder/abc200-299
     pages:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc200-299/abc242g.test.py
       title: G - Range Pairing Query
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc200-299/abc291h.test.py
       title: H - Balanced Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc200-299/abc293g.test.py
       title: test/atcoder/abc200-299/abc293g.test.py
   - name: test/atcoder/abc300-399
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/atcoder/abc300-399/abc339g.test.py
+      title: test/atcoder/abc300-399/abc339g.test.py
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc300-399/abc341e.test.py
       title: E - Alternating String
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc300-399/abc342g.test.py
       title: G - Retroactive Range Chmax
+    - icon: ':x:'
+      path: test/atcoder/abc300-399/abc351g.test.py
+      title: G - Hash on Tree
+    - icon: ':x:'
+      path: test/atcoder/abc300-399/abc357f.test.py
+      title: F - Two Sequence Queries
   - name: test/atcoder/arc
     pages:
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/arc/arc008d_dyn_segtree.test.py
       title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
         \uFF08\u52D5\u7684\u30BB\u30B0\u6728\uFF09"
@@ -815,9 +829,14 @@ data:
       path: test/atcoder/arc/arc008d_segtree.test.py
       title: "D - \u30BF\u30B3\u30E4\u30AD\u30AA\u30A4\u30B7\u30AF\u30CA\u30FC\u30EB\
         \uFF08\u30BB\u30B0\u6728\uFF09"
-  - name: test/atcoder/past
+  - name: test/atcoder/other
     pages:
     - icon: ':x:'
+      path: test/atcoder/other/able.test.py
+      title: test/atcoder/other/able.test.py
+  - name: test/atcoder/past
+    pages:
+    - icon: ':grey_question:'
       path: test/atcoder/past/past17o.test.py
       title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
     - icon: ':heavy_check_mark:'
