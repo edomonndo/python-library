@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abc357/submissions/54482888
-
 MOD = 998244353
 
 

@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abl/tasks/abl_e
-
 MOD = 998244353
 
 power10 = [1] * (200_001)
@@ -50,16 +48,3 @@ def composition(f: F, g: F) -> F:
     if f.digit == 0:
         return g
     return f
-
-
-"""
-from atcoder.lazysegtree import LazySegTree
-
-n, q = map(int, input().split())
-seg = LazySegTree(op, S(), mapping, composition, F(), [S(1, 1) for _ in range(n)])
-
-for _ in range(q):
-    l, r, d = map(int, input().split())
-    seg.apply(l - 1, r, F(d))
-    print(seg.all_prod().value)
-"""

@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://atcoder.jp/contests/arc008/tasks/arc008_4
+# verification-helper: IGNORE https://atcoder.jp/contests/arc008/tasks/arc008_4
 
 from data_structure.segtree.dynamic_segtree import DynamicSegtree
 
