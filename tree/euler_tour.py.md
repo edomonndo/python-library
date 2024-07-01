@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
   _extendedRequiredBy: []
@@ -9,15 +9,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
     title: GRL5C LCA (Lowest Common Ancestor)
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/vertex_add_path_sum_et.test.py
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_path_sum_et.test.py
     title: Vertex Add Path Sum (Euler Tour)
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
     title: Vertex Add Subtree Sum (Euler Tour)
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -101,11 +101,11 @@ data:
   path: tree/euler_tour.py
   requiredBy: []
   timestamp: '2024-06-04 17:27:40+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
-  - test/library_checker/data_structure/vertex_add_path_sum_et.test.py
-  - test/library_checker/data_structure/vertex_add_subtree_sum_et.test.py
+  - test/library_checker/tree/vertex_add_path_sum_et.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_et.test.py
 documentation_of: tree/euler_tour.py
 layout: document
 title: Euler tour

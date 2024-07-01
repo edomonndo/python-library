@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc300-399/abc339g.test.py
-    title: test/atcoder/abc300-399/abc339g.test.py
+    title: G - Smaller Sum
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

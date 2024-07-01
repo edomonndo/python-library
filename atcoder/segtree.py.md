@@ -11,22 +11,22 @@ data:
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
     title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: tree/auxiliary_tree.py
     title: Auxiliary tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: tree/euler_tour.py
     title: Euler tour
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/data_structure/vertext_set_path_composite.test.py
+  - icon: ':x:'
+    path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
   - icon: ':heavy_check_mark:'
     path: test/yukicoder/875_range_mindex_query.test.py
     title: No.875 Range Mindex Query
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -85,10 +85,10 @@ data:
   - tree/auxiliary_tree.py
   - tree/euler_tour.py
   timestamp: '2024-06-04 17:27:40+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/yukicoder/875_range_mindex_query.test.py
-  - test/library_checker/data_structure/vertext_set_path_composite.test.py
+  - test/library_checker/tree/vertext_set_path_composite.test.py
 documentation_of: atcoder/segtree.py
 layout: document
 redirect_from:

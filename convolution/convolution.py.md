@@ -2,30 +2,30 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: convolution/chirp_z.py
-    title: convolution/chirp_z.py
-  - icon: ':heavy_check_mark:'
-    path: convolution/composition.py
-    title: convolution/composition.py
-  - icon: ':heavy_check_mark:'
-    path: convolution/formal_power_series.py
+  - icon: ':x:'
+    path: polynomial/chirp_z.py
+    title: polynomial/chirp_z.py
+  - icon: ':x:'
+    path: polynomial/composition.py
+    title: polynomial/composition.py
+  - icon: ':question:'
+    path: polynomial/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':heavy_check_mark:'
-    path: convolution/multipoint_evaluation.py
-    title: convolution/multipoint_evaluation.py
+  - icon: ':x:'
+    path: polynomial/multipoint_evaluation.py
+    title: polynomial/multipoint_evaluation.py
   - icon: ':warning:'
-    path: convolution/multivariate_multiplication.py
-    title: convolution/multivariate_multiplication.py
-  - icon: ':heavy_check_mark:'
-    path: convolution/product_tree.py
-    title: convolution/product_tree.py
-  - icon: ':heavy_check_mark:'
-    path: convolution/sample_point_shift.py
-    title: convolution/sample_point_shift.py
-  - icon: ':heavy_check_mark:'
-    path: convolution/tayler_shift.py
-    title: convolution/tayler_shift.py
+    path: polynomial/multivariate_multiplication.py
+    title: polynomial/multivariate_multiplication.py
+  - icon: ':x:'
+    path: polynomial/product_tree.py
+    title: polynomial/product_tree.py
+  - icon: ':x:'
+    path: polynomial/sample_point_shift.py
+    title: polynomial/sample_point_shift.py
+  - icon: ':x:'
+    path: polynomial/tayler_shift.py
+    title: polynomial/tayler_shift.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/convolution/convolution_mod.test.py
@@ -113,14 +113,14 @@ data:
   isVerificationFile: false
   path: convolution/convolution.py
   requiredBy:
-  - convolution/multipoint_evaluation.py
-  - convolution/product_tree.py
-  - convolution/composition.py
-  - convolution/sample_point_shift.py
-  - convolution/chirp_z.py
-  - convolution/tayler_shift.py
-  - convolution/formal_power_series.py
-  - convolution/multivariate_multiplication.py
+  - polynomial/multipoint_evaluation.py
+  - polynomial/product_tree.py
+  - polynomial/composition.py
+  - polynomial/sample_point_shift.py
+  - polynomial/chirp_z.py
+  - polynomial/tayler_shift.py
+  - polynomial/formal_power_series.py
+  - polynomial/multivariate_multiplication.py
   timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

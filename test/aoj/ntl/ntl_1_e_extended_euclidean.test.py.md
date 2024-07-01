@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: math_/ext_gcd.py
-    title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -30,8 +27,7 @@ data:
     print(x, y)
 
     '
-  dependsOn:
-  - math_/ext_gcd.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
   requiredBy: []

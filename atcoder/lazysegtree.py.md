@@ -18,7 +18,7 @@ data:
   - icon: ':x:'
     path: test/atcoder/abc300-399/abc357f.test.py
     title: F - Two Sequence Queries
-  - icon: ':x:'
+  - icon: ':grey_question:'
     path: test/atcoder/other/able.test.py
     title: E - Replace Digits
   _isVerificationFailed: true

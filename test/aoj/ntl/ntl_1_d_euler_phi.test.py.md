@@ -1,10 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: math_/euler_phi.py
-    title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\
-      \u30F3\u30C8\u95A2\u6570)"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -29,8 +25,7 @@ data:
     print(euler_phi(N))
 
     '
-  dependsOn:
-  - math_/euler_phi.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/ntl/ntl_1_d_euler_phi.test.py
   requiredBy: []

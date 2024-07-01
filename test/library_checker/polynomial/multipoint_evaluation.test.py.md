@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/multipoint_evaluation.py
-    title: convolution/multipoint_evaluation.py
+  - icon: ':x:'
+    path: polynomial/multipoint_evaluation.py
+    title: polynomial/multipoint_evaluation.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/multipoint_evaluation
     links:
@@ -19,7 +19,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/multipoint_evaluation
 
-    from convolution.multipoint_evaluation import *
+    from polynomial.multipoint_evaluation import *
 
 
     n, m = map(int, input().split())
@@ -32,12 +32,12 @@ data:
 
     '
   dependsOn:
-  - convolution/multipoint_evaluation.py
+  - polynomial/multipoint_evaluation.py
   isVerificationFile: true
   path: test/library_checker/polynomial/multipoint_evaluation.test.py
   requiredBy: []
-  timestamp: '2024-06-20 09:46:52+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation.test.py
 layout: document

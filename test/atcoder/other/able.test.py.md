@@ -4,14 +4,14 @@ data:
   - icon: ':question:'
     path: atcoder/lazysegtree.py
     title: atcoder/lazysegtree.py
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
     title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
     IGNORE: https://atcoder.jp/contests/abl/tasks/abl_e
     links:
@@ -33,7 +33,7 @@ data:
   path: test/atcoder/other/able.test.py
   requiredBy: []
   timestamp: '2024-06-24 17:49:22+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/other/able.test.py
 layout: document

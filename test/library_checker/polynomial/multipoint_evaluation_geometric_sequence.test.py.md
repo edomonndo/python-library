@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/chirp_z.py
-    title: convolution/chirp_z.py
+  - icon: ':x:'
+    path: polynomial/chirp_z.py
+    title: polynomial/chirp_z.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/multipoint_evaluation_on_geometric_sequence
     links:
@@ -19,7 +19,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/multipoint_evaluation_on_geometric_sequence
 
-    from convolution.chirp_z import *
+    from polynomial.chirp_z import *
 
 
     n, m, a, r = map(int, input().split())
@@ -30,12 +30,12 @@ data:
 
     '
   dependsOn:
-  - convolution/chirp_z.py
+  - polynomial/chirp_z.py
   isVerificationFile: true
   path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
 layout: document

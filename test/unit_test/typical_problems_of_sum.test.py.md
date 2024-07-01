@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: math_/typical_problems_of_sum.py
+  - icon: ':x:'
+    path: other/typical_problems_of_sum.py
     title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
     links:
@@ -36,7 +36,7 @@ data:
     \ + 1, n):\n            res += abs(A[i] - A[j])\n    return res\n\n\nif __name__\
     \ == \"__main__\":\n    from pathlib import Path\n    import sys\n    import random\n\
     \n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\n\
-    \    from math_.typical_problems_of_sum import *\n\n    testcase = 10\n    for\
+    \    from other.typical_problems_of_sum import *\n\n    testcase = 10\n    for\
     \ _ in range(testcase):\n        n = 100\n        A = [random.randrange(1, 10**9)\
     \ for _ in range(n)]\n        assert greedy1(A) == solve1(A)\n        assert greedy2(A)\
     \ == solve2(A)\n        assert greedy3(A) == solve3(A)\n        assert greedy4(A)\
@@ -44,12 +44,12 @@ data:
     \ == solve6(A)\n        assert greedy7(A) == solve7(A)\n\n    print(\"Hello World\"\
     )\n"
   dependsOn:
-  - math_/typical_problems_of_sum.py
+  - other/typical_problems_of_sum.py
   isVerificationFile: true
   path: test/unit_test/typical_problems_of_sum.test.py
   requiredBy: []
-  timestamp: '2024-04-25 15:41:40+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/unit_test/typical_problems_of_sum.test.py
 layout: document

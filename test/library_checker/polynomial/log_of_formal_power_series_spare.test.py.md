@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/formal_power_series.py
+  - icon: ':question:'
+    path: polynomial/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/log_of_formal_power_series_sparse
     links:
@@ -18,16 +18,16 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/log_of_formal_power_series_sparse\n\
-    \nfrom convolution.formal_power_series import FPS\n\nn, k = map(int, input().split())\n\
+    \nfrom polynomial.formal_power_series import FPS\n\nn, k = map(int, input().split())\n\
     A = [0] * n\nfor _ in range(k):\n    i, a = map(int, input().split())\n    A[i]\
     \ = a\nprint(*FPS.log(A))\n"
   dependsOn:
-  - convolution/formal_power_series.py
+  - polynomial/formal_power_series.py
   isVerificationFile: true
   path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
   requiredBy: []
-  timestamp: '2024-06-20 12:15:41+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
 layout: document

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string_/suffix_array.py
+  - icon: ':x:'
+    path: str/suffix_array.py
     title: Suffix array
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/number_of_substrings
     links:
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/number_of_substrings
 
 
-    from string_.suffix_array import suffix_array, lcp_array
+    from str.suffix_array import suffix_array, lcp_array
 
 
     S = "_" + input()
@@ -35,12 +35,12 @@ data:
 
     '
   dependsOn:
-  - string_/suffix_array.py
+  - str/suffix_array.py
   isVerificationFile: true
   path: test/library_checker/string/number_of_substrings.test.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/number_of_substrings.test.py
 layout: document

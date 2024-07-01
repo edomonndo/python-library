@@ -1,8 +1,8 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/formal_power_series.py
+  - icon: ':question:'
+    path: polynomial/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/inv_of_formal_power_series
 
 
-    from convolution.formal_power_series import FPS
+    from polynomial.formal_power_series import FPS
 
 
     n = int(input())
@@ -31,11 +31,11 @@ data:
 
     '
   dependsOn:
-  - convolution/formal_power_series.py
+  - polynomial/formal_power_series.py
   isVerificationFile: true
   path: test/library_checker/polynomial/inv_of_formal_power_series.test.py
   requiredBy: []
-  timestamp: '2024-06-20 12:15:41+09:00'
+  timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/inv_of_formal_power_series.test.py

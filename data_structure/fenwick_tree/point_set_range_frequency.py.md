@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: atcoder/fenwicktree.py
     title: atcoder/fenwicktree.py
   _extendedRequiredBy: []

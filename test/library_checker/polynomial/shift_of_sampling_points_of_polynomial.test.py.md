@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/sample_point_shift.py
-    title: convolution/sample_point_shift.py
+  - icon: ':x:'
+    path: polynomial/sample_point_shift.py
+    title: polynomial/sample_point_shift.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/shift_of_sampling_points_of_polynomial
     links:
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/shift_of_sampling_points_of_polynomial
 
 
-    from convolution.sample_point_shift import *
+    from polynomial.sample_point_shift import *
 
 
 
@@ -32,12 +32,12 @@ data:
 
     '
   dependsOn:
-  - convolution/sample_point_shift.py
+  - polynomial/sample_point_shift.py
   isVerificationFile: true
   path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
   requiredBy: []
-  timestamp: '2024-06-24 10:43:50+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
 layout: document

@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string_/z_algorithm.py
+  - icon: ':x:'
+    path: str/z_algorithm.py
     title: Z algorithm
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/zalgorithm
     links:
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/zalgorithm
 
 
-    from string_.z_algorithm import z_algorithm
+    from str.z_algorithm import z_algorithm
 
 
     S = input()
@@ -31,12 +31,12 @@ data:
 
     '
   dependsOn:
-  - string_/z_algorithm.py
+  - str/z_algorithm.py
   isVerificationFile: true
   path: test/library_checker/string/z_algorithm.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/z_algorithm.test.py
 layout: document

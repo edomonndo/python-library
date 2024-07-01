@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: string_/longest_common_substring.py
+  - icon: ':x:'
+    path: str/longest_common_substring.py
     title: Longest Common Substring
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/longest_common_substring
     links:
@@ -20,7 +20,7 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/longest_common_substring
 
 
-    from string_.longest_common_substring import find_lcs_idx
+    from str.longest_common_substring import find_lcs_idx
 
 
     S = input()
@@ -31,12 +31,12 @@ data:
 
     '
   dependsOn:
-  - string_/longest_common_substring.py
+  - str/longest_common_substring.py
   isVerificationFile: true
   path: test/library_checker/string/longeset_common_substring.test.py
   requiredBy: []
-  timestamp: '2024-06-11 12:43:47+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/string/longeset_common_substring.test.py
 layout: document

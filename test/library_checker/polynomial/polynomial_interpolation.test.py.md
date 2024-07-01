@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: convolution/product_tree.py
-    title: convolution/product_tree.py
+  - icon: ':x:'
+    path: polynomial/product_tree.py
+    title: polynomial/product_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/polynomial_interpolation
     links:
@@ -19,7 +19,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/polynomial_interpolation
 
-    from convolution.product_tree import ProductTree
+    from polynomial.product_tree import ProductTree
 
 
 
@@ -35,12 +35,12 @@ data:
 
     '
   dependsOn:
-  - convolution/product_tree.py
+  - polynomial/product_tree.py
   isVerificationFile: true
   path: test/library_checker/polynomial/polynomial_interpolation.test.py
   requiredBy: []
-  timestamp: '2024-06-20 12:15:41+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-02 07:09:42+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/polynomial_interpolation.test.py
 layout: document
