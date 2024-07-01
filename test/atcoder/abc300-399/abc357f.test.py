@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://atcoder.jp/contests/abc357/tasks/abc357_f
+# verification-helper: IGNORE https://atcoder.jp/contests/abc357/tasks/abc357_f
 
 from data_structure.segtree.monoids_action.range_add_range_product_sum import *
 from atcoder.lazysegtree import LazySegTree

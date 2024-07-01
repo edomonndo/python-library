@@ -23,32 +23,29 @@ class HldSegtree:
             k = into[i]
             nv[k] = a
         self.seg = SegTree(op, e, nv)
-        self.rseg = SegTree(op, e, nv[::-1])
         self.op = op
         self.e = e
 
-    def prod(self, u: int, v: int) -> T:
+    def path_prod(self, u: int, v: int) -> T:
         head, into, depth = self.hld.head, self.hld.into, self.hld.depth
-        seg, rseg, par, op, n = self.seg, self.rseg, self.hld.par, self.op, self.hld.n
+        seg, par, op, n = self.seg, self.hld.par, self.op, self.hld.n
 
-        l, r = self.e, self.e
+        res = self.e
         while head[u] != head[v]:
-            if depth[head[u]] > depth[head[v]]:
-                l = op(l, rseg.prod(n - into[u] - 1, n - into[head[u]]))
-                u = par[head[u]]
-            else:
-                r = op(seg.prod(into[head[v]], into[v] + 1), r)
-                v = par[head[v]]
-        if depth[u] > depth[v]:
-            l = op(l, rseg.prod(n - into[u] - 1, n - into[v]))
-        else:
-            l = op(l, seg.prod(into[u], into[v] + 1))
-        return op(l, r)
+            if depth[head[u]] < depth[head[v]]:
+                u, v = v, u
+            res = op(res, seg.prod(into[head[u]], into[u] + 1))
+            u = par[head[u]]
+        if depth[u] < depth[v]:
+            u, v = v, u
+        return op(res, seg.prod(into[v], into[u] + 1))
+
+    def subtree_prod(self, v: int) -> T:
+        return self.seg.prod(self.hld.into[v], self.hld.out[v])
 
     def get(self, k: int) -> T:
-        return self.seg[self.hld.into[k]]
+        return self.seg.get(self.hld.into[k])
 
     def set(self, k: int, v: T) -> None:
         k = self.hld.into[k]
-        self.seg[k] = v
-        self.rseg[self.hld.n - k - 1] = v
+        self.seg.set(k, v)

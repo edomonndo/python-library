@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite
 
-from tree.hld_segtree_noncommutative_path_query import HldSegtree
+from tree.hld_segtree_noncommutative import HldSegtree
 
 MOD = 998244353
 msk = (1 << 32) - 1
