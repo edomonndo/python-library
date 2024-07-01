@@ -1,7 +1,7 @@
 from typing import Callable
 from collections import defaultdict
 
-from data_structure.rollback_unionfind import RollbackUnionFind
+from graph.connectivity.rollback_unionfind import RollbackUnionFind
 
 
 class OfflineDynamicConnectivity:

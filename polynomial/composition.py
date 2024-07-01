@@ -1,5 +1,5 @@
 from convolution.convolution import *
-from convolution.formal_power_series import FPS
+from polynomial.formal_power_series import FPS
 
 
 def _composition_preprocess(b: list[int], k: int, deg: int) -> list[int]:
