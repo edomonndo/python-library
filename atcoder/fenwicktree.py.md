@@ -18,10 +18,10 @@ data:
     path: geometory/offline_static_rectangle_sum.py
     title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
     title: Vertex Add Range Contour Sum on Tree
   - icon: ':x:'
@@ -29,7 +29,7 @@ data:
     title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Fenwick_tree"""
@@ -55,7 +55,7 @@ data:
   - geometory/offline_static_rectangle_sum.py
   - data_structure/fenwick_tree/point_set_range_frequency.py
   timestamp: '2024-05-29 14:24:11+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py

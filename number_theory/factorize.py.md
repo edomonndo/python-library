@@ -1,24 +1,28 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: number_theory/miller_rabin.py
+    title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
+      )"
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number_theory/primitive_root.py
     title: "\u539F\u59CB\u6839"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/factorize.test.py
     title: test/library_checker/number_theory/factorize.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import math\nimport random\n\nfrom math_.miller_rabin import miller_rabin\n\
+  code: "import math\nimport random\n\nfrom number_theory.miller_rabin import miller_rabin\n\
     \n\ndef find_prime_factor(n):\n    b = n.bit_length() - 1\n    b = (b >> 2) <<\
     \ 2\n    m = 2 * int(2 ** (b / 8))\n\n    while True:\n        c = random.randrange(1,\
     \ n)\n        f = lambda a: (pow(a, 2, n) + c) % n\n        y = 0\n        g =\
@@ -38,13 +42,14 @@ data:
     \ miller_rabin(n) and n > 1:\n        p = find_prime_factor(n)\n        s = 0\n\
     \        while n % p == 0:\n            n //= p\n            s += 1\n        res[p]\
     \ = s\n    if n > 1:\n        res[n] = 1\n    return res\n"
-  dependsOn: []
+  dependsOn:
+  - number_theory/miller_rabin.py
   isVerificationFile: false
   path: number_theory/factorize.py
   requiredBy:
   - number_theory/primitive_root.py
-  timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-07-02 07:37:15+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/number_theory/factorize.test.py
 documentation_of: number_theory/factorize.py

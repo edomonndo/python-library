@@ -2,13 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/chirp_z.py
     title: polynomial/chirp_z.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
     title: polynomial/composition.py
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   - icon: ':x:'
@@ -20,10 +20,10 @@ data:
   - icon: ':x:'
     path: polynomial/product_tree.py
     title: polynomial/product_tree.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/sample_point_shift.py
     title: polynomial/sample_point_shift.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/tayler_shift.py
     title: polynomial/tayler_shift.py
   _extendedVerifiedWith:

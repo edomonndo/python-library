@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/tayler_shift.py
     title: polynomial/tayler_shift.py
   _extendedVerifiedWith: []

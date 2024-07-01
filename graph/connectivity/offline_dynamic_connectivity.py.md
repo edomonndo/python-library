@@ -1,20 +1,23 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: graph/connectivity/rollback_unionfind.py
+    title: Rollback Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum.test.py
     title: Dynamic Graph Vertex Add Component Sum
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
     title: Dynamic Tree Subtree Add Subtree Sum
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py
     title: Dynamic Tree Vertex Add Subtree Sum
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -22,7 +25,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Callable\nfrom collections import defaultdict\n\nfrom\
-    \ data_structure.rollback_unionfind import RollbackUnionFind\n\n\nclass OfflineDynamicConnectivity:\n\
+    \ graph.connectivity.rollback_unionfind import RollbackUnionFind\n\n\nclass OfflineDynamicConnectivity:\n\
     \n    def __init__(self, n: int):\n        self.n = n\n        self.bit = n.bit_length()\
     \ + 1\n        self.msk = (1 << self.bit) - 1\n        self.query_count = 0\n\
     \        self.edge = defaultdict(list)\n        self.uf = RollbackUnionFind(n)\n\
@@ -65,12 +68,13 @@ data:
     \             out(v - size)\n            else:\n                for _ in data[~v]:\n\
     \                    uf.undo()\n\n    def __repr__(self):\n        return f\"\
     OfflineDynamicConnectivity({self.n}, {self.q})\"\n"
-  dependsOn: []
+  dependsOn:
+  - graph/connectivity/rollback_unionfind.py
   isVerificationFile: false
   path: graph/connectivity/offline_dynamic_connectivity.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-07-02 07:37:15+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
   - test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py

@@ -4,7 +4,7 @@ data:
   - icon: ':x:'
     path: data_structure/fenwick_tree/range_add_point_get.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
-  - icon: ':x:'
+  - icon: ':question:'
     path: tree/contour_query.py
     title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []

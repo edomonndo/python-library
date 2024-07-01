@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: atcoder/fenwicktree.py
     title: atcoder/fenwicktree.py
   _extendedRequiredBy: []

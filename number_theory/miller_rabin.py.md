@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: number_theory/factorize.py
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -25,7 +28,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: number_theory/miller_rabin.py
-  requiredBy: []
+  requiredBy:
+  - number_theory/factorize.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

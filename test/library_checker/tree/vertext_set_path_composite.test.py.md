@@ -4,7 +4,7 @@ data:
   - icon: ':question:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
-  - icon: ':x:'
+  - icon: ':question:'
     path: tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []

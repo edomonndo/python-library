@@ -6,7 +6,7 @@ data:
     title: "\u91CD\u5FC3\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
     title: Vertex Add Range Contour Sum on Tree
   - icon: ':x:'
@@ -14,7 +14,7 @@ data:
     title: Vertex Get Range Contour Add on Tree
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -113,7 +113,7 @@ data:
   path: tree/contour_query.py
   requiredBy: []
   timestamp: '2024-06-10 12:42:43+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py
   - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py

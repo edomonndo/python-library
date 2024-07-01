@@ -4,7 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
     title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: polynomial/composition.py
+    title: polynomial/composition.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
@@ -18,33 +21,33 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/inv_of_formal_power_series.test.py
     title: test/library_checker/polynomial/inv_of_formal_power_series.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
     title: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/log_of_formal_power_series.test.py
     title: test/library_checker/polynomial/log_of_formal_power_series.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
     title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/pow_of_formal_power_series.test.py
     title: test/library_checker/polynomial/pow_of_formal_power_series.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
     title: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
     title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
     title: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
     title: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -178,9 +181,10 @@ data:
   - convolution/convolution.py
   isVerificationFile: false
   path: polynomial/formal_power_series.py
-  requiredBy: []
+  requiredBy:
+  - polynomial/composition.py
   timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/log_of_formal_power_series.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series.test.py

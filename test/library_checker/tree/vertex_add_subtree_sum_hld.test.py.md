@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: atcoder/fenwicktree.py
     title: atcoder/fenwicktree.py
-  - icon: ':x:'
+  - icon: ':question:'
     path: tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []

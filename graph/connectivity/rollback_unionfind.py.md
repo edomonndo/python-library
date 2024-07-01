@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: graph/connectivity/offline_dynamic_connectivity.py
+    title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -61,7 +64,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: graph/connectivity/rollback_unionfind.py
-  requiredBy: []
+  requiredBy:
+  - graph/connectivity/offline_dynamic_connectivity.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

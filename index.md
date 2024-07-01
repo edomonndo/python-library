@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
-    - icon: ':x:'
+    - icon: ':question:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
     - icon: ':question:'
@@ -353,10 +353,10 @@ data:
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: graph/connectivity
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/connectivity/link_cut_tree.py
       title: Link Cut Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/connectivity/offline_dynamic_connectivity.py
       title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
     - icon: ':warning:'
@@ -412,7 +412,7 @@ data:
     - icon: ':warning:'
       path: number_theory/ext_gcd.py
       title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/factorize.py
       title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':warning:'
@@ -428,7 +428,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/min_of_linear.py
       title: Min of linear
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
     - icon: ':warning:'
@@ -455,13 +455,13 @@ data:
       title: "\u6C38\u7D9A Union Find"
   - name: polynomial
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/chirp_z.py
       title: polynomial/chirp_z.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/composition.py
       title: polynomial/composition.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':x:'
@@ -473,10 +473,10 @@ data:
     - icon: ':x:'
       path: polynomial/product_tree.py
       title: polynomial/product_tree.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/sample_point_shift.py
       title: polynomial/sample_point_shift.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/tayler_shift.py
       title: polynomial/tayler_shift.py
   - name: sort
@@ -516,10 +516,10 @@ data:
       title: "Tim\u30BD\u30FC\u30C8"
   - name: str
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: str/longest_common_substring.py
       title: Longest Common Substring
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: str/manacher.py
       title: Manacher
     - icon: ':warning:'
@@ -528,13 +528,13 @@ data:
     - icon: ':warning:'
       path: str/rolling_hash.py
       title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: str/suffix_array.py
       title: Suffix array
     - icon: ':warning:'
       path: str/trie_tree.py
       title: Trie tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: str/z_algorithm.py
       title: Z algorithm
   - name: tree
@@ -551,7 +551,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':x:'
+    - icon: ':question:'
       path: tree/contour_query.py
       title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
@@ -563,13 +563,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/dominator_tree.py
       title: Dominator Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/euler_tour.py
       title: Euler tour
     - icon: ':warning:'
       path: tree/euler_tour_tree.py
       title: tree/euler_tour_tree.py
-    - icon: ':x:'
+    - icon: ':question:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -1012,7 +1012,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dominator_tree.test.py
       title: test/library_checker/graph/dominator_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum.test.py
       title: Dynamic Graph Vertex Add Component Sum
     - icon: ':heavy_check_mark:'
@@ -1070,13 +1070,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/count_primes.test.py
       title: test/library_checker/number_theory/count_primes.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/factorize.test.py
       title: test/library_checker/number_theory/factorize.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/min_of_linear.test.py
       title: test/library_checker/number_theory/min_of_linear.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
       title: test/library_checker/number_theory/primitive_root.test.py
     - icon: ':heavy_check_mark:'
@@ -1089,10 +1089,10 @@ data:
       title: test/library_checker/other/two_sat.test.py
   - name: test/library_checker/polynomial
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
       title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
     - icon: ':heavy_check_mark:'
@@ -1107,19 +1107,19 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/inv_of_formal_power_series.test.py
       title: test/library_checker/polynomial/inv_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
       title: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/log_of_formal_power_series.test.py
       title: test/library_checker/polynomial/log_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
       title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
     - icon: ':x:'
       path: test/library_checker/polynomial/multipoint_evaluation.test.py
       title: test/library_checker/polynomial/multipoint_evaluation.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
     - icon: ':x:'
@@ -1128,25 +1128,25 @@ data:
     - icon: ':x:'
       path: test/library_checker/polynomial/polynomial_interpolation.test.py
       title: test/library_checker/polynomial/polynomial_interpolation.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_tayler_shift.test.py
       title: test/library_checker/polynomial/polynomial_tayler_shift.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/pow_of_formal_power_series.test.py
       title: test/library_checker/polynomial/pow_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
       title: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
       title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
       title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
       title: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
       title: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
   - name: test/library_checker/sample
@@ -1159,19 +1159,19 @@ data:
       title: test/library_checker/sample/many_aplusb.test.py
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/enumerate_palindroms.test.py
       title: test/library_checker/string/enumerate_palindroms.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/longeset_common_substring.test.py
       title: test/library_checker/string/longeset_common_substring.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/number_of_substrings.test.py
       title: test/library_checker/string/number_of_substrings.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: test/library_checker/string/suffix_array.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.py
       title: test/library_checker/string/z_algorithm.test.py
   - name: test/library_checker/tree
@@ -1179,16 +1179,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
       title: test/library_checker/tree/cartesian_tree.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
       title: Dynamic Tree Subtree Add Subtree Sum
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_vertex_add_path_sum.test.py
       title: Dynamic Tree Vertex Add Path Sum
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py
       title: Dynamic Tree Vertex Add Subtree Sum
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_vertex_set_path_composite.test.py
       title: Dynamic Tree Vertex Set Path Composite
     - icon: ':heavy_check_mark:'
@@ -1200,16 +1200,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: test/library_checker/tree/tree_diameter.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_et.test.py
       title: Vertex Add Path Sum (Euler Tour)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
     - icon: ':x:'
