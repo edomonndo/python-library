@@ -10,8 +10,11 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
-    path: test/library_checker/tree/vertext_set_path_composite2.test.py
-    title: Vertex Set Path Composite
+    path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
+    title: Vertex Add Path Sum (HLD)
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
+    title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: true
   _pathExtension: py
   _verificationStatusIcon: ':x:'
@@ -29,33 +32,31 @@ data:
     \       # assert n == len(v)\n        self.hld = HeavyLightDecomposition(n, edges,\
     \ root)\n        into = self.hld.into\n        nv = [e] * n\n        for i, a\
     \ in enumerate(v):\n            k = into[i]\n            nv[k] = a\n        self.seg\
-    \ = SegTree(op, e, nv)\n        self.rseg = SegTree(op, e, nv[::-1])\n       \
-    \ self.op = op\n        self.e = e\n\n    def prod(self, u: int, v: int) -> T:\n\
-    \        head, into, depth = self.hld.head, self.hld.into, self.hld.depth\n  \
-    \      seg, rseg, par, op, n = self.seg, self.rseg, self.hld.par, self.op, self.hld.n\n\
-    \n        l, r = self.e, self.e\n        while head[u] != head[v]:\n         \
-    \   if depth[head[u]] > depth[head[v]]:\n                l = op(l, rseg.prod(n\
-    \ - into[u] - 1, n - into[head[u]]))\n                u = par[head[u]]\n     \
-    \       else:\n                r = op(seg.prod(into[head[v]], into[v] + 1), r)\n\
-    \                v = par[head[v]]\n        if depth[u] > depth[v]:\n         \
-    \   l = op(l, rseg.prod(n - into[u] - 1, n - into[v]))\n        else:\n      \
-    \      l = op(l, seg.prod(into[u], into[v] + 1))\n        return op(l, r)\n\n\
-    \    def get(self, k: int) -> T:\n        return self.seg[self.hld.into[k]]\n\n\
-    \    def set(self, k: int, v: T) -> None:\n        k = self.hld.into[k]\n    \
-    \    self.seg[k] = v\n        self.rseg[self.hld.n - k - 1] = v\n"
+    \ = SegTree(op, e, nv)\n        self.op = op\n        self.e = e\n\n    def path_prod(self,\
+    \ u: int, v: int) -> T:\n        head, into, depth = self.hld.head, self.hld.into,\
+    \ self.hld.depth\n        seg, par, op, n = self.seg, self.hld.par, self.op, self.hld.n\n\
+    \n        res = self.e\n        while head[u] != head[v]:\n            if depth[head[u]]\
+    \ < depth[head[v]]:\n                u, v = v, u\n            res = op(res, seg.prod(into[head[u]],\
+    \ into[u] + 1))\n            u = par[head[u]]\n        if depth[u] < depth[v]:\n\
+    \            u, v = v, u\n        return op(res, seg.prod(into[v], into[u] + 1))\n\
+    \n    def subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
+    \ self.hld.out[v])\n\n    def get(self, k: int) -> T:\n        return self.seg.get(self.hld.into[k])\n\
+    \n    def set(self, k: int, v: T) -> None:\n        k = self.hld.into[k]\n   \
+    \     self.seg.set(k, v)\n"
   dependsOn:
   - atcoder/segtree.py
   - tree/heavy_light_decomposition.py
   isVerificationFile: false
-  path: tree/hld_segtree_noncommutative_path_query.py
+  path: tree/hld_segtree.py
   requiredBy: []
-  timestamp: '2024-07-02 08:20:49+09:00'
+  timestamp: '2024-07-02 08:45:17+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - test/library_checker/tree/vertext_set_path_composite2.test.py
-documentation_of: tree/hld_segtree_noncommutative_path_query.py
+  - test/library_checker/tree/vertex_add_path_sum_hld2.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
+documentation_of: tree/hld_segtree.py
 layout: document
-title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
-  \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
+title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
+  \u30A8\u30EA\uFF09"
 ---
 

@@ -8,6 +8,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
     title: polynomial/composition.py
+  - icon: ':heavy_check_mark:'
+    path: polynomial/multipoint_evaluation.py
+    title: polynomial/multipoint_evaluation.py
+  - icon: ':heavy_check_mark:'
+    path: polynomial/product_tree.py
+    title: polynomial/product_tree.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
@@ -182,6 +188,8 @@ data:
   isVerificationFile: false
   path: polynomial/formal_power_series.py
   requiredBy:
+  - polynomial/multipoint_evaluation.py
+  - polynomial/product_tree.py
   - polynomial/composition.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC

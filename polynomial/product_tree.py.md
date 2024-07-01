@@ -4,24 +4,27 @@ data:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
     title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+  - icon: ':heavy_check_mark:'
+    path: polynomial/formal_power_series.py
+    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
     title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/polynomial_interpolation.test.py
     title: test/library_checker/polynomial/polynomial_interpolation.test.py
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from convolution.convolution import *\nfrom convolution.formal_power_series\
+  code: "from convolution.convolution import *\nfrom polynomial.formal_power_series\
     \ import FPS\n\n\nclass ProductTree:\n    def __init__(self, xs: list[int]):\n\
     \        self.xs = xs\n        self.sz = sz = len(xs)\n        n = 1\n       \
     \ while n < sz:\n            n <<= 1\n        self.n = n\n        self.buf = buf\
@@ -65,11 +68,12 @@ data:
     \ 0]),\n                )\n        return res[1]\n"
   dependsOn:
   - convolution/convolution.py
+  - polynomial/formal_power_series.py
   isVerificationFile: false
   path: polynomial/product_tree.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-07-02 08:45:17+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/polynomial/multipoint_evaluation_pt.test.py
   - test/library_checker/polynomial/polynomial_interpolation.test.py

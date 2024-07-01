@@ -11,13 +11,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
     title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
     title: polynomial/multipoint_evaluation.py
   - icon: ':warning:'
     path: polynomial/multivariate_multiplication.py
     title: polynomial/multivariate_multiplication.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
     title: polynomial/product_tree.py
   - icon: ':heavy_check_mark:'

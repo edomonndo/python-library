@@ -18,7 +18,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/lazysegtree.py
       title: atcoder/lazysegtree.py
     - icon: ':warning:'
@@ -213,7 +213,7 @@ data:
       title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
   - name: data_structure/segtree/monoids_action
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
     - icon: ':warning:'
@@ -464,13 +464,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: polynomial/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/multipoint_evaluation.py
       title: polynomial/multipoint_evaluation.py
     - icon: ':warning:'
       path: polynomial/multivariate_multiplication.py
       title: polynomial/multivariate_multiplication.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: polynomial/product_tree.py
       title: polynomial/product_tree.py
     - icon: ':heavy_check_mark:'
@@ -573,7 +573,11 @@ data:
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':x:'
-      path: tree/hld_segtree_noncommutative_path_query.py
+      path: tree/hld_segtree.py
+      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
+        \u30AF\u30A8\u30EA\uFF09"
+    - icon: ':x:'
+      path: tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
     - icon: ':heavy_check_mark:'
@@ -836,7 +840,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/atcoder/abc300-399/abc351g.test.py
       title: G - Hash on Tree
-    - icon: ':x:'
+    - icon: ':grey_question:'
       path: test/atcoder/abc300-399/abc357f.test.py
       title: F - Two Sequence Queries
   - name: test/atcoder/arc
@@ -1120,16 +1124,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
       title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation.test.py
       title: test/library_checker/polynomial/multipoint_evaluation.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
       title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_interpolation.test.py
       title: test/library_checker/polynomial/polynomial_interpolation.test.py
     - icon: ':heavy_check_mark:'
@@ -1210,6 +1214,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
+    - icon: ':x:'
+      path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
+      title: Vertex Add Path Sum (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
@@ -1218,6 +1225,9 @@ data:
       title: Vertex Add Subtree Sum (Euler Tour)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
+      title: Vertex Add Subtree Sum (HLD)
+    - icon: ':x:'
+      path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
       title: Vertex Add Subtree Sum (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py

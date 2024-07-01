@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: atcoder/lazysegtree.py
     title: atcoder/lazysegtree.py
-  - icon: ':x:'
+  - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':grey_question:'
   attributes:
-    PROBLEM: https://atcoder.jp/contests/abc357/tasks/abc357_f
+    IGNORE: https://atcoder.jp/contests/abc357/tasks/abc357_f
     links:
     - https://atcoder.jp/contests/abc357/tasks/abc357_f
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc357/tasks/abc357_f\n\
+  code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc357/tasks/abc357_f\n\
     \nfrom data_structure.segtree.monoids_action.range_add_range_product_sum import\
     \ *\nfrom atcoder.lazysegtree import LazySegTree\n\nn, q = map(int, input().split())\n\
     A = [int(x) for x in input().split()]\nB = [int(x) for x in input().split()]\n\
@@ -35,8 +35,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc357f.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:46:05+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-02 08:45:17+09:00'
+  verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc357f.test.py
 layout: document

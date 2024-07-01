@@ -3,7 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':x:'
-    path: tree/hld_segtree_noncommutative_path_query.py
+    path: tree/hld_segtree.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
+      \u30A8\u30EA\uFF09"
+  - icon: ':x:'
+    path: tree/hld_segtree_noncommutative.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
@@ -81,7 +85,8 @@ data:
   isVerificationFile: false
   path: tree/heavy_light_decomposition.py
   requiredBy:
-  - tree/hld_segtree_noncommutative_path_query.py
+  - tree/hld_segtree_noncommutative.py
+  - tree/hld_segtree.py
   timestamp: '2024-06-09 10:02:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

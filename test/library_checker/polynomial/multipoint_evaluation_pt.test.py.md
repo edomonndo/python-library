@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
     title: polynomial/product_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/multipoint_evaluation
     links:
@@ -38,8 +38,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-02 08:45:17+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
 layout: document
