@@ -1,5 +1,5 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/polynomial_interpolation
-from convolution.product_tree import ProductTree
+from polynomial.product_tree import ProductTree
 
 
 n = int(input())

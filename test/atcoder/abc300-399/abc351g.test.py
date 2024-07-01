@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://atcoder.jp/contests/abc351/tasks/abc351_g
 
-from data_structure.static_top_tree import StaticTopTree
+from tree.static_top_tree import StaticTopTree
 
 mod = 998244353
 

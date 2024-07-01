@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/product_of_polynomial_sequence
 
-from convolution.formal_power_series import multiply
+from polynomial.formal_power_series import multiply
 
 from collections import deque
 

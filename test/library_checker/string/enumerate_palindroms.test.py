@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/enumerate_palindromes
 
-from string_.manacher import manacher
+from str.manacher import manacher
 
 S = input()
 N = len(S)

@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
-    from math_.typical_problems_of_sum import *
+    from other.typical_problems_of_sum import *
 
     testcase = 10
     for _ in range(testcase):

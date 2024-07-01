@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/number_of_substrings
 
-from string_.suffix_array import suffix_array, lcp_array
+from str.suffix_array import suffix_array, lcp_array
 
 S = "_" + input()
 n = len(S)

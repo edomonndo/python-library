@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/log_of_formal_power_series_sparse
 
-from convolution.formal_power_series import FPS
+from polynomial.formal_power_series import FPS
 
 n, k = map(int, input().split())
 A = [0] * n
