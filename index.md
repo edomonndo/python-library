@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
     - icon: ':question:'
@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: atcoder/scc.py
       title: atcoder/scc.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/segtree.py
       title: atcoder/segtree.py
     - icon: ':warning:'
@@ -160,7 +160,7 @@ data:
       path: data_structure/fenwick_tree/point_set_range_frequency.py
       title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
         \u30A4\u30F3\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
     - icon: ':warning:'
@@ -439,7 +439,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/two_sat.py
       title: 2 Sat
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: other/typical_problems_of_sum.py
       title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   - name: persistent_data_structure
@@ -551,7 +551,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/contour_query.py
       title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
@@ -569,9 +569,13 @@ data:
     - icon: ':warning:'
       path: tree/euler_tour_tree.py
       title: tree/euler_tour_tree.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
+    - icon: ':x:'
+      path: tree/hld_segtree_noncommutative_path_query.py
+      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
+        \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
     - icon: ':heavy_check_mark:'
       path: tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
@@ -1212,18 +1216,21 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py
       title: Vertex Get Range Contour Add on Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
+      title: Vertex Set Path Composite
+    - icon: ':x:'
+      path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/unit_test/typical_problems_of_sum.test.py
       title: test/unit_test/typical_problems_of_sum.test.py
     - icon: ':heavy_check_mark:'
