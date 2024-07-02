@@ -15,6 +15,6 @@ for _ in range(q):
     t, *a = map(int, input().split())
     if t == 0:
         v, x = a
-        seg.set(v, x)
+        seg.set(v, x + seg.get(v))
     else:
         print(seg.subtree_prod(a[0]))

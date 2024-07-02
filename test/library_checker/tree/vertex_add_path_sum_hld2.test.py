@@ -11,6 +11,6 @@ seg = HldSegtree(lambda x, y: x + y, 0, A, n, edges, 0)
 for _ in range(q):
     t, a, b = map(int, input().split())
     if t == 0:
-        seg.set(a, b)
+        seg.set(a, b + seg.get(a))
     else:
         print(seg.path_prod(a, b))

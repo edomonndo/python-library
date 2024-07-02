@@ -24,7 +24,7 @@ V = [None] * n
 for i, (a, b) in enumerate(zip(A, B)):
     V[i] = (a << 32) + b
 
-seg = HldSegtree(op, 0, V, n, edges, 0)
+seg = HldSegtree(op, 1 << 32, V, n, edges, 0)
 for _ in range(q):
     t, a, b, c = map(int, input().split())
     if t == 0:
