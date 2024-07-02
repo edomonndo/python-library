@@ -9,12 +9,12 @@ data:
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite2.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -49,7 +49,7 @@ data:
   path: tree/hld_segtree_noncommutative.py
   requiredBy: []
   timestamp: '2024-07-02 09:06:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/vertext_set_path_composite2.test.py
 documentation_of: tree/hld_segtree_noncommutative.py

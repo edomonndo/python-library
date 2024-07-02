@@ -1,15 +1,15 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/hld_segtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
       \u30A8\u30EA\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_subtree_sum
     links:
@@ -23,15 +23,15 @@ data:
     A = [int(x) for x in input().split()]\nP = [int(x) for x in input().split()]\n\
     edges = []\nfor i, p in enumerate(P, 1):\n    edges.append((i, p))\n\nseg = HldSegtree(lambda\
     \ x, y: x + y, 0, A, n, edges, 0)\n\nfor _ in range(q):\n    t, *a = map(int,\
-    \ input().split())\n    if t == 0:\n        v, x = a\n        seg.set(v, x)\n\
+    \ input().split())\n    if t == 0:\n        v, x = a\n        seg.set(v, x + seg.get(v))\n\
     \    else:\n        print(seg.subtree_prod(a[0]))\n"
   dependsOn:
   - tree/hld_segtree.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
   requiredBy: []
-  timestamp: '2024-07-02 09:06:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-02 12:00:00+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
 layout: document

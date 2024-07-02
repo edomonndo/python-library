@@ -572,11 +572,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/hld_segtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
         \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
@@ -1214,7 +1214,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
       title: Vertex Add Path Sum (HLD)
     - icon: ':heavy_check_mark:'
@@ -1226,7 +1226,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
       title: Vertex Add Subtree Sum (HLD)
     - icon: ':heavy_check_mark:'
@@ -1235,7 +1235,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test

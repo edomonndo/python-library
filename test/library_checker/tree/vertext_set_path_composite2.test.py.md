@@ -1,15 +1,15 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/hld_segtree_noncommutative.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
@@ -26,17 +26,17 @@ data:
     \ [0] * n\nB = [0] * n\nfor i in range(n):\n    A[i], B[i] = map(int, input().split())\n\
     edges = [tuple(map(int, input().split())) for _ in range(n - 1)]\nV = [None] *\
     \ n\nfor i, (a, b) in enumerate(zip(A, B)):\n    V[i] = (a << 32) + b\n\nseg =\
-    \ HldSegtree(op, 0, V, n, edges, 0)\nfor _ in range(q):\n    t, a, b, c = map(int,\
-    \ input().split())\n    if t == 0:\n        seg.set(a, (b << 32) + c)\n    else:\n\
-    \        res = seg.prod(a, b)\n        a, b = res >> 32, res & msk\n        print((a\
-    \ * c + b) % MOD)\n"
+    \ HldSegtree(op, 1 << 32, V, n, edges, 0)\nfor _ in range(q):\n    t, a, b, c\
+    \ = map(int, input().split())\n    if t == 0:\n        seg.set(a, (b << 32) +\
+    \ c)\n    else:\n        res = seg.prod(a, b)\n        a, b = res >> 32, res &\
+    \ msk\n        print((a * c + b) % MOD)\n"
   dependsOn:
   - tree/hld_segtree_noncommutative.py
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite2.test.py
   requiredBy: []
-  timestamp: '2024-07-02 09:06:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-02 12:00:00+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite2.test.py
 layout: document
