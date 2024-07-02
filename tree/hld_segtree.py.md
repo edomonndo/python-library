@@ -30,10 +30,9 @@ data:
     \      op: Callable[[T, T], T],\n        e: T,\n        v: list[int],\n      \
     \  n: int,\n        edges: list[int, int],\n        root: int = 0,\n    ):\n \
     \       # assert n == len(v)\n        self.hld = HeavyLightDecomposition(n, edges,\
-    \ root)\n        into = self.hld.into\n        nv = [e] * n\n        for i, a\
-    \ in enumerate(v):\n            k = into[i]\n            nv[k] = a\n        self.seg\
-    \ = SegTree(op, e, nv)\n        self.op = op\n        self.e = e\n\n    def path_prod(self,\
-    \ u: int, v: int) -> T:\n        head, into, depth = self.hld.head, self.hld.into,\
+    \ root)\n        nv = self.hld.build_list(v)\n        self.seg = SegTree(op, e,\
+    \ nv)\n        self.op = op\n        self.e = e\n\n    def path_prod(self, u:\
+    \ int, v: int) -> T:\n        head, into, depth = self.hld.head, self.hld.into,\
     \ self.hld.depth\n        seg, par, op, n = self.seg, self.hld.par, self.op, self.hld.n\n\
     \n        res = self.e\n        while head[u] != head[v]:\n            if depth[head[u]]\
     \ < depth[head[v]]:\n                u, v = v, u\n            res = op(res, seg.prod(into[head[u]],\
@@ -49,7 +48,7 @@ data:
   isVerificationFile: false
   path: tree/hld_segtree.py
   requiredBy: []
-  timestamp: '2024-07-02 08:45:17+09:00'
+  timestamp: '2024-07-02 09:06:45+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/tree/vertex_add_path_sum_hld2.test.py
