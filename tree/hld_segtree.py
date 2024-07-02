@@ -17,11 +17,7 @@ class HldSegtree:
     ):
         # assert n == len(v)
         self.hld = HeavyLightDecomposition(n, edges, root)
-        into = self.hld.into
-        nv = [e] * n
-        for i, a in enumerate(v):
-            k = into[i]
-            nv[k] = a
+        nv = self.hld.build_list(v)
         self.seg = SegTree(op, e, nv)
         self.op = op
         self.e = e

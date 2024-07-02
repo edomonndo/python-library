@@ -10,6 +10,7 @@ class HeavyLightDecomposition:
         self.out = [-1] * n
         self.head = [root] * n
         self.par = [root] * n
+        self.hld = [0] * n
         self.adj = [[] for _ in range(n)]
         for u, v in edges:
             self.adj[u].append(v)
@@ -44,13 +45,16 @@ class HeavyLightDecomposition:
 
     def _dfs_hld(self):
         # calc hld
-        adj, into, out, par, head = self.adj, self.into, self.out, self.par, self.head
+        adj, into, out, par = self.adj, self.into, self.out, self.par
+        head, hld = self.head, self.hld
+
         idx = 0
         st = [~self.root, self.root]
         while st:
             v = st.pop()
             if v >= 0:
                 into[v] = idx
+                hld[idx] = v
                 idx += 1
                 for u in adj[v]:
                     if u == par[v]:
@@ -59,6 +63,9 @@ class HeavyLightDecomposition:
                     st += [~u, u]
                 continue
             out[~v] = idx
+
+    def build_list(self, a: list[int]) -> list[int]:
+        return [a[x] for x in self.hld]
 
     def ascend(self, u: int, v: int) -> list[tuple[int, int]]:
         into, par, head = self.into, self.par, self.head
