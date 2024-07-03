@@ -2,14 +2,14 @@
 
 from tree.lca import LcaDoubling
 
-N, Q = map(int, input().split())
-G = [[] for _ in range(N)]
+n, q = map(int, input().split())
+g = [[] for _ in range(n)]
 for _ in range(N - 1):
     a, b = map(int, input().split())
-    G[a].append(b)
-    G[b].append(a)
+    g[a].append(b)
+    g[b].append(a)
 
-lca = LcaDoubling(N, G)
-for _ in range(Q):
+lca = LcaDoubling(n, g)
+for _ in range(q):
     s, t, i = map(int, input().split())
     print(lca.jump(s, t, i))

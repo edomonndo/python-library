@@ -100,6 +100,26 @@ class HeavyLightDecomposition:
         depth = self.depth
         return depth[u] + depth[v] - 2 * depth[self.lca(u, v)]
 
+    def jump(self, u: int, v: int, k: int) -> int:
+        head, depth, par = self.head, self.depth, self.par
+
+        d = self.dist(u, v)
+        if d < k:
+            return -1
+        lca = self.lca(u, v)
+        if depth[u] - depth[lca] < k:
+            u = v
+            k = d - k
+        h = head[u]
+        while depth[u] - depth[h] < k:
+            k -= depth[u] - depth[h] + 1
+            u = par[h]
+            h = head[u]
+        return self.hld[self.into[u] - k]
+
+    def is_on_path(self, u: int, v: int, x: int) -> bool:
+        return self.dist(u, x) + self.dist(x, v) == self.dist(u, v)
+
     def path_query(
         self, u: int, v: int, f: Callable[[int, int], None], edge: bool = False
     ) -> None:
