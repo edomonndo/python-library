@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/lca.py
+    title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,11 +23,12 @@ data:
     \ start=1):\n    G[v].append(p)\n    G[p].append(v)\n\nlca = LcaDoubling(N, G)\n\
     for _ in range(Q):\n    u, v = map(int, input().split())\n    print(lca.lca(u,\
     \ v))\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/lca.py
   isVerificationFile: true
   path: test/library_checker/tree/lowest_common_ancestor.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/lowest_common_ancestor.test.py

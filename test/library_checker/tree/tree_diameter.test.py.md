@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/diameter.py
+    title: "\u6728\u306E\u76F4\u5F84"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     \ in range(N)]\nfor _ in range(N - 1):\n    a, b, c = map(int, input().split())\n\
     \    G[a].append((b, c))\n    G[b].append((a, c))\n\ndiam, path = diameter(N,\
     \ G, True)\nprint(diam, len(path))\nprint(*path)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/diameter.py
   isVerificationFile: true
   path: test/library_checker/tree/tree_diameter.test.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/tree_diameter.test.py

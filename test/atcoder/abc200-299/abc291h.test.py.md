@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':warning:'
+    path: graph/tree/centroid_decomposition.py
+    title: "\u91CD\u5FC3\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -19,11 +22,12 @@ data:
     \ int(input())\ng = [[] for _ in range(n)]\nfor _ in range(n - 1):\n    u, v =\
     \ map(lambda x: int(x) - 1, input().split())\n    g[u].append(v)\n    g[v].append(u)\n\
     \ntree = CentroidDecomposition(g)\nprint(*[v + 1 if v >= 0 else v for v in tree.belong])\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/centroid_decomposition.py
   isVerificationFile: true
   path: test/atcoder/abc200-299/abc291h.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:29:04+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc291h.test.py

@@ -4,11 +4,14 @@ data:
   - icon: ':question:'
     path: atcoder/fenwicktree.py
     title: atcoder/fenwicktree.py
+  - icon: ':question:'
+    path: graph/tree/heavy_light_decomposition.py
+    title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_path_sum
     links:
@@ -29,11 +32,12 @@ data:
     \ f)\n        print(ans)\n"
   dependsOn:
   - atcoder/fenwicktree.py
+  - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-07-03 10:08:38+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-04 12:06:06+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_path_sum_hld.test.py
 layout: document

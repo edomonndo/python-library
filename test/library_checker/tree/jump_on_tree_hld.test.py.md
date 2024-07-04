@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/jump_on_tree
     links:
@@ -20,15 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/jump_on_tree\n\
     \nfrom graph.tree.heavy_light_decomposition import HeavyLightDecomposition\n\n\
     n, q = map(int, input().split())\nedges = [tuple(map(int, input().split())) for\
-    \ _ in range(n)]\n\nT = HeavyLightDecomposition(n, edges)\nfor _ in range(q):\n\
+    \ _ in range(n - 1)]\n\nT = HeavyLightDecomposition(n, edges)\nfor _ in range(q):\n\
     \    s, t, k = map(int, input().split())\n    print(T.jump(s, t, k))\n"
   dependsOn:
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree_hld.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-04 13:09:35+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_hld.test.py
 layout: document

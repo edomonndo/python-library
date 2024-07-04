@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/diameter.py
+    title: "\u6728\u306E\u76F4\u5F84"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \nfrom graph.tree.diameter import diameter\n\nN = int(input())\nG = [[] for _\
     \ in range(N)]\nfor _ in range(N - 1):\n    a, b, c = map(int, input().split())\n\
     \    G[a].append((b, c))\n    G[b].append((a, c))\n\ndiam = diameter(N, G)\nprint(diam)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/diameter.py
   isVerificationFile: true
   path: test/aoj/grl/grl_5_a_diameter.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_a_diameter.test.py

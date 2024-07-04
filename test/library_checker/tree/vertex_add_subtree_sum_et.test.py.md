@@ -1,11 +1,14 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: graph/tree/euler_tour.py
+    title: Euler tour
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_subtree_sum
     links:
@@ -23,12 +26,13 @@ data:
     \ b = qu\n        cur = A[a]\n        et.update_verticle(a, cur + b)\n       \
     \ A[a] = cur + b\n    else:\n        a = qu[0]\n        ans.append(et.subtree_verticle_sum(a))\n\
     print(*ans, sep=\"\\n\")\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/euler_tour.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-04 12:06:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
 layout: document

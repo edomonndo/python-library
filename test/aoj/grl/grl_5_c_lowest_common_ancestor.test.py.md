@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: graph/tree/euler_tour.py
+    title: Euler tour
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,11 +23,12 @@ data:
     \    for e in es:\n        G[i].append((e, 1))\n        G[e].append((i, 1))\n\n\
     et = EulerTour(G, 0, [0] * N)\nQ = int(input())\nfor _ in range(Q):\n    u, v\
     \ = map(int, input().split())\n    print(et.lca(u, v))\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/euler_tour.py
   isVerificationFile: true
   path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py

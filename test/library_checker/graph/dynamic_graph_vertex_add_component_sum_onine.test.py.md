@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/dynamic_connectivity.py
     title: Dynamic Connectivity (Online)
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/dynamic_graph_vertex_add_component_sum
     links:
@@ -31,7 +31,7 @@ data:
   path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
   requiredBy: []
   timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
 layout: document

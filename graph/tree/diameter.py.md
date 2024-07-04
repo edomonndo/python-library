@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/grl/grl_5_a_diameter.test.py
+    title: "GRL5A \u6728\u306E\u76F4\u5F84"
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/tree_diameter.test.py
+    title: test/library_checker/tree/tree_diameter.test.py
   _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -29,8 +35,10 @@ data:
   path: graph/tree/diameter.py
   requiredBy: []
   timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aoj/grl/grl_5_a_diameter.test.py
+  - test/library_checker/tree/tree_diameter.test.py
 documentation_of: graph/tree/diameter.py
 layout: document
 title: "\u6728\u306E\u76F4\u5F84"

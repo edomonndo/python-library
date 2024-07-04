@@ -1,20 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
     title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
+    title: Vertex Add Path Sum (HLD)
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
+    title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -46,9 +52,11 @@ data:
   path: graph/tree/hld_segtree.py
   requiredBy: []
   timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+  - test/library_checker/tree/vertex_add_path_sum_hld2.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
 documentation_of: graph/tree/hld_segtree.py
 layout: document
 title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\

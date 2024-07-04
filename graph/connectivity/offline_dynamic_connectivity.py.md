@@ -6,7 +6,7 @@ data:
     title: Rollback Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py
     title: Dynamic Graph Vertex Add Component Sum (Offline)
   - icon: ':heavy_check_mark:'
@@ -15,9 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py
     title: Dynamic Tree Vertex Add Subtree Sum
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -74,7 +74,7 @@ data:
   path: graph/connectivity/offline_dynamic_connectivity.py
   requiredBy: []
   timestamp: '2024-07-02 07:37:15+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
   - test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py

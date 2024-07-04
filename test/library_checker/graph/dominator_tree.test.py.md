@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/dominator_tree.py
+    title: Dominator Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \nfrom graph.tree.dominator_tree import dominator_tree\n\nn, m, r = map(int, input().split())\n\
     g = [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
     \    g[u].append(v)\n\nprint(*dominator_tree(g, r))\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/dominator_tree.py
   isVerificationFile: true
   path: test/library_checker/graph/dominator_tree.test.py
   requiredBy: []
-  timestamp: '2024-04-30 09:44:21+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/dominator_tree.test.py

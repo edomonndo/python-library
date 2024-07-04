@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/auxiliary_tree.py
+    title: Auxiliary tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -32,11 +35,12 @@ data:
     \ %= MOD\n                    tmp %= MOD\n                dp1[v] = res - tmp -\
     \ 1\n                dp2[v] = res - 1\n    for x in dp1.values():\n        ans\
     \ = (ans + x) % MOD\nprint(ans)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/auxiliary_tree.py
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc340g.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc340g.test.py

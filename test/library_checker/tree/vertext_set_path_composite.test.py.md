@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: atcoder/segtree.py
     title: atcoder/segtree.py
+  - icon: ':question:'
+    path: graph/tree/heavy_light_decomposition.py
+    title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
@@ -37,11 +40,12 @@ data:
     \        ans = c\n        H.path_noncommutative_query(a, b, f)\n        print(ans)\n"
   dependsOn:
   - atcoder/segtree.py
+  - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-07-03 10:08:38+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-04 12:06:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite.test.py
 layout: document

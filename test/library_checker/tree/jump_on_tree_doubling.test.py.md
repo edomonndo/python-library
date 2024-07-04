@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/lca.py
     title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/jump_on_tree
     links:
@@ -19,7 +19,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/jump_on_tree\n\
     \nfrom graph.tree.lca import LcaDoubling\n\nn, q = map(int, input().split())\n\
-    g = [[] for _ in range(n)]\nfor _ in range(N - 1):\n    a, b = map(int, input().split())\n\
+    g = [[] for _ in range(n)]\nfor _ in range(n - 1):\n    a, b = map(int, input().split())\n\
     \    g[a].append(b)\n    g[b].append(a)\n\nlca = LcaDoubling(n, g)\nfor _ in range(q):\n\
     \    s, t, i = map(int, input().split())\n    print(lca.jump(s, t, i))\n"
   dependsOn:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree_doubling.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-04 13:09:35+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_doubling.test.py
 layout: document

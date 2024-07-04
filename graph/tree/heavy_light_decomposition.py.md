@@ -5,27 +5,36 @@ data:
   - icon: ':warning:'
     path: graph/tree/hld_lazysegtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/tree/hld_segtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
       \u30A8\u30EA\uFF09"
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/tree/hld_segtree_noncommutative.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
     title: test/library_checker/tree/jump_on_tree_hld.test.py
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
+    title: Vertex Add Path Sum (HLD)
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
+    title: Vertex Add Subtree Sum (HLD)
+  - icon: ':x:'
+    path: test/library_checker/tree/vertext_set_path_composite.test.py
+    title: Vertex Set Path Composite
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -102,11 +111,14 @@ data:
   - graph/tree/hld_segtree.py
   - graph/tree/hld_lazysegtree.py
   timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+  - test/library_checker/tree/vertext_set_path_composite.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/tree/jump_on_tree_hld.test.py
+  - test/library_checker/tree/vertex_add_path_sum_hld.test.py
 documentation_of: graph/tree/heavy_light_decomposition.py
 layout: document
 title: "HL\u5206\u89E3"

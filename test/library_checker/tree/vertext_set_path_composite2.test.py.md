@@ -1,11 +1,15 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':x:'
+    path: graph/tree/hld_segtree_noncommutative.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
+      \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
@@ -26,12 +30,13 @@ data:
     \ = map(int, input().split())\n    if t == 0:\n        seg.set(a, (b << 32) +\
     \ c)\n    else:\n        res = seg.prod(a, b)\n        a, b = res >> 32, res &\
     \ msk\n        print((a * c + b) % MOD)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/hld_segtree_noncommutative.py
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite2.test.py
   requiredBy: []
-  timestamp: '2024-07-02 12:00:00+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-07-04 12:06:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite2.test.py
 layout: document

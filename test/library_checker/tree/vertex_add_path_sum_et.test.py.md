@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':question:'
+    path: graph/tree/euler_tour.py
+    title: Euler tour
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,11 +25,12 @@ data:
     \ input().split())\n    if t == 0:\n        cur = A[a]\n        et.update_verticle(a,\
     \ cur + b)\n        A[a] = cur + b\n    else:\n        ans.append(et.path_verticle_sum(a,\
     \ b))\nprint(*ans, sep=\"\\n\")\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/euler_tour.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_path_sum_et.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_path_sum_et.test.py

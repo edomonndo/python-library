@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/cartesian_tree.py
+    title: Cartesian tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +21,12 @@ data:
     \nfrom graph.tree.cartesian_tree import cartesian_tree\n\nN = int(input())\nA\
     \ = list(map(int, input().split()))\n\nparent = cartesian_tree(A)\n# \u6839\u306F\
     $parent_r$ = r\u3068\u3059\u308B\nprint(*[v if v != -1 else i for i, v in enumerate(parent)])\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/cartesian_tree.py
   isVerificationFile: true
   path: test/library_checker/tree/cartesian_tree.test.py
   requiredBy: []
-  timestamp: '2023-08-01 14:51:05+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/cartesian_tree.test.py

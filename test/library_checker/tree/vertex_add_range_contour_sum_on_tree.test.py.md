@@ -4,6 +4,9 @@ data:
   - icon: ':question:'
     path: atcoder/fenwicktree.py
     title: atcoder/fenwicktree.py
+  - icon: ':question:'
+    path: graph/tree/contour_query.py
+    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -33,10 +36,11 @@ data:
     \ l, r, query1, query2)\n        print(ans)\n"
   dependsOn:
   - atcoder/fenwicktree.py
+  - graph/tree/contour_query.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py

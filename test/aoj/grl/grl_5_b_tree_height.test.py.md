@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/tree_dp.py
+    title: "(\u5168\u65B9\u4F4D)\u6728DP"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,11 +25,12 @@ data:
     \ v, p: a + W[(v, p)]\nadj_td = lambda a, v, p: a + W[(v, p)]\nadj_fin = lambda\
     \ a, v: a\n\nres = TDP.rerooting(e, merge, adj_bu, adj_td, adj_fin)\nprint(*res,\
     \ sep=\"\\n\")\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/tree_dp.py
   isVerificationFile: true
   path: test/aoj/grl/grl_5_b_tree_height.test.py
   requiredBy: []
-  timestamp: '2024-06-20 09:29:05+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_b_tree_height.test.py

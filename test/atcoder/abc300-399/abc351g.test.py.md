@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/static_top_tree.py
+    title: Static Top Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -27,11 +30,12 @@ data:
     \nfor _ in range(q):\n    v, x = map(int, input().split())\n    v -= 1\n    A[v]\
     \ = x\n    while v != -1:\n        T.update(v)\n        v = T.parent[v]\n    print(T.solve()\
     \ & mask)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/static_top_tree.py
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc351g.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc351g.test.py

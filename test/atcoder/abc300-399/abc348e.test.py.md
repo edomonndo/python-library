@@ -1,6 +1,9 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/centroids.py
+    title: "\u91CD\u5FC3\u5224\u5B9A"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,11 +25,12 @@ data:
     \ -1, 1)]\nwhile stack:\n    v, p, d = stack.pop()\n    for u in g[v]:\n     \
     \   if u != p:\n            ans += C[u] * d\n            stack.append((u, v, d\
     \ + 1))\nprint(ans)\n"
-  dependsOn: []
+  dependsOn:
+  - graph/tree/centroids.py
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc348e.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc348e.test.py
