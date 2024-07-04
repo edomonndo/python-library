@@ -1,4 +1,4 @@
 ---
-title: 連結性判定（オフライン）
+title: Dynamic Connectivity (Offline)
 documentation_of: ./offline_dynamic_connectivity.py
 ---

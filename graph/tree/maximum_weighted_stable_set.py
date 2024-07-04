@@ -1,4 +1,4 @@
-from tree.rooted_tree import rooted_tree
+from graph.tree.rooted_tree import rooted_tree
 
 
 def max_stable_set(adj: list[list[int]], weight=list[int], r: int = 0) -> int:

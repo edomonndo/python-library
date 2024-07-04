@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/jump_on_tree
 
-from tree.lca import LcaDoubling
+from graph.tree.lca import LcaDoubling
 
 n, q = map(int, input().split())
 g = [[] for _ in range(n)]

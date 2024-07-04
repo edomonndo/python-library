@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/dominatortree
 
-from tree.dominator_tree import dominator_tree
+from graph.tree.dominator_tree import dominator_tree
 
 n, m, r = map(int, input().split())
 g = [[] for _ in range(n)]

@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite
 
 from atcoder.segtree import SegTree
-from tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 MOD = 998244353
 msk = (1 << 32) - 1

@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum
 
-from tree.euler_tour import EulerTour
+from graph.tree.euler_tour import EulerTour
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]

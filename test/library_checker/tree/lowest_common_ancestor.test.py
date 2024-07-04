@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/lca
 
-from tree.lca import LcaDoubling
+from graph.tree.lca import LcaDoubling
 
 N, Q = map(int, input().split())
 parent = list(map(int, input().split()))

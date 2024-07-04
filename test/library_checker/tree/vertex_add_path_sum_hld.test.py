@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum
 
 from atcoder.fenwicktree import FenwickTree
-from tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 
 def f(x, y):

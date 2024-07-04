@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_B
 
-from tree.tree_dp import TreeDp
+from graph.tree.tree_dp import TreeDp
 
 N = int(input())
 G = [[] for _ in range(N)]

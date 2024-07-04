@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/cartesian_tree
 
-from tree.cartesian_tree import cartesian_tree
+from graph.tree.cartesian_tree import cartesian_tree
 
 N = int(input())
 A = list(map(int, input().split()))

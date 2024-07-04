@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_subtree_sum
 
-from tree.hld_segtree import HldSegtree
+from graph.tree.hld_segtree import HldSegTree
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
@@ -9,7 +9,7 @@ edges = []
 for i, p in enumerate(P, 1):
     edges.append((i, p))
 
-seg = HldSegtree(lambda x, y: x + y, 0, A, n, edges, 0)
+seg = HldSegTree(lambda x, y: x + y, 0, A, n, edges, 0)
 
 for _ in range(q):
     t, *a = map(int, input().split())

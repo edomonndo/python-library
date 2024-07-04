@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite
 
-from tree.hld_segtree_noncommutative import HldSegtree
+from graph.tree.hld_segtree_noncommutative import HldSegTree
 
 MOD = 998244353
 msk = (1 << 32) - 1
@@ -24,7 +24,7 @@ V = [None] * n
 for i, (a, b) in enumerate(zip(A, B)):
     V[i] = (a << 32) + b
 
-seg = HldSegtree(op, 1 << 32, V, n, edges, 0)
+seg = HldSegTree(op, 1 << 32, V, n, edges, 0)
 for _ in range(q):
     t, a, b, c = map(int, input().split())
     if t == 0:

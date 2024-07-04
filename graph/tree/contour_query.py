@@ -1,4 +1,4 @@
-from tree.centroid_decomposition import CentroidDecomposition
+from graph.tree.centroid_decomposition import CentroidDecomposition
 
 from collections import deque
 from typing import Callable, TypeVar

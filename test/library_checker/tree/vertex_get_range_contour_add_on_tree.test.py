@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_get_range_contour_add_on_tree
 
 from data_structure.fenwick_tree.range_add_point_get import RangeAddPointGet
-from tree.contour_query import ContourQuery
+from graph.tree.contour_query import ContourQuery
 
 
 n, q = map(int, input().split())

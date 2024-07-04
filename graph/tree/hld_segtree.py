@@ -1,11 +1,11 @@
 from atcoder.segtree import SegTree
-from tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from typing import Callable, TypeVar
 
 T = TypeVar("T")
 
 
-class HldSegtree:
+class HldSegTree:
     def __init__(
         self,
         op: Callable[[T, T], T],
@@ -24,7 +24,7 @@ class HldSegtree:
 
     def path_prod(self, u: int, v: int) -> T:
         head, into, depth = self.hld.head, self.hld.into, self.hld.depth
-        seg, par, op, n = self.seg, self.hld.par, self.op, self.hld.n
+        seg, par, op = self.seg, self.hld.par, self.op
 
         res = self.e
         while head[u] != head[v]:

@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A
 
-from tree.diameter import diameter
+from graph.tree.diameter import diameter
 
 N = int(input())
 G = [[] for _ in range(N)]

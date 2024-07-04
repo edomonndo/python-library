@@ -2,7 +2,7 @@
 
 
 from atcoder.fenwicktree import FenwickTree
-from tree.contour_query import ContourQuery
+from graph.tree.contour_query import ContourQuery
 
 
 n, q = map(int, input().split())

@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://atcoder.jp/contests/abc340/tasks/abc340_g
 
 from collections import defaultdict
-from tree.auxiliary_tree import AuxiliaryTree
+from graph.tree.auxiliary_tree import AuxiliaryTree
 
 MOD = 998244353
 

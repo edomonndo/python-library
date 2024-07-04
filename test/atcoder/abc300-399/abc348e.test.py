@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://atcoder.jp/contests/abc348/tasks/abc348_e
 
-from tree.centroids import centroids
+from graph.tree.centroids import centroids
 
 n = int(input())
 g = [[] for _ in range(n)]

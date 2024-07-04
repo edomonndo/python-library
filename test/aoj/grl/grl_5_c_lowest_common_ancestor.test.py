@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_C
 
-from tree.euler_tour import EulerTour
+from graph.tree.euler_tour import EulerTour
 
 N = int(input())
 G = [[] for _ in range(N)]
