@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/cartesian_tree.py
-    title: Cartesian tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +15,10 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/cartesian_tree\n\
-    \nfrom tree.cartesian_tree import cartesian_tree\n\nN = int(input())\nA = list(map(int,\
-    \ input().split()))\n\nparent = cartesian_tree(A)\n# \u6839\u306F$parent_r$ =\
-    \ r\u3068\u3059\u308B\nprint(*[v if v != -1 else i for i, v in enumerate(parent)])\n"
-  dependsOn:
-  - tree/cartesian_tree.py
+    \nfrom graph.tree.cartesian_tree import cartesian_tree\n\nN = int(input())\nA\
+    \ = list(map(int, input().split()))\n\nparent = cartesian_tree(A)\n# \u6839\u306F\
+    $parent_r$ = r\u3068\u3059\u308B\nprint(*[v if v != -1 else i for i, v in enumerate(parent)])\n"
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/tree/cartesian_tree.test.py
   requiredBy: []

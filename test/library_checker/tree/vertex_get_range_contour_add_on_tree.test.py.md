@@ -4,9 +4,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_point_get.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
-  - icon: ':heavy_check_mark:'
-    path: tree/contour_query.py
-    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,7 +19,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_get_range_contour_add_on_tree\n\
     \nfrom data_structure.fenwick_tree.range_add_point_get import RangeAddPointGet\n\
-    from tree.contour_query import ContourQuery\n\n\nn, q = map(int, input().split())\n\
+    from graph.tree.contour_query import ContourQuery\n\n\nn, q = map(int, input().split())\n\
     A = [int(x) for x in input().split()]\ng = [[] for _ in range(n)]\nfor _ in range(n\
     \ - 1):\n    u, v = map(int, input().split())\n    g[u].append(v)\n    g[v].append(u)\n\
     \nbit = []\n\n\ndef f(arr):\n    for i in range(len(arr)):\n        bit.append(RangeAddPointGet(len(arr[i])))\n\
@@ -34,7 +31,6 @@ data:
     \        print(ans)\n"
   dependsOn:
   - data_structure/fenwick_tree/range_add_point_get.py
-  - tree/contour_query.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py
   requiredBy: []

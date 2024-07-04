@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/dominator_tree.py
-    title: Dominator Tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +15,10 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/dominatortree\n\
-    \nfrom tree.dominator_tree import dominator_tree\n\nn, m, r = map(int, input().split())\n\
+    \nfrom graph.tree.dominator_tree import dominator_tree\n\nn, m, r = map(int, input().split())\n\
     g = [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
     \    g[u].append(v)\n\nprint(*dominator_tree(g, r))\n"
-  dependsOn:
-  - tree/dominator_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/graph/dominator_tree.test.py
   requiredBy: []

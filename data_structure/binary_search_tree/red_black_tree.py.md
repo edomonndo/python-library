@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: tree/euler_tour_tree.py
-    title: tree/euler_tour_tree.py
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -183,8 +180,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/binary_search_tree/red_black_tree.py
-  requiredBy:
-  - tree/euler_tour_tree.py
+  requiredBy: []
   timestamp: '2024-05-02 15:05:51+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

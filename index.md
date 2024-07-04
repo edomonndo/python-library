@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
     - icon: ':heavy_check_mark:'
@@ -88,7 +88,7 @@ data:
       title: Radix Heap
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/safe_int_dict.py
-      title: data_structure/basic/safe_int_dict.py
+      title: Safe Int Dict
     - icon: ':heavy_check_mark:'
       path: data_structure/basic/unionfind.py
       title: Union Find
@@ -153,7 +153,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
@@ -163,7 +163,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
-    - icon: ':warning:'
+    - icon: ':x:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
     - icon: ':warning:'
@@ -310,10 +310,10 @@ data:
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/find_cycle_directed.py
-      title: graph/find_cycle_directed.py
+      title: "\u9589\u8DEF\u691C\u51FA\uFF08\u6709\u5411\u30B0\u30E9\u30D5\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/find_cycle_undirected.py
-      title: graph/find_cycle_undirected.py
+      title: "\u9589\u8DEF\u691C\u51FA\uFF08\u7121\u5411\u30B0\u30E9\u30D5\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/floyd_warshall.py
       title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
@@ -353,12 +353,18 @@ data:
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: graph/connectivity
     pages:
+    - icon: ':x:'
+      path: graph/connectivity/dynamic_connectivity.py
+      title: Dynamic Connectivity (Online)
+    - icon: ':warning:'
+      path: graph/connectivity/euler_tour_tree.py
+      title: Euler Tour Tree
     - icon: ':heavy_check_mark:'
       path: graph/connectivity/link_cut_tree.py
       title: Link Cut Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/connectivity/offline_dynamic_connectivity.py
-      title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
+      title: Dynamic Connectivity (Offline)
     - icon: ':warning:'
       path: graph/connectivity/range_union_find.py
       title: Range Union Find
@@ -371,17 +377,84 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/connectivity/weighted_union_find.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
-  - name: grid
+  - name: graph/grid
     pages:
     - icon: ':warning:'
-      path: grid/grid.py
+      path: graph/grid/grid.py
       title: "\u30B0\u30EA\u30C3\u30C9"
-  - name: heuristic
+  - name: graph/tree
     pages:
     - icon: ':warning:'
-      path: heuristic/random_set.py
-      title: "\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u308B\u96C6\
-        \u5408"
+      path: graph/tree/auxiliary_tree.py
+      title: Auxiliary tree
+    - icon: ':warning:'
+      path: graph/tree/cartesian_tree.py
+      title: Cartesian tree
+    - icon: ':warning:'
+      path: graph/tree/centroid_decomposition.py
+      title: "\u91CD\u5FC3\u5206\u89E3"
+    - icon: ':warning:'
+      path: graph/tree/centroids.py
+      title: "\u91CD\u5FC3\u5224\u5B9A"
+    - icon: ':warning:'
+      path: graph/tree/contour_query.py
+      title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
+    - icon: ':warning:'
+      path: graph/tree/count_stable_set.py
+      title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
+    - icon: ':warning:'
+      path: graph/tree/diameter.py
+      title: "\u6728\u306E\u76F4\u5F84"
+    - icon: ':warning:'
+      path: graph/tree/dominator_tree.py
+      title: Dominator Tree
+    - icon: ':warning:'
+      path: graph/tree/euler_tour.py
+      title: Euler tour
+    - icon: ':x:'
+      path: graph/tree/heavy_light_decomposition.py
+      title: "HL\u5206\u89E3"
+    - icon: ':warning:'
+      path: graph/tree/hld_lazysegtree.py
+      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
+    - icon: ':x:'
+      path: graph/tree/hld_segtree.py
+      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
+        \u30AF\u30A8\u30EA\uFF09"
+    - icon: ':warning:'
+      path: graph/tree/hld_segtree_noncommutative.py
+      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
+        \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
+    - icon: ':x:'
+      path: graph/tree/lca.py
+      title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
+    - icon: ':warning:'
+      path: graph/tree/maximum_matching.py
+      title: "\u6728\u306E\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+    - icon: ':warning:'
+      path: graph/tree/maximum_stable_set.py
+      title: "\u6728\u306E\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+    - icon: ':warning:'
+      path: graph/tree/maximum_weighted_stable_set.py
+      title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
+    - icon: ':warning:'
+      path: graph/tree/minimum_edge_cover.py
+      title: "\u6728\u306E\u6700\u5C0F\u8FBA\u88AB\u8986"
+    - icon: ':warning:'
+      path: graph/tree/minimum_vertex_cover.py
+      title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
+    - icon: ':warning:'
+      path: graph/tree/permutation_tree.py
+      title: "\u9806\u5217\u6728"
+    - icon: ':warning:'
+      path: graph/tree/rooted_tree.py
+      title: "\u6839\u4ED8\u304D\u6728"
+    - icon: ':warning:'
+      path: graph/tree/static_top_tree.py
+      title: Static Top Tree
+    - icon: ':warning:'
+      path: graph/tree/tree_dp.py
+      title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -436,12 +509,51 @@ data:
       title: Stern Brocot tree
   - name: other
     pages:
+    - icon: ':warning:'
+      path: other/random_set.py
+      title: "\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u308B\u96C6\
+        \u5408"
     - icon: ':heavy_check_mark:'
       path: other/two_sat.py
       title: 2 Sat
     - icon: ':heavy_check_mark:'
       path: other/typical_problems_of_sum.py
       title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
+  - name: other/sort
+    pages:
+    - icon: ':warning:'
+      path: other/sort/bubble_sort.py
+      title: "\u30D0\u30D6\u30EB\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/bucket_sort.py
+      title: "\u30D0\u30B1\u30C3\u30C8\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/count_sort.py
+      title: "\u30AB\u30A6\u30F3\u30C8\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/heap_sort.py
+      title: "\u30D2\u30FC\u30D7\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/insert_sort.py
+      title: "\u633F\u5165\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/merge_sort.py
+      title: "\u30DE\u30FC\u30B8\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/quick_sort.py
+      title: "\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/radix_sort.py
+      title: "Radix\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/random_quick_sort.py
+      title: "\u4E71\u629E\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/select_sort.py
+      title: "\u9078\u629E\u30BD\u30FC\u30C8"
+    - icon: ':warning:'
+      path: other/sort/tim_sort.py
+      title: "Tim\u30BD\u30FC\u30C8"
   - name: persistent_data_structure
     pages:
     - icon: ':warning:'
@@ -479,41 +591,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: polynomial/tayler_shift.py
       title: polynomial/tayler_shift.py
-  - name: sort
-    pages:
-    - icon: ':warning:'
-      path: sort/bubble_sort.py
-      title: "\u30D0\u30D6\u30EB\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/bucket_sort.py
-      title: "\u30D0\u30B1\u30C3\u30C8\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/count_sort.py
-      title: "\u30AB\u30A6\u30F3\u30C8\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/heap_sort.py
-      title: "\u30D2\u30FC\u30D7\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/insert_sort.py
-      title: "\u633F\u5165\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/merge_sort.py
-      title: "\u30DE\u30FC\u30B8\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/quick_sort.py
-      title: "\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/radix_sort.py
-      title: "Radix\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/random_quick_sort.py
-      title: "\u4E71\u629E\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/select_sort.py
-      title: "\u9078\u629E\u30BD\u30FC\u30C8"
-    - icon: ':warning:'
-      path: sort/tim_sort.py
-      title: "Tim\u30BD\u30FC\u30C8"
   - name: str
     pages:
     - icon: ':heavy_check_mark:'
@@ -537,79 +614,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: str/z_algorithm.py
       title: Z algorithm
-  - name: tree
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: tree/auxiliary_tree.py
-      title: Auxiliary tree
-    - icon: ':heavy_check_mark:'
-      path: tree/cartesian_tree.py
-      title: Cartesian tree
-    - icon: ':warning:'
-      path: tree/centroid_decomposition.py
-      title: "\u91CD\u5FC3\u5206\u89E3"
-    - icon: ':heavy_check_mark:'
-      path: tree/centroids.py
-      title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':heavy_check_mark:'
-      path: tree/contour_query.py
-      title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
-    - icon: ':warning:'
-      path: tree/count_stable_set.py
-      title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
-    - icon: ':heavy_check_mark:'
-      path: tree/diameter.py
-      title: "\u6728\u306E\u76F4\u5F84"
-    - icon: ':heavy_check_mark:'
-      path: tree/dominator_tree.py
-      title: Dominator Tree
-    - icon: ':heavy_check_mark:'
-      path: tree/euler_tour.py
-      title: Euler tour
-    - icon: ':warning:'
-      path: tree/euler_tour_tree.py
-      title: tree/euler_tour_tree.py
-    - icon: ':heavy_check_mark:'
-      path: tree/heavy_light_decomposition.py
-      title: "HL\u5206\u89E3"
-    - icon: ':heavy_check_mark:'
-      path: tree/hld_segtree.py
-      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
-        \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':heavy_check_mark:'
-      path: tree/hld_segtree_noncommutative.py
-      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
-        \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
-    - icon: ':heavy_check_mark:'
-      path: tree/lca.py
-      title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
-    - icon: ':warning:'
-      path: tree/maximum_matching.py
-      title: "\u6728\u306E\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
-    - icon: ':warning:'
-      path: tree/maximum_stable_set.py
-      title: "\u6728\u306E\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
-    - icon: ':warning:'
-      path: tree/maximum_weighted_stable_set.py
-      title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
-    - icon: ':warning:'
-      path: tree/minimum_edge_cover.py
-      title: "\u6728\u306E\u6700\u5C0F\u8FBA\u88AB\u8986"
-    - icon: ':warning:'
-      path: tree/minimum_vertex_cover.py
-      title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
-    - icon: ':warning:'
-      path: tree/permutation_tree.py
-      title: tree/permutation_tree.py
-    - icon: ':warning:'
-      path: tree/rooted_tree.py
-      title: "\u6839\u4ED8\u304D\u6728"
-    - icon: ':heavy_check_mark:'
-      path: tree/static_top_tree.py
-      title: Static Top Tree
-    - icon: ':heavy_check_mark:'
-      path: tree/tree_dp.py
-      title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: utility
     pages:
     - icon: ':warning:'
@@ -781,6 +785,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
       title: GRL5C LCA (Lowest Common Ancestor)
+    - icon: ':x:'
+      path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+      title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+    - icon: ':x:'
+      path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+      title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+    - icon: ':x:'
+      path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+      title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_6_a_max_flow.test.py
       title: "GRL6A \u6700\u5927\u6D41"
@@ -799,6 +812,11 @@ data:
       path: test/aoj/ntl/ntl_1_e_extended_euclidean.test.py
       title: "NTL1E \u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u9664\
         \u6CD5"
+  - name: test/aoj/other
+    pages:
+    - icon: ':x:'
+      path: test/aoj/other/2235_graph_construction.test.py
+      title: 2235 Graph Construction
   - name: test/atcoder/abc001-99
     pages:
     - icon: ':grey_question:'
@@ -1020,9 +1038,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dominator_tree.test.py
       title: test/library_checker/graph/dominator_tree.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum.test.py
-      title: Dynamic Graph Vertex Add Component Sum
+    - icon: ':x:'
+      path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py
+      title: Dynamic Graph Vertex Add Component Sum (Offline)
+    - icon: ':x:'
+      path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+      title: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/general_weighted_matching.test.py
       title: General Weighted Matching
@@ -1199,9 +1220,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_vertex_set_path_composite.test.py
       title: Dynamic Tree Vertex Set Path Composite
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/tree/jump_on_tree.test.py
-      title: test/library_checker/tree/jump_on_tree.test.py
+    - icon: ':x:'
+      path: test/library_checker/tree/jump_on_tree_doubling.test.py
+      title: test/library_checker/tree/jump_on_tree_doubling.test.py
+    - icon: ':x:'
+      path: test/library_checker/tree/jump_on_tree_hld.test.py
+      title: test/library_checker/tree/jump_on_tree_hld.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
       title: test/library_checker/tree/lowest_common_ancestor.test.py
@@ -1211,7 +1235,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_et.test.py
       title: Vertex Add Path Sum (Euler Tour)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
     - icon: ':heavy_check_mark:'
@@ -1223,7 +1247,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
     - icon: ':heavy_check_mark:'

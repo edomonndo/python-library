@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/diameter.py
-    title: "\u6728\u306E\u76F4\u5F84"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,11 +15,10 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_A\n\
-    \nfrom tree.diameter import diameter\n\nN = int(input())\nG = [[] for _ in range(N)]\n\
-    for _ in range(N - 1):\n    a, b, c = map(int, input().split())\n    G[a].append((b,\
-    \ c))\n    G[b].append((a, c))\n\ndiam = diameter(N, G)\nprint(diam)\n"
-  dependsOn:
-  - tree/diameter.py
+    \nfrom graph.tree.diameter import diameter\n\nN = int(input())\nG = [[] for _\
+    \ in range(N)]\nfor _ in range(N - 1):\n    a, b, c = map(int, input().split())\n\
+    \    G[a].append((b, c))\n    G[b].append((a, c))\n\ndiam = diameter(N, G)\nprint(diam)\n"
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl/grl_5_a_diameter.test.py
   requiredBy: []

@@ -2,9 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/connectivity/offline_dynamic_connectivity.py
-    title: "\u9023\u7D50\u6027\u5224\u5B9A\uFF08\u30AA\u30D5\u30E9\u30A4\u30F3\uFF09"
+    title: Dynamic Connectivity (Offline)
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py

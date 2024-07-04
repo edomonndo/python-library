@@ -43,8 +43,5 @@ data:
   - test/library_checker/graph/cycle_detection.test.py
 documentation_of: graph/find_cycle_directed.py
 layout: document
-redirect_from:
-- /library/graph/find_cycle_directed.py
-- /library/graph/find_cycle_directed.py.html
-title: graph/find_cycle_directed.py
+title: "\u9589\u8DEF\u691C\u51FA\uFF08\u6709\u5411\u30B0\u30E9\u30D5\uFF09"
 ---

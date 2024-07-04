@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/auxiliary_tree.py
-    title: Auxiliary tree
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,7 +15,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://atcoder.jp/contests/abc340/tasks/abc340_g\n\
-    \nfrom collections import defaultdict\nfrom tree.auxiliary_tree import AuxiliaryTree\n\
+    \nfrom collections import defaultdict\nfrom graph.tree.auxiliary_tree import AuxiliaryTree\n\
     \nMOD = 998244353\n\nn = int(input())\nA = [int(x) for x in input().split()]\n\
     g0 = [[] for _ in range(n)]\nfor _ in range(n - 1):\n    u, v = map(lambda x:\
     \ int(x) - 1, input().split())\n    g0[u].append(v)\n    g0[v].append(u)\nAT =\
@@ -35,8 +32,7 @@ data:
     \ %= MOD\n                    tmp %= MOD\n                dp1[v] = res - tmp -\
     \ 1\n                dp2[v] = res - 1\n    for x in dp1.values():\n        ans\
     \ = (ans + x) % MOD\nprint(ans)\n"
-  dependsOn:
-  - tree/auxiliary_tree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc340g.test.py
   requiredBy: []

@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: data_structure/fenwick_tree/range_add_range_sum.py
-    title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
+  _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -24,8 +21,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/fenwick_tree/cumulative_sum.py
-  requiredBy:
-  - data_structure/fenwick_tree/range_add_range_sum.py
+  requiredBy: []
   timestamp: '2024-06-10 12:42:43+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

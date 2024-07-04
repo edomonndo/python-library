@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/tree_dp.py
-    title: "(\u5168\u65B9\u4F4D)\u6728DP"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,15 +15,14 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_5_B\n\
-    \nfrom tree.tree_dp import TreeDp\n\nN = int(input())\nG = [[] for _ in range(N)]\n\
-    W = dict()\nfor _ in range(N - 1):\n    u, v, w = map(int, input().split())\n\
+    \nfrom graph.tree.tree_dp import TreeDp\n\nN = int(input())\nG = [[] for _ in\
+    \ range(N)]\nW = dict()\nfor _ in range(N - 1):\n    u, v, w = map(int, input().split())\n\
     \    G[u].append(v)\n    G[v].append(u)\n    W[(u, v)] = w\n    W[(v, u)] = w\n\
     \nTDP = TreeDp(N, G)\ne = 0\nmerge = lambda a, b: max(a, b)\nadj_bu = lambda a,\
     \ v, p: a + W[(v, p)]\nadj_td = lambda a, v, p: a + W[(v, p)]\nadj_fin = lambda\
     \ a, v: a\n\nres = TDP.rerooting(e, merge, adj_bu, adj_td, adj_fin)\nprint(*res,\
     \ sep=\"\\n\")\n"
-  dependsOn:
-  - tree/tree_dp.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl/grl_5_b_tree_height.test.py
   requiredBy: []

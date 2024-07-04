@@ -6,8 +6,11 @@ data:
     path: geometory/union_area_rectangle.py
     title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   - icon: ':warning:'
-    path: tree/permutation_tree.py
-    title: tree/permutation_tree.py
+    path: graph/tree/hld_lazysegtree.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
+  - icon: ':warning:'
+    path: graph/tree/permutation_tree.py
+    title: "\u9806\u5217\u6728"
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc001-99/abc035c.test.py
@@ -114,7 +117,8 @@ data:
   path: atcoder/lazysegtree.py
   requiredBy:
   - geometory/union_area_rectangle.py
-  - tree/permutation_tree.py
+  - graph/tree/permutation_tree.py
+  - graph/tree/hld_lazysegtree.py
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: tree/lca.py
-    title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,13 +15,12 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/lca\n\nfrom\
-    \ tree.lca import LcaDoubling\n\nN, Q = map(int, input().split())\nparent = list(map(int,\
-    \ input().split()))\nG = [[] for _ in range(N)]\nfor v, p in enumerate(parent,\
+    \ graph.tree.lca import LcaDoubling\n\nN, Q = map(int, input().split())\nparent\
+    \ = list(map(int, input().split()))\nG = [[] for _ in range(N)]\nfor v, p in enumerate(parent,\
     \ start=1):\n    G[v].append(p)\n    G[p].append(v)\n\nlca = LcaDoubling(N, G)\n\
     for _ in range(Q):\n    u, v = map(int, input().split())\n    print(lca.lca(u,\
     \ v))\n"
-  dependsOn:
-  - tree/lca.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/tree/lowest_common_ancestor.test.py
   requiredBy: []
