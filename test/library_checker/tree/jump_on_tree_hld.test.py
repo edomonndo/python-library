@@ -3,7 +3,7 @@
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 n, q = map(int, input().split())
-edges = [tuple(map(int, input().split())) for _ in range(n)]
+edges = [tuple(map(int, input().split())) for _ in range(n - 1)]
 
 T = HeavyLightDecomposition(n, edges)
 for _ in range(q):

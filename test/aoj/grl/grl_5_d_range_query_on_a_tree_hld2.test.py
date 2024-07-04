@@ -16,7 +16,7 @@ for _ in range(q):
     t, *qu = map(int, input().split())
     if t == 0:
         v, w = qu
-        seg.set(v, seg.get(k) + w)
+        seg.set(v, seg.get(v) + w)
     else:
         u = qu[0]
         print(seg.path_prod(0, u))

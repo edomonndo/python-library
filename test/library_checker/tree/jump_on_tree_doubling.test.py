@@ -4,7 +4,7 @@ from graph.tree.lca import LcaDoubling
 
 n, q = map(int, input().split())
 g = [[] for _ in range(n)]
-for _ in range(N - 1):
+for _ in range(n - 1):
     a, b = map(int, input().split())
     g[a].append(b)
     g[b].append(a)

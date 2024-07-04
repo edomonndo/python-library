@@ -26,9 +26,9 @@ for _ in range(q):
     t, *qu = map(int, input().split())
     if t == 0:
         v, w = qu
-        T.path_query(0, v, f)
+        T.path_query(0, v, f, True)
     else:
         u = qu[0]
         ans = 0
-        T.path_query(0, u, g)
+        T.path_query(0, u, g, True)
         print(ans)
