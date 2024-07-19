@@ -52,8 +52,5 @@ data:
   - test/library_checker/graph/enumerate_cliques.test.py
 documentation_of: graph/enumerate_cliques.py
 layout: document
-redirect_from:
-- /library/graph/enumerate_cliques.py
-- /library/graph/enumerate_cliques.py.html
-title: graph/enumerate_cliques.py
+title: Enumerate Cliques
 ---
