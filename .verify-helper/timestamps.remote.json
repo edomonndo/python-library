@@ -106,6 +106,7 @@
 "test/library_checker/graph/dominator_tree.test.py": "2024-07-04 12:06:06 +0900",
 "test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py": "2024-07-04 12:06:06 +0900",
 "test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py": "2024-07-19 12:35:18 +0900",
+"test/library_checker/graph/enumerate_cliques.test.py": "2024-07-19 16:23:17 +0900",
 "test/library_checker/graph/eulerian_trail_directed.test.py": "2024-07-19 13:46:06 +0900",
 "test/library_checker/graph/eulerian_trail_undirected.test.py": "2024-07-19 13:46:06 +0900",
 "test/library_checker/graph/general_weighted_matching.test.py": "2024-07-02 07:09:42 +0900",
