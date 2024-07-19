@@ -48,7 +48,7 @@ class EulerianTrail:
 
         ep = [0] * n
         eids = [0] * m
-        alive = [1] * m
+        used = [0] * m
         pp, pq = 0, m
         v = s
         while pp < pq:
@@ -63,9 +63,9 @@ class EulerianTrail:
             else:
                 e = adj[v][ep[v]][1]
                 ep[v] += 1
-                if not alive[e]:
+                if used[e]:
                     continue
-                alive[e] = 0
+                used[e] = 1
                 eids[pp] = e
                 pp += 1
                 a, b = edges[e]
@@ -80,18 +80,3 @@ class EulerianTrail:
             cur ^= u ^ v
             path.append(cur)
         return path
-
-
-T = int(input())
-for _ in range(T):
-    n, m = map(int, input().split())
-    edges = [tuple(map(int, input().split())) for _ in range(m)]
-    g = EulerianTrail(n, edges, True)
-    start, eids = g.get_edge_order()
-    if start == -1:
-        print("No")
-    else:
-        print("Yes")
-        path = g.get_verticle_order(start, eids)
-        print(*path)
-        print(*eids)

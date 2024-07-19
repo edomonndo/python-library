@@ -44,15 +44,15 @@ class LowLink:
 
     def get_articulation(self) -> list[int]:
         order, low, is_root, child = self.order, self.low, self.is_root, self.child
-        res = [0] * self.n
+        res = []
         for v in range(self.n):
             if is_root[v]:
                 if len(child[v]) >= 2:
-                    res[v] = 1
+                    res.append(v)
                 continue
             for u in child[v]:
                 if order[v] <= low[u]:
-                    res[v] = 1
+                    res.append(v)
                     break
         return res
 
