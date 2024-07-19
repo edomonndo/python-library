@@ -9,7 +9,7 @@ for _ in range(m):
     g[u].append(v)
     g[v].append(u)
 
-LL = LowLink(g)
-bridges = LL.get_bridge()
+L = LowLink(g)
+bridges = L.get_bridge()
 for u, v in sorted(bridges):
     print(u, v)

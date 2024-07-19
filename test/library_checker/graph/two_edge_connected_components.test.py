@@ -9,8 +9,8 @@ for _ in range(m):
     g[u].append(v)
     g[v].append(u)
 
-LL = LowLink(g)
-components, _ = LL.two_edge_connected_components()
+L = LowLink(g)
+components, _ = L.two_edge_connected_components()
 groups = dict()
 for i, ci in enumerate(components):
     if ci in groups:

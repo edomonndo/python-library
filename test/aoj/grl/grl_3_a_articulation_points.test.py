@@ -9,8 +9,7 @@ for _ in range(m):
     g[u].append(v)
     g[v].append(u)
 
-LL = LowLink(g)
-articulation = LL.get_articulation()
-ans = [i for i, v in enumerate(articulation) if v]
+L = LowLink(g)
+ans = L.get_articulation()
 if ans:
     print(*ans, sep="\n")
