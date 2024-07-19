@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: Low Link
   _extendedRequiredBy: []
@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/two_edge_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-07-19 12:35:18+09:00'
+  timestamp: '2024-07-19 13:46:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/two_edge_connected_components.test.py

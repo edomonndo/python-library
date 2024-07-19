@@ -308,7 +308,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/eulerian_trail.py
       title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
     - icon: ':heavy_check_mark:'
@@ -330,7 +330,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: Low Link
     - icon: ':heavy_check_mark:'
@@ -764,7 +764,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
       title: "GRL2B \u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_a_articulation_points.test.py
       title: "GRL3A \u95A2\u7BC0\u70B9"
     - icon: ':heavy_check_mark:'
@@ -1050,10 +1050,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
       title: Dynamic Graph Vertex Add Component Sum (Online)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/eulerian_trail_directed.test.py
       title: Eulerian Trail (Directed)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/eulerian_trail_undirected.test.py
       title: Eulerian Trail (Undirected)
     - icon: ':heavy_check_mark:'

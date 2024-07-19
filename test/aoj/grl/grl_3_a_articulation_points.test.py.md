@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/low_link.py
     title: Low Link
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_A
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_a_articulation_points.test.py
   requiredBy: []
-  timestamp: '2024-07-19 12:35:18+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-07-19 13:46:06+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_a_articulation_points.test.py
 layout: document
