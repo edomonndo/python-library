@@ -14,27 +14,27 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
     title: Auxiliary tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/euler_tour.py
     title: Euler tour
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/hld_segtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
       \u30A8\u30EA\uFF09"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/hld_segtree_noncommutative.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
   - icon: ':heavy_check_mark:'
     path: test/yukicoder/875_range_mindex_query.test.py
     title: No.875 Range Mindex Query
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -87,18 +87,18 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - dynamic_programming/longest_increase_subsequence.py
-  - data_structure/segtree/compressed_segtree.py
   - data_structure/segtree/range_set_range_composite.py
-  - graph/tree/hld_segtree_noncommutative.py
+  - data_structure/segtree/compressed_segtree.py
+  - dynamic_programming/longest_increase_subsequence.py
   - graph/tree/auxiliary_tree.py
   - graph/tree/hld_segtree.py
   - graph/tree/euler_tour.py
+  - graph/tree/hld_segtree_noncommutative.py
   timestamp: '2024-06-04 17:27:40+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yukicoder/875_range_mindex_query.test.py
   - test/library_checker/tree/vertext_set_path_composite.test.py
+  - test/yukicoder/875_range_mindex_query.test.py
 documentation_of: atcoder/segtree.py
 layout: document
 redirect_from:

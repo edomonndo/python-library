@@ -28,15 +28,12 @@ data:
   dependsOn:
   - graph/connectivity/dynamic_connectivity.py
   isVerificationFile: true
-  path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+  path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-07-19 12:35:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+documentation_of: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
-- /verify/test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py.html
-title: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+title: Dynamic Graph Vertex Add Component Sum (Online)
 ---

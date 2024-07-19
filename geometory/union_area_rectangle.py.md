@@ -49,8 +49,8 @@ data:
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
   - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+  - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
 documentation_of: geometory/union_area_rectangle.py
 layout: document
 title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"

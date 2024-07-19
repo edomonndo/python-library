@@ -11,7 +11,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/k_shortest_walk.test.py
-    title: test/library_checker/graph/k_shortest_walk.test.py
+    title: K-Shortest Walk
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

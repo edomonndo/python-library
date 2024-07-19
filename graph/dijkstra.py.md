@@ -11,7 +11,7 @@ data:
     title: "GRL1A \u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/shortest_path.test.py
-    title: test/library_checker/graph/shortest_path.test.py
+    title: Shortest Path
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -39,8 +39,8 @@ data:
   timestamp: '2024-06-04 09:09:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl/grl_1_a_dijkstra.test.py
   - test/library_checker/graph/shortest_path.test.py
+  - test/aoj/grl/grl_1_a_dijkstra.test.py
 documentation_of: graph/dijkstra.py
 layout: document
 title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"

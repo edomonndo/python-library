@@ -123,8 +123,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/other/able.test.py
-  - test/atcoder/abc300-399/abc341e.test.py
   - test/atcoder/abc300-399/abc357f.test.py
+  - test/atcoder/abc300-399/abc341e.test.py
   - test/atcoder/abc001-99/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document

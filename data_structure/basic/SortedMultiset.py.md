@@ -87,8 +87,8 @@ data:
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/abc300-399/abc342g.test.py
   - test/library_checker/data_structure/double-ended_priority_queue.test.py
+  - test/atcoder/abc300-399/abc342g.test.py
 documentation_of: data_structure/basic/SortedMultiset.py
 layout: document
 title: SortedMultiset

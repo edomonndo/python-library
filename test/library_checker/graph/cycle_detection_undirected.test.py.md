@@ -33,8 +33,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/cycle_detection_undirected.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/cycle_detection_undirected.test.py
-- /verify/test/library_checker/graph/cycle_detection_undirected.test.py.html
-title: test/library_checker/graph/cycle_detection_undirected.test.py
+title: Cycle Detection (Undirected)
 ---
+

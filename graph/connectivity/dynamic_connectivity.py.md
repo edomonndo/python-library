@@ -10,8 +10,8 @@ data:
     path: test/aoj/other/2235_graph_construction.test.py
     title: 2235 Graph Construction
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
-    title: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+    path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
+    title: Dynamic Graph Vertex Add Component Sum (Online)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -72,8 +72,8 @@ data:
   timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
   - test/aoj/other/2235_graph_construction.test.py
-  - test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
 documentation_of: graph/connectivity/dynamic_connectivity.py
 layout: document
 title: Dynamic Connectivity (Online)

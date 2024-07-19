@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/scc.test.py
-- /verify/test/library_checker/graph/scc.test.py.html
-title: test/library_checker/graph/scc.test.py
+title: Strongly Connected Components
 ---
+

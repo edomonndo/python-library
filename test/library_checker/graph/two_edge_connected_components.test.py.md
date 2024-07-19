@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/low_link.py
-    title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
+    title: Low Link
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -20,7 +20,7 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/two_edge_connected_components\n\
     \nfrom graph.low_link import LowLink\n\nn, m = map(int, input().split())\ng =\
     \ [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
-    \    g[u].append(v)\n    g[v].append(u)\n\nLL = LowLink(g)\ncomponents, _ = LL.two_edge_connected_components()\n\
+    \    g[u].append(v)\n    g[v].append(u)\n\nL = LowLink(g)\ncomponents, _ = L.two_edge_connected_components()\n\
     groups = dict()\nfor i, ci in enumerate(components):\n    if ci in groups:\n \
     \       groups[ci].append(i)\n    else:\n        groups[ci] = [i]\n\nprint(len(groups))\n\
     ans = []\nfor group in groups.values():\n    tmp = [len(group)]\n    tmp += group\n\
@@ -30,13 +30,11 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/two_edge_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-06-12 10:06:46+09:00'
+  timestamp: '2024-07-19 12:35:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/two_edge_connected_components.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/two_edge_connected_components.test.py
-- /verify/test/library_checker/graph/two_edge_connected_components.test.py.html
-title: test/library_checker/graph/two_edge_connected_components.test.py
+title: Two-Edge-Connected Components
 ---
+

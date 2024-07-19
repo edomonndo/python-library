@@ -44,8 +44,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/maximum_independent_set.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/maximum_independent_set.test.py
-- /verify/test/library_checker/graph/maximum_independent_set.test.py.html
-title: test/library_checker/graph/maximum_independent_set.test.py
+title: Maximum Independent Set
 ---
+

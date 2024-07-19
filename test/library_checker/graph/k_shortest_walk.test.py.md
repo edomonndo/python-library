@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/k_shortest_walk.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/k_shortest_walk.test.py
-- /verify/test/library_checker/graph/k_shortest_walk.test.py.html
-title: test/library_checker/graph/k_shortest_walk.test.py
+title: K-Shortest Walk
 ---
+

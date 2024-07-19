@@ -24,12 +24,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
     title: Vertex Add Range Contour Sum on Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Fenwick_tree"""
@@ -50,16 +50,16 @@ data:
   isVerificationFile: false
   path: atcoder/fenwicktree.py
   requiredBy:
-  - geometory/offline_point_add_rectangle_sum.py
-  - geometory/offline_rectangle_add_point_get.py
   - geometory/offline_static_rectangle_sum.py
+  - geometory/offline_rectangle_add_point_get.py
+  - geometory/offline_point_add_rectangle_sum.py
   - data_structure/fenwick_tree/point_set_range_frequency.py
   timestamp: '2024-05-29 14:24:11+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
-  - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
   - test/library_checker/tree/vertex_add_path_sum_hld.test.py
+  - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
 documentation_of: atcoder/fenwicktree.py
 layout: document
 redirect_from:

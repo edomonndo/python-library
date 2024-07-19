@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: atcoder/dsu.py
       title: atcoder/dsu.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/fenwicktree.py
       title: atcoder/fenwicktree.py
     - icon: ':heavy_check_mark:'
@@ -36,7 +36,7 @@ data:
     - icon: ':warning:'
       path: atcoder/scc.py
       title: atcoder/scc.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: atcoder/segtree.py
       title: atcoder/segtree.py
     - icon: ':warning:'
@@ -160,7 +160,7 @@ data:
       path: data_structure/fenwick_tree/point_set_range_frequency.py
       title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
         \u30A4\u30F3\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
@@ -308,6 +308,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
+    - icon: ':x:'
+      path: graph/eulerian_trail.py
+      title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
     - icon: ':heavy_check_mark:'
       path: graph/find_cycle_directed.py
       title: "\u9589\u8DEF\u691C\u51FA\uFF08\u6709\u5411\u30B0\u30E9\u30D5\uFF09"
@@ -327,9 +330,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
       title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/low_link.py
-      title: "\u9593\u63A5\u70B9\uFF0C\u6A4B"
+      title: Low Link
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
@@ -396,7 +399,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/contour_query.py
       title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
@@ -408,20 +411,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/dominator_tree.py
       title: Dominator Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':warning:'
       path: graph/tree/hld_lazysegtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/hld_segtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
         \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
@@ -761,7 +764,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
       title: "GRL2B \u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl/grl_3_a_articulation_points.test.py
       title: "GRL3A \u95A2\u7BC0\u70B9"
     - icon: ':heavy_check_mark:'
@@ -1022,55 +1025,64 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/assignment.test.py
-      title: test/library_checker/graph/assignment.test.py
+      title: Assignment Problem
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/biconnected_components.test.py
+      title: Biconnected Components
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/bipartitematching.test.py
-      title: test/library_checker/graph/bipartitematching.test.py
+      title: Matching on Bipartite Graph
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/chromatic_number.test.py
-      title: test/library_checker/graph/chromatic_number.test.py
+      title: Chromatic Number
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/cycle_detection.test.py
-      title: test/library_checker/graph/cycle_detection.test.py
+      path: test/library_checker/graph/cycle_detection_directed.test.py
+      title: Cycle Detection (Directed)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_undirected.test.py
-      title: test/library_checker/graph/cycle_detection_undirected.test.py
+      title: Cycle Detection (Undirected)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dominator_tree.test.py
-      title: test/library_checker/graph/dominator_tree.test.py
+      title: Dominator Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py
       title: Dynamic Graph Vertex Add Component Sum (Offline)
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
-      title: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_onine.test.py
+      path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
+      title: Dynamic Graph Vertex Add Component Sum (Online)
+    - icon: ':x:'
+      path: test/library_checker/graph/eulerian_trail_directed.test.py
+      title: Eulerian Trail (Directed)
+    - icon: ':x:'
+      path: test/library_checker/graph/eulerian_trail_undirected.test.py
+      title: Eulerian Trail (Undirected)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/general_weighted_matching.test.py
       title: General Weighted Matching
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/k_shortest_walk.test.py
-      title: test/library_checker/graph/k_shortest_walk.test.py
+      title: K-Shortest Walk
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/manhattanmst.test.py
-      title: test/library_checker/graph/manhattanmst.test.py
+      title: Manhattan MST
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/matching_on_general_graph.test.py
-      title: test/library_checker/graph/matching_on_general_graph.test.py
+      title: Matching on General Graph
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/maximum_independent_set.test.py
-      title: test/library_checker/graph/maximum_independent_set.test.py
+      title: Maximum Independent Set
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/minimum_spanning_tree.test.py
-      title: test/library_checker/graph/minimum_spanning_tree.test.py
+      title: Minimum Spanning Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
-      title: test/library_checker/graph/scc.test.py
+      title: Strongly Connected Components
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/shortest_path.test.py
-      title: test/library_checker/graph/shortest_path.test.py
+      title: Shortest Path
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.py
-      title: test/library_checker/graph/two_edge_connected_components.test.py
+      title: Two-Edge-Connected Components
   - name: test/library_checker/linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -1244,22 +1256,22 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
       title: Vertex Add Subtree Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py
       title: Vertex Get Range Contour Add on Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test

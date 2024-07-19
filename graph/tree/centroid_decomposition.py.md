@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/contour_query.py
     title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedVerifiedWith:

@@ -40,8 +40,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/chromatic_number.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/chromatic_number.test.py
-- /verify/test/library_checker/graph/chromatic_number.test.py.html
-title: test/library_checker/graph/chromatic_number.test.py
+title: Chromatic Number
 ---
+

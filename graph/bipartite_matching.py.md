@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/bipartitematching.test.py
-    title: test/library_checker/graph/bipartitematching.test.py
+    title: Matching on Bipartite Graph
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

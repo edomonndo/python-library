@@ -25,15 +25,13 @@ data:
   dependsOn:
   - graph/find_cycle_directed.py
   isVerificationFile: true
-  path: test/library_checker/graph/cycle_detection.test.py
+  path: test/library_checker/graph/cycle_detection_directed.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-19 12:35:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/graph/cycle_detection.test.py
+documentation_of: test/library_checker/graph/cycle_detection_directed.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/cycle_detection.test.py
-- /verify/test/library_checker/graph/cycle_detection.test.py.html
-title: test/library_checker/graph/cycle_detection.test.py
+title: Cycle Detection (Directed)
 ---
+

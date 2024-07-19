@@ -58,8 +58,8 @@ data:
   timestamp: '2024-06-05 09:56:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/line_add_get_min.test.py
   - test/library_checker/data_structure/segment_add_get_min.test.py
+  - test/library_checker/data_structure/line_add_get_min.test.py
 documentation_of: data_structure/li_chao_tree.py
 layout: document
 title: Li Chao Tree

@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_point_get.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
@@ -57,14 +57,14 @@ data:
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
   - geometory/offline_rectangle_add_rectangle_sum.py
+  - data_structure/fenwick_tree/range_add_range_sum.py
   - data_structure/fenwick_tree/value_range_sum.py
   - data_structure/fenwick_tree/range_add_point_get.py
-  - data_structure/fenwick_tree/range_add_range_sum.py
   timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
   - test/aoj/dsl/dsl_2_b_range_sum_query.test.py
+  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
 title: "\u62BD\u8C61\u5316Fenwick Tree"

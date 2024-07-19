@@ -32,8 +32,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/matching_on_general_graph.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/matching_on_general_graph.test.py
-- /verify/test/library_checker/graph/matching_on_general_graph.test.py.html
-title: test/library_checker/graph/matching_on_general_graph.test.py
+title: Matching on General Graph
 ---
+

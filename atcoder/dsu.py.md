@@ -8,10 +8,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/manhattanmst.test.py
-    title: test/library_checker/graph/manhattanmst.test.py
+    title: Manhattan MST
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/minimum_spanning_tree.test.py
-    title: test/library_checker/graph/minimum_spanning_tree.test.py
+    title: Minimum Spanning Tree
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
