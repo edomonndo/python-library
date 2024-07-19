@@ -309,6 +309,12 @@ data:
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/enumerate_cliques.py
+      title: graph/enumerate_cliques.py
+    - icon: ':x:'
+      path: graph/enumerate_triangles.py
+      title: graph/enumerate_triangles.py
+    - icon: ':heavy_check_mark:'
       path: graph/eulerian_trail.py
       title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
     - icon: ':heavy_check_mark:'
@@ -1050,6 +1056,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
       title: Dynamic Graph Vertex Add Component Sum (Online)
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/enumerate_cliques.test.py
+      title: Enumerate Cliques
+    - icon: ':x:'
+      path: test/library_checker/graph/enumerate_triangles.test.py
+      title: Enumerate Triangles
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/eulerian_trail_directed.test.py
       title: Eulerian Trail (Directed)
