@@ -13,6 +13,9 @@ data:
     path: test/library_checker/graph/biconnected_components.test.py
     title: Biconnected Components
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/three_edge_connected_components.test.py
+    title: Three-Edge-Connected Components
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/two_edge_connected_components.test.py
     title: Two-Edge-Connected Components
   _isVerificationFailed: false
@@ -114,16 +117,48 @@ data:
     \        for eid, (u, v) in enumerate(edges):\n            s = par[v if dep[u]\
     \ <= dep[v] else u] - len(adj)\n            res[s].append(eid)\n        return\
     \ res\n\n    @classmethod\n    def three_edge_connected_components(cls, adj: list[list[int]])\
-    \ -> list[int]:\n        raise NotImplementedError\n"
+    \ -> list[list[int]]:\n\n        import sys\n\n        sys.setrecursionlimit(2_000_000)\n\
+    \n        def _leader(v: int) -> int:\n            if uf[v] < 0:\n           \
+    \     return v\n            uf[v] = _leader(uf[v])\n            return uf[v]\n\
+    \n        def _merge(u: int, v: int) -> None:\n            u, v = _leader(u),\
+    \ _leader(v)\n            if u == v:\n                return\n            if uf[u]\
+    \ > uf[v]:\n                u, v = v, u\n            uf[u] += uf[v]\n        \
+    \    uf[v] = u\n            return\n\n        def _dfs(v: int, p: int = -1) ->\
+    \ None:\n            nonlocal id_\n            id_ += 1\n            pre[v] =\
+    \ low[v] = id_\n            for u in adj[v]:\n                if u == v:\n   \
+    \                 continue\n                if u == p:\n                    p\
+    \ = -1\n                    continue\n                if pre[u] != -1:\n     \
+    \               if pre[u] < pre[v]:\n                        deg[v] += 1\n   \
+    \                     low[v] = min(low[v], pre[u])\n                    else:\n\
+    \                        deg[v] -= 1\n                        w = path[v]\n  \
+    \                      while w != -1 and pre[w] <= pre[u] <= post[w]:\n      \
+    \                      _merge(v, w)\n                            deg[v] += deg[w]\n\
+    \                            w = path[w]\n                        path[v] = w\n\
+    \                    continue\n                _dfs(u, v)\n                if\
+    \ path[u] == -1 and deg[u] <= 1:\n                    low[v] = min(low[v], low[u])\n\
+    \                    deg[v] += deg[u]\n                    continue\n        \
+    \        if deg[u] == 0:\n                    u = path[u]\n                if\
+    \ low[v] > low[u]:\n                    low[v] = min(low[v], low[u])\n       \
+    \             u, path[v] = path[v], u\n                while u != -1:\n      \
+    \              _merge(v, u)\n                    deg[v] += deg[u]\n          \
+    \          u = path[u]\n            post[v] = id_\n\n        n = len(adj)\n\n\
+    \        pre = [-1] * n\n        post = [0] * n\n        path = [-1] * n\n   \
+    \     low = [n] * n\n        deg = [0] * n\n        uf = [-1] * n\n\n        id_\
+    \ = -1\n        for i in range(n):\n            if pre[i] == -1:\n           \
+    \     _dfs(i)\n\n        tmp = [[] for _ in range(n)]\n        for i in range(n):\n\
+    \            tmp[_leader(i)].append(i)\n        res = []\n        for group in\
+    \ tmp:\n            if group:\n                res.append(group)\n        return\
+    \ res\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/low_link.py
   requiredBy: []
-  timestamp: '2024-07-19 13:46:06+09:00'
+  timestamp: '2024-07-21 22:39:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/biconnected_components.test.py
   - test/library_checker/graph/two_edge_connected_components.test.py
+  - test/library_checker/graph/three_edge_connected_components.test.py
   - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
 documentation_of: graph/low_link.py

@@ -1093,6 +1093,9 @@ data:
       path: test/library_checker/graph/shortest_path.test.py
       title: Shortest Path
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/three_edge_connected_components.test.py
+      title: Three-Edge-Connected Components
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.py
       title: Two-Edge-Connected Components
   - name: test/library_checker/linear_algebra
