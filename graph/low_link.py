@@ -214,5 +214,86 @@ class LowLink:
         return res
 
     @classmethod
-    def three_edge_connected_components(cls, adj: list[list[int]]) -> list[int]:
-        raise NotImplementedError
+    def three_edge_connected_components(cls, adj: list[list[int]]) -> list[list[int]]:
+
+        import sys
+
+        sys.setrecursionlimit(2_000_000)
+
+        def _leader(v: int) -> int:
+            if uf[v] < 0:
+                return v
+            uf[v] = _leader(uf[v])
+            return uf[v]
+
+        def _merge(u: int, v: int) -> None:
+            u, v = _leader(u), _leader(v)
+            if u == v:
+                return
+            if uf[u] > uf[v]:
+                u, v = v, u
+            uf[u] += uf[v]
+            uf[v] = u
+            return
+
+        def _dfs(v: int, p: int = -1) -> None:
+            nonlocal id_
+            id_ += 1
+            pre[v] = low[v] = id_
+            for u in adj[v]:
+                if u == v:
+                    continue
+                if u == p:
+                    p = -1
+                    continue
+                if pre[u] != -1:
+                    if pre[u] < pre[v]:
+                        deg[v] += 1
+                        low[v] = min(low[v], pre[u])
+                    else:
+                        deg[v] -= 1
+                        w = path[v]
+                        while w != -1 and pre[w] <= pre[u] <= post[w]:
+                            _merge(v, w)
+                            deg[v] += deg[w]
+                            w = path[w]
+                        path[v] = w
+                    continue
+                _dfs(u, v)
+                if path[u] == -1 and deg[u] <= 1:
+                    low[v] = min(low[v], low[u])
+                    deg[v] += deg[u]
+                    continue
+                if deg[u] == 0:
+                    u = path[u]
+                if low[v] > low[u]:
+                    low[v] = min(low[v], low[u])
+                    u, path[v] = path[v], u
+                while u != -1:
+                    _merge(v, u)
+                    deg[v] += deg[u]
+                    u = path[u]
+            post[v] = id_
+
+        n = len(adj)
+
+        pre = [-1] * n
+        post = [0] * n
+        path = [-1] * n
+        low = [n] * n
+        deg = [0] * n
+        uf = [-1] * n
+
+        id_ = -1
+        for i in range(n):
+            if pre[i] == -1:
+                _dfs(i)
+
+        tmp = [[] for _ in range(n)]
+        for i in range(n):
+            tmp[_leader(i)].append(i)
+        res = []
+        for group in tmp:
+            if group:
+                res.append(group)
+        return res
