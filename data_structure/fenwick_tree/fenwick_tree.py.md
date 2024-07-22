@@ -21,7 +21,7 @@ data:
     title: DSL2B Range Sum Query
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
-    title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+    title: GRL5D Range Query on a Tree
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

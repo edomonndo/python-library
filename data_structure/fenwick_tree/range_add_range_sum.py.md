@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
-    title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+    title: GRL5E Range Query on a Tree II
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_b_bridges.test.py
   requiredBy: []
-  timestamp: '2024-07-21 22:39:25+09:00'
+  timestamp: '2024-07-22 09:16:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_b_bridges.test.py

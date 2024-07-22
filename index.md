@@ -297,6 +297,9 @@ data:
       path: graph/bfs.py
       title: "\u5E45\u512A\u5148\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
+      path: graph/biconnected_components.py
+      title: "\u4E8C\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3/Block Cut Tree"
+    - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
       title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
@@ -357,6 +360,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/shortest_paths.py
       title: Shortest paths
+    - icon: ':heavy_check_mark:'
+      path: graph/three_edge_connected_components.py
+      title: "\u4E09\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
@@ -796,13 +802,13 @@ data:
       title: GRL5C LCA (Lowest Common Ancestor)
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
-      title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+      title: GRL5D Range Query on a Tree
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
-      title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+      title: GRL5D Range Query on a Tree
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
-      title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+      title: GRL5E Range Query on a Tree II
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_6_a_max_flow.test.py
       title: "GRL6A \u6700\u5927\u6D41"
@@ -846,7 +852,7 @@ data:
       title: H - Balanced Tree
     - icon: ':grey_question:'
       path: test/atcoder/abc200-299/abc293g.test.py
-      title: test/atcoder/abc200-299/abc293g.test.py
+      title: G - Triple Index
   - name: test/atcoder/abc300-399
     pages:
     - icon: ':heavy_check_mark:'

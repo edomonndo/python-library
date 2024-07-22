@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/low_link.py
-    title: Low Link
+    path: graph/three_edge_connected_components.py
+    title: "\u4E09\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,16 +18,17 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/three_edge_connected_components\n\
-    \nfrom graph.low_link import LowLink\n\n\nn, m = map(int, input().split())\ng\
-    \ = [[] for _ in range(n)]\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
-    \    g[u].append(v)\n    g[v].append(u)\n\ngroups = LowLink.three_edge_connected_components(g)\n\
-    print(len(groups))\nfor group in groups:\n    print(len(group), *group)\n"
+    \nfrom graph.three_edge_connected_components import three_edge_connected_components\n\
+    \n\nn, m = map(int, input().split())\ng = [[] for _ in range(n)]\nfor _ in range(m):\n\
+    \    u, v = map(int, input().split())\n    g[u].append(v)\n    g[v].append(u)\n\
+    \ngroups = three_edge_connected_components(g)\nprint(len(groups))\nfor group in\
+    \ groups:\n    print(len(group), *group)\n"
   dependsOn:
-  - graph/low_link.py
+  - graph/three_edge_connected_components.py
   isVerificationFile: true
   path: test/library_checker/graph/three_edge_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-07-21 22:39:25+09:00'
+  timestamp: '2024-07-22 09:16:58+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/three_edge_connected_components.test.py

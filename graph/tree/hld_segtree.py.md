@@ -11,7 +11,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
-    title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
+    title: GRL5D Range Query on a Tree
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
     title: Vertex Add Path Sum (HLD)

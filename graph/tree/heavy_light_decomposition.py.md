@@ -16,10 +16,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
-    title: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+    title: GRL5D Range Query on a Tree
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
-    title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+    title: GRL5E Range Query on a Tree II
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
     title: test/library_checker/tree/jump_on_tree_hld.test.py

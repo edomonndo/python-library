@@ -42,8 +42,6 @@ data:
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
 layout: document
-redirect_from:
-- /verify/test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
-- /verify/test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py.html
-title: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+title: GRL5E Range Query on a Tree II
 ---
+

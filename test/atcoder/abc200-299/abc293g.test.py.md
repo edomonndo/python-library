@@ -40,8 +40,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc293g.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc200-299/abc293g.test.py
-- /verify/test/atcoder/abc200-299/abc293g.test.py.html
-title: test/atcoder/abc200-299/abc293g.test.py
+title: G - Triple Index
 ---

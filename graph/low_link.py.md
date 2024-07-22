@@ -10,12 +10,6 @@ data:
     path: test/aoj/grl/grl_3_b_bridges.test.py
     title: "GRL3B \u6A4B"
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/graph/biconnected_components.test.py
-    title: Biconnected Components
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/graph/three_edge_connected_components.test.py
-    title: Three-Edge-Connected Components
-  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/two_edge_connected_components.test.py
     title: Two-Edge-Connected Components
   _isVerificationFailed: false
@@ -70,95 +64,15 @@ data:
     \                        new_edges.append((idx, components[v]))\n            \
     \        else:\n                        components[u] = components[v]\n      \
     \              st.append(u)\n            idx += 1\n        return components,\
-    \ new_edges\n\n    @staticmethod\n    def _build_dfs_tree(adj: list[list[int]]):\n\
-    \        n = len(adj)\n        dfs_order = []\n        par = [-2] * n\n      \
-    \  eid = [0] * n\n        for r in range(n):\n            if par[r] != -2:\n \
-    \               continue\n            v = r\n            par[v] = -1\n       \
-    \     while v >= 0:\n                if eid[v] == 0:\n                    dfs_order.append(v)\n\
-    \                if eid[v] == len(adj[v]):\n                    v = par[v]\n \
-    \                   continue\n                u = adj[v][eid[v]]\n           \
-    \     eid[v] += 1\n                if par[u] != -2:\n                    continue\n\
-    \                v, par[u] = u, v\n        return dfs_order, par\n\n    @classmethod\n\
-    \    def _biconnected_components(\n        cls, adj: list[list[int]]\n    ) ->\
-    \ tuple[int, list[tuple[int, int]]]:\n        n = len(adj)\n        order, par\
-    \ = cls._build_dfs_tree(adj)\n\n        vtx_to_dfs = [0] * n\n        for i in\
-    \ range(n):\n            vtx_to_dfs[order[i]] = i\n        low = vtx_to_dfs[:]\n\
-    \        for u in range(n):\n            for v in adj[u]:\n                low[u]\
-    \ = min(low[u], vtx_to_dfs[v])\n        for v in order[::-1]:\n            p =\
-    \ par[v]\n            if p >= 0:\n                low[p] = min(low[p], low[v])\n\
-    \        num_bcc = 0\n        bc_vtx_pair = []\n        for v in order:\n    \
-    \        if par[v] >= 0:\n                p = par[v]\n                if low[v]\
-    \ < vtx_to_dfs[p]:\n                    low[v] = low[p]\n                    bc_vtx_pair.append((low[v],\
-    \ v))\n                else:\n                    low[v] = num_bcc\n         \
-    \           num_bcc += 1\n                    bc_vtx_pair += [(low[v], p), (low[v],\
-    \ v)]\n        for v in range(n):\n            if len(adj[v]) == 0:\n        \
-    \        bc_vtx_pair.append((num_bcc, v))\n                num_bcc += 1\n    \
-    \    return num_bcc, bc_vtx_pair\n\n    @classmethod\n    def block_cut_tree(cls,\
-    \ adj: list[list[int]]) -> list[list[int]]:\n        num_bcc, bc_vtx_pair = cls._biconnected_components(adj)\n\
-    \        n = len(adj)\n        edges = []\n        for u, v in bc_vtx_pair:\n\
-    \            edges.append((u + n, v))\n        bc_tree = [[] for _ in range(n\
-    \ + num_bcc)]\n        for u, v in edges:\n            bc_tree[u].append(v)\n\
-    \            bc_tree[v].append(u)\n        return bc_tree\n\n    @classmethod\n\
-    \    def biconnected_components_verticle(cls, adj: list[list[int]]) -> list[list[int]]:\n\
-    \        num_bcc, bc_vtx_pair = cls._biconnected_components(adj)\n        res\
-    \ = [[] for _ in range(num_bcc)]\n        for u, v in bc_vtx_pair:\n         \
-    \   res[u].append(v)\n        return res\n\n    @classmethod\n    def biconnected_components_edge(\n\
-    \        cls, n: int, edges: list[tuple[int, int]]\n    ) -> list[tuple[int, int]]:\n\
-    \        adj = [[] for _ in range(n)]\n        for u, v in edges:\n          \
-    \  adj[u].append(v)\n            adj[v].append(u)\n        bc_tree = cls.block_cut_tree(adj)\n\
-    \        n = len(bc_tree)\n        par = [-1] * n\n        dep = [0] * n\n   \
-    \     bfs = [None] * n\n        l, r = 0, 0\n        for root in range(n):\n \
-    \           if par[root] >= 0:\n                continue\n            bfs[r] =\
-    \ root\n            r += 1\n            while l < r and r < n:\n             \
-    \   v = bfs[l]\n                for u in bc_tree[v]:\n                    if par[v]\
-    \ != u:\n                        par[u] = v\n                        dep[u] =\
-    \ dep[v] + 1\n                        bfs[r] = u\n                        r +=\
-    \ 1\n                l += 1\n\n        res = [[] for _ in range(n - len(adj))]\n\
-    \        for eid, (u, v) in enumerate(edges):\n            s = par[v if dep[u]\
-    \ <= dep[v] else u] - len(adj)\n            res[s].append(eid)\n        return\
-    \ res\n\n    @classmethod\n    def three_edge_connected_components(cls, adj: list[list[int]])\
-    \ -> list[list[int]]:\n\n        import sys\n\n        sys.setrecursionlimit(2_000_000)\n\
-    \n        def _leader(v: int) -> int:\n            if uf[v] < 0:\n           \
-    \     return v\n            uf[v] = _leader(uf[v])\n            return uf[v]\n\
-    \n        def _merge(u: int, v: int) -> None:\n            u, v = _leader(u),\
-    \ _leader(v)\n            if u == v:\n                return\n            if uf[u]\
-    \ > uf[v]:\n                u, v = v, u\n            uf[u] += uf[v]\n        \
-    \    uf[v] = u\n            return\n\n        def _dfs(v: int, p: int = -1) ->\
-    \ None:\n            nonlocal id_\n            id_ += 1\n            pre[v] =\
-    \ low[v] = id_\n            for u in adj[v]:\n                if u == v:\n   \
-    \                 continue\n                if u == p:\n                    p\
-    \ = -1\n                    continue\n                if pre[u] != -1:\n     \
-    \               if pre[u] < pre[v]:\n                        deg[v] += 1\n   \
-    \                     low[v] = min(low[v], pre[u])\n                    else:\n\
-    \                        deg[v] -= 1\n                        w = path[v]\n  \
-    \                      while w != -1 and pre[w] <= pre[u] <= post[w]:\n      \
-    \                      _merge(v, w)\n                            deg[v] += deg[w]\n\
-    \                            w = path[w]\n                        path[v] = w\n\
-    \                    continue\n                _dfs(u, v)\n                if\
-    \ path[u] == -1 and deg[u] <= 1:\n                    low[v] = min(low[v], low[u])\n\
-    \                    deg[v] += deg[u]\n                    continue\n        \
-    \        if deg[u] == 0:\n                    u = path[u]\n                if\
-    \ low[v] > low[u]:\n                    low[v] = min(low[v], low[u])\n       \
-    \             u, path[v] = path[v], u\n                while u != -1:\n      \
-    \              _merge(v, u)\n                    deg[v] += deg[u]\n          \
-    \          u = path[u]\n            post[v] = id_\n\n        n = len(adj)\n\n\
-    \        pre = [-1] * n\n        post = [0] * n\n        path = [-1] * n\n   \
-    \     low = [n] * n\n        deg = [0] * n\n        uf = [-1] * n\n\n        id_\
-    \ = -1\n        for i in range(n):\n            if pre[i] == -1:\n           \
-    \     _dfs(i)\n\n        tmp = [[] for _ in range(n)]\n        for i in range(n):\n\
-    \            tmp[_leader(i)].append(i)\n        res = []\n        for group in\
-    \ tmp:\n            if group:\n                res.append(group)\n        return\
-    \ res\n"
+    \ new_edges\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/low_link.py
   requiredBy: []
-  timestamp: '2024-07-21 22:39:25+09:00'
+  timestamp: '2024-07-22 09:16:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/biconnected_components.test.py
   - test/library_checker/graph/two_edge_connected_components.test.py
-  - test/library_checker/graph/three_edge_connected_components.test.py
   - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
 documentation_of: graph/low_link.py
