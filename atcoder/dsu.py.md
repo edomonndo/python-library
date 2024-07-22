@@ -5,6 +5,9 @@ data:
   - icon: ':warning:'
     path: graph/connectivity/static_range_parallel_union_find.py
     title: Static Range Parallel Union Find
+  - icon: ':heavy_check_mark:'
+    path: graph/tree_decomposition_width2.py
+    title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/manhattanmst.test.py
@@ -49,6 +52,7 @@ data:
   path: atcoder/dsu.py
   requiredBy:
   - graph/connectivity/static_range_parallel_union_find.py
+  - graph/tree_decomposition_width2.py
   timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

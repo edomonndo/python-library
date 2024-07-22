@@ -366,6 +366,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+    - icon: ':heavy_check_mark:'
+      path: graph/tree_decomposition_width2.py
+      title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   - name: graph/connectivity
     pages:
     - icon: ':heavy_check_mark:'
@@ -1101,6 +1104,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/three_edge_connected_components.test.py
       title: Three-Edge-Connected Components
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/tree_decomposition_width2.test.py
+      title: Tree Decomposition (Width 2)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.py
       title: Two-Edge-Connected Components
