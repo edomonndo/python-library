@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/primitive_root.test.py
-    title: test/library_checker/number_theory/primitive_root.test.py
+    title: Primitive Root
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

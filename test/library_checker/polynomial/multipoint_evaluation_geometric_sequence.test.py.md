@@ -39,8 +39,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
-- /verify/test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py.html
-title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
+title: Multipoint Evaluation (Geometric Sequence)
 ---

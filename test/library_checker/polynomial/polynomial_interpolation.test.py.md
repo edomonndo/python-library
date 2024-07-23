@@ -44,8 +44,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/polynomial_interpolation.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/polynomial_interpolation.test.py
-- /verify/test/library_checker/polynomial/polynomial_interpolation.test.py.html
-title: test/library_checker/polynomial/polynomial_interpolation.test.py
+title: Polynomial Interpolation
 ---

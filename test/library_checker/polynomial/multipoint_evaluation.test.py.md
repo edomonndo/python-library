@@ -41,8 +41,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/multipoint_evaluation.test.py
-- /verify/test/library_checker/polynomial/multipoint_evaluation.test.py.html
-title: test/library_checker/polynomial/multipoint_evaluation.test.py
+title: Multipoint Evaluation
 ---

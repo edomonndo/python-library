@@ -18,47 +18,46 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A\n\
-    \nif __name__ == \"__main__\":\n    from pathlib import Path\n    import sys\n\
-    \n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n  \
-    \  from data_structure.wavelet_matrix import WaveletMatrix\n\n    T = [5, 4, 5,\
-    \ 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\n    assert WM.n ==\
-    \ len(T)\n    assert WM.A == T\n\n    # access\n    for i, t in enumerate(T):\n\
-    \        assert t == WM.access(i), (t, WM.access(i))\n        assert t == WM.accessFromB(i),\
-    \ (t, WM.accessFromB(i))\n\n    # rank\n    for l in range(len(T)):\n        for\
-    \ r in range(l + 1, len(T)):\n            for t in T:\n                greedy_rank\
-    \ = T[l:r].count(t)\n                assert greedy_rank == WM.rank(l, r, t), (\n\
-    \                    (l, r, t),\n                    greedy_rank,\n          \
-    \          WM.rank(l, r, t),\n                )\n\n    # select\n    def greedy_select(t,\
-    \ k):\n        cnt = 0\n        for i, a in enumerate(T):\n            if a ==\
-    \ t:\n                if cnt == k:\n                    return i\n           \
-    \     cnt += 1\n        return -1\n\n    for t in set(T):\n        for k in range(T.count(t)):\n\
-    \            assert greedy_select(t, k) == WM.select(t, k), (\n              \
-    \  (t, k),\n                greedy_select(t, k),\n                WM.select(t,\
-    \ k),\n            )\n\n    # quantile\n    def greedy_quantile(l, r, k):\n  \
-    \      return sorted(T[l:r])[k]\n\n    for l in range(len(T)):\n        for r\
-    \ in range(l + 1, len(T) + 1):\n            for k in range(r - l):\n         \
-    \       assert greedy_quantile(l, r, k) == WM.quantile(l, r, k), (\n         \
-    \           (l, r, k),\n                    greedy_quantile(l, r, k),\n      \
-    \              WM.quantile(l, r, k),\n                )\n\n    # quantilerange\n\
-    \    def greedy_quantilerange(l, r, k):\n        arr = sorted(T[l:r])\n      \
-    \  val = arr[k]\n        res = set()\n        for i, t in enumerate(T[l:r]):\n\
-    \            if t == val:\n                res.add(l + i)\n        return res\n\
-    \n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n  \
-    \          for k in range(r - l):\n                assert WM.quantilerange(l,\
-    \ r, k) in greedy_quantilerange(l, r, k), (\n                    (l, r, k),\n\
-    \                    greedy_quantilerange(l, r, k),\n                    WM.quantilerange(l,\
-    \ r, k),\n                )\n\n    # maxrange, minrange\n    def greedy_maxrange(l,\
-    \ r):\n        max_value = max(T[l:r])\n        res = set()\n        for i, t\
-    \ in enumerate(T[l:r]):\n            if t == max_value:\n                res.add(l\
-    \ + i)\n        return res\n\n    def greedy_minrange(l, r):\n        min_value\
-    \ = min(T[l:r])\n        res = set()\n        for i, t in enumerate(T[l:r]):\n\
-    \            if t == min_value:\n                res.add(l + i)\n        return\
-    \ res\n\n    for l in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n\
-    \            assert WM.maxrange(l, r) in greedy_maxrange(l, r), (\n          \
-    \      (l, r),\n                greedy_maxrange(l, r),\n                WM.maxrange(l,\
-    \ r),\n            )\n            assert WM.minrange(l, r) in greedy_minrange(l,\
-    \ r), (\n                (l, r),\n                greedy_minrange(l, r),\n   \
-    \             WM.minrange(l, r),\n            )\n\n    # topk\n    def greedy_topk(l,\
+    \nif __name__ == \"__main__\":\n\n    from data_structure.wavelet_matrix import\
+    \ WaveletMatrix\n\n    T = [5, 4, 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]\n    WM = WaveletMatrix(T)\n\
+    \n    assert WM.n == len(T)\n    assert WM.A == T\n\n    # access\n    for i,\
+    \ t in enumerate(T):\n        assert t == WM.access(i), (t, WM.access(i))\n  \
+    \      assert t == WM.accessFromB(i), (t, WM.accessFromB(i))\n\n    # rank\n \
+    \   for l in range(len(T)):\n        for r in range(l + 1, len(T)):\n        \
+    \    for t in T:\n                greedy_rank = T[l:r].count(t)\n            \
+    \    assert greedy_rank == WM.rank(l, r, t), (\n                    (l, r, t),\n\
+    \                    greedy_rank,\n                    WM.rank(l, r, t),\n   \
+    \             )\n\n    # select\n    def greedy_select(t, k):\n        cnt = 0\n\
+    \        for i, a in enumerate(T):\n            if a == t:\n                if\
+    \ cnt == k:\n                    return i\n                cnt += 1\n        return\
+    \ -1\n\n    for t in set(T):\n        for k in range(T.count(t)):\n          \
+    \  assert greedy_select(t, k) == WM.select(t, k), (\n                (t, k),\n\
+    \                greedy_select(t, k),\n                WM.select(t, k),\n    \
+    \        )\n\n    # quantile\n    def greedy_quantile(l, r, k):\n        return\
+    \ sorted(T[l:r])[k]\n\n    for l in range(len(T)):\n        for r in range(l +\
+    \ 1, len(T) + 1):\n            for k in range(r - l):\n                assert\
+    \ greedy_quantile(l, r, k) == WM.quantile(l, r, k), (\n                    (l,\
+    \ r, k),\n                    greedy_quantile(l, r, k),\n                    WM.quantile(l,\
+    \ r, k),\n                )\n\n    # quantilerange\n    def greedy_quantilerange(l,\
+    \ r, k):\n        arr = sorted(T[l:r])\n        val = arr[k]\n        res = set()\n\
+    \        for i, t in enumerate(T[l:r]):\n            if t == val:\n          \
+    \      res.add(l + i)\n        return res\n\n    for l in range(len(T)):\n   \
+    \     for r in range(l + 1, len(T) + 1):\n            for k in range(r - l):\n\
+    \                assert WM.quantilerange(l, r, k) in greedy_quantilerange(l, r,\
+    \ k), (\n                    (l, r, k),\n                    greedy_quantilerange(l,\
+    \ r, k),\n                    WM.quantilerange(l, r, k),\n                )\n\n\
+    \    # maxrange, minrange\n    def greedy_maxrange(l, r):\n        max_value =\
+    \ max(T[l:r])\n        res = set()\n        for i, t in enumerate(T[l:r]):\n \
+    \           if t == max_value:\n                res.add(l + i)\n        return\
+    \ res\n\n    def greedy_minrange(l, r):\n        min_value = min(T[l:r])\n   \
+    \     res = set()\n        for i, t in enumerate(T[l:r]):\n            if t ==\
+    \ min_value:\n                res.add(l + i)\n        return res\n\n    for l\
+    \ in range(len(T)):\n        for r in range(l + 1, len(T) + 1):\n            assert\
+    \ WM.maxrange(l, r) in greedy_maxrange(l, r), (\n                (l, r),\n   \
+    \             greedy_maxrange(l, r),\n                WM.maxrange(l, r),\n   \
+    \         )\n            assert WM.minrange(l, r) in greedy_minrange(l, r), (\n\
+    \                (l, r),\n                greedy_minrange(l, r),\n           \
+    \     WM.minrange(l, r),\n            )\n\n    # topk\n    def greedy_topk(l,\
     \ r, k):\n        dic = dict()\n        for t in T[l:r]:\n            if t in\
     \ dic:\n                dic[t] += 1\n            else:\n                dic[t]\
     \ = 1\n        res = []\n        for key, value in sorted(dic.items(), key=lambda\
@@ -105,13 +104,10 @@ data:
   isVerificationFile: true
   path: test/unit_test/wavelet_matrix.test.py
   requiredBy: []
-  timestamp: '2024-05-21 17:51:29+09:00'
+  timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/wavelet_matrix.test.py
 layout: document
-redirect_from:
-- /verify/test/unit_test/wavelet_matrix.test.py
-- /verify/test/unit_test/wavelet_matrix.test.py.html
-title: test/unit_test/wavelet_matrix.test.py
+title: Wavelet Matrix
 ---

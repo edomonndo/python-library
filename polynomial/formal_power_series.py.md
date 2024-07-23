@@ -17,40 +17,40 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
-    title: test/library_checker/polynomial/division_of_polynomials.test.py
+    title: Division of Polynomials
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/exp_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/exp_of_formal_power_series.test.py
+    title: Exp of Formal Power Series
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/polynomial/exp_of_formal_power_series_spare.test.py
-    title: test/library_checker/polynomial/exp_of_formal_power_series_spare.test.py
+    path: test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
+    title: Exp of Formal Power Series (Sparse)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/inv_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/inv_of_formal_power_series.test.py
+    title: Inv of Formal Power Series
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
-    title: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
+    title: Inv of Formal Power Series (Sparse)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/log_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/log_of_formal_power_series.test.py
+    title: Log of Formal Power Series
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-    title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
+    path: test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
+    title: Log of Formal Power Series (Sparse)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/pow_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/pow_of_formal_power_series.test.py
+    title: Pow of Formal Power Series
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
-    title: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
+    path: test/library_checker/polynomial/pow_of_formal_power_series_sparse.test.py
+    title: Pow of Formal Power Series (Sparse)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-    title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+    title: Product of Polynomial Sequence
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
+    title: Sqrt of Formal Power Series
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
-    title: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
+    title: Sqrt of Formal Power Series (Sparse)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -194,17 +194,17 @@ data:
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/polynomial/exp_of_formal_power_series_spare.test.py
   - test/library_checker/polynomial/exp_of_formal_power_series.test.py
   - test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-  - test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-  - test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
   - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+  - test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series.test.py
   - test/library_checker/polynomial/inv_of_formal_power_series.test.py
   - test/library_checker/polynomial/division_of_polynomials.test.py
+  - test/library_checker/polynomial/pow_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/log_of_formal_power_series.test.py
 documentation_of: polynomial/formal_power_series.py
 layout: document

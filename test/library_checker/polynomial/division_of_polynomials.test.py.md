@@ -47,8 +47,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/division_of_polynomials.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/division_of_polynomials.test.py
-- /verify/test/library_checker/polynomial/division_of_polynomials.test.py.html
-title: test/library_checker/polynomial/division_of_polynomials.test.py
+title: Division of Polynomials
 ---

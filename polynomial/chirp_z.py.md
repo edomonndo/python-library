@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
-    title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
+    title: Multipoint Evaluation (Geometric Sequence)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

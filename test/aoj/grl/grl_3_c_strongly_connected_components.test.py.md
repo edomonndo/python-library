@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py

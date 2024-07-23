@@ -33,8 +33,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/number_theory/factorize.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/number_theory/factorize.test.py
-- /verify/test/library_checker/number_theory/factorize.test.py.html
-title: test/library_checker/number_theory/factorize.test.py
+title: Factorize
 ---

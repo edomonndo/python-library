@@ -40,8 +40,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/string/longeset_common_substring.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/string/longeset_common_substring.test.py
-- /verify/test/library_checker/string/longeset_common_substring.test.py.html
-title: test/library_checker/string/longeset_common_substring.test.py
+title: Longest Common Substring
 ---

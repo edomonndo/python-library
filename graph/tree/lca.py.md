@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_doubling.test.py
-    title: test/library_checker/tree/jump_on_tree_doubling.test.py
+    title: Jump on Tree (Doubling)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/lowest_common_ancestor.test.py
-    title: test/library_checker/tree/lowest_common_ancestor.test.py
+    title: Lowest Common Ancestor
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

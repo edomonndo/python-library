@@ -11,7 +11,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/multipoint_evaluation.test.py
-    title: test/library_checker/polynomial/multipoint_evaluation.test.py
+    title: Multipoint Evaluation
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

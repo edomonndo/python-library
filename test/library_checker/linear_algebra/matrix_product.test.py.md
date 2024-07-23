@@ -50,8 +50,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/linear_algebra/matrix_product.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/linear_algebra/matrix_product.test.py
-- /verify/test/library_checker/linear_algebra/matrix_product.test.py.html
-title: test/library_checker/linear_algebra/matrix_product.test.py
+title: Matrix Product
 ---

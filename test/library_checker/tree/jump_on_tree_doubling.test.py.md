@@ -32,8 +32,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_doubling.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/tree/jump_on_tree_doubling.test.py
-- /verify/test/library_checker/tree/jump_on_tree_doubling.test.py.html
-title: test/library_checker/tree/jump_on_tree_doubling.test.py
+title: Jump on Tree (Doubling)
 ---

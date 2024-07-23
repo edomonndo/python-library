@@ -44,8 +44,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/string/number_of_substrings.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/string/number_of_substrings.test.py
-- /verify/test/library_checker/string/number_of_substrings.test.py.html
-title: test/library_checker/string/number_of_substrings.test.py
+title: Number of Substrings
 ---

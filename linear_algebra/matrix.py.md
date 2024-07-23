@@ -4,23 +4,23 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/linear_algebra/determinant_of_matrix.test.py
-    title: test/library_checker/linear_algebra/determinant_of_matrix.test.py
+    path: test/library_checker/linear_algebra/linear_equations.test.py
+    title: System of Linear Equations
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/linear_algebra/matrix_determinant.test.py
+    title: test/library_checker/linear_algebra/matrix_determinant.test.py
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_inverse.test.py
-    title: test/library_checker/linear_algebra/matrix_inverse.test.py
+    title: Inverse Matrix
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/linear_algebra/matrix_power.test.py
+    title: Pow of Matrix
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_product.test.py
-    title: test/library_checker/linear_algebra/matrix_product.test.py
+    title: Matrix Product
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/linear_algebra/pow_of_matrix.test.py
-    title: test/library_checker/linear_algebra/pow_of_matrix.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/linear_algebra/rank_of_matrix.test.py
-    title: test/library_checker/linear_algebra/rank_of_matrix.test.py
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/linear_algebra/system_of_linear_equations.test.py
-    title: test/library_checker/linear_algebra/system_of_linear_equations.test.py
+    path: test/library_checker/linear_algebra/matrix_rank.test.py
+    title: Rank of Matrix
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -135,12 +135,12 @@ data:
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/linear_algebra/pow_of_matrix.test.py
-  - test/library_checker/linear_algebra/system_of_linear_equations.test.py
+  - test/library_checker/linear_algebra/matrix_determinant.test.py
+  - test/library_checker/linear_algebra/matrix_rank.test.py
+  - test/library_checker/linear_algebra/matrix_power.test.py
   - test/library_checker/linear_algebra/matrix_inverse.test.py
-  - test/library_checker/linear_algebra/determinant_of_matrix.test.py
   - test/library_checker/linear_algebra/matrix_product.test.py
-  - test/library_checker/linear_algebra/rank_of_matrix.test.py
+  - test/library_checker/linear_algebra/linear_equations.test.py
 documentation_of: linear_algebra/matrix.py
 layout: document
 title: "\u884C\u5217"

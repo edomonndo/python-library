@@ -43,8 +43,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-- /verify/test/library_checker/polynomial/multipoint_evaluation_pt.test.py.html
-title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
+title: Multipoint Evaluation (Product Tree)
 ---

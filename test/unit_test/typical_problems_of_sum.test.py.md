@@ -34,27 +34,22 @@ data:
     \            res += (A[i] - A[j]) ** 2\n    return res\n\n\ndef greedy7(A):\n\
     \    n = len(A)\n    res = 0\n    for i in range(n - 1):\n        for j in range(i\
     \ + 1, n):\n            res += abs(A[i] - A[j])\n    return res\n\n\nif __name__\
-    \ == \"__main__\":\n    from pathlib import Path\n    import sys\n    import random\n\
-    \n    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))\n\n\
-    \    from other.typical_problems_of_sum import *\n\n    testcase = 10\n    for\
-    \ _ in range(testcase):\n        n = 100\n        A = [random.randrange(1, 10**9)\
-    \ for _ in range(n)]\n        assert greedy1(A) == solve1(A)\n        assert greedy2(A)\
-    \ == solve2(A)\n        assert greedy3(A) == solve3(A)\n        assert greedy4(A)\
-    \ == solve4(A)\n        assert greedy5(A) == solve5(A)\n        assert greedy6(A)\
-    \ == solve6(A)\n        assert greedy7(A) == solve7(A)\n\n    print(\"Hello World\"\
-    )\n"
+    \ == \"__main__\":\n    from other.typical_problems_of_sum import *\n\n    import\
+    \ random\n\n    testcase = 10\n    for _ in range(testcase):\n        n = 100\n\
+    \        A = [random.randrange(1, 10**9) for _ in range(n)]\n        assert greedy1(A)\
+    \ == solve1(A)\n        assert greedy2(A) == solve2(A)\n        assert greedy3(A)\
+    \ == solve3(A)\n        assert greedy4(A) == solve4(A)\n        assert greedy5(A)\
+    \ == solve5(A)\n        assert greedy6(A) == solve6(A)\n        assert greedy7(A)\
+    \ == solve7(A)\n\n    print(\"Hello World\")\n"
   dependsOn:
   - other/typical_problems_of_sum.py
   isVerificationFile: true
   path: test/unit_test/typical_problems_of_sum.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/unit_test/typical_problems_of_sum.test.py
 layout: document
-redirect_from:
-- /verify/test/unit_test/typical_problems_of_sum.test.py
-- /verify/test/unit_test/typical_problems_of_sum.test.py.html
-title: test/unit_test/typical_problems_of_sum.test.py
+title: "\u5178\u578B\u8DB3\u3057\u4E0A\u3052"
 ---

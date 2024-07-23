@@ -12,7 +12,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/factorize.test.py
-    title: test/library_checker/number_theory/factorize.test.py
+    title: Factorize
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

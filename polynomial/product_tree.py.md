@@ -11,10 +11,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-    title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
+    title: Multipoint Evaluation (Product Tree)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/polynomial_interpolation.test.py
-    title: test/library_checker/polynomial/polynomial_interpolation.test.py
+    title: Polynomial Interpolation
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

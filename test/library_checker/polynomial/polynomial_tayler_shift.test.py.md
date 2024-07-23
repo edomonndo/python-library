@@ -39,8 +39,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/polynomial_tayler_shift.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/polynomial_tayler_shift.test.py
-- /verify/test/library_checker/polynomial/polynomial_tayler_shift.test.py.html
-title: test/library_checker/polynomial/polynomial_tayler_shift.test.py
+title: Polynomial Taylor Shift
 ---

@@ -17,7 +17,7 @@ data:
     title: Static Range Frequency
   - icon: ':heavy_check_mark:'
     path: test/unit_test/wavelet_matrix.test.py
-    title: test/unit_test/wavelet_matrix.test.py
+    title: Wavelet Matrix
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

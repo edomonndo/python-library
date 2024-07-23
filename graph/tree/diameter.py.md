@@ -8,7 +8,7 @@ data:
     title: "GRL5A \u6728\u306E\u76F4\u5F84"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/tree_diameter.test.py
-    title: test/library_checker/tree/tree_diameter.test.py
+    title: Tree Diameter
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

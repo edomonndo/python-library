@@ -43,8 +43,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/linear_algebra/matrix_inverse.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/linear_algebra/matrix_inverse.test.py
-- /verify/test/library_checker/linear_algebra/matrix_inverse.test.py.html
-title: test/library_checker/linear_algebra/matrix_inverse.test.py
+title: Inverse Matrix
 ---

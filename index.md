@@ -1024,18 +1024,18 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/enumerative_combinatorics/factorial.test.py
-      title: test/library_checker/enumerative_combinatorics/factorial.test.py
+      title: Factorial
     - icon: ':heavy_check_mark:'
       path: test/library_checker/enumerative_combinatorics/many_factorials.test.py
-      title: test/library_checker/enumerative_combinatorics/many_factorials.test.py
+      title: Many Factorials
     - icon: ':heavy_check_mark:'
       path: test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
-      title: test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
+      title: Number of Subsequences
   - name: test/library_checker/geometory
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
-      title: test/library_checker/geometory/sort_points_by_argument.test.py
+      title: Sort Points by Argument
   - name: test/library_checker/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -1113,140 +1113,140 @@ data:
   - name: test/library_checker/linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/determinant_of_matrix.test.py
-      title: test/library_checker/linear_algebra/determinant_of_matrix.test.py
+      path: test/library_checker/linear_algebra/linear_equations.test.py
+      title: System of Linear Equations
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/determinant_of_matrix_arbitrary_mod.test.py
-      title: test/library_checker/linear_algebra/determinant_of_matrix_arbitrary_mod.test.py
+      path: test/library_checker/linear_algebra/matrix_determinant.test.py
+      title: test/library_checker/linear_algebra/matrix_determinant.test.py
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
+      title: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_inverse.test.py
-      title: test/library_checker/linear_algebra/matrix_inverse.test.py
+      title: Inverse Matrix
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/linear_algebra/matrix_power.test.py
+      title: Pow of Matrix
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_product.test.py
-      title: test/library_checker/linear_algebra/matrix_product.test.py
+      title: Matrix Product
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/pow_of_matrix.test.py
-      title: test/library_checker/linear_algebra/pow_of_matrix.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/rank_of_matrix.test.py
-      title: test/library_checker/linear_algebra/rank_of_matrix.test.py
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/system_of_linear_equations.test.py
-      title: test/library_checker/linear_algebra/system_of_linear_equations.test.py
+      path: test/library_checker/linear_algebra/matrix_rank.test.py
+      title: Rank of Matrix
   - name: test/library_checker/number_theory
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/count_primes.test.py
-      title: test/library_checker/number_theory/count_primes.test.py
+      title: Counting Primes
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/factorize.test.py
-      title: test/library_checker/number_theory/factorize.test.py
+      title: Factorize
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/min_of_linear.test.py
-      title: test/library_checker/number_theory/min_of_linear.test.py
+      title: Min of Mod of Linear
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
-      title: test/library_checker/number_theory/primitive_root.test.py
+      title: Primitive Root
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/sum_of_floor_of_linear.test.py
-      title: test/library_checker/number_theory/sum_of_floor_of_linear.test.py
+      title: Sum of Floor of Linear
   - name: test/library_checker/other
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/other/two_sat.test.py
-      title: test/library_checker/other/two_sat.test.py
+      title: 2 Sat
   - name: test/library_checker/polynomial
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+      title: Compositional Inverse of Formal Power Series
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
+      title: Composition of Formal Power Series
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/division_of_polynomials.test.py
-      title: test/library_checker/polynomial/division_of_polynomials.test.py
+      title: Division of Polynomials
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/exp_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/exp_of_formal_power_series.test.py
+      title: Exp of Formal Power Series
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/polynomial/exp_of_formal_power_series_spare.test.py
-      title: test/library_checker/polynomial/exp_of_formal_power_series_spare.test.py
+      path: test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
+      title: Exp of Formal Power Series (Sparse)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/inv_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/inv_of_formal_power_series.test.py
+      title: Inv of Formal Power Series
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
-      title: test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
+      title: Inv of Formal Power Series (Sparse)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/log_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/log_of_formal_power_series.test.py
+      title: Log of Formal Power Series
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-      title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
+      path: test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
+      title: Log of Formal Power Series (Sparse)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation.test.py
-      title: test/library_checker/polynomial/multipoint_evaluation.test.py
+      title: Multipoint Evaluation
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
-      title: test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
+      title: Multipoint Evaluation (Geometric Sequence)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
-      title: test/library_checker/polynomial/multipoint_evaluation_pt.test.py
+      title: Multipoint Evaluation (Product Tree)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_interpolation.test.py
-      title: test/library_checker/polynomial/polynomial_interpolation.test.py
+      title: Polynomial Interpolation
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/polynomial_tayler_shift.test.py
-      title: test/library_checker/polynomial/polynomial_tayler_shift.test.py
+      title: Polynomial Taylor Shift
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/pow_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/pow_of_formal_power_series.test.py
+      title: Pow of Formal Power Series
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
-      title: test/library_checker/polynomial/pow_of_formal_power_series_spare.test.py
+      path: test/library_checker/polynomial/pow_of_formal_power_series_sparse.test.py
+      title: Pow of Formal Power Series (Sparse)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-      title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+      title: Product of Polynomial Sequence
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
-      title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
+      title: Shift of Sampling Points of Polynomial
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-      title: test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
+      title: Sqrt of Formal Power Series
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
-      title: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
+      title: Sqrt of Formal Power Series (Sparse)
   - name: test/library_checker/sample
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/aplusb.test.py
-      title: test/library_checker/sample/aplusb.test.py
+      title: A + B
     - icon: ':heavy_check_mark:'
       path: test/library_checker/sample/many_aplusb.test.py
-      title: test/library_checker/sample/many_aplusb.test.py
+      title: Many A + B
   - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/enumerate_palindroms.test.py
-      title: test/library_checker/string/enumerate_palindroms.test.py
+      title: Enumerate Palindromes
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/longeset_common_substring.test.py
-      title: test/library_checker/string/longeset_common_substring.test.py
+      title: Longest Common Substring
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/number_of_substrings.test.py
-      title: test/library_checker/string/number_of_substrings.test.py
+      title: Number of Substrings
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
-      title: test/library_checker/string/suffix_array.test.py
+      title: Suffix Array
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/z_algorithm.test.py
-      title: test/library_checker/string/z_algorithm.test.py
+      title: Z Algorithm
   - name: test/library_checker/tree
     pages:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/cartesian_tree.test.py
-      title: test/library_checker/tree/cartesian_tree.test.py
+      title: Cartesian Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
       title: Dynamic Tree Subtree Add Subtree Sum
@@ -1261,16 +1261,16 @@ data:
       title: Dynamic Tree Vertex Set Path Composite
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree_doubling.test.py
-      title: test/library_checker/tree/jump_on_tree_doubling.test.py
+      title: Jump on Tree (Doubling)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/jump_on_tree_hld.test.py
-      title: test/library_checker/tree/jump_on_tree_hld.test.py
+      title: Jump on Tree (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/lowest_common_ancestor.test.py
-      title: test/library_checker/tree/lowest_common_ancestor.test.py
+      title: Lowest Common Ancestor
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
-      title: test/library_checker/tree/tree_diameter.test.py
+      title: Tree Diameter
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_et.test.py
       title: Vertex Add Path Sum (Euler Tour)
@@ -1305,10 +1305,10 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: test/unit_test/typical_problems_of_sum.test.py
-      title: test/unit_test/typical_problems_of_sum.test.py
+      title: "\u5178\u578B\u8DB3\u3057\u4E0A\u3052"
     - icon: ':heavy_check_mark:'
       path: test/unit_test/wavelet_matrix.test.py
-      title: test/unit_test/wavelet_matrix.test.py
+      title: Wavelet Matrix
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'

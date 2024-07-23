@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/number_theory/min_of_linear.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/number_theory/min_of_linear.test.py
-- /verify/test/library_checker/number_theory/min_of_linear.test.py.html
-title: test/library_checker/number_theory/min_of_linear.test.py
+title: Min of Mod of Linear
 ---

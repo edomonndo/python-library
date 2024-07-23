@@ -24,15 +24,12 @@ data:
   dependsOn:
   - polynomial/formal_power_series.py
   isVerificationFile: true
-  path: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
+  path: test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
+documentation_of: test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
-- /verify/test/library_checker/polynomial/log_of_formal_power_series_spare.test.py.html
-title: test/library_checker/polynomial/log_of_formal_power_series_spare.test.py
+title: Log of Formal Power Series (Sparse)
 ---

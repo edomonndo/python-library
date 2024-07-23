@@ -11,10 +11,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+    title: Compositional Inverse of Formal Power Series
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/composition_of_formal_power_series.test.py
-    title: test/library_checker/polynomial/composition_of_formal_power_series.test.py
+    title: Composition of Formal Power Series
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

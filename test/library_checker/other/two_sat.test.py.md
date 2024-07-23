@@ -35,8 +35,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/other/two_sat.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/other/two_sat.test.py
-- /verify/test/library_checker/other/two_sat.test.py.html
-title: test/library_checker/other/two_sat.test.py
+title: 2 Sat
 ---

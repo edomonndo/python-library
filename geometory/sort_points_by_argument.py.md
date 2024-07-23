@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/sort_points_by_argument.test.py
-    title: test/library_checker/geometory/sort_points_by_argument.test.py
+    title: Sort Points by Argument
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

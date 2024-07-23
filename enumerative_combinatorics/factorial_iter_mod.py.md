@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/enumerative_combinatorics/many_factorials.test.py
-    title: test/library_checker/enumerative_combinatorics/many_factorials.test.py
+    title: Many Factorials
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

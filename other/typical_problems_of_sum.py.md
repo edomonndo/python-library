@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/unit_test/typical_problems_of_sum.test.py
-    title: test/unit_test/typical_problems_of_sum.test.py
+    title: "\u5178\u578B\u8DB3\u3057\u4E0A\u3052"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

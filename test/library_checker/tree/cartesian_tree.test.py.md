@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/tree/cartesian_tree.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/tree/cartesian_tree.test.py
-- /verify/test/library_checker/tree/cartesian_tree.test.py.html
-title: test/library_checker/tree/cartesian_tree.test.py
+title: Cartesian Tree
 ---

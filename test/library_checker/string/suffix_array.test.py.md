@@ -40,8 +40,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/string/suffix_array.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/string/suffix_array.test.py
-- /verify/test/library_checker/string/suffix_array.test.py.html
-title: test/library_checker/string/suffix_array.test.py
+title: Suffix Array
 ---

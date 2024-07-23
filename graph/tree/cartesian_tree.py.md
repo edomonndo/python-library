@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/cartesian_tree.test.py
-    title: test/library_checker/tree/cartesian_tree.test.py
+    title: Cartesian Tree
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

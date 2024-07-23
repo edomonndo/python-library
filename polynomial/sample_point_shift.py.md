@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
-    title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
+    title: Shift of Sampling Points of Polynomial
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

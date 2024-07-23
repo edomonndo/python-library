@@ -33,8 +33,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/tree/lowest_common_ancestor.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/tree/lowest_common_ancestor.test.py
-- /verify/test/library_checker/tree/lowest_common_ancestor.test.py.html
-title: test/library_checker/tree/lowest_common_ancestor.test.py
+title: Lowest Common Ancestor
 ---

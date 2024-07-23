@@ -8,10 +8,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/number_of_substrings.test.py
-    title: test/library_checker/string/number_of_substrings.test.py
+    title: Number of Substrings
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/suffix_array.test.py
-    title: test/library_checker/string/suffix_array.test.py
+    title: Suffix Array
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

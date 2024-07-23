@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/string/enumerate_palindroms.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/string/enumerate_palindroms.test.py
-- /verify/test/library_checker/string/enumerate_palindroms.test.py.html
-title: test/library_checker/string/enumerate_palindroms.test.py
+title: Enumerate Palindromes
 ---

@@ -26,8 +26,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/sample/many_aplusb.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/sample/many_aplusb.test.py
-- /verify/test/library_checker/sample/many_aplusb.test.py.html
-title: test/library_checker/sample/many_aplusb.test.py
+title: Many A + B
 ---

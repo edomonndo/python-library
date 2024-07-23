@@ -39,8 +39,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/exp_of_formal_power_series.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/exp_of_formal_power_series.test.py
-- /verify/test/library_checker/polynomial/exp_of_formal_power_series.test.py.html
-title: test/library_checker/polynomial/exp_of_formal_power_series.test.py
+title: Exp of Formal Power Series
 ---

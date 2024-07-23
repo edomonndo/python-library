@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/other/two_sat.test.py
-    title: test/library_checker/other/two_sat.test.py
+    title: 2 Sat
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

@@ -30,8 +30,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/number_theory/primitive_root.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/number_theory/primitive_root.test.py
-- /verify/test/library_checker/number_theory/primitive_root.test.py.html
-title: test/library_checker/number_theory/primitive_root.test.py
+title: Primitive Root
 ---

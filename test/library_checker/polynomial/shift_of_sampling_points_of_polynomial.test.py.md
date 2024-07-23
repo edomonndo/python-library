@@ -41,8 +41,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
-- /verify/test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py.html
-title: test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
+title: Shift of Sampling Points of Polynomial
 ---

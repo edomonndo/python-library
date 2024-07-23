@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
-    title: test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
+    title: Number of Subsequences
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

@@ -33,8 +33,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-- /verify/test/library_checker/polynomial/product_of_polynomial_sequence.test.py.html
-title: test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+title: Product of Polynomial Sequence
 ---

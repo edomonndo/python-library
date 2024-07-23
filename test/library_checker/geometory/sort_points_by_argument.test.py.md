@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/geometory/sort_points_by_argument.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/geometory/sort_points_by_argument.test.py
-- /verify/test/library_checker/geometory/sort_points_by_argument.test.py.html
-title: test/library_checker/geometory/sort_points_by_argument.test.py
+title: Sort Points by Argument
 ---

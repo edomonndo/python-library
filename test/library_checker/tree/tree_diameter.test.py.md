@@ -32,8 +32,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/tree/tree_diameter.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/tree/tree_diameter.test.py
-- /verify/test/library_checker/tree/tree_diameter.test.py.html
-title: test/library_checker/tree/tree_diameter.test.py
+title: Tree Diameter
 ---

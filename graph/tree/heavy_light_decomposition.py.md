@@ -22,7 +22,7 @@ data:
     title: GRL5E Range Query on a Tree II
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
-    title: test/library_checker/tree/jump_on_tree_hld.test.py
+    title: Jump on Tree (HLD)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)

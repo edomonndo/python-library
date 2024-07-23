@@ -11,7 +11,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/polynomial_tayler_shift.test.py
-    title: test/library_checker/polynomial/polynomial_tayler_shift.test.py
+    title: Polynomial Taylor Shift
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

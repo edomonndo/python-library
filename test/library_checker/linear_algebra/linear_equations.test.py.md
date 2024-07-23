@@ -25,15 +25,12 @@ data:
   dependsOn:
   - linear_algebra/matrix.py
   isVerificationFile: true
-  path: test/library_checker/linear_algebra/system_of_linear_equations.test.py
+  path: test/library_checker/linear_algebra/linear_equations.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/linear_algebra/system_of_linear_equations.test.py
+documentation_of: test/library_checker/linear_algebra/linear_equations.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/linear_algebra/system_of_linear_equations.test.py
-- /verify/test/library_checker/linear_algebra/system_of_linear_equations.test.py.html
-title: test/library_checker/linear_algebra/system_of_linear_equations.test.py
+title: System of Linear Equations
 ---

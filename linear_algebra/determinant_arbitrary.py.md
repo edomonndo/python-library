@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/linear_algebra/determinant_of_matrix_arbitrary_mod.test.py
-    title: test/library_checker/linear_algebra/determinant_of_matrix_arbitrary_mod.test.py
+    path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
+    title: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -30,7 +30,7 @@ data:
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/linear_algebra/determinant_of_matrix_arbitrary_mod.test.py
+  - test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
 documentation_of: linear_algebra/determinant_arbitrary.py
 layout: document
 title: "\u884C\u5217\u5F0F"

@@ -31,8 +31,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/number_theory/sum_of_floor_of_linear.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/number_theory/sum_of_floor_of_linear.test.py
-- /verify/test/library_checker/number_theory/sum_of_floor_of_linear.test.py.html
-title: test/library_checker/number_theory/sum_of_floor_of_linear.test.py
+title: Sum of Floor of Linear
 ---
