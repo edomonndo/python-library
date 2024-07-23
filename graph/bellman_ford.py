@@ -1,3 +1,6 @@
+from typing import Union
+
+
 class BellmanFord:
     def __init__(self, n):
         self.n = n
@@ -43,7 +46,7 @@ class BellmanFord:
                 dist[v] = min(dist[v], dist[u] + w)
         return True, dist[t]
 
-    def solve_sssp(self, s: int) -> list[int] | int:
+    def solve_sssp(self, s: int) -> Union[list[int], int]:
         """Single-Source Shortest Path"""
         n = self.n
         assert 0 <= s < n

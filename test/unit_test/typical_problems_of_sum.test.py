@@ -67,13 +67,9 @@ def greedy7(A):
 
 
 if __name__ == "__main__":
-    from pathlib import Path
-    import sys
-    import random
-
-    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
-
     from other.typical_problems_of_sum import *
+
+    import random
 
     testcase = 10
     for _ in range(testcase):

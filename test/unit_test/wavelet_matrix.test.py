@@ -1,10 +1,7 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_A
 
 if __name__ == "__main__":
-    from pathlib import Path
-    import sys
 
-    sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
     from data_structure.wavelet_matrix import WaveletMatrix
 
     T = [5, 4, 5, 5, 2, 1, 5, 6, 1, 3, 5, 0]
