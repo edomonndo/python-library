@@ -43,8 +43,5 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/linear_algebra/matrix_determinant.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/linear_algebra/matrix_determinant.test.py
-- /verify/test/library_checker/linear_algebra/matrix_determinant.test.py.html
-title: test/library_checker/linear_algebra/matrix_determinant.test.py
+title: Determinant of Matrix
 ---

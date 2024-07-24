@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
-    title: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
+    title: Determinant of Matrix (Arbitrary Mod)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

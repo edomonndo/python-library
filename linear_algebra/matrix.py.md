@@ -8,7 +8,7 @@ data:
     title: System of Linear Equations
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_determinant.test.py
-    title: test/library_checker/linear_algebra/matrix_determinant.test.py
+    title: Determinant of Matrix
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_inverse.test.py
     title: Inverse Matrix

@@ -1110,6 +1110,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.py
       title: Two-Edge-Connected Components
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
+      title: Unionfind with Potential (Non-Commutative Group)
   - name: test/library_checker/linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -1117,10 +1120,10 @@ data:
       title: System of Linear Equations
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_determinant.test.py
-      title: test/library_checker/linear_algebra/matrix_determinant.test.py
+      title: Determinant of Matrix
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
-      title: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
+      title: Determinant of Matrix (Arbitrary Mod)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_inverse.test.py
       title: Inverse Matrix

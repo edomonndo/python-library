@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-24 10:41:27+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
