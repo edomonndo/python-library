@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind_with_potential_non_commutative_group
 
-from graph.connectivity.weighted_union_find import WeightedUnionFind
+from graph.connectivity.weighted_unionfind import WeightedUnionFind
 
 MOD = 998244353
 
