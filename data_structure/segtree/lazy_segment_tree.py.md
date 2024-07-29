@@ -102,10 +102,10 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_affine_range_sum.test.py
-  - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
-  - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
   - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
   - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
+  - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
+  - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
 documentation_of: data_structure/segtree/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"

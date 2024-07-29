@@ -28,12 +28,12 @@ data:
   dependsOn:
   - atcoder/dsu.py
   isVerificationFile: false
-  path: graph/connectivity/static_range_parallel_union_find.py
+  path: graph/connectivity/static_range_parallel_unionfind.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-07-29 12:40:49+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: graph/connectivity/static_range_parallel_union_find.py
+documentation_of: graph/connectivity/static_range_parallel_unionfind.py
 layout: document
 title: Static Range Parallel Union Find
 ---

@@ -87,13 +87,13 @@ data:
   isVerificationFile: false
   path: atcoder/segtree.py
   requiredBy:
-  - data_structure/segtree/range_set_range_composite.py
-  - data_structure/segtree/compressed_segtree.py
-  - dynamic_programming/longest_increase_subsequence.py
-  - graph/tree/auxiliary_tree.py
-  - graph/tree/hld_segtree.py
-  - graph/tree/euler_tour.py
   - graph/tree/hld_segtree_noncommutative.py
+  - graph/tree/auxiliary_tree.py
+  - graph/tree/euler_tour.py
+  - graph/tree/hld_segtree.py
+  - data_structure/segtree/compressed_segtree.py
+  - data_structure/segtree/range_set_range_composite.py
+  - dynamic_programming/longest_increase_subsequence.py
   timestamp: '2024-06-04 17:27:40+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

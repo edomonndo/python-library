@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/connectivity/weighted_union_find.py
+    path: graph/connectivity/weighted_unionfind.py
     title: "\u91CD\u307F\u4ED8\u304D Union Find"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
@@ -18,8 +18,8 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/unionfind_with_potential_non_commutative_group\n\
-    \nfrom graph.connectivity.weighted_union_find import WeightedUnionFind\n\nMOD\
-    \ = 998244353\n\n\nclass Monoid:\n    def __init__(self, a=0, b=0, c=0, d=0):\n\
+    \nfrom graph.connectivity.weighted_unionfind import WeightedUnionFind\n\nMOD =\
+    \ 998244353\n\n\nclass Monoid:\n    def __init__(self, a=0, b=0, c=0, d=0):\n\
     \        self.a = a\n        self.b = b\n        self.c = c\n        self.d =\
     \ d\n\n    def __str__(self):\n        return f\"M<{self.a},{self.b},{self.c},{self.d}>\"\
     \n\n    __repr__ = __str__\n\n    def __add__(self, other: \"Monoid\") -> \"Monoid\"\
@@ -44,11 +44,11 @@ data:
     \     u, v = qu\n        if uf.same(u, v):\n            x = uf.diff(u, v)\n  \
     \          print(*x.to_list())\n        else:\n            print(-1)\n"
   dependsOn:
-  - graph/connectivity/weighted_union_find.py
+  - graph/connectivity/weighted_unionfind.py
   isVerificationFile: true
   path: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
   requiredBy: []
-  timestamp: '2024-07-24 10:41:27+09:00'
+  timestamp: '2024-07-29 12:40:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py

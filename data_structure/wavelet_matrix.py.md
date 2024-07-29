@@ -188,8 +188,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/static_range_frequency.test.py
-  - test/library_checker/data_structure/range_kth_smallest.test.py
   - test/library_checker/data_structure/static_range_count_distinct.test.py
+  - test/library_checker/data_structure/range_kth_smallest.test.py
   - test/unit_test/wavelet_matrix.test.py
   - test/aoj/dsl/dsl_3_d_sliding_minimum_element_wm.test.py
 documentation_of: data_structure/wavelet_matrix.py

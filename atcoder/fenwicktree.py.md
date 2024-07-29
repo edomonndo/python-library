@@ -57,9 +57,9 @@ data:
   timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/tree/vertex_add_path_sum_hld.test.py
   - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
 documentation_of: atcoder/fenwicktree.py
 layout: document
 redirect_from:

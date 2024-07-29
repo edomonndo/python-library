@@ -383,17 +383,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/connectivity/offline_dynamic_connectivity.py
       title: Dynamic Connectivity (Offline)
+    - icon: ':heavy_check_mark:'
+      path: graph/connectivity/range_parallel_unionfind.py
+      title: Range Parallel Union Find
     - icon: ':warning:'
-      path: graph/connectivity/range_union_find.py
+      path: graph/connectivity/range_unionfind.py
       title: Range Union Find
     - icon: ':warning:'
       path: graph/connectivity/rollback_unionfind.py
       title: Rollback Union Find
     - icon: ':warning:'
-      path: graph/connectivity/static_range_parallel_union_find.py
+      path: graph/connectivity/static_range_parallel_unionfind.py
       title: Static Range Parallel Union Find
     - icon: ':heavy_check_mark:'
-      path: graph/connectivity/weighted_union_find.py
+      path: graph/connectivity/weighted_unionfind.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: graph/grid
     pages:
@@ -1096,6 +1099,9 @@ data:
       path: test/library_checker/graph/minimum_spanning_tree.test.py
       title: Minimum Spanning Tree
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/range_parallel_unionfind.test.py
+      title: test/library_checker/graph/range_parallel_unionfind.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
     - icon: ':heavy_check_mark:'
@@ -1110,6 +1116,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/two_edge_connected_components.test.py
       title: Two-Edge-Connected Components
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/unionfind_with_potential.test.py
+      title: Unionfind with Potential
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
       title: Unionfind with Potential (Non-Commutative Group)

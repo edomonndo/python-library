@@ -59,8 +59,8 @@ data:
   timestamp: '2024-07-02 07:37:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/polynomial/composition_of_formal_power_series.test.py
   - test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
+  - test/library_checker/polynomial/composition_of_formal_power_series.test.py
 documentation_of: polynomial/composition.py
 layout: document
 redirect_from:

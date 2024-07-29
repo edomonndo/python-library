@@ -116,15 +116,15 @@ data:
   isVerificationFile: false
   path: atcoder/lazysegtree.py
   requiredBy:
-  - geometory/union_area_rectangle.py
-  - graph/tree/permutation_tree.py
   - graph/tree/hld_lazysegtree.py
+  - graph/tree/permutation_tree.py
+  - geometory/union_area_rectangle.py
   timestamp: '2024-06-05 17:57:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/other/able.test.py
   - test/atcoder/abc300-399/abc357f.test.py
   - test/atcoder/abc300-399/abc341e.test.py
+  - test/atcoder/other/able.test.py
   - test/atcoder/abc001-99/abc035c.test.py
 documentation_of: atcoder/lazysegtree.py
 layout: document

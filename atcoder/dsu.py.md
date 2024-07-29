@@ -2,8 +2,11 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: graph/connectivity/range_parallel_unionfind.py
+    title: Range Parallel Union Find
   - icon: ':warning:'
-    path: graph/connectivity/static_range_parallel_union_find.py
+    path: graph/connectivity/static_range_parallel_unionfind.py
     title: Static Range Parallel Union Find
   - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition_width2.py
@@ -15,6 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/minimum_spanning_tree.test.py
     title: Minimum Spanning Tree
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/range_parallel_unionfind.test.py
+    title: test/library_checker/graph/range_parallel_unionfind.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -51,13 +57,15 @@ data:
   isVerificationFile: false
   path: atcoder/dsu.py
   requiredBy:
-  - graph/connectivity/static_range_parallel_union_find.py
   - graph/tree_decomposition_width2.py
+  - graph/connectivity/range_parallel_unionfind.py
+  - graph/connectivity/static_range_parallel_unionfind.py
   timestamp: '2024-05-29 14:24:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/manhattanmst.test.py
   - test/library_checker/graph/minimum_spanning_tree.test.py
+  - test/library_checker/graph/manhattanmst.test.py
+  - test/library_checker/graph/range_parallel_unionfind.test.py
 documentation_of: atcoder/dsu.py
 layout: document
 redirect_from:

@@ -7,6 +7,9 @@ data:
     path: test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
     title: "DSL1B \u91CD\u307F\u4ED8\u304DUnion Find\u6728"
   - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/unionfind_with_potential.test.py
+    title: Unionfind with Potential
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
     title: Unionfind with Potential (Non-Commutative Group)
   _isVerificationFailed: false
@@ -56,17 +59,15 @@ data:
     \        p = self.leader(a)\n        return self.base[p] + self.diff(a, p)\n"
   dependsOn: []
   isVerificationFile: false
-  path: graph/connectivity/weighted_union_find.py
+  path: graph/connectivity/weighted_unionfind.py
   requiredBy: []
-  timestamp: '2024-07-24 10:41:27+09:00'
+  timestamp: '2024-07-29 12:40:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
+  - test/library_checker/graph/unionfind_with_potential.test.py
   - test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
-documentation_of: graph/connectivity/weighted_union_find.py
+documentation_of: graph/connectivity/weighted_unionfind.py
 layout: document
 title: "\u91CD\u307F\u4ED8\u304D Union Find"
 ---
-
-未履修
-別名：ポテンシャルUnion Find.
