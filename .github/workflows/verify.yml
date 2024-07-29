@@ -1,7 +1,13 @@
 name: verify
 
-on: push
-
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        required: true
+        description: ログレベル
+        default: warning
+        
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -18,7 +24,7 @@ jobs:
           fetch-depth: 0
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
 
