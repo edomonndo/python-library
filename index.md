@@ -305,6 +305,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/chromatic_number.py
       title: "\u5F69\u8272\u6570"
+    - icon: ':heavy_check_mark:'
+      path: graph/connected_components_complement.py
+      title: "\u88DC\u30B0\u30E9\u30D5\u306E\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
       path: graph/csr.py
       title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
@@ -1054,6 +1057,9 @@ data:
       path: test/library_checker/graph/chromatic_number.test.py
       title: Chromatic Number
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/connected_components_of_complement_graph.test.py
+      title: Connected Components of Complement Graph
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_directed.test.py
       title: Cycle Detection (Directed)
     - icon: ':heavy_check_mark:'
@@ -1100,7 +1106,7 @@ data:
       title: Minimum Spanning Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/range_parallel_unionfind.test.py
-      title: test/library_checker/graph/range_parallel_unionfind.test.py
+      title: Range Parallel Unionfind
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components

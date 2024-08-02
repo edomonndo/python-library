@@ -40,8 +40,6 @@ data:
   verifiedWith: []
 documentation_of: test/library_checker/graph/range_parallel_unionfind.test.py
 layout: document
-redirect_from:
-- /verify/test/library_checker/graph/range_parallel_unionfind.test.py
-- /verify/test/library_checker/graph/range_parallel_unionfind.test.py.html
-title: test/library_checker/graph/range_parallel_unionfind.test.py
+title: Range Parallel Unionfind
 ---
+

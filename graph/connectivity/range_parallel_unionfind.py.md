@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/range_parallel_unionfind.test.py
-    title: test/library_checker/graph/range_parallel_unionfind.test.py
+    title: Range Parallel Unionfind
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
