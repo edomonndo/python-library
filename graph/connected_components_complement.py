@@ -20,7 +20,7 @@ def get_ccc(adj: list[list[int]]) -> list[list[int]]:
             nex = []
             for u in st:
                 if flg[u]:
-                    st.append(u)
+                    nex.append(u)
                 elif idx[u] == -1:
                     idx[u] = cnt
                     q.append(u)
