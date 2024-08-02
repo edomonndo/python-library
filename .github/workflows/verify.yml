@@ -1,12 +1,7 @@
 name: verify
 
 on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        required: true
-        description: ログレベル
-        default: warning
+  push
         
 jobs:
   verify:
