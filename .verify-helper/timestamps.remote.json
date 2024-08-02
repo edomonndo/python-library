@@ -101,6 +101,7 @@
 "test/library_checker/graph/biconnected_components.test.py": "2024-07-22 09:16:58 +0900",
 "test/library_checker/graph/bipartitematching.test.py": "2024-02-09 16:12:14 +0900",
 "test/library_checker/graph/chromatic_number.test.py": "2024-06-04 09:09:32 +0900",
+"test/library_checker/graph/connected_components_of_complement_graph.test.py": "2024-08-02 11:42:07 +0900",
 "test/library_checker/graph/cycle_detection_directed.test.py": "2024-07-19 12:35:18 +0900",
 "test/library_checker/graph/cycle_detection_undirected.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/graph/dominator_tree.test.py": "2024-07-04 12:06:06 +0900",
