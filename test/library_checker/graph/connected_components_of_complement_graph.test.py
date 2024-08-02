@@ -12,4 +12,4 @@ for _ in range(m):
 cc = get_ccc(g)
 print(len(cc))
 for group in cc:
-    print(len(group), *cc)
+    print(len(group), *group)
