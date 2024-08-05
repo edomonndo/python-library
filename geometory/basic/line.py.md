@@ -15,7 +15,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_a_projection.test.py
     title: "CGL1A \u5C04\u5F71"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_b_refrection.test.py
     title: "CGL1B \u53CD\u5C04"
   - icon: ':heavy_check_mark:'
@@ -30,9 +30,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_d_distance.test.py
     title: "CGL2D \u8DDD\u96E2"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -56,12 +56,12 @@ data:
     \      return self.project_from_point(Point(x, y))\n\n    def refrection_from_point(self,\
     \ point: Point) -> Point:\n        \"\"\"\u76F4\u7DDA\u3092\u5BFE\u79F0\u8EF8\u3068\
     \u3057\u3066\uFF0C\u70B9point\u3068\u7DDA\u5BFE\u79F0\u306A\u70B9\u306E\u5EA7\u6A19\
-    \"\"\"\n        return point + (self.project(point) - point) * 2\n\n    def refrection(self,\
-    \ x: T, y: T) -> Point:\n        return self.project_from_point(Point(x, y))\n\
-    \n    def get_distance_from_point(self, point: Point) -> T:\n        \"\"\"\u76F4\
-    \u7DDA\u3068\u70B9\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\
-    \n        return abs(self.vector.cross(point - self.s) / self.vector.abs())\n\n\
-    \    def get_distance(self, x: T, y: T) -> T:\n        return self.get_distance_from_point(Point(x,\
+    \"\"\"\n        return point + (self.project_from_point(point) - point) * 2\n\n\
+    \    def refrection(self, x: T, y: T) -> Point:\n        return self.refrection_from_point(Point(x,\
+    \ y))\n\n    def get_distance_from_point(self, point: Point) -> T:\n        \"\
+    \"\"\u76F4\u7DDA\u3068\u70B9\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\
+    \"\"\"\n        return abs(self.vector.cross(point - self.s) / self.vector.abs())\n\
+    \n    def get_distance(self, x: T, y: T) -> T:\n        return self.get_distance_from_point(Point(x,\
     \ y))\n\n    def get_distance_segment_from_point(self, point: Point) -> T:\n \
     \       \"\"\"\u7DDA\u5206\u3068\u70B9\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\
     \u8DDD\u96E2\"\"\"\n        if self.vector.dot(point - self.s) < 0:\n        \
@@ -99,8 +99,8 @@ data:
   path: geometory/basic/line.py
   requiredBy:
   - geometory/basic/polygon.py
-  timestamp: '2024-08-05 22:04:36+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-08-05 22:25:19+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_2_b_intersection.test.py
   - test/aoj/cgl/cgl_2_d_distance.test.py

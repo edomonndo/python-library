@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/line.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
       \u5206)"
@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_1_a_projection.test.py
   requiredBy: []
-  timestamp: '2024-08-05 22:04:36+09:00'
+  timestamp: '2024-08-05 22:25:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_a_projection.test.py

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/contour_query.py
     title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_range_contour_sum_on_tree
     links:
@@ -29,7 +29,7 @@ data:
     \        for j in range(len(arr[i])):\n            B[j] = A[arr[i][j]]\n     \
     \   bit.append(FenwickTree(len(arr[i])))\n        for j in range(len(arr[i])):\n\
     \            bit[-1].add(j, B[j])\n\n\ndef query1(p, r):\n    global ans\n   \
-    \ ans += bit[p].sum0(r)\n\n\ndef query2(p, r):\n    global ans\n    ans -= bit[p]._sum0(r)\n\
+    \ ans += bit[p].sum0(r)\n\n\ndef query2(p, r):\n    global ans\n    ans -= bit[p].sum0(r)\n\
     \n\ncq = ContourQuery(g, f)\n\nfor _ in range(q):\n    t, *qu = map(int, input().split())\n\
     \    if t == 0:\n        p, x = qu\n        cq.vertex(p, lambda a, b: bit[a].add(b,\
     \ x))\n    else:\n        p, l, r = qu\n        ans = 0\n        cq.range_contour(p,\
@@ -40,8 +40,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
   requiredBy: []
-  timestamp: '2024-08-05 22:04:36+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 22:25:19+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
 layout: document

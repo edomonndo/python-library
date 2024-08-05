@@ -109,7 +109,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
@@ -216,7 +216,7 @@ data:
     - icon: ':warning:'
       path: geometory/basic/circle.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/basic/line.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
         \u5206)"
@@ -403,7 +403,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/contour_query.py
       title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
@@ -676,7 +676,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_a_projection.test.py
       title: "CGL1A \u5C04\u5F71"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_b_refrection.test.py
       title: "CGL1B \u53CD\u5C04"
     - icon: ':heavy_check_mark:'
@@ -1302,7 +1302,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
       title: Vertex Add Path Sum (HLD)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
     - icon: ':heavy_check_mark:'
