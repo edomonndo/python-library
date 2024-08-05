@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_1_b_refrection.test.py
   requiredBy: []
-  timestamp: '2024-08-05 21:31:21+09:00'
+  timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_1_b_refrection.test.py

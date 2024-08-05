@@ -27,7 +27,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_c_cross_point.test.py
     title: "CGL2C \u4EA4\u70B9"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_d_distance.test.py
     title: "CGL2D \u8DDD\u96E2"
   _isVerificationFailed: true
@@ -67,31 +67,31 @@ data:
     \u8DDD\u96E2\"\"\"\n        if self.vector.dot(point - self.s) < 0:\n        \
     \    p = point - self.s\n            return p.abs()\n        if self.vector.dot(self.t\
     \ - point) < 0:\n            p = point - self.t\n            return p.abs()\n\
-    \        return self.get_distance(point)\n\n    def get_distance_segment(self,\
+    \        return self.get_distance_from_point(point)\n\n    def get_distance_segment(self,\
     \ x: T, y: T) -> T:\n        return self.get_distance_segment_from_point(Point(x,\
     \ y))\n\n    def get_distance_seg_to_seg(self, other: \"Line\") -> int:\n    \
     \    \"\"\"\u7DDA\u5206\u3068\u7DDA\u5206\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\
     \u8DDD\u96E2\"\"\"\n        if self.intersect(other):\n            return 0\n\
-    \        return min(\n            self.get_distance_segment(other.s),\n      \
-    \      self.get_distance_segment(other.t),\n            other.get_distance_segment(self.s),\n\
-    \            other.get_distance_segment(self.t),\n        )\n\n    def intersect(self,\
-    \ other: Union[\"Line\", Circle]) -> bool:\n        if isinstance(other, Line):\n\
-    \            return (\n                self.s.ccw(self.t, other.s) * self.s.ccw(self.t,\
-    \ other.t) <= 0\n                and other.s.ccw(other.t, self.s) * other.s.ccw(other.t,\
-    \ self.t) <= 0\n            )\n        if isinstance(other, Circle):\n       \
-    \     return self.get_distance(other.center) <= other.r\n        raise TypeError\n\
-    \n    def get_cross_point(self, other: Union[\"Line\", Circle]) -> Union[Point,\
-    \ int]:\n        if isinstance(other, Line):\n            if not self.intersect(other):\n\
-    \                return -1\n            d1 = abs(other.vector.cross(self.s - other.t))\n\
-    \            d2 = abs(other.vector.cross(self.t - other.t))\n            t = d1\
-    \ / (d1 + d2)\n            return self.s + (self.vector) * t\n        if isinstance(other,\
-    \ Circle):\n            if not self.intersect(other):\n                return\
-    \ -1\n            pr = self.project(other.center)\n            e = self.vector\
-    \ / self.vector.abs()\n            base = (other.r**2 - (pr - other.center).norm())\
-    \ ** 0.5\n            p1, p2 = pr + e * base, pr - e * base\n            if p1.x\
-    \ == p2.x:\n                return (p1, p2) if p1.y < p2.y else (p2, p1)\n   \
-    \         if p1.x < p2.x:\n                return (p1, p2)\n            return\
-    \ (p2, p1)\n        raise TypeError\n"
+    \        return min(\n            self.get_distance_segment_from_point(other.s),\n\
+    \            self.get_distance_segment_from_point(other.t),\n            other.get_distance_segment_from_point(self.s),\n\
+    \            other.get_distance_segment_from_point(self.t),\n        )\n\n   \
+    \ def intersect(self, other: Union[\"Line\", Circle]) -> bool:\n        if isinstance(other,\
+    \ Line):\n            return (\n                self.s.ccw(self.t, other.s) *\
+    \ self.s.ccw(self.t, other.t) <= 0\n                and other.s.ccw(other.t, self.s)\
+    \ * other.s.ccw(other.t, self.t) <= 0\n            )\n        if isinstance(other,\
+    \ Circle):\n            return self.get_distance_from_point(other.center) <= other.r\n\
+    \        raise TypeError\n\n    def get_cross_point(self, other: Union[\"Line\"\
+    , Circle]) -> Union[Point, int]:\n        if isinstance(other, Line):\n      \
+    \      if not self.intersect(other):\n                return -1\n            d1\
+    \ = abs(other.vector.cross(self.s - other.t))\n            d2 = abs(other.vector.cross(self.t\
+    \ - other.t))\n            t = d1 / (d1 + d2)\n            return self.s + (self.vector)\
+    \ * t\n        if isinstance(other, Circle):\n            if not self.intersect(other):\n\
+    \                return -1\n            pr = self.project(other.center)\n    \
+    \        e = self.vector / self.vector.abs()\n            base = (other.r**2 -\
+    \ (pr - other.center).norm()) ** 0.5\n            p1, p2 = pr + e * base, pr -\
+    \ e * base\n            if p1.x == p2.x:\n                return (p1, p2) if p1.y\
+    \ < p2.y else (p2, p1)\n            if p1.x < p2.x:\n                return (p1,\
+    \ p2)\n            return (p2, p1)\n        raise TypeError\n"
   dependsOn:
   - geometory/basic/point.py
   - geometory/basic/circle.py
@@ -99,7 +99,7 @@ data:
   path: geometory/basic/line.py
   requiredBy:
   - geometory/basic/polygon.py
-  timestamp: '2024-08-05 21:31:21+09:00'
+  timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/cgl/cgl_2_b_intersection.test.py

@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: geometory/basic/polygon.py
   requiredBy: []
-  timestamp: '2024-08-05 21:31:21+09:00'
+  timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: geometory/basic/polygon.py

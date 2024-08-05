@@ -9,15 +9,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
     title: GRL5C LCA (Lowest Common Ancestor)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_et.test.py
     title: Vertex Add Path Sum (Euler Tour)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
     title: Vertex Add Subtree Sum (Euler Tour)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -57,21 +57,21 @@ data:
     \       - 2 * self.ecost_path_sum.prod(0, self.out[a])\n        )\n\n    def update_parent_edge(self,\
     \ v, w):\n        \"\"\"v\u3068\u305D\u306E\u89AA\u3092\u7E4B\u3050\u8FBA\u306E\
     \u91CD\u307F\u3092w\u306B\u66F4\u65B0\"\"\"\n        l, r = self.into[v], self.out[v]\n\
-    \        self.ecost_path_sum.set(l, w)\n        if r < self.ecost_path_sum._n:\n\
+    \        self.ecost_path_sum.set(l, w)\n        if r < self.ecost_path_sum.n:\n\
     \            self.ecost_path_sum.set(r, -w)\n        self.ecost_subtree_sum.set(l,\
     \ w)\n\n    def add_parent_edge(self, v, w):\n        \"\"\"v\u3068\u305D\u306E\
     \u89AA\u3092\u7E4B\u3050\u8FBA\u306E\u91CD\u307F\u306Bw\u3092\u52A0\u7B97\"\"\"\
     \n        l, r = self.into[v], self.out[v]\n        cur = self.ecost_path_sum.get(l)\n\
-    \        self.ecost_path_sum.set(l, w + cur)\n        if r < self.ecost_path_sum._n:\n\
+    \        self.ecost_path_sum.set(l, w + cur)\n        if r < self.ecost_path_sum.n:\n\
     \            self.ecost_path_sum.set(r, -(w + cur))\n        self.ecost_subtree_sum.set(l,\
     \ w + self.ecost_subtree_sum.get(l))\n\n    def update_verticle(self, v, w):\n\
     \        \"\"\"v\u306E\u91CD\u307F\u3092w\u306B\u66F4\u65B0\"\"\"\n        l,\
     \ r = self.into[v], self.out[v]\n        self.vcost_path_sum.set(l, w)\n     \
-    \   if r < self.vcost_path_sum._n:\n            self.vcost_path_sum.set(r, -w)\n\
+    \   if r < self.vcost_path_sum.n:\n            self.vcost_path_sum.set(r, -w)\n\
     \        self.vcost_subtree_sum.set(l, w)\n\n    def add_verticle(self, v, w):\n\
     \        \"\"\"v\u306E\u91CD\u307F\u306Bw\u3092\u52A0\u7B97\"\"\"\n        l,\
     \ r = self.into[v], self.out[v]\n        cur = self.vcost_path_sum.get(l)\n  \
-    \      self.vcost_path_sum.set(l, w + cur)\n        if r < self.vcost_path_sum._n:\n\
+    \      self.vcost_path_sum.set(l, w + cur)\n        if r < self.vcost_path_sum.n:\n\
     \            self.vcost_path_sum.set(r, -(w + cur))\n        self.vcost_subtree_sum.set(l,\
     \ w + self.vcost_subtree_sum.get(l))\n\n    def is_ancestor(self, u, v):\n   \
     \     \"\"\"True if u is ancestor of v.\"\"\"\n        return self.into[u] <=\
@@ -100,8 +100,8 @@ data:
   isVerificationFile: false
   path: graph/tree/euler_tour.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-08-05 22:04:36+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
   - test/library_checker/tree/vertex_add_path_sum_et.test.py

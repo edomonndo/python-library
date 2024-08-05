@@ -7,9 +7,9 @@ data:
       \u5206)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/2/CGL_2_D
     links:
@@ -28,8 +28,8 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_2_d_distance.test.py
   requiredBy: []
-  timestamp: '2024-08-05 21:31:21+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 22:04:36+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_d_distance.test.py
 layout: document

@@ -29,7 +29,7 @@ data:
     \        for j in range(len(arr[i])):\n            B[j] = A[arr[i][j]]\n     \
     \   bit.append(FenwickTree(len(arr[i])))\n        for j in range(len(arr[i])):\n\
     \            bit[-1].add(j, B[j])\n\n\ndef query1(p, r):\n    global ans\n   \
-    \ ans += bit[p]._sum(r)\n\n\ndef query2(p, r):\n    global ans\n    ans -= bit[p]._sum(r)\n\
+    \ ans += bit[p].sum0(r)\n\n\ndef query2(p, r):\n    global ans\n    ans -= bit[p]._sum0(r)\n\
     \n\ncq = ContourQuery(g, f)\n\nfor _ in range(q):\n    t, *qu = map(int, input().split())\n\
     \    if t == 0:\n        p, x = qu\n        cq.vertex(p, lambda a, b: bit[a].add(b,\
     \ x))\n    else:\n        p, l, r = qu\n        ans = 0\n        cq.range_contour(p,\
@@ -40,7 +40,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py

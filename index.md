@@ -415,7 +415,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/dominator_tree.py
       title: Dominator Tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
     - icon: ':heavy_check_mark:'
@@ -609,7 +609,7 @@ data:
     - icon: ':warning:'
       path: str/overlap.py
       title: "\u6587\u5B57\u5217\u9023\u7D50\u6642\u306E\u91CD\u8907"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: str/palindromic_tree.py
       title: "\u56DE\u6587\u6728"
     - icon: ':warning:'
@@ -691,7 +691,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_c_cross_point.test.py
       title: "CGL2C \u4EA4\u70B9"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_d_distance.test.py
       title: "CGL2D \u8DDD\u96E2"
   - name: test/aoj/dsl
@@ -1246,7 +1246,7 @@ data:
       title: Many A + B
   - name: test/library_checker/string
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/string/eertree_static.test.py
       title: Eertree
     - icon: ':heavy_check_mark:'
@@ -1293,7 +1293,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: Tree Diameter
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_path_sum_et.test.py
       title: Vertex Add Path Sum (Euler Tour)
     - icon: ':heavy_check_mark:'
@@ -1305,7 +1305,7 @@ data:
     - icon: ':x:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
     - icon: ':heavy_check_mark:'

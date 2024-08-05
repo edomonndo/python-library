@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/euler_tour.py
     title: Euler tour
   _extendedRequiredBy: []
@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py

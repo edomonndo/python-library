@@ -14,7 +14,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
     title: Auxiliary tree
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/euler_tour.py
     title: Euler tour
   - icon: ':heavy_check_mark:'

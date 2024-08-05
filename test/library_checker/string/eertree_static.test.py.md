@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: str/palindromic_tree.py
     title: "\u56DE\u6587\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/eertree
     links:
@@ -19,15 +19,15 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/eertree\n\n\
     from str.palindromic_tree import PalindromicTree\n\nS = input()\nPT = PalindromicTree(S,\
-    \ \"a\")\npar, suffix_link, mx_palindromic_suffix = PT.solve()\nprint(PT.n)\n\
+    \ \"a\")\npar, suffix_link, mx_palindromic_suffix = PT.solve()\nprint(PT.n - 2)\n\
     for p, s in zip(par, suffix_link):\n    print(p, s)\nprint(*mx_palindromic_suffix)\n"
   dependsOn:
   - str/palindromic_tree.py
   isVerificationFile: true
   path: test/library_checker/string/eertree_static.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 22:04:36+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/string/eertree_static.test.py
 layout: document
