@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/4/DSL_4_A
     links:
@@ -26,8 +26,8 @@ data:
   isVerificationFile: true
   path: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
 layout: document

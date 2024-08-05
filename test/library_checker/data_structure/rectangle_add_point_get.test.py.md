@@ -1,15 +1,15 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_point_get.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
       \u30A4\u30F3)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/rectangle_add_point_get
     links:
@@ -31,8 +31,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/rectangle_add_point_get.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/rectangle_add_point_get.test.py
 layout: document

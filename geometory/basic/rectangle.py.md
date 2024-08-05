@@ -6,13 +6,13 @@ data:
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
     title: "DSL4A Union of Rectangles (\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
       )"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -22,13 +22,13 @@ data:
   code: "from typing import TypeVar\n\nT = TypeVar(\"T\")\n\nfrom geometory.basic.point\
     \ import Point\n\n\nclass Rectangle:\n    def __init__(self, top_left: Point,\
     \ bottom_right: Point):\n        self.top_left = top_left\n        self.bottom_right\
-    \ = bottom_right\n\n    def from_int(self, x1: T, y1: T, x2: T, y2: T) -> \"Rectangle\"\
-    :\n        return Rectangle(Point(x1, y1), Point(x2, y2))\n\n    def __str__(self):\n\
-    \        return f\"<Rect({self.top_left}, {self.bottom_right})>\"\n\n    def sub(self,\
-    \ other: \"Rectangle\"):\n        xs1, ys1 = self.top_left.get()\n        xs2,\
-    \ ys2 = self.bottom_right.get()\n        xo1, yo1 = other.top_left.get()\n   \
-    \     xo2, yo2 = other.bottom_right.get()\n\n        if xs1 < xo1:\n         \
-    \   yield Rectangle(Point(xs1, ys1), Point(xo1, ys2))\n        if xs2 > xo2:\n\
+    \ = bottom_right\n\n    @classmethod\n    def from_int(cls, x1: T, y1: T, x2:\
+    \ T, y2: T) -> \"Rectangle\":\n        return Rectangle(Point(x1, y1), Point(x2,\
+    \ y2))\n\n    def __str__(self):\n        return f\"<Rect({self.top_left}, {self.bottom_right})>\"\
+    \n\n    def sub(self, other: \"Rectangle\"):\n        xs1, ys1 = self.top_left.get()\n\
+    \        xs2, ys2 = self.bottom_right.get()\n        xo1, yo1 = other.top_left.get()\n\
+    \        xo2, yo2 = other.bottom_right.get()\n\n        if xs1 < xo1:\n      \
+    \      yield Rectangle(Point(xs1, ys1), Point(xo1, ys2))\n        if xs2 > xo2:\n\
     \            yield Rectangle(Point(xo2, ys1), Point(xs2, ys2))\n        if ys1\
     \ < yo1:\n            yield Rectangle(Point(max(xs1, xo1), ys1), Point(min(xs2,\
     \ xo2), yo1))\n        if ys2 > yo2:\n            yield Rectangle(Point(max(xs1,\
@@ -56,8 +56,8 @@ data:
   isVerificationFile: false
   path: geometory/basic/rectangle.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
 documentation_of: geometory/basic/rectangle.py

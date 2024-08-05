@@ -9,12 +9,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/count_spanning_trees_directed.test.py
     title: Counting Spanning Trees (Directed)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/count_spanning_trees_undirected.test.py
     title: Counting Spanning Trees (Undirected)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -44,7 +44,7 @@ data:
   path: graph/matrix_tree_theorem.py
   requiredBy: []
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/count_spanning_trees_directed.test.py
   - test/library_checker/graph/count_spanning_trees_undirected.test.py

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
@@ -45,7 +45,7 @@ data:
   path: test/library_checker/tree/vertext_set_path_composite.test.py
   requiredBy: []
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite.test.py
 layout: document

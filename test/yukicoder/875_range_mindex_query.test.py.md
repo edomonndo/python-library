@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/monoids/range_min_index.py
     title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://yukicoder.me/problems/no/875
     links:
@@ -36,7 +36,7 @@ data:
   path: test/yukicoder/875_range_mindex_query.test.py
   requiredBy: []
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yukicoder/875_range_mindex_query.test.py
 layout: document

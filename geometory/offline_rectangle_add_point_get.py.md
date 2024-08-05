@@ -6,12 +6,12 @@ data:
     title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/rectangle_add_point_get.test.py
     title: Range Add Point Get
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -37,7 +37,7 @@ data:
     \             if f:\n                    bit.add(y1, -w)\n                   \
     \ bit.add(y2, w)\n                else:\n                    bit.add(y1, w)\n\
     \                    bit.add(y2, -w)\n                j += 1\n            y =\
-    \ bisect_left(toY, y)\n            res[i] = bit._sum(y + 1)\n\n        return\
+    \ bisect_left(toY, y)\n            res[i] = bit.sum0(y + 1)\n\n        return\
     \ res\n\n\nclass OfflineRectangleAddPointGet:\n    def __init__(self):\n     \
     \   self.queries = []\n\n    def add_rect(self, x1: int, y1: int, x2: int, y2:\
     \ int, w: int) -> None:\n        if x1 == x2 or y1 == y2:\n            return\n\
@@ -63,8 +63,8 @@ data:
   isVerificationFile: false
   path: geometory/offline_rectangle_add_point_get.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/rectangle_add_point_get.test.py
 documentation_of: geometory/offline_rectangle_add_point_get.py

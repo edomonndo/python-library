@@ -5,7 +5,7 @@ data:
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: geometory/basic/line.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
       \u5206)"

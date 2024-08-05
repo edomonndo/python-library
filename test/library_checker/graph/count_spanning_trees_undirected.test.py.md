@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/matrix_tree_theorem.py
     title: "\u884C\u5217\u6728\u5B9A\u7406"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/counting_spanning_tree_undirected
     links:
@@ -18,7 +18,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/counting_spanning_tree_undirected\n\
-    \n\nfrom graph.matrix_tree_theorem import MatrixTreeTheorem\n\nn, m, r = map(int,\
+    \n\nfrom graph.matrix_tree_theorem import MatrixTreeTheorem\n\nn, m = map(int,\
     \ input().split())\ng = MatrixTreeTheorem(n, True)\nfor _ in range(m):\n    u,\
     \ v = map(int, input().split())\n    g.add_edge(u, v)\n\nprint(g.solve())\n"
   dependsOn:
@@ -26,8 +26,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/count_spanning_trees_undirected.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/count_spanning_trees_undirected.test.py
 layout: document

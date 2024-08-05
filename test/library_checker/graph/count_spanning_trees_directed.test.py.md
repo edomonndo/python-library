@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/matrix_tree_theorem.py
     title: "\u884C\u5217\u6728\u5B9A\u7406"
   _extendedRequiredBy: []

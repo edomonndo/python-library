@@ -12,19 +12,19 @@ data:
     path: geometory/basic/polygon.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_a_projection.test.py
     title: "CGL1A \u5C04\u5F71"
   - icon: ':x:'
     path: test/aoj/cgl/cgl_1_b_refrection.test.py
     title: "CGL1B \u53CD\u5C04"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
     title: "CGL2A \u5E73\u884C\u30FB\u5782\u76F4"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_b_intersection.test.py
     title: "CGL2B \u4EA4\u5DEE\u5224\u5B9A"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_2_c_cross_point.test.py
     title: "CGL2C \u4EA4\u70B9"
   - icon: ':x:'
@@ -32,7 +32,7 @@ data:
     title: "CGL2D \u8DDD\u96E2"
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -44,30 +44,31 @@ data:
     \   def __init__(self, p1: Point, p2: Point):\n        self.EPS = 1e-10\n    \
     \    self.s = p1\n        self.t = p2\n        self.vector = p2 - p1\n\n    def\
     \ __str__(self):\n        return f\"<Line({self.s.x} {self.s.y} {self.t.x} {self.t.y})>\"\
-    \n\n    def from_int(self, x1: T, y1: T, x2: T, y2: T) -> \"Line\":\n        return\
-    \ Line(Point(x1, y1), Point(x2, y2))\n\n    def is_orthogonal(self, other: \"\
-    Line\") -> bool:\n        return abs(self.vector.dot(other.vector)) < self.EPS\n\
-    \n    def is_parallel(self, other: \"Line\") -> bool:\n        return abs(self.vector.cross(other.vector))\
-    \ < self.EPS\n\n    def project_from_point(self, point: Point) -> Point:\n   \
-    \     \"\"\"\u76F4\u7DDA\u306B\u70B9point\u304B\u3089\u5782\u7DDA\u3092\u5F15\u3044\
-    \u305F\u3068\u304D\u306E\u4EA4\u70B9\"\"\"\n        r = self.vector.dot(point\
-    \ - self.s) / self.vector.norm()\n        return self.s + self.vector * r\n\n\
-    \    def project(self, x: T, y: T) -> Point:\n        return self.project_from_point(Point(x,\
-    \ y))\n\n    def refrection_from_point(self, point: Point) -> Point:\n       \
-    \ \"\"\"\u76F4\u7DDA\u3092\u5BFE\u79F0\u8EF8\u3068\u3057\u3066\uFF0C\u70B9point\u3068\
-    \u7DDA\u5BFE\u79F0\u306A\u70B9\u306E\u5EA7\u6A19\"\"\"\n        return point +\
-    \ (self.project(point) - point) * 2\n\n    def refrection(self, x: T, y: T) ->\
-    \ Point:\n        return self.project_from_point(Point(x, y))\n\n    def get_distance_from_point(self,\
-    \ point: Point) -> T:\n        \"\"\"\u76F4\u7DDA\u3068\u70B9\u306E\u30E6\u30FC\
-    \u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\n        return abs(self.vector.cross(point\
-    \ - self.s) / self.vector.abs())\n\n    def get_distance(self, x: T, y: T) ->\
-    \ T:\n        return self.get_distance_from_point(Point(x, y))\n\n    def get_distance_segment_from_point(self,\
-    \ point: Point) -> T:\n        \"\"\"\u7DDA\u5206\u3068\u70B9\u306E\u30E6\u30FC\
-    \u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\n        if self.vector.dot(point -\
-    \ self.s) < 0:\n            p = point - self.s\n            return p.abs()\n \
-    \       if self.vector.dot(self.t - point) < 0:\n            p = point - self.t\n\
-    \            return p.abs()\n        return self.get_distance(point)\n\n    def\
-    \ get_distance_segment(self, x: T, y: T) -> T:\n        return self.get_distance_segment_from_point(Point(x,\
+    \n\n    @classmethod\n    def from_int(cls, x1: T, y1: T, x2: T, y2: T) -> \"\
+    Line\":\n        return Line(Point(x1, y1), Point(x2, y2))\n\n    def is_orthogonal(self,\
+    \ other: \"Line\") -> bool:\n        return abs(self.vector.dot(other.vector))\
+    \ < self.EPS\n\n    def is_parallel(self, other: \"Line\") -> bool:\n        return\
+    \ abs(self.vector.cross(other.vector)) < self.EPS\n\n    def project_from_point(self,\
+    \ point: Point) -> Point:\n        \"\"\"\u76F4\u7DDA\u306B\u70B9point\u304B\u3089\
+    \u5782\u7DDA\u3092\u5F15\u3044\u305F\u3068\u304D\u306E\u4EA4\u70B9\"\"\"\n   \
+    \     r = self.vector.dot(point - self.s) / self.vector.norm()\n        return\
+    \ self.s + self.vector * r\n\n    def project(self, x: T, y: T) -> Point:\n  \
+    \      return self.project_from_point(Point(x, y))\n\n    def refrection_from_point(self,\
+    \ point: Point) -> Point:\n        \"\"\"\u76F4\u7DDA\u3092\u5BFE\u79F0\u8EF8\u3068\
+    \u3057\u3066\uFF0C\u70B9point\u3068\u7DDA\u5BFE\u79F0\u306A\u70B9\u306E\u5EA7\u6A19\
+    \"\"\"\n        return point + (self.project(point) - point) * 2\n\n    def refrection(self,\
+    \ x: T, y: T) -> Point:\n        return self.project_from_point(Point(x, y))\n\
+    \n    def get_distance_from_point(self, point: Point) -> T:\n        \"\"\"\u76F4\
+    \u7DDA\u3068\u70B9\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\
+    \n        return abs(self.vector.cross(point - self.s) / self.vector.abs())\n\n\
+    \    def get_distance(self, x: T, y: T) -> T:\n        return self.get_distance_from_point(Point(x,\
+    \ y))\n\n    def get_distance_segment_from_point(self, point: Point) -> T:\n \
+    \       \"\"\"\u7DDA\u5206\u3068\u70B9\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\
+    \u8DDD\u96E2\"\"\"\n        if self.vector.dot(point - self.s) < 0:\n        \
+    \    p = point - self.s\n            return p.abs()\n        if self.vector.dot(self.t\
+    \ - point) < 0:\n            p = point - self.t\n            return p.abs()\n\
+    \        return self.get_distance(point)\n\n    def get_distance_segment(self,\
+    \ x: T, y: T) -> T:\n        return self.get_distance_segment_from_point(Point(x,\
     \ y))\n\n    def get_distance_seg_to_seg(self, other: \"Line\") -> int:\n    \
     \    \"\"\"\u7DDA\u5206\u3068\u7DDA\u5206\u306E\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\
     \u8DDD\u96E2\"\"\"\n        if self.intersect(other):\n            return 0\n\
@@ -98,8 +99,8 @@ data:
   path: geometory/basic/line.py
   requiredBy:
   - geometory/basic/polygon.py
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-05 21:31:21+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/cgl/cgl_2_b_intersection.test.py
   - test/aoj/cgl/cgl_2_d_distance.test.py

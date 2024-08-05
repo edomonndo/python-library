@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: geometory/basic/line.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
       \u5206)"
@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_2_d_distance.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-05 21:31:21+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_2_d_distance.test.py

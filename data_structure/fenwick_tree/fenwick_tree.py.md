@@ -19,7 +19,7 @@ data:
     path: geometory/offline_point_add_rectangle_sum.py
     title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
       \u30F3)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_point_get.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
       \u30A4\u30F3)"
@@ -37,13 +37,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':x:'
     path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
     title: Vertex Add Range Contour Sum on Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: true

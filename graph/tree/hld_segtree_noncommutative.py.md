@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite2.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -49,7 +49,7 @@ data:
   path: graph/tree/hld_segtree_noncommutative.py
   requiredBy: []
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/vertext_set_path_composite2.test.py
 documentation_of: graph/tree/hld_segtree_noncommutative.py
