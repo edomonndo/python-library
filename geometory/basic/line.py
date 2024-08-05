@@ -36,10 +36,10 @@ class Line:
 
     def refrection_from_point(self, point: Point) -> Point:
         """直線を対称軸として，点pointと線対称な点の座標"""
-        return point + (self.project(point) - point) * 2
+        return point + (self.project_from_point(point) - point) * 2
 
     def refrection(self, x: T, y: T) -> Point:
-        return self.project_from_point(Point(x, y))
+        return self.refrection_from_point(Point(x, y))
 
     def get_distance_from_point(self, point: Point) -> T:
         """直線と点のユークリッド距離"""
