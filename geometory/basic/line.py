@@ -16,7 +16,8 @@ class Line:
     def __str__(self):
         return f"<Line({self.s.x} {self.s.y} {self.t.x} {self.t.y})>"
 
-    def from_int(self, x1: T, y1: T, x2: T, y2: T) -> "Line":
+    @classmethod
+    def from_int(cls, x1: T, y1: T, x2: T, y2: T) -> "Line":
         return Line(Point(x1, y1), Point(x2, y2))
 
     def is_orthogonal(self, other: "Line") -> bool:

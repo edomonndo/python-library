@@ -3,7 +3,7 @@
 
 from graph.matrix_tree_theorem import MatrixTreeTheorem
 
-n, m, r = map(int, input().split())
+n, m = map(int, input().split())
 g = MatrixTreeTheorem(n, True)
 for _ in range(m):
     u, v = map(int, input().split())

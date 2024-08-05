@@ -51,7 +51,7 @@ class StaticRectangleAddPointGet:
                     bit.add(y2, -w)
                 j += 1
             y = bisect_left(toY, y)
-            res[i] = bit._sum(y + 1)
+            res[i] = bit.sum0(y + 1)
 
         return res
 

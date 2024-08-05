@@ -10,7 +10,8 @@ class Rectangle:
         self.top_left = top_left
         self.bottom_right = bottom_right
 
-    def from_int(self, x1: T, y1: T, x2: T, y2: T) -> "Rectangle":
+    @classmethod
+    def from_int(cls, x1: T, y1: T, x2: T, y2: T) -> "Rectangle":
         return Rectangle(Point(x1, y1), Point(x2, y2))
 
     def __str__(self):
