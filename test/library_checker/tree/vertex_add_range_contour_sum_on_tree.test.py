@@ -28,12 +28,12 @@ def f(arr):
 
 def query1(p, r):
     global ans
-    ans += bit[p]._sum(r)
+    ans += bit[p].sum0(r)
 
 
 def query2(p, r):
     global ans
-    ans -= bit[p]._sum(r)
+    ans -= bit[p]._sum0(r)
 
 
 cq = ContourQuery(g, f)

@@ -72,7 +72,7 @@ class EulerTour:
         """vとその親を繋ぐ辺の重みをwに更新"""
         l, r = self.into[v], self.out[v]
         self.ecost_path_sum.set(l, w)
-        if r < self.ecost_path_sum._n:
+        if r < self.ecost_path_sum.n:
             self.ecost_path_sum.set(r, -w)
         self.ecost_subtree_sum.set(l, w)
 
@@ -81,7 +81,7 @@ class EulerTour:
         l, r = self.into[v], self.out[v]
         cur = self.ecost_path_sum.get(l)
         self.ecost_path_sum.set(l, w + cur)
-        if r < self.ecost_path_sum._n:
+        if r < self.ecost_path_sum.n:
             self.ecost_path_sum.set(r, -(w + cur))
         self.ecost_subtree_sum.set(l, w + self.ecost_subtree_sum.get(l))
 
@@ -89,7 +89,7 @@ class EulerTour:
         """vの重みをwに更新"""
         l, r = self.into[v], self.out[v]
         self.vcost_path_sum.set(l, w)
-        if r < self.vcost_path_sum._n:
+        if r < self.vcost_path_sum.n:
             self.vcost_path_sum.set(r, -w)
         self.vcost_subtree_sum.set(l, w)
 
@@ -98,7 +98,7 @@ class EulerTour:
         l, r = self.into[v], self.out[v]
         cur = self.vcost_path_sum.get(l)
         self.vcost_path_sum.set(l, w + cur)
-        if r < self.vcost_path_sum._n:
+        if r < self.vcost_path_sum.n:
             self.vcost_path_sum.set(r, -(w + cur))
         self.vcost_subtree_sum.set(l, w + self.vcost_subtree_sum.get(l))
 

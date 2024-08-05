@@ -56,7 +56,7 @@ class Line:
         if self.vector.dot(self.t - point) < 0:
             p = point - self.t
             return p.abs()
-        return self.get_distance(point)
+        return self.get_distance_from_point(point)
 
     def get_distance_segment(self, x: T, y: T) -> T:
         return self.get_distance_segment_from_point(Point(x, y))
@@ -66,10 +66,10 @@ class Line:
         if self.intersect(other):
             return 0
         return min(
-            self.get_distance_segment(other.s),
-            self.get_distance_segment(other.t),
-            other.get_distance_segment(self.s),
-            other.get_distance_segment(self.t),
+            self.get_distance_segment_from_point(other.s),
+            self.get_distance_segment_from_point(other.t),
+            other.get_distance_segment_from_point(self.s),
+            other.get_distance_segment_from_point(self.t),
         )
 
     def intersect(self, other: Union["Line", Circle]) -> bool:
@@ -79,7 +79,7 @@ class Line:
                 and other.s.ccw(other.t, self.s) * other.s.ccw(other.t, self.t) <= 0
             )
         if isinstance(other, Circle):
-            return self.get_distance(other.center) <= other.r
+            return self.get_distance_from_point(other.center) <= other.r
         raise TypeError
 
     def get_cross_point(self, other: Union["Line", Circle]) -> Union[Point, int]:
