@@ -1,4 +1,4 @@
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 
 
 class RangeParallelUnionFind:
@@ -9,7 +9,7 @@ class RangeParallelUnionFind:
         while (1 << (num * 2)) < n:
             num += 1
         for i in range(num):
-            self.ufs.append(DSU(max(1, n - (1 << (i * 2)) + 1)))
+            self.ufs.append(UnionFind(max(1, n - (1 << (i * 2)) + 1)))
 
     def enumerate(self, u: int, v: int, d: int) -> list[tuple[int, int]]:
         "enumerate pair of (u, v) corresponds to merge(u + i, v + i) for i in range(d)"

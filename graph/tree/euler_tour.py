@@ -1,4 +1,4 @@
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 
 
 class EulerTour:
@@ -45,13 +45,13 @@ class EulerTour:
                 self.ecost_st.append(0)
                 self.out[v] = len(self.ET)
 
-        self.depth_min = SegTree(
-            lambda u, v: u if self.depth[u] <= self.depth[v] else v, self.N, self.ET
+        self.depth_min = Segtree(
+            self.ET, lambda u, v: u if self.depth[u] <= self.depth[v] else v, self.N
         )
-        self.vcost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.vcost_st)
-        self.ecost_subtree_sum = SegTree(lambda u, v: u + v, 0, self.ecost_st)
-        self.vcost_path_sum = SegTree(lambda u, v: u + v, 0, self.vcost)
-        self.ecost_path_sum = SegTree(lambda u, v: u + v, 0, self.ecost)
+        self.vcost_subtree_sum = Segtree(self.vcost_st, lambda u, v: u + v, 0)
+        self.ecost_subtree_sum = Segtree(self.ecost_st, lambda u, v: u + v, 0)
+        self.vcost_path_sum = Segtree(self.vcost, lambda u, v: u + v, 0)
+        self.ecost_path_sum = Segtree(self.ecost, lambda u, v: u + v, 0)
 
     def lca(self, u, v):
         """uとvの最近共通祖先"""

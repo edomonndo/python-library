@@ -1,5 +1,6 @@
 # verification-helper: IGNORE https://atcoder.jp/contests/abc035/tasks/abc035_c
-from atcoder.lazysegtree import LazySegTree
+
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 
 def mapping(f, x):
@@ -13,7 +14,7 @@ def composition(g, f):
 ID = 0
 
 n, q = map(int, input().split())
-st = LazySegTree(max, -1, mapping, composition, ID, [0] * n)
+st = LazySegtree([0] * n, max, -1, mapping, composition, ID)
 
 for _ in range(q):
     l, r = map(int, input().split())

@@ -1,4 +1,4 @@
-from atcoder.fenwicktree import FenwickTree
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 
 
 from collections import deque

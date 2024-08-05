@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/1/CGL_1_C
 
-from geometory.geometory import Point
+from geometory.basic.point import Point
 
 x1, y1, x2, y2 = map(int, input().split())
 p0 = Point(x1, y1)

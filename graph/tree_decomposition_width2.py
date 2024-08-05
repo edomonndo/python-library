@@ -1,6 +1,6 @@
 from typing import Optional
 from collections import deque
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 import sys
 
 sys.setrecursionlimit(2_000_000)
@@ -67,7 +67,7 @@ class TreeDecompositionWidth2:
         edges = []
         bag = [[] for _ in range(n)]
         link = [[] for _ in range(n)]
-        uf = DSU(n)
+        uf = UnionFind(n)
         for i in range(n):
             if not dq:
                 return None

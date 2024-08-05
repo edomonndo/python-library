@@ -50,14 +50,14 @@ def calc_lis(
 def calc_lis_segtree(
     A: list[int], less_than: bool = True, restore: bool = False
 ) -> int | tuple[int, list[int]]:
-    from atcoder.segtree import SegTree
+    from data_structure.segtree.segment_tree import Segtree
 
     # 座標圧縮 1-indexed
     dic = {e: i for i, e in enumerate(sorted(set(A)), 1)}
     A2 = list(map(dic.__getitem__, A))
 
     n = len(A2)
-    seg = SegTree(max, -1, [0] * (n + 1))
+    seg = Segtree([0] * (n + 1), max, -1)
     if restore:
         prev = [-1] * n
 

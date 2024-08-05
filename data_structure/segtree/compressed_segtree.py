@@ -1,4 +1,4 @@
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 from typing import TypeVar, Callable
 
 T = TypeVar("T")
@@ -10,7 +10,7 @@ class CompressedSegtree:
         self.toIdx = {v: i for i, v in enumerate(sorted(set(V.keys())))}
         toV = list(self.toIdx.keys())
         self.n = len(self.toIdx)
-        self.seg = SegTree(op, e, [V[toV[i]] for i in range(self.n)])
+        self.seg = Segtree([V[toV[i]] for i in range(self.n)], op, e)
 
     def set(self, p: int, x: T) -> None:
         p = self.toIdx[p]

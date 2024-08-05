@@ -2,11 +2,11 @@
 
 
 from data_structure.segtree.monoids.range_min_index import *
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
-seg = SegTree(op, S(), [S(A[i], i + 1) for i in range(n)])
+seg = Segtree([S(A[i], i + 1) for i in range(n)], op, S())
 for _ in range(q):
     t, l, r = map(int, input().split())
     if t == 1:

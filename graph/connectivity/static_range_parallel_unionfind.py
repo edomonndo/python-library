@@ -1,4 +1,4 @@
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 
 
 class StaticRangeParallelUnionFind:
@@ -12,9 +12,9 @@ class StaticRangeParallelUnionFind:
             return
         self.qs[min(d, self.n)].append((x, y))
 
-    def build(self) -> DSU:
+    def build(self) -> UnionFind:
         n = self.n
-        uf = DSU(n)
+        uf = UnionFind(n)
         q = []
         for d in reversed(range(1, n + 1)):
             q += self.qs[d]

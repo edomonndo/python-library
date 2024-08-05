@@ -1,5 +1,6 @@
 # verification-helper: PROBLEM https://atcoder.jp/contests/abc341/tasks/abc341_e
-from atcoder.lazysegtree import LazySegTree
+
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 
 def op(x, y):
@@ -32,8 +33,8 @@ def composition(g: int, f: int):
 
 n, q = map(int, input().split())
 S = [int(x) for x in input()]
-g = LazySegTree(
-    op, -1, mapping, composition, 0, [1 << 2 | 1 << 1 | 1 if s else 1 << 2 for s in S]
+g = LazySegtree(
+    [1 << 2 | 1 << 1 | 1 if s else 1 << 2 for s in S], op, -1, mapping, composition, 0
 )
 for _ in range(q):
     t, l, r = map(int, input().split())

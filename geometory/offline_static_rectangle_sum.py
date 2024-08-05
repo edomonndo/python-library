@@ -1,5 +1,5 @@
 from bisect import bisect_left
-from atcoder.fenwicktree import FenwickTree
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 
 
 def solve(

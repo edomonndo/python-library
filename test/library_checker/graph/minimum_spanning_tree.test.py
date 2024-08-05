@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/minimum_spanning_tree
 
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 
 n, m = map(int, input().split())
 edges = []
@@ -9,7 +9,7 @@ for i in range(m):
     edges.append((u, v, w, i))
 
 edges.sort(key=lambda x: x[2])
-uf = DSU(n)
+uf = UnionFind(n)
 
 X = 0
 es = []

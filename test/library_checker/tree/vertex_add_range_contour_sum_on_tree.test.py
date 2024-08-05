@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_range_contour_sum_on_tree
 
 
-from atcoder.fenwicktree import FenwickTree
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from graph.tree.contour_query import ContourQuery
 
 

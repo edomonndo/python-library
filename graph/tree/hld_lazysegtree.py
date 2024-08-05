@@ -1,4 +1,4 @@
-from atcoder.lazysegtree import LazySegTree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from typing import Callable, TypeVar
 
@@ -22,8 +22,8 @@ class HldLazySegTree:
         # assert n == len(v)
         self.hld = HeavyLightDecomposition(n, edges, root)
         nv = self.hld.build_list(v)
-        self.seg = LazySegTree(op, e, mapping, composition, id_, nv)
-        self.rseg = LazySegTree(op, e, mapping, composition, id_, nv[::-1])
+        self.seg = LazySegtree(nv, op, e, mapping, composition, id_)
+        self.rseg = LazySegtree(nv[::-1], op, e, mapping, composition, id_)
         self.op = op
         self.e = e
         self.mapping = mapping

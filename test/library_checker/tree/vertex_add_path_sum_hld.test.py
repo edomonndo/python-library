@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum
 
-from atcoder.fenwicktree import FenwickTree
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 

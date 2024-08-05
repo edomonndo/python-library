@@ -1,5 +1,5 @@
 from typing import TypeVar, Callable
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 from data_structure.basic.wordsize_tree_set import WordsizeTreeSet
 
 T = TypeVar("T")
@@ -18,7 +18,7 @@ class RangeSetRangeComposite:
         self.e = e
         self.pow = pow_
         self.id = id_
-        self.seg = SegTree(op, e, A + [e])
+        self.seg = Segtree(A + [e], op, e)
         self.n = len(A) + 1
         self.idx = WordsizeTreeSet(self.n + 1, range(self.n + 1))
         self.val = A + [e]

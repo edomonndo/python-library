@@ -1,14 +1,11 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/bipartitematching
 
-from graph.bipartite_matching import BipartiteMatching
+from graph.bipartite_matching import bipartite_matching
 
 
-L, R, K = map(int, input().split())
-bm = BipartiteMatching(L, R)
-for _ in range(K):
-    a, b = map(int, input().split())
-    bm.add_edge(a, b)
-res = bm.solve()
-print(len(res))
-for a, b in res:
-    print(a, b)
+L, R, m = map(int, input().split())
+edges = [tuple(map(int, input().split())) for _ in range(m)]
+ans = bipartite_matching(L, R, edges)
+print(len(ans))
+for u, v in ans:
+    print(u, v)

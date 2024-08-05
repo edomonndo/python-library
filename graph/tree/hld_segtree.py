@@ -1,4 +1,4 @@
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from typing import Callable, TypeVar
 
@@ -18,7 +18,7 @@ class HldSegTree:
         # assert n == len(v)
         self.hld = HeavyLightDecomposition(n, edges, root)
         nv = self.hld.build_list(v)
-        self.seg = SegTree(op, e, nv)
+        self.seg = Segtree(nv, op, e)
         self.op = op
         self.e = e
 

@@ -1,18 +1,19 @@
 # verification-helper: IGNORE https://atcoder.jp/contests/abc357/tasks/abc357_f
 
 from data_structure.segtree.monoids_action.range_add_range_product_sum import *
-from atcoder.lazysegtree import LazySegTree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
+
 
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
-seg = LazySegTree(
+seg = LazySegtree(
+    [S(a, b, a * b, 1) for a, b in zip(A, B)],
     op,
     S(0, 0, 0, 0),
     mapping,
     composition,
     F(0, 0),
-    [S(a, b, a * b, 1) for a, b in zip(A, B)],
 )
 for _ in range(q):
     t, *qu = map(int, input().split())

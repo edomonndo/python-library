@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/manhattanmst
 
 from geometory.manhattan_mst import ManhattanMST
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 
 n = int(input())
 ps = [tuple(map(int, input().split())) for _ in range(n)]
@@ -11,7 +11,7 @@ for x, y in ps:
     mt.add_point(x, y)
 mt.solve()
 
-uf = DSU(n)
+uf = UnionFind(n)
 tot = 0
 ans = []
 for w, x, y in mt.edges:

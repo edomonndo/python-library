@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite
 
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 MOD = 998244353
@@ -44,8 +44,8 @@ P = [None] * n
 for h, a, b in zip(H.into, A, B):
     P[h] = (a << 32) + b
 
-seg1 = SegTree(op1, 1 << 32, P)
-seg2 = SegTree(op2, 1 << 32, P)
+seg1 = Segtree(P, op1, 1 << 32)
+seg2 = Segtree(P, op2, 1 << 32)
 
 for _ in range(q):
     t, a, b, c = map(int, input().split())

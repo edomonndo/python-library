@@ -1,4 +1,4 @@
-from atcoder.lazysegtree import LazySegTree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 mask = (1 << 31) - 1
 
@@ -46,7 +46,7 @@ def union_area(rectangles: list[tuple[int, int, int, int]]):
         R[y2].append((x1, x2))
 
     v = [(X[i + 1] - X[i]) for i in range(len(X) - 1)]
-    lst = LazySegTree(op, 1 << 61, mapping, composition, 0, v)
+    lst = LazySegtree(v, op, 1 << 61, mapping, composition, 0)
     s = X[-1] - X[0]
     res = 0
     for i in range(len(Y) - 1):

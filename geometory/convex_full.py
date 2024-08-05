@@ -1,29 +1,30 @@
-def convex_hull(xy, multi=False):
-    xy.sort(key=lambda x: (x[1], x[0]))
+def convex_hull(xy: list[tuple[int, int]]):
+    bs = 31
+    msk = (1 << bs) - 1
+    offset = 1_000_000_000
+
+    ps = list(set(x + offset << bs | y + offset for x, y in xy))
+    if len(ps) <= 2:
+        return [((p >> bs) - offset, (p & msk) - offset) for p in ps]
+
+    ps.sort()
     res = []
 
-    def cross3(a, b, c):
-        return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+    def cross3(a: tuple[int, int], b: tuple[int, int], c: tuple[int, int]) -> int:
+        ax, ay = a >> bs, a & msk
+        bx, by = b >> bs, b & msk
+        cx, cy = c >> bs, c & msk
+        return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax)
 
-    if multi:
-
-        def f(a, b, c):
-            return cross3(a, b, c) > 0
-
-    else:
-
-        def f(a, b, c):
-            return cross3(a, b, c) >= 0
-
-    for p in xy:
-        while len(res) > 1 and f(res[-1], res[-2], p):
+    for p in ps:
+        while len(res) > 1 and cross3(res[-1], res[-2], p) >= 0:
             res.pop()
         res.append(p)
 
-    le = len(res)
-    for p in xy[::-1][1:]:
-        while len(res) > le and f(res[-1], res[-2], p):
+    sz = len(res)
+    for p in ps[::-1][1:]:
+        while len(res) > sz and cross3(res[-1], res[-2], p) >= 0:
             res.pop()
         res.append(p)
     res.pop()
-    return res
+    return [((p >> bs) - offset, (p & msk) - offset) for p in res]

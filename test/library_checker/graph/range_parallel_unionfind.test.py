@@ -1,7 +1,6 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/range_parallel_unionfind
 
-
-from atcoder.dsu import DSU
+from graph.connectivity.unionfind import UnionFind
 from graph.connectivity.range_parallel_unionfind import RangeParallelUnionFind
 
 MOD = 998244353
@@ -9,7 +8,7 @@ MOD = 998244353
 n, q = map(int, input().split())
 X = [int(x) for x in input().split()]
 rpuf = RangeParallelUnionFind(n)
-uf = DSU(n)
+uf = UnionFind(n)
 ans = 0
 for i in range(q):
     k, a, b = map(int, input().split())

@@ -1,4 +1,4 @@
-from atcoder.lazysegtree import LazySegTree
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 inf = 1 << 30
 
@@ -31,8 +31,8 @@ class PermutationTree:
         self.n = n = len(P)
         self.nodes = [self.Node(i, i + 1, P[i], P[i] + 1, 0, -1) for i in range(n)]
         # 区間加算・区間最小値
-        self.seg = LazySegTree(
-            min, inf, lambda f, x: f + x, lambda f, g: f + g, 0, [0] * n
+        self.seg = LazySegtree(
+            [0] * n, min, inf, lambda f, x: f + x, lambda f, g: f + g, 0
         )
         self._build(P)
 

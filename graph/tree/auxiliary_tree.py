@@ -1,4 +1,4 @@
-from atcoder.segtree import SegTree
+from data_structure.segtree.segment_tree import Segtree
 
 
 class AuxiliaryTree:
@@ -9,7 +9,7 @@ class AuxiliaryTree:
         def op(u, v):
             return u if self.depth[u] <= self.depth[v] else v
 
-        self.depth_min = SegTree(op, self.n, self.ET)
+        self.depth_min = Segtree(self.ET, op, self.n)
 
     @staticmethod
     def _euler_tour(adj: list[list[int]], root: int = 0):
