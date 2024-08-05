@@ -26,7 +26,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/area_of_union_of_rectangles.test.py
   requiredBy: []
-  timestamp: '2024-05-01 09:39:03+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/area_of_union_of_rectangles.test.py

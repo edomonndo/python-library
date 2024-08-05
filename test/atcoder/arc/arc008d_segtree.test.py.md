@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/arc/arc008d_segtree.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:00:04+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/arc/arc008d_segtree.test.py

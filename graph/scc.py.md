@@ -49,8 +49,8 @@ data:
   timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/scc.test.py
   - test/aoj/grl/grl_3_c_strongly_connected_components.test.py
+  - test/library_checker/graph/scc.test.py
 documentation_of: graph/scc.py
 layout: document
 title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"

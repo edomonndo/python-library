@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: atcoder/lazysegtree.py
-    title: atcoder/lazysegtree.py
+    path: data_structure/segtree/lazy_segment_tree.py
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
@@ -22,20 +22,21 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc357/tasks/abc357_f\n\
     \nfrom data_structure.segtree.monoids_action.range_add_range_product_sum import\
-    \ *\nfrom atcoder.lazysegtree import LazySegTree\n\nn, q = map(int, input().split())\n\
-    A = [int(x) for x in input().split()]\nB = [int(x) for x in input().split()]\n\
-    seg = LazySegTree(\n    op,\n    S(0, 0, 0, 0),\n    mapping,\n    composition,\n\
-    \    F(0, 0),\n    [S(a, b, a * b, 1) for a, b in zip(A, B)],\n)\nfor _ in range(q):\n\
-    \    t, *qu = map(int, input().split())\n    if t == 3:\n        l, r = qu\n \
-    \       print(seg.prod(l - 1, r).ab)\n    else:\n        l, r, x = qu\n      \
-    \  f = F(x, 0) if t == 1 else F(0, x)\n        seg.apply(l - 1, r, f)\n"
+    \ *\nfrom data_structure.segtree.lazy_segment_tree import LazySegtree\n\n\nn,\
+    \ q = map(int, input().split())\nA = [int(x) for x in input().split()]\nB = [int(x)\
+    \ for x in input().split()]\nseg = LazySegtree(\n    [S(a, b, a * b, 1) for a,\
+    \ b in zip(A, B)],\n    op,\n    S(0, 0, 0, 0),\n    mapping,\n    composition,\n\
+    \    F(0, 0),\n)\nfor _ in range(q):\n    t, *qu = map(int, input().split())\n\
+    \    if t == 3:\n        l, r = qu\n        print(seg.prod(l - 1, r).ab)\n   \
+    \ else:\n        l, r, x = qu\n        f = F(x, 0) if t == 1 else F(0, x)\n  \
+    \      seg.apply(l - 1, r, f)\n"
   dependsOn:
   - data_structure/segtree/monoids_action/range_add_range_product_sum.py
-  - atcoder/lazysegtree.py
+  - data_structure/segtree/lazy_segment_tree.py
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc357f.test.py
   requiredBy: []
-  timestamp: '2024-07-02 08:45:17+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc357f.test.py

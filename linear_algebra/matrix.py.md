@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':question:'
+    path: graph/matrix_tree_theorem.py
+    title: "\u884C\u5217\u6728\u5B9A\u7406"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/linear_equations.test.py
@@ -131,16 +134,17 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: linear_algebra/matrix.py
-  requiredBy: []
+  requiredBy:
+  - graph/matrix_tree_theorem.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/linear_algebra/matrix_rank.test.py
   - test/library_checker/linear_algebra/matrix_power.test.py
-  - test/library_checker/linear_algebra/linear_equations.test.py
   - test/library_checker/linear_algebra/matrix_product.test.py
+  - test/library_checker/linear_algebra/matrix_rank.test.py
   - test/library_checker/linear_algebra/matrix_determinant.test.py
   - test/library_checker/linear_algebra/matrix_inverse.test.py
+  - test/library_checker/linear_algebra/linear_equations.test.py
 documentation_of: linear_algebra/matrix.py
 layout: document
 title: "\u884C\u5217"

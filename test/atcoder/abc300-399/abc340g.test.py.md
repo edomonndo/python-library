@@ -40,7 +40,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/abc300-399/abc340g.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc340g.test.py

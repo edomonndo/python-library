@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/tree_decomposition_width2.py
     title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/tree_decomposition_width_2
     links:
@@ -30,8 +30,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/tree_decomposition_width2.test.py
   requiredBy: []
-  timestamp: '2024-07-22 10:37:07+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/tree_decomposition_width2.test.py
 layout: document

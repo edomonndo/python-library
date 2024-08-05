@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/range_set_range_composite.test.py
   requiredBy: []
-  timestamp: '2024-06-04 16:16:37+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/range_set_range_composite.test.py

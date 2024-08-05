@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/segtree.py
-    title: atcoder/segtree.py
+  - icon: ':question:'
+    path: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -31,10 +31,10 @@ data:
     \ = [0] * size\n    j = size - 1\n    for i in reversed(range(n)):\n        if\
     \ prev[i] == j:\n            res[j] = i\n            j -= 1\n    return size,\
     \ res\n\n\ndef calc_lis_segtree(\n    A: list[int], less_than: bool = True, restore:\
-    \ bool = False\n) -> int | tuple[int, list[int]]:\n    from atcoder.segtree import\
-    \ SegTree\n\n    # \u5EA7\u6A19\u5727\u7E2E 1-indexed\n    dic = {e: i for i,\
-    \ e in enumerate(sorted(set(A)), 1)}\n    A2 = list(map(dic.__getitem__, A))\n\
-    \n    n = len(A2)\n    seg = SegTree(max, -1, [0] * (n + 1))\n    if restore:\n\
+    \ bool = False\n) -> int | tuple[int, list[int]]:\n    from data_structure.segtree.segment_tree\
+    \ import Segtree\n\n    # \u5EA7\u6A19\u5727\u7E2E 1-indexed\n    dic = {e: i\
+    \ for i, e in enumerate(sorted(set(A)), 1)}\n    A2 = list(map(dic.__getitem__,\
+    \ A))\n\n    n = len(A2)\n    seg = Segtree([0] * (n + 1), max, -1)\n    if restore:\n\
     \        prev = [-1] * n\n\n    size = 0\n    for i, a in enumerate(A2):\n   \
     \     j = seg.prod(0, a) if less_than else seg.prod(0, a + 1)\n        if restore:\n\
     \            prev[i] = j\n        if seg.get(a) < j + 1:\n            seg.set(a,\
@@ -43,11 +43,11 @@ data:
     \        if prev[i] == j:\n            res[j] = i\n            j -= 1\n    return\
     \ size, res\n"
   dependsOn:
-  - atcoder/segtree.py
+  - data_structure/segtree/segment_tree.py
   isVerificationFile: false
   path: dynamic_programming/longest_increase_subsequence.py
   requiredBy: []
-  timestamp: '2024-06-04 17:27:40+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: dynamic_programming/longest_increase_subsequence.py

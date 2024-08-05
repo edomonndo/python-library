@@ -1,7 +1,30 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: data_structure/segtree/compressed_segtree.py
+    title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+  - icon: ':heavy_check_mark:'
+    path: data_structure/segtree/range_set_range_composite.py
+    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+  - icon: ':warning:'
+    path: dynamic_programming/longest_increase_subsequence.py
+    title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/auxiliary_tree.py
+    title: Auxiliary tree
+  - icon: ':question:'
+    path: graph/tree/euler_tour.py
+    title: Euler tour
+  - icon: ':question:'
+    path: graph/tree/hld_segtree.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
+      \u30A8\u30EA\uFF09"
+  - icon: ':x:'
+    path: graph/tree/hld_segtree_noncommutative.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
+      \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_a_range_min_query.test.py
@@ -12,9 +35,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/static_rmq_segtree.test.py
     title: Static RMQ (Segment Tree)
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/tree/vertext_set_path_composite.test.py
+    title: Vertex Set Path Composite
+  - icon: ':x:'
+    path: test/yukicoder/875_range_mindex_query.test.py
+    title: No.875 Range Mindex Query
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -77,13 +106,22 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/segtree/segment_tree.py
-  requiredBy: []
+  requiredBy:
+  - dynamic_programming/longest_increase_subsequence.py
+  - data_structure/segtree/compressed_segtree.py
+  - data_structure/segtree/range_set_range_composite.py
+  - graph/tree/hld_segtree_noncommutative.py
+  - graph/tree/auxiliary_tree.py
+  - graph/tree/euler_tour.py
+  - graph/tree/hld_segtree.py
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/yukicoder/875_range_mindex_query.test.py
+  - test/aoj/dsl/dsl_2_a_range_min_query.test.py
   - test/library_checker/data_structure/static_rmq_segtree.test.py
   - test/library_checker/data_structure/point_set_range_composite.test.py
-  - test/aoj/dsl/dsl_2_a_range_min_query.test.py
+  - test/library_checker/tree/vertext_set_path_composite.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"

@@ -39,8 +39,8 @@ data:
   timestamp: '2024-06-04 09:09:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/shortest_path.test.py
   - test/aoj/grl/grl_1_a_dijkstra.test.py
+  - test/library_checker/graph/shortest_path.test.py
 documentation_of: graph/dijkstra.py
 layout: document
 title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"

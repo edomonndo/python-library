@@ -1,7 +1,16 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: geometory/union_area_rectangle.py
+    title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
+  - icon: ':warning:'
+    path: graph/tree/hld_lazysegtree.py
+    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
+  - icon: ':warning:'
+    path: graph/tree/permutation_tree.py
+    title: "\u9806\u5217\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
@@ -15,6 +24,18 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
     title: DSL2I RSQ and RUQ
+  - icon: ':grey_question:'
+    path: test/atcoder/abc001-99/abc035c.test.py
+    title: "C - \u30AA\u30BB\u30ED"
+  - icon: ':heavy_check_mark:'
+    path: test/atcoder/abc300-399/abc341e.test.py
+    title: E - Alternating String
+  - icon: ':grey_question:'
+    path: test/atcoder/abc300-399/abc357f.test.py
+    title: F - Two Sequence Queries
+  - icon: ':grey_question:'
+    path: test/atcoder/other/able.test.py
+    title: E - Replace Digits
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
     title: Range Affine Range Sum
@@ -97,15 +118,22 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/segtree/lazy_segment_tree.py
-  requiredBy: []
+  requiredBy:
+  - graph/tree/permutation_tree.py
+  - graph/tree/hld_lazysegtree.py
+  - geometory/union_area_rectangle.py
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/range_affine_range_sum.test.py
-  - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
-  - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
   - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
+  - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
+  - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
+  - test/atcoder/abc300-399/abc341e.test.py
+  - test/atcoder/abc300-399/abc357f.test.py
+  - test/atcoder/other/able.test.py
+  - test/atcoder/abc001-99/abc035c.test.py
+  - test/library_checker/data_structure/range_affine_range_sum.test.py
 documentation_of: data_structure/segtree/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"

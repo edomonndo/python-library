@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: atcoder/lazysegtree.py
-    title: atcoder/lazysegtree.py
+    path: data_structure/segtree/lazy_segment_tree.py
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -15,26 +15,26 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from atcoder.lazysegtree import LazySegTree\n\ninf = 1 << 30\n\n\nclass PermutationTree:\n\
-    \n    class Node:\n        def __init__(\n            self,\n            l: int\
-    \ = inf,\n            r: int = -1,\n            mn: int = inf,\n            mx:\
-    \ int = -1,\n            t: int = 0,\n            par: int = -1,\n        ):\n\
-    \            self.l = l\n            self.r = r\n            self.mn = mn\n  \
-    \          self.mx = mx\n            self.type = t  # 0: prime, 1: asc, -1: desc\n\
-    \            self.par = par\n\n        def __str__(self):\n            return\
-    \ f\"Node<l={self.l}, r={self.r}>, p={self.par}>\"\n\n        __repr__ = __str__\n\
-    \n    def __init__(self, P: list[int]):\n        self.n = n = len(P)\n       \
-    \ self.nodes = [self.Node(i, i + 1, P[i], P[i] + 1, 0, -1) for i in range(n)]\n\
-    \        # \u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u6700\u5C0F\u5024\n    \
-    \    self.seg = LazySegTree(\n            min, inf, lambda f, x: f + x, lambda\
-    \ f, g: f + g, 0, [0] * n\n        )\n        self._build(P)\n\n    def _add_child(self,\
-    \ v: int, p: int) -> None:\n        cur, par = self.nodes[v], self.nodes[p]\n\
-    \        cur.par = p\n        if par.l > cur.l:\n            par.l = cur.l\n \
-    \       if par.r < cur.r:\n            par.r = cur.r\n        if par.mn > cur.mn:\n\
-    \            par.mn = cur.mn\n        if par.mx < cur.mx:\n            par.mx\
-    \ = cur.mx\n        return\n\n    def _build(self, P: list[int]) -> None:\n  \
-    \      seg, nodes, add_child = self.seg, self.nodes, self._add_child\n       \
-    \ mxs = [-1]\n        mns = [-1]\n        st = []\n        for i in range(self.n):\n\
+  code: "from data_structure.segtree.lazy_segment_tree import LazySegtree\n\ninf =\
+    \ 1 << 30\n\n\nclass PermutationTree:\n\n    class Node:\n        def __init__(\n\
+    \            self,\n            l: int = inf,\n            r: int = -1,\n    \
+    \        mn: int = inf,\n            mx: int = -1,\n            t: int = 0,\n\
+    \            par: int = -1,\n        ):\n            self.l = l\n            self.r\
+    \ = r\n            self.mn = mn\n            self.mx = mx\n            self.type\
+    \ = t  # 0: prime, 1: asc, -1: desc\n            self.par = par\n\n        def\
+    \ __str__(self):\n            return f\"Node<l={self.l}, r={self.r}>, p={self.par}>\"\
+    \n\n        __repr__ = __str__\n\n    def __init__(self, P: list[int]):\n    \
+    \    self.n = n = len(P)\n        self.nodes = [self.Node(i, i + 1, P[i], P[i]\
+    \ + 1, 0, -1) for i in range(n)]\n        # \u533A\u9593\u52A0\u7B97\u30FB\u533A\
+    \u9593\u6700\u5C0F\u5024\n        self.seg = LazySegtree(\n            [0] * n,\
+    \ min, inf, lambda f, x: f + x, lambda f, g: f + g, 0\n        )\n        self._build(P)\n\
+    \n    def _add_child(self, v: int, p: int) -> None:\n        cur, par = self.nodes[v],\
+    \ self.nodes[p]\n        cur.par = p\n        if par.l > cur.l:\n            par.l\
+    \ = cur.l\n        if par.r < cur.r:\n            par.r = cur.r\n        if par.mn\
+    \ > cur.mn:\n            par.mn = cur.mn\n        if par.mx < cur.mx:\n      \
+    \      par.mx = cur.mx\n        return\n\n    def _build(self, P: list[int]) ->\
+    \ None:\n        seg, nodes, add_child = self.seg, self.nodes, self._add_child\n\
+    \        mxs = [-1]\n        mns = [-1]\n        st = []\n        for i in range(self.n):\n\
     \            while mxs[-1] != -1 and P[mxs[-1]] < P[i]:\n                mx =\
     \ mxs.pop()\n                seg.apply(mxs[len(mxs) - 1] + 1, mx + 1, P[i] - P[mx])\n\
     \            while mns[-1] != -1 and P[mns[-1]] > P[i]:\n                mn =\
@@ -74,11 +74,11 @@ data:
     \        pt.right(i) - 1,\n        \"linear\" if pt.is_lineaer(i) else \"prime\"\
     ,\n    )\n"
   dependsOn:
-  - atcoder/lazysegtree.py
+  - data_structure/segtree/lazy_segment_tree.py
   isVerificationFile: false
   path: graph/tree/permutation_tree.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/tree/permutation_tree.py

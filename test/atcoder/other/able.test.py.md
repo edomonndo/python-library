@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: atcoder/lazysegtree.py
-    title: atcoder/lazysegtree.py
+    path: data_structure/segtree/lazy_segment_tree.py
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
     title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
@@ -22,17 +22,17 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/abl/tasks/abl_e\n\
     \nfrom data_structure.segtree.monoids_action.range_str_update_range_int_sum import\
-    \ *\nfrom atcoder.lazysegtree import LazySegTree\n\nn, q = map(int, input().split())\n\
-    seg = LazySegTree(op, S(), mapping, composition, F(), [S(1, 1) for _ in range(n)])\n\
-    \nfor _ in range(q):\n    l, r, d = map(int, input().split())\n    seg.apply(l\
-    \ - 1, r, F(d))\n    print(seg.all_prod().value)\n"
+    \ *\nfrom data_structure.segtree.lazy_segment_tree import LazySegtree\n\n\nn,\
+    \ q = map(int, input().split())\nseg = LazySegtree([S(1, 1) for _ in range(n)],\
+    \ op, S(), mapping, composition, F())\n\nfor _ in range(q):\n    l, r, d = map(int,\
+    \ input().split())\n    seg.apply(l - 1, r, F(d))\n    print(seg.all_prod().value)\n"
   dependsOn:
   - data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
-  - atcoder/lazysegtree.py
+  - data_structure/segtree/lazy_segment_tree.py
   isVerificationFile: true
   path: test/atcoder/other/able.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:49:22+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/other/able.test.py

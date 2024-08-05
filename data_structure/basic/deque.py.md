@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: str/palindromic_tree_deque.py
+    title: str/palindromic_tree_deque.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -43,7 +46,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: data_structure/basic/deque.py
-  requiredBy: []
+  requiredBy:
+  - str/palindromic_tree_deque.py
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

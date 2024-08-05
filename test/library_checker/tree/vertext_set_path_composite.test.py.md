@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/segtree.py
-    title: atcoder/segtree.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_set_path_composite
     links:
@@ -21,7 +21,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_set_path_composite\n\
-    \nfrom atcoder.segtree import SegTree\nfrom graph.tree.heavy_light_decomposition\
+    \nfrom data_structure.segtree.segment_tree import Segtree\nfrom graph.tree.heavy_light_decomposition\
     \ import HeavyLightDecomposition\n\nMOD = 998244353\nmsk = (1 << 32) - 1\n\n\n\
     def op1(x, y):\n    x1, x2 = x >> 32, x & msk\n    y1, y2 = y >> 32, y & msk\n\
     \    z1 = x1 * y1 % MOD\n    z2 = (x2 * y1 % MOD + y2) % MOD\n    return (z1 <<\
@@ -33,19 +33,19 @@ data:
     \ map(int, input().split())\nA = [0] * n\nB = [0] * n\nfor i in range(n):\n  \
     \  A[i], B[i] = map(int, input().split())\nedges = [tuple(map(int, input().split()))\
     \ for _ in range(n - 1)]\nH = HeavyLightDecomposition(n, edges, 0)\nP = [None]\
-    \ * n\nfor h, a, b in zip(H.into, A, B):\n    P[h] = (a << 32) + b\n\nseg1 = SegTree(op1,\
-    \ 1 << 32, P)\nseg2 = SegTree(op2, 1 << 32, P)\n\nfor _ in range(q):\n    t, a,\
-    \ b, c = map(int, input().split())\n    if t == 0:\n        p = H.into[a]\n  \
-    \      seg1.set(p, (b << 32) + c)\n        seg2.set(p, (b << 32) + c)\n    else:\n\
+    \ * n\nfor h, a, b in zip(H.into, A, B):\n    P[h] = (a << 32) + b\n\nseg1 = Segtree(P,\
+    \ op1, 1 << 32)\nseg2 = Segtree(P, op2, 1 << 32)\n\nfor _ in range(q):\n    t,\
+    \ a, b, c = map(int, input().split())\n    if t == 0:\n        p = H.into[a]\n\
+    \        seg1.set(p, (b << 32) + c)\n        seg2.set(p, (b << 32) + c)\n    else:\n\
     \        ans = c\n        H.path_noncommutative_query(a, b, f)\n        print(ans)\n"
   dependsOn:
-  - atcoder/segtree.py
+  - data_structure/segtree/segment_tree.py
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite.test.py
 layout: document

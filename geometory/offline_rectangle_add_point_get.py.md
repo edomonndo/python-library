@@ -1,25 +1,25 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/fenwicktree.py
-    title: atcoder/fenwicktree.py
+  - icon: ':question:'
+    path: data_structure/fenwick_tree/fenwick_tree.py
+    title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/data_structure/rectangle_add_point_get.test.py
     title: Range Add Point Get
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from atcoder.fenwicktree import FenwickTree\n\n\nfrom collections import\
-    \ deque\nfrom bisect import bisect_left\n\n\nclass StaticRectangleAddPointGet:\n\
+  code: "from data_structure.fenwick_tree.fenwick_tree import FenwickTree\n\n\nfrom\
+    \ collections import deque\nfrom bisect import bisect_left\n\n\nclass StaticRectangleAddPointGet:\n\
     \    def __init__(self):\n        self.rects = []\n        self.qs = []\n\n  \
     \  def add_rect(self, x1: int, y1: int, x2: int, y2: int, w: int) -> None:\n \
     \       if x1 == x2 or y1 == y2:\n            return\n        assert x1 <= x2\
@@ -59,12 +59,12 @@ data:
     \ += 1\n            if l + 1 < m:\n                st.append((l, m))\n       \
     \     if m + 1 < r:\n                st.append((m, r))\n        return res\n"
   dependsOn:
-  - atcoder/fenwicktree.py
+  - data_structure/fenwick_tree/fenwick_tree.py
   isVerificationFile: false
   path: geometory/offline_rectangle_add_point_get.py
   requiredBy: []
-  timestamp: '2024-06-04 17:56:08+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/data_structure/rectangle_add_point_get.test.py
 documentation_of: geometory/offline_rectangle_add_point_get.py

@@ -112,8 +112,8 @@ data:
   timestamp: '2024-06-07 10:09:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
   - test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+  - test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
 documentation_of: data_structure/binary_search_tree/implicit_treap.py
 layout: document
 title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"

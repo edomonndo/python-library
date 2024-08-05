@@ -1,9 +1,9 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/segtree.py
-    title: atcoder/segtree.py
+  - icon: ':question:'
+    path: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -18,11 +18,11 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from atcoder.segtree import SegTree\n\n\nclass AuxiliaryTree:\n    def __init__(self,\
-    \ adj: list[list[int]], root=0):\n        self.n = len(adj)\n        self.ET,\
-    \ self.into, self.out, self.depth = self._euler_tour(adj, root)\n\n        def\
-    \ op(u, v):\n            return u if self.depth[u] <= self.depth[v] else v\n\n\
-    \        self.depth_min = SegTree(op, self.n, self.ET)\n\n    @staticmethod\n\
+  code: "from data_structure.segtree.segment_tree import Segtree\n\n\nclass AuxiliaryTree:\n\
+    \    def __init__(self, adj: list[list[int]], root=0):\n        self.n = len(adj)\n\
+    \        self.ET, self.into, self.out, self.depth = self._euler_tour(adj, root)\n\
+    \n        def op(u, v):\n            return u if self.depth[u] <= self.depth[v]\
+    \ else v\n\n        self.depth_min = Segtree(self.ET, op, self.n)\n\n    @staticmethod\n\
     \    def _euler_tour(adj: list[list[int]], root: int = 0):\n        n = len(adj)\n\
     \        ET = []\n        into = [0] * n\n        out = [0] * n\n        depth\
     \ = [n] * (n + 1)\n\n        # Euler Tour\n        stack = [(root, -1)]\n    \
@@ -48,11 +48,11 @@ data:
     \            res[v] = []\n            stack.append(v)\n            p = v\n   \
     \     return root, res\n"
   dependsOn:
-  - atcoder/segtree.py
+  - data_structure/segtree/segment_tree.py
   isVerificationFile: false
   path: graph/tree/auxiliary_tree.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/abc300-399/abc340g.test.py

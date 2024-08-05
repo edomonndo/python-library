@@ -3,6 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
+    path: data_structure/fenwick_tree/point_set_range_frequency.py
+    title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
+      \u30A4\u30F3\uFF09"
+  - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_point_get.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
@@ -12,9 +16,20 @@ data:
     path: data_structure/fenwick_tree/value_range_sum.py
     title: ValueRangeSum
   - icon: ':heavy_check_mark:'
+    path: geometory/offline_point_add_rectangle_sum.py
+    title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
+      \u30F3)"
+  - icon: ':x:'
+    path: geometory/offline_rectangle_add_point_get.py
+    title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
+      \u30A4\u30F3)"
+  - icon: ':heavy_check_mark:'
     path: geometory/offline_rectangle_add_rectangle_sum.py
     title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
       \u30E9\u30A4\u30F3)"
+  - icon: ':heavy_check_mark:'
+    path: geometory/offline_static_rectangle_sum.py
+    title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
@@ -22,9 +37,18 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
+    title: Vertex Add Path Sum (HLD)
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
+    title: Vertex Add Range Contour Sum on Tree
+  - icon: ':x:'
+    path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
+    title: Vertex Add Subtree Sum (HLD)
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -56,15 +80,22 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
-  - geometory/offline_rectangle_add_rectangle_sum.py
-  - data_structure/fenwick_tree/range_add_range_sum.py
-  - data_structure/fenwick_tree/range_add_point_get.py
+  - data_structure/fenwick_tree/point_set_range_frequency.py
   - data_structure/fenwick_tree/value_range_sum.py
+  - data_structure/fenwick_tree/range_add_point_get.py
+  - data_structure/fenwick_tree/range_add_range_sum.py
+  - geometory/offline_point_add_rectangle_sum.py
+  - geometory/offline_rectangle_add_point_get.py
+  - geometory/offline_rectangle_add_rectangle_sum.py
+  - geometory/offline_static_rectangle_sum.py
   timestamp: '2024-06-12 17:23:04+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
   - test/aoj/dsl/dsl_2_b_range_sum_query.test.py
+  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+  - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
+  - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
+  - test/library_checker/tree/vertex_add_path_sum_hld.test.py
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
 title: "\u62BD\u8C61\u5316Fenwick Tree"

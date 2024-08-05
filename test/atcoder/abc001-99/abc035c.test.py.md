@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: atcoder/lazysegtree.py
-    title: atcoder/lazysegtree.py
+    path: data_structure/segtree/lazy_segment_tree.py
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,18 +18,18 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: IGNORE https://atcoder.jp/contests/abc035/tasks/abc035_c\n\
-    from atcoder.lazysegtree import LazySegTree\n\n\ndef mapping(f, x):\n    return\
-    \ not x if f else x\n\n\ndef composition(g, f):\n    return g ^ f\n\n\nID = 0\n\
-    \nn, q = map(int, input().split())\nst = LazySegTree(max, -1, mapping, composition,\
-    \ ID, [0] * n)\n\nfor _ in range(q):\n    l, r = map(int, input().split())\n \
-    \   st.apply(l - 1, r, 1)\n\nprint(\"\".join(\"1\" if st.get(i) else \"0\" for\
-    \ i in range(n)))\n"
+    \nfrom data_structure.segtree.lazy_segment_tree import LazySegtree\n\n\ndef mapping(f,\
+    \ x):\n    return not x if f else x\n\n\ndef composition(g, f):\n    return g\
+    \ ^ f\n\n\nID = 0\n\nn, q = map(int, input().split())\nst = LazySegtree([0] *\
+    \ n, max, -1, mapping, composition, ID)\n\nfor _ in range(q):\n    l, r = map(int,\
+    \ input().split())\n    st.apply(l - 1, r, 1)\n\nprint(\"\".join(\"1\" if st.get(i)\
+    \ else \"0\" for i in range(n)))\n"
   dependsOn:
-  - atcoder/lazysegtree.py
+  - data_structure/segtree/lazy_segment_tree.py
   isVerificationFile: true
   path: test/atcoder/abc001-99/abc035c.test.py
   requiredBy: []
-  timestamp: '2024-06-24 17:29:04+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_IGNORED
   verifiedWith: []
 documentation_of: test/atcoder/abc001-99/abc035c.test.py

@@ -12,23 +12,18 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: '# Python port of AtCoder Library.
-
-
-    __version__ = ''0.0.1''
-
-    '
+  code: ''
   dependsOn: []
   isVerificationFile: false
-  path: atcoder/__init__.py
+  path: data_structure/segtree/range_linear_add_range_min.py
   requiredBy: []
-  timestamp: '2024-02-05 08:23:41+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: atcoder/__init__.py
+documentation_of: data_structure/segtree/range_linear_add_range_min.py
 layout: document
 redirect_from:
-- /library/atcoder/__init__.py
-- /library/atcoder/__init__.py.html
-title: atcoder/__init__.py
+- /library/data_structure/segtree/range_linear_add_range_min.py
+- /library/data_structure/segtree/range_linear_add_range_min.py.html
+title: data_structure/segtree/range_linear_add_range_min.py
 ---

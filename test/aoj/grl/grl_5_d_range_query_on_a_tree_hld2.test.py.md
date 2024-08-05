@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/hld_segtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
       \u30A8\u30EA\uFF09"
@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
   requiredBy: []
-  timestamp: '2024-07-04 13:09:35+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py

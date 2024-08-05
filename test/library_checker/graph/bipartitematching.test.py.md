@@ -18,16 +18,16 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/bipartitematching\n\
-    \nfrom graph.bipartite_matching import BipartiteMatching\n\n\nL, R, K = map(int,\
-    \ input().split())\nbm = BipartiteMatching(L, R)\nfor _ in range(K):\n    a, b\
-    \ = map(int, input().split())\n    bm.add_edge(a, b)\nres = bm.solve()\nprint(len(res))\n\
-    for a, b in res:\n    print(a, b)\n"
+    \nfrom graph.bipartite_matching import bipartite_matching\n\n\nL, R, m = map(int,\
+    \ input().split())\nedges = [tuple(map(int, input().split())) for _ in range(m)]\n\
+    ans = bipartite_matching(L, R, edges)\nprint(len(ans))\nfor u, v in ans:\n   \
+    \ print(u, v)\n"
   dependsOn:
   - graph/bipartite_matching.py
   isVerificationFile: true
   path: test/library_checker/graph/bipartitematching.test.py
   requiredBy: []
-  timestamp: '2024-02-09 16:12:14+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/bipartitematching.test.py

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/fenwicktree.py
-    title: atcoder/fenwicktree.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
+    path: data_structure/fenwick_tree/fenwick_tree.py
+    title: "\u62BD\u8C61\u5316Fenwick Tree"
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_path_sum
     links:
@@ -21,7 +21,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum\n\
-    \nfrom atcoder.fenwicktree import FenwickTree\nfrom graph.tree.heavy_light_decomposition\
+    \nfrom data_structure.fenwick_tree.fenwick_tree import FenwickTree\nfrom graph.tree.heavy_light_decomposition\
     \ import HeavyLightDecomposition\n\n\ndef f(x, y):\n    global ans\n    ans +=\
     \ bit.sum(x, y)\n\n\nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\n\
     edges = [tuple(map(int, input().split())) for _ in range(n - 1)]\nH = HeavyLightDecomposition(n,\
@@ -31,13 +31,13 @@ data:
     \        bit.add(p, b)\n    else:\n        ans = 0\n        H.path_query(a, b,\
     \ f)\n        print(ans)\n"
   dependsOn:
-  - atcoder/fenwicktree.py
+  - data_structure/fenwick_tree/fenwick_tree.py
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_path_sum_hld.test.py
 layout: document

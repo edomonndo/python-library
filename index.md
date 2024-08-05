@@ -1,50 +1,6 @@
 ---
 data:
   libraryCategories:
-  - name: atcoder
-    pages:
-    - icon: ':warning:'
-      path: atcoder/__init__.py
-      title: atcoder/__init__.py
-    - icon: ':warning:'
-      path: atcoder/__main__.py
-      title: atcoder/__main__.py
-    - icon: ':warning:'
-      path: atcoder/convolution.py
-      title: atcoder/convolution.py
-    - icon: ':heavy_check_mark:'
-      path: atcoder/dsu.py
-      title: atcoder/dsu.py
-    - icon: ':heavy_check_mark:'
-      path: atcoder/fenwicktree.py
-      title: atcoder/fenwicktree.py
-    - icon: ':heavy_check_mark:'
-      path: atcoder/lazysegtree.py
-      title: atcoder/lazysegtree.py
-    - icon: ':warning:'
-      path: atcoder/math.py
-      title: atcoder/math.py
-    - icon: ':warning:'
-      path: atcoder/maxflow.py
-      title: atcoder/maxflow.py
-    - icon: ':warning:'
-      path: atcoder/mincostflow.py
-      title: atcoder/mincostflow.py
-    - icon: ':warning:'
-      path: atcoder/modint.py
-      title: atcoder/modint.py
-    - icon: ':warning:'
-      path: atcoder/scc.py
-      title: atcoder/scc.py
-    - icon: ':heavy_check_mark:'
-      path: atcoder/segtree.py
-      title: atcoder/segtree.py
-    - icon: ':warning:'
-      path: atcoder/string.py
-      title: atcoder/string.py
-    - icon: ':warning:'
-      path: atcoder/twosat.py
-      title: atcoder/twosat.py
   - name: convolution
     pages:
     - icon: ':heavy_check_mark:'
@@ -153,7 +109,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
@@ -190,10 +146,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/merge_sort_tree.py
       title: Merge Sort Tree
+    - icon: ':warning:'
+      path: data_structure/segtree/range_linear_add_range_min.py
+      title: data_structure/segtree/range_linear_add_range_min.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/range_set_range_composite.py
       title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segtree/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -208,7 +167,7 @@ data:
         \u30E1\u30F3\u30C8\u6728"
   - name: data_structure/segtree/monoids
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: data_structure/segtree/monoids/range_min_index.py
       title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
   - name: data_structure/segtree/monoids_action
@@ -252,14 +211,32 @@ data:
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/number_of_subsequences.py
       title: Number of Subsequences
-  - name: geometory
+  - name: geometory/basic
     pages:
     - icon: ':warning:'
+      path: geometory/basic/circle.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
+    - icon: ':x:'
+      path: geometory/basic/line.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
+        \u5206)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/basic/point.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    - icon: ':warning:'
+      path: geometory/basic/polygon.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
+    - icon: ':x:'
+      path: geometory/basic/rectangle.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
+  - name: geometory
+    pages:
+    - icon: ':heavy_check_mark:'
       path: geometory/convex_full.py
       title: Convex full
-    - icon: ':heavy_check_mark:'
-      path: geometory/geometory.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8"
+    - icon: ':warning:'
+      path: geometory/convex_layer.py
+      title: geometory/convex_layer.py
     - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
@@ -271,7 +248,7 @@ data:
       path: geometory/offline_point_add_rectangle_sum.py
       title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
         \u30F3)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: geometory/offline_rectangle_add_point_get.py
       title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
         \u30A4\u30F3)"
@@ -345,6 +322,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/low_link.py
       title: Low Link
+    - icon: ':question:'
+      path: graph/matrix_tree_theorem.py
+      title: "\u884C\u5217\u6728\u5B9A\u7406"
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
@@ -369,7 +349,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/tree_decomposition_width2.py
       title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   - name: graph/connectivity
@@ -399,6 +379,9 @@ data:
       path: graph/connectivity/static_range_parallel_unionfind.py
       title: Static Range Parallel Union Find
     - icon: ':heavy_check_mark:'
+      path: graph/connectivity/unionfind.py
+      title: Union Find
+    - icon: ':heavy_check_mark:'
       path: graph/connectivity/weighted_unionfind.py
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: graph/grid
@@ -420,7 +403,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/centroids.py
       title: "\u91CD\u5FC3\u5224\u5B9A"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/contour_query.py
       title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
     - icon: ':warning:'
@@ -432,20 +415,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/dominator_tree.py
       title: Dominator Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':warning:'
       path: graph/tree/hld_lazysegtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/hld_segtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
         \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
@@ -626,6 +609,12 @@ data:
     - icon: ':warning:'
       path: str/overlap.py
       title: "\u6587\u5B57\u5217\u9023\u7D50\u6642\u306E\u91CD\u8907"
+    - icon: ':x:'
+      path: str/palindromic_tree.py
+      title: "\u56DE\u6587\u6728"
+    - icon: ':warning:'
+      path: str/palindromic_tree_deque.py
+      title: str/palindromic_tree_deque.py
     - icon: ':warning:'
       path: str/rolling_hash.py
       title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
@@ -684,25 +673,25 @@ data:
       title: embed_cpp/practice2k.test.py
   - name: test/aoj/cgl
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_1_a_projection.test.py
       title: "CGL1A \u5C04\u5F71"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_1_b_refrection.test.py
       title: "CGL1B \u53CD\u5C04"
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
       title: "CGL1C \u53CD\u6642\u8A08\u56DE\u308A"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
       title: "CGL2A \u5E73\u884C\u30FB\u5782\u76F4"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_2_b_intersection.test.py
       title: "CGL2B \u4EA4\u5DEE\u5224\u5B9A"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_2_c_cross_point.test.py
       title: "CGL2C \u4EA4\u70B9"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/cgl/cgl_2_d_distance.test.py
       title: "CGL2D \u8DDD\u96E2"
   - name: test/aoj/dsl
@@ -752,7 +741,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/dsl/dsl_3_d_sliding_minimum_element_wm.test.py
       title: DSL3D Sliding Minimum Element (Wavelet Matrix)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
       title: "DSL4A Union of Rectangles (\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\
         \u30C8)"
@@ -984,7 +973,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_set_range_composite.test.py
       title: Range Set Range Composite
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/data_structure/rectangle_add_point_get.test.py
       title: Range Add Point Get
     - icon: ':heavy_check_mark:'
@@ -1042,6 +1031,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/geometory/static_convex_hull.test.py
+      title: Static Convex Hull
   - name: test/library_checker/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -1059,6 +1051,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/connected_components_of_complement_graph.test.py
       title: Connected Components of Complement Graph
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/count_spanning_trees_directed.test.py
+      title: Counting Spanning Trees (Directed)
+    - icon: ':x:'
+      path: test/library_checker/graph/count_spanning_trees_undirected.test.py
+      title: Counting Spanning Trees (Undirected)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_directed.test.py
       title: Cycle Detection (Directed)
@@ -1114,9 +1112,12 @@ data:
       path: test/library_checker/graph/shortest_path.test.py
       title: Shortest Path
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/st_numbering.test.py
+      title: test/library_checker/graph/st_numbering.test.py
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/three_edge_connected_components.test.py
       title: Three-Edge-Connected Components
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/tree_decomposition_width2.test.py
       title: Tree Decomposition (Width 2)
     - icon: ':heavy_check_mark:'
@@ -1245,6 +1246,9 @@ data:
       title: Many A + B
   - name: test/library_checker/string
     pages:
+    - icon: ':x:'
+      path: test/library_checker/string/eertree_static.test.py
+      title: Eertree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/enumerate_palindroms.test.py
       title: Enumerate Palindromes
@@ -1289,34 +1293,34 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/tree_diameter.test.py
       title: Tree Diameter
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_path_sum_et.test.py
       title: Vertex Add Path Sum (Euler Tour)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
       title: Vertex Add Path Sum (HLD)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_path_sum_hld2.test.py
       title: Vertex Add Path Sum (HLD)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
       title: Vertex Add Range Contour Sum on Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
       title: Vertex Add Subtree Sum (Euler Tour)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
       title: Vertex Add Subtree Sum (HLD)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
       title: Vertex Add Subtree Sum (HLD)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py
       title: Vertex Get Range Contour Add on Tree
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test
@@ -1329,7 +1333,7 @@ data:
       title: Wavelet Matrix
   - name: test/yukicoder
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/yukicoder/875_range_mindex_query.test.py
       title: No.875 Range Mindex Query
 layout: toppage

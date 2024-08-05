@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/segtree.py
-    title: atcoder/segtree.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: data_structure/segtree/monoids/range_min_index.py
     title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
+  - icon: ':question:'
+    path: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://yukicoder.me/problems/no/875
     links:
@@ -21,9 +21,9 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://yukicoder.me/problems/no/875\n\n\n\
-    from data_structure.segtree.monoids.range_min_index import *\nfrom atcoder.segtree\
-    \ import SegTree\n\nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\n\
-    seg = SegTree(op, S(), [S(A[i], i + 1) for i in range(n)])\nfor _ in range(q):\n\
+    from data_structure.segtree.monoids.range_min_index import *\nfrom data_structure.segtree.segment_tree\
+    \ import Segtree\n\nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\n\
+    seg = Segtree([S(A[i], i + 1) for i in range(n)], op, S())\nfor _ in range(q):\n\
     \    t, l, r = map(int, input().split())\n    if t == 1:\n        l -= 1\n   \
     \     r -= 1\n        tmp = seg.get(l)\n        lv, li = tmp.value, tmp.index\n\
     \        tmp = seg.get(r)\n        rv, ri = tmp.value, tmp.index\n        seg.set(l,\
@@ -31,12 +31,12 @@ data:
     \   print(seg.prod(l, r).index)\n"
   dependsOn:
   - data_structure/segtree/monoids/range_min_index.py
-  - atcoder/segtree.py
+  - data_structure/segtree/segment_tree.py
   isVerificationFile: true
   path: test/yukicoder/875_range_mindex_query.test.py
   requiredBy: []
-  timestamp: '2024-06-19 14:17:10+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yukicoder/875_range_mindex_query.test.py
 layout: document

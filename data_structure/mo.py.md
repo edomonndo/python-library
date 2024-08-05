@@ -55,8 +55,8 @@ data:
   timestamp: '2024-02-28 11:58:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/atcoder/abc200-299/abc293g.test.py
   - test/atcoder/abc200-299/abc242g.test.py
+  - test/atcoder/abc200-299/abc293g.test.py
 documentation_of: data_structure/mo.py
 layout: document
 title: Mo's Algorithm

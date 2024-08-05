@@ -1,58 +1,58 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: atcoder/segtree.py
-    title: atcoder/segtree.py
+  - icon: ':question:'
+    path: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
     title: GRL5C LCA (Lowest Common Ancestor)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/vertex_add_path_sum_et.test.py
     title: Vertex Add Path Sum (Euler Tour)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/vertex_add_subtree_sum_et.test.py
     title: Vertex Add Subtree Sum (Euler Tour)
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from atcoder.segtree import SegTree\n\n\nclass EulerTour:\n    def __init__(self,\
-    \ G, root, vcost):\n        N = len(G)\n        self.N = N\n        self.ET =\
-    \ []\n        self.into = [0] * N\n        self.out = [0] * N\n        self.parent\
-    \ = [-1] * N\n        self.depth = [N] * (N + 1)\n        # For Path Query\n \
-    \       self.vcost = []\n        self.ecost = []\n        # For Subtree Query\n\
-    \        self.vcost_st = []\n        self.ecost_st = []\n\n        # \u975E\u518D\
-    \u5E30DFS\n        stack = [(root, -1, 0)]\n        while stack:\n           \
-    \ v, p, weight = stack.pop()\n            if v >= 0:\n                self.into[v]\
-    \ = len(self.ET)\n                self.ET.append(v)\n                self.depth[v]\
-    \ = 0 if p == -1 else self.depth[p] + 1\n                self.vcost.append(vcost[v])\n\
-    \                self.ecost.append(weight)\n                self.vcost_st.append(vcost[v])\n\
-    \                self.ecost_st.append(weight)\n                self.out[v] = len(self.ET)\n\
-    \                for u, w in G[v]:\n                    if u == p:\n         \
-    \               continue\n                    self.parent[u] = v\n           \
-    \         stack.append((~v, u, -w))\n                    stack.append((u, v, w))\n\
-    \            else:\n                v = ~v\n                self.ET.append(v)\n\
-    \                self.vcost.append(-vcost[p])\n                self.ecost.append(weight)\n\
-    \                self.vcost_st.append(0)\n                self.ecost_st.append(0)\n\
-    \                self.out[v] = len(self.ET)\n\n        self.depth_min = SegTree(\n\
-    \            lambda u, v: u if self.depth[u] <= self.depth[v] else v, self.N,\
-    \ self.ET\n        )\n        self.vcost_subtree_sum = SegTree(lambda u, v: u\
-    \ + v, 0, self.vcost_st)\n        self.ecost_subtree_sum = SegTree(lambda u, v:\
-    \ u + v, 0, self.ecost_st)\n        self.vcost_path_sum = SegTree(lambda u, v:\
-    \ u + v, 0, self.vcost)\n        self.ecost_path_sum = SegTree(lambda u, v: u\
-    \ + v, 0, self.ecost)\n\n    def lca(self, u, v):\n        \"\"\"u\u3068v\u306E\
-    \u6700\u8FD1\u5171\u901A\u7956\u5148\"\"\"\n        if self.into[u] > self.into[v]:\n\
-    \            u, v = v, u\n        return self.depth_min.prod(self.into[u], self.out[v])\n\
-    \n    def dist(self, u, v):\n        \"\"\"u\u3068v\u306E\u8DDD\u96E2\"\"\"\n\
-    \        a = self.lca(u, v)\n        return (\n            self.ecost_path_sum.prod(0,\
+  code: "from data_structure.segtree.segment_tree import Segtree\n\n\nclass EulerTour:\n\
+    \    def __init__(self, G, root, vcost):\n        N = len(G)\n        self.N =\
+    \ N\n        self.ET = []\n        self.into = [0] * N\n        self.out = [0]\
+    \ * N\n        self.parent = [-1] * N\n        self.depth = [N] * (N + 1)\n  \
+    \      # For Path Query\n        self.vcost = []\n        self.ecost = []\n  \
+    \      # For Subtree Query\n        self.vcost_st = []\n        self.ecost_st\
+    \ = []\n\n        # \u975E\u518D\u5E30DFS\n        stack = [(root, -1, 0)]\n \
+    \       while stack:\n            v, p, weight = stack.pop()\n            if v\
+    \ >= 0:\n                self.into[v] = len(self.ET)\n                self.ET.append(v)\n\
+    \                self.depth[v] = 0 if p == -1 else self.depth[p] + 1\n       \
+    \         self.vcost.append(vcost[v])\n                self.ecost.append(weight)\n\
+    \                self.vcost_st.append(vcost[v])\n                self.ecost_st.append(weight)\n\
+    \                self.out[v] = len(self.ET)\n                for u, w in G[v]:\n\
+    \                    if u == p:\n                        continue\n          \
+    \          self.parent[u] = v\n                    stack.append((~v, u, -w))\n\
+    \                    stack.append((u, v, w))\n            else:\n            \
+    \    v = ~v\n                self.ET.append(v)\n                self.vcost.append(-vcost[p])\n\
+    \                self.ecost.append(weight)\n                self.vcost_st.append(0)\n\
+    \                self.ecost_st.append(0)\n                self.out[v] = len(self.ET)\n\
+    \n        self.depth_min = Segtree(\n            self.ET, lambda u, v: u if self.depth[u]\
+    \ <= self.depth[v] else v, self.N\n        )\n        self.vcost_subtree_sum =\
+    \ Segtree(self.vcost_st, lambda u, v: u + v, 0)\n        self.ecost_subtree_sum\
+    \ = Segtree(self.ecost_st, lambda u, v: u + v, 0)\n        self.vcost_path_sum\
+    \ = Segtree(self.vcost, lambda u, v: u + v, 0)\n        self.ecost_path_sum =\
+    \ Segtree(self.ecost, lambda u, v: u + v, 0)\n\n    def lca(self, u, v):\n   \
+    \     \"\"\"u\u3068v\u306E\u6700\u8FD1\u5171\u901A\u7956\u5148\"\"\"\n       \
+    \ if self.into[u] > self.into[v]:\n            u, v = v, u\n        return self.depth_min.prod(self.into[u],\
+    \ self.out[v])\n\n    def dist(self, u, v):\n        \"\"\"u\u3068v\u306E\u8DDD\
+    \u96E2\"\"\"\n        a = self.lca(u, v)\n        return (\n            self.ecost_path_sum.prod(0,\
     \ self.out[u])\n            + self.ecost_path_sum.prod(0, self.out[v])\n     \
     \       - 2 * self.ecost_path_sum.prod(0, self.out[a])\n        )\n\n    def update_parent_edge(self,\
     \ v, w):\n        \"\"\"v\u3068\u305D\u306E\u89AA\u3092\u7E4B\u3050\u8FBA\u306E\
@@ -96,16 +96,16 @@ data:
     \u304B\u3089\u9802\u70B9v\u307E\u3067\u306E\u8FBA\u306E\u5024\u306E\u548C\"\"\"\
     \n        return self.ecost_path_sum.prod(0, self.into[v] + 1)\n"
   dependsOn:
-  - atcoder/segtree.py
+  - data_structure/segtree/segment_tree.py
   isVerificationFile: false
   path: graph/tree/euler_tour.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-05 20:55:28+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
   - test/library_checker/tree/vertex_add_path_sum_et.test.py
   - test/library_checker/tree/vertex_add_subtree_sum_et.test.py
-  - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
 documentation_of: graph/tree/euler_tour.py
 layout: document
 title: Euler tour

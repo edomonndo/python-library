@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: atcoder/dsu.py
-    title: atcoder/dsu.py
+    path: graph/connectivity/unionfind.py
+    title: Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -18,17 +18,17 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/minimum_spanning_tree\n\
-    \nfrom atcoder.dsu import DSU\n\nn, m = map(int, input().split())\nedges = []\n\
-    for i in range(m):\n    u, v, w = map(int, input().split())\n    edges.append((u,\
-    \ v, w, i))\n\nedges.sort(key=lambda x: x[2])\nuf = DSU(n)\n\nX = 0\nes = []\n\
-    for u, v, w, i in edges:\n    if uf.same(u, v):\n        continue\n    uf.merge(u,\
-    \ v)\n    X += w\n    es.append(i)\n\nes.sort()\nprint(X)\nprint(*es)\n"
+    \nfrom graph.connectivity.unionfind import UnionFind\n\nn, m = map(int, input().split())\n\
+    edges = []\nfor i in range(m):\n    u, v, w = map(int, input().split())\n    edges.append((u,\
+    \ v, w, i))\n\nedges.sort(key=lambda x: x[2])\nuf = UnionFind(n)\n\nX = 0\nes\
+    \ = []\nfor u, v, w, i in edges:\n    if uf.same(u, v):\n        continue\n  \
+    \  uf.merge(u, v)\n    X += w\n    es.append(i)\n\nes.sort()\nprint(X)\nprint(*es)\n"
   dependsOn:
-  - atcoder/dsu.py
+  - graph/connectivity/unionfind.py
   isVerificationFile: true
   path: test/library_checker/graph/minimum_spanning_tree.test.py
   requiredBy: []
-  timestamp: '2024-05-29 14:24:11+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/minimum_spanning_tree.test.py

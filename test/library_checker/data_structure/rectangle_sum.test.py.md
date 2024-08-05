@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/rectangle_sum.test.py
   requiredBy: []
-  timestamp: '2024-05-27 17:45:23+09:00'
+  timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/rectangle_sum.test.py
