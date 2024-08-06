@@ -9,12 +9,15 @@ data:
     path: geometory/basic/line.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
       \u5206)"
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/polygon.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
+  - icon: ':x:'
+    path: geometory/convex_full.py
+    title: Convex full
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
@@ -22,9 +25,21 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
     title: "CGL1C \u53CD\u6642\u8A08\u56DE\u308A"
-  _isVerificationFailed: false
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/cgl/cgl_3_a_area.test.py
+    title: "CGL3A \u9762\u7A4D"
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/cgl/cgl_3_b_is_convex.test.py
+    title: "CGL3B \u51F8\u6027\u5224\u5B9A"
+  - icon: ':heavy_check_mark:'
+    path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
+    title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
+  - icon: ':x:'
+    path: test/library_checker/geometory/static_convex_hull.test.py
+    title: Static Convex Hull
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -79,15 +94,20 @@ data:
   isVerificationFile: false
   path: geometory/basic/point.py
   requiredBy:
-  - geometory/convex_layer.py
-  - geometory/basic/polygon.py
   - geometory/basic/line.py
   - geometory/basic/circle.py
+  - geometory/basic/polygon.py
   - geometory/basic/rectangle.py
+  - geometory/convex_layer.py
+  - geometory/convex_full.py
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/aoj/cgl/cgl_3_b_is_convex.test.py
+  - test/aoj/cgl/cgl_3_a_area.test.py
+  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
   - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+  - test/library_checker/geometory/static_convex_hull.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"

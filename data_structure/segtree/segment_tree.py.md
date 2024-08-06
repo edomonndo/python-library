@@ -107,21 +107,21 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/segment_tree.py
   requiredBy:
+  - graph/tree/euler_tour.py
+  - graph/tree/hld_segtree.py
+  - graph/tree/hld_segtree_noncommutative.py
+  - graph/tree/auxiliary_tree.py
   - dynamic_programming/longest_increase_subsequence.py
   - data_structure/segtree/compressed_segtree.py
   - data_structure/segtree/range_set_range_composite.py
-  - graph/tree/hld_segtree_noncommutative.py
-  - graph/tree/auxiliary_tree.py
-  - graph/tree/euler_tour.py
-  - graph/tree/hld_segtree.py
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yukicoder/875_range_mindex_query.test.py
   - test/aoj/dsl/dsl_2_a_range_min_query.test.py
-  - test/library_checker/data_structure/static_rmq_segtree.test.py
-  - test/library_checker/data_structure/point_set_range_composite.test.py
   - test/library_checker/tree/vertext_set_path_composite.test.py
+  - test/library_checker/data_structure/point_set_range_composite.test.py
+  - test/library_checker/data_structure/static_rmq_segtree.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"

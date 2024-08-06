@@ -55,8 +55,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
-  - test/library_checker/tree/vertex_add_path_sum_hld2.test.py
   - test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
+  - test/library_checker/tree/vertex_add_path_sum_hld2.test.py
 documentation_of: graph/tree/hld_segtree.py
 layout: document
 title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\

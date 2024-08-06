@@ -220,10 +220,10 @@ data:
       path: geometory/basic/line.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
         \u5206)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: geometory/basic/point.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: geometory/basic/polygon.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
     - icon: ':heavy_check_mark:'
@@ -231,7 +231,7 @@ data:
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - name: geometory
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: geometory/convex_full.py
       title: Convex full
     - icon: ':warning:'
@@ -694,6 +694,15 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_2_d_distance.test.py
       title: "CGL2D \u8DDD\u96E2"
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl/cgl_3_a_area.test.py
+      title: "CGL3A \u9762\u7A4D"
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl/cgl_3_b_is_convex.test.py
+      title: "CGL3B \u51F8\u6027\u5224\u5B9A"
+    - icon: ':heavy_check_mark:'
+      path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
+      title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
   - name: test/aoj/dsl
     pages:
     - icon: ':heavy_check_mark:'
@@ -1031,7 +1040,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/geometory/static_convex_hull.test.py
       title: Static Convex Hull
   - name: test/library_checker/graph
