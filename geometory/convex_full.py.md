@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/static_convex_hull.test.py
     title: Static Convex Hull
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -31,8 +31,8 @@ data:
   isVerificationFile: false
   path: geometory/convex_full.py
   requiredBy: []
-  timestamp: '2024-08-09 17:42:45+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-09 19:58:16+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/geometory/static_convex_hull.test.py
 documentation_of: geometory/convex_full.py

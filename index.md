@@ -220,7 +220,7 @@ data:
       path: geometory/basic/line.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
         \u5206)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/basic/point.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
     - icon: ':heavy_check_mark:'
@@ -231,7 +231,7 @@ data:
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - name: geometory
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/convex_full.py
       title: Convex full
     - icon: ':warning:'
@@ -1040,7 +1040,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/static_convex_hull.test.py
       title: Static Convex Hull
   - name: test/library_checker/graph

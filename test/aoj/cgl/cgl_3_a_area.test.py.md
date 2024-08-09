@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   - icon: ':heavy_check_mark:'
@@ -30,7 +30,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_3_a_area.test.py
   requiredBy: []
-  timestamp: '2024-08-06 22:59:49+09:00'
+  timestamp: '2024-08-09 19:58:16+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_3_a_area.test.py

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/static_convex_hull
     links:
@@ -31,8 +31,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/static_convex_hull.test.py
   requiredBy: []
-  timestamp: '2024-08-09 17:42:45+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-09 19:58:16+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/static_convex_hull.test.py
 layout: document

@@ -15,7 +15,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
   - icon: ':warning:'
@@ -34,12 +34,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
     title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/static_convex_hull.test.py
     title: Static Convex Hull
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -48,18 +48,19 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import math\nfrom typing import TypeVar\n\nT = TypeVar(\"T\")\n\n\nclass\
     \ Point:\n    def __init__(self, x: T, y: T):\n        self.EPS = 1e-10\n    \
-    \    self.x = x\n        self.y = y\n\n    def __add__(self, other: \"Point\"\
-    ) -> \"Point\":\n        return Point(self.x + other.x, self.y + other.y)\n\n\
-    \    def __sub__(self, other: \"Point\") -> \"Point\":\n        return Point(self.x\
-    \ - other.x, self.y - other.y)\n\n    def __mul__(self, k: \"Point\") -> \"Point\"\
-    :\n        return Point(self.x * k, self.y * k)\n\n    def __truediv__(self, k:\
-    \ \"Point\") -> \"Point\":\n        return Point(self.x / k, self.y / k)\n\n \
-    \   def __floordiv__(self, k: \"Point\") -> \"Point\":\n        return Point(self.x\
-    \ // k, self.y // k)\n\n    def __eq__(self, other: \"Point\") -> bool:\n    \
-    \    return abs(self.x - other.x) < self.EPS and abs(self.y - other.y) < self.EPS\n\
-    \n    def __ne__(self, other: \"Point\") -> bool:\n        return not self.__eq__(other)\n\
-    \n    def __lt__(self, other: \"Point\") -> bool:\n        if self.x != other.x:\n\
-    \            return self.x < other.x\n        return self.y < other.y\n\n    def\
+    \    self.x = x\n        self.y = y\n\n    def __iter__(self):\n        return\
+    \ iter([self.x, self.y])\n\n    def __add__(self, other: \"Point\") -> \"Point\"\
+    :\n        return Point(self.x + other.x, self.y + other.y)\n\n    def __sub__(self,\
+    \ other: \"Point\") -> \"Point\":\n        return Point(self.x - other.x, self.y\
+    \ - other.y)\n\n    def __mul__(self, k: \"Point\") -> \"Point\":\n        return\
+    \ Point(self.x * k, self.y * k)\n\n    def __truediv__(self, k: \"Point\") ->\
+    \ \"Point\":\n        return Point(self.x / k, self.y / k)\n\n    def __floordiv__(self,\
+    \ k: \"Point\") -> \"Point\":\n        return Point(self.x // k, self.y // k)\n\
+    \n    def __eq__(self, other: \"Point\") -> bool:\n        return abs(self.x -\
+    \ other.x) < self.EPS and abs(self.y - other.y) < self.EPS\n\n    def __ne__(self,\
+    \ other: \"Point\") -> bool:\n        return not self.__eq__(other)\n\n    def\
+    \ __lt__(self, other: \"Point\") -> bool:\n        if self.x != other.x:\n   \
+    \         return self.x < other.x\n        return self.y < other.y\n\n    def\
     \ __gt__(self, other: \"Point\") -> bool:\n        if self.x != other.x:\n   \
     \         return self.x > other.x\n        return self.y > other.y\n\n    def\
     \ __str__(self) -> str:\n        return f\"<Point({self.x} {self.y})>\"\n\n  \
@@ -100,8 +101,8 @@ data:
   - geometory/basic/rectangle.py
   - geometory/convex_layer.py
   - geometory/convex_full.py
-  timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-08-09 19:58:16+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
   - test/aoj/cgl/cgl_3_a_area.test.py

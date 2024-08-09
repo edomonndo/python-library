@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy:
@@ -42,7 +42,7 @@ data:
   path: geometory/basic/circle.py
   requiredBy:
   - geometory/basic/line.py
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-09 19:58:16+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: geometory/basic/circle.py
