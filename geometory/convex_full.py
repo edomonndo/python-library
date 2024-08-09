@@ -3,7 +3,6 @@ from geometory.basic.point import Point
 
 def convex_hull(ps: list[Point]) -> list[Point]:
 
-    ps = list(set(ps))
     if len(ps) <= 2:
         return ps
 
