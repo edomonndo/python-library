@@ -22,8 +22,8 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/static_convex_hull\n\
     \nfrom geometory.basic.point import Point\nfrom geometory.convex_full import convex_hull\n\
-    \nT = int(input())\nfor _ in range(T):\n    n = int(input())\n    xy = [tuple(map(int,\
-    \ input().split())) for _ in range(n)]\n    res = convex_hull([Point(x, y) for\
+    \nT = int(input())\nfor _ in range(T):\n    n = int(input())\n    xy = list(set(tuple(map(int,\
+    \ input().split())) for _ in range(n)))\n    res = convex_hull([Point(x, y) for\
     \ x, y in xy])\n    print(len(res))\n    for x, y in res:\n        print(x, y)\n"
   dependsOn:
   - geometory/basic/point.py
@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/static_convex_hull.test.py
   requiredBy: []
-  timestamp: '2024-08-06 22:59:49+09:00'
+  timestamp: '2024-08-09 17:42:45+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/geometory/static_convex_hull.test.py
