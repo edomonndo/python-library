@@ -8,6 +8,9 @@ def convex_hull(
     ps_: list[Union[Point, tuple[int, int]]], multi: bool = False
 ) -> list[Point]:
     ps = arg_sort(ps_)
+    if not ps:
+        return []
+
     if not multi:
         tmp = [ps[0]]
         for p in ps[1:]:
