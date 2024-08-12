@@ -27,16 +27,16 @@ data:
   code: "from typing import Union\n\nfrom geometory.basic.point import Point\nfrom\
     \ geometory.arg_sort import arg_sort\n\n\ndef convex_hull(\n    ps_: list[Union[Point,\
     \ tuple[int, int]]], multi: bool = False\n) -> list[Point]:\n    ps = arg_sort(ps_)\n\
-    \    if not multi:\n        tmp = [ps[0]]\n        for p in ps[1:]:\n        \
-    \    if p != tmp[-1]:\n                tmp.append(p)\n        ps = tmp\n\n   \
-    \ n = len(ps)\n    if n <= 2:\n        return ps\n\n    def cross3(a: Point, b:\
-    \ Point, c: Point) -> int:\n        ax, ay = a\n        bx, by = b\n        cx,\
-    \ cy = c\n        return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax)\n\n   \
-    \ res = []\n    for p in ps:\n        while len(res) > 1 and cross3(res[-1], res[-2],\
-    \ p) >= 0:\n            res.pop()\n        res.append(p)\n\n    sz = len(res)\n\
-    \    for p in ps[::-1][1:]:\n        while len(res) > sz and cross3(res[-1], res[-2],\
-    \ p) >= 0:\n            res.pop()\n        res.append(p)\n    res.pop()\n\n  \
-    \  return res\n"
+    \    if not ps:\n        return []\n\n    if not multi:\n        tmp = [ps[0]]\n\
+    \        for p in ps[1:]:\n            if p != tmp[-1]:\n                tmp.append(p)\n\
+    \        ps = tmp\n\n    n = len(ps)\n    if n <= 2:\n        return ps\n\n  \
+    \  def cross3(a: Point, b: Point, c: Point) -> int:\n        ax, ay = a\n    \
+    \    bx, by = b\n        cx, cy = c\n        return (bx - ax) * (cy - ay) - (by\
+    \ - ay) * (cx - ax)\n\n    res = []\n    for p in ps:\n        while len(res)\
+    \ > 1 and cross3(res[-1], res[-2], p) >= 0:\n            res.pop()\n        res.append(p)\n\
+    \n    sz = len(res)\n    for p in ps[::-1][1:]:\n        while len(res) > sz and\
+    \ cross3(res[-1], res[-2], p) >= 0:\n            res.pop()\n        res.append(p)\n\
+    \    res.pop()\n\n    return res\n"
   dependsOn:
   - geometory/basic/point.py
   - geometory/arg_sort.py
@@ -44,7 +44,7 @@ data:
   path: geometory/convex_full.py
   requiredBy:
   - geometory/diameter.py
-  timestamp: '2024-08-13 00:22:35+09:00'
+  timestamp: '2024-08-13 00:35:22+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/geometory/static_convex_hull.test.py
