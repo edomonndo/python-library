@@ -211,32 +211,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/number_of_subsequences.py
       title: Number of Subsequences
-  - name: geometory/basic
-    pages:
-    - icon: ':warning:'
-      path: geometory/basic/circle.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
-    - icon: ':heavy_check_mark:'
-      path: geometory/basic/line.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
-        \u5206)"
-    - icon: ':heavy_check_mark:'
-      path: geometory/basic/point.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
-    - icon: ':heavy_check_mark:'
-      path: geometory/basic/polygon.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
-    - icon: ':heavy_check_mark:'
-      path: geometory/basic/rectangle.py
-      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - name: geometory
     pages:
     - icon: ':heavy_check_mark:'
+      path: geometory/arg_sort.py
+      title: "\u504F\u89D2\u30BD\u30FC\u30C8"
+    - icon: ':x:'
       path: geometory/convex_full.py
       title: Convex full
     - icon: ':warning:'
       path: geometory/convex_layer.py
       title: geometory/convex_layer.py
+    - icon: ':warning:'
+      path: geometory/diameter.py
+      title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
       title: KD tree
@@ -260,11 +248,26 @@ data:
       path: geometory/offline_static_rectangle_sum.py
       title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
     - icon: ':heavy_check_mark:'
-      path: geometory/sort_points_by_argument.py
-      title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-    - icon: ':heavy_check_mark:'
       path: geometory/union_area_rectangle.py
       title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
+  - name: geometory/basic
+    pages:
+    - icon: ':warning:'
+      path: geometory/basic/circle.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/basic/line.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
+        \u5206)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/basic/point.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/basic/polygon.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
+    - icon: ':heavy_check_mark:'
+      path: geometory/basic/rectangle.py
+      title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -1040,7 +1043,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/geometory/static_convex_hull.test.py
       title: Static Convex Hull
   - name: test/library_checker/graph

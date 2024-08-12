@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: geometory/arg_sort.py
+    title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - icon: ':warning:'
     path: geometory/basic/circle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
@@ -15,12 +18,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: geometory/convex_full.py
     title: Convex full
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
+  - icon: ':warning:'
+    path: geometory/diameter.py
+    title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
@@ -34,9 +40,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
     title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
-  - icon: ':heavy_check_mark:'
-    path: test/library_checker/geometory/static_convex_hull.test.py
-    title: Static Convex Hull
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -95,12 +98,14 @@ data:
   isVerificationFile: false
   path: geometory/basic/point.py
   requiredBy:
+  - geometory/diameter.py
   - geometory/basic/line.py
   - geometory/basic/circle.py
   - geometory/basic/polygon.py
   - geometory/basic/rectangle.py
   - geometory/convex_layer.py
   - geometory/convex_full.py
+  - geometory/arg_sort.py
   timestamp: '2024-08-09 19:58:16+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
@@ -108,7 +113,6 @@ data:
   - test/aoj/cgl/cgl_3_a_area.test.py
   - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
   - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-  - test/library_checker/geometory/static_convex_hull.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"

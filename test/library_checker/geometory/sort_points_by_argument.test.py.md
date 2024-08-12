@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: geometory/sort_points_by_argument.py
+    path: geometory/arg_sort.py
     title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
@@ -18,15 +18,15 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/sort_points_by_argument\n\
-    \nfrom geometory.sort_points_by_argument import sortPointsByArgument\n\nN = int(input())\n\
-    A = [tuple(map(int, input().split())) for _ in range(N)]\n\nans = sortPointsByArgument(A)\n\
-    for x, y in ans:\n    print(x, y)\n"
+    \nfrom geometory.arg_sort import arg_sort\n\nn = int(input())\nps = [tuple(map(int,\
+    \ input().split())) for _ in range(n)]\n\nans = arg_sort(ps)\nfor x, y in ans:\n\
+    \    print(x, y)\n"
   dependsOn:
-  - geometory/sort_points_by_argument.py
+  - geometory/arg_sort.py
   isVerificationFile: true
   path: test/library_checker/geometory/sort_points_by_argument.test.py
   requiredBy: []
-  timestamp: '2024-06-13 11:50:32+09:00'
+  timestamp: '2024-08-13 00:22:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/sort_points_by_argument.test.py
