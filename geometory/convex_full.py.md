@@ -12,12 +12,12 @@ data:
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/static_convex_hull.test.py
     title: Static Convex Hull
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -26,7 +26,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Union\n\nfrom geometory.basic.point import Point\nfrom\
     \ geometory.arg_sort import arg_sort\n\n\ndef convex_hull(\n    ps_: list[Union[Point,\
-    \ tuple[int, int]]], multi: bool = False\n) -> list[Point]:\n    ps = arg_sort(ps_)\n\
+    \ tuple[int, int]]], multi: bool = False\n) -> list[Point]:\n    ps = sorted(ps_)\n\
     \    if not ps:\n        return []\n\n    if not multi:\n        tmp = [ps[0]]\n\
     \        for p in ps[1:]:\n            if p != tmp[-1]:\n                tmp.append(p)\n\
     \        ps = tmp\n\n    n = len(ps)\n    if n <= 2:\n        return ps\n\n  \
@@ -44,8 +44,8 @@ data:
   path: geometory/convex_full.py
   requiredBy:
   - geometory/diameter.py
-  timestamp: '2024-08-13 00:35:22+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-13 00:46:33+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/geometory/static_convex_hull.test.py
 documentation_of: geometory/convex_full.py

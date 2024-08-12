@@ -18,7 +18,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
   - icon: ':warning:'

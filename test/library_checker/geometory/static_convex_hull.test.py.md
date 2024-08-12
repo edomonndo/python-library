@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/static_convex_hull
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/static_convex_hull.test.py
   requiredBy: []
-  timestamp: '2024-08-13 00:35:22+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-13 00:46:33+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/static_convex_hull.test.py
 layout: document

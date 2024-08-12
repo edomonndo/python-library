@@ -216,7 +216,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/arg_sort.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/convex_full.py
       title: Convex full
     - icon: ':warning:'
@@ -1043,7 +1043,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/static_convex_hull.test.py
       title: Static Convex Hull
   - name: test/library_checker/graph
