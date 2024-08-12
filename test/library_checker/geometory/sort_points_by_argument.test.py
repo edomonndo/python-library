@@ -1,10 +1,10 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/sort_points_by_argument
 
-from geometory.sort_points_by_argument import sortPointsByArgument
+from geometory.arg_sort import arg_sort
 
-N = int(input())
-A = [tuple(map(int, input().split())) for _ in range(N)]
+n = int(input())
+ps = [tuple(map(int, input().split())) for _ in range(n)]
 
-ans = sortPointsByArgument(A)
+ans = arg_sort(ps)
 for x, y in ans:
     print(x, y)

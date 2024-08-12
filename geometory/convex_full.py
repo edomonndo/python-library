@@ -1,17 +1,31 @@
+from typing import Union
+
 from geometory.basic.point import Point
+from geometory.arg_sort import arg_sort
 
 
-def convex_hull(ps: list[Point]) -> list[Point]:
+def convex_hull(
+    ps_: list[Union[Point, tuple[int, int]]], multi: bool = False
+) -> list[Point]:
+    ps = arg_sort(ps_)
+    if not multi:
+        tmp = [ps[0]]
+        for p in ps[1:]:
+            if p != tmp[-1]:
+                tmp.append(p)
+        ps = tmp
 
-    if len(ps) <= 2:
+    n = len(ps)
+    if n <= 2:
         return ps
 
-    ps.sort()
-    res = []
-
     def cross3(a: Point, b: Point, c: Point) -> int:
-        return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)
+        ax, ay = a
+        bx, by = b
+        cx, cy = c
+        return (bx - ax) * (cy - ay) - (by - ay) * (cx - ax)
 
+    res = []
     for p in ps:
         while len(res) > 1 and cross3(res[-1], res[-2], p) >= 0:
             res.pop()
@@ -23,4 +37,5 @@ def convex_hull(ps: list[Point]) -> list[Point]:
             res.pop()
         res.append(p)
     res.pop()
+
     return res
