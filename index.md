@@ -630,6 +630,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: str/z_algorithm.py
       title: Z algorithm
+  - name: test/library_checker/geometory
+    pages:
+    - icon: ':warning:'
+      path: test/library_checker/geometory/furthest_pair.py
+      title: test/library_checker/geometory/furthest_pair.py
   - name: utility
     pages:
     - icon: ':warning:'

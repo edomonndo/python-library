@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/static_convex_hull.test.py
   requiredBy: []
-  timestamp: '2024-08-13 00:46:33+09:00'
+  timestamp: '2024-08-13 00:57:36+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/static_convex_hull.test.py

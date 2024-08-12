@@ -4,10 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
-  _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
-    path: geometory/convex_full.py
-    title: Convex full
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/sort_points_by_argument.test.py
@@ -52,8 +49,7 @@ data:
   - geometory/basic/point.py
   isVerificationFile: false
   path: geometory/arg_sort.py
-  requiredBy:
-  - geometory/convex_full.py
+  requiredBy: []
   timestamp: '2024-08-13 00:22:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

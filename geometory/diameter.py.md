@@ -7,7 +7,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: test/library_checker/geometory/furthest_pair.py
+    title: test/library_checker/geometory/furthest_pair.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -44,8 +47,9 @@ data:
   - geometory/convex_full.py
   isVerificationFile: false
   path: geometory/diameter.py
-  requiredBy: []
-  timestamp: '2024-08-13 00:46:33+09:00'
+  requiredBy:
+  - test/library_checker/geometory/furthest_pair.py
+  timestamp: '2024-08-13 00:57:36+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: geometory/diameter.py
