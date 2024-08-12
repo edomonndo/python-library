@@ -7,7 +7,7 @@ from geometory.arg_sort import arg_sort
 def convex_hull(
     ps_: list[Union[Point, tuple[int, int]]], multi: bool = False
 ) -> list[Point]:
-    ps = arg_sort(ps_)
+    ps = sorted(ps_)
     if not ps:
         return []
 
