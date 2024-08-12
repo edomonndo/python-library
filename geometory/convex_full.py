@@ -1,13 +1,12 @@
 from typing import Union
 
 from geometory.basic.point import Point
-from geometory.arg_sort import arg_sort
 
 
 def convex_hull(
     ps_: list[Union[Point, tuple[int, int]]], multi: bool = False
 ) -> list[Point]:
-    ps = sorted(ps_)
+    ps = [Point(x, y) for x, y in sorted(ps_)]
     if not ps:
         return []
 
