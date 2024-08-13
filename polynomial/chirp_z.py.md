@@ -43,8 +43,5 @@ data:
   - test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
 documentation_of: polynomial/chirp_z.py
 layout: document
-redirect_from:
-- /library/polynomial/chirp_z.py
-- /library/polynomial/chirp_z.py.html
-title: polynomial/chirp_z.py
+title: Chirp Z
 ---

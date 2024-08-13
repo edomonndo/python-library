@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/k_shortest_walk.test.py
   requiredBy: []
-  timestamp: '2024-06-04 09:09:32+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/k_shortest_walk.test.py

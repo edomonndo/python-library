@@ -60,9 +60,6 @@ data:
       path: data_structure/binary_search_tree/implicit_treap.py
       title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
     - icon: ':warning:'
-      path: data_structure/binary_search_tree/red_black_tree.py
-      title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(\u8D64\u9ED2\u6728)"
-    - icon: ':warning:'
       path: data_structure/binary_search_tree/splay_tree.py
       title: Splay tree
   - name: data_structure
@@ -222,7 +219,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_layer.py
       title: geometory/convex_layer.py
-    - icon: ':warning:'
+    - icon: ':x:'
       path: geometory/diameter.py
       title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
@@ -259,7 +256,7 @@ data:
       path: geometory/basic/line.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
         \u5206)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: geometory/basic/point.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
     - icon: ':heavy_check_mark:'
@@ -431,7 +428,7 @@ data:
       path: graph/tree/hld_segtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
         \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
@@ -579,28 +576,28 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: polynomial/chirp_z.py
-      title: polynomial/chirp_z.py
+      title: Chirp Z
     - icon: ':heavy_check_mark:'
       path: polynomial/composition.py
-      title: polynomial/composition.py
+      title: Composition
     - icon: ':heavy_check_mark:'
       path: polynomial/formal_power_series.py
       title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':heavy_check_mark:'
       path: polynomial/multipoint_evaluation.py
-      title: polynomial/multipoint_evaluation.py
+      title: Multipoint Evaluation
     - icon: ':warning:'
       path: polynomial/multivariate_multiplication.py
-      title: polynomial/multivariate_multiplication.py
+      title: Multivariate Multiplication
     - icon: ':heavy_check_mark:'
       path: polynomial/product_tree.py
-      title: polynomial/product_tree.py
+      title: Product Tree
     - icon: ':heavy_check_mark:'
       path: polynomial/sample_point_shift.py
-      title: polynomial/sample_point_shift.py
+      title: Sample Point Shift
     - icon: ':heavy_check_mark:'
       path: polynomial/tayler_shift.py
-      title: polynomial/tayler_shift.py
+      title: Tayler Shift
   - name: str
     pages:
     - icon: ':heavy_check_mark:'
@@ -630,11 +627,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: str/z_algorithm.py
       title: Z algorithm
-  - name: test/library_checker/geometory
-    pages:
-    - icon: ':warning:'
-      path: test/library_checker/geometory/furthest_pair.py
-      title: test/library_checker/geometory/furthest_pair.py
   - name: utility
     pages:
     - icon: ':warning:'
@@ -1045,6 +1037,12 @@ data:
       title: Number of Subsequences
   - name: test/library_checker/geometory
     pages:
+    - icon: ':x:'
+      path: test/library_checker/geometory/closest_pair.test.py
+      title: Closest Pair of Points
+    - icon: ':x:'
+      path: test/library_checker/geometory/furthest_pair.test.py
+      title: Furthest Pair of Points
     - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
@@ -1337,7 +1335,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test

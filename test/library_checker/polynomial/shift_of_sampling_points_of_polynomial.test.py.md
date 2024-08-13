@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: polynomial/sample_point_shift.py
-    title: polynomial/sample_point_shift.py
+    title: Sample Point Shift
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

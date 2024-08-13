@@ -48,8 +48,5 @@ data:
   - test/library_checker/polynomial/shift_of_sampling_points_of_polynomial.test.py
 documentation_of: polynomial/sample_point_shift.py
 layout: document
-redirect_from:
-- /library/polynomial/sample_point_shift.py
-- /library/polynomial/sample_point_shift.py.html
-title: polynomial/sample_point_shift.py
+title: Sample Point Shift
 ---

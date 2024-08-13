@@ -24,7 +24,7 @@ data:
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
-  - icon: ':warning:'
+  - icon: ':x:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
@@ -40,9 +40,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
     title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
-  _isVerificationFailed: false
+  - icon: ':x:'
+    path: test/library_checker/geometory/closest_pair.test.py
+    title: Closest Pair of Points
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -50,16 +53,16 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "import math\nfrom typing import TypeVar\n\nT = TypeVar(\"T\")\n\n\nclass\
-    \ Point:\n    def __init__(self, x: T, y: T):\n        self.EPS = 1e-10\n    \
-    \    self.x = x\n        self.y = y\n\n    def __iter__(self):\n        return\
-    \ iter([self.x, self.y])\n\n    def __add__(self, other: \"Point\") -> \"Point\"\
-    :\n        return Point(self.x + other.x, self.y + other.y)\n\n    def __sub__(self,\
-    \ other: \"Point\") -> \"Point\":\n        return Point(self.x - other.x, self.y\
-    \ - other.y)\n\n    def __mul__(self, k: \"Point\") -> \"Point\":\n        return\
-    \ Point(self.x * k, self.y * k)\n\n    def __truediv__(self, k: \"Point\") ->\
-    \ \"Point\":\n        return Point(self.x / k, self.y / k)\n\n    def __floordiv__(self,\
-    \ k: \"Point\") -> \"Point\":\n        return Point(self.x // k, self.y // k)\n\
-    \n    def __eq__(self, other: \"Point\") -> bool:\n        return abs(self.x -\
+    \ Point:\n    EPS = 1e-10\n\n    def __init__(self, x: T, y: T):\n        self.x\
+    \ = x\n        self.y = y\n\n    def __iter__(self):\n        return iter([self.x,\
+    \ self.y])\n\n    def __add__(self, other: \"Point\") -> \"Point\":\n        return\
+    \ Point(self.x + other.x, self.y + other.y)\n\n    def __sub__(self, other: \"\
+    Point\") -> \"Point\":\n        return Point(self.x - other.x, self.y - other.y)\n\
+    \n    def __mul__(self, k: \"Point\") -> \"Point\":\n        return Point(self.x\
+    \ * k, self.y * k)\n\n    def __truediv__(self, k: \"Point\") -> \"Point\":\n\
+    \        return Point(self.x / k, self.y / k)\n\n    def __floordiv__(self, k:\
+    \ \"Point\") -> \"Point\":\n        return Point(self.x // k, self.y // k)\n\n\
+    \    def __eq__(self, other: \"Point\") -> bool:\n        return abs(self.x -\
     \ other.x) < self.EPS and abs(self.y - other.y) < self.EPS\n\n    def __ne__(self,\
     \ other: \"Point\") -> bool:\n        return not self.__eq__(other)\n\n    def\
     \ __lt__(self, other: \"Point\") -> bool:\n        if self.x != other.x:\n   \
@@ -68,13 +71,13 @@ data:
     \         return self.x > other.x\n        return self.y > other.y\n\n    def\
     \ __str__(self) -> str:\n        return f\"<Point({self.x} {self.y})>\"\n\n  \
     \  __repr__ = __str__\n\n    def norm(self) -> T:\n        return self.x**2 +\
-    \ self.y**2\n\n    def abs(self) -> T:\n        return self.norm() ** 0.5\n\n\
-    \    def dot(self, other: \"Point\") -> T:\n        \"\"\"\u5185\u7A4D\"\"\"\n\
+    \ self.y**2\n\n    def abs(self) -> float:\n        return self.norm() ** 0.5\n\
+    \n    def dot(self, other: \"Point\") -> T:\n        \"\"\"\u5185\u7A4D\"\"\"\n\
     \        return self.x * other.x + self.y * other.y\n\n    def cross(self, other:\
     \ \"Point\") -> T:\n        \"\"\"\u5916\u7A4D\"\"\"\n        return self.x *\
     \ other.y - self.y * other.x\n\n    def dist_euclid(self, other: \"Point\") ->\
-    \ T:\n        \"\"\"\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\n \
-    \       return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5\n\n\
+    \ float:\n        \"\"\"\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u8DDD\u96E2\"\"\"\
+    \n        return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5\n\n\
     \    def dist_manhattan(self, other: \"Point\") -> T:\n        \"\"\"\u30DE\u30F3\
     \u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\"\"\"\n        return abs(self.x - other.x)\
     \ + abs(self.y - other.y)\n\n    def dist_chebyshev(self, other: \"Point\") ->\
@@ -92,8 +95,14 @@ data:
     \ other2 - self\n        if a.cross(b) > self.EPS:\n            return 1\n   \
     \     if a.cross(b) < -self.EPS:\n            return -1\n        if a.dot(b) <\
     \ -self.EPS:\n            return 2\n        if a.norm() < b.norm():\n        \
-    \    return -2\n        return 0\n\n    def arg(self) -> T:\n        return math.atan2(self.y,\
-    \ self.x)\n\n    def get(self) -> T:\n        return self.x, self.y\n"
+    \    return -2\n        return 0\n\n    def arg(self) -> float:\n        return\
+    \ math.atan2(self.y, self.x)\n\n    def get(self) -> tuple[T, T]:\n        return\
+    \ self.x, self.y\n\n    @classmethod\n    def cmp(cls, a: T, b: T, is_float: bool\
+    \ = False) -> int:\n        if is_float:\n            if a > b + cls.EPS:\n  \
+    \              return 1\n            if a < b - cls.EPS:\n                return\
+    \ -1\n            return 0\n        else:\n            if a > b:\n           \
+    \     return 1\n            if a < b:\n                return -1\n           \
+    \ return 0\n"
   dependsOn: []
   isVerificationFile: false
   path: geometory/basic/point.py
@@ -106,13 +115,14 @@ data:
   - geometory/convex_layer.py
   - geometory/convex_full.py
   - geometory/arg_sort.py
-  timestamp: '2024-08-09 19:58:16+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-14 05:50:48+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
   - test/aoj/cgl/cgl_3_a_area.test.py
   - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
   - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+  - test/library_checker/geometory/closest_pair.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"

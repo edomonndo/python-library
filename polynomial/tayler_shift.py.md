@@ -39,8 +39,5 @@ data:
   - test/library_checker/polynomial/polynomial_tayler_shift.test.py
 documentation_of: polynomial/tayler_shift.py
 layout: document
-redirect_from:
-- /library/polynomial/tayler_shift.py
-- /library/polynomial/tayler_shift.py.html
-title: polynomial/tayler_shift.py
+title: Tayler Shift
 ---

@@ -63,8 +63,5 @@ data:
   - test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
 documentation_of: polynomial/composition.py
 layout: document
-redirect_from:
-- /library/polynomial/composition.py
-- /library/polynomial/composition.py.html
-title: polynomial/composition.py
+title: Composition
 ---

@@ -26,7 +26,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/sort_points_by_argument.test.py
   requiredBy: []
-  timestamp: '2024-08-13 00:22:35+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/sort_points_by_argument.test.py

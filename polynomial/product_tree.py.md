@@ -79,8 +79,5 @@ data:
   - test/library_checker/polynomial/polynomial_interpolation.test.py
 documentation_of: polynomial/product_tree.py
 layout: document
-redirect_from:
-- /library/polynomial/product_tree.py
-- /library/polynomial/product_tree.py.html
-title: polynomial/product_tree.py
+title: Product Tree
 ---

@@ -56,8 +56,5 @@ data:
   - test/library_checker/polynomial/multipoint_evaluation.test.py
 documentation_of: polynomial/multipoint_evaluation.py
 layout: document
-redirect_from:
-- /library/polynomial/multipoint_evaluation.py
-- /library/polynomial/multipoint_evaluation.py.html
-title: polynomial/multipoint_evaluation.py
+title: Multipoint Evaluation
 ---

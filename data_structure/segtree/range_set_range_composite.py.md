@@ -21,7 +21,7 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import TypeVar, Callable\nfrom data_structure.segtree.segment_tree\
+  code: "from typing import TypeVar, Callable\n\nfrom data_structure.segtree.segment_tree\
     \ import Segtree\nfrom data_structure.basic.wordsize_tree_set import WordsizeTreeSet\n\
     \nT = TypeVar(\"T\")\n\n\nclass RangeSetRangeComposite:\n    def __init__(\n \
     \       self,\n        op: Callable[[T, T], T],\n        e: T,\n        pow_:\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/range_set_range_composite.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/range_set_range_composite.test.py

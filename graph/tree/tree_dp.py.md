@@ -15,8 +15,8 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "MOD = 998244353\n\nfrom typing import Callable, TypeVar\n\nT = TypeVar(\"\
-    T\")\nV = TypeVar(\"V\")\n\n\nclass TreeDp:\n    def __init__(self, n: int, adj:\
+  code: "from typing import Callable, TypeVar\n\nT = TypeVar(\"T\")\nV = TypeVar(\"\
+    V\")\n\nMOD = 998244353\n\n\nclass TreeDp:\n    def __init__(self, n: int, adj:\
     \ list[list[int]], r: int = 0):\n        par = [-1] * n\n        children = [[]\
     \ for _ in range(n)]\n        order = []\n        st = [r]\n        while st:\n\
     \            u = st.pop()\n            order.append(u)\n            for v in adj[u]:\n\
@@ -53,7 +53,7 @@ data:
   isVerificationFile: false
   path: graph/tree/tree_dp.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_b_tree_height.test.py

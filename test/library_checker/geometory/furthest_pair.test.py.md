@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/furthest_pair
     links:
@@ -27,16 +27,13 @@ data:
     \ q.y == y:\n                j = k\n                break\n    print(i, j)\n"
   dependsOn:
   - geometory/diameter.py
-  isVerificationFile: false
-  path: test/library_checker/geometory/furthest_pair.py
+  isVerificationFile: true
+  path: test/library_checker/geometory/furthest_pair.test.py
   requiredBy: []
-  timestamp: '2024-08-13 00:57:36+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2024-08-14 05:50:48+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/library_checker/geometory/furthest_pair.py
+documentation_of: test/library_checker/geometory/furthest_pair.test.py
 layout: document
-redirect_from:
-- /library/test/library_checker/geometory/furthest_pair.py
-- /library/test/library_checker/geometory/furthest_pair.py.html
-title: test/library_checker/geometory/furthest_pair.py
+title: Furthest Pair of Points
 ---

@@ -15,7 +15,7 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "inf = 1 << 60\n\nfrom collections import deque\n\n\nclass GeneralWeightedMatching:\n\
+  code: "from collections import deque\n\ninf = 1 << 60\n\n\nclass GeneralWeightedMatching:\n\
     \    def __init__(self, n, edges: list[tuple[int, int, int]]):\n        self.n\
     \ = n\n        self.nx = n\n        self.m = m = 2 * n + 1\n        m2 = m * m\n\
     \        self.U = [0] * m2\n        self.V = [0] * m2\n        self.W = [0] *\
@@ -152,7 +152,7 @@ data:
   isVerificationFile: false
   path: graph/general_weighted_matching.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/general_weighted_matching.test.py

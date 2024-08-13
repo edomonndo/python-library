@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test/library_checker/geometory/furthest_pair.py
-    title: test/library_checker/geometory/furthest_pair.py
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/geometory/furthest_pair.test.py
+    title: Furthest Pair of Points
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -23,7 +23,7 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Union, Optional, TypeVar\n\nT = TypeVar(\"T\")\n\nfrom\
     \ geometory.basic.point import Point\nfrom geometory.convex_full import convex_hull\n\
-    \n\ndef diameter(\n    ps: list[Union[Point, tuple[int, int]]]\n) -> Optional[tuple[T,\
+    \n\ndef diameter(\n    ps: list[Union[Point, tuple[T, T]]]\n) -> Optional[tuple[float,\
     \ Point, Point]]:\n\n    ch = convex_hull(ps)\n    n = len(ch)\n    if n == 0:\n\
     \        return None\n    if n == 1:\n        return 0, ch[0], ch[0]\n    if n\
     \ == 2:\n        return (ch[0] - ch[1]).abs(), ch[0], ch[1]\n\n    u = v = 0\n\
@@ -47,11 +47,11 @@ data:
   - geometory/convex_full.py
   isVerificationFile: false
   path: geometory/diameter.py
-  requiredBy:
-  - test/library_checker/geometory/furthest_pair.py
-  timestamp: '2024-08-13 00:57:36+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy: []
+  timestamp: '2024-08-14 05:50:48+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/geometory/furthest_pair.test.py
 documentation_of: geometory/diameter.py
 layout: document
 title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"

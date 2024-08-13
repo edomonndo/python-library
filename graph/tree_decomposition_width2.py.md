@@ -18,9 +18,9 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import Optional\nfrom collections import deque\nfrom graph.connectivity.unionfind\
-    \ import UnionFind\nimport sys\n\nsys.setrecursionlimit(2_000_000)\n\n\nclass\
-    \ TreeDecompositionWidth2:\n    def __init__(self, n: int, edges: list[tuple[int,\
+  code: "from collections import deque\nfrom typing import Optional\nimport sys\n\n\
+    sys.setrecursionlimit(2_000_000)\n\nfrom graph.connectivity.unionfind import UnionFind\n\
+    \n\nclass TreeDecompositionWidth2:\n    def __init__(self, n: int, edges: list[tuple[int,\
     \ int]]):\n        self.n = n\n        self.adj = adj = [[] for _ in range(n)]\n\
     \        for u, v in edges:\n            if u == v:\n                continue\n\
     \            if u > v:\n                u, v = v, u\n            du, dv = len(adj[u]),\
@@ -72,7 +72,7 @@ data:
   isVerificationFile: false
   path: graph/tree_decomposition_width2.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/tree_decomposition_width2.test.py

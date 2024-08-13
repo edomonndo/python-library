@@ -5,7 +5,7 @@ data:
     path: geometory/basic/line.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
       \u5206)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
@@ -67,7 +67,7 @@ data:
   isVerificationFile: false
   path: geometory/basic/polygon.py
   requiredBy: []
-  timestamp: '2024-08-09 19:58:16+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py

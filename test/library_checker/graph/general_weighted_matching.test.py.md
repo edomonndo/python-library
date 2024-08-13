@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/general_weighted_matching.test.py
   requiredBy: []
-  timestamp: '2024-07-02 07:09:42+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/general_weighted_matching.test.py

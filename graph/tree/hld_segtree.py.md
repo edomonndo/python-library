@@ -27,22 +27,22 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from data_structure.segtree.segment_tree import Segtree\nfrom graph.tree.heavy_light_decomposition\
-    \ import HeavyLightDecomposition\nfrom typing import Callable, TypeVar\n\nT =\
-    \ TypeVar(\"T\")\n\n\nclass HldSegTree:\n    def __init__(\n        self,\n  \
-    \      op: Callable[[T, T], T],\n        e: T,\n        v: list[int],\n      \
-    \  n: int,\n        edges: list[int, int],\n        root: int = 0,\n    ):\n \
-    \       # assert n == len(v)\n        self.hld = HeavyLightDecomposition(n, edges,\
-    \ root)\n        nv = self.hld.build_list(v)\n        self.seg = Segtree(nv, op,\
-    \ e)\n        self.op = op\n        self.e = e\n\n    def path_prod(self, u: int,\
-    \ v: int) -> T:\n        head, into, depth = self.hld.head, self.hld.into, self.hld.depth\n\
-    \        seg, par, op = self.seg, self.hld.par, self.op\n\n        res = self.e\n\
-    \        while head[u] != head[v]:\n            if depth[head[u]] < depth[head[v]]:\n\
-    \                u, v = v, u\n            res = op(res, seg.prod(into[head[u]],\
-    \ into[u] + 1))\n            u = par[head[u]]\n        if depth[u] < depth[v]:\n\
-    \            u, v = v, u\n        return op(res, seg.prod(into[v], into[u] + 1))\n\
-    \n    def subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
-    \ self.hld.out[v])\n\n    def get(self, k: int) -> T:\n        return self.seg.get(self.hld.into[k])\n\
+  code: "from typing import Callable, TypeVar\n\nT = TypeVar(\"T\")\n\nfrom data_structure.segtree.segment_tree\
+    \ import Segtree\nfrom graph.tree.heavy_light_decomposition import HeavyLightDecomposition\n\
+    \n\nclass HldSegTree:\n    def __init__(\n        self,\n        op: Callable[[T,\
+    \ T], T],\n        e: T,\n        v: list[int],\n        n: int,\n        edges:\
+    \ list[int, int],\n        root: int = 0,\n    ):\n        # assert n == len(v)\n\
+    \        self.hld = HeavyLightDecomposition(n, edges, root)\n        nv = self.hld.build_list(v)\n\
+    \        self.seg = Segtree(nv, op, e)\n        self.op = op\n        self.e =\
+    \ e\n\n    def path_prod(self, u: int, v: int) -> T:\n        head, into, depth\
+    \ = self.hld.head, self.hld.into, self.hld.depth\n        seg, par, op = self.seg,\
+    \ self.hld.par, self.op\n\n        res = self.e\n        while head[u] != head[v]:\n\
+    \            if depth[head[u]] < depth[head[v]]:\n                u, v = v, u\n\
+    \            res = op(res, seg.prod(into[head[u]], into[u] + 1))\n           \
+    \ u = par[head[u]]\n        if depth[u] < depth[v]:\n            u, v = v, u\n\
+    \        return op(res, seg.prod(into[v], into[u] + 1))\n\n    def subtree_prod(self,\
+    \ v: int) -> T:\n        return self.seg.prod(self.hld.into[v], self.hld.out[v])\n\
+    \n    def get(self, k: int) -> T:\n        return self.seg.get(self.hld.into[k])\n\
     \n    def set(self, k: int, v: T) -> None:\n        k = self.hld.into[k]\n   \
     \     self.seg.set(k, v)\n"
   dependsOn:
@@ -51,7 +51,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_segtree.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py

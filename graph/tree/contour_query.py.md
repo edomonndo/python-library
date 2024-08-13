@@ -21,25 +21,25 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from graph.tree.centroid_decomposition import CentroidDecomposition\n\nfrom\
-    \ collections import deque\nfrom typing import Callable, TypeVar\n\nT = TypeVar(\"\
-    T\")\n\n\nclass ContourQuery:\n    def __init__(self, adj: list[list[int]], f:\
-    \ Callable[[list[T]], None]):\n        self.n = n = len(adj)\n        self.adj\
-    \ = adj\n        cd = CentroidDecomposition(adj, 0)\n        self.root = root\
-    \ = cd.get_root()\n        self.H = H = cd.get_graph()\n\n        self.par = par\
-    \ = [-1] * n\n        self.dep = dep = [-1] * n\n        st = [(root, -1, 0)]\n\
-    \        while st:\n            v, p, d = st.pop()\n            par[v] = p\n \
-    \           dep[v] = d\n            for u in H[v]:\n                st.append((u,\
-    \ v, d + 1))\n\n        h = max(dep) + 1\n        self.vt = vt = [[] for _ in\
-    \ range(n)]\n        self.ct = ct = [[] for _ in range(n)]\n        self.cpar\
-    \ = cpar = [[-1] * h for _ in range(n)]\n        self.dist = dist = [[-1] * h\
-    \ for _ in range(n)]\n        self._build()\n\n        self.rdx1 = rdx1 = [[-1]\
-    \ * h for _ in range(n)]\n        self.rdx2 = rdx2 = [[-1] * h for _ in range(n)]\n\
-    \        dat = [[] for _ in range(n << 1)]\n        for i in range(n):\n     \
-    \       dat[i] = [0] * len(vt[i])\n            for j, (_, a) in enumerate(vt[i]):\n\
-    \                dat[i][j] = a\n                rdx1[a][dep[i]] = j\n\n      \
-    \  self.idx = idx = [[] for _ in range(n)]\n        cnt = n\n        for i in\
-    \ range(n):\n            idx[i] = [0] * len(ct[i])\n            for j in range(len(ct[i])):\n\
+  code: "from collections import deque\nfrom typing import Callable, TypeVar\n\nT\
+    \ = TypeVar(\"T\")\n\nfrom graph.tree.centroid_decomposition import CentroidDecomposition\n\
+    \n\nclass ContourQuery:\n    def __init__(self, adj: list[list[int]], f: Callable[[list[T]],\
+    \ None]):\n        self.n = n = len(adj)\n        self.adj = adj\n        cd =\
+    \ CentroidDecomposition(adj, 0)\n        self.root = root = cd.get_root()\n  \
+    \      self.H = H = cd.get_graph()\n\n        self.par = par = [-1] * n\n    \
+    \    self.dep = dep = [-1] * n\n        st = [(root, -1, 0)]\n        while st:\n\
+    \            v, p, d = st.pop()\n            par[v] = p\n            dep[v] =\
+    \ d\n            for u in H[v]:\n                st.append((u, v, d + 1))\n\n\
+    \        h = max(dep) + 1\n        self.vt = vt = [[] for _ in range(n)]\n   \
+    \     self.ct = ct = [[] for _ in range(n)]\n        self.cpar = cpar = [[-1]\
+    \ * h for _ in range(n)]\n        self.dist = dist = [[-1] * h for _ in range(n)]\n\
+    \        self._build()\n\n        self.rdx1 = rdx1 = [[-1] * h for _ in range(n)]\n\
+    \        self.rdx2 = rdx2 = [[-1] * h for _ in range(n)]\n        dat = [[] for\
+    \ _ in range(n << 1)]\n        for i in range(n):\n            dat[i] = [0] *\
+    \ len(vt[i])\n            for j, (_, a) in enumerate(vt[i]):\n               \
+    \ dat[i][j] = a\n                rdx1[a][dep[i]] = j\n\n        self.idx = idx\
+    \ = [[] for _ in range(n)]\n        cnt = n\n        for i in range(n):\n    \
+    \        idx[i] = [0] * len(ct[i])\n            for j in range(len(ct[i])):\n\
     \                if len(ct[i][j]) == 0:\n                    continue\n      \
     \          dat[cnt] = [0] * len(ct[i][j])\n                for k, (_, a) in enumerate(ct[i][j]):\n\
     \                    dat[cnt][k] = a\n                    rdx2[a][dep[i]] = k\n\
@@ -112,7 +112,7 @@ data:
   isVerificationFile: false
   path: graph/tree/contour_query.py
   requiredBy: []
-  timestamp: '2024-07-04 12:06:06+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/vertex_get_range_contour_add_on_tree.test.py

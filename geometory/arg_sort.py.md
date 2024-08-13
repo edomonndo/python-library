@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: geometory/basic/point.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
@@ -18,15 +18,15 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import Union\n\nfrom geometory.basic.point import Point\n\n\n\
-    def arg_sort(ps: list[Union[Point, tuple[int, int]]]) -> list[Point]:\n    def\
-    \ merge_sort(arr):\n        if not arr:\n            return\n        n = len(arr)\n\
-    \        a = [arr, arr[:]]\n        # \u975E\u518D\u5E30DFS\n        st = [(0,\
-    \ n, 1, 0)]  # \u533A\u9593[l,r),DFS\u306E\u30D5\u30E9\u30B0f,\u5BFE\u8C61\u306E\
-    \u30EA\u30B9\u30C8\n        while st:\n            l, r, f, g = st.pop()\n   \
-    \         m = (l + r) >> 1\n            if f:\n                st.append((l, r,\
-    \ 0, g))\n                if m - l > 1:\n                    st.append((l, m,\
-    \ 1, g ^ 1))\n                if r - m > 1:\n                    st.append((m,\
+  code: "from typing import Union, TypeVar\n\nT = TypeVar(\"T\")\n\nfrom geometory.basic.point\
+    \ import Point\n\n\ndef arg_sort(ps: list[Union[Point, tuple[T, T]]]) -> list[Point]:\n\
+    \    def merge_sort(arr):\n        if not arr:\n            return\n        n\
+    \ = len(arr)\n        a = [arr, arr[:]]\n        # \u975E\u518D\u5E30DFS\n   \
+    \     st = [(0, n, 1, 0)]  # \u533A\u9593[l,r),DFS\u306E\u30D5\u30E9\u30B0f,\u5BFE\
+    \u8C61\u306E\u30EA\u30B9\u30C8\n        while st:\n            l, r, f, g = st.pop()\n\
+    \            m = (l + r) >> 1\n            if f:\n                st.append((l,\
+    \ r, 0, g))\n                if m - l > 1:\n                    st.append((l,\
+    \ m, 1, g ^ 1))\n                if r - m > 1:\n                    st.append((m,\
     \ r, 1, g ^ 1))\n            else:\n                i, j, p, q = l, m, m - 1,\
     \ r - 1\n                a1 = a[g]\n                a2 = a[g ^ 1]\n          \
     \      for k in range((r - l) >> 1):\n                    xi, yi = a2[i]\n   \
@@ -50,7 +50,7 @@ data:
   isVerificationFile: false
   path: geometory/arg_sort.py
   requiredBy: []
-  timestamp: '2024-08-13 00:22:35+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/geometory/sort_points_by_argument.test.py

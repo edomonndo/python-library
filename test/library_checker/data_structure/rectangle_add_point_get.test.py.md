@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/data_structure/rectangle_add_point_get.test.py
   requiredBy: []
-  timestamp: '2024-08-05 21:31:21+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/data_structure/rectangle_add_point_get.test.py

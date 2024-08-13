@@ -7,13 +7,13 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
-    title: polynomial/composition.py
+    title: Composition
   - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
-    title: polynomial/multipoint_evaluation.py
+    title: Multipoint Evaluation
   - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
-    title: polynomial/product_tree.py
+    title: Product Tree
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py

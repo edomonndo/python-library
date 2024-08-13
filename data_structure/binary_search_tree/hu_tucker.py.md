@@ -12,15 +12,15 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from heapq import heapify, heappush, heappop\n\n\nclass Node:\n    def __init__(self,\
-    \ val: int):\n        self.val = val\n        self.lt = None\n        self.rt\
-    \ = None\n\n\nclass HuTucker:\n    inf = float(\"inf\")\n\n    @staticmethod\n\
-    \    def meld(a: Node | None, b: Node | None) -> Node | None:\n        if a is\
-    \ None:\n            return b\n        if b is None:\n            return a\n \
-    \       if a.val > b.val:\n            a, b = b, a\n        a.rt = HuTucker.meld(a.rt,\
-    \ b)\n        a.lt, a.rt = a.rt, a.lt\n        return a\n\n    @staticmethod\n\
-    \    def top(a: Node) -> int:\n        return a.val\n\n    @staticmethod\n   \
-    \ def pop(a: Node) -> Node:\n        return HuTucker.meld(a.lt, a.rt)\n\n    @staticmethod\n\
+  code: "from heapq import *\n\n\nclass Node:\n    def __init__(self, val: int):\n\
+    \        self.val = val\n        self.lt = None\n        self.rt = None\n\n\n\
+    class HuTucker:\n    inf = float(\"inf\")\n\n    @staticmethod\n    def meld(a:\
+    \ Node | None, b: Node | None) -> Node | None:\n        if a is None:\n      \
+    \      return b\n        if b is None:\n            return a\n        if a.val\
+    \ > b.val:\n            a, b = b, a\n        a.rt = HuTucker.meld(a.rt, b)\n \
+    \       a.lt, a.rt = a.rt, a.lt\n        return a\n\n    @staticmethod\n    def\
+    \ top(a: Node) -> int:\n        return a.val\n\n    @staticmethod\n    def pop(a:\
+    \ Node) -> Node:\n        return HuTucker.meld(a.lt, a.rt)\n\n    @staticmethod\n\
     \    def push(a: Node, x: int) -> Node:\n        b = Node(x)\n        return HuTucker.meld(a,\
     \ b)\n\n    @staticmethod\n    def solve(w: list[int]) -> int:\n        inf =\
     \ HuTucker.inf\n        meld, top, pop, push = HuTucker.meld, HuTucker.top, HuTucker.pop,\
@@ -55,7 +55,7 @@ data:
   isVerificationFile: false
   path: data_structure/binary_search_tree/hu_tucker.py
   requiredBy: []
-  timestamp: '2024-05-02 15:05:51+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/binary_search_tree/hu_tucker.py

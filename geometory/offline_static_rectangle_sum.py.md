@@ -18,7 +18,7 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from bisect import bisect_left\nfrom data_structure.fenwick_tree.fenwick_tree\
+  code: "from bisect import bisect_left\n\nfrom data_structure.fenwick_tree.fenwick_tree\
     \ import FenwickTree\n\n\ndef solve(\n    points: list[tuple[int, int, int]],\
     \ queries: list[tuple[int, int]]\n) -> list[int]:\n    n, q = len(points), len(queries)\n\
     \n    # y\u5EA7\u6A19\u3067\u30BD\u30FC\u30C8&\u5EA7\u5727\n    points.sort(key=lambda\
@@ -40,7 +40,7 @@ data:
   isVerificationFile: false
   path: geometory/offline_static_rectangle_sum.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/rectangle_sum.test.py

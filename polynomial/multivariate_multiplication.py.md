@@ -38,8 +38,5 @@ data:
   verifiedWith: []
 documentation_of: polynomial/multivariate_multiplication.py
 layout: document
-redirect_from:
-- /library/polynomial/multivariate_multiplication.py
-- /library/polynomial/multivariate_multiplication.py.html
-title: polynomial/multivariate_multiplication.py
+title: Multivariate Multiplication
 ---
