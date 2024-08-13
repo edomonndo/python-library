@@ -1,4 +1,5 @@
 from typing import TypeVar, Callable
+
 from data_structure.segtree.segment_tree import Segtree
 from data_structure.basic.wordsize_tree_set import WordsizeTreeSet
 

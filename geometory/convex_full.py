@@ -1,10 +1,12 @@
-from typing import Union
+from typing import Union, TypeVar
+
+T = TypeVar("T")
 
 from geometory.basic.point import Point
 
 
 def convex_hull(
-    ps_: list[Union[Point, tuple[int, int]]], multi: bool = False
+    ps_: list[Union[Point, tuple[T, T]]], multi: bool = False
 ) -> list[Point]:
     ps = [Point(x, y) for x, y in sorted(ps_)]
     if not ps:

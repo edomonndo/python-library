@@ -1,6 +1,6 @@
-inf = 1 << 60
-
 from collections import deque
+
+inf = 1 << 60
 
 
 class GeneralWeightedMatching:

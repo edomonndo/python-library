@@ -1,8 +1,7 @@
-from data_structure.fenwick_tree.fenwick_tree import FenwickTree
-
-
 from collections import deque
 from bisect import bisect_left
+
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 
 
 class StaticRectangleAddPointGet:

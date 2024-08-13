@@ -1,4 +1,4 @@
-from heapq import heapify, heappush, heappop
+from heapq import *
 
 
 class Node:

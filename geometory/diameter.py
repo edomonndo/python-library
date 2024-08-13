@@ -7,8 +7,8 @@ from geometory.convex_full import convex_hull
 
 
 def diameter(
-    ps: list[Union[Point, tuple[int, int]]]
-) -> Optional[tuple[T, Point, Point]]:
+    ps: list[Union[Point, tuple[T, T]]]
+) -> Optional[tuple[float, Point, Point]]:
 
     ch = convex_hull(ps)
     n = len(ch)

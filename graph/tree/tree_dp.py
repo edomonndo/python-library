@@ -1,9 +1,9 @@
-MOD = 998244353
-
 from typing import Callable, TypeVar
 
 T = TypeVar("T")
 V = TypeVar("V")
+
+MOD = 998244353
 
 
 class TreeDp:

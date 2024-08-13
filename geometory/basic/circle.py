@@ -1,5 +1,5 @@
 import math
-from typing import Union, TypeVar
+from typing import TypeVar
 
 T = TypeVar("T")
 

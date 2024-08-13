@@ -5,8 +5,9 @@ T = TypeVar("T")
 
 
 class Point:
+    EPS = 1e-10
+
     def __init__(self, x: T, y: T):
-        self.EPS = 1e-10
         self.x = x
         self.y = y
 
@@ -52,7 +53,7 @@ class Point:
     def norm(self) -> T:
         return self.x**2 + self.y**2
 
-    def abs(self) -> T:
+    def abs(self) -> float:
         return self.norm() ** 0.5
 
     def dot(self, other: "Point") -> T:
@@ -63,7 +64,7 @@ class Point:
         """外積"""
         return self.x * other.y - self.y * other.x
 
-    def dist_euclid(self, other: "Point") -> T:
+    def dist_euclid(self, other: "Point") -> float:
         """ユークリッド距離"""
         return ((self.x - other.x) ** 2 + (self.y - other.y) ** 2) ** 0.5
 
@@ -103,8 +104,23 @@ class Point:
             return -2
         return 0
 
-    def arg(self) -> T:
+    def arg(self) -> float:
         return math.atan2(self.y, self.x)
 
-    def get(self) -> T:
+    def get(self) -> tuple[T, T]:
         return self.x, self.y
+
+    @classmethod
+    def cmp(cls, a: T, b: T, is_float: bool = False) -> int:
+        if is_float:
+            if a > b + cls.EPS:
+                return 1
+            if a < b - cls.EPS:
+                return -1
+            return 0
+        else:
+            if a > b:
+                return 1
+            if a < b:
+                return -1
+            return 0

@@ -1,8 +1,9 @@
-from data_structure.segtree.segment_tree import Segtree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from typing import Callable, TypeVar
 
 T = TypeVar("T")
+
+from data_structure.segtree.segment_tree import Segtree
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 
 class HldSegTree:

@@ -1,21 +1,18 @@
-from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from bisect import bisect_left
+
+from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 
 MOD = 998244353
 
-from typing import TypeVar
 
-T = TypeVar("T")
-
-
-class T:
+class Node:
     def __init__(self, a: int, b: int, c: int, d: int):
         self.a = a % MOD
         self.b = b % MOD
         self.c = c % MOD
         self.d = d % MOD
 
-    def __iadd__(self, other) -> T:
+    def __iadd__(self, other) -> "Node":
         a = self.a + other.a
         if a >= MOD:
             a -= MOD
@@ -28,7 +25,7 @@ class T:
         d = self.d + other.d
         if d >= MOD:
             d -= MOD
-        return T(a, b, c, d)
+        return Node(a, b, c, d)
 
 
 class OfflineRectangleAddRectangleSum:
@@ -71,17 +68,17 @@ class OfflineRectangleAddRectangleSum:
         event_qs.sort()
 
         j = 0
-        bit = FenwickTree(len(toY) + 1, T(0, 0, 0, 0))
+        bit = FenwickTree(len(toY) + 1, Node(0, 0, 0, 0))
         for qx, qy1, qy2, qf, qi in event_qs:
             while j < n + n and event_rect[j][0] < qx:
                 p1, p2, f, i = event_rect[j][1:]
                 rx1, ry1, rx2, ry2, w = self.rects[i]
                 if f:
-                    bit.add(p1, T(-w * rx2 * ry1, -w, w * ry1, w * rx2))
-                    bit.add(p2, T(w * rx2 * ry2, w, -w * ry2, -w * rx2))
+                    bit.add(p1, Node(-w * rx2 * ry1, -w, w * ry1, w * rx2))
+                    bit.add(p2, Node(w * rx2 * ry2, w, -w * ry2, -w * rx2))
                 else:
-                    bit.add(p1, T(w * rx1 * ry1, w, -w * ry1, -w * rx1))
-                    bit.add(p2, T(-w * rx1 * ry2, -w, w * ry2, w * rx1))
+                    bit.add(p1, Node(w * rx1 * ry1, w, -w * ry1, -w * rx1))
+                    bit.add(p2, Node(-w * rx1 * ry2, -w, w * ry2, w * rx1))
                 j += 1
 
             qu = self.qs[qi]

@@ -1,9 +1,9 @@
-from graph.tree.centroid_decomposition import CentroidDecomposition
-
 from collections import deque
 from typing import Callable, TypeVar
 
 T = TypeVar("T")
+
+from graph.tree.centroid_decomposition import CentroidDecomposition
 
 
 class ContourQuery:

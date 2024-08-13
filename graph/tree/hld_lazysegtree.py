@@ -1,9 +1,10 @@
-from data_structure.segtree.lazy_segment_tree import LazySegtree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from typing import Callable, TypeVar
 
 T = TypeVar("T")
 F = TypeVar("F")
+
+from data_structure.segtree.lazy_segment_tree import LazySegtree
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
 
 class HldLazySegTree:

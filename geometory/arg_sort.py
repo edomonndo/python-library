@@ -1,9 +1,11 @@
-from typing import Union
+from typing import Union, TypeVar
+
+T = TypeVar("T")
 
 from geometory.basic.point import Point
 
 
-def arg_sort(ps: list[Union[Point, tuple[int, int]]]) -> list[Point]:
+def arg_sort(ps: list[Union[Point, tuple[T, T]]]) -> list[Point]:
     def merge_sort(arr):
         if not arr:
             return

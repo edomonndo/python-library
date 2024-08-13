@@ -1,9 +1,10 @@
-from typing import Optional
 from collections import deque
-from graph.connectivity.unionfind import UnionFind
+from typing import Optional
 import sys
 
 sys.setrecursionlimit(2_000_000)
+
+from graph.connectivity.unionfind import UnionFind
 
 
 class TreeDecompositionWidth2:
