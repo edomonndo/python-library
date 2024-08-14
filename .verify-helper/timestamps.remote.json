@@ -145,6 +145,7 @@
 "test/library_checker/number_theory/factorize.test.py": "2024-07-02 07:37:15 +0900",
 "test/library_checker/number_theory/min_of_linear.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/number_theory/primitive_root.test.py": "2024-07-02 07:09:42 +0900",
+"test/library_checker/number_theory/stern_brocot_tree.test.py": "2024-08-14 16:01:16 +0900",
 "test/library_checker/number_theory/sum_of_floor_of_linear.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/other/two_sat.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py": "2024-07-02 07:37:15 +0900",
