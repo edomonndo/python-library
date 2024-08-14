@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/furthest_pair
     links:
@@ -30,8 +30,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/furthest_pair.test.py
   requiredBy: []
-  timestamp: '2024-08-14 05:50:48+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-14 14:54:08+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/geometory/furthest_pair.test.py
 layout: document

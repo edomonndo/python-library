@@ -21,6 +21,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/range_parallel_unionfind.test.py
     title: Range Parallel Unionfind
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/scc_incremental.test.py
+    title: Strongly Connected Components (Incremental)
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -62,6 +65,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/range_parallel_unionfind.test.py
+  - test/library_checker/graph/scc_incremental.test.py
   - test/library_checker/graph/manhattanmst.test.py
   - test/library_checker/graph/minimum_spanning_tree.test.py
 documentation_of: graph/connectivity/unionfind.py

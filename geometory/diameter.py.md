@@ -9,12 +9,12 @@ data:
     title: Convex full
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/furthest_pair.test.py
     title: Furthest Pair of Points
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -35,21 +35,15 @@ data:
     \         up, vp = ch[u], ch[v]\n        a = ch[(u + 1) % n] - ch[u]\n       \
     \ b = ch[(v + 1) % n] - ch[v]\n        if a.cross(b) < 0:\n            u = (u\
     \ + 1) % n\n        else:\n            v = (v + 1) % n\n    return dist2**0.5,\
-    \ up, vp\n\n\nt = int(input())\nfor _ in range(t):\n    n = int(input())\n   \
-    \ ps = [tuple(map(int, input().split())) for _ in range(n)]\n    _, p, q = diameter(ps)\n\
-    \    i = j = -1\n    for k, (x, y) in enumerate(ps):\n        if i == -1:\n  \
-    \          if p.x == x and p.y == y:\n                i = k\n            elif\
-    \ q.x == x and q.y == y:\n                i = k\n                p, q = q, p\n\
-    \        else:\n            if i != k and q.x == x and q.y == y:\n           \
-    \     j = k\n                break\n    print(i, j)\n"
+    \ up, vp\n"
   dependsOn:
   - geometory/basic/point.py
   - geometory/convex_full.py
   isVerificationFile: false
   path: geometory/diameter.py
   requiredBy: []
-  timestamp: '2024-08-14 05:50:48+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-14 14:54:08+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/geometory/furthest_pair.test.py
 documentation_of: geometory/diameter.py

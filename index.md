@@ -219,7 +219,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_layer.py
       title: geometory/convex_layer.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: geometory/diameter.py
       title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
@@ -341,6 +341,9 @@ data:
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
+      path: graph/scc_incremental.py
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
+    - icon: ':heavy_check_mark:'
       path: graph/shortest_paths.py
       title: Shortest paths
     - icon: ':heavy_check_mark:'
@@ -428,7 +431,7 @@ data:
       path: graph/tree/hld_segtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
         \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/hld_segtree_noncommutative.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
         \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
@@ -1040,7 +1043,7 @@ data:
     - icon: ':x:'
       path: test/library_checker/geometory/closest_pair.test.py
       title: Closest Pair of Points
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/furthest_pair.test.py
       title: Furthest Pair of Points
     - icon: ':heavy_check_mark:'
@@ -1123,6 +1126,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/scc_incremental.test.py
+      title: Strongly Connected Components (Incremental)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/shortest_path.test.py
       title: Shortest Path
@@ -1335,7 +1341,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
       title: Vertex Set Path Composite
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test

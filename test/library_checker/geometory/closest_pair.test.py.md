@@ -10,15 +10,15 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://judge.yosupo.jp/problem/furthest_pair
+    PROBLEM: https://judge.yosupo.jp/problem/closest_pair
     links:
-    - https://judge.yosupo.jp/problem/furthest_pair
+    - https://judge.yosupo.jp/problem/closest_pair
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/furthest_pair\n\
-    \n\nfrom typing import Union, Optional, TypeVar\n\nT = TypeVar(\"T\")\n\n\nfrom\
+  code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/closest_pair\n\
+    \nfrom typing import Union, Optional, TypeVar\n\nT = TypeVar(\"T\")\n\n\nfrom\
     \ geometory.basic.point import Point\n\n\ndef closest_pair(\n    ps_: list[Union[Point,\
     \ tuple[T, T]]]\n) -> Optional[tuple[float, Point, Point]]:\n\n    assert len(ps_)\
     \ >= 2\n\n    ps = sorted(Point(x, y) for x, y in ps_)\n    if len(ps) == 2:\n\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/geometory/closest_pair.test.py
   requiredBy: []
-  timestamp: '2024-08-14 05:50:48+09:00'
+  timestamp: '2024-08-14 14:58:45+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/geometory/closest_pair.test.py

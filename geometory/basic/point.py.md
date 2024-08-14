@@ -24,7 +24,7 @@ data:
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:

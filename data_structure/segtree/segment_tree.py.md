@@ -21,7 +21,7 @@ data:
     path: graph/tree/hld_segtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
       \u30A8\u30EA\uFF09"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/hld_segtree_noncommutative.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"

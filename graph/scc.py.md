@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: graph/scc_incremental.py
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
@@ -45,7 +48,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: graph/scc.py
-  requiredBy: []
+  requiredBy:
+  - graph/scc_incremental.py
   timestamp: '2024-07-23 17:42:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
