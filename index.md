@@ -514,7 +514,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/stern_brocot_tree.py
       title: Stern Brocot tree
   - name: other
@@ -1187,6 +1187,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
       title: Primitive Root
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/number_theory/stern_brocot_tree.test.py
+      title: "Stern\u2013Brocot Tree"
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/sum_of_floor_of_linear.test.py
       title: Sum of Floor of Linear
