@@ -1,5 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/furthest_pair
-
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/closest_pair
 
 from typing import Union, Optional, TypeVar
 
