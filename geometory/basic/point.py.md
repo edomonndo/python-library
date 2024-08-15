@@ -5,7 +5,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/arg_sort.py
     title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-  - icon: ':warning:'
+  - icon: ':question:'
     path: geometory/basic/circle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
   - icon: ':heavy_check_mark:'
@@ -18,13 +18,16 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
+  - icon: ':question:'
+    path: geometory/closest_pair.py
+    title: Closest Pair
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
     title: Convex full
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
@@ -40,12 +43,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
     title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
-  - icon: ':x:'
-    path: test/library_checker/geometory/closest_pair.test.py
-    title: Closest Pair of Points
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -113,16 +113,16 @@ data:
   - geometory/basic/polygon.py
   - geometory/basic/rectangle.py
   - geometory/convex_layer.py
+  - geometory/closest_pair.py
   - geometory/convex_full.py
   - geometory/arg_sort.py
   timestamp: '2024-08-14 05:50:48+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
   - test/aoj/cgl/cgl_3_a_area.test.py
   - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
   - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
-  - test/library_checker/geometory/closest_pair.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
