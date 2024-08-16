@@ -1,4 +1,5 @@
-# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/5/CGL_5_A ERROR 1e-6
+# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/5/CGL_5_A
+# verification-helper: ERROR 1e-6
 
 from geometory.closest_pair import closest_pair
 
