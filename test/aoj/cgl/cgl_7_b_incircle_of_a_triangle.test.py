@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/7/CGL_7_B
+# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/7/CGL_7_B ERROR 1e-6
 
 from geometory.basic.circle import Circle
 
