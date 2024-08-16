@@ -9,15 +9,15 @@ data:
     title: Convex full
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
     title: "CGL4B \u51F8\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/furthest_pair.test.py
     title: Furthest Pair of Points
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -46,7 +46,7 @@ data:
   path: geometory/diameter.py
   requiredBy: []
   timestamp: '2024-08-14 14:54:08+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
   - test/library_checker/geometory/furthest_pair.test.py

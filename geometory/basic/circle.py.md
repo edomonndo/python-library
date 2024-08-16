@@ -13,12 +13,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_7_a_intersection.test.py
     title: "CGL7A \u5186\u306E\u4EA4\u5DEE\u5224\u5B9A"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_7_b_incircle_of_a_triangle.test.py
     title: "CGL7B \u5185\u63A5\u5186"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -65,7 +65,7 @@ data:
   requiredBy:
   - geometory/basic/line.py
   timestamp: '2024-08-15 10:59:11+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_7_b_incircle_of_a_triangle.test.py
   - test/aoj/cgl/cgl_7_a_intersection.test.py

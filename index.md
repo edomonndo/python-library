@@ -213,7 +213,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: geometory/arg_sort.py
       title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/closest_pair.py
       title: Closest Pair
     - icon: ':heavy_check_mark:'
@@ -222,7 +222,7 @@ data:
     - icon: ':warning:'
       path: geometory/convex_layer.py
       title: geometory/convex_layer.py
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/diameter.py
       title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
@@ -252,7 +252,7 @@ data:
       title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   - name: geometory/basic
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: geometory/basic/circle.py
       title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
     - icon: ':heavy_check_mark:'
@@ -709,16 +709,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
       title: "CGL3C \u591A\u89D2\u5F62 \u70B9\u306E\u5305\u542B"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
       title: "CGL4B \u51F8\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_5_a_closest_pair.test.py
       title: "CGL5A \u6700\u8FD1\u70B9\u5BFE"
     - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_7_a_intersection.test.py
       title: "CGL7A \u5186\u306E\u4EA4\u5DEE\u5224\u5B9A"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/cgl/cgl_7_b_incircle_of_a_triangle.test.py
       title: "CGL7B \u5185\u63A5\u5186"
   - name: test/aoj/dsl

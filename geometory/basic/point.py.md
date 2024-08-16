@@ -5,7 +5,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/arg_sort.py
     title: "\u504F\u89D2\u30BD\u30FC\u30C8"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/basic/circle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
   - icon: ':heavy_check_mark:'
@@ -18,7 +18,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/closest_pair.py
     title: Closest Pair
   - icon: ':heavy_check_mark:'
@@ -27,7 +27,7 @@ data:
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
     title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:

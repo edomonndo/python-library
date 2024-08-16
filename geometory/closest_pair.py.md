@@ -6,15 +6,15 @@ data:
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_5_a_closest_pair.test.py
     title: "CGL5A \u6700\u8FD1\u70B9\u5BFE"
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/closest_pair.test.py
     title: Closest Pair of Points
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -52,7 +52,7 @@ data:
   path: geometory/closest_pair.py
   requiredBy: []
   timestamp: '2024-08-15 10:59:11+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_5_a_closest_pair.test.py
   - test/library_checker/geometory/closest_pair.test.py
