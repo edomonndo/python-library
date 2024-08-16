@@ -10,7 +10,8 @@ data:
   _pathExtension: py
   _verificationStatusIcon: ':x:'
   attributes:
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/4/CGL_4_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/4/CGL_4_B ERROR
+      1e-6
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/4/CGL_4_B
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -18,6 +19,7 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: '# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/4/CGL_4_B
+    ERROR 1e-6
 
 
     from geometory.diameter import diameter
@@ -37,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
   requiredBy: []
-  timestamp: '2024-08-15 10:59:11+09:00'
+  timestamp: '2024-08-16 13:36:03+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
