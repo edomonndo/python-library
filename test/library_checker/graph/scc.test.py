@@ -2,12 +2,10 @@
 
 from graph.scc import scc
 
-N, M = map(int, input().split())
-edges = [None] * M
-for i in range(M):
-    edges[i] = tuple(map(int, input().split()))
+n, m = map(int, input().split())
+edges = [tuple(map(int, input().split())) for _ in range(m)]
 
-groups = scc(N, edges)
+groups, _ = scc(n, edges)
 print(len(groups))
 for group in groups:
     print(len(group), *group)

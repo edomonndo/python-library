@@ -2,16 +2,12 @@
 
 from graph.scc import scc
 
-N, M = map(int, input().split())
-edges = [tuple(map(int, input().split())) for _ in range(M)]
+n, m = map(int, input().split())
+edges = [tuple(map(int, input().split())) for _ in range(m)]
 
-groups = scc(N, edges)
-group_id = [0] * N
-for i, group in enumerate(groups):
-    for v in group:
-        group_id[v] = i
+groups, comp_num = scc(n, edges)
 
-Q = int(input())
-for _ in range(Q):
+q = int(input())
+for _ in range(q):
     s, t = map(int, input().split())
-    print(1 if group_id[s] == group_id[t] else 0)
+    print(1 if comp_num[s] == comp_num[t] else 0)
