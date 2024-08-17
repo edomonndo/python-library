@@ -340,7 +340,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -1138,7 +1138,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/range_parallel_unionfind.test.py
       title: Range Parallel Unionfind
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
     - icon: ':heavy_check_mark:'

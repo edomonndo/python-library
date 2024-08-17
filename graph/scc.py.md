@@ -9,49 +9,42 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
     title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/graph/scc.test.py
     title: Strongly Connected Components
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "def scc(n: int, edges: list[tuple[int, int]]) -> list[list[int]]:\n    start\
-    \ = [0] * (n + 1)\n    m = len(edges)\n    elist = [0] * m\n    for e in edges:\n\
-    \        start[e[0] + 1] += 1\n    for i in range(1, n + 1):\n        start[i]\
-    \ += start[i - 1]\n    counter = start[:]\n    for e in edges:\n        elist[counter[e[0]]]\
-    \ = e[1]\n        counter[e[0]] += 1\n    visited = []\n    low = [0] * n\n  \
-    \  ord = [-1] * n\n    ids = [0] * n\n    NG = [0, 0]\n\n    def dfs(v: int):\n\
-    \        stack = [(v, -1, 0), (v, -1, 1)]\n        while stack:\n            v,\
-    \ bef, t = stack.pop()\n            if t:\n                if bef != -1 and ord[v]\
-    \ != -1:\n                    low[bef] = min(low[bef], ord[v])\n             \
-    \       stack.pop()\n                    continue\n                low[v] = NG[0]\n\
-    \                ord[v] = NG[0]\n                NG[0] += 1\n                visited.append(v)\n\
-    \                for i in range(start[v], start[v + 1]):\n                   \
-    \ to = elist[i]\n                    if ord[to] == -1:\n                     \
-    \   stack.append((to, v, 0))\n                        stack.append((to, v, 1))\n\
-    \                    else:\n                        low[v] = min(low[v], ord[to])\n\
-    \            else:\n                if low[v] == ord[v]:\n                   \
-    \ while True:\n                        u = visited.pop()\n                   \
-    \     ord[u] = n\n                        ids[u] = NG[1]\n                   \
-    \     if u == v:\n                            break\n                    NG[1]\
-    \ += 1\n                low[bef] = min(low[bef], low[v])\n\n    for i in range(n):\n\
-    \        if ord[i] == -1:\n            dfs(i)\n    for i in range(n):\n      \
-    \  ids[i] = NG[1] - 1 - ids[i]\n    group_num = NG[1]\n    counts = [0] * group_num\n\
-    \    for x in ids:\n        counts[x] += 1\n    groups = [[] for i in range(group_num)]\n\
-    \    for i in range(n):\n        groups[ids[i]].append(i)\n    return groups\n"
+  code: "def scc(n: int, edges: list[tuple[int, int]]) -> tuple[list[list[int]], list[int]]:\n\
+    \    adj = [[] for _ in range(n)]\n    for u, v in edges:\n        adj[u].append(v)\n\
+    \    low = [0] * n\n    comp_num = [0] * n\n    par = [-1] * n\n    ord = [-1]\
+    \ * n\n    st1, st2 = [], []\n    groups = []\n    idx = 0\n    for i in range(n):\n\
+    \        if ord[i] != -1:\n            continue\n        st1 += [i, i]\n     \
+    \   while st1:\n            v = st1.pop()\n            if ord[v] == -1:\n    \
+    \            low[v] = ord[v] = idx\n                idx += 1\n               \
+    \ st2.append(v)\n                for u in adj[v]:\n                    if ord[u]\
+    \ == -1:\n                        st1 += [u, u]\n                        par[u]\
+    \ = v\n                        continue\n                    low[v] = min(low[v],\
+    \ ord[u])\n            else:\n                if low[v] == ord[v]:\n         \
+    \           group = []\n                    u = None\n                    while\
+    \ u != v:\n                        u = st2.pop()\n                        ord[u]\
+    \ = n\n                        comp_num[u] = len(groups)\n                   \
+    \     group.append(u)\n                    groups.append(group)\n            \
+    \    p = par[v]\n                if p != -1:\n                    low[p] = min(low[p],\
+    \ low[v])\n    return groups, comp_num\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/scc.py
   requiredBy:
   - graph/scc_incremental.py
-  timestamp: '2024-07-23 17:42:41+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-18 08:15:35+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   - test/library_checker/graph/scc.test.py
