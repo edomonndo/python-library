@@ -6,12 +6,12 @@ data:
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/scc_incremental.test.py
     title: Strongly Connected Components (Incremental)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -19,29 +19,30 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from graph.scc import scc\n\n\ndef incremental_scc(n: int, edges: list[tuple[int,\
-    \ int]]):\n    m = len(edges)\n    inf = float(\"inf\")\n    merge_time = [inf]\
-    \ * m\n    dat = [(i, u, v) for i, (u, v) in enumerate(edges)]\n\n    new_idx\
-    \ = [-1] * n\n    st = [(0, m + 1, dat)]\n    while st:\n        l, r, dat = st.pop()\n\
-    \        mid = (l + r) >> 1\n        n_ = 0\n        for _, u, v in dat:\n   \
-    \         if new_idx[u] == -1:\n                new_idx[u] = n_\n            \
-    \    n_ += 1\n            if new_idx[v] == -1:\n                new_idx[v] = n_\n\
-    \                n_ += 1\n        es = [(new_idx[u], new_idx[v]) for i, u, v in\
-    \ dat if i < mid]\n        _, comp = scc(n_, es)\n        dat1, dat2 = [], []\n\
-    \        for i, u, v in dat:\n            u, v = new_idx[u], new_idx[v]\n    \
-    \        if i < mid:\n                if comp[u] == comp[v]:\n               \
-    \     if merge_time[i] > mid:\n                        merge_time[i] = mid\n \
-    \                       dat1.append((i, u, v))\n                else:\n      \
-    \              dat2.append((i, comp[u], comp[v]))\n            else:\n       \
-    \         dat2.append((i, comp[u], comp[v]))\n        if dat2 and r - mid > 1:\n\
-    \            st.append((mid, r, dat2))\n        if dat1 and mid - l > 1:\n   \
-    \         st.append((l, mid, dat1))\n    return merge_time\n"
+    \ int]]) -> list[int]:\n    m = len(edges)\n    inf = float(\"inf\")\n    merge_time\
+    \ = [inf] * m\n    dat = [(ei, u, v) for ei, (u, v) in enumerate(edges)]\n\n \
+    \   new_idx = [-1] * n\n    cnt = 1\n    st = [(0, m, dat)]\n    while st:\n \
+    \       l, r, dat = st.pop()\n        mid = (l + r + 1) >> 1\n        start =\
+    \ cnt\n        for i in range(len(dat)):\n            ei, u, v = dat[i]\n    \
+    \        if new_idx[u] < start:\n                new_idx[u] = cnt\n          \
+    \      cnt += 1\n            if new_idx[v] < start:\n                new_idx[v]\
+    \ = cnt\n                cnt += 1\n            dat[i] = (ei, new_idx[u] - start,\
+    \ new_idx[v] - start)\n\n        _, comp = scc(cnt - start, [(u, v) for ei, u,\
+    \ v in dat if ei < mid])\n        if l + 1 == r:\n            for ei, u, v in\
+    \ dat:\n                if comp[u] == comp[v]:\n                    merge_time[ei]\
+    \ = r\n            continue\n        j = 0\n        k = len(dat)\n        for\
+    \ _ in range(len(dat)):\n            ei, u, v = dat[j]\n            if ei < mid\
+    \ and comp[u] == comp[v]:\n                j += 1\n            else:\n       \
+    \         dat[j] = (ei, comp[u], comp[v])\n                k -= 1\n          \
+    \      dat[j], dat[k] = dat[k], dat[j]\n        st.append((mid, r, dat[j:]))\n\
+    \        st.append((l, mid, dat[:j]))\n    return merge_time\n"
   dependsOn:
   - graph/scc.py
   isVerificationFile: false
   path: graph/scc_incremental.py
   requiredBy: []
-  timestamp: '2024-08-18 09:11:40+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-18 17:02:41+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/scc_incremental.test.py
 documentation_of: graph/scc_incremental.py
