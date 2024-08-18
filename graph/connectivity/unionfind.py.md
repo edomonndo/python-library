@@ -21,12 +21,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/range_parallel_unionfind.test.py
     title: Range Parallel Unionfind
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/graph/scc_incremental.test.py
     title: Strongly Connected Components (Incremental)
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -62,7 +62,7 @@ data:
   - graph/connectivity/static_range_parallel_unionfind.py
   - graph/tree_decomposition_width2.py
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/graph/range_parallel_unionfind.test.py
   - test/library_checker/graph/scc_incremental.test.py
