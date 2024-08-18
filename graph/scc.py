@@ -3,7 +3,7 @@ def scc(n: int, edges: list[tuple[int, int]]) -> tuple[list[list[int]], list[int
     for u, v in edges:
         adj[u].append(v)
     low = [0] * n
-    comp_num = [0] * n
+    comp = [0] * n
     par = [-1] * n
     ord = [-1] * n
     st1, st2 = [], []
@@ -32,10 +32,14 @@ def scc(n: int, edges: list[tuple[int, int]]) -> tuple[list[list[int]], list[int
                     while u != v:
                         u = st2.pop()
                         ord[u] = n
-                        comp_num[u] = len(groups)
+                        comp[u] = len(groups)
                         group.append(u)
                     groups.append(group)
                 p = par[v]
                 if p != -1:
                     low[p] = min(low[p], low[v])
-    return groups, comp_num
+
+    groups = groups[::-1]  # トポロジカルソート順
+    for i in range(n):
+        comp[i] = len(groups) - 1 - comp[i]
+    return groups, comp

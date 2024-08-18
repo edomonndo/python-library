@@ -7,12 +7,12 @@ def incremental_scc(n: int, edges: list[tuple[int, int]]):
     merge_time = [inf] * m
     dat = [(i, u, v) for i, (u, v) in enumerate(edges)]
 
+    new_idx = [-1] * n
     st = [(0, m + 1, dat)]
     while st:
         l, r, dat = st.pop()
         mid = (l + r) >> 1
         n_ = 0
-        new_idx = [-1] * n
         for _, u, v in dat:
             if new_idx[u] == -1:
                 new_idx[u] = n_
@@ -21,11 +21,7 @@ def incremental_scc(n: int, edges: list[tuple[int, int]]):
                 new_idx[v] = n_
                 n_ += 1
         es = [(new_idx[u], new_idx[v]) for i, u, v in dat if i < mid]
-        cc = scc(n_, es)
-        comp = [0] * n_
-        for i in range(len(cc)):
-            for j in cc[i]:
-                comp[j] = i
+        _, comp = scc(n_, es)
         dat1, dat2 = [], []
         for i, u, v in dat:
             u, v = new_idx[u], new_idx[v]
