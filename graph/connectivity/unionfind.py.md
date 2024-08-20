@@ -8,7 +8,7 @@ data:
   - icon: ':warning:'
     path: graph/connectivity/static_range_parallel_unionfind.py
     title: Static Range Parallel Union Find
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
     title: graph/directed_mst.py
   - icon: ':heavy_check_mark:'

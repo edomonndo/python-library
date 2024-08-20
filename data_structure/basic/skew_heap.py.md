@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
     title: graph/directed_mst.py
   _extendedVerifiedWith: []

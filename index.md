@@ -302,7 +302,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/directed_mst.py
       title: graph/directed_mst.py
     - icon: ':heavy_check_mark:'
@@ -1107,7 +1107,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/cycle_detection_undirected.test.py
       title: Cycle Detection (Undirected)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/directed_mst.test.py
       title: Directed MST
     - icon: ':heavy_check_mark:'

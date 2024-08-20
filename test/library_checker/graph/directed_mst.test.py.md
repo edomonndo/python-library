@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
     title: graph/directed_mst.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/directedmst
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/directed_mst.test.py
   requiredBy: []
-  timestamp: '2024-08-20 10:54:57+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-20 16:30:28+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/directed_mst.test.py
 layout: document
