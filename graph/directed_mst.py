@@ -7,11 +7,12 @@ from data_structure.basic.skew_heap import SkewHeap
 def directed_mst(
     n: int, edges: list[tuple[int, int, int]], root: int = 0
 ) -> Optional[list[int]]:
+    bs = 20
+    msk = (1 << 20) - 1
 
-    m = len(edges)
     heaps = [SkewHeap() for _ in range(n)]
     for ei, (_, v, w) in enumerate(edges):
-        heaps[v].push(w * m + ei)
+        heaps[v].push(w << bs | ei)
 
     uf = UnionFind(n)
     from_ = [0] * n
@@ -20,6 +21,7 @@ def directed_mst(
     used[root] = 2
     stem = [-1] * n
     eis = []
+    m = len(edges)
     par_e = [-1] * m
 
     for v in range(n):
@@ -31,7 +33,8 @@ def directed_mst(
             selected.append(v)
             if heaps[v].empty():
                 return None
-            cost[v], ei = divmod(heaps[v].pop(), m)
+            node = heaps[v].pop()
+            cost[v], ei = node >> bs, node & msk
             from_[v] = uf.leader(edges[ei][0])
             if stem[v] == -1:
                 stem[v] = ei
@@ -46,11 +49,15 @@ def directed_mst(
                 p = v
                 while True:
                     if not heaps[p].empty():
-                        heaps[p].add(-cost[p] * m)
+                        heaps[p].add(-(cost[p] << bs))
                     if p != v:
                         uf.merge(v, p)
                         heaps[v].meld(heaps[p])
                     p = uf.leader(from_[p])
+                    nv = uf.leader(v)
+                    if v != nv:
+                        heaps[nv] = heaps[v]
+                        v = nv
                     cnt += 1
                     if p == v:
                         break
