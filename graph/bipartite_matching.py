@@ -47,4 +47,4 @@ def bipartite_matching(
             for v in range(n):
                 prev[v] = -1
                 root[v] = -1
-    return [(v, p[v]) for v in range(n) if p[v] != -1]
+    return p, q
