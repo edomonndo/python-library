@@ -16,16 +16,15 @@ class RegularBipartiteGlaph:
         self._regularize()
 
     def _contract(self, deg: list[int], k: int) -> UnionFind:
-        pq = []
-        for i in range(len(deg)):
-            heappush(pq, (deg[i], i))
+        pq = [(d, i) for i, d in enumerate(deg)]
+        heapify(pq)
         uf = UnionFind(len(deg))
         while len(pq) > 1:
             di, i = heappop(pq)
             dj, j = heappop(pq)
             if di + dj > k:
                 continue
-            uf.merge(i, j)
+            i = uf.merge(i, j)
             heappush(pq, (di + dj, i))
         return uf
 
@@ -82,12 +81,12 @@ class BipartiteEdgeColoring:
         self.group = []
         self.color = [-1] * self.n * self.k
 
-    def euler_trail(self, edge: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    def euler_trail(self, eis: list[int]) -> list[tuple[int, int]]:
         g = [[] for _ in range(self.n * 2)]
-        m = len(edge)
-        for i, e in enumerate(edge):
-            g[self.lt[e]].append((self.rt[e] + self.n, i))
-            g[self.rt[e] + self.n].append((self.lt[e], i))
+        m = len(eis)
+        for i, ei in enumerate(eis):
+            g[self.lt[ei]].append((self.rt[ei] + self.n, i))
+            g[self.rt[ei] + self.n].append((self.lt[ei], i))
         used_vtx = [False] * self.n * 2
         used_edge = [False] * m
         res = []
@@ -100,50 +99,50 @@ class BipartiteEdgeColoring:
                 j = st[-1][0]
                 used_vtx[j] = True
                 if g[j]:
-                    v, e = g[j].pop()
-                    if used_edge[e]:
+                    v, ei = g[j].pop()
+                    if used_edge[ei]:
                         continue
-                    used_edge[e] = True
-                    st.append((v, e))
+                    used_edge[ei] = True
+                    st.append((v, ei))
                 else:
-                    v, e = st.pop()
-                    ord.append(e)
+                    v, ei = st.pop()
+                    ord.append(ei)
             res.extend(ord[:-1][::-1])
         for i, p in enumerate(res):
-            res[i] = edge[p]
+            res[i] = eis[p]
         return res
 
     def solve(self):
-        ord = [i for i in range(len(self.lt))]
+        ord = list(range(len(self.lt)))
         st = [(self.k, ord)]
         while st:
-            k, edge = st.pop()
+            k, eis = st.pop()
             if k == 0:
                 continue
             if k == 1:
-                self.group.append(edge)
-            elif k % 2 == 0:
-                path = self.euler_trail(edge)
+                self.group.append(eis)
+            elif k & 1 == 0:
+                path = self.euler_trail(eis)
                 ord1 = []
                 ord2 = []
                 for i, p in enumerate(path):
-                    if i % 2 == 0:
+                    if i & 1 == 0:
                         ord1.append(p)
                     else:
                         ord2.append(p)
                 st += [(k // 2, ord1), (k // 2, ord2)]
             else:
                 match_l, _ = bipartite_matching(
-                    self.n, self.n, [(self.lt[i], self.rt[i]) for i in range(len(edge))]
+                    self.n, self.n, [(self.lt[ei], self.rt[ei]) for ei in eis]
                 )
                 ord = []
                 matched = []
-                for i in edge:
-                    if match_l[self.lt[i]] == self.rt[i]:
-                        match_l[self.lt[i]] = -1
-                        matched.append(i)
+                for ei in eis:
+                    if match_l[self.lt[ei]] == self.rt[ei]:
+                        match_l[self.lt[ei]] = -1
+                        matched.append(ei)
                     else:
-                        ord.append(i)
+                        ord.append(ei)
                 self.group.append(matched)
                 st.append((k - 1, ord))
         for i in range(self.k):
