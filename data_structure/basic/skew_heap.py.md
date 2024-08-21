@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
-    title: graph/directed_mst.py
+    title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py

@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: graph/bipartite_edge_coloring.py
+    title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/bipartitematching.test.py
@@ -30,13 +33,13 @@ data:
     \   u = q[u]\n                if prev[u] != -1:\n                    continue\n\
     \                prev[u] = v\n                root[u] = root[v]\n            \
     \    s.append(u)\n        if updated:\n            for v in range(n):\n      \
-    \          prev[v] = -1\n                root[v] = -1\n    return [(v, p[v]) for\
-    \ v in range(n) if p[v] != -1]\n"
+    \          prev[v] = -1\n                root[v] = -1\n    return p, q\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/bipartite_matching.py
-  requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  requiredBy:
+  - graph/bipartite_edge_coloring.py
+  timestamp: '2024-08-21 11:11:33+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/bipartitematching.test.py

@@ -20,14 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/bipartitematching\n\
     \nfrom graph.bipartite_matching import bipartite_matching\n\n\nL, R, m = map(int,\
     \ input().split())\nedges = [tuple(map(int, input().split())) for _ in range(m)]\n\
-    ans = bipartite_matching(L, R, edges)\nprint(len(ans))\nfor u, v in ans:\n   \
-    \ print(u, v)\n"
+    match_l, match_q = bipartite_matching(L, R, edges)\n\nmatched = [(i, match_l[i])\
+    \ for i in range(L) if match_l[i] != -1]\nprint(len(matched))\nfor u, v in matched:\n\
+    \    print(u, v)\n"
   dependsOn:
   - graph/bipartite_matching.py
   isVerificationFile: true
   path: test/library_checker/graph/bipartitematching.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-08-21 11:11:33+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/bipartitematching.test.py

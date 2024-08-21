@@ -287,6 +287,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/biconnected_components.py
       title: "\u4E8C\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3/Block Cut Tree"
+    - icon: ':x:'
+      path: graph/bipartite_edge_coloring.py
+      title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
       title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
@@ -304,7 +307,7 @@ data:
       title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/directed_mst.py
-      title: graph/directed_mst.py
+      title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
     - icon: ':heavy_check_mark:'
       path: graph/enumerate_cliques.py
       title: Enumerate Cliques
@@ -1086,6 +1089,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/biconnected_components.test.py
       title: Biconnected Components
+    - icon: ':x:'
+      path: test/library_checker/graph/bipartite_edge_coloring.test.py
+      title: Edge Coloring of Bipartite Graph
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/bipartitematching.test.py
       title: Matching on Bipartite Graph
