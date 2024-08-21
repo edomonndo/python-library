@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/bipartite_edge_coloring.py
     title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/bipartite_edge_coloring
     links:
@@ -45,8 +45,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/bipartite_edge_coloring.test.py
   requiredBy: []
-  timestamp: '2024-08-21 11:11:33+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-21 14:04:33+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/bipartite_edge_coloring.test.py
 layout: document
