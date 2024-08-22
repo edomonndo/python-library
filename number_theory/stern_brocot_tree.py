@@ -88,9 +88,9 @@ class SternBrocotTree:
         a, b = real[-2], imag[-2]
         t = n
         if a > 0:
-            t = min(t, (n - imag[-3]) // b)
-        if b > 0:
             t = min(t, (n - real[-3]) // a)
+        if b > 0:
+            t = min(t, (n - imag[-3]) // b)
         c, d = real[-3] + t * a, imag[-3] + t * b
         if a * d > c * b:
             a, b, c, d = c, d, a, b
