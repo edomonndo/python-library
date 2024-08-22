@@ -180,9 +180,3 @@ title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
 ただし,
 
 $$C_k = \displaystyle\sum^{}_{i+j=k} a_i b_j\mod 1,000,000,007$$
-
-###　使い方
-
-```
-C = CooleyTukey().karatsuba(A, B, 10**9 + 7)
-```

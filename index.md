@@ -498,6 +498,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/count_primes.py
       title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
+    - icon: ':x:'
+      path: number_theory/count_squarefree.py
+      title: "\u7121\u5E73\u65B9\u6570\u306E\u6570\u3048\u4E0A\u3052"
     - icon: ':warning:'
       path: number_theory/divisors.py
       title: "\u7D04\u6570\u5217\u6319"
@@ -521,6 +524,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/floor_sum.py
       title: Floor sum
+    - icon: ':x:'
+      path: number_theory/kth_root.py
+      title: Kth Root
     - icon: ':warning:'
       path: number_theory/miller_rabin.py
       title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
@@ -531,7 +537,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: number_theory/stern_brocot_tree.py
       title: Stern Brocot tree
   - name: other
@@ -1213,15 +1219,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/count_primes.test.py
       title: Counting Primes
+    - icon: ':x:'
+      path: test/library_checker/number_theory/counting_squarefrees.test.py
+      title: Counting Square-free Integers
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/factorize.test.py
       title: Factorize
+    - icon: ':x:'
+      path: test/library_checker/number_theory/kth_root_integer.test.py
+      title: Kth Root (Integer)
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/min_of_linear.test.py
       title: Min of Mod of Linear
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
       title: Primitive Root
+    - icon: ':x:'
+      path: test/library_checker/number_theory/rational_approximation.test.py
+      title: Rational Approximation
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/stern_brocot_tree.test.py
       title: "Stern\u2013Brocot Tree"

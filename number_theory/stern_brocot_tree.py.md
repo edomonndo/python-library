@@ -3,12 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/number_theory/rational_approximation.test.py
+    title: Rational Approximation
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/stern_brocot_tree.test.py
     title: "Stern\u2013Brocot Tree"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -43,15 +46,25 @@ data:
     \            if k == 0:\n                return cls.decode(code)\n        else:\n\
     \            return default\n\n    @classmethod\n    def range(cls, a: int, b:\
     \ int) -> tuple[int, int, int, int]:\n        return cls._decode_interval(cls.encode(a,\
-    \ b))\n"
+    \ b))\n\n    @staticmethod\n    def approx(n: int, x: int, y: int) -> tuple[int,\
+    \ int, int, int]:\n        real = [0, 1]\n        imag = [1, 0]\n        while\
+    \ y and real[-1] <= n and imag[-1] <= n:\n            t, r = divmod(x, y)\n  \
+    \          real.append(real[-1] * t + real[-2])\n            imag.append(imag[-1]\
+    \ * t + imag[-2])\n            x, y = y, r\n        if real[-1] <= n and imag[-1]\
+    \ <= n:\n            return real[-1], imag[-1], real[-1], imag[-1]\n        a,\
+    \ b = real[-2], imag[-2]\n        t = n\n        if a > 0:\n            t = min(t,\
+    \ (n - imag[-3]) // b)\n        if b > 0:\n            t = min(t, (n - real[-3])\
+    \ // a)\n        c, d = real[-3] + t * a, imag[-3] + t * b\n        if a * d >\
+    \ c * b:\n            a, b, c, d = c, d, a, b\n        return a, b, c, d\n"
   dependsOn: []
   isVerificationFile: false
   path: number_theory/stern_brocot_tree.py
   requiredBy: []
-  timestamp: '2024-08-14 16:01:16+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-22 11:09:04+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/number_theory/stern_brocot_tree.test.py
+  - test/library_checker/number_theory/rational_approximation.test.py
 documentation_of: number_theory/stern_brocot_tree.py
 layout: document
 title: Stern Brocot tree
