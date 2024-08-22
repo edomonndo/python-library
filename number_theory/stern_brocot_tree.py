@@ -73,3 +73,25 @@ class SternBrocotTree:
     @classmethod
     def range(cls, a: int, b: int) -> tuple[int, int, int, int]:
         return cls._decode_interval(cls.encode(a, b))
+
+    @staticmethod
+    def approx(n: int, x: int, y: int) -> tuple[int, int, int, int]:
+        real = [0, 1]
+        imag = [1, 0]
+        while y and real[-1] <= n and imag[-1] <= n:
+            t, r = divmod(x, y)
+            real.append(real[-1] * t + real[-2])
+            imag.append(imag[-1] * t + imag[-2])
+            x, y = y, r
+        if real[-1] <= n and imag[-1] <= n:
+            return real[-1], imag[-1], real[-1], imag[-1]
+        a, b = real[-2], imag[-2]
+        t = n
+        if a > 0:
+            t = min(t, (n - imag[-3]) // b)
+        if b > 0:
+            t = min(t, (n - real[-3]) // a)
+        c, d = real[-3] + t * a, imag[-3] + t * b
+        if a * d > c * b:
+            a, b, c, d = c, d, a, b
+        return a, b, c, d
