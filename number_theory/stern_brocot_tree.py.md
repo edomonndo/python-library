@@ -3,15 +3,15 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/rational_approximation.test.py
     title: Rational Approximation
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/stern_brocot_tree.test.py
     title: "Stern\u2013Brocot Tree"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -53,15 +53,15 @@ data:
     \ * t + imag[-2])\n            x, y = y, r\n        if real[-1] <= n and imag[-1]\
     \ <= n:\n            return real[-1], imag[-1], real[-1], imag[-1]\n        a,\
     \ b = real[-2], imag[-2]\n        t = n\n        if a > 0:\n            t = min(t,\
-    \ (n - imag[-3]) // b)\n        if b > 0:\n            t = min(t, (n - real[-3])\
-    \ // a)\n        c, d = real[-3] + t * a, imag[-3] + t * b\n        if a * d >\
+    \ (n - real[-3]) // a)\n        if b > 0:\n            t = min(t, (n - imag[-3])\
+    \ // b)\n        c, d = real[-3] + t * a, imag[-3] + t * b\n        if a * d >\
     \ c * b:\n            a, b, c, d = c, d, a, b\n        return a, b, c, d\n"
   dependsOn: []
   isVerificationFile: false
   path: number_theory/stern_brocot_tree.py
   requiredBy: []
-  timestamp: '2024-08-22 11:09:04+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-08-22 11:38:30+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/number_theory/stern_brocot_tree.test.py
   - test/library_checker/number_theory/rational_approximation.test.py

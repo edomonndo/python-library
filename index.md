@@ -537,7 +537,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/stern_brocot_tree.py
       title: Stern Brocot tree
   - name: other
@@ -1234,7 +1234,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
       title: Primitive Root
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/rational_approximation.test.py
       title: Rational Approximation
     - icon: ':heavy_check_mark:'

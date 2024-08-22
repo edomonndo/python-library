@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: number_theory/stern_brocot_tree.py
     title: Stern Brocot tree
   _extendedRequiredBy: []
@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/number_theory/stern_brocot_tree.test.py
   requiredBy: []
-  timestamp: '2024-08-22 11:09:04+09:00'
+  timestamp: '2024-08-22 11:38:30+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/number_theory/stern_brocot_tree.test.py
