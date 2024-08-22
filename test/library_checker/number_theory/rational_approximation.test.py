@@ -1,4 +1,4 @@
-# verification-helper: PROBLEM https://judge.yosupo.jp/problem/https://judge.yosupo.jp/problem/rational_approximation
+# verification-helper: PROBLEM https://judge.yosupo.jp/problem/rational_approximation
 
 
 from number_theory.stern_brocot_tree import SternBrocotTree

@@ -20,9 +20,9 @@ class KthRoot:
             return res <= real
 
         res = int(pow(real, 1 / k))
-        while not check(res):
+        while not check(res, k):
             res -= 1
-        while check(res + 1):
+        while check(res + 1, k):
             res += 1
         return res
 
