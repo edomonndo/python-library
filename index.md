@@ -498,7 +498,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/count_primes.py
       title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/count_squarefree.py
       title: "\u7121\u5E73\u65B9\u6570\u306E\u6570\u3048\u4E0A\u3052"
     - icon: ':warning:'
@@ -524,7 +524,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/floor_sum.py
       title: Floor sum
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: number_theory/kth_root.py
       title: Kth Root
     - icon: ':warning:'
@@ -1219,13 +1219,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/count_primes.test.py
       title: Counting Primes
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/counting_squarefrees.test.py
       title: Counting Square-free Integers
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/factorize.test.py
       title: Factorize
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/kth_root_integer.test.py
       title: Kth Root (Integer)
     - icon: ':heavy_check_mark:'

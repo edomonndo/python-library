@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: number_theory/kth_root.py
     title: Kth Root
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/counting_squarefrees.test.py
     title: Counting Square-free Integers
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -43,8 +43,8 @@ data:
   isVerificationFile: false
   path: number_theory/count_squarefree.py
   requiredBy: []
-  timestamp: '2024-08-22 11:09:04+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-08-22 11:33:17+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/number_theory/counting_squarefrees.test.py
 documentation_of: number_theory/count_squarefree.py
