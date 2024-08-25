@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/library_checker/graph/chordal_graph_recognition.test.py
+    title: Chordal Graph Recognition
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -79,22 +82,19 @@ data:
     \        self.m_phase = 3\n        self.induced_cycle = res\n        return self.induced_cycle\n\
     \n    def get_perfect_elimination_order(self) -> list[int]:\n        if not self.is_chordal_graph():\n\
     \            return []\n        res = self.get_max_cardinality_search_order()\n\
-    \        return res[::-1]\n\n\nn, m = map(int, input().split())\nedges = [tuple(map(int,\
-    \ input().split())) for _ in range(m)]\nCG = ChordalGraph(n, edges)\nif CG.is_chordal_graph():\n\
-    \    print(\"YES\")\n    print(*CG.get_perfect_elimination_order())\nelse:\n \
-    \   print(\"NO\")\n    ans = CG.find_induced_cycle()\n    print(len(ans))\n  \
-    \  print(*ans)\n"
+    \        return res[::-1]\n"
   dependsOn: []
   isVerificationFile: false
-  path: graph/chordal_graph_recognizer.py
+  path: graph/chordal_graph.py
   requiredBy: []
-  timestamp: '2024-08-25 16:25:45+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: graph/chordal_graph_recognizer.py
+  timestamp: '2024-08-25 16:30:57+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/library_checker/graph/chordal_graph_recognition.test.py
+documentation_of: graph/chordal_graph.py
 layout: document
 redirect_from:
-- /library/graph/chordal_graph_recognizer.py
-- /library/graph/chordal_graph_recognizer.py.html
-title: graph/chordal_graph_recognizer.py
+- /library/graph/chordal_graph.py
+- /library/graph/chordal_graph.py.html
+title: graph/chordal_graph.py
 ---
