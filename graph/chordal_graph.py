@@ -153,9 +153,11 @@ class ChordalGraph:
         if off >= len(res):
             print(f"{off=}")
             print(f"{x=}")
+            exit(1)
         if self.z >= len(self.mcsordered):
             print(f"{self.z=}")
             print(f"{len(self.mcsordered)=}")
+            exit(1)
         res[off] = self.mcsordered[self.z]
         for k in [x, y]:
             while True:
