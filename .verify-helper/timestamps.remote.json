@@ -111,6 +111,7 @@
 "test/library_checker/graph/biconnected_components.test.py": "2024-07-22 09:16:58 +0900",
 "test/library_checker/graph/bipartite_edge_coloring.test.py": "2024-08-21 14:04:33 +0900",
 "test/library_checker/graph/bipartitematching.test.py": "2024-08-21 11:11:33 +0900",
+"test/library_checker/graph/chordal_graph_recognition.test.py": "2024-08-25 21:35:38 +0900",
 "test/library_checker/graph/chromatic_number.test.py": "2024-06-04 09:09:32 +0900",
 "test/library_checker/graph/connected_components_of_complement_graph.test.py": "2024-08-02 11:42:07 +0900",
 "test/library_checker/graph/count_spanning_trees_directed.test.py": "2024-08-05 20:55:28 +0900",
