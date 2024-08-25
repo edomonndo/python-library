@@ -10,7 +10,6 @@ class ChordalGraph:
         for u, v in edges:
             self.adj[u].append(v)
             self.adj[v].append(u)
-        self.status = 0
         self.x = self.y = self.z = -1
         self.adj2: Optional[list[list[int]]] = None
         self.mcsordered: Optional[list[int]] = None
@@ -41,7 +40,7 @@ class ChordalGraph:
         return res
 
     def get_max_cardinality_search_order(self) -> list[int]:
-        if self.status >= 1:
+        if self.mcsordered is not None:
             return self.mcsordered
         res = [0] * self.n
         idx = [0] * self.n
@@ -73,14 +72,13 @@ class ChordalGraph:
                     idx[u] += 1
                     insert(u, self.n + idx[u])
             res[i] = v
-        self.status = 1
         self.mcsordered = res
         return res
 
     def is_chordal_graph(self) -> bool:
-        if self.status < 1:
+        if self.mcsordered is None:
             self.get_max_cardinality_search_order()
-        if self.status >= 2:
+        if self._is_chordal_graph is not None:
             return self._is_chordal_graph
 
         inv_mcs = [0] * self.n
@@ -110,15 +108,14 @@ class ChordalGraph:
             if not qres[i]:
                 self.x, self.y, self.z = v, u, Z[i]
                 break
-        self.status = 2
+
         self._is_chordal_graph = self.z == -1
         return self._is_chordal_graph
 
     def find_induced_cycle(self) -> list[int]:
-        if self.status >= 3:
+        if self.induced_cycle is not None:
             return self.induced_cycle
         if self.is_chordal_graph():
-            self.status = 3
             self.induced_cycle = []
             return self.induced_cycle
         dist = [0] * self.n
@@ -139,7 +136,7 @@ class ChordalGraph:
                     if dist[p] < 0 and dist[q] > 0 and dist[q] - dist[p] < d:
                         d = dist[q] - dist[p]
                         x, y = p, q
-                    elif dist[p] > 0 and dist[q] and dist[p] - dist[q] < d:
+                    elif dist[p] > 0 and dist[q] < 0 and dist[p] - dist[q] < d:
                         d = dist[p] - dist[q]
                         x, y = q, p
                     elif dist[q] == 0:
@@ -150,20 +147,13 @@ class ChordalGraph:
 
         res = [0] * (d + 1)
         off = -dist[x]
-        try:
-            res[off] = self.mcsordered[self.z]
-        except IndexError:
-            print(f"{off=}")
-            print(f"{x=}")
-            print(len(res))
-            exit()
+        res[off] = self.mcsordered[self.z]
         for k in [x, y]:
             while True:
                 res[dist[k] + off] = self.mcsordered[k]
                 k = par[k]
                 if k == self.z:
                     break
-        self.status = 3
         self.induced_cycle = res
         return self.induced_cycle
 
