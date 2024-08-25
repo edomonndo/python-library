@@ -150,15 +150,13 @@ class ChordalGraph:
 
         res = [0] * (d + 1)
         off = -dist[x]
-        if off >= len(res):
+        try:
+            res[off] = self.mcsordered[self.z]
+        except IndexError:
             print(f"{off=}")
             print(f"{x=}")
-            exit(1)
-        if self.z >= len(self.mcsordered):
-            print(f"{self.z=}")
-            print(f"{len(self.mcsordered)=}")
-            exit(1)
-        res[off] = self.mcsordered[self.z]
+            print(len(res))
+            exit()
         for k in [x, y]:
             while True:
                 res[dist[k] + off] = self.mcsordered[k]
