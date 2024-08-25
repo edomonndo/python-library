@@ -28,7 +28,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/chordal_graph_recognition.test.py
   requiredBy: []
-  timestamp: '2024-08-25 18:06:10+09:00'
+  timestamp: '2024-08-25 18:10:26+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/chordal_graph_recognition.test.py

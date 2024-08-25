@@ -77,11 +77,12 @@ data:
     \                        par[q] = p\n                        bfs.append(q)\n \
     \           i += 1\n\n        res = [0] * (d + 1)\n        off = -dist[x]\n  \
     \      if off >= len(res):\n            print(f\"{off=}\")\n            print(f\"\
-    {x=}\")\n        if self.z >= len(self.mcsordered):\n            print(f\"{self.z=}\"\
-    )\n            print(f\"{len(self.mcsordered)=}\")\n        res[off] = self.mcsordered[self.z]\n\
-    \        for k in [x, y]:\n            while True:\n                res[dist[k]\
-    \ + off] = self.mcsordered[k]\n                k = par[k]\n                if\
-    \ k == self.z:\n                    break\n        self.status = 3\n        self.induced_cycle\
+    {x=}\")\n            exit(1)\n        if self.z >= len(self.mcsordered):\n   \
+    \         print(f\"{self.z=}\")\n            print(f\"{len(self.mcsordered)=}\"\
+    )\n            exit(1)\n        res[off] = self.mcsordered[self.z]\n        for\
+    \ k in [x, y]:\n            while True:\n                res[dist[k] + off] =\
+    \ self.mcsordered[k]\n                k = par[k]\n                if k == self.z:\n\
+    \                    break\n        self.status = 3\n        self.induced_cycle\
     \ = res\n        return self.induced_cycle\n\n    def get_perfect_elimination_order(self)\
     \ -> list[int]:\n        if not self.is_chordal_graph():\n            return []\n\
     \        res = self.get_max_cardinality_search_order()\n        return res[::-1]\n"
@@ -89,7 +90,7 @@ data:
   isVerificationFile: false
   path: graph/chordal_graph.py
   requiredBy: []
-  timestamp: '2024-08-25 18:06:10+09:00'
+  timestamp: '2024-08-25 18:10:26+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/graph/chordal_graph_recognition.test.py
