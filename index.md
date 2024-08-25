@@ -293,7 +293,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
       title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/chordal_graph.py
       title: graph/chordal_graph.py
     - icon: ':heavy_check_mark:'
@@ -1104,7 +1104,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/bipartitematching.test.py
       title: Matching on Bipartite Graph
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/chordal_graph_recognition.test.py
       title: Chordal Graph Recognition
     - icon: ':heavy_check_mark:'

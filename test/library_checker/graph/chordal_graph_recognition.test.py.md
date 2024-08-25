@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/chordal_graph.py
     title: graph/chordal_graph.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/chordal_graph_recognition
     links:
@@ -28,8 +28,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/chordal_graph_recognition.test.py
   requiredBy: []
-  timestamp: '2024-08-25 18:17:43+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-08-25 21:35:38+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/chordal_graph_recognition.test.py
 layout: document
