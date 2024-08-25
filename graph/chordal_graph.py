@@ -1,3 +1,6 @@
+from typing import Optional
+
+
 class ChordalGraph:
     def __init__(self, n: int, edges: list[tuple[int, int]]):
         self.n = n
@@ -7,12 +10,12 @@ class ChordalGraph:
         for u, v in edges:
             self.adj[u].append(v)
             self.adj[v].append(u)
-        self.m_phase = 0
+        self.status = 0
         self.x = self.y = self.z = -1
-        self.adj2 = None
-        self.mcsordered = None
-        self._is_chordal_graph = None
-        self.induced_cycle = None
+        self.adj2: Optional[list[list[int]]] = None
+        self.mcsordered: Optional[list[int]] = None
+        self._is_chordal_graph: Optional[bool] = None
+        self.induced_cycle: Optional[list[int]] = None
 
     def _contract(self, mapping: list[int]) -> list[list[int]]:
         new_adj = [[] for _ in range(self.n)]
@@ -22,16 +25,12 @@ class ChordalGraph:
             new_adj[nv].append(nu)
         return new_adj
 
-    def _adj_query(self, adj: list[list[int]], qs: list[tuple[int, int]]) -> list[bool]:
+    def _adj_query(
+        self, adj: list[list[int]], qs: list[tuple[int, int]], qadj: list[list[int]]
+    ) -> list[bool]:
         n = len(adj)
         q = len(qs)
         res = [False] * q
-        qadj = [[] for _ in range(self.n)]
-        for qi, (u, _) in enumerate(qs):
-            if qi >= self.n:
-                break
-            if u < self.n:
-                qadj[u].append(qi)
         buf = [-1] * n
         for i in range(n):
             for j in adj[i]:
@@ -42,7 +41,7 @@ class ChordalGraph:
         return res
 
     def get_max_cardinality_search_order(self) -> list[int]:
-        if self.m_phase >= 1:
+        if self.status >= 1:
             return self.mcsordered
         res = [0] * self.n
         idx = [0] * self.n
@@ -74,21 +73,21 @@ class ChordalGraph:
                     idx[u] += 1
                     insert(u, self.n + idx[u])
             res[i] = v
-        self.m_phase = 1
+        self.status = 1
         self.mcsordered = res
         return res
 
     def is_chordal_graph(self) -> bool:
-        if self.m_phase < 1:
+        if self.status < 1:
             self.get_max_cardinality_search_order()
-        if self.m_phase >= 2:
+        if self.status >= 2:
             return self._is_chordal_graph
 
         inv_mcs = [0] * self.n
-        for i in range(self.n):
-            inv_mcs[self.mcsordered[i]] = i
-
+        for i, v in enumerate(self.mcsordered):
+            inv_mcs[v] = i
         self.adj2 = adj2 = self._contract(inv_mcs)
+
         pre = [-1] * self.n
         for i in range(self.n):
             for j in adj2[i]:
@@ -96,28 +95,30 @@ class ChordalGraph:
                     pre[i] = j
 
         es = []
-        z = []
+        qadj = [[] for _ in range(self.n)]
+        Z = []
         for i in range(self.n):
             if pre[i] == -1:
                 continue
             for j in adj2[i]:
                 if j < pre[i]:
+                    qadj[pre[i]].append(len(es))
                     es.append((pre[i], j))
-                    z.append(i)
-        qres = self._adj_query(adj2, es)
+                    Z.append(i)
+        qres = self._adj_query(adj2, es, qadj)
         for i, (u, v) in enumerate(es):
             if not qres[i]:
-                self.x, self.y, self.z = v, u, z[i]
+                self.x, self.y, self.z = v, u, Z[i]
                 break
-        self.m_phase = 2
+        self.status = 2
         self._is_chordal_graph = self.z == -1
         return self._is_chordal_graph
 
     def find_induced_cycle(self) -> list[int]:
-        if self.m_phase >= 3:
+        if self.status >= 3:
             return self.induced_cycle
         if self.is_chordal_graph():
-            self.m_phase = 3
+            self.status = 3
             self.induced_cycle = []
             return self.induced_cycle
         dist = [0] * self.n
@@ -149,6 +150,12 @@ class ChordalGraph:
 
         res = [0] * (d + 1)
         off = -dist[x]
+        if off >= len(res):
+            print(f"{off=}")
+            print(f"{x=}")
+        if self.z >= len(self.mcsordered):
+            print(f"{self.z=}")
+            print(f"{len(self.mcsordered)=}")
         res[off] = self.mcsordered[self.z]
         for k in [x, y]:
             while True:
@@ -156,7 +163,7 @@ class ChordalGraph:
                 k = par[k]
                 if k == self.z:
                     break
-        self.m_phase = 3
+        self.status = 3
         self.induced_cycle = res
         return self.induced_cycle
 
