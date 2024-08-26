@@ -203,6 +203,9 @@ data:
       path: enumerative_combinatorics/combination_mod.py
       title: "\u4E8C\u9805\u4FC2\u6570(mod)"
     - icon: ':heavy_check_mark:'
+      path: enumerative_combinatorics/derangement.py
+      title: "\u64B9\u4E71\u9806\u5217"
+    - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/factorial_iter_mod.py
       title: "\u968E\u4E57\u30AF\u30A8\u30EA mod 998244353"
     - icon: ':heavy_check_mark:'
@@ -351,9 +354,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/maximum_independent_set.py
       title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
-    - icon: ':heavy_check_mark:'
-      path: graph/mincost_arborescence.py
-      title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
     - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
@@ -1073,6 +1073,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/enumerative_combinatorics/many_factorials.test.py
       title: Many Factorials
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/enumerative_combinatorics/montmort_number_mod.test.py
+      title: Montmort Number
     - icon: ':heavy_check_mark:'
       path: test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
       title: Number of Subsequences
