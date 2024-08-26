@@ -1,16 +1,17 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/st_numbering
 
+from typing import Optional
 import sys
 
 sys.setrecursionlimit(1_000_000)
 
 
-def st_numbering(adj: list[list[int]], s: int, t: int) -> list[int]:
+def st_numbering(adj: list[list[int]], s: int, t: int) -> Optional[list[int]]:
     n = len(adj)
     if n == 1:
         return [0]
     if s == t:
-        return []
+        return None
 
     par = [-1] * n
     pre = [-1] * n
@@ -35,7 +36,7 @@ def st_numbering(adj: list[list[int]], s: int, t: int) -> list[int]:
     vs = [s]
     dfs(t)
     if len(vs) < n:
-        return []
+        return None
 
     nxt = [-1] * n
     prev = [0] * n
@@ -48,14 +49,14 @@ def st_numbering(adj: list[list[int]], s: int, t: int) -> list[int]:
         if sgn[low[v]] == -1:
             q = prev[p]
             if q == -1:
-                return []
+                return None
             nxt[q], nxt[v] = v, p
             prev[v], prev[p] = q, v
             sgn[p] = 1
         else:
             q = nxt[p]
             if q == -1:
-                return []
+                return None
             nxt[p], nxt[v] = v, q
             prev[v], prev[q] = p, v
             sgn[p] = -1
@@ -64,7 +65,7 @@ def st_numbering(adj: list[list[int]], s: int, t: int) -> list[int]:
     while path[-1] != t:
         path.append(nxt[path[-1]])
     if len(path) < n:
-        return []
+        return None
 
     rank = [-1] * n
     for i, v in enumerate(path):
@@ -81,7 +82,7 @@ def st_numbering(adj: list[list[int]], s: int, t: int) -> list[int]:
         if i > 0 and l == 0:
             return []
         if i < n - 1 and r == 0:
-            return []
+            return None
     return rank
 
 

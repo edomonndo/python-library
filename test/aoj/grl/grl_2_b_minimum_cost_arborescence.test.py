@@ -1,8 +1,11 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_2_B
 
-from graph.mincost_arborescence import MinCostArborescence
+from graph.directed_mst import directed_mst
 
-N, M, r = map(int, input().split())
-edges = [list(map(int, input().split())) for _ in range(M)]
-MCA = MinCostArborescence(N, edges, r)
-print(MCA.calc_min_cost())
+n, m, r = map(int, input().split())
+edges = [tuple(map(int, input().split())) for _ in range(m)]
+eis = directed_mst(n, edges, r)
+ans = 0
+for ei in eis:
+    ans += edges[ei][2]
+print(ans)
