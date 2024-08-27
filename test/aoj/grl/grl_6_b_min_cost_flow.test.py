@@ -1,12 +1,12 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_6_B
 
-from graph.mincostflow import mcf_graph
+from graph.mincostflow import MinCostFlow
 
-N, M, F = map(int, input().split())
-G = mcf_graph(N)
-for _ in range(M):
+n, m, limit = map(int, input().split())
+g = MinCostFlow(n)
+for _ in range(m):
     u, v, c, d = map(int, input().split())
-    G.add_edge(u, v, c, d)
+    g.add_edge(u, v, c, d)
 
-f, c = G.flow(0, N - 1, F)
-print(c if f == F else -1)
+f, c = g.flow(0, n - 1, limit)
+print(c if f == limit else -1)

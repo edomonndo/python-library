@@ -1,12 +1,12 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_6_A
 
-from graph.maxflow import mf_graph
+from graph.maxflow import MaxFlow
 
-N, M = map(int, input().split())
-G = mf_graph(N)
-for _ in range(M):
+n, m = map(int, input().split())
+g = MaxFlow(n)
+for _ in range(m):
     u, v, c = map(int, input().split())
-    G.add_edge(u, v, c)
+    g.add_edge(u, v, c)
 
-ans = G.flow(0, N - 1)
+ans = g.flow(0, n - 1)
 print(ans)

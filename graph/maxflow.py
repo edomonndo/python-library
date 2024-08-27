@@ -1,117 +1,136 @@
-from collections import deque
+from typing import NamedTuple, Optional
 
 
-class mf_graph:
-    n = 1
-    g = [[] for i in range(1)]
-    pos = []
+class MaxFlow:
+    class Edge(NamedTuple):
+        src: int
+        dst: int
+        cap: int
+        flow: int
 
-    def __init__(self, N):
-        self.n = N
-        self.g = [[] for i in range(N)]
-        self.pos = []
+    class _Edge:
+        def __init__(self, dst: int, cap: int) -> None:
+            self.dst = dst
+            self.cap = cap
+            self.rev: Optional[MaxFlow._Edge] = None
 
-    def add_edge(self, From, To, cap):
-        assert 0 <= From and From < self.n
-        assert 0 <= To and To < self.n
+    def __init__(self, n: int) -> None:
+        self._n = n
+        self._g: list[list[MaxFlow._Edge]] = [[] for _ in range(n)]
+        self._edges: list[MaxFlow._Edge] = []
+
+    def add_edge(self, src: int, dst: int, cap: int) -> int:
+        assert 0 <= src < self._n
+        assert 0 <= dst < self._n
         assert 0 <= cap
-        m = len(self.pos)
-        from_id = len(self.g[From])
-        self.pos.append([From, from_id])
-        to_id = len(self.g[To])
-        if From == To:
-            to_id += 1
-        self.g[From].append([To, to_id, cap])
-        self.g[To].append([From, from_id, 0])
+        m = len(self._edges)
+        e = MaxFlow._Edge(dst, cap)
+        re = MaxFlow._Edge(src, 0)
+        e.rev = re
+        re.rev = e
+        self._g[src].append(e)
+        self._g[dst].append(re)
+        self._edges.append(e)
         return m
 
-    def get_edge(self, i):
-        m = len(self.pos)
-        assert 0 <= i and i < m
-        _e = self.g[self.pos[i][0]][self.pos[i][1]]
-        _re = self.g[_e[0]][_e[1]]
-        return [self.pos[i][0], _e[0], _e[2] + _re[2], _re[2]]
+    def get_edge(self, i: int) -> Edge:
+        assert 0 <= i < len(self._edges)
+        e = self._edges[i]
+        re = e.rev
+        return MaxFlow.Edge(re.dst, e.dst, e.cap + re.cap, re.cap)
 
-    def edges(self):
-        m = len(self.pos)
-        result = []
-        for i in range(m):
-            a, b, c, d = self.get_edge(i)
-            result.append({"from": a, "to": b, "cap": c, "flow": d})
-        return result
+    def edges(self) -> list[Edge]:
+        return [self.get_edge(i) for i in range(len(self._edges))]
 
-    def change_edge(self, i, new_cap, new_flow):
-        m = len(self.pos)
-        assert 0 <= i and i < m
-        assert 0 <= new_flow and new_flow <= new_cap
-        _e = self.g[self.pos[i][0]][self.pos[i][1]]
-        _re = self.g[_e[0]][_e[1]]
-        _e[2] = new_cap - new_flow
-        _re[2] = new_flow
+    def change_edge(self, i: int, new_cap: int, new_flow: int) -> None:
+        assert 0 <= i < len(self._edges)
+        assert 0 <= new_flow <= new_cap
+        e = self._edges[i]
+        e.cap = new_cap - new_flow
+        assert e.rev is not None
+        e.rev.cap = new_flow
 
-    def flow(self, s, t, flow_limit=(1 << 63) - 1):
-        assert 0 <= s and s < self.n
-        assert 0 <= t and t < self.n
+    def flow(self, s: int, t: int, flow_limit: Optional[int] = None) -> int:
+        assert 0 <= s < self._n
+        assert 0 <= t < self._n
         assert s != t
+        if flow_limit is None:
+            flow_limit = sum(e.cap for e in self._g[s])
 
-        def bfs():
-            level = [-1 for i in range(self.n)]
+        current_edge = [0] * self._n
+        level = [0] * self._n
+
+        def bfs() -> bool:
+            for i in range(self._n):
+                level[i] = self._n
+            queue = []
+            q_front = 0
+            queue.append(s)
             level[s] = 0
-            que = deque([])
-            que.append(s)
-            while que:
-                v = que.popleft()
-                for to, _, cap in self.g[v]:
-                    if cap == 0 or level[to] >= 0:
+            while q_front < len(queue):
+                v = queue[q_front]
+                q_front += 1
+                next_level = level[v] + 1
+                for e in self._g[v]:
+                    if e.cap == 0 or level[e.dst] <= next_level:
                         continue
-                    level[to] = level[v] + 1
-                    if to == t:
-                        return level
-                    que.append(to)
-            return level
+                    level[e.dst] = next_level
+                    if e.dst == t:
+                        return True
+                    queue.append(e.dst)
+            return False
 
-        def dfs(v, up):
-            if v == s:
-                return up
-            res = 0
-            level_v = level[v]
-            for i in range(Iter[v], len(self.g[v])):
-                Iter[v] = i
-                to, rev, _ = self.g[v][i]
-                if level_v <= level[to] or self.g[to][rev][2] == 0:
-                    continue
-                d = dfs(to, min(up - res, self.g[to][rev][2]))
-                if d <= 0:
-                    continue
-                self.g[v][i][2] += d
-                self.g[to][rev][2] -= d
-                res += d
-                if res == up:
-                    return res
-            level[v] = self.n
-            return res
+        def dfs(lim: int) -> int:
+            st = []
+            edge_st: list[MaxFlow._Edge] = []
+            st.append(t)
+            while st:
+                v = st[-1]
+                if v == s:
+                    flow = min(lim, min(e.cap for e in edge_st))
+                    for e in edge_st:
+                        e.cap -= flow
+                        assert e.rev is not None
+                        e.rev.cap += flow
+                    return flow
+                next_level = level[v] - 1
+                while current_edge[v] < len(self._g[v]):
+                    e = self._g[v][current_edge[v]]
+                    re = e.rev
+                    if level[e.dst] != next_level or re.cap == 0:
+                        current_edge[v] += 1
+                        continue
+                    st.append(e.dst)
+                    edge_st.append(re)
+                    break
+                else:
+                    st.pop()
+                    if edge_st:
+                        edge_st.pop()
+                    level[v] = self._n
+            return 0
 
         flow = 0
         while flow < flow_limit:
-            level = bfs()
-            if level[t] == -1:
+            if not bfs():
                 break
-            Iter = [0 for i in range(self.n)]
-            f = dfs(t, flow_limit - flow)
-            if not f:
-                break
-            flow += f
+            for i in range(self._n):
+                current_edge[i] = 0
+            while flow < flow_limit:
+                f = dfs(flow_limit - flow)
+                flow += f
+                if f == 0:
+                    break
         return flow
 
-    def min_cut(self, s):
-        visited = [False for i in range(self.n)]
-        que = deque([])
-        que.append(s)
-        while len(que) > 0:
-            p = que.popleft()
-            visited[p] = True
-            for to, _, cap in self.g[p]:
-                if cap and not visited[to]:
-                    visited[to] = True
-                    que.append(to)
+    def min_cut(self, s: int) -> list[bool]:
+        visited = [False] * self._n
+        st = [s]
+        visited[s] = True
+        while st:
+            v = st.pop()
+            for e in self._g[v]:
+                if e.cap > 0 and not visited[e.dst]:
+                    visited[e.dst] = True
+                    st.append(e.dst)
         return visited
