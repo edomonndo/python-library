@@ -1,12 +1,13 @@
-from typing import Callable
+from typing import Callable, Union
 
 
 class HeavyLightDecomposition:
     def __init__(
         self,
         n: int,
-        edges: list[tuple[int, int]],
+        edges: list[Union[tuple[int, int]], tuple[int, int, int]],
         root: int = 0,
+        directed: bool = False,
     ):
         self.n = n
         self.root = root
@@ -17,9 +18,16 @@ class HeavyLightDecomposition:
         self.par = [root] * n
         self.hld = [0] * n
         self.adj = [[] for _ in range(n)]
-        for u, v in edges:
-            self.adj[u].append(v)
-            self.adj[v].append(u)
+        if edges and len(edges[0]) == 2:
+            for u, v in edges:
+                self.adj[u].append((v, 0))
+                if not directed:
+                    self.adj[v].append((u, 0))
+        else:
+            for u, v, w in edges:
+                self.adj[u].append((v, w))
+                if not directed:
+                    self.adj[v].append((u, w))
         self._dfs_sz()
         self._dfs_hld()
 
@@ -32,9 +40,9 @@ class HeavyLightDecomposition:
             v = st.pop()
             if v >= 0:
                 sz[v] = 1
-                if len(adj[v]) >= 2 and adj[v][-1] == par[v]:
+                if len(adj[v]) >= 2 and adj[v][-1][0] == par[v]:
                     adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]
-                for i, u in enumerate(adj[v]):
+                for i, (u, w) in enumerate(adj[v]):
                     if u == par[v]:
                         continue
                     depth[u] = depth[v] + 1
@@ -61,10 +69,10 @@ class HeavyLightDecomposition:
                 into[v] = idx
                 hld[idx] = v
                 idx += 1
-                for u in adj[v]:
+                for u, w in adj[v]:
                     if u == par[v]:
                         continue
-                    head[u] = head[v] if u == adj[v][-1] else u
+                    head[u] = head[v] if u == adj[v][-1][0] else u
                     st += [~u, u]
                 continue
             out[~v] = idx
