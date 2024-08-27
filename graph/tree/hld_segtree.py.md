@@ -51,7 +51,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_segtree.py
   requiredBy: []
-  timestamp: '2024-08-27 13:47:08+09:00'
+  timestamp: '2024-08-27 14:24:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py

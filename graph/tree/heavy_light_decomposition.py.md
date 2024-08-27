@@ -43,35 +43,31 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Callable\n\n\nclass HeavyLightDecomposition:\n    def\
     \ __init__(\n        self,\n        n: int,\n        edges: list[tuple[int, int]],\n\
-    \        root: int = 0,\n        directed: bool = False,\n    ):\n        self.n\
-    \ = n\n        self.root = root\n        self.depth = [0] * n\n        self.into\
-    \ = [-1] * n\n        self.out = [-1] * n\n        self.head = [root] * n\n  \
-    \      self.par = [root] * n\n        self.hld = [0] * n\n        self.adj = [[]\
-    \ for _ in range(n)]\n        if edges and len(edges[0]) == 2:\n            for\
-    \ u, v in edges:\n                self.adj[u].append((v, 0))\n               \
-    \ if not directed:\n                    self.adj[v].append((u, 0))\n        else:\n\
-    \            for u, v, w in edges:\n                self.adj[u].append((v, w))\n\
-    \                if not directed:\n                    self.adj[v].append((u,\
-    \ w))\n\n        self._dfs_sz()\n        self._dfs_hld()\n\n    def _dfs_sz(self)\
-    \ -> None:\n        # calc subtree size\n        adj, par, depth = self.adj, self.par,\
-    \ self.depth\n        sz = [0] * self.n\n        st = [self.root]\n        while\
-    \ st:\n            v = st.pop()\n            if v >= 0:\n                sz[v]\
-    \ = 1\n                if len(adj[v]) >= 2 and adj[v][-1] == par[v]:\n       \
-    \             adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]\n              \
-    \  for i, (u, w) in enumerate(adj[v]):\n                    if u == par[v]:\n\
-    \                        continue\n                    depth[u] = depth[v] + 1\n\
-    \                    par[u] = v\n                    st += [i, ~u, u]\n      \
-    \          continue\n            v = ~v\n            p = par[v]\n            i\
-    \ = st.pop()\n            sz[p] += sz[v]\n            if sz[v] > sz[adj[p][-1][0]]:\n\
-    \                adj[p][-1], adj[p][i] = adj[p][i], adj[p][-1]\n\n    def _dfs_hld(self):\n\
+    \        root: int = 0,\n    ):\n        self.n = n\n        self.root = root\n\
+    \        self.depth = [0] * n\n        self.into = [-1] * n\n        self.out\
+    \ = [-1] * n\n        self.head = [root] * n\n        self.par = [root] * n\n\
+    \        self.hld = [0] * n\n        self.adj = [[] for _ in range(n)]\n     \
+    \   for u, v in edges:\n            self.adj[u].append(v)\n            self.adj[v].append(u)\n\
+    \        self._dfs_sz()\n        self._dfs_hld()\n\n    def _dfs_sz(self) -> None:\n\
+    \        # calc subtree size\n        adj, par, depth = self.adj, self.par, self.depth\n\
+    \        sz = [0] * self.n\n        st = [self.root]\n        while st:\n    \
+    \        v = st.pop()\n            if v >= 0:\n                sz[v] = 1\n   \
+    \             if len(adj[v]) >= 2 and adj[v][-1] == par[v]:\n                \
+    \    adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]\n                for i, u\
+    \ in enumerate(adj[v]):\n                    if u == par[v]:\n               \
+    \         continue\n                    depth[u] = depth[v] + 1\n            \
+    \        par[u] = v\n                    st += [i, ~u, u]\n                continue\n\
+    \            v = ~v\n            p = par[v]\n            i = st.pop()\n      \
+    \      sz[p] += sz[v]\n            if sz[v] > sz[adj[p][-1][0]]:\n           \
+    \     adj[p][-1], adj[p][i] = adj[p][i], adj[p][-1]\n\n    def _dfs_hld(self):\n\
     \        # calc hld\n        adj, into, out, par = self.adj, self.into, self.out,\
     \ self.par\n        head, hld = self.head, self.hld\n\n        idx = 0\n     \
     \   st = [~self.root, self.root]\n        while st:\n            v = st.pop()\n\
     \            if v >= 0:\n                into[v] = idx\n                hld[idx]\
-    \ = v\n                idx += 1\n                for u, w in adj[v]:\n       \
-    \             if u == par[v]:\n                        continue\n            \
-    \        head[u] = head[v] if u == adj[v][-1] else u\n                    st +=\
-    \ [~u, u]\n                continue\n            out[~v] = idx\n\n    def build_list(self,\
+    \ = v\n                idx += 1\n                for u in adj[v]:\n          \
+    \          if u == par[v]:\n                        continue\n               \
+    \     head[u] = head[v] if u == adj[v][-1] else u\n                    st += [~u,\
+    \ u]\n                continue\n            out[~v] = idx\n\n    def build_list(self,\
     \ a: list[int]) -> list[int]:\n        return [a[x] for x in self.hld]\n\n   \
     \ def ascend(self, u: int, v: int) -> list[tuple[int, int]]:\n        into, par,\
     \ head = self.into, self.par, self.head\n        res = []\n        while head[u]\
@@ -115,7 +111,7 @@ data:
   - graph/tree/hld_segtree.py
   - graph/tree/hld_lazysegtree.py
   - graph/tree/hld_segtree_noncommutative.py
-  timestamp: '2024-08-27 13:47:08+09:00'
+  timestamp: '2024-08-27 14:24:41+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

@@ -44,7 +44,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-08-27 13:47:08+09:00'
+  timestamp: '2024-08-27 14:24:41+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite.test.py
