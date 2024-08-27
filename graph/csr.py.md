@@ -14,13 +14,13 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import TypeVar, Union\n\nT = TypeVar(\"T\")\n\n\nclass CSR:\n\
     \    def __init__(\n        self,\n        n: int,\n        edges: list[tuple[int,\
-    \ int], tuple[int, int]],\n        directed: bool = False,\n    ) -> None:\n \
-    \       self.start = [0] * (n + 1)\n        m = len(edges)\n        self.elist\
-    \ = [0] * (m if directed else m * 2)\n        self.idx = dict()\n\n        for\
-    \ e in edges:\n            self.start[e[0] + 1] += 1\n            if not directed:\n\
-    \                self.start[e[1] + 1] += 1\n\n        for i in range(1, n + 1):\n\
-    \            self.start[i] += self.start[i - 1]\n\n        counter = self.start[:]\n\
-    \        for e in edges:\n            u, v = e[0], e[1]\n            self.elist[counter[u]]\
+    \ int]],\n        directed: bool = False,\n    ) -> None:\n        self.start\
+    \ = [0] * (n + 1)\n        m = len(edges)\n        self.elist = [0] * (m if directed\
+    \ else m * 2)\n        self.idx = dict()\n\n        for e in edges:\n        \
+    \    self.start[e[0] + 1] += 1\n            if not directed:\n               \
+    \ self.start[e[1] + 1] += 1\n\n        for i in range(1, n + 1):\n           \
+    \ self.start[i] += self.start[i - 1]\n\n        counter = self.start[:]\n    \
+    \    for e in edges:\n            u, v = e[0], e[1]\n            self.elist[counter[u]]\
     \ = v\n            self.idx[u, v] = counter[u]\n            counter[u] += 1\n\
     \            if not directed:\n                self.elist[counter[v]] = u\n  \
     \              self.idx[v, u] = counter[v]\n                counter[v] += 1\n\n\
@@ -50,7 +50,7 @@ data:
   isVerificationFile: false
   path: graph/csr.py
   requiredBy: []
-  timestamp: '2024-06-13 17:21:28+09:00'
+  timestamp: '2024-08-27 13:47:08+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/csr.py
