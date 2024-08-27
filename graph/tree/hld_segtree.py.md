@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
     title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -51,7 +51,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_segtree.py
   requiredBy: []
-  timestamp: '2024-08-27 14:24:41+09:00'
+  timestamp: '2024-08-27 14:34:46+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py

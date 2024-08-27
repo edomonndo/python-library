@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -58,7 +58,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_lazysegtree.py
   requiredBy: []
-  timestamp: '2024-08-27 14:24:41+09:00'
+  timestamp: '2024-08-27 14:34:46+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/tree/hld_lazysegtree.py

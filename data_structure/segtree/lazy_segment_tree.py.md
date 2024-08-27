@@ -39,6 +39,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
     title: Range Affine Range Sum
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
+    title: Global Minimum Cut of Dynamic Star Augmented Graph
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -133,6 +136,7 @@ data:
   - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
   - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
+  - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
   - test/library_checker/data_structure/range_affine_range_sum.test.py
 documentation_of: data_structure/segtree/lazy_segment_tree.py
 layout: document
