@@ -2,7 +2,13 @@ from typing import Callable
 
 
 class HeavyLightDecomposition:
-    def __init__(self, n: int, edges: list[tuple[int, int]], root: int = 0):
+    def __init__(
+        self,
+        n: int,
+        edges: list[tuple[int, int]],
+        root: int = 0,
+        directed: bool = False,
+    ):
         self.n = n
         self.root = root
         self.depth = [0] * n
@@ -12,9 +18,17 @@ class HeavyLightDecomposition:
         self.par = [root] * n
         self.hld = [0] * n
         self.adj = [[] for _ in range(n)]
-        for u, v in edges:
-            self.adj[u].append(v)
-            self.adj[v].append(u)
+        if edges and len(edges[0]) == 2:
+            for u, v in edges:
+                self.adj[u].append((v, 0))
+                if not directed:
+                    self.adj[v].append((u, 0))
+        else:
+            for u, v, w in edges:
+                self.adj[u].append((v, w))
+                if not directed:
+                    self.adj[v].append((u, w))
+
         self._dfs_sz()
         self._dfs_hld()
 
@@ -29,7 +43,7 @@ class HeavyLightDecomposition:
                 sz[v] = 1
                 if len(adj[v]) >= 2 and adj[v][-1] == par[v]:
                     adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]
-                for i, u in enumerate(adj[v]):
+                for i, (u, w) in enumerate(adj[v]):
                     if u == par[v]:
                         continue
                     depth[u] = depth[v] + 1
@@ -40,7 +54,7 @@ class HeavyLightDecomposition:
             p = par[v]
             i = st.pop()
             sz[p] += sz[v]
-            if sz[v] > sz[adj[p][-1]]:
+            if sz[v] > sz[adj[p][-1][0]]:
                 adj[p][-1], adj[p][i] = adj[p][i], adj[p][-1]
 
     def _dfs_hld(self):
@@ -56,7 +70,7 @@ class HeavyLightDecomposition:
                 into[v] = idx
                 hld[idx] = v
                 idx += 1
-                for u in adj[v]:
+                for u, w in adj[v]:
                     if u == par[v]:
                         continue
                     head[u] = head[v] if u == adj[v][-1] else u

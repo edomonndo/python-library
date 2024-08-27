@@ -7,7 +7,7 @@ class CSR:
     def __init__(
         self,
         n: int,
-        edges: list[tuple[int, int], tuple[int, int]],
+        edges: list[tuple[int, int]],
         directed: bool = False,
     ) -> None:
         self.start = [0] * (n + 1)

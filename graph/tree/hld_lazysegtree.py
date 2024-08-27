@@ -1,4 +1,4 @@
-from typing import Callable, TypeVar
+from typing import Callable, TypeVar, Union
 
 T = TypeVar("T")
 F = TypeVar("F")
@@ -17,7 +17,7 @@ class HldLazySegTree:
         id_: F,
         v: list[int],
         n: int,
-        edges: list[int, int],
+        edges: list[Union[tuple[int, int] | tuple[int, int, int]]],
         root: int = 0,
     ):
         # assert n == len(v)
