@@ -6,70 +6,80 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_6_a_max_flow.test.py
     title: "GRL6A \u6700\u5927\u6D41"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_7_a_bipartite_matching.test.py
     title: "GRL7A 2\u90E8\u30DE\u30C3\u30C1\u30F3\u30B0"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from collections import deque\n\n\nclass mf_graph:\n    n = 1\n    g = [[]\
-    \ for i in range(1)]\n    pos = []\n\n    def __init__(self, N):\n        self.n\
-    \ = N\n        self.g = [[] for i in range(N)]\n        self.pos = []\n\n    def\
-    \ add_edge(self, From, To, cap):\n        assert 0 <= From and From < self.n\n\
-    \        assert 0 <= To and To < self.n\n        assert 0 <= cap\n        m =\
-    \ len(self.pos)\n        from_id = len(self.g[From])\n        self.pos.append([From,\
-    \ from_id])\n        to_id = len(self.g[To])\n        if From == To:\n       \
-    \     to_id += 1\n        self.g[From].append([To, to_id, cap])\n        self.g[To].append([From,\
-    \ from_id, 0])\n        return m\n\n    def get_edge(self, i):\n        m = len(self.pos)\n\
-    \        assert 0 <= i and i < m\n        _e = self.g[self.pos[i][0]][self.pos[i][1]]\n\
-    \        _re = self.g[_e[0]][_e[1]]\n        return [self.pos[i][0], _e[0], _e[2]\
-    \ + _re[2], _re[2]]\n\n    def edges(self):\n        m = len(self.pos)\n     \
-    \   result = []\n        for i in range(m):\n            a, b, c, d = self.get_edge(i)\n\
-    \            result.append({\"from\": a, \"to\": b, \"cap\": c, \"flow\": d})\n\
-    \        return result\n\n    def change_edge(self, i, new_cap, new_flow):\n \
-    \       m = len(self.pos)\n        assert 0 <= i and i < m\n        assert 0 <=\
-    \ new_flow and new_flow <= new_cap\n        _e = self.g[self.pos[i][0]][self.pos[i][1]]\n\
-    \        _re = self.g[_e[0]][_e[1]]\n        _e[2] = new_cap - new_flow\n    \
-    \    _re[2] = new_flow\n\n    def flow(self, s, t, flow_limit=(1 << 63) - 1):\n\
-    \        assert 0 <= s and s < self.n\n        assert 0 <= t and t < self.n\n\
-    \        assert s != t\n\n        def bfs():\n            level = [-1 for i in\
-    \ range(self.n)]\n            level[s] = 0\n            que = deque([])\n    \
-    \        que.append(s)\n            while que:\n                v = que.popleft()\n\
-    \                for to, _, cap in self.g[v]:\n                    if cap == 0\
-    \ or level[to] >= 0:\n                        continue\n                    level[to]\
-    \ = level[v] + 1\n                    if to == t:\n                        return\
-    \ level\n                    que.append(to)\n            return level\n\n    \
-    \    def dfs(v, up):\n            if v == s:\n                return up\n    \
-    \        res = 0\n            level_v = level[v]\n            for i in range(Iter[v],\
-    \ len(self.g[v])):\n                Iter[v] = i\n                to, rev, _ =\
-    \ self.g[v][i]\n                if level_v <= level[to] or self.g[to][rev][2]\
-    \ == 0:\n                    continue\n                d = dfs(to, min(up - res,\
-    \ self.g[to][rev][2]))\n                if d <= 0:\n                    continue\n\
-    \                self.g[v][i][2] += d\n                self.g[to][rev][2] -= d\n\
-    \                res += d\n                if res == up:\n                   \
-    \ return res\n            level[v] = self.n\n            return res\n\n      \
-    \  flow = 0\n        while flow < flow_limit:\n            level = bfs()\n   \
-    \         if level[t] == -1:\n                break\n            Iter = [0 for\
-    \ i in range(self.n)]\n            f = dfs(t, flow_limit - flow)\n           \
-    \ if not f:\n                break\n            flow += f\n        return flow\n\
-    \n    def min_cut(self, s):\n        visited = [False for i in range(self.n)]\n\
-    \        que = deque([])\n        que.append(s)\n        while len(que) > 0:\n\
-    \            p = que.popleft()\n            visited[p] = True\n            for\
-    \ to, _, cap in self.g[p]:\n                if cap and not visited[to]:\n    \
-    \                visited[to] = True\n                    que.append(to)\n    \
-    \    return visited\n"
+  code: "from typing import NamedTuple, Optional\n\n\nclass MaxFlow:\n    class Edge(NamedTuple):\n\
+    \        src: int\n        dst: int\n        cap: int\n        flow: int\n\n \
+    \   class _Edge:\n        def __init__(self, dst: int, cap: int) -> None:\n  \
+    \          self.dst = dst\n            self.cap = cap\n            self.rev: Optional[MaxFlow._Edge]\
+    \ = None\n\n    def __init__(self, n: int) -> None:\n        self._n = n\n   \
+    \     self._g: list[list[MaxFlow._Edge]] = [[] for _ in range(n)]\n        self._edges:\
+    \ list[MaxFlow._Edge] = []\n\n    def add_edge(self, src: int, dst: int, cap:\
+    \ int) -> int:\n        assert 0 <= src < self._n\n        assert 0 <= dst < self._n\n\
+    \        assert 0 <= cap\n        m = len(self._edges)\n        e = MaxFlow._Edge(dst,\
+    \ cap)\n        re = MaxFlow._Edge(src, 0)\n        e.rev = re\n        re.rev\
+    \ = e\n        self._g[src].append(e)\n        self._g[dst].append(re)\n     \
+    \   self._edges.append(e)\n        return m\n\n    def get_edge(self, i: int)\
+    \ -> Edge:\n        assert 0 <= i < len(self._edges)\n        e = self._edges[i]\n\
+    \        re = e.rev\n        return MaxFlow.Edge(re.dst, e.dst, e.cap + re.cap,\
+    \ re.cap)\n\n    def edges(self) -> list[Edge]:\n        return [self.get_edge(i)\
+    \ for i in range(len(self._edges))]\n\n    def change_edge(self, i: int, new_cap:\
+    \ int, new_flow: int) -> None:\n        assert 0 <= i < len(self._edges)\n   \
+    \     assert 0 <= new_flow <= new_cap\n        e = self._edges[i]\n        e.cap\
+    \ = new_cap - new_flow\n        assert e.rev is not None\n        e.rev.cap =\
+    \ new_flow\n\n    def flow(self, s: int, t: int, flow_limit: Optional[int] = None)\
+    \ -> int:\n        assert 0 <= s < self._n\n        assert 0 <= t < self._n\n\
+    \        assert s != t\n        if flow_limit is None:\n            flow_limit\
+    \ = sum(e.cap for e in self._g[s])\n\n        current_edge = [0] * self._n\n \
+    \       level = [0] * self._n\n\n        def bfs() -> bool:\n            for i\
+    \ in range(self._n):\n                level[i] = self._n\n            queue =\
+    \ []\n            q_front = 0\n            queue.append(s)\n            level[s]\
+    \ = 0\n            while q_front < len(queue):\n                v = queue[q_front]\n\
+    \                q_front += 1\n                next_level = level[v] + 1\n   \
+    \             for e in self._g[v]:\n                    if e.cap == 0 or level[e.dst]\
+    \ <= next_level:\n                        continue\n                    level[e.dst]\
+    \ = next_level\n                    if e.dst == t:\n                        return\
+    \ True\n                    queue.append(e.dst)\n            return False\n\n\
+    \        def dfs(lim: int) -> int:\n            st = []\n            edge_st:\
+    \ list[MaxFlow._Edge] = []\n            st.append(t)\n            while st:\n\
+    \                v = st[-1]\n                if v == s:\n                    flow\
+    \ = min(lim, min(e.cap for e in edge_st))\n                    for e in edge_st:\n\
+    \                        e.cap -= flow\n                        assert e.rev is\
+    \ not None\n                        e.rev.cap += flow\n                    return\
+    \ flow\n                next_level = level[v] - 1\n                while current_edge[v]\
+    \ < len(self._g[v]):\n                    e = self._g[v][current_edge[v]]\n  \
+    \                  re = e.rev\n                    if level[e.dst] != next_level\
+    \ or re.cap == 0:\n                        current_edge[v] += 1\n            \
+    \            continue\n                    st.append(e.dst)\n                \
+    \    edge_st.append(re)\n                    break\n                else:\n  \
+    \                  st.pop()\n                    if edge_st:\n               \
+    \         edge_st.pop()\n                    level[v] = self._n\n            return\
+    \ 0\n\n        flow = 0\n        while flow < flow_limit:\n            if not\
+    \ bfs():\n                break\n            for i in range(self._n):\n      \
+    \          current_edge[i] = 0\n            while flow < flow_limit:\n       \
+    \         f = dfs(flow_limit - flow)\n                flow += f\n            \
+    \    if f == 0:\n                    break\n        return flow\n\n    def min_cut(self,\
+    \ s: int) -> list[bool]:\n        visited = [False] * self._n\n        st = [s]\n\
+    \        visited[s] = True\n        while st:\n            v = st.pop()\n    \
+    \        for e in self._g[v]:\n                if e.cap > 0 and not visited[e.dst]:\n\
+    \                    visited[e.dst] = True\n                    st.append(e.dst)\n\
+    \        return visited\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/maxflow.py
   requiredBy: []
-  timestamp: '2023-09-15 08:31:51+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-08-27 15:46:23+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aoj/grl/grl_7_a_bipartite_matching.test.py
   - test/aoj/grl/grl_6_a_max_flow.test.py

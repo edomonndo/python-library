@@ -15,61 +15,61 @@ data:
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "import heapq\n\n\nclass mcf_graph:\n    n = 1\n    pos = []\n    g = [[]]\n\
-    \n    def __init__(self, N):\n        self.n = N\n        self.pos = []\n    \
-    \    self.g = [[] for i in range(N)]\n\n    def add_edge(self, From, To, cap,\
-    \ cost):\n        assert 0 <= From and From < self.n\n        assert 0 <= To and\
-    \ To < self.n\n        self.pos.append((From, len(self.g[From])))\n        self.g[From].append(\n\
-    \            {\"to\": To, \"rev\": len(self.g[To]), \"cap\": cap, \"cost\": cost}\n\
-    \        )\n        self.g[To].append(\n            {\"to\": From, \"rev\": len(self.g[From])\
-    \ - 1, \"cap\": 0, \"cost\": -cost}\n        )\n\n    def get_edge(self, i):\n\
-    \        m = len(self.pos)\n        assert 0 <= i and i < m\n        _e = self.g[self.pos[i][0]][self.pos[i][1]]\n\
-    \        _re = self.g[_e[\"to\"]][_e[\"rev\"]]\n        return {\n           \
-    \ \"from\": self.pos[i][0],\n            \"to\": _e[\"to\"],\n            \"cap\"\
-    : _e[\"cap\"] + _re[\"cap\"],\n            \"flow\": _re[\"cap\"],\n         \
-    \   \"cost\": _e[\"cost\"],\n        }\n\n    def edges(self):\n        m = len(self.pos)\n\
-    \        result = [{} for i in range(m)]\n        for i in range(m):\n       \
-    \     tmp = self.get_edge(i)\n            result[i][\"from\"] = tmp[\"from\"]\n\
-    \            result[i][\"to\"] = tmp[\"to\"]\n            result[i][\"cap\"] =\
-    \ tmp[\"cap\"]\n            result[i][\"flow\"] = tmp[\"flow\"]\n            result[i][\"\
-    cost\"] = tmp[\"cost\"]\n        return result\n\n    def flow(self, s, t, flow_limit=-1\
-    \ - (-1 << 63)):\n        return self.slope(s, t, flow_limit)[-1]\n\n    def slope(self,\
-    \ s, t, flow_limit=-1 - (-1 << 63)):\n        assert 0 <= s and s < self.n\n \
-    \       assert 0 <= t and t < self.n\n        assert s != t\n\n        dual =\
-    \ [0 for i in range(self.n)]\n        dist = [0 for i in range(self.n)]\n    \
-    \    pv = [0 for i in range(self.n)]\n        pe = [0 for i in range(self.n)]\n\
-    \        vis = [False for i in range(self.n)]\n\n        def dual_ref():\n   \
-    \         for i in range(self.n):\n                dist[i] = -1 - (-1 << 63)\n\
-    \                pv[i] = -1\n                pe[i] = -1\n                vis[i]\
-    \ = False\n            que = []\n            heapq.heappush(que, (0, s))\n   \
-    \         dist[s] = 0\n            while que:\n                v = heapq.heappop(que)[1]\n\
-    \                if vis[v]:\n                    continue\n                vis[v]\
-    \ = True\n                if v == t:\n                    break\n\n          \
-    \      for i in range(len(self.g[v])):\n                    e = self.g[v][i]\n\
-    \                    if vis[e[\"to\"]] or not e[\"cap\"]:\n                  \
-    \      continue\n\n                    cost = e[\"cost\"] - dual[e[\"to\"]] +\
-    \ dual[v]\n                    if dist[e[\"to\"]] - dist[v] > cost:\n        \
-    \                dist[e[\"to\"]] = dist[v] + cost\n                        pv[e[\"\
-    to\"]] = v\n                        pe[e[\"to\"]] = i\n                      \
-    \  heapq.heappush(que, (dist[e[\"to\"]], e[\"to\"]))\n            if not vis[t]:\n\
-    \                return False\n            for v in range(self.n):\n         \
-    \       if not vis[v]:\n                    continue\n                dual[v]\
-    \ -= dist[t] - dist[v]\n            return True\n\n        flow = 0\n        cost\
-    \ = 0\n        prev_cost = -1\n        result = [(flow, cost)]\n        while\
-    \ flow < flow_limit:\n            if not dual_ref():\n                break\n\
-    \            c = flow_limit - flow\n            v = t\n            while v !=\
-    \ s:\n                c = min(c, self.g[pv[v]][pe[v]][\"cap\"])\n            \
-    \    v = pv[v]\n            v = t\n            while v != s:\n               \
-    \ self.g[pv[v]][pe[v]][\"cap\"] -= c\n                self.g[v][self.g[pv[v]][pe[v]][\"\
-    rev\"]][\"cap\"] += c\n                v = pv[v]\n            d = -dual[s]\n \
-    \           flow += c\n            cost += c * d\n            if prev_cost ==\
-    \ d:\n                result.pop()\n            result.append((flow, cost))\n\
-    \            prev_cost = cost\n        return result\n"
+  code: "from typing import NamedTuple, Optional\nfrom heapq import *\n\n\nclass MinCostFlow:\n\
+    \    class Edge(NamedTuple):\n        src: int\n        dst: int\n        cap:\
+    \ int\n        flow: int\n        cost: int\n\n    class _Edge:\n        def __init__(self,\
+    \ dst: int, cap: int, cost: int) -> None:\n            self.dst = dst\n      \
+    \      self.cap = cap\n            self.cost = cost\n            self.rev: Optional[MinCostFlow._Edge]\
+    \ = None\n\n    def __init__(self, n: int) -> None:\n        self._n = n\n   \
+    \     self._g: list[list[MinCostFlow._Edge]] = [[] for _ in range(n)]\n      \
+    \  self._edges: list[MinCostFlow._Edge] = []\n\n    def add_edge(self, src: int,\
+    \ dst: int, cap: int, cost: int) -> int:\n        assert 0 <= src < self._n\n\
+    \        assert 0 <= dst < self._n\n        assert 0 <= cap\n        m = len(self._edges)\n\
+    \        e = MinCostFlow._Edge(dst, cap, cost)\n        re = MinCostFlow._Edge(src,\
+    \ 0, -cost)\n        e.rev = re\n        re.rev = e\n        self._g[src].append(e)\n\
+    \        self._g[dst].append(re)\n        self._edges.append(e)\n        return\
+    \ m\n\n    def get_edge(self, i: int) -> Edge:\n        assert 0 <= i < len(self._edges)\n\
+    \        e = self._edges[i]\n        re = e.rev\n        return MinCostFlow.Edge(re.dst,\
+    \ e.dst, e.cap + re.cap, re.cap, e.cost)\n\n    def edges(self) -> list[Edge]:\n\
+    \        return [self.get_edge(i) for i in range(len(self._edges))]\n\n    def\
+    \ flow(self, s: int, t: int, flow_limit: Optional[int] = None) -> tuple[int, int]:\n\
+    \        return self.slope(s, t, flow_limit)[-1]\n\n    def slope(\n        self,\
+    \ s: int, t: int, flow_limit: Optional[int] = None\n    ) -> list[tuple[int, int]]:\n\
+    \        assert 0 <= s < self._n\n        assert 0 <= t < self._n\n        assert\
+    \ s != t\n        if flow_limit is None:\n            flow_limit = sum(e.cap for\
+    \ e in self._g[s])\n\n        dual = [0] * self._n\n        prev: list[Optional[tuple[int,\
+    \ MinCostFlow._Edge]]] = [None] * self._n\n\n        def refine_dual() -> bool:\n\
+    \            pq = [(0, s)]\n            visited = [False] * self._n\n        \
+    \    dist: list[Optional[int]] = [None] * self._n\n            dist[s] = 0\n \
+    \           while pq:\n                dist_v, v = heappop(pq)\n             \
+    \   if visited[v]:\n                    continue\n                visited[v] =\
+    \ True\n                if v == t:\n                    break\n              \
+    \  dual_v = dual[v]\n                for e in self._g[v]:\n                  \
+    \  w = e.dst\n                    if visited[w] or e.cap == 0:\n             \
+    \           continue\n                    reduced_cost = e.cost - dual[w] + dual_v\n\
+    \                    new_dist = dist_v + reduced_cost\n                    dist_w\
+    \ = dist[w]\n                    if dist_w is None or new_dist < dist_w:\n   \
+    \                     dist[w] = new_dist\n                        prev[w] = v,\
+    \ e\n                        heappush(pq, (new_dist, w))\n            else:\n\
+    \                return False\n            dist_t = dist[t]\n            for v\
+    \ in range(self._n):\n                if visited[v]:\n                    dual[v]\
+    \ -= dist_t - dist[v]\n            return True\n\n        flow = 0\n        cost\
+    \ = 0\n        prev_cost_per_flow: Optional[int] = None\n        result = [(flow,\
+    \ cost)]\n        while flow < flow_limit:\n            if not refine_dual():\n\
+    \                break\n            f = flow_limit - flow\n            v = t\n\
+    \            while prev[v] is not None:\n                u, e = prev[v]\n    \
+    \            f = min(f, e.cap)\n                v = u\n            v = t\n   \
+    \         while prev[v] is not None:\n                u, e = prev[v]\n       \
+    \         e.cap -= f\n                assert e.rev is not None\n             \
+    \   e.rev.cap += f\n                v = u\n            c = -dual[s]\n        \
+    \    flow += f\n            cost += f * c\n            if c == prev_cost_per_flow:\n\
+    \                result.pop()\n            result.append((flow, cost))\n     \
+    \       prev_cost_per_flow = c\n        return result\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/mincostflow.py
   requiredBy: []
-  timestamp: '2023-08-06 23:53:35+09:00'
+  timestamp: '2024-08-27 15:46:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_6_b_min_cost_flow.test.py

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/maxflow.py
     title: "\u6700\u5927\u30D5\u30ED\u30FC"
   _extendedRequiredBy: []
@@ -18,15 +18,15 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_6_A\n\
-    \nfrom graph.maxflow import mf_graph\n\nN, M = map(int, input().split())\nG =\
-    \ mf_graph(N)\nfor _ in range(M):\n    u, v, c = map(int, input().split())\n \
-    \   G.add_edge(u, v, c)\n\nans = G.flow(0, N - 1)\nprint(ans)\n"
+    \nfrom graph.maxflow import MaxFlow\n\nn, m = map(int, input().split())\ng = MaxFlow(n)\n\
+    for _ in range(m):\n    u, v, c = map(int, input().split())\n    g.add_edge(u,\
+    \ v, c)\n\nans = g.flow(0, n - 1)\nprint(ans)\n"
   dependsOn:
   - graph/maxflow.py
   isVerificationFile: true
   path: test/aoj/grl/grl_6_a_max_flow.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-08-27 15:46:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_6_a_max_flow.test.py

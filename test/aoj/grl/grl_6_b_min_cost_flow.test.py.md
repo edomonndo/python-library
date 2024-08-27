@@ -18,16 +18,16 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_6_B\n\
-    \nfrom graph.mincostflow import mcf_graph\n\nN, M, F = map(int, input().split())\n\
-    G = mcf_graph(N)\nfor _ in range(M):\n    u, v, c, d = map(int, input().split())\n\
-    \    G.add_edge(u, v, c, d)\n\nf, c = G.flow(0, N - 1, F)\nprint(c if f == F else\
-    \ -1)\n"
+    \nfrom graph.mincostflow import MinCostFlow\n\nn, m, limit = map(int, input().split())\n\
+    g = MinCostFlow(n)\nfor _ in range(m):\n    u, v, c, d = map(int, input().split())\n\
+    \    g.add_edge(u, v, c, d)\n\nf, c = g.flow(0, n - 1, limit)\nprint(c if f ==\
+    \ limit else -1)\n"
   dependsOn:
   - graph/mincostflow.py
   isVerificationFile: true
   path: test/aoj/grl/grl_6_b_min_cost_flow.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
+  timestamp: '2024-08-27 15:46:23+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_6_b_min_cost_flow.test.py

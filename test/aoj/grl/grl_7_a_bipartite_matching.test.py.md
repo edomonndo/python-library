@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/maxflow.py
     title: "\u6700\u5927\u30D5\u30ED\u30FC"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_7_A
     links:
@@ -18,18 +18,18 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_7_A\n\
-    \nfrom graph.maxflow import mf_graph\n\nX, Y, M = map(int, input().split())\n\
-    N = X + Y\nG = mf_graph(N + 2)\nfor _ in range(M):\n    x, y = map(int, input().split())\n\
-    \    G.add_edge(x, y + X, 1)\nfor i in range(N):\n    if i < X:\n        G.add_edge(N,\
-    \ i, 1)\n    else:\n        G.add_edge(i, N + 1, 1)\n\nf = G.flow(N, N + 1)\n\
+    \nfrom graph.maxflow import maxflow\n\nx, y, m = map(int, input().split())\nn\
+    \ = x + y\ng = MaxFlow(n + 2)\nfor _ in range(m):\n    u, v = map(int, input().split())\n\
+    \    g.add_edge(u, v + x, 1)\nfor i in range(n):\n    if i < x:\n        g.add_edge(n,\
+    \ i, 1)\n    else:\n        g.add_edge(i, n + 1, 1)\n\nf = g.flow(n, n + 1)\n\
     print(f)\n"
   dependsOn:
   - graph/maxflow.py
   isVerificationFile: true
   path: test/aoj/grl/grl_7_a_bipartite_matching.test.py
   requiredBy: []
-  timestamp: '2024-06-19 11:57:13+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-27 15:46:23+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_7_a_bipartite_matching.test.py
 layout: document
