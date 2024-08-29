@@ -4,14 +4,14 @@ from data_structure.wavelet_matrix import WaveletMatrix
 from collections import Counter
 
 
-def compress_to_list(arr):
+def compress_tolist(arr):
     # 0-index
     return list(map({e: i for i, e in enumerate(sorted(set(arr)), 0)}.__getitem__, arr))
 
 
 N, Q = map(int, input().split())
 A = [int(x) for x in input().split()]
-A = compress_to_list(A)
+A = compress_tolist(A)
 B = Counter()
 for i, a in enumerate(A):
     A[i] = B[a]

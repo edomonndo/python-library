@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_7_A
 
-from graph.maxflow import maxflow
+from graph.maxflow import MaxFlow
 
 x, y, m = map(int, input().split())
 n = x + y

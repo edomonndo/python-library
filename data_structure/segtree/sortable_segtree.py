@@ -363,7 +363,7 @@ class SortableSegtree:
             self._toggle(tm)
         self.root = self._merge_outer(tl, self._merge_outer(tm, tr))
 
-    def to_list(self):
+    def tolist(self):
         res = []
         self._enumerate_outer(self.root, res)
         return res

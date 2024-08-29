@@ -44,7 +44,7 @@ class Monoid:
             return True
         return False
 
-    def to_list(self) -> list[int]:
+    def tolist(self) -> list[int]:
         return [self.a, self.b, self.c, self.d]
 
 
@@ -69,6 +69,6 @@ for _ in range(q):
         u, v = qu
         if uf.same(u, v):
             x = uf.diff(u, v)
-            print(*x.to_list())
+            print(*x.tolist())
         else:
             print(-1)
