@@ -58,7 +58,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_lazysegtree.py
   requiredBy: []
-  timestamp: '2024-08-27 14:34:46+09:00'
+  timestamp: '2024-08-29 23:12:08+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: graph/tree/hld_lazysegtree.py

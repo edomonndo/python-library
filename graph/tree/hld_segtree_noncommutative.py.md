@@ -47,7 +47,7 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_segtree_noncommutative.py
   requiredBy: []
-  timestamp: '2024-08-27 14:34:46+09:00'
+  timestamp: '2024-08-29 23:12:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/tree/vertext_set_path_composite2.test.py

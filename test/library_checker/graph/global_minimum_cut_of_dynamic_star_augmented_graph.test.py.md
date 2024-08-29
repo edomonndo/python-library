@@ -32,9 +32,9 @@ data:
     \ for x in input().split()]\nedges = [tuple(map(int, input().split())) for _ in\
     \ range(m)]\n\nnew_edges = extreme_vertex_set(n, edges)\nsz = 2 * n - 1\nhld =\
     \ HeavyLightDecomposition(sz, new_edges, sz - 1, True)\nvs = [0] * sz\nfor i in\
-    \ range(sz):\n    for v, w in hld.adj[i]:\n        vs[hld.into[v]] = w\ninf =\
-    \ float(\"inf\")\nseg = LazySegtree(vs, min, inf, mapping, composition, 0)\n\n\
-    \ndef update(v: int, cost: int):\n    # assert 0 <= v < n\n    hld.path_query(v,\
+    \ range(sz):\n    for v, ei in hld.adj[i]:\n        vs[hld.into[v]] = new_edges[ei][2]\n\
+    inf = float(\"inf\")\nseg = LazySegtree(vs, min, inf, mapping, composition, 0)\n\
+    \n\ndef update(v: int, cost: int):\n    # assert 0 <= v < n\n    hld.path_query(v,\
     \ sz - 1, (lambda l, r: seg.apply(l, r, cost - cur[v])))\n    cur[v] = cost\n\n\
     \ncur = [0] * n\nfor i in range(n):\n    update(i, A[i])\n\nfor _ in range(q):\n\
     \    x, y = map(int, input().split())\n    update(x, y)\n    print(seg.all_prod())\n"
@@ -45,7 +45,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
   requiredBy: []
-  timestamp: '2024-08-27 14:34:46+09:00'
+  timestamp: '2024-08-29 23:12:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
