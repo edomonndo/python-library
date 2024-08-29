@@ -18,16 +18,10 @@ class HeavyLightDecomposition:
         self.par = [root] * n
         self.hld = [0] * n
         self.adj = [[] for _ in range(n)]
-        if edges and len(edges[0]) == 2:
-            for u, v in edges:
-                self.adj[u].append((v, 0))
-                if not directed:
-                    self.adj[v].append((u, 0))
-        else:
-            for u, v, w in edges:
-                self.adj[u].append((v, w))
-                if not directed:
-                    self.adj[v].append((u, w))
+        for ei, e in enumerate(edges):
+            self.adj[e[0]].append((e[1], ei))
+            if not directed:
+                self.adj[e[1]].append((e[0], ~ei))
         self._dfs_sz()
         self._dfs_hld()
 
@@ -42,7 +36,7 @@ class HeavyLightDecomposition:
                 sz[v] = 1
                 if len(adj[v]) >= 2 and adj[v][-1][0] == par[v]:
                     adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]
-                for i, (u, w) in enumerate(adj[v]):
+                for i, (u, _) in enumerate(adj[v]):
                     if u == par[v]:
                         continue
                     depth[u] = depth[v] + 1
@@ -69,7 +63,7 @@ class HeavyLightDecomposition:
                 into[v] = idx
                 hld[idx] = v
                 idx += 1
-                for u, w in adj[v]:
+                for u, _ in adj[v]:
                     if u == par[v]:
                         continue
                     head[u] = head[v] if u == adj[v][-1][0] else u

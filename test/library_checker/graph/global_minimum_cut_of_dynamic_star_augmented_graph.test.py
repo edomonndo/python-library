@@ -27,8 +27,8 @@ sz = 2 * n - 1
 hld = HeavyLightDecomposition(sz, new_edges, sz - 1, True)
 vs = [0] * sz
 for i in range(sz):
-    for v, w in hld.adj[i]:
-        vs[hld.into[v]] = w
+    for v, ei in hld.adj[i]:
+        vs[hld.into[v]] = new_edges[ei][2]
 inf = float("inf")
 seg = LazySegtree(vs, min, inf, mapping, composition, 0)
 
