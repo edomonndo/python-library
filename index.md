@@ -490,7 +490,7 @@ data:
       title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
-    - icon: ':x:'
+    - icon: ':question:'
       path: linear_algebra/bit_matrix.py
       title: linear_algebra/bit_matrix.py
     - icon: ':heavy_check_mark:'
@@ -1241,7 +1241,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_rank.test.py
       title: Rank of Matrix
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_rank_mod2.test.py
       title: Rank of Matrix (Mod 2)
   - name: test/library_checker/number_theory

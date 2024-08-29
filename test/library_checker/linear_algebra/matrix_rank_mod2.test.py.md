@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: linear_algebra/bit_matrix.py
     title: linear_algebra/bit_matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_rank_mod_2
     links:
@@ -45,7 +45,7 @@ data:
   path: test/library_checker/linear_algebra/matrix_rank_mod2.test.py
   requiredBy: []
   timestamp: '2024-08-30 00:39:24+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/linear_algebra/matrix_rank_mod2.test.py
 layout: document

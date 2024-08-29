@@ -15,12 +15,12 @@ data:
   - icon: ':x:'
     path: test/library_checker/linear_algebra/matrix_product_mod2.test.py
     title: test/library_checker/linear_algebra/matrix_product_mod2.test.py
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/linear_algebra/matrix_rank_mod2.test.py
     title: Rank of Matrix (Mod 2)
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -101,7 +101,7 @@ data:
   path: linear_algebra/bit_matrix.py
   requiredBy: []
   timestamp: '2024-08-30 00:39:24+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
   - test/library_checker/linear_algebra/matrix_product_mod2.test.py

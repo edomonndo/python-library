@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':question:'
     path: linear_algebra/bit_matrix.py
     title: linear_algebra/bit_matrix.py
   _extendedVerifiedWith: []

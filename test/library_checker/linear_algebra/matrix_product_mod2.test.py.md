@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: linear_algebra/bit_matrix.py
     title: linear_algebra/bit_matrix.py
   _extendedRequiredBy: []
