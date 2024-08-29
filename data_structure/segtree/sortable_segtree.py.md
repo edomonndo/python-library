@@ -163,13 +163,13 @@ data:
     \ bool = False) -> None:\n        if l == r:\n            return\n        tl,\
     \ tm, tr = self._split_range_outer(self.root, l, r)\n        tm = self._sort_inner(tm)\n\
     \        if descending:\n            self._toggle(tm)\n        self.root = self._merge_outer(tl,\
-    \ self._merge_outer(tm, tr))\n\n    def to_list(self):\n        res = []\n   \
-    \     self._enumerate_outer(self.root, res)\n        return res\n"
+    \ self._merge_outer(tm, tr))\n\n    def tolist(self):\n        res = []\n    \
+    \    self._enumerate_outer(self.root, res)\n        return res\n"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/segtree/sortable_segtree.py
   requiredBy: []
-  timestamp: '2024-05-30 17:43:25+09:00'
+  timestamp: '2024-08-29 22:20:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/data_structure/point_set_range_sort_range_composite.test.py

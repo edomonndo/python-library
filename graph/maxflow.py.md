@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_6_a_max_flow.test.py
     title: "GRL6A \u6700\u5927\u6D41"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_7_a_bipartite_matching.test.py
     title: "GRL7A 2\u90E8\u30DE\u30C3\u30C1\u30F3\u30B0"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -79,7 +79,7 @@ data:
   path: graph/maxflow.py
   requiredBy: []
   timestamp: '2024-08-27 15:46:23+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_7_a_bipartite_matching.test.py
   - test/aoj/grl/grl_6_a_max_flow.test.py

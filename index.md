@@ -351,7 +351,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/matrix_tree_theorem.py
       title: "\u884C\u5217\u6728\u5B9A\u7406"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
       title: "\u6700\u5927\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
@@ -866,7 +866,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_6_b_min_cost_flow.test.py
       title: "GRL6B \u6700\u5C0F\u8CBB\u7528\u6D41"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_7_a_bipartite_matching.test.py
       title: "GRL7A 2\u90E8\u30DE\u30C3\u30C1\u30F3\u30B0"
   - name: test/aoj/ntl

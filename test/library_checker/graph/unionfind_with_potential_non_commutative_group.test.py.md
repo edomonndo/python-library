@@ -34,7 +34,7 @@ data:
     Monoid\") -> bool:\n        if (\n            self.a == other.a\n            and\
     \ self.b == other.b\n            and self.c == other.c\n            and self.d\
     \ == other.d\n        ):\n            return True\n        return False\n\n  \
-    \  def to_list(self) -> list[int]:\n        return [self.a, self.b, self.c, self.d]\n\
+    \  def tolist(self) -> list[int]:\n        return [self.a, self.b, self.c, self.d]\n\
     \n\nn, q = map(int, input().split())\nuf = WeightedUnionFind(n, Monoid(1, 0, 0,\
     \ 1))\nfor _ in range(q):\n    t, *qu = map(int, input().split())\n    if t ==\
     \ 0:\n        u, v, a, b, c, d = qu\n        p = Monoid(a, b, c, d)\n        if\
@@ -42,13 +42,13 @@ data:
     \             print(1)\n            else:\n                print(0)\n\n      \
     \  else:\n            uf.merge(u, v, p)\n            print(1)\n    else:\n   \
     \     u, v = qu\n        if uf.same(u, v):\n            x = uf.diff(u, v)\n  \
-    \          print(*x.to_list())\n        else:\n            print(-1)\n"
+    \          print(*x.tolist())\n        else:\n            print(-1)\n"
   dependsOn:
   - graph/connectivity/weighted_unionfind.py
   isVerificationFile: true
   path: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
   requiredBy: []
-  timestamp: '2024-07-29 12:40:49+09:00'
+  timestamp: '2024-08-29 22:20:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
