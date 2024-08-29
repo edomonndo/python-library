@@ -1,80 +1,59 @@
-from itertools import zip_longest
-from typing import Union
-
-
 class BitSet:
+    """64 Bit"""
 
-    def __init__(self, str_or_int: Union[str, int] = "") -> None:
-        self._bin = str_or_int if isinstance(str_or_int, str) else bin(str_or_int)[2:]
-        self._buckets = []  # little endian
-        self._len = 0
-        for i in range(0, len(self._bin), 63):
-            group = int(self._bin[i : i + 63], 2)
-            self._buckets.append(group)
-            self._len += self._bit_count_ll(group)
-
-    @staticmethod
-    def _bit_count_ll(n: int) -> int:
-        """`O(1)` counts bit of int smaller than"""
-        c = (n & 0x5555555555555555) + ((n >> 1) & 0x5555555555555555)
-        c = (c & 0x3333333333333333) + ((c >> 2) & 0x3333333333333333)
-        c = (c & 0x0F0F0F0F0F0F0F0F) + ((c >> 4) & 0x0F0F0F0F0F0F0F0F)
-        c = (c & 0x00FF00FF00FF00FF) + ((c >> 8) & 0x00FF00FF00FF00FF)
-        c = (c & 0x0000FFFF0000FFFF) + ((c >> 16) & 0x0000FFFF0000FFFF)
-        c = (c & 0x00000000FFFFFFFF) + ((c >> 32) & 0x00000000FFFFFFFF)
-        return c
-
-    def add(self, n: int) -> bool:
-        row, col = n // 63, n % 63
-        if n in self:
-            return False
-        self._ensure_capacity(row + 1)
-        self._buckets[row] |= 1 << col
-        self._len += 1
-        return True
-
-    def discard(self, n: int) -> bool:
-        row, col = n // 63, n % 63
-        if len(self._buckets) <= row or n not in self:
-            return False
-        self._buckets[row] &= ~(1 << col)
-        self._len += 1
-        return True
-
-    def _bit_count(self) -> int:
-        res = 0
-        for bucket in self._buckets:
-            res += self._bit_count_ll(bucket)
-        return res
-
-    def _ensure_capacity(self, n: int) -> None:
-        if len(self._buckets) < n:
-            self._buckets.extend([0] * (n - len(self._buckets)))
-
-    def __and__(self, other: "BitSet") -> int:
-        res = 0
-        for b1, b2 in zip(self._buckets, other._buckets):
-            res += self._bit_count_ll(b1 & b2)
-        return res
-
-    def __or__(self, other: "BitSet") -> int:
-        res = 0
-        for b1, b2 in zip_longest(self._buckets, other._buckets, fillvalue=0):
-            res += self._bit_count_ll(b1 | b2)
-        return res
-
-    def __xor__(self, other: "BitSet") -> int:
-        res = 0
-        for b1, b2 in zip_longest(self._buckets, other._buckets, fillvalue=0):
-            res += self._bit_count_ll(b1 ^ b2)
-        return res
-
-    def __contains__(self, n: int) -> bool:
-        row, col = n // 63, n % 63
-        return len(self._buckets) > row and not not (self._buckets[row] & (1 << col))
+    def __init__(self, n: int):
+        self.n = n
+        self.buf = [0] * ((n + 63) // 64)
 
     def __repr__(self) -> str:
-        return f"BitSet({self._bin})"
+        return f"<BitSet[{self.tostr()}]>"
 
-    def __len__(self) -> int:
-        return self._len
+    def __getitem__(self, idx: int) -> int:
+        return self.buf[idx >> 6] >> (idx & 0x3F) & 1
+
+    def __setitem__(self, idx: int, b: int) -> None:
+        # assert b == 0 or b == 1
+        if b:
+            self.buf[idx >> 6] |= 1 << (idx & 0x3F)
+        else:
+            self.buf[idx >> 6] &= ~(1 << (idx & 0x3F))
+
+    def __and__(self, other: "BitSet") -> "BitSet":
+        return self.__xor__(other)
+
+    def __or__(self, other: "BitSet") -> "BitSet":
+        for i in range(min(len(self.buf), len(other.buf))):
+            self.buf[i] |= other.buf[i]
+        return self
+
+    def __xor__(self, other: "BitSet") -> "BitSet":
+        for i in range(min(len(self.buf), len(other.buf))):
+            self.buf[i] ^= other.buf[i]
+        return self
+
+    def ctz(self):
+        res = 0
+        i = 0
+        while i < len(self.buf) and self.buf[i] == 0:
+            res += 64
+            i += 1
+        if i < len(self.buf):
+            for sub_czt in range(64):
+                if self.buf[i] >> sub_czt & 1:
+                    break
+            res += sub_czt
+        return min(res, self.n)
+
+    def xor_hint(self, other: "BitSet", hint: int) -> "BitSet":
+        for i in range(hint >> 6, min(len(self.buf), len(other.buf))):
+            self.buf[i] ^= other.buf[i]
+        return self
+
+    def tostr(self) -> str:
+        res = ["1" if self[i] else "0" for i in range(self.n)]
+        return "".join(res)
+
+    def copy(self) -> "BitSet":
+        res = BitSet(self.n)
+        res.buf = self.buf[:]
+        return res
