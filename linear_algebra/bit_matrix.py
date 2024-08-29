@@ -85,18 +85,18 @@ class BitMatrix:
 
     def __mul__(self, other: "BitMatrix") -> "BitMatrix":
         assert self.m == other.n
-        n, k = self.n, other.m
-        res = BitMatrix(0, 0)
-        res.n, res.m, res.flip = self.n, other.m, False
-        bss = [BitSet(k) for _ in range(n)]
-        if other.flip:
+        res = BitMatrix(self.n, other.m)
+        if not other.flip:
             other = other.transpose(False)
-            # assert other.flip = False
-        for i in range(self.n):
-            for j in range(self.m):
-                if self.get(i, j):
-                    bss[i] ^= other[j]
-        res.bss = bss
+        for i in range(res.n):
+            for k in range(res.m):
+                cnt = 0
+                for j in range(max(len(self.bss[i].buf), len(other.bss[k].buf))):
+                    b1 = self.bss[i].buf[j] if j < len(self.bss[i].buf) else 0
+                    b2 = other.bss[k].buf[j] if j < len(other.bss[k].buf) else 0
+                    cnt += BitSet._bit_count(b1 & b2)
+                if cnt & 1:
+                    res.set(i, k, 1)
         return res
 
     def rank(self):
