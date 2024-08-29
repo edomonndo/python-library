@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':x:'
     path: linear_algebra/bit_matrix.py
     title: linear_algebra/bit_matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/matrix_det_mod_2
     links:
@@ -20,7 +20,10 @@ data:
   code: '# verification-helper: PROBLEM https://judge.yosupo.jp/problem/matrix_det_mod_2
 
 
-    # import sys
+    import sys
+
+
+    input = sys.stdin.readline().rstrip
 
     # sys.set_int_max_str_digits(0)
 
@@ -41,8 +44,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
   requiredBy: []
-  timestamp: '2024-08-29 23:59:34+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-08-30 00:39:24+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
 layout: document

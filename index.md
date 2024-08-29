@@ -490,7 +490,7 @@ data:
       title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
-    - icon: ':question:'
+    - icon: ':x:'
       path: linear_algebra/bit_matrix.py
       title: linear_algebra/bit_matrix.py
     - icon: ':heavy_check_mark:'
@@ -1220,7 +1220,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
       title: Determinant of Matrix (Arbitrary Mod)
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
       title: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
     - icon: ':heavy_check_mark:'

@@ -6,7 +6,7 @@ data:
     title: Bitset
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
     title: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
   - icon: ':x:'
@@ -20,7 +20,7 @@ data:
     title: Rank of Matrix (Mod 2)
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -59,48 +59,49 @@ data:
     \     if self.get(i, j):\n                        bss[j][i] = 1\n            res\
     \ = BitMatrix(0, 0)\n            res.n, res.m, res.flip, res.bss = self.m, self.n,\
     \ False, bss\n            return res\n\n    def __mul__(self, other: \"BitMatrix\"\
-    ) -> \"BitMatrix\":\n        assert self.m == other.n\n        n, k = self.n,\
-    \ other.m\n        res = BitMatrix(0, 0)\n        res.n, res.m, res.flip = self.n,\
-    \ other.m, False\n        bss = [BitSet(k) for _ in range(n)]\n        if other.flip:\n\
-    \            other = other.transpose(False)\n            # assert other.flip =\
-    \ False\n        for i in range(self.n):\n            for j in range(self.m):\n\
-    \                if self.get(i, j):\n                    bss[i] ^= other[j]\n\
-    \        res.bss = bss\n        return res\n\n    def rank(self):\n        if\
-    \ self.n == 0 or self.m == 0:\n            return 0\n        n, m = self.n, self.m\n\
-    \        if self.flip:\n            n, m = m, n\n        nonzero = []\n      \
-    \  lead = []\n        for i in range(n):\n            ai = self.bss[i].copy()\n\
-    \            for aj, z in zip(nonzero, lead):\n                if ai[z]:\n   \
-    \                 ai ^= aj\n            bj = -1\n            for j in range(m):\n\
-    \                if ai[j]:\n                    bj = j\n                    break\n\
-    \            if bj >= 0:\n                nonzero.append(ai.copy())\n        \
-    \        lead.append(bj)\n        return len(nonzero)\n\n    def det(self) ->\
-    \ int:\n        assert self.n == self.m\n        assert self.flip == False\n \
-    \       n, bss = self.n, [bs.copy() for bs in self.bss]\n        lead = [0] *\
-    \ n\n        for i in range(n):\n            for j in range(i):\n            \
-    \    if bss[i][lead[j]]:\n                    bss[i].xor_hint(bss[j], lead[j])\n\
-    \            lead[i] = bss[i].ctz()\n            if lead[i] == n:\n          \
-    \      return 0\n        return 1\n\n    def inv(self) -> Optional[\"BitMatrix\"\
-    ]:\n        assert self.n == self.m\n        assert self.flip == False\n     \
-    \   n = self.n\n        bss = [BitSet(n << 1) for _ in range(n)]\n        for\
-    \ i in range(n):\n            for j in range(n):\n                if self.get(i,\
-    \ j):\n                    bss[i][j] = 1\n        lead = [0] * n\n        for\
-    \ i in range(n):\n            bss[i][n + i] = 1\n            for j in range(i):\n\
-    \                if bss[i][lead[j]]:\n                    bss[i].xor_hint(bss[j],\
-    \ lead[j])\n            lead[i] = bss[i].ctz()\n            if lead[i] >= n:\n\
-    \                return None\n            for j in range(i):\n               \
-    \ if bss[j][lead[i]]:\n                    bss[j].xor_hint(bss[i], lead[i])\n\
-    \        res = BitMatrix(n, n)\n        for i in range(n):\n            while\
-    \ lead[i] != i:\n                bss[i], bss[lead[i]] = bss[lead[i]], bss[i]\n\
-    \                lead[i], lead[lead[i]] = lead[lead[i]], lead[i]\n           \
-    \ for j in range(n):\n                if bss[i][j + n]:\n                    res.set(i,\
-    \ j, 1)\n        return res\n"
+    ) -> \"BitMatrix\":\n        assert self.m == other.n\n        res = BitMatrix(self.n,\
+    \ other.m)\n        if not other.flip:\n            other = other.transpose(False)\n\
+    \        for i in range(res.n):\n            for k in range(res.m):\n        \
+    \        cnt = 0\n                for j in range(max(len(self.bss[i].buf), len(other.bss[k].buf))):\n\
+    \                    b1 = self.bss[i].buf[j] if j < len(self.bss[i].buf) else\
+    \ 0\n                    b2 = other.bss[k].buf[j] if j < len(other.bss[k].buf)\
+    \ else 0\n                    cnt += BitSet._bit_count(b1 & b2)\n            \
+    \    if cnt & 1:\n                    res.set(i, k, 1)\n        return res\n\n\
+    \    def rank(self):\n        if self.n == 0 or self.m == 0:\n            return\
+    \ 0\n        n, m = self.n, self.m\n        if self.flip:\n            n, m =\
+    \ m, n\n        nonzero = []\n        lead = []\n        for i in range(n):\n\
+    \            ai = self.bss[i].copy()\n            for aj, z in zip(nonzero, lead):\n\
+    \                if ai[z]:\n                    ai ^= aj\n            bj = -1\n\
+    \            for j in range(m):\n                if ai[j]:\n                 \
+    \   bj = j\n                    break\n            if bj >= 0:\n             \
+    \   nonzero.append(ai.copy())\n                lead.append(bj)\n        return\
+    \ len(nonzero)\n\n    def det(self) -> int:\n        assert self.n == self.m\n\
+    \        assert self.flip == False\n        n, bss = self.n, [bs.copy() for bs\
+    \ in self.bss]\n        lead = [0] * n\n        for i in range(n):\n         \
+    \   for j in range(i):\n                if bss[i][lead[j]]:\n                \
+    \    bss[i].xor_hint(bss[j], lead[j])\n            lead[i] = bss[i].ctz()\n  \
+    \          if lead[i] == n:\n                return 0\n        return 1\n\n  \
+    \  def inv(self) -> Optional[\"BitMatrix\"]:\n        assert self.n == self.m\n\
+    \        assert self.flip == False\n        n = self.n\n        bss = [BitSet(n\
+    \ << 1) for _ in range(n)]\n        for i in range(n):\n            for j in range(n):\n\
+    \                if self.get(i, j):\n                    bss[i][j] = 1\n     \
+    \   lead = [0] * n\n        for i in range(n):\n            bss[i][n + i] = 1\n\
+    \            for j in range(i):\n                if bss[i][lead[j]]:\n       \
+    \             bss[i].xor_hint(bss[j], lead[j])\n            lead[i] = bss[i].ctz()\n\
+    \            if lead[i] >= n:\n                return None\n            for j\
+    \ in range(i):\n                if bss[j][lead[i]]:\n                    bss[j].xor_hint(bss[i],\
+    \ lead[i])\n        res = BitMatrix(n, n)\n        for i in range(n):\n      \
+    \      while lead[i] != i:\n                bss[i], bss[lead[i]] = bss[lead[i]],\
+    \ bss[i]\n                lead[i], lead[lead[i]] = lead[lead[i]], lead[i]\n  \
+    \          for j in range(n):\n                if bss[i][j + n]:\n           \
+    \         res.set(i, j, 1)\n        return res\n"
   dependsOn:
   - utility/bitset.py
   isVerificationFile: false
   path: linear_algebra/bit_matrix.py
   requiredBy: []
-  timestamp: '2024-08-29 23:59:34+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-08-30 00:39:24+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
   - test/library_checker/linear_algebra/matrix_product_mod2.test.py
