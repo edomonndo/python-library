@@ -19,48 +19,35 @@ class HldLazySegTree:
         n: int,
         edges: list[Union[tuple[int, int] | tuple[int, int, int]]],
         root: int = 0,
+        directed: bool = False,
     ):
         # assert n == len(v)
-        self.hld = HeavyLightDecomposition(n, edges, root)
+        self.hld = HeavyLightDecomposition(n, edges, root, directed)
         nv = self.hld.build_list(v)
         self.seg = LazySegtree(nv, op, e, mapping, composition, id_)
-        self.rseg = LazySegtree(nv[::-1], op, e, mapping, composition, id_)
         self.op = op
         self.e = e
         self.mapping = mapping
         self.compositon = composition
         self.id = id_
 
-    def path_prod(self, u: int, v: int) -> T:
-        head, into, depth, n = self.hld.head, self.hld.into, self.hld.depth, self.hld.n
-        seg, rseg, par, op = self.seg, self.rseg, self.hld.par, self.op
+    def all_prod(self) -> T:
+        return self.seg.all_prod()
 
-        l, r = self.e, self.e
-        while head[u] != head[v]:
-            if depth[head[u]] > depth[head[v]]:
-                l = op(l, rseg.prod(n - into[u] - 1, n - into[head[u]]))
-                u = par[head[u]]
-            else:
-                r = op(seg.prod(into[head[v]], into[v] + 1), r)
-                v = par[head[v]]
-        if depth[u] > depth[v]:
-            l = op(l, rseg.prod(n - into[u] - 1, n - into[v]))
-        else:
-            l = op(l, seg.prod(into[u], into[v] + 1))
-        return op(l, r)
+    def path_prod(self, u: int, v: int, edge: bool = False) -> T:
+        hld, seg = self.hld, self.seg
+        res = self.e
 
-    def path_apply(self, u: int, v: int, f: F) -> None:
-        head, into, depth = self.hld.head, self.hld.into, self.hld.depth
-        seg, par = self.seg, self.hld.par
+        def _f(l: int, r: int) -> None:
+            nonlocal res
+            res = seg.prod(l, r)
 
-        while head[u] != head[v]:
-            if depth[head[u]] < depth[head[v]]:
-                u, v = v, u
-            seg.apply(into[head[u]], into[u] + 1, f)
-            u = par[head[u]]
-        if depth[u] < depth[v]:
-            u, v = v, u
-        seg.apply(into[v], into[u] + 1, f)
+        hld.path_query(u, v, _f, edge)
+        return res
+
+    def path_apply(self, u: int, v: int, f: F, edge: bool = False) -> None:
+        hld, seg = self.hld, self.seg
+        hld.path_query(u, v, lambda l, r: seg.apply(l, r, f), edge)
 
     def subtree_prod(self, v: int) -> T:
         return self.seg.prod(self.hld.into[v], self.hld.out[v])
@@ -74,4 +61,3 @@ class HldLazySegTree:
     def set(self, k: int, v: T) -> None:
         k = self.hld.into[k]
         self.seg.set(k, v)
-        self.rseg[self.hld.n - k - 1] = v
