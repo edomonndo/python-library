@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/hld_lazysegtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
   - icon: ':heavy_check_mark:'
@@ -20,7 +20,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
   - icon: ':heavy_check_mark:'
@@ -38,9 +38,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -120,7 +120,7 @@ data:
   - graph/tree/hld_lazysegtree.py
   - graph/tree/hld_segtree_noncommutative.py
   timestamp: '2024-08-29 23:12:08+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

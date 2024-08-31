@@ -140,7 +140,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -444,10 +444,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/hld_lazysegtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
     - icon: ':heavy_check_mark:'
@@ -944,10 +944,10 @@ data:
     - icon: ':grey_question:'
       path: test/atcoder/past/past17o.test.py
       title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/past/past4m_hld.test.py
       title: "M - \u7B46\u5857\u308A"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/atcoder/past/past4m_hld2.test.py
       title: "M - \u7B46\u5857\u308A"
     - icon: ':heavy_check_mark:'

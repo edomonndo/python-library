@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://atcoder.jp/contests/past202010-open/tasks/past202010_m
     links:
@@ -26,8 +26,8 @@ data:
     \ input().split())\nedges = [tuple(map(lambda x: int(x) - 1, input().split()))\
     \ for _ in range(n - 1)]\n\nhld = HeavyLightDecomposition(n, edges)\n\ninf = float(\"\
     inf\")\nmapping = lambda f, x: x if f == ID else f\ncomposition = lambda f, g:\
-    \ g if f == ID else f\nID = inf\nseg = LazySegtree([0] * n, lambda x, y: 0, 0,\
-    \ mapping, composition, ID)\n\nfor _ in range(q):\n    u, v, c = map(int, input().split())\n\
+    \ g if f == ID else f\nID = inf\nseg = LazySegtree([0] * n, min, inf, mapping,\
+    \ composition, ID)\n\nfor _ in range(q):\n    u, v, c = map(int, input().split())\n\
     \    u -= 1\n    v -= 1\n    hld.path_query(u, v, (lambda l, r: seg.apply(l, r,\
     \ c)), True)\n\nans = None\n\n\ndef f(l, r):\n    global ans\n    ans = seg.prod(l,\
     \ r)\n\n\nfor u, v in edges:\n    hld.path_query(u, v, f, True)\n    print(ans)\n"
@@ -37,8 +37,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past4m_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-01 02:12:38+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-01 02:34:22+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/past/past4m_hld.test.py
 layout: document
