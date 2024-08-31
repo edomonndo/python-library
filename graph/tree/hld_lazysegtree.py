@@ -40,7 +40,7 @@ class HldLazySegTree:
 
         def _f(l: int, r: int) -> None:
             nonlocal res
-            res = seg.prod(l, r)
+            res = self.op(res, seg.prod(l, r))
 
         hld.path_query(u, v, _f, edge)
         return res
