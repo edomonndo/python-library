@@ -15,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
+  - icon: ':heavy_check_mark:'
+    path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
+    title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -39,11 +42,11 @@ data:
     \ = id_\n\n    def all_prod(self) -> T:\n        return self.seg.all_prod()\n\n\
     \    def path_prod(self, u: int, v: int, edge: bool = False) -> T:\n        hld,\
     \ seg = self.hld, self.seg\n        res = self.e\n\n        def _f(l: int, r:\
-    \ int) -> None:\n            nonlocal res\n            res = seg.prod(l, r)\n\n\
-    \        hld.path_query(u, v, _f, edge)\n        return res\n\n    def path_apply(self,\
-    \ u: int, v: int, f: F, edge: bool = False) -> None:\n        hld, seg = self.hld,\
-    \ self.seg\n        hld.path_query(u, v, lambda l, r: seg.apply(l, r, f), edge)\n\
-    \n    def subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
+    \ int) -> None:\n            nonlocal res\n            res = self.op(res, seg.prod(l,\
+    \ r))\n\n        hld.path_query(u, v, _f, edge)\n        return res\n\n    def\
+    \ path_apply(self, u: int, v: int, f: F, edge: bool = False) -> None:\n      \
+    \  hld, seg = self.hld, self.seg\n        hld.path_query(u, v, lambda l, r: seg.apply(l,\
+    \ r, f), edge)\n\n    def subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
     \ self.hld.out[v])\n\n    def subtree_apply(self, v: int, f: F) -> None:\n   \
     \     self.seg.apply(self.hld.into[v], self.hld.out[v], f)\n\n    def get(self,\
     \ k: int) -> T:\n        return self.seg.get(self.hld.into[k])\n\n    def set(self,\
@@ -55,10 +58,11 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_lazysegtree.py
   requiredBy: []
-  timestamp: '2024-09-01 02:12:38+09:00'
+  timestamp: '2024-09-01 03:12:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld2.test.py
+  - "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
 documentation_of: graph/tree/hld_lazysegtree.py
 layout: document

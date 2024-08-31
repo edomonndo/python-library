@@ -38,7 +38,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
   requiredBy: []
-  timestamp: '2024-09-01 02:12:38+09:00'
+  timestamp: '2024-09-01 03:12:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py

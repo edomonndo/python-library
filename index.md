@@ -1429,6 +1429,9 @@ data:
   - name: test/yukicoder
     pages:
     - icon: ':heavy_check_mark:'
+      path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
+      title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
+    - icon: ':heavy_check_mark:'
       path: test/yukicoder/875_range_mindex_query.test.py
       title: No.875 Range Mindex Query
 layout: toppage
