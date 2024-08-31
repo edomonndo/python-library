@@ -140,7 +140,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -444,10 +444,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
-    - icon: ':warning:'
+    - icon: ':question:'
       path: graph/tree/hld_lazysegtree.py
       title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
     - icon: ':heavy_check_mark:'
@@ -490,9 +490,6 @@ data:
       title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
-    - icon: ':question:'
-      path: linear_algebra/bit_matrix.py
-      title: linear_algebra/bit_matrix.py
     - icon: ':heavy_check_mark:'
       path: linear_algebra/determinant_arbitrary.py
       title: "\u884C\u5217\u5F0F"
@@ -671,11 +668,8 @@ data:
       path: utility/binary_search.py
       title: "\u4E8C\u5206\u6CD5"
     - icon: ':warning:'
-      path: utility/bit32_operation.py
-      title: "\u30D3\u30C3\u30C8\u6F14\u7B97(32bit)"
-    - icon: ':warning:'
-      path: utility/bit64_operation.py
-      title: "\u30D3\u30C3\u30C8\u6F14\u7B97(64bit)"
+      path: utility/bit.py
+      title: "\u30D3\u30C3\u30C8\u6F14\u7B97"
     - icon: ':warning:'
       path: utility/bitset.py
       title: Bitset
@@ -950,6 +944,12 @@ data:
     - icon: ':grey_question:'
       path: test/atcoder/past/past17o.test.py
       title: "O - \u6574\u5730\u30AF\u30A8\u30EA"
+    - icon: ':x:'
+      path: test/atcoder/past/past4m_hld.test.py
+      title: "M - \u7B46\u5857\u308A"
+    - icon: ':x:'
+      path: test/atcoder/past/past4m_hld2.test.py
+      title: "M - \u7B46\u5857\u308A"
     - icon: ':heavy_check_mark:'
       path: test/atcoder/past/past6m.test.py
       title: "M - \u7B49\u3057\u3044\u6570"
@@ -1165,6 +1165,9 @@ data:
       path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
       title: Global Minimum Cut of Dynamic Star Augmented Graph
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
+      title: Global Minimum Cut of Dynamic Star Augmented Graph
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/k_shortest_walk.test.py
       title: K-Shortest Walk
     - icon: ':heavy_check_mark:'
@@ -1220,30 +1223,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_determinant_arbitrary_mod.test.py
       title: Determinant of Matrix (Arbitrary Mod)
-    - icon: ':x:'
-      path: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
-      title: test/library_checker/linear_algebra/matrix_determinant_mod2.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_inverse.test.py
       title: Inverse Matrix
-    - icon: ':x:'
-      path: test/library_checker/linear_algebra/matrix_inverse_mod2.test.py
-      title: test/library_checker/linear_algebra/matrix_inverse_mod2.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_power.test.py
       title: Pow of Matrix
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_product.test.py
       title: Matrix Product
-    - icon: ':x:'
-      path: test/library_checker/linear_algebra/matrix_product_mod2.test.py
-      title: test/library_checker/linear_algebra/matrix_product_mod2.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/linear_algebra/matrix_rank.test.py
       title: Rank of Matrix
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/linear_algebra/matrix_rank_mod2.test.py
-      title: Rank of Matrix (Mod 2)
   - name: test/library_checker/number_theory
     pages:
     - icon: ':heavy_check_mark:'

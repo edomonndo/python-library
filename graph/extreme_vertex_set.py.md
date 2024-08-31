@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
+    title: Global Minimum Cut of Dynamic Star Augmented Graph
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,6 +46,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
+  - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
 documentation_of: graph/extreme_vertex_set.py
 layout: document
 title: "\u6975\u70B9\u96C6\u5408"

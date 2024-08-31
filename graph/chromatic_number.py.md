@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':warning:'
-    path: utility/bit32_operation.py
-    title: "\u30D3\u30C3\u30C8\u6F14\u7B97(32bit)"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -29,12 +26,11 @@ data:
     \            cur[bit] *= dp[bit]\n            tmp += cur[bit]\n        if tmp\
     \ != 0:\n            res = k\n            break\n    else:\n        res = n\n\
     \    return res\n"
-  dependsOn:
-  - utility/bit32_operation.py
+  dependsOn: []
   isVerificationFile: false
   path: graph/chromatic_number.py
   requiredBy: []
-  timestamp: '2024-06-05 17:57:14+09:00'
+  timestamp: '2024-06-04 09:09:32+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/chromatic_number.test.py

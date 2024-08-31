@@ -1,17 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/atcoder/past/past4m_hld2.test.py
+    title: "M - \u7B46\u5857\u308A"
+  - icon: ':heavy_check_mark:'
+    path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
+    title: Global Minimum Cut of Dynamic Star Augmented Graph
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -25,42 +31,35 @@ data:
     \ T], T],\n        e: T,\n        mapping: Callable[[F, T], T],\n        composition:\
     \ Callable[[F, F], F],\n        id_: F,\n        v: list[int],\n        n: int,\n\
     \        edges: list[Union[tuple[int, int] | tuple[int, int, int]]],\n       \
-    \ root: int = 0,\n    ):\n        # assert n == len(v)\n        self.hld = HeavyLightDecomposition(n,\
-    \ edges, root)\n        nv = self.hld.build_list(v)\n        self.seg = LazySegtree(nv,\
-    \ op, e, mapping, composition, id_)\n        self.rseg = LazySegtree(nv[::-1],\
-    \ op, e, mapping, composition, id_)\n        self.op = op\n        self.e = e\n\
-    \        self.mapping = mapping\n        self.compositon = composition\n     \
-    \   self.id = id_\n\n    def path_prod(self, u: int, v: int) -> T:\n        head,\
-    \ into, depth, n = self.hld.head, self.hld.into, self.hld.depth, self.hld.n\n\
-    \        seg, rseg, par, op = self.seg, self.rseg, self.hld.par, self.op\n\n \
-    \       l, r = self.e, self.e\n        while head[u] != head[v]:\n           \
-    \ if depth[head[u]] > depth[head[v]]:\n                l = op(l, rseg.prod(n -\
-    \ into[u] - 1, n - into[head[u]]))\n                u = par[head[u]]\n       \
-    \     else:\n                r = op(seg.prod(into[head[v]], into[v] + 1), r)\n\
-    \                v = par[head[v]]\n        if depth[u] > depth[v]:\n         \
-    \   l = op(l, rseg.prod(n - into[u] - 1, n - into[v]))\n        else:\n      \
-    \      l = op(l, seg.prod(into[u], into[v] + 1))\n        return op(l, r)\n\n\
-    \    def path_apply(self, u: int, v: int, f: F) -> None:\n        head, into,\
-    \ depth = self.hld.head, self.hld.into, self.hld.depth\n        seg, par = self.seg,\
-    \ self.hld.par\n\n        while head[u] != head[v]:\n            if depth[head[u]]\
-    \ < depth[head[v]]:\n                u, v = v, u\n            seg.apply(into[head[u]],\
-    \ into[u] + 1, f)\n            u = par[head[u]]\n        if depth[u] < depth[v]:\n\
-    \            u, v = v, u\n        seg.apply(into[v], into[u] + 1, f)\n\n    def\
-    \ subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
+    \ root: int = 0,\n        directed: bool = False,\n    ):\n        # assert n\
+    \ == len(v)\n        self.hld = HeavyLightDecomposition(n, edges, root, directed)\n\
+    \        nv = self.hld.build_list(v)\n        self.seg = LazySegtree(nv, op, e,\
+    \ mapping, composition, id_)\n        self.op = op\n        self.e = e\n     \
+    \   self.mapping = mapping\n        self.compositon = composition\n        self.id\
+    \ = id_\n\n    def all_prod(self) -> T:\n        return self.seg.all_prod()\n\n\
+    \    def path_prod(self, u: int, v: int, edge: bool = False) -> T:\n        hld,\
+    \ seg = self.hld, self.seg\n        res = self.e\n\n        def _f(l: int, r:\
+    \ int) -> None:\n            nonlocal res\n            res = seg.prod(l, r)\n\n\
+    \        hld.path_query(u, v, _f, edge)\n        return res\n\n    def path_apply(self,\
+    \ u: int, v: int, f: F, edge: bool = False) -> None:\n        hld, seg = self.hld,\
+    \ self.seg\n        hld.path_query(u, v, lambda l, r: seg.apply(l, r, f), edge)\n\
+    \n    def subtree_prod(self, v: int) -> T:\n        return self.seg.prod(self.hld.into[v],\
     \ self.hld.out[v])\n\n    def subtree_apply(self, v: int, f: F) -> None:\n   \
     \     self.seg.apply(self.hld.into[v], self.hld.out[v], f)\n\n    def get(self,\
     \ k: int) -> T:\n        return self.seg.get(self.hld.into[k])\n\n    def set(self,\
     \ k: int, v: T) -> None:\n        k = self.hld.into[k]\n        self.seg.set(k,\
-    \ v)\n        self.rseg[self.hld.n - k - 1] = v\n"
+    \ v)\n"
   dependsOn:
   - data_structure/segtree/lazy_segment_tree.py
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: false
   path: graph/tree/hld_lazysegtree.py
   requiredBy: []
-  timestamp: '2024-08-29 23:12:08+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2024-09-01 02:12:38+09:00'
+  verificationStatus: LIBRARY_SOME_WA
+  verifiedWith:
+  - test/atcoder/past/past4m_hld2.test.py
+  - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
 documentation_of: graph/tree/hld_lazysegtree.py
 layout: document
 title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
