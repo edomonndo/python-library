@@ -19,4 +19,4 @@ for _ in range(q):
     seg.path_apply(u, v, c, True)
 
 for u, v in edges:
-    print(seg.path_prod(u, v))
+    print(seg.path_prod(u, v, True))

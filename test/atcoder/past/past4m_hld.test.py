@@ -13,7 +13,7 @@ inf = float("inf")
 mapping = lambda f, x: x if f == ID else f
 composition = lambda f, g: g if f == ID else f
 ID = inf
-seg = LazySegtree([0] * n, lambda x, y: 0, 0, mapping, composition, ID)
+seg = LazySegtree([0] * n, min, inf, mapping, composition, ID)
 
 for _ in range(q):
     u, v, c = map(int, input().split())
