@@ -27,7 +27,7 @@ def mapping(f: int, x: S) -> S:
 
 
 def composition(f: int, g: int) -> int:
-    return f + g
+    return (f + g) % MOD
 
 
 n = int(input())
