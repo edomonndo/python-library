@@ -3,32 +3,27 @@
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from data_structure.fenwick_tree.range_add_range_sum import RangeAddRangeSum
 
-
-def f(l, r):
-    seg.add(l, r, w)
-
-
-def g(l, r):
-    global ans
-    ans += seg.sum(l, r)
-
-
 n = int(input())
-edges = []
+g = [[] for _ in range(n)]
+par = [-1] * n
 for v in range(n):
     k, *us = map(int, input().split())
     for u in us:
-        edges.append((v, u))
-T = HeavyLightDecomposition(n, edges)
+        g[u].append(v)
+        g[v].append(u)
+        par[u] = v
+hld = HeavyLightDecomposition(n, g, 0, 0)
 seg = RangeAddRangeSum([0] * n)
 q = int(input())
 for _ in range(q):
     t, *qu = map(int, input().split())
     if t == 0:
         v, w = qu
-        T.path_query(0, v, f, True)
+        for l, r in hld.path_query(par[v], v, True):
+            seg.add(l, r, w)
     else:
         u = qu[0]
         ans = 0
-        T.path_query(0, u, g, True)
+        for l, r in hld.path_query(0, u, True):
+            ans += seg.sum(l, r)
         print(ans)

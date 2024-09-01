@@ -1,21 +1,15 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum
 
+
+from graph.tree.template import Tree
 from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
-
-def f(x, y):
-    global ans
-    ans += bit.sum(x, y)
-
-
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
-edges = [tuple(map(int, input().split())) for _ in range(n - 1)]
-H = HeavyLightDecomposition(n, edges, 0)
-P = [0] * n
-for i, a in enumerate(A):
-    P[H.into[i]] = a
+g = Tree.from_input(n, 0)
+hld = HeavyLightDecomposition(n, g, 0)
+P = hld.build_list(A)
 bit = FenwickTree(n)
 for i, p in enumerate(P):
     bit.add(i, p)
@@ -23,9 +17,9 @@ for i, p in enumerate(P):
 for _ in range(q):
     t, a, b = map(int, input().split())
     if t == 0:
-        p = H.into[a]
-        bit.add(p, b)
+        bit.add(hld.index(p), b)
     else:
         ans = 0
-        H.path_query(a, b, f)
+        for l, r in hld.path_query(a, b, False):
+            ans += bit.sum(l, r)
         print(ans)

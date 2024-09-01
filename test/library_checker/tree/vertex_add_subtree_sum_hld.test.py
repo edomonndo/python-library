@@ -3,22 +3,14 @@
 from data_structure.fenwick_tree.fenwick_tree import FenwickTree
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 
-
-def f(x, y):
-    global ans
-    ans += bit.sum(x, y)
-
-
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
 P = [int(x) for x in input().split()]
-edges = []
+g = [[] for _ in range(n)]
 for i, p in enumerate(P, 1):
-    edges.append((i, p))
-H = HeavyLightDecomposition(n, edges, 0)
-L = [0] * n
-for i, a in enumerate(A):
-    L[H.into[i]] = a
+    g[p].append(i)
+hld = HeavyLightDecomposition(n, g, 0)
+L = hld.build_list(A)
 bit = FenwickTree(n)
 for i, p in enumerate(L):
     bit.add(i, p)
@@ -27,9 +19,7 @@ for _ in range(q):
     t, *a = map(int, input().split())
     if t == 0:
         v, x = a
-        p = H.into[v]
-        bit.add(p, x)
+        bit.add(hld.index(v), x)
     else:
-        ans = 0
-        H.subtree_query(a[0], f)
-        print(ans)
+        l, r = hld.subtree_query(a[0])
+        print(bit.sum(l, r))

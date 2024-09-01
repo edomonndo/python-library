@@ -22,13 +22,13 @@ n, m, q = map(int, input().split())
 A = [int(x) for x in input().split()]
 edges = [tuple(map(int, input().split())) for _ in range(m)]
 
-new_edges = extreme_vertex_set(n, edges)
+g = extreme_vertex_set(n, edges)
 sz = 2 * n - 1
-hld = HeavyLightDecomposition(sz, new_edges, sz - 1, True)
+hld = HeavyLightDecomposition(sz, g, sz - 1, True)
 vs = [0] * sz
 for i in range(sz):
-    for v, ei in hld.adj[i]:
-        vs[hld.into[v]] = new_edges[ei][2]
+    for v, w in hld.adj[i]:
+        vs[hld.into[v]] = w
 inf = float("inf")
 seg = LazySegtree(vs, min, inf, mapping, composition, 0)
 
@@ -41,9 +41,13 @@ def update(v: int, cost: int):
 
 cur = [0] * n
 for i in range(n):
-    update(i, A[i])
+    for l, r in hld.path_query(i, sz - 1, False):
+        seg.apply(l, r, A[i] - cur[i])
+    cur[i] = A[i]
 
 for _ in range(q):
     x, y = map(int, input().split())
-    update(x, y)
+    for l, r in hld.path_query(x, sz - 1, False):
+        seg.apply(l, r, y - cur[x])
+    cur[x] = y
     print(seg.all_prod())
