@@ -4,7 +4,7 @@
 from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from data_structure.segtree.lazy_segment_tree import LazySegtree
 
-MOD = 1_000_000_007
+MOD = 10**9 + 7
 
 
 class S:
@@ -17,13 +17,11 @@ ID = 0
 
 
 def op(x: S, y: S) -> S:
-    return S(x.s + y.s, x.c * y.c)
+    return S(x.s + y.s, x.c + y.c)
 
 
 def mapping(f: int, x: S) -> S:
-    if f == ID:
-        return x
-    return S(x.s + f * x.c, x.c)
+    return S(x.s + f * x.c % MOD, x.c)
 
 
 def composition(f: int, g: int) -> int:
