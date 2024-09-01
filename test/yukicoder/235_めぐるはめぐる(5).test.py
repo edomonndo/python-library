@@ -18,7 +18,7 @@ def op(x: S, y: S) -> S:
 
 def mapping(f: int, x: S) -> S:
     s,c = x>>BS, x&MSK
-    return ((s+f*c%MOD)%MOD<<BS | c
+    return ((s+f*c%MOD)%MOD)<<BS | c
 
 
 def composition(f: int, g: int) -> int:
