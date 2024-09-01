@@ -42,12 +42,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
-  - icon: ':x:'
-    path: "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
-    title: "No.235 \u3081\u3050\u308B\u306F\u3081\u3050\u308B (5)"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -128,14 +125,13 @@ data:
   - graph/tree/permutation_tree.py
   - geometory/union_area_rectangle.py
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/other/able.test.py
   - test/atcoder/abc001-99/abc035c.test.py
   - test/atcoder/abc300-399/abc341e.test.py
   - test/atcoder/abc300-399/abc357f.test.py
   - test/atcoder/past/past4m_hld.test.py
-  - "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
   - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
   - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
   - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
