@@ -11,12 +11,12 @@ MSK=(1<<30)-1
 ID = 0
 
 
-def op(x: S, y: S) -> S:
+def op(x, y):
     xs,xc = x>>BS, x&MSK
     ys,yc = y>>BS, y&MSK
     return ((xs+ys)%MOD)<<BS | (xc+yc)%MOD
 
-def mapping(f: int, x: S) -> S:
+def mapping(f: int, x):
     s,c = x>>BS, x&MSK
     return ((s+f*c%MOD)%MOD)<<BS | c
 
