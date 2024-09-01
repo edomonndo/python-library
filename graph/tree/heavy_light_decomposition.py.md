@@ -14,33 +14,33 @@ data:
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
     title: Jump on Tree (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -60,15 +60,15 @@ data:
     \ -> None:\n        # calc subtree size\n        adj, par, depth, sz = self.adj,\
     \ self.par, self.depth, self.sz\n        st = [self.root]\n        while st:\n\
     \            v = st.pop()\n            if v >= 0:\n                if len(adj[v])\
-    \ >= 2 and adj[v][0][0] == par[v]:\n                    adj[v][0], adj[v][-1]\
-    \ = adj[v][-1], adj[v][0]\n                for i, (u, _) in enumerate(adj[v]):\n\
+    \ >= 2 and adj[v][-1][0] == par[v]:\n                    adj[v][-2], adj[v][-1]\
+    \ = adj[v][-1], adj[v][-2]\n                for i, (u, _) in enumerate(adj[v]):\n\
     \                    if u == par[v]:\n                        continue\n     \
     \               depth[u] = depth[v] + 1\n                    par[u] = v\n    \
     \                st += [i, ~u, u]\n                continue\n            v = ~v\n\
     \            p = par[v]\n            i = st.pop()\n            sz[p] += sz[v]\n\
-    \            if sz[v] > sz[adj[p][0][0]]:\n                adj[p][0], adj[p][i]\
-    \ = adj[p][i], adj[p][0]\n\n    def _dfs_hld(self):\n        # calc hld\n    \
-    \    adj, into, out, par = self.adj, self.into, self.out, self.par\n        head,\
+    \            if sz[v] > sz[adj[p][-1][0]]:\n                adj[p][-1], adj[p][i]\
+    \ = adj[p][i], adj[p][-1]\n\n    def _dfs_hld(self):\n        # calc hld\n   \
+    \     adj, into, out, par = self.adj, self.into, self.out, self.par\n        head,\
     \ hld = self.head, self.hld\n\n        idx = 0\n        st = [~self.root, self.root]\n\
     \        while st:\n            v = st.pop()\n            if v >= 0:\n       \
     \         into[v] = idx\n                hld[idx] = v\n                idx +=\
@@ -119,8 +119,8 @@ data:
   - graph/tree/hld_segtree.py
   - graph/tree/hld_lazysegtree.py
   - graph/tree/hld_segtree_noncommutative.py
-  timestamp: '2024-09-01 09:34:08+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-09-01 09:56:46+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

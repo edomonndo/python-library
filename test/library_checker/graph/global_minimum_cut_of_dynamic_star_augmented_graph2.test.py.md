@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/extreme_vertex_set.py
     title: "\u6975\u70B9\u96C6\u5408"
   - icon: ':question:'
