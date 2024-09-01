@@ -1,7 +1,8 @@
 # verification-helper: PROBLEM https://yukicoder.me/problems/no/235
 
 
-from graph.tree.hld_lazysegtree import HldLazySegTree
+from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 MOD = 1_000_000_007
 
@@ -33,18 +34,28 @@ n = int(input())
 A = [int(x) for x in input().split()]
 C = [int(x) for x in input().split()]
 edges = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(n - 1)]
+hld = HeavyLightDecomposition(n, edges, 0, False)
+vs = hld.build_list([S(A[i], C[i]) for i in range(n)])
+seg = LazySegtree(vs, op, S(), mapping, composition, 0)
 
-seg = HldLazySegTree(
-    op, S(), mapping, composition, 0, [S(A[i], C[i]) for i in range(n)], n, edges, 0
-)
+
+def func(l: int, r: int):
+    global ans
+    ans = op(ans, seg.prod(l, r))
+
 
 q = int(input())
-ans = 0
 for _ in range(q):
     qs = [int(x) for x in input().split()]
     if qs[0] == 0:
         u, v, w = qs[1:]
-        seg.path_apply(u - 1, v - 1, w, False)
+        u -= 1
+        v -= 1
+        hld.path_query(u, v, lambda l, r: seg.apply(l, r, w), False)
     else:
         u, v = qs[1:]
-        print(seg.path_prod(u - 1, v - 1, False).s)
+        u -= 1
+        v -= 1
+        ans = S()
+        hld.path_query(u, v, func, False)
+        print(ans.s)
