@@ -5,23 +5,20 @@ from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 MOD = 10**9 + 7
-
-
-class S:
-    def __init__(self, s=0, c=0):
-        self.s = s % MOD
-        self.c = c % MOD
-
+BS=30
+MSK=(1<<30)-1
 
 ID = 0
 
 
 def op(x: S, y: S) -> S:
-    return S(x.s + y.s, x.c + y.c)
-
+    xs,xc = x>>BS, x&MSK
+    ys,yc = y>>BS, y&MSK
+    return ((xs+ys)%MOD<<BS | (xc+yc)%MOD
 
 def mapping(f: int, x: S) -> S:
-    return S(x.s + f * x.c % MOD, x.c)
+    s,c = x>>BS, x&MSK
+    return ((s+f*c%MOD)%MOD<<BS | c
 
 
 def composition(f: int, g: int) -> int:
@@ -33,8 +30,8 @@ A = [int(x) for x in input().split()]
 C = [int(x) for x in input().split()]
 edges = [tuple(map(lambda x: int(x) - 1, input().split())) for _ in range(n - 1)]
 hld = HeavyLightDecomposition(n, edges, 0, False)
-vs = hld.build_list([S(A[i], C[i]) for i in range(n)])
-seg = LazySegtree(vs, op, S(), mapping, composition, 0)
+vs = hld.build_list([A[i]<<BS | C[i] for i in range(n)])
+seg = LazySegtree(vs, op, 0, mapping, composition, 0)
 
 
 def func(l: int, r: int):
@@ -54,6 +51,6 @@ for _ in range(q):
         u, v = qs[1:]
         u -= 1
         v -= 1
-        ans = S()
+        ans = 0
         hld.path_query(u, v, func, False)
-        print(ans.s)
+        print(ans>>BS)
