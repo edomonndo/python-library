@@ -12,6 +12,7 @@ class HeavyLightDecomposition:
         self.n = n
         self.root = root
         self.depth = [0] * n
+        self.sz = [1] * self.n
         self.into = [-1] * n
         self.out = [-1] * n
         self.head = [root] * n
@@ -27,15 +28,13 @@ class HeavyLightDecomposition:
 
     def _dfs_sz(self) -> None:
         # calc subtree size
-        adj, par, depth = self.adj, self.par, self.depth
-        sz = [0] * self.n
+        adj, par, depth, sz = self.adj, self.par, self.depth, self.sz
         st = [self.root]
         while st:
             v = st.pop()
             if v >= 0:
-                sz[v] = 1
-                if len(adj[v]) >= 2 and adj[v][-1][0] == par[v]:
-                    adj[v][-1], adj[v][-2] = adj[v][-2], adj[v][-1]
+                if len(adj[v]) >= 2 and adj[v][0][0] == par[v]:
+                    adj[v][0], adj[v][-1] = adj[v][-1], adj[v][0]
                 for i, (u, _) in enumerate(adj[v]):
                     if u == par[v]:
                         continue
@@ -47,8 +46,8 @@ class HeavyLightDecomposition:
             p = par[v]
             i = st.pop()
             sz[p] += sz[v]
-            if sz[v] > sz[adj[p][-1][0]]:
-                adj[p][-1], adj[p][i] = adj[p][i], adj[p][-1]
+            if sz[v] > sz[adj[p][0][0]]:
+                adj[p][0], adj[p][i] = adj[p][i], adj[p][0]
 
     def _dfs_hld(self):
         # calc hld
