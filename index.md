@@ -140,7 +140,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -323,7 +323,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/eulerian_trail.py
       title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/extreme_vertex_set.py
       title: "\u6975\u70B9\u96C6\u5408"
     - icon: ':heavy_check_mark:'
@@ -444,7 +444,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':question:'
@@ -1161,7 +1161,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/general_weighted_matching.test.py
       title: General Weighted Matching
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
       title: Global Minimum Cut of Dynamic Star Augmented Graph
     - icon: ':heavy_check_mark:'

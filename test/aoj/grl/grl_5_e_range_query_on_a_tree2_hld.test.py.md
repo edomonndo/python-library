@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
     title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -37,7 +37,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-01 09:56:46+09:00'
+  timestamp: '2024-09-01 16:55:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
