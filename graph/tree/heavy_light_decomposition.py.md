@@ -1,18 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':question:'
-    path: graph/tree/hld_lazysegtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
-  - icon: ':heavy_check_mark:'
-    path: graph/tree/hld_segtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
-      \u30A8\u30EA\uFF09"
-  - icon: ':heavy_check_mark:'
-    path: graph/tree/hld_segtree_noncommutative.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
-      \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
@@ -23,7 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
   - icon: ':heavy_check_mark:'
@@ -38,9 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -54,16 +43,10 @@ data:
     \       self.root = root\n        self.depth = [0] * n\n        self.sz = [1]\
     \ * self.n\n        self.into = [-1] * n\n        self.out = [-1] * n\n      \
     \  self.head = [root] * n\n        self.par = [root] * n\n        self.hld = [0]\
-    \ * n\n        adj = [[] for _ in range(n)]\n        for ei, e in enumerate(edges):\n\
-    \            adj[e[0]].append((e[1], ei))\n            if not directed:\n    \
-    \            adj[e[1]].append((e[0], ~ei))\n        if not directed:\n       \
-    \     self.adj = self._root_tree(adj)\n        self._dfs_sz()\n        self._dfs_hld()\n\
-    \n    def _root_tree(\n        self, adj: list[list[tuple[int, int]]]\n    ) ->\
-    \ list[list[tuple[int, int]]]:\n        res = [[] for _ in range(self.n)]\n  \
-    \      st = [(self.root, -1)]\n        while st:\n            v, p = st.pop()\n\
-    \            for u, ei in adj[v]:\n                if u == p:\n              \
-    \      continue\n                res[v].append((u, ei))\n                st.append((u,\
-    \ v))\n        return res\n\n    def _dfs_sz(self) -> None:\n        # calc subtree\
+    \ * n\n        self.adj = [[] for _ in range(n)]\n        for ei, e in enumerate(edges):\n\
+    \            self.adj[e[0]].append((e[1], ei))\n            if not directed:\n\
+    \                self.adj[e[1]].append((e[0], ~ei))\n        self._dfs_sz()\n\
+    \        self._dfs_hld()\n\n    def _dfs_sz(self) -> None:\n        # calc subtree\
     \ size\n        adj, par, depth, sz = self.adj, self.par, self.depth, self.sz\n\
     \        st = [self.root]\n        while st:\n            v = st.pop()\n     \
     \       if v >= 0:\n                if len(adj[v]) >= 2 and adj[v][-1][0] == par[v]:\n\
@@ -121,12 +104,9 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: graph/tree/heavy_light_decomposition.py
-  requiredBy:
-  - graph/tree/hld_segtree.py
-  - graph/tree/hld_lazysegtree.py
-  - graph/tree/hld_segtree_noncommutative.py
-  timestamp: '2024-09-01 16:55:25+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  requiredBy: []
+  timestamp: '2024-09-01 17:50:03+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

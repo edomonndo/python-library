@@ -140,7 +140,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -323,7 +323,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/eulerian_trail.py
       title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/extreme_vertex_set.py
       title: "\u6975\u70B9\u96C6\u5408"
     - icon: ':heavy_check_mark:'
@@ -444,20 +444,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
-    - icon: ':question:'
-      path: graph/tree/hld_lazysegtree.py
-      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
-    - icon: ':heavy_check_mark:'
-      path: graph/tree/hld_segtree.py
-      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\
-        \u30AF\u30A8\u30EA\uFF09"
-    - icon: ':heavy_check_mark:'
-      path: graph/tree/hld_segtree_noncommutative.py
-      title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\
-        \u63DB\u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/tree/lca.py
       title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
@@ -852,9 +841,6 @@ data:
       path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
       title: GRL5D Range Query on a Tree
     - icon: ':heavy_check_mark:'
-      path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld2.test.py
-      title: GRL5D Range Query on a Tree
-    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
       title: GRL5E Range Query on a Tree II
     - icon: ':heavy_check_mark:'
@@ -1161,11 +1147,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/general_weighted_matching.test.py
       title: General Weighted Matching
-    - icon: ':x:'
-      path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
-      title: Global Minimum Cut of Dynamic Star Augmented Graph
     - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
+      path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
       title: Global Minimum Cut of Dynamic Star Augmented Graph
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/k_shortest_walk.test.py
@@ -1414,9 +1397,6 @@ data:
       title: Vertex Get Range Contour Add on Tree
     - icon: ':heavy_check_mark:'
       path: test/library_checker/tree/vertext_set_path_composite.test.py
-      title: Vertex Set Path Composite
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/tree/vertext_set_path_composite2.test.py
       title: Vertex Set Path Composite
   - name: test/unit_test
     pages:

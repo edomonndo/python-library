@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -36,7 +36,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-01 16:55:25+09:00'
+  timestamp: '2024-09-01 17:50:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':question:'
-    path: graph/tree/hld_lazysegtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -25,12 +22,11 @@ data:
     \ mapping, composition, ID, [0] * n, n, edges, 0)\n\nfor _ in range(q):\n    u,\
     \ v, c = map(int, input().split())\n    u -= 1\n    v -= 1\n    seg.path_apply(u,\
     \ v, c, True)\n\nfor u, v in edges:\n    print(seg.path_prod(u, v, True))\n"
-  dependsOn:
-  - graph/tree/hld_lazysegtree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/atcoder/past/past4m_hld2.test.py
   requiredBy: []
-  timestamp: '2024-09-01 03:12:20+09:00'
+  timestamp: '2024-09-01 02:34:22+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/past/past4m_hld2.test.py

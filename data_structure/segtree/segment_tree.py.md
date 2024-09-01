@@ -17,14 +17,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/tree/euler_tour.py
     title: Euler tour
-  - icon: ':heavy_check_mark:'
-    path: graph/tree/hld_segtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
-      \u30A8\u30EA\uFF09"
-  - icon: ':heavy_check_mark:'
-    path: graph/tree/hld_segtree_noncommutative.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
-      \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_a_range_min_query.test.py
@@ -108,8 +100,6 @@ data:
   path: data_structure/segtree/segment_tree.py
   requiredBy:
   - graph/tree/euler_tour.py
-  - graph/tree/hld_segtree.py
-  - graph/tree/hld_segtree_noncommutative.py
   - graph/tree/auxiliary_tree.py
   - dynamic_programming/longest_increase_subsequence.py
   - data_structure/segtree/compressed_segtree.py

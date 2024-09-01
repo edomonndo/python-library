@@ -5,9 +5,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: geometory/union_area_rectangle.py
     title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
-  - icon: ':question:'
-    path: graph/tree/hld_lazysegtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
   - icon: ':warning:'
     path: graph/tree/permutation_tree.py
     title: "\u9806\u5217\u6728"
@@ -42,12 +39,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
     title: Range Affine Range Sum
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -125,11 +122,10 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/lazy_segment_tree.py
   requiredBy:
-  - graph/tree/hld_lazysegtree.py
   - graph/tree/permutation_tree.py
   - geometory/union_area_rectangle.py
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/other/able.test.py
   - test/atcoder/abc001-99/abc035c.test.py

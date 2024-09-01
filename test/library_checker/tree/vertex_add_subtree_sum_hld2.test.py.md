@@ -1,10 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: graph/tree/hld_segtree.py
-    title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u53EF\u63DB\u30AF\
-      \u30A8\u30EA\uFF09"
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -25,12 +21,11 @@ data:
     \ x, y: x + y, 0, A, n, edges, 0)\n\nfor _ in range(q):\n    t, *a = map(int,\
     \ input().split())\n    if t == 0:\n        v, x = a\n        seg.set(v, x + seg.get(v))\n\
     \    else:\n        print(seg.subtree_prod(a[0]))\n"
-  dependsOn:
-  - graph/tree/hld_segtree.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
   requiredBy: []
-  timestamp: '2024-08-14 05:50:48+09:00'
+  timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_subtree_sum_hld2.test.py
