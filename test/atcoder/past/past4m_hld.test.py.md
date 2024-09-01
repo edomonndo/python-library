@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://atcoder.jp/contests/past202010-open/tasks/past202010_m
     links:
@@ -37,8 +37,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past4m_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-01 02:34:22+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-01 09:34:08+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/atcoder/past/past4m_hld.test.py
 layout: document

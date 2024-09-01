@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -37,7 +37,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-08-29 23:12:08+09:00'
+  timestamp: '2024-09-01 09:34:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py

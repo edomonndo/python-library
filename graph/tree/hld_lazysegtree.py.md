@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
@@ -15,12 +15,15 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
+  - icon: ':x:'
+    path: "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
+    title: "No.235 \u3081\u3050\u308B\u306F\u3081\u3050\u308B (5)"
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -58,10 +61,11 @@ data:
   isVerificationFile: false
   path: graph/tree/hld_lazysegtree.py
   requiredBy: []
-  timestamp: '2024-09-01 03:12:20+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-09-01 09:34:08+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/past/past4m_hld2.test.py
+  - "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
   - "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph2.test.py
 documentation_of: graph/tree/hld_lazysegtree.py

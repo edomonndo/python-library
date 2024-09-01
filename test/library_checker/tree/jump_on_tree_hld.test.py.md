@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/jump_on_tree
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree_hld.test.py
   requiredBy: []
-  timestamp: '2024-08-29 23:12:08+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-01 09:34:08+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_hld.test.py
 layout: document

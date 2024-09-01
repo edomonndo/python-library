@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/hld_lazysegtree.py
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u9045\u5EF6\u30BB\u30B0\u6728"
   - icon: ':heavy_check_mark:'
@@ -14,33 +14,33 @@ data:
     title: "HL\u5206\u89E3\u6728\u4E0A\u306E\u30BB\u30B0\u6728\uFF08\u975E\u53EF\u63DB\
       \u30D1\u30B9\u30AF\u30A8\u30EA\uFF09"
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
     title: Jump on Tree (HLD)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -51,24 +51,24 @@ data:
     \    def __init__(\n        self,\n        n: int,\n        edges: list[Union[tuple[int,\
     \ int]], tuple[int, int, int]],\n        root: int = 0,\n        directed: bool\
     \ = False,\n    ):\n        self.n = n\n        self.root = root\n        self.depth\
-    \ = [0] * n\n        self.into = [-1] * n\n        self.out = [-1] * n\n     \
-    \   self.head = [root] * n\n        self.par = [root] * n\n        self.hld =\
-    \ [0] * n\n        self.adj = [[] for _ in range(n)]\n        for ei, e in enumerate(edges):\n\
-    \            self.adj[e[0]].append((e[1], ei))\n            if not directed:\n\
-    \                self.adj[e[1]].append((e[0], ~ei))\n        self._dfs_sz()\n\
-    \        self._dfs_hld()\n\n    def _dfs_sz(self) -> None:\n        # calc subtree\
-    \ size\n        adj, par, depth = self.adj, self.par, self.depth\n        sz =\
-    \ [0] * self.n\n        st = [self.root]\n        while st:\n            v = st.pop()\n\
-    \            if v >= 0:\n                sz[v] = 1\n                if len(adj[v])\
-    \ >= 2 and adj[v][-1][0] == par[v]:\n                    adj[v][-1], adj[v][-2]\
-    \ = adj[v][-2], adj[v][-1]\n                for i, (u, _) in enumerate(adj[v]):\n\
+    \ = [0] * n\n        self.sz = [1] * self.n\n        self.into = [-1] * n\n  \
+    \      self.out = [-1] * n\n        self.head = [root] * n\n        self.par =\
+    \ [root] * n\n        self.hld = [0] * n\n        self.adj = [[] for _ in range(n)]\n\
+    \        for ei, e in enumerate(edges):\n            self.adj[e[0]].append((e[1],\
+    \ ei))\n            if not directed:\n                self.adj[e[1]].append((e[0],\
+    \ ~ei))\n        self._dfs_sz()\n        self._dfs_hld()\n\n    def _dfs_sz(self)\
+    \ -> None:\n        # calc subtree size\n        adj, par, depth, sz = self.adj,\
+    \ self.par, self.depth, self.sz\n        st = [self.root]\n        while st:\n\
+    \            v = st.pop()\n            if v >= 0:\n                if len(adj[v])\
+    \ >= 2 and adj[v][0][0] == par[v]:\n                    adj[v][0], adj[v][-1]\
+    \ = adj[v][-1], adj[v][0]\n                for i, (u, _) in enumerate(adj[v]):\n\
     \                    if u == par[v]:\n                        continue\n     \
     \               depth[u] = depth[v] + 1\n                    par[u] = v\n    \
     \                st += [i, ~u, u]\n                continue\n            v = ~v\n\
     \            p = par[v]\n            i = st.pop()\n            sz[p] += sz[v]\n\
-    \            if sz[v] > sz[adj[p][-1][0]]:\n                adj[p][-1], adj[p][i]\
-    \ = adj[p][i], adj[p][-1]\n\n    def _dfs_hld(self):\n        # calc hld\n   \
-    \     adj, into, out, par = self.adj, self.into, self.out, self.par\n        head,\
+    \            if sz[v] > sz[adj[p][0][0]]:\n                adj[p][0], adj[p][i]\
+    \ = adj[p][i], adj[p][0]\n\n    def _dfs_hld(self):\n        # calc hld\n    \
+    \    adj, into, out, par = self.adj, self.into, self.out, self.par\n        head,\
     \ hld = self.head, self.hld\n\n        idx = 0\n        st = [~self.root, self.root]\n\
     \        while st:\n            v = st.pop()\n            if v >= 0:\n       \
     \         into[v] = idx\n                hld[idx] = v\n                idx +=\
@@ -119,8 +119,8 @@ data:
   - graph/tree/hld_segtree.py
   - graph/tree/hld_lazysegtree.py
   - graph/tree/hld_segtree_noncommutative.py
-  timestamp: '2024-08-29 23:12:08+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-09-01 09:34:08+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py

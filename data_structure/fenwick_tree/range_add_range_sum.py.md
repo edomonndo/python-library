@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -35,7 +35,7 @@ data:
   path: data_structure/fenwick_tree/range_add_range_sum.py
   requiredBy: []
   timestamp: '2024-07-04 12:06:06+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
 documentation_of: data_structure/fenwick_tree/range_add_range_sum.py
