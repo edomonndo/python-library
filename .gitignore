@@ -1,7 +1,7 @@
 .DS_Store
 in.txt
 .vscode/settings.json
-*/__pycache__
+**__pycache__
 main.py
 bundled.py
 input.txt

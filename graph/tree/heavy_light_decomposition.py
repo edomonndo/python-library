@@ -19,29 +19,13 @@ class HeavyLightDecomposition:
         self.head = [root] * n
         self.par = [root] * n
         self.hld = [0] * n
-        adj = [[] for _ in range(n)]
+        self.adj = [[] for _ in range(n)]
         for ei, e in enumerate(edges):
-            adj[e[0]].append((e[1], ei))
+            self.adj[e[0]].append((e[1], ei))
             if not directed:
-                adj[e[1]].append((e[0], ~ei))
-        if not directed:
-            self.adj = self._root_tree(adj)
+                self.adj[e[1]].append((e[0], ~ei))
         self._dfs_sz()
         self._dfs_hld()
-
-    def _root_tree(
-        self, adj: list[list[tuple[int, int]]]
-    ) -> list[list[tuple[int, int]]]:
-        res = [[] for _ in range(self.n)]
-        st = [(self.root, -1)]
-        while st:
-            v, p = st.pop()
-            for u, ei in adj[v]:
-                if u == p:
-                    continue
-                res[v].append((u, ei))
-                st.append((u, v))
-        return res
 
     def _dfs_sz(self) -> None:
         # calc subtree size
