@@ -140,7 +140,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -444,7 +444,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -1408,7 +1408,7 @@ data:
       title: Wavelet Matrix
   - name: test/yukicoder
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
       title: "No.235 \u3081\u3050\u308B\u306F\u3081\u3050\u308B (5)"
     - icon: ':heavy_check_mark:'
