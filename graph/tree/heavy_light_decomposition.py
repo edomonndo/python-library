@@ -33,8 +33,8 @@ class HeavyLightDecomposition:
         while st:
             v = st.pop()
             if v >= 0:
-                if len(adj[v]) >= 2 and adj[v][0][0] == par[v]:
-                    adj[v][0], adj[v][-1] = adj[v][-1], adj[v][0]
+                if len(adj[v]) >= 2 and adj[v][-1][0] == par[v]:
+                    adj[v][-2], adj[v][-1] = adj[v][-1], adj[v][-2]
                 for i, (u, _) in enumerate(adj[v]):
                     if u == par[v]:
                         continue
@@ -46,8 +46,8 @@ class HeavyLightDecomposition:
             p = par[v]
             i = st.pop()
             sz[p] += sz[v]
-            if sz[v] > sz[adj[p][0][0]]:
-                adj[p][0], adj[p][i] = adj[p][i], adj[p][0]
+            if sz[v] > sz[adj[p][-1][0]]:
+                adj[p][-1], adj[p][i] = adj[p][i], adj[p][-1]
 
     def _dfs_hld(self):
         # calc hld
