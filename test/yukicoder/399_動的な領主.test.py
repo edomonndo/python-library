@@ -7,7 +7,7 @@ from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 n = int(input())
 g = Tree.from_input(n, 1)
-hld = HeavyLightDecomposition(n, g, 0, 0)
+hld = HeavyLightDecomposition(n, g)
 
 op = lambda x, y: (x[0] + y[0], x[1] + y[1])
 mapping = lambda f, x: (x[0] + f * x[1], x[1])
@@ -24,6 +24,6 @@ for _ in range(q):
     for l, r in hld.path_query(u, v, False):
         seg.apply(l, r, 1)
     for l, r in hld.path_query(u, v, False):
-        ans += seg.prod(l, r, False)[0]
+        ans += seg.prod(l, r)[0]
 
 print(ans)

@@ -30,7 +30,7 @@ n = int(input())
 A = [int(x) for x in input().split()]
 C = [int(x) for x in input().split()]
 g = Tree.from_input(n, 1)
-hld = HeavyLightDecomposition(n, g, 0, False)
+hld = HeavyLightDecomposition(n, g)
 vs = hld.build_list([A[i] << BS | C[i] for i in range(n)])
 seg = LazySegtree(vs, op, 0, mapping, composition, 0)
 

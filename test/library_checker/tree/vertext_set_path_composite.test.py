@@ -30,7 +30,7 @@ B = [0] * n
 for i in range(n):
     A[i], B[i] = map(int, input().split())
 g = Tree.from_input(n, 0)
-hld = HeavyLightDecomposition(n, g, 0, 0)
+hld = HeavyLightDecomposition(n, g)
 P = hld.build_list([A[i] << 32 | B[i] for i in range(n)])
 
 seg1 = Segtree(P, op1, 1 << 32)
@@ -44,8 +44,8 @@ for _ in range(q):
         seg2.set(p, (b << 32) + c)
     else:
         ans = c
-        for l, r in hld.path_query:
-            res = seg1.prod(l, r) if l <= r else seg2.prod(y, x)
+        for l, r in hld.path_query(a, b, False):
+            res = seg1.prod(l, r) if l <= r else seg2.prod(r, l)
         s, t = res >> 32, res & msk
         ans = (s * ans % MOD + t) % MOD
         print(ans)

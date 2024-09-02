@@ -9,10 +9,9 @@ par = [-1] * n
 for v in range(n):
     k, *us = map(int, input().split())
     for u in us:
-        g[u].append(v)
         g[v].append(u)
         par[u] = v
-hld = HeavyLightDecomposition(n, g, 0, 0)
+hld = HeavyLightDecomposition(n, g, is_undirect=False)
 seg = RangeAddRangeSum([0] * n)
 q = int(input())
 for _ in range(q):

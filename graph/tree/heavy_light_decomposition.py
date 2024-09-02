@@ -7,13 +7,15 @@ class HeavyLightDecomposition:
         n: int,
         adj: list[list[Union[int, tuple[int, int]]]],
         root: int = 0,
-        is_weight_graph: bool = False,
+        has_weight: bool = False,
+        is_undirect: bool = True,
     ):
         # assert len(edges) == n-1
         self.n = n
         self.root = root
         self.adj = adj
-        self.is_weight_graph = is_weight_graph
+        self.has_weight = has_weight
+        self.is_undirect = is_undirect
         self.par = [-1] * n
         self.depth = [0] * n
         order = self._root_tree()
@@ -34,20 +36,21 @@ class HeavyLightDecomposition:
         while st:
             v = st.pop()
             res.append(v)
-            if par[v] != -1:
-                depth[v] = depth[par[v][0] if self.is_weight_graph else par[v]] + 1
-                adj[v].remove((par[v]))
-            if self.is_weight_graph:
+            if self.is_undirect and par[v] != -1:
+                adj[v].remove(par[v])
+            if self.has_weight:
                 for e in adj[v]:
                     # assert len(e) == 2
                     u, w = e[0], e[1]
                     par[u] = (v, w)
+                    depth[u] = depth[v] + 1
                     st.append(u)
             else:
                 for u in adj[v]:
                     par[u] = v
+                    depth[u] = depth[v] + 1
                     st.append(u)
-        if self.is_weight_graph:
+        if self.has_weight:
             self.par = [p for p, _ in par]
         return res
 
@@ -71,7 +74,7 @@ class HeavyLightDecomposition:
             v = st.pop()
             into[v] = len(hld)
             hld.append(v)
-            if self.is_weight_graph:
+            if self.has_weight:
                 for e in adj[v][1:]:
                     u = e[0]
                     head[u] = u
@@ -142,4 +145,4 @@ class HeavyLightDecomposition:
         return res
 
     def subtree_query(self, u: int, edge: bool = False) -> tuple[int, int]:
-        return self.into[u] + edge, self.sz[u]
+        return self.into[u] + edge, self.into[u] + self.sz[u]

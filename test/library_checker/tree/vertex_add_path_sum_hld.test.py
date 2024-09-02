@@ -8,7 +8,7 @@ from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
 n, q = map(int, input().split())
 A = [int(x) for x in input().split()]
 g = Tree.from_input(n, 0)
-hld = HeavyLightDecomposition(n, g, 0)
+hld = HeavyLightDecomposition(n, g)
 P = hld.build_list(A)
 bit = FenwickTree(n)
 for i, p in enumerate(P):
