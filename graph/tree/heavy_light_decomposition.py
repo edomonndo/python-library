@@ -81,7 +81,7 @@ class HeavyLightDecomposition:
                     head[u] = u
                     st.append(u)
                 if adj[v]:
-                    u = adj[v][0]
+                    u = adj[v][0][0]
                     head[u] = head[v]
                     st.append(u)
             else:
