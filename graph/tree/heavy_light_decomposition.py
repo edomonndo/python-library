@@ -51,6 +51,7 @@ class HeavyLightDecomposition:
                     depth[u] = depth[v] + 1
                     st.append(u)
         if self.has_weight:
+            par[self.root] = (-1, 0)
             self.par = [p for p, _ in par]
         return res
 
