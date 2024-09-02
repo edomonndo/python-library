@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   - icon: ':heavy_check_mark:'
@@ -43,7 +43,7 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past4m_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 11:21:20+09:00'
+  timestamp: '2024-09-02 11:34:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/past/past4m_hld.test.py

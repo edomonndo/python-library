@@ -39,7 +39,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/range_affine_range_sum.test.py
     title: Range Affine Range Sum
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
   - icon: ':heavy_check_mark:'
@@ -48,9 +48,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -131,7 +131,7 @@ data:
   - graph/tree/permutation_tree.py
   - geometory/union_area_rectangle.py
   timestamp: '2024-05-30 15:25:43+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/other/able.test.py
   - test/atcoder/abc001-99/abc035c.test.py

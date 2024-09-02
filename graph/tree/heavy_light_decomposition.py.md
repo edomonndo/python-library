@@ -12,7 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
   - icon: ':heavy_check_mark:'
@@ -33,9 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -74,8 +74,8 @@ data:
     \            hld.append(v)\n            if self.has_weight:\n                for\
     \ e in adj[v][1:]:\n                    u = e[0]\n                    head[u]\
     \ = u\n                    st.append(u)\n                if adj[v]:\n        \
-    \            u = adj[v][0]\n                    head[u] = head[v]\n          \
-    \          st.append(u)\n            else:\n                for u in adj[v][1:]:\n\
+    \            u = adj[v][0][0]\n                    head[u] = head[v]\n       \
+    \             st.append(u)\n            else:\n                for u in adj[v][1:]:\n\
     \                    head[u] = u\n                    st.append(u)\n         \
     \       if adj[v]:\n                    u = adj[v][0]\n                    head[u]\
     \ = head[v]\n                    st.append(u)\n\n    def build_list(self, a: list[int])\
@@ -118,8 +118,8 @@ data:
   isVerificationFile: false
   path: graph/tree/heavy_light_decomposition.py
   requiredBy: []
-  timestamp: '2024-09-02 11:21:20+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-09-02 11:34:25+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"

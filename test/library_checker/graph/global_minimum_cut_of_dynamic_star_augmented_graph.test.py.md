@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/extreme_vertex_set.py
     title: "\u6975\u70B9\u96C6\u5408"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/global_minimum_cut_of_dynamic_star_augmented_graph
     links:
@@ -47,8 +47,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
   requiredBy: []
-  timestamp: '2024-09-02 11:21:20+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-02 11:34:25+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
 layout: document

@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   - icon: ':heavy_check_mark:'
@@ -31,7 +31,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 11:21:20+09:00'
+  timestamp: '2024-09-02 11:34:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_hld.test.py

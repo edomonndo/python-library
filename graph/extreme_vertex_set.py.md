@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
     title: Global Minimum Cut of Dynamic Star Augmented Graph
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -40,7 +40,7 @@ data:
   path: graph/extreme_vertex_set.py
   requiredBy: []
   timestamp: '2024-09-02 08:53:18+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
 documentation_of: graph/extreme_vertex_set.py
