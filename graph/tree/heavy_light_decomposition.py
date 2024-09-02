@@ -61,8 +61,8 @@ class HeavyLightDecomposition:
         for p in order[::-1]:
             vs = adj[p]
             for i in range(len(vs)):
-                x = sz[vs[i]]
-                if x > sz[vs[0]]:
+                x = sz[vs[i][0] if self.has_weight else vs[i]]
+                if x > sz[vs[0][0] if self.has_weight else vs[0]]:
                     vs[0], vs[i] = vs[i], vs[0]
                 sz[p] += x
 
