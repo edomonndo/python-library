@@ -119,7 +119,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
     - icon: ':warning:'
@@ -843,7 +843,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
       title: GRL5D Range Query on a Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
       title: GRL5E Range Query on a Tree II
     - icon: ':heavy_check_mark:'
