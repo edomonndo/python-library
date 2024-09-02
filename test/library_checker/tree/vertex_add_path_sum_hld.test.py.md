@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: data_structure/fenwick_tree/fenwick_tree.py
     title: "\u62BD\u8C61\u5316Fenwick Tree"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   - icon: ':heavy_check_mark:'
@@ -25,13 +25,13 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/vertex_add_path_sum\n\
     \n\nfrom graph.tree.template import Tree\nfrom data_structure.fenwick_tree.fenwick_tree\
-    \ import FenwickTree\nfrom graph.tree.heavy_light_decomposition import HeavyLightDecomposition\n\
-    \nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\ng =\
-    \ Tree.from_input(n, 0)\nhld = HeavyLightDecomposition(n, g)\nP = hld.build_list(A)\n\
-    bit = FenwickTree(n)\nfor i, p in enumerate(P):\n    bit.add(i, p)\n\nfor _ in\
-    \ range(q):\n    t, a, b = map(int, input().split())\n    if t == 0:\n       \
-    \ bit.add(hld.index(a), b)\n    else:\n        ans = 0\n        for l, r in hld.path_query(a,\
-    \ b, False):\n            ans += bit.sum(l, r)\n        print(ans)\n"
+    \ import FenwickTree\nfrom graph.tree.heavy_light_decomposition import HLD\n\n\
+    n, q = map(int, input().split())\nA = [int(x) for x in input().split()]\ng = Tree.from_input(n,\
+    \ 0)\nhld = HLD(n, g)\nP = hld.build_list(A)\nbit = FenwickTree(n)\nfor i, p in\
+    \ enumerate(P):\n    bit.add(i, p)\n\nfor _ in range(q):\n    t, a, b = map(int,\
+    \ input().split())\n    if t == 0:\n        bit.add(hld.index(a), b)\n    else:\n\
+    \        ans = 0\n        for l, r in hld.path_query(a, b, False):\n         \
+    \   ans += bit.sum(l, r)\n        print(ans)\n"
   dependsOn:
   - graph/tree/template.py
   - data_structure/fenwick_tree/fenwick_tree.py
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 12:44:25+09:00'
+  timestamp: '2024-09-03 08:35:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_path_sum_hld.test.py

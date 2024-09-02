@@ -3,10 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
   - icon: ':heavy_check_mark:'
@@ -36,24 +36,24 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
     title: "No.650 \u884C\u5217\u6728\u30AF\u30A8\u30EA"
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 76, in _render_source_code_stat\n    bundled_code = language.bundle(\n\
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
-  code: "from typing import Union\n\n\nclass HeavyLightDecomposition:\n    def __init__(\n\
-    \        self,\n        n: int,\n        adj: list[list[Union[int, tuple[int,\
-    \ int]]]],\n        root: int = 0,\n        has_weight: bool = False,\n      \
-    \  is_undirect: bool = True,\n    ):\n        # assert len(edges) == n-1\n   \
-    \     self.n = n\n        self.root = root\n        self.adj = adj\n        self.has_weight\
-    \ = has_weight\n        self.is_undirect = is_undirect\n        self.par = [-1]\
-    \ * n\n        self.depth = [0] * n\n        order = self._root_tree()\n\n   \
-    \     self.sz = [1] * self.n\n        self._dfs_sz(order)\n\n        self.into\
-    \ = [-1] * n\n        self.head = [root] * n\n        self.hld = []\n        self._dfs_hld()\n\
+  code: "from typing import Union\n\n\nclass HLD:\n    def __init__(\n        self,\n\
+    \        n: int,\n        adj: list[list[Union[int, tuple[int, int]]]],\n    \
+    \    root: int = 0,\n        has_weight: bool = False,\n        is_undirect: bool\
+    \ = True,\n    ):\n        # assert len(edges) == n-1\n        self.n = n\n  \
+    \      self.root = root\n        self.adj = adj\n        self.has_weight = has_weight\n\
+    \        self.is_undirect = is_undirect\n        self.par = [-1] * n\n       \
+    \ self.depth = [0] * n\n        order = self._root_tree()\n\n        self.sz =\
+    \ [1] * self.n\n        self._dfs_sz(order)\n\n        self.into = [-1] * n\n\
+    \        self.head = [root] * n\n        self.hld = []\n        self._dfs_hld()\n\
     \        # assert len(self.hld) == n\n\n    def _root_tree(self) -> None:\n  \
     \      adj, par, depth = self.adj, self.par, self.depth\n        res = []\n  \
     \      st = [self.root]\n        while st:\n            v = st.pop()\n       \
@@ -121,8 +121,8 @@ data:
   isVerificationFile: false
   path: graph/tree/heavy_light_decomposition.py
   requiredBy: []
-  timestamp: '2024-09-02 11:34:25+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2024-09-03 08:35:19+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
   - "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"

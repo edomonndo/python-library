@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
   - icon: ':heavy_check_mark:'
@@ -22,16 +22,16 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/jump_on_tree\n\
     \nfrom graph.tree.template import Tree\nfrom graph.tree.heavy_light_decomposition\
-    \ import HeavyLightDecomposition\n\nn, q = map(int, input().split())\ng = Tree.from_input(n,\
-    \ 0)\n\nT = HeavyLightDecomposition(n, g)\nfor _ in range(q):\n    s, t, k = map(int,\
-    \ input().split())\n    print(T.jump(s, t, k))\n"
+    \ import HLD\n\nn, q = map(int, input().split())\ng = Tree.from_input(n, 0)\n\n\
+    T = HLD(n, g)\nfor _ in range(q):\n    s, t, k = map(int, input().split())\n \
+    \   print(T.jump(s, t, k))\n"
   dependsOn:
   - graph/tree/template.py
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/jump_on_tree_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 12:44:25+09:00'
+  timestamp: '2024-09-03 08:35:19+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/jump_on_tree_hld.test.py
