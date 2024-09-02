@@ -130,18 +130,46 @@ class HeavyLightDecomposition:
     def index(self, idx: int, edge: bool = False) -> int:
         return self.into[idx] + edge
 
-    def path_query(self, u: int, v: int, edge: bool = False) -> list[tuple[int, int]]:
-        into, head, par = self.into, self.head, self.par
+    def _ascend(self, u: int, v: int) -> list[tuple[int, int]]:
+        into, head, par, depth = self.into, self.head, self.par, self.depth
         res = []
-        while True:
-            if into[u] > into[v]:
-                u, v = v, u
-            if head[u] != head[v]:
-                res.append((into[head[v]], into[v] + 1))
-                v = par[head[v]]
+        while head[u] != head[v]:
+            res.append((into[u], into[head[u]]))
+            u = par[head[u]]
+        if u != v:
+            res.append((into[u], into[v] + 1))
+        return res
+
+    def _descend(self, u: int, v: int) -> list[tuple[int, int]]:
+        return [(r, l) for l, r in self._ascend(v, u)[::-1]]
+
+    def path_query(self, u: int, v: int, edge: bool = False) -> list[tuple[int, int]]:
+        l = self.lca(u, v)
+        tmp = self._ascend(u, l)
+        if not edge:
+            tmp.append((self.into[l], self.into[l]))
+        tmp += self._descend(l, v)
+        res = []
+        for l, r in tmp:
+            if l > r:
+                l, r = r, l
+            res.append((l, r + 1))
+        return res
+
+    def path_query_noncommutative(
+        self, u: int, v: int, edge: bool = False
+    ) -> list[tuple[int, int, bool]]:
+        l = self.lca(u, v)
+        tmp = self._ascend(u, l)
+        if not edge:
+            tmp.append((self.into[l], self.into[l]))
+        tmp += self._descend(l, v)
+        res = []
+        for l, r in tmp:
+            if l > r:
+                res.append((r, l + 1, True))
             else:
-                res.append((into[u] + edge, into[v] + 1))
-                break
+                res.append((l, r + 1, False))
         return res
 
     def subtree_query(self, u: int, edge: bool = False) -> tuple[int, int]:

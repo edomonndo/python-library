@@ -17,11 +17,7 @@ def op1(x, y):
 
 
 def op2(x, y):
-    x1, x2 = x >> 32, x & msk
-    y1, y2 = y >> 32, y & msk
-    z1 = x1 * y1 % MOD
-    z2 = (x1 * y2 % MOD + x2) % MOD
-    return (z1 << 32) + z2
+    return op1(y, x)
 
 
 n, q = map(int, input().split())
@@ -32,9 +28,9 @@ for i in range(n):
 g = Tree.from_input(n, 0)
 hld = HeavyLightDecomposition(n, g)
 P = hld.build_list([A[i] << 32 | B[i] for i in range(n)])
-
-seg1 = Segtree(P, op1, 1 << 32)
-seg2 = Segtree(P, op2, 1 << 32)
+e = 1 << 32
+seg1 = Segtree(P, op1, e)
+seg2 = Segtree(P, op2, e)
 
 for _ in range(q):
     t, a, b, c = map(int, input().split())
@@ -43,9 +39,13 @@ for _ in range(q):
         seg1.set(p, (b << 32) + c)
         seg2.set(p, (b << 32) + c)
     else:
-        ans = c
-        for l, r in hld.path_query(a, b, False):
-            res = seg1.prod(l, r) if l <= r else seg2.prod(r, l)
+        path = hld.path_query_noncommutative(a, b, False)
+        res = e
+        for l, r, is_rev in path:
+            if is_rev:
+                res = op1(res, seg2.prod(l, r))
+            else:
+                res = op1(res, seg1.prod(l, r))
         s, t = res >> 32, res & msk
-        ans = (s * ans % MOD + t) % MOD
+        ans = (s * c % MOD + t) % MOD
         print(ans)

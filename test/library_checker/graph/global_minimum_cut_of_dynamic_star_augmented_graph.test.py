@@ -24,9 +24,7 @@ edges = [tuple(map(int, input().split())) for _ in range(m)]
 
 g = extreme_vertex_set(n, edges)
 sz = 2 * n - 1
-hld = HeavyLightDecomposition(
-    sz, g, root=sz - 1, is_weight_graph=True, is_undirect=False
-)
+hld = HeavyLightDecomposition(sz, g, root=sz - 1, has_weight=True, is_undirect=False)
 vs = [0] * sz
 for i in range(sz):
     for v, w in hld.adj[i]:

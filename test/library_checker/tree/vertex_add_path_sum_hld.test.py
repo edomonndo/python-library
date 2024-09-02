@@ -17,7 +17,7 @@ for i, p in enumerate(P):
 for _ in range(q):
     t, a, b = map(int, input().split())
     if t == 0:
-        bit.add(hld.index(p), b)
+        bit.add(hld.index(a), b)
     else:
         ans = 0
         for l, r in hld.path_query(a, b, False):
