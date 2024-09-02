@@ -1,7 +1,7 @@
 from typing import Union
 
 
-class HeavyLightDecomposition:
+class HLD:
     def __init__(
         self,
         n: int,

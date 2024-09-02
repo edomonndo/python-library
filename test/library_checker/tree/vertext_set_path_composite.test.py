@@ -2,7 +2,7 @@
 
 from graph.tree.template import Tree
 from data_structure.segtree.segment_tree import Segtree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 
 MOD = 998244353
 msk = (1 << 32) - 1
@@ -26,7 +26,7 @@ B = [0] * n
 for i in range(n):
     A[i], B[i] = map(int, input().split())
 g = Tree.from_input(n, 0)
-hld = HeavyLightDecomposition(n, g)
+hld = HLD(n, g)
 P = hld.build_list([A[i] << 32 | B[i] for i in range(n)])
 e = 1 << 32
 seg1 = Segtree(P, op1, e)

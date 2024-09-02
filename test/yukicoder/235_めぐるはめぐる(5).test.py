@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://yukicoder.me/problems/no/235
 
 from graph.tree.template import Tree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 MOD = 1_000_000_007
@@ -30,7 +30,7 @@ n = int(input())
 A = [int(x) for x in input().split()]
 C = [int(x) for x in input().split()]
 g = Tree.from_input(n, 1)
-hld = HeavyLightDecomposition(n, g)
+hld = HLD(n, g)
 vs = hld.build_list([A[i] << BS | C[i] for i in range(n)])
 seg = LazySegtree(vs, op, 0, mapping, composition, 0)
 

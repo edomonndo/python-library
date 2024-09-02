@@ -6,7 +6,7 @@ import sys
 input = sys.stdin.readline
 
 from graph.extreme_vertex_set import extreme_vertex_set
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 
@@ -24,7 +24,7 @@ edges = [tuple(map(int, input().split())) for _ in range(m)]
 
 g = extreme_vertex_set(n, edges)
 sz = 2 * n - 1
-hld = HeavyLightDecomposition(sz, g, root=sz - 1, has_weight=True, is_undirect=False)
+hld = HLD(sz, g, root=sz - 1, has_weight=True, is_undirect=False)
 vs = [0] * sz
 for i in range(sz):
     for v, w in hld.adj[i]:

@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://atcoder.jp/contests/past202010-open/tasks/past202010_m
 
 from graph.tree.template import Tree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 from data_structure.segtree.lazy_segment_tree import LazySegtree
 
 
@@ -11,7 +11,7 @@ g = [[] for _ in range(n)]
 for u, v in edges:
     g[u].append(v)
     g[v].append(u)
-hld = HeavyLightDecomposition(n, g)
+hld = HLD(n, g)
 
 inf = float("inf")
 mapping = lambda f, x: x if f == ID else f

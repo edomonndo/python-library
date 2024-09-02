@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://yukicoder.me/problems/no/650
 
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 from data_structure.segtree.segment_tree import Segtree
 
 MOD = 1_000_000_007
@@ -39,7 +39,7 @@ for i in range(n - 1):
     g[u].append(v)
     g[v].append(u)
     edges.append((u, v))
-hld = HeavyLightDecomposition(n, g)
+hld = HLD(n, g)
 vs = hld.build_list([S() for _ in range(n)])
 seg = Segtree(vs, op, S())
 

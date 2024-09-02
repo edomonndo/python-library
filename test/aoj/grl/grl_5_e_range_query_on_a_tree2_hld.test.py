@@ -1,6 +1,6 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_E
 
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 from data_structure.fenwick_tree.range_add_range_sum import RangeAddRangeSum
 
 n = int(input())
@@ -9,7 +9,7 @@ for v in range(n):
     k, *us = map(int, input().split())
     for u in us:
         g[v].append(u)
-hld = HeavyLightDecomposition(n, g, is_undirect=False)
+hld = HLD(n, g, is_undirect=False)
 seg = RangeAddRangeSum([0] * n)
 q = int(input())
 for _ in range(q):

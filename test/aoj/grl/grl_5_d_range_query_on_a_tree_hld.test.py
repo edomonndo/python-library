@@ -1,7 +1,7 @@
 # verification-helper: PROBLEM https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_D
 
 from data_structure.fenwick_tree.fenwick_tree import FenwickTree
-from graph.tree.heavy_light_decomposition import HeavyLightDecomposition
+from graph.tree.heavy_light_decomposition import HLD
 
 n = int(input())
 g = [[] for _ in range(n)]
@@ -11,7 +11,7 @@ for v in range(n):
     for u in us:
         g[v].append(u)
         par[u] = v
-hld = HeavyLightDecomposition(n, g, is_undirect=False)
+hld = HLD(n, g, is_undirect=False)
 bit = FenwickTree(n)
 q = int(input())
 for _ in range(q):
