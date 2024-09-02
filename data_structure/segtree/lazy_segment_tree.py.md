@@ -33,7 +33,7 @@ data:
   - icon: ':grey_question:'
     path: test/atcoder/other/able.test.py
     title: E - Replace Digits
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
   - icon: ':heavy_check_mark:'

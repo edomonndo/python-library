@@ -34,10 +34,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_b_range_sum_query.test.py
     title: DSL2B Range Sum Query
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':heavy_check_mark:'
@@ -46,9 +46,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -89,7 +89,7 @@ data:
   - data_structure/fenwick_tree/point_set_range_frequency.py
   - data_structure/fenwick_tree/range_add_point_get.py
   timestamp: '2024-06-12 17:23:04+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
   - test/aoj/dsl/dsl_2_b_range_sum_query.test.py

@@ -30,11 +30,11 @@ data:
     \ LazySegtree\n\n\ndef mapping(x, f):\n    return x + f\n\n\ndef composition(f,\
     \ g):\n    return f + g\n\n\nn, m, q = map(int, input().split())\nA = [int(x)\
     \ for x in input().split()]\nedges = [tuple(map(int, input().split())) for _ in\
-    \ range(m)]\n\ng = extreme_vertex_set(n, edges)\nsz = 2 * n - 1\nhld = HeavyLightDecomposition(\n\
-    \    sz, g, root=sz - 1, is_weight_graph=True, is_undirect=False\n)\nvs = [0]\
-    \ * sz\nfor i in range(sz):\n    for v, w in hld.adj[i]:\n        vs[hld.into[v]]\
-    \ = w\ninf = float(\"inf\")\nseg = LazySegtree(vs, min, inf, mapping, composition,\
-    \ 0)\n\n\ndef update(v: int, cost: int):\n    # assert 0 <= v < n\n    hld.path_query(v,\
+    \ range(m)]\n\ng = extreme_vertex_set(n, edges)\nsz = 2 * n - 1\nhld = HeavyLightDecomposition(sz,\
+    \ g, root=sz - 1, has_weight=True, is_undirect=False)\nvs = [0] * sz\nfor i in\
+    \ range(sz):\n    for v, w in hld.adj[i]:\n        vs[hld.into[v]] = w\ninf =\
+    \ float(\"inf\")\nseg = LazySegtree(vs, min, inf, mapping, composition, 0)\n\n\
+    \ndef update(v: int, cost: int):\n    # assert 0 <= v < n\n    hld.path_query(v,\
     \ sz - 1, (lambda l, r: seg.apply(l, r, cost - cur[v])))\n    cur[v] = cost\n\n\
     \ncur = [0] * n\nfor i in range(n):\n    for l, r in hld.path_query(i, sz - 1,\
     \ False):\n        seg.apply(l, r, A[i] - cur[i])\n    cur[i] = A[i]\n\nfor _\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
   requiredBy: []
-  timestamp: '2024-09-02 09:35:58+09:00'
+  timestamp: '2024-09-02 10:45:19+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py

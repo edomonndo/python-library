@@ -3,13 +3,13 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
     title: GRL5D Range Query on a Tree
   - icon: ':x:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
   - icon: ':x:'
@@ -18,13 +18,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/jump_on_tree_hld.test.py
     title: Jump on Tree (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
   - icon: ':heavy_check_mark:'
@@ -93,19 +93,31 @@ data:
     \ - k]\n\n    def is_on_path(self, u: int, v: int, x: int) -> bool:\n        return\
     \ self.dist(u, x) + self.dist(x, v) == self.dist(u, v)\n\n    def index(self,\
     \ idx: int, edge: bool = False) -> int:\n        return self.into[idx] + edge\n\
-    \n    def path_query(self, u: int, v: int, edge: bool = False) -> list[tuple[int,\
-    \ int]]:\n        into, head, par = self.into, self.head, self.par\n        res\
-    \ = []\n        while True:\n            if into[u] > into[v]:\n             \
-    \   u, v = v, u\n            if head[u] != head[v]:\n                res.append((into[head[v]],\
-    \ into[v] + 1))\n                v = par[head[v]]\n            else:\n       \
-    \         res.append((into[u] + edge, into[v] + 1))\n                break\n \
-    \       return res\n\n    def subtree_query(self, u: int, edge: bool = False)\
-    \ -> tuple[int, int]:\n        return self.into[u] + edge, self.into[u] + self.sz[u]\n"
+    \n    def _ascend(self, u: int, v: int) -> list[tuple[int, int]]:\n        into,\
+    \ head, par, depth = self.into, self.head, self.par, self.depth\n        res =\
+    \ []\n        while head[u] != head[v]:\n            res.append((into[u], into[head[u]]))\n\
+    \            u = par[head[u]]\n        if u != v:\n            res.append((into[u],\
+    \ into[v] + 1))\n        return res\n\n    def _descend(self, u: int, v: int)\
+    \ -> list[tuple[int, int]]:\n        return [(r, l) for l, r in self._ascend(v,\
+    \ u)[::-1]]\n\n    def path_query(self, u: int, v: int, edge: bool = False) ->\
+    \ list[tuple[int, int]]:\n        l = self.lca(u, v)\n        tmp = self._ascend(u,\
+    \ l)\n        if not edge:\n            tmp.append((self.into[l], self.into[l]))\n\
+    \        tmp += self._descend(l, v)\n        res = []\n        for l, r in tmp:\n\
+    \            if l > r:\n                l, r = r, l\n            res.append((l,\
+    \ r + 1))\n        return res\n\n    def path_query_noncommutative(\n        self,\
+    \ u: int, v: int, edge: bool = False\n    ) -> list[tuple[int, int, bool]]:\n\
+    \        l = self.lca(u, v)\n        tmp = self._ascend(u, l)\n        if not\
+    \ edge:\n            tmp.append((self.into[l], self.into[l]))\n        tmp +=\
+    \ self._descend(l, v)\n        res = []\n        for l, r in tmp:\n          \
+    \  if l > r:\n                res.append((r, l + 1, True))\n            else:\n\
+    \                res.append((l, r + 1, False))\n        return res\n\n    def\
+    \ subtree_query(self, u: int, edge: bool = False) -> tuple[int, int]:\n      \
+    \  return self.into[u] + edge, self.into[u] + self.sz[u]\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/tree/heavy_light_decomposition.py
   requiredBy: []
-  timestamp: '2024-09-02 09:35:58+09:00'
+  timestamp: '2024-09-02 10:45:19+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py

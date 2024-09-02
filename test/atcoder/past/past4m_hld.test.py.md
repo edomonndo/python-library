@@ -7,14 +7,14 @@ data:
   - icon: ':question:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/tree/template.py
     title: graph/tree/template.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://atcoder.jp/contests/past202010-open/tasks/past202010_m
     links:
@@ -43,8 +43,8 @@ data:
   isVerificationFile: true
   path: test/atcoder/past/past4m_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 09:35:58+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-02 10:45:19+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/atcoder/past/past4m_hld.test.py
 layout: document
