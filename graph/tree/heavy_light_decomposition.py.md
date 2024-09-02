@@ -21,7 +21,7 @@ data:
   - icon: ':x:'
     path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
     title: Vertex Add Path Sum (HLD)
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
   - icon: ':x:'
@@ -30,7 +30,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
     title: "No.235 \u3081\u3050\u308B\u306F\u3081\u3050\u308B (5)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
   _isVerificationFailed: true
@@ -44,67 +44,68 @@ data:
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "from typing import Union\n\n\nclass HeavyLightDecomposition:\n    def __init__(\n\
     \        self,\n        n: int,\n        adj: list[list[Union[int, tuple[int,\
-    \ int]]]],\n        root: int = 0,\n        is_weight_graph: bool = False,\n \
-    \   ):\n        # assert len(edges) == n-1\n        self.n = n\n        self.root\
-    \ = root\n        self.adj = adj\n        self.is_weight_graph = is_weight_graph\n\
-    \        self.par = [-1] * n\n        self.depth = [0] * n\n        order = self._root_tree()\n\
-    \n        self.sz = [1] * self.n\n        self._dfs_sz(order)\n\n        self.into\
+    \ int]]]],\n        root: int = 0,\n        has_weight: bool = False,\n      \
+    \  is_undirect: bool = True,\n    ):\n        # assert len(edges) == n-1\n   \
+    \     self.n = n\n        self.root = root\n        self.adj = adj\n        self.has_weight\
+    \ = has_weight\n        self.is_undirect = is_undirect\n        self.par = [-1]\
+    \ * n\n        self.depth = [0] * n\n        order = self._root_tree()\n\n   \
+    \     self.sz = [1] * self.n\n        self._dfs_sz(order)\n\n        self.into\
     \ = [-1] * n\n        self.head = [root] * n\n        self.hld = []\n        self._dfs_hld()\n\
     \        # assert len(self.hld) == n\n\n    def _root_tree(self) -> None:\n  \
     \      adj, par, depth = self.adj, self.par, self.depth\n        res = []\n  \
     \      st = [self.root]\n        while st:\n            v = st.pop()\n       \
-    \     res.append(v)\n            if par[v] != -1:\n                depth[v] =\
-    \ depth[par[v][0] if self.is_weight_graph else par[v]] + 1\n                adj[v].remove((par[v]))\n\
-    \            if self.is_weight_graph:\n                for e in adj[v]:\n    \
-    \                # assert len(e) == 2\n                    u, w = e[0], e[1]\n\
-    \                    par[u] = (v, w)\n                    st.append(u)\n     \
-    \       else:\n                for u in adj[v]:\n                    par[u] =\
-    \ v\n                    st.append(u)\n        if self.is_weight_graph:\n    \
-    \        self.par = [p for p, _ in par]\n        return res\n\n    def _dfs_sz(self,\
-    \ order: list[int]) -> None:\n        # calc subtree size\n        adj, sz = self.adj,\
-    \ self.sz\n        for p in order[::-1]:\n            vs = adj[p]\n          \
-    \  for i in range(len(vs)):\n                x = sz[vs[i]]\n                if\
-    \ x > sz[vs[0]]:\n                    vs[0], vs[i] = vs[i], vs[0]\n          \
-    \      sz[p] += x\n\n    def _dfs_hld(self) -> None:\n        # calc hld\n   \
-    \     adj, into, head, hld = self.adj, self.into, self.head, self.hld\n\n    \
-    \    st = [self.root]\n        while st:\n            v = st.pop()\n         \
-    \   into[v] = len(hld)\n            hld.append(v)\n            if self.is_weight_graph:\n\
-    \                for e in adj[v][1:]:\n                    u = e[0]\n        \
-    \            head[u] = u\n                    st.append(u)\n                if\
-    \ adj[v]:\n                    u = adj[v][0]\n                    head[u] = head[v]\n\
-    \                    st.append(u)\n            else:\n                for u in\
-    \ adj[v][1:]:\n                    head[u] = u\n                    st.append(u)\n\
-    \                if adj[v]:\n                    u = adj[v][0]\n             \
-    \       head[u] = head[v]\n                    st.append(u)\n\n    def build_list(self,\
-    \ a: list[int]) -> list[int]:\n        return [a[x] for x in self.hld]\n\n   \
-    \ def lca(self, u: int, v: int) -> int:\n        into, par, head, depth = self.into,\
-    \ self.par, self.head, self.depth\n        while head[u] != head[v]:\n       \
-    \     if into[u] < into[v]:\n                u, v = v, u\n            u = par[head[u]]\n\
-    \        return u if depth[u] < depth[v] else v\n\n    def dist(self, u: int,\
-    \ v: int) -> int:\n        depth = self.depth\n        return depth[u] + depth[v]\
-    \ - 2 * depth[self.lca(u, v)]\n\n    def jump(self, u: int, v: int, k: int) ->\
-    \ int:\n        head, depth, par = self.head, self.depth, self.par\n\n       \
-    \ d = self.dist(u, v)\n        if d < k:\n            return -1\n        lca =\
-    \ self.lca(u, v)\n        if depth[u] - depth[lca] < k:\n            u = v\n \
-    \           k = d - k\n        h = head[u]\n        while depth[u] - depth[h]\
-    \ < k:\n            k -= depth[u] - depth[h] + 1\n            u = par[h]\n   \
-    \         h = head[u]\n        return self.hld[self.into[u] - k]\n\n    def is_on_path(self,\
-    \ u: int, v: int, x: int) -> bool:\n        return self.dist(u, x) + self.dist(x,\
-    \ v) == self.dist(u, v)\n\n    def index(self, idx: int, edge: bool = False) ->\
-    \ int:\n        return self.into[idx] + edge\n\n    def path_query(self, u: int,\
-    \ v: int, edge: bool = False) -> list[tuple[int, int]]:\n        into, head, par\
-    \ = self.into, self.head, self.par\n        res = []\n        while True:\n  \
-    \          if into[u] > into[v]:\n                u, v = v, u\n            if\
-    \ head[u] != head[v]:\n                res.append((into[head[v]], into[v] + 1))\n\
-    \                v = par[head[v]]\n            else:\n                res.append((into[u]\
-    \ + edge, into[v] + 1))\n                break\n        return res\n\n    def\
-    \ subtree_query(self, u: int, edge: bool = False) -> tuple[int, int]:\n      \
-    \  return self.into[u] + edge, self.sz[u]\n"
+    \     res.append(v)\n            if self.is_undirect and par[v] != -1:\n     \
+    \           adj[v].remove(par[v])\n            if self.has_weight:\n         \
+    \       for e in adj[v]:\n                    # assert len(e) == 2\n         \
+    \           u, w = e[0], e[1]\n                    par[u] = (v, w)\n         \
+    \           depth[u] = depth[v] + 1\n                    st.append(u)\n      \
+    \      else:\n                for u in adj[v]:\n                    par[u] = v\n\
+    \                    depth[u] = depth[v] + 1\n                    st.append(u)\n\
+    \        if self.has_weight:\n            self.par = [p for p, _ in par]\n   \
+    \     return res\n\n    def _dfs_sz(self, order: list[int]) -> None:\n       \
+    \ # calc subtree size\n        adj, sz = self.adj, self.sz\n        for p in order[::-1]:\n\
+    \            vs = adj[p]\n            for i in range(len(vs)):\n             \
+    \   x = sz[vs[i]]\n                if x > sz[vs[0]]:\n                    vs[0],\
+    \ vs[i] = vs[i], vs[0]\n                sz[p] += x\n\n    def _dfs_hld(self) ->\
+    \ None:\n        # calc hld\n        adj, into, head, hld = self.adj, self.into,\
+    \ self.head, self.hld\n\n        st = [self.root]\n        while st:\n       \
+    \     v = st.pop()\n            into[v] = len(hld)\n            hld.append(v)\n\
+    \            if self.has_weight:\n                for e in adj[v][1:]:\n     \
+    \               u = e[0]\n                    head[u] = u\n                  \
+    \  st.append(u)\n                if adj[v]:\n                    u = adj[v][0]\n\
+    \                    head[u] = head[v]\n                    st.append(u)\n   \
+    \         else:\n                for u in adj[v][1:]:\n                    head[u]\
+    \ = u\n                    st.append(u)\n                if adj[v]:\n        \
+    \            u = adj[v][0]\n                    head[u] = head[v]\n          \
+    \          st.append(u)\n\n    def build_list(self, a: list[int]) -> list[int]:\n\
+    \        return [a[x] for x in self.hld]\n\n    def lca(self, u: int, v: int)\
+    \ -> int:\n        into, par, head, depth = self.into, self.par, self.head, self.depth\n\
+    \        while head[u] != head[v]:\n            if into[u] < into[v]:\n      \
+    \          u, v = v, u\n            u = par[head[u]]\n        return u if depth[u]\
+    \ < depth[v] else v\n\n    def dist(self, u: int, v: int) -> int:\n        depth\
+    \ = self.depth\n        return depth[u] + depth[v] - 2 * depth[self.lca(u, v)]\n\
+    \n    def jump(self, u: int, v: int, k: int) -> int:\n        head, depth, par\
+    \ = self.head, self.depth, self.par\n\n        d = self.dist(u, v)\n        if\
+    \ d < k:\n            return -1\n        lca = self.lca(u, v)\n        if depth[u]\
+    \ - depth[lca] < k:\n            u = v\n            k = d - k\n        h = head[u]\n\
+    \        while depth[u] - depth[h] < k:\n            k -= depth[u] - depth[h]\
+    \ + 1\n            u = par[h]\n            h = head[u]\n        return self.hld[self.into[u]\
+    \ - k]\n\n    def is_on_path(self, u: int, v: int, x: int) -> bool:\n        return\
+    \ self.dist(u, x) + self.dist(x, v) == self.dist(u, v)\n\n    def index(self,\
+    \ idx: int, edge: bool = False) -> int:\n        return self.into[idx] + edge\n\
+    \n    def path_query(self, u: int, v: int, edge: bool = False) -> list[tuple[int,\
+    \ int]]:\n        into, head, par = self.into, self.head, self.par\n        res\
+    \ = []\n        while True:\n            if into[u] > into[v]:\n             \
+    \   u, v = v, u\n            if head[u] != head[v]:\n                res.append((into[head[v]],\
+    \ into[v] + 1))\n                v = par[head[v]]\n            else:\n       \
+    \         res.append((into[u] + edge, into[v] + 1))\n                break\n \
+    \       return res\n\n    def subtree_query(self, u: int, edge: bool = False)\
+    \ -> tuple[int, int]:\n        return self.into[u] + edge, self.into[u] + self.sz[u]\n"
   dependsOn: []
   isVerificationFile: false
   path: graph/tree/heavy_light_decomposition.py
   requiredBy: []
-  timestamp: '2024-09-02 08:53:18+09:00'
+  timestamp: '2024-09-02 09:35:58+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py

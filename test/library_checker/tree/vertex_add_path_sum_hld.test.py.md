@@ -27,7 +27,7 @@ data:
     \n\nfrom graph.tree.template import Tree\nfrom data_structure.fenwick_tree.fenwick_tree\
     \ import FenwickTree\nfrom graph.tree.heavy_light_decomposition import HeavyLightDecomposition\n\
     \nn, q = map(int, input().split())\nA = [int(x) for x in input().split()]\ng =\
-    \ Tree.from_input(n, 0)\nhld = HeavyLightDecomposition(n, g, 0)\nP = hld.build_list(A)\n\
+    \ Tree.from_input(n, 0)\nhld = HeavyLightDecomposition(n, g)\nP = hld.build_list(A)\n\
     bit = FenwickTree(n)\nfor i, p in enumerate(P):\n    bit.add(i, p)\n\nfor _ in\
     \ range(q):\n    t, a, b = map(int, input().split())\n    if t == 0:\n       \
     \ bit.add(hld.index(p), b)\n    else:\n        ans = 0\n        for l, r in hld.path_query(a,\
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_path_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 08:53:18+09:00'
+  timestamp: '2024-09-02 09:35:58+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_path_sum_hld.test.py

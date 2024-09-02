@@ -33,14 +33,14 @@ data:
     \ % MOD\n    z2 = (x1 * y2 % MOD + x2) % MOD\n    return (z1 << 32) + z2\n\n\n\
     n, q = map(int, input().split())\nA = [0] * n\nB = [0] * n\nfor i in range(n):\n\
     \    A[i], B[i] = map(int, input().split())\ng = Tree.from_input(n, 0)\nhld =\
-    \ HeavyLightDecomposition(n, g, 0, 0)\nP = hld.build_list([A[i] << 32 | B[i] for\
-    \ i in range(n)])\n\nseg1 = Segtree(P, op1, 1 << 32)\nseg2 = Segtree(P, op2, 1\
-    \ << 32)\n\nfor _ in range(q):\n    t, a, b, c = map(int, input().split())\n \
-    \   if t == 0:\n        p = hld.index(a)\n        seg1.set(p, (b << 32) + c)\n\
-    \        seg2.set(p, (b << 32) + c)\n    else:\n        ans = c\n        for l,\
-    \ r in hld.path_query:\n            res = seg1.prod(l, r) if l <= r else seg2.prod(y,\
-    \ x)\n        s, t = res >> 32, res & msk\n        ans = (s * ans % MOD + t) %\
-    \ MOD\n        print(ans)\n"
+    \ HeavyLightDecomposition(n, g)\nP = hld.build_list([A[i] << 32 | B[i] for i in\
+    \ range(n)])\n\nseg1 = Segtree(P, op1, 1 << 32)\nseg2 = Segtree(P, op2, 1 << 32)\n\
+    \nfor _ in range(q):\n    t, a, b, c = map(int, input().split())\n    if t ==\
+    \ 0:\n        p = hld.index(a)\n        seg1.set(p, (b << 32) + c)\n        seg2.set(p,\
+    \ (b << 32) + c)\n    else:\n        ans = c\n        for l, r in hld.path_query(a,\
+    \ b, False):\n            res = seg1.prod(l, r) if l <= r else seg2.prod(r, l)\n\
+    \        s, t = res >> 32, res & msk\n        ans = (s * ans % MOD + t) % MOD\n\
+    \        print(ans)\n"
   dependsOn:
   - graph/tree/template.py
   - data_structure/segtree/segment_tree.py
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/tree/vertext_set_path_composite.test.py
   requiredBy: []
-  timestamp: '2024-09-02 08:53:18+09:00'
+  timestamp: '2024-09-02 09:35:58+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertext_set_path_composite.test.py

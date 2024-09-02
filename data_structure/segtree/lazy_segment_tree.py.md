@@ -45,7 +45,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
     title: "No.235 \u3081\u3050\u308B\u306F\u3081\u3050\u308B (5)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
   _isVerificationFailed: true

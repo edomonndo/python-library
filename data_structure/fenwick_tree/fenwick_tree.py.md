@@ -43,7 +43,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
     title: Vertex Add Range Contour Sum on Tree
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
     title: Vertex Add Subtree Sum (HLD)
   _isVerificationFailed: true

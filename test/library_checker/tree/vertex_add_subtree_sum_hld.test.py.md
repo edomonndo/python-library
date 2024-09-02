@@ -9,9 +9,9 @@ data:
     title: "HL\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/vertex_add_subtree_sum
     links:
@@ -25,18 +25,19 @@ data:
     \ import HeavyLightDecomposition\n\nn, q = map(int, input().split())\nA = [int(x)\
     \ for x in input().split()]\nP = [int(x) for x in input().split()]\ng = [[] for\
     \ _ in range(n)]\nfor i, p in enumerate(P, 1):\n    g[p].append(i)\nhld = HeavyLightDecomposition(n,\
-    \ g, 0)\nL = hld.build_list(A)\nbit = FenwickTree(n)\nfor i, p in enumerate(L):\n\
-    \    bit.add(i, p)\n\nfor _ in range(q):\n    t, *a = map(int, input().split())\n\
-    \    if t == 0:\n        v, x = a\n        bit.add(hld.index(v), x)\n    else:\n\
-    \        l, r = hld.subtree_query(a[0])\n        print(bit.sum(l, r))\n"
+    \ g, is_undirect=False)\nL = hld.build_list(A)\nbit = FenwickTree(n)\nfor i, p\
+    \ in enumerate(L):\n    bit.add(i, p)\n\nfor _ in range(q):\n    t, *a = map(int,\
+    \ input().split())\n    if t == 0:\n        v, x = a\n        bit.add(hld.index(v),\
+    \ x)\n    else:\n        l, r = hld.subtree_query(a[0])\n        print(bit.sum(l,\
+    \ r))\n"
   dependsOn:
   - data_structure/fenwick_tree/fenwick_tree.py
   - graph/tree/heavy_light_decomposition.py
   isVerificationFile: true
   path: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   requiredBy: []
-  timestamp: '2024-09-02 08:53:18+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-02 09:35:58+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
 layout: document
