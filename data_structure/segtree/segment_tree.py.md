@@ -31,6 +31,9 @@ data:
     path: test/library_checker/tree/vertext_set_path_composite.test.py
     title: Vertex Set Path Composite
   - icon: ':heavy_check_mark:'
+    path: "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
+    title: "No.650 \u884C\u5217\u6728\u30AF\u30A8\u30EA"
+  - icon: ':heavy_check_mark:'
     path: test/yukicoder/875_range_mindex_query.test.py
     title: No.875 Range Mindex Query
   _isVerificationFailed: false
@@ -107,6 +110,7 @@ data:
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
   - test/yukicoder/875_range_mindex_query.test.py
   - test/aoj/dsl/dsl_2_a_range_min_query.test.py
   - test/library_checker/tree/vertext_set_path_composite.test.py

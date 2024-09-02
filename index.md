@@ -479,7 +479,7 @@ data:
       title: graph/tree/template.py
     - icon: ':heavy_check_mark:'
       path: graph/tree/tree_dp.py
-      title: "(\u5168\u65B9\u4F4D)\u6728DP"
+      title: "\u6728\u306E\u5165\u51FA\u529B"
   - name: linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -1408,6 +1408,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
       title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
+    - icon: ':heavy_check_mark:'
+      path: "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
+      title: "No.650 \u884C\u5217\u6728\u30AF\u30A8\u30EA"
     - icon: ':heavy_check_mark:'
       path: test/yukicoder/875_range_mindex_query.test.py
       title: No.875 Range Mindex Query

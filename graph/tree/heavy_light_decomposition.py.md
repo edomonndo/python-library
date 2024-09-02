@@ -33,6 +33,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
     title: "No.399 \u52D5\u7684\u306A\u9818\u4E3B"
+  - icon: ':heavy_check_mark:'
+    path: "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
+    title: "No.650 \u884C\u5217\u6728\u30AF\u30A8\u30EA"
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -122,6 +125,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/atcoder/past/past4m_hld.test.py
+  - "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
   - "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
   - "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
