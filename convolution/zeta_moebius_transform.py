@@ -47,7 +47,7 @@ def bitwize_and_conv(f: list[int], g: list[int]) -> None:
     sup_moebius_transform(f)
 
 
-def bitwize_and_conv(f: list[int], g: list[int]) -> None:
+def bitwize_or_conv(f: list[int], g: list[int]) -> None:
     n = len(f)
     assert n == len(g)
     sub_zeta_transform(f)
