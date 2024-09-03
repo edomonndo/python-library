@@ -37,8 +37,8 @@ data:
   timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/tree_diameter.test.py
   - test/aoj/grl/grl_5_a_diameter.test.py
+  - test/library_checker/tree/tree_diameter.test.py
 documentation_of: graph/tree/diameter.py
 layout: document
 title: "\u6728\u306E\u76F4\u5F84"

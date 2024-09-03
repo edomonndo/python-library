@@ -85,8 +85,8 @@ data:
   isVerificationFile: false
   path: data_structure/basic/SortedSet.py
   requiredBy:
-  - data_structure/interval_manager.py
   - geometory/manhattan_mst.py
+  - data_structure/interval_manager.py
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

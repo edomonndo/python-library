@@ -137,19 +137,19 @@ data:
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/atcoder/other/able.test.py
-  - test/atcoder/past/past4m_hld.test.py
   - test/atcoder/abc001-99/abc035c.test.py
-  - test/atcoder/abc300-399/abc357f.test.py
   - test/atcoder/abc300-399/abc341e.test.py
+  - test/atcoder/abc300-399/abc357f.test.py
+  - test/atcoder/past/past4m_hld.test.py
   - "test/yukicoder/235_\u3081\u3050\u308B\u306F\u3081\u3050\u308B(5).test.py"
   - "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
+  - test/aoj/other/2667_tree.test.py
+  - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
+  - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
+  - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
+  - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
   - test/library_checker/data_structure/range_affine_range_sum.test.py
-  - test/aoj/other/2667_tree.test.py
-  - test/aoj/dsl/dsl_2_h_range_add_min_query.test.py
-  - test/aoj/dsl/dsl_2_i_range_update_sum_query.test.py
-  - test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
-  - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
 documentation_of: data_structure/segtree/lazy_segment_tree.py
 layout: document
 title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"

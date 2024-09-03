@@ -54,8 +54,8 @@ data:
   timestamp: '2024-08-15 10:59:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/geometory/closest_pair.test.py
   - test/aoj/cgl/cgl_5_a_closest_pair.test.py
+  - test/library_checker/geometory/closest_pair.test.py
 documentation_of: geometory/closest_pair.py
 layout: document
 title: Closest Pair

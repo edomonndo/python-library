@@ -72,9 +72,9 @@ data:
   timestamp: '2024-07-22 09:16:58+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/two_edge_connected_components.test.py
   - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
+  - test/library_checker/graph/two_edge_connected_components.test.py
 documentation_of: graph/low_link.py
 layout: document
 title: Low Link

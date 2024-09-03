@@ -80,22 +80,22 @@ data:
   isVerificationFile: false
   path: data_structure/fenwick_tree/fenwick_tree.py
   requiredBy:
-  - data_structure/fenwick_tree/range_add_point_get.py
+  - geometory/offline_static_rectangle_sum.py
+  - geometory/offline_rectangle_add_rectangle_sum.py
+  - geometory/offline_point_add_rectangle_sum.py
+  - geometory/offline_rectangle_add_point_get.py
   - data_structure/fenwick_tree/value_range_sum.py
   - data_structure/fenwick_tree/range_add_range_sum.py
   - data_structure/fenwick_tree/point_set_range_frequency.py
-  - geometory/offline_rectangle_add_point_get.py
-  - geometory/offline_point_add_rectangle_sum.py
-  - geometory/offline_rectangle_add_rectangle_sum.py
-  - geometory/offline_static_rectangle_sum.py
+  - data_structure/fenwick_tree/range_add_point_get.py
   timestamp: '2024-06-12 17:23:04+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
+  - test/aoj/dsl/dsl_2_b_range_sum_query.test.py
   - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/tree/vertex_add_path_sum_hld.test.py
   - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
-  - test/aoj/dsl/dsl_2_b_range_sum_query.test.py
-  - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
 title: "\u62BD\u8C61\u5316Fenwick Tree"

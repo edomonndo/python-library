@@ -48,8 +48,8 @@ data:
   timestamp: '2024-08-14 14:54:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/geometory/furthest_pair.test.py
   - test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
+  - test/library_checker/geometory/furthest_pair.test.py
 documentation_of: geometory/diameter.py
 layout: document
 title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
