@@ -12,7 +12,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/walsh_hadamard_tranform.py
       title: "\u30A6\u30A9\u30EB\u30B7\u30E5\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: convolution/zeta_moebius_transform.py
       title: "\u30BC\u30FC\u30BF\u5909\u63DB\u30FB\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
   - name: data_structure/basic
@@ -485,7 +485,7 @@ data:
       title: graph/tree/template.py
     - icon: ':heavy_check_mark:'
       path: graph/tree/tree_dp.py
-      title: "\u6728\u306E\u5165\u51FA\u529B"
+      title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -950,7 +950,7 @@ data:
       title: "M - \u7B49\u3057\u3044\u6570"
   - name: test/library_checker/convolution
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/convolution/bitwise_and_convolution.test.py
       title: Bitwise And Convolution
     - icon: ':heavy_check_mark:'

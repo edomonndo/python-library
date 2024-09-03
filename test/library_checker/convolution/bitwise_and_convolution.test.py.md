@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: convolution/zeta_moebius_transform.py
     title: "\u30BC\u30FC\u30BF\u5909\u63DB\u30FB\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/bitwise_and_convolution
     links:
@@ -40,8 +40,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/convolution/bitwise_and_convolution.test.py
   requiredBy: []
-  timestamp: '2024-09-03 09:26:50+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-03 09:51:53+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/convolution/bitwise_and_convolution.test.py
 layout: document

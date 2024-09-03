@@ -40,8 +40,8 @@ data:
   timestamp: '2024-05-21 07:51:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
   - test/library_checker/data_structure/queue_operate_all_composite.test.py
+  - test/aoj/dsl/dsl_3_d_sliding_minimum_element_swag.test.py
 documentation_of: data_structure/basic/FoldableQue.py
 layout: document
 title: Foldable Queue(SWAG)
