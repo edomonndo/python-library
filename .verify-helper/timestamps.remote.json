@@ -60,6 +60,7 @@
 "test/atcoder/abc300-399/abc351g.test.py": "2024-07-04 12:06:06 +0900",
 "test/atcoder/past/past4m_hld.test.py": "2024-09-03 08:35:19 +0900",
 "test/atcoder/past/past6m.test.py": "2024-06-24 17:00:04 +0900",
+"test/library_checker/convolution/bitwise_xor_convolution.test.py": "2024-09-03 09:26:50 +0900",
 "test/library_checker/convolution/convolution_mod.test.py": "2024-06-20 10:59:04 +0900",
 "test/library_checker/convolution/convolution_mod_1000000007.test.py": "2023-09-15 08:31:51 +0900",
 "test/library_checker/data_structure/area_of_union_of_rectangles.test.py": "2024-08-05 20:55:28 +0900",
