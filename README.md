@@ -1,6 +1,6 @@
 # 競プロ用ライブラリ
 
-[![Actions Status](https://github.com/edomonndo/python-library/workflows/verify/badge.svg)](https://github.com/edomonndo/python-library/actions)
+[![Actions Status](https://github.com/edomonndo/python-library/workflows/verify/badge.svg?branch=main)](https://github.com/edomonndo/python-library/actions)
 [![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://edomonndo.github.io/python-library/) 
 [![edomondo](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fedomondo)](https://atcoder.jp/users/edomondo)
 
