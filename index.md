@@ -9,6 +9,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
       title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
+    - icon: ':heavy_check_mark:'
+      path: convolution/walsh_hadamard_tranform.py
+      title: "\u30A6\u30A9\u30EB\u30B7\u30E5\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
+    - icon: ':x:'
+      path: convolution/zeta_moebius_transform.py
+      title: "\u30BC\u30FC\u30BF\u5909\u63DB\u30FB\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
   - name: data_structure/basic
     pages:
     - icon: ':warning:'
@@ -140,7 +146,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -869,6 +875,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/other/2235_graph_construction.test.py
       title: 2235 Graph Construction
+    - icon: ':x:'
+      path: test/aoj/other/2667_tree.test.py
+      title: 2667 Tree
   - name: test/atcoder/abc001-99
     pages:
     - icon: ':grey_question:'
@@ -941,6 +950,12 @@ data:
       title: "M - \u7B49\u3057\u3044\u6570"
   - name: test/library_checker/convolution
     pages:
+    - icon: ':x:'
+      path: test/library_checker/convolution/bitwise_and_convolution.test.py
+      title: Bitwise And Convolution
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/convolution/bitwise_xor_convolution.test.py
+      title: Bitwise Xor Convolution
     - icon: ':heavy_check_mark:'
       path: test/library_checker/convolution/convolution_mod.test.py
       title: Convolution Mod

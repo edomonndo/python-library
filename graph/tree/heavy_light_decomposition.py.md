@@ -9,6 +9,9 @@ data:
   - icon: ':x:'
     path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
     title: GRL5E Range Query on a Tree II
+  - icon: ':x:'
+    path: test/aoj/other/2667_tree.test.py
+    title: 2667 Tree
   - icon: ':heavy_check_mark:'
     path: test/atcoder/past/past4m_hld.test.py
     title: "M - \u7B46\u5857\u308A"
@@ -130,6 +133,7 @@ data:
   - "test/yukicoder/399_\u52D5\u7684\u306A\u9818\u4E3B.test.py"
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
   - test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
+  - test/aoj/other/2667_tree.test.py
   - test/library_checker/tree/vertex_add_subtree_sum_hld.test.py
   - test/library_checker/tree/jump_on_tree_hld.test.py
   - test/library_checker/tree/vertext_set_path_composite.test.py
