@@ -70,9 +70,9 @@ data:
   timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/cgl/cgl_3_b_is_convex.test.py
   - test/aoj/cgl/cgl_3_a_area.test.py
   - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
+  - test/aoj/cgl/cgl_3_b_is_convex.test.py
 documentation_of: geometory/basic/polygon.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"

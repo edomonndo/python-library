@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
@@ -50,8 +50,8 @@ data:
   timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
   - test/library_checker/data_structure/area_of_union_of_rectangles.test.py
+  - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
 documentation_of: geometory/union_area_rectangle.py
 layout: document
 title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"

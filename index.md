@@ -115,7 +115,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
       title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/fenwick_tree.py
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
@@ -125,7 +125,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
     - icon: ':warning:'
@@ -146,7 +146,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/dynamic_segtree.py
       title: "\u52D5\u7684\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Dynamic Segment Tree)"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
@@ -450,7 +450,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/tree/euler_tour.py
       title: Euler tour
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/tree/heavy_light_decomposition.py
       title: "HL\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -485,7 +485,7 @@ data:
       title: graph/tree/template.py
     - icon: ':heavy_check_mark:'
       path: graph/tree/tree_dp.py
-      title: "\u6728\u306E\u5165\u51FA\u529B"
+      title: "(\u5168\u65B9\u4F4D)\u6728DP"
   - name: linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
@@ -538,6 +538,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/min_of_linear.py
       title: Min of linear
+    - icon: ':heavy_check_mark:'
+      path: number_theory/nimber.py
+      title: Nimber
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
@@ -846,10 +849,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
       title: GRL5C LCA (Lowest Common Ancestor)
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
       title: GRL5D Range Query on a Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
       title: GRL5E Range Query on a Tree II
     - icon: ':heavy_check_mark:'
@@ -875,7 +878,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/other/2235_graph_construction.test.py
       title: 2235 Graph Construction
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/other/2667_tree.test.py
       title: 2667 Tree
   - name: test/atcoder/abc001-99
@@ -1250,6 +1253,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/min_of_linear.test.py
       title: Min of Mod of Linear
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/number_theory/nim_product_64.test.py
+      title: Nim Product
     - icon: ':heavy_check_mark:'
       path: test/library_checker/number_theory/primitive_root.test.py
       title: Primitive Root

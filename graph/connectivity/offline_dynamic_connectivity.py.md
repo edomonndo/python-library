@@ -76,8 +76,8 @@ data:
   timestamp: '2024-07-02 07:37:15+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py
   - test/library_checker/tree/dynamic_tree_subtree_add_subtree_sum.test.py
+  - test/library_checker/tree/dynamic_tree_vertex_add_subtree_sum.test.py
   - test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py
 documentation_of: graph/connectivity/offline_dynamic_connectivity.py
 layout: document

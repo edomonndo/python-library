@@ -72,8 +72,8 @@ data:
   timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/other/2235_graph_construction.test.py
   - test/library_checker/graph/dynamic_graph_vertex_add_component_sum_online.test.py
+  - test/aoj/other/2235_graph_construction.test.py
 documentation_of: graph/connectivity/dynamic_connectivity.py
 layout: document
 title: Dynamic Connectivity (Online)

@@ -61,8 +61,8 @@ data:
   timestamp: '2024-08-20 16:30:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
   - test/library_checker/graph/directed_mst.test.py
+  - test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
 documentation_of: graph/directed_mst.py
 layout: document
 title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
