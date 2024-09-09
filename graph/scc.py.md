@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   _extendedVerifiedWith:

@@ -369,7 +369,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/scc_incremental.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
     - icon: ':heavy_check_mark:'
@@ -410,7 +410,7 @@ data:
     - icon: ':warning:'
       path: graph/connectivity/static_range_parallel_unionfind.py
       title: Static Range Parallel Union Find
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/connectivity/unionfind.py
       title: Union Find
     - icon: ':heavy_check_mark:'
@@ -541,6 +541,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number_theory/nimber.py
       title: Nimber
+    - icon: ':warning:'
+      path: number_theory/palindromic_number.py
+      title: "\u56DE\u6587\u6570"
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
       title: "\u539F\u59CB\u6839"
@@ -683,6 +686,9 @@ data:
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
+    - icon: ':x:'
+      path: utility/fastio.py
+      title: "\u9AD8\u901F\u5165\u51FA\u529B"
     - icon: ':warning:'
       path: utility/imos2d.py
       title: "\u4E8C\u6B21\u5143\u7D2F\u7A4D\u548C"
@@ -1189,7 +1195,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc_incremental.test.py
       title: Strongly Connected Components (Incremental)
     - icon: ':heavy_check_mark:'
