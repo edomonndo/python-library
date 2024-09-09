@@ -369,7 +369,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc_incremental.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
     - icon: ':heavy_check_mark:'
@@ -410,7 +410,7 @@ data:
     - icon: ':warning:'
       path: graph/connectivity/static_range_parallel_unionfind.py
       title: Static Range Parallel Union Find
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/connectivity/unionfind.py
       title: Union Find
     - icon: ':heavy_check_mark:'
@@ -686,7 +686,7 @@ data:
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: utility/fastio.py
       title: "\u9AD8\u901F\u5165\u51FA\u529B"
     - icon: ':warning:'
@@ -1195,7 +1195,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/scc_incremental.test.py
       title: Strongly Connected Components (Incremental)
     - icon: ':heavy_check_mark:'

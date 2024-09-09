@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
     title: Union Find
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: utility/fastio.py
     title: "\u9AD8\u901F\u5165\u51FA\u529B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/incremental_scc
     links:
@@ -26,8 +26,8 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/incremental_scc\n\
     \nfrom collections import defaultdict\n\nfrom utility.fastio import Fastio\nfrom\
     \ graph.scc_incremental import incremental_scc\nfrom graph.connectivity.unionfind\
-    \ import UnionFind\n\nfastio = Fastio()\nrd = fastio.read\nwrt = fastio.write\n\
-    \nMOD = 998244353\n\nn, m = rd(), rd()\nX = []\nfor _ in range(n):\n    X.append(int(rd()))\n\
+    \ import UnionFind\n\nfastio = Fastio()\nrd = fastio.read\nrdl = fastio.read_list\n\
+    wrtl = fastio.write_list\n\nMOD = 998244353\n\nn, m = rd(), rd()\nX = rdl(n)\n\
     edges = []\nfor _ in range(m):\n    u, v = rd(), rd()\n    edges.append((u, v))\n\
     time = incremental_scc(n, edges)\nids = defaultdict(list)\nfor ei in range(m):\n\
     \    if time[ei] <= m:\n        ids[time[ei]].append(ei)\n\nuf = UnionFind(n)\n\
@@ -36,7 +36,7 @@ data:
     \            continue\n        ans[t - 1] += X[u] * X[v] % MOD\n        ans[t\
     \ - 1] %= MOD\n        uf.merge(u, v)\n        X[uf.leader(u)] = (X[u] + X[v])\
     \ % MOD\nfor i in range(m - 1):\n    ans[i + 1] = (ans[i + 1] + ans[i]) % MOD\n\
-    wrt(*ans)\n"
+    wrtl(ans)\n"
   dependsOn:
   - utility/fastio.py
   - graph/scc_incremental.py
@@ -44,8 +44,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc_incremental.test.py
   requiredBy: []
-  timestamp: '2024-09-10 07:31:46+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-10 07:48:24+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc_incremental.test.py
 layout: document

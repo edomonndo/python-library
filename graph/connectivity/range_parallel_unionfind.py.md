@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
     title: Union Find
   _extendedRequiredBy: []

@@ -4,7 +4,7 @@ data:
   - icon: ':warning:'
     path: data_structure/basic/skew_heap.py
     title: data_structure/basic/skew_heap.py
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
     title: Union Find
   _extendedRequiredBy: []
