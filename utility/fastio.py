@@ -38,8 +38,18 @@ class Fastio:
             x = -x
         return x
 
+    def read_list(self, n: int):
+        return [self.read() for _ in range(n)]
+
     def write(self, x):
         self.obuf.append(str(x))
 
     def writeln(self, x):
         self.obuf.append(str(x) + "\n")
+
+    def write_list(self, a):
+        for i in range(len(a)):
+            if i:
+                self.obuf.append(" ")
+            self.obuf.append(str(a[i]))
+        self.obuf.append("\n")

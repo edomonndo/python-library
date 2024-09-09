@@ -8,14 +8,13 @@ from graph.connectivity.unionfind import UnionFind
 
 fastio = Fastio()
 rd = fastio.read
-wrt = fastio.write
+rdl = fastio.read_list
+wrtl = fastio.write_list
 
 MOD = 998244353
 
 n, m = rd(), rd()
-X = []
-for _ in range(n):
-    X.append(int(rd()))
+X = rdl(n)
 edges = []
 for _ in range(m):
     u, v = rd(), rd()
@@ -40,4 +39,4 @@ for t in sorted(ids.keys()):
         X[uf.leader(u)] = (X[u] + X[v]) % MOD
 for i in range(m - 1):
     ans[i + 1] = (ans[i + 1] + ans[i]) % MOD
-wrt(*ans)
+wrtl(ans)
