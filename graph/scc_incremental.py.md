@@ -7,7 +7,7 @@ data:
   - icon: ':warning:'
     path: graph/csr.py
     title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []

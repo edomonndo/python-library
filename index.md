@@ -366,7 +366,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -837,7 +837,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b_bridges.test.py
       title: "GRL3B \u6A4B"
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
       title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
