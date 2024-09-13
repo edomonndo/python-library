@@ -1,42 +1,39 @@
 # verification-helper: PROBLEM https://judge.yosupo.jp/problem/incremental_scc
 
-from collections import defaultdict
-
 from utility.fastio import Fastio
-from graph.scc_incremental import incremental_scc
+from graph.scc_incremental import IncrementalScc
 from graph.connectivity.unionfind import UnionFind
 
-fastio = Fastio()
-rd = fastio.read
-rdl = fastio.read_list
-wrtl = fastio.write_list
+import sys
+
+sys.setrecursionlimit(1_000_000)
 
 MOD = 998244353
 
+fastio = Fastio()
+rd = fastio.read
+wrtln = fastio.writeln
+
+
 n, m = rd(), rd()
-X = rdl(n)
+X = [rd() for _ in range(n)]
 edges = []
+scc = IncrementalScc(n)
 for _ in range(m):
     u, v = rd(), rd()
     edges.append((u, v))
-time = incremental_scc(n, edges)
-ids = defaultdict(list)
-for ei in range(m):
-    if time[ei] <= m:
-        ids[time[ei]].append(ei)
-
+    scc.add_edge(u, v)
+res = scc.solve()
 uf = UnionFind(n)
-ans = [0] * m
-for t in sorted(ids.keys()):
-    for ei in ids[t]:
+ans = 0
+for i in range(m):
+    for ei in res[i]:
         u, v = edges[ei]
-        u, v = uf.leader(u), uf.leader(v)
-        if u == v:
-            continue
-        ans[t - 1] += X[u] * X[v] % MOD
-        ans[t - 1] %= MOD
-        uf.merge(u, v)
-        X[uf.leader(u)] = (X[u] + X[v]) % MOD
-for i in range(m - 1):
-    ans[i + 1] = (ans[i + 1] + ans[i]) % MOD
-wrtl(ans)
+        u = uf.leader(u)
+        v = uf.leader(v)
+        w = uf.merge(u, v)
+        ans = (X[u] * X[v] + ans) % MOD
+        X[w] = X[u] + X[v]
+        if X[w] >= MOD:
+            X[w] -= MOD
+    wrtln(ans)

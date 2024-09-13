@@ -1,90 +1,51 @@
-from typing import TypeVar, Union
-
-T = TypeVar("T")
-
-
 class CSR:
-    def __init__(
-        self,
+    def __init__(self):
+        self.n = 0
+        self.start = []
+        self.elist = []
+
+    @staticmethod
+    def from_raw(start: list[int], elist: list[int]) -> "CSR":
+        res = CSR()
+        res.n = len(start) - 1
+        res.start = start
+        res.elist = elist
+        return res
+
+    @staticmethod
+    def build(
         n: int,
         edges: list[tuple[int, int]],
         directed: bool = False,
-    ) -> None:
-        self.start = [0] * (n + 1)
+    ) -> "CSR":
+        start = [0] * (n + 1)
         m = len(edges)
-        self.elist = [0] * (m if directed else m * 2)
-        self.idx = dict()
+        elist = [0] * (m if directed else m * 2)
 
         for e in edges:
-            self.start[e[0] + 1] += 1
+            start[e[0] + 1] += 1
             if not directed:
-                self.start[e[1] + 1] += 1
+                start[e[1] + 1] += 1
 
         for i in range(1, n + 1):
-            self.start[i] += self.start[i - 1]
+            start[i] += start[i - 1]
 
-        counter = self.start[:]
+        counter = start[:]
         for e in edges:
             u, v = e[0], e[1]
-            self.elist[counter[u]] = v
-            self.idx[u, v] = counter[u]
+            elist[counter[u]] = v
             counter[u] += 1
             if not directed:
-                self.elist[counter[v]] = u
-                self.idx[v, u] = counter[v]
+                elist[counter[v]] = u
                 counter[v] += 1
+        res = CSR()
+        res.n = n
+        res.start = start
+        res.elist = elist
+        return res
 
-    def __getitem__(self, i: int) -> Union[list[int], list[tuple[int, T]]]:
-        l, r = self.start[i : i + 2]
-        return self.elist[l:r]
+    def __len__(self) -> int:
+        return self.n
 
-
-class WeightedCSR:
-    def __init__(
-        self,
-        n: int,
-        edges: list[tuple[int, int, T]],
-        directed: bool = False,
-        e: T = 0,
-    ) -> None:
-        self.start = [0] * (n + 1)
-        m = len(edges)
-        self.elist = [0] * (m if directed else m * 2)
-        self.w = [e] * (m if directed else m * 2)
-        self.e = e
-        self.idx = dict()
-
-        for e in edges:
-            self.start[e[0] + 1] += 1
-            if not directed:
-                self.start[e[1] + 1] += 1
-
-        for i in range(1, n + 1):
-            self.start[i] += self.start[i - 1]
-
-        counter = self.start[:]
-        for e in edges:
-            u, v = e[0], e[1]
-            self.elist[counter[u]] = v
-            self.idx[u, v] = counter[u]
-            self.w[counter[u]] = e[2]
-            counter[u] += 1
-            if not directed:
-                self.elist[counter[v]] = u
-                self.idx[v, u] = counter[v]
-                self.w[counter[v]] = e[2]
-                counter[v] += 1
-
-    def __getitem__(self, i: int) -> Union[list[int], list[tuple[int, T]]]:
-        l, r = self.start[i : i + 2]
-        return [(self.elist[j], self.w[j]) for j in range(l, r)]
-
-    def get(self, u: int, v: int) -> T:
-        # assert self.weighted
-        # assert (u, v) in self.idx
-        return self.w[self.idx[u, v]]
-
-    def set(self, u: int, v: int, w: T) -> None:
-        # assert self.weighted
-        # assert (u, v) in self.idx
-        self.w[self.idx[u, v]] = w
+    def __getitem__(self, i: int) -> list[int]:
+        return self.elist[self.start[i] : self.start[i + 1]]

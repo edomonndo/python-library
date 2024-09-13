@@ -1,45 +1,57 @@
-def scc(n: int, edges: list[tuple[int, int]]) -> tuple[list[list[int]], list[int]]:
-    adj = [[] for _ in range(n)]
-    for u, v in edges:
-        adj[u].append(v)
-    low = [0] * n
-    comp = [0] * n
-    par = [-1] * n
-    ord = [-1] * n
-    st1, st2 = [], []
-    groups = []
-    idx = 0
-    for i in range(n):
-        if ord[i] != -1:
-            continue
-        st1 += [i, i]
-        while st1:
-            v = st1.pop()
-            if ord[v] == -1:
-                low[v] = ord[v] = idx
-                idx += 1
-                st2.append(v)
-                for u in adj[v]:
-                    if ord[u] == -1:
-                        st1 += [u, u]
-                        par[u] = v
-                        continue
-                    low[v] = min(low[v], ord[u])
-            else:
-                if low[v] == ord[v]:
-                    group = []
-                    u = None
-                    while u != v:
-                        u = st2.pop()
-                        ord[u] = n
-                        comp[u] = len(groups)
-                        group.append(u)
-                    groups.append(group)
-                p = par[v]
-                if p != -1:
-                    low[p] = min(low[p], low[v])
+from graph.csr import CSR
 
-    groups = groups[::-1]  # トポロジカルソート順
-    for i in range(n):
-        comp[i] = len(groups) - 1 - comp[i]
-    return groups, comp
+
+class SCC:
+    def __init__(self, n: int, edges: list[tuple[int, int]]):
+        self.n = n
+        ord = [0] * n
+        adj = CSR.build(n, edges, True)
+        idx = n
+        par = [-1] * n
+        eis = [0] * n
+        for s in range(n):
+            if par[s] == -1:
+                par[s], p = -2, s
+                while p >= 0:
+                    arr = adj[p]
+                    if eis[p] == len(arr):
+                        idx -= 1
+                        ord[idx], p = p, par[p]
+                        continue
+                    q = arr[eis[p]]
+                    eis[p] += 1
+                    if par[q] == -1:
+                        par[q], p = p, q
+        for i in range(len(edges)):
+            u, v = edges[i]
+            edges[i] = (v, u)
+        rev = CSR.build(n, edges, True)
+        sep = [0]
+        csr = [0] * n
+        vis = [0] * n
+        p1, p2 = 0, 0
+        for s in ord:
+            if not vis[s]:
+                csr[p2], vis[s] = s, 1
+                p2 += 1
+                while p1 < p2:
+                    v = csr[p1]
+                    for u in rev[v]:
+                        if not vis[u]:
+                            vis[u] = 1
+                            csr[p2] = u
+                            p2 += 1
+                    p1 += 1
+                sep.append(p2)
+        self.induce = CSR.from_raw(sep, csr)
+        self._componet_count = len(self.induce)
+
+    def count_components(self):
+        return self._componet_count
+
+    def get_mapping(self):
+        res = [0] * self.n
+        for i in range(self.componet_count):
+            for v in self.induce[i]:
+                res[v] = i
+        return res
