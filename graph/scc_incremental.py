@@ -19,7 +19,6 @@ class IncrementalScc:
         edges = self.edges
         scc = SCC(n, edges)
         cc = scc.get_mapping()
-        del scc
         eis = [i for i, (u, v) in enumerate(edges) if cc[u] == cc[v]]
         sep = [0] * (len(edges) + 1)
         nc = []
@@ -51,7 +50,6 @@ class IncrementalScc:
             new_edges = [edges[ei] for ei in eis[:y]]
             scc = SCC(sz, new_edges)
             cc = scc.get_mapping()
-            del scc
             eis_left, eis_right = [], []
             for ei in eis[:x]:
                 u, v = edges[ei]

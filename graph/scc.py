@@ -22,10 +22,7 @@ class SCC:
                     eis[p] += 1
                     if par[q] == -1:
                         par[q], p = p, q
-        for i in range(len(edges)):
-            u, v = edges[i]
-            edges[i] = (v, u)
-        rev = CSR.build(n, edges, True)
+        rev = CSR.build(n, [(v, u) for u, v in edges], True)
         sep = [0]
         csr = [0] * n
         vis = [0] * n
@@ -51,7 +48,7 @@ class SCC:
 
     def get_mapping(self):
         res = [0] * self.n
-        for i in range(self.componet_count):
+        for i in range(self._componet_count):
             for v in self.induce[i]:
                 res[v] = i
         return res
