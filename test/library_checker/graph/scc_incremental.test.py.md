@@ -41,7 +41,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc_incremental.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:29:20+09:00'
+  timestamp: '2024-09-14 02:35:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc_incremental.test.py
