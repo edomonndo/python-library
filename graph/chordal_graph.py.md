@@ -92,8 +92,5 @@ data:
   - test/library_checker/graph/chordal_graph_recognition.test.py
 documentation_of: graph/chordal_graph.py
 layout: document
-redirect_from:
-- /library/graph/chordal_graph.py
-- /library/graph/chordal_graph.py.html
-title: graph/chordal_graph.py
+title: "\u5F26\u30B0\u30E9\u30D5"
 ---

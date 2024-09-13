@@ -14,7 +14,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
     title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   - icon: ':heavy_check_mark:'
@@ -30,12 +30,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/range_parallel_unionfind.test.py
     title: Range Parallel Unionfind
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/graph/scc_incremental.test.py
     title: Strongly Connected Components (Incremental)
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -74,7 +74,7 @@ data:
   - graph/directed_mst.py
   - graph/scc_incremental.py
   timestamp: '2024-08-05 20:55:28+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/graph/minimum_spanning_tree.test.py
   - test/library_checker/graph/manhattanmst.test.py
