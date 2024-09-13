@@ -39,6 +39,7 @@
 "test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py": "2024-08-26 12:24:24 +0900",
 "test/aoj/grl/grl_3_a_articulation_points.test.py": "2024-07-22 09:16:58 +0900",
 "test/aoj/grl/grl_3_b_bridges.test.py": "2024-07-22 09:16:58 +0900",
+"test/aoj/grl/grl_3_c_strongly_connected_components.test.py": "2024-09-14 02:16:15 +0900",
 "test/aoj/grl/grl_4_a_cycle_detection.test.py": "2024-06-19 11:57:13 +0900",
 "test/aoj/grl/grl_5_a_diameter.test.py": "2024-07-04 12:06:06 +0900",
 "test/aoj/grl/grl_5_b_tree_height.test.py": "2024-08-14 05:50:48 +0900",
