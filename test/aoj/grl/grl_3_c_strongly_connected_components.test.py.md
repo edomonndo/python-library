@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_C
     links:
@@ -20,15 +20,16 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_C\n\
     \nfrom graph.scc import SCC\n\nn, m = map(int, input().split())\nedges = [tuple(map(int,\
     \ input().split())) for _ in range(m)]\n\nscc = SCC(n)\nfor u, v in edges:\n \
-    \   scc.add_edge(u, v)\ncc = scc.get_mapping()\nq = int(input())\nfor _ in range(q):\n\
-    \    s, t = map(int, input().split())\n    print(1 if cc[s] == cc[t] else 0)\n"
+    \   scc.add_edge(u, v)\nscc.build()\ncc = scc.get_mapping()\nq = int(input())\n\
+    for _ in range(q):\n    s, t = map(int, input().split())\n    print(1 if cc[s]\
+    \ == cc[t] else 0)\n"
   dependsOn:
   - graph/scc.py
   isVerificationFile: true
   path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:22:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-09-14 02:29:20+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
 layout: document
