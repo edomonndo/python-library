@@ -58,7 +58,7 @@ data:
     \            for ei in eis_right:\n                u, v = edges[ei]\n        \
     \        edges[ei] = (cc[u], cc[v])\n            dfs(sz, xr, eis_right)\n\n  \
     \      dfs(n, 0, eis)\n        for i in range(len(sep) - 1):\n            sep[i\
-    \ + 1] += sep[i]\n        return CSR.from_raw(sep, nc)\n"
+    \ + 1] += sep[i]\n        return CSR(len(sep) - 1, sep, nc)\n"
   dependsOn:
   - graph/csr.py
   - graph/scc.py
@@ -66,7 +66,7 @@ data:
   isVerificationFile: false
   path: graph/scc_incremental.py
   requiredBy: []
-  timestamp: '2024-09-14 02:35:49+09:00'
+  timestamp: '2024-09-14 02:50:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/scc_incremental.test.py

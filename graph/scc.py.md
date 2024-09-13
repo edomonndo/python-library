@@ -37,15 +37,15 @@ data:
     \                        ord[idx], p = p, par[p]\n                        continue\n\
     \                    q = arr[eis[p]]\n                    eis[p] += 1\n      \
     \              if par[q] == -1:\n                        par[q], p = p, q\n  \
-    \      rev = CSR.build(n, self.redges, True)\n        sep = [0]\n        csr =\
-    \ [0] * n\n        vis = [0] * n\n        p1, p2 = 0, 0\n        for s in ord:\n\
-    \            if not vis[s]:\n                csr[p2], vis[s] = s, 1\n        \
-    \        p2 += 1\n                while p1 < p2:\n                    v = csr[p1]\n\
+    \      rev = CSR.build(n, self.redges, True)\n        sep = [0]\n        elist\
+    \ = [0] * n\n        vis = [0] * n\n        p1, p2 = 0, 0\n        for s in ord:\n\
+    \            if not vis[s]:\n                elist[p2], vis[s] = s, 1\n      \
+    \          p2 += 1\n                while p1 < p2:\n                    v = elist[p1]\n\
     \                    for u in rev[v]:\n                        if not vis[u]:\n\
-    \                            vis[u] = 1\n                            csr[p2] =\
-    \ u\n                            p2 += 1\n                    p1 += 1\n      \
-    \          sep.append(p2)\n        self.induce = CSR.from_raw(sep, csr)\n    \
-    \    self._componet_count = len(self.induce)\n\n    def count_components(self):\n\
+    \                            vis[u] = 1\n                            elist[p2]\
+    \ = u\n                            p2 += 1\n                    p1 += 1\n    \
+    \            sep.append(p2)\n        self.induce = CSR(len(sep) - 1, sep, elist)\n\
+    \        self._componet_count = len(self.induce)\n\n    def count_components(self):\n\
     \        return self._componet_count\n\n    def get_mapping(self):\n        res\
     \ = [0] * self.n\n        for i in range(self._componet_count):\n            for\
     \ v in self.induce[i]:\n                res[v] = i\n        return res\n"
@@ -55,7 +55,7 @@ data:
   path: graph/scc.py
   requiredBy:
   - graph/scc_incremental.py
-  timestamp: '2024-09-14 02:22:35+09:00'
+  timestamp: '2024-09-14 02:50:27+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/scc.test.py
