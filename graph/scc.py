@@ -2,10 +2,21 @@ from graph.csr import CSR
 
 
 class SCC:
-    def __init__(self, n: int, edges: list[tuple[int, int]]):
+    def __init__(self, n: int):
         self.n = n
+        self.edges = []
+        self.redges = []
+
+    def add_edge(self, src: int, dst: int) -> None:
+        # assert 0 <= src < self.n
+        # assert 0 <= dst < self.n
+        self.edges.append((src, dst))
+        self.redges.append((dst, src))
+
+    def build(self) -> None:
+        n = self.n
         ord = [0] * n
-        adj = CSR.build(n, edges, True)
+        adj = CSR.build(n, self.edges, True)
         idx = n
         par = [-1] * n
         eis = [0] * n
@@ -22,7 +33,7 @@ class SCC:
                     eis[p] += 1
                     if par[q] == -1:
                         par[q], p = p, q
-        rev = CSR.build(n, [(v, u) for u, v in edges], True)
+        rev = CSR.build(n, self.redges, True)
         sep = [0]
         csr = [0] * n
         vis = [0] * n

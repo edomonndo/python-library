@@ -17,7 +17,9 @@ class IncrementalScc:
     def solve(self) -> CSR:
         n = self.n
         edges = self.edges
-        scc = SCC(n, edges)
+        scc = SCC(n)
+        for u, v in edges:
+            scc.add_edge(u, v)
         cc = scc.get_mapping()
         eis = [i for i, (u, v) in enumerate(edges) if cc[u] == cc[v]]
         sep = [0] * (len(edges) + 1)
@@ -47,8 +49,10 @@ class IncrementalScc:
                         sz += 1
                 edges[ei] = (idx[u], idx[v])
             y = (x + m) >> 1
-            new_edges = [edges[ei] for ei in eis[:y]]
-            scc = SCC(sz, new_edges)
+            scc = SCC(sz)
+            for ei in eis[:y]:
+                u, v = edges[ei]
+                scc.add_edge(u, v)
             cc = scc.get_mapping()
             eis_left, eis_right = [], []
             for ei in eis[:x]:
