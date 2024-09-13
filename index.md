@@ -366,10 +366,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
       title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/scc.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: graph/scc_incremental.py
       title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
     - icon: ':heavy_check_mark:'
@@ -410,7 +410,7 @@ data:
     - icon: ':warning:'
       path: graph/connectivity/static_range_parallel_unionfind.py
       title: Static Range Parallel Union Find
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: graph/connectivity/unionfind.py
       title: Union Find
     - icon: ':heavy_check_mark:'
@@ -686,7 +686,7 @@ data:
     - icon: ':warning:'
       path: utility/fast_power.py
       title: "\u51AA\u4E57"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: utility/fastio.py
       title: "\u9AD8\u901F\u5165\u51FA\u529B"
     - icon: ':warning:'
@@ -837,7 +837,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj/grl/grl_3_b_bridges.test.py
       title: "GRL3B \u6A4B"
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
       title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
@@ -1192,10 +1192,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/range_parallel_unionfind.test.py
       title: Range Parallel Unionfind
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc.test.py
       title: Strongly Connected Components
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/library_checker/graph/scc_incremental.test.py
       title: Strongly Connected Components (Incremental)
     - icon: ':heavy_check_mark:'

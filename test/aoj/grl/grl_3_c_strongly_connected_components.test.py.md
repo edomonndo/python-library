@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_C
     links:
@@ -27,8 +27,8 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-08-18 09:11:40+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-14 02:07:16+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
 layout: document

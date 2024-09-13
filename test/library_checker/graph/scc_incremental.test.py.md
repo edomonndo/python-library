@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/connectivity/unionfind.py
     title: Union Find
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utility/fastio.py
     title: "\u9AD8\u901F\u5165\u51FA\u529B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/incremental_scc
     links:
@@ -24,19 +24,16 @@ data:
     \  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/languages/python.py\"\
     , line 96, in bundle\n    raise NotImplementedError\nNotImplementedError\n"
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/incremental_scc\n\
-    \nfrom collections import defaultdict\n\nfrom utility.fastio import Fastio\nfrom\
-    \ graph.scc_incremental import incremental_scc\nfrom graph.connectivity.unionfind\
-    \ import UnionFind\n\nfastio = Fastio()\nrd = fastio.read\nrdl = fastio.read_list\n\
-    wrtl = fastio.write_list\n\nMOD = 998244353\n\nn, m = rd(), rd()\nX = rdl(n)\n\
-    edges = []\nfor _ in range(m):\n    u, v = rd(), rd()\n    edges.append((u, v))\n\
-    time = incremental_scc(n, edges)\nids = defaultdict(list)\nfor ei in range(m):\n\
-    \    if time[ei] <= m:\n        ids[time[ei]].append(ei)\n\nuf = UnionFind(n)\n\
-    ans = [0] * m\nfor t in sorted(ids.keys()):\n    for ei in ids[t]:\n        u,\
-    \ v = edges[ei]\n        u, v = uf.leader(u), uf.leader(v)\n        if u == v:\n\
-    \            continue\n        ans[t - 1] += X[u] * X[v] % MOD\n        ans[t\
-    \ - 1] %= MOD\n        uf.merge(u, v)\n        X[uf.leader(u)] = (X[u] + X[v])\
-    \ % MOD\nfor i in range(m - 1):\n    ans[i + 1] = (ans[i + 1] + ans[i]) % MOD\n\
-    wrtl(ans)\n"
+    \nfrom utility.fastio import Fastio\nfrom graph.scc_incremental import IncrementalScc\n\
+    from graph.connectivity.unionfind import UnionFind\n\nimport sys\n\nsys.setrecursionlimit(1_000_000)\n\
+    \nMOD = 998244353\n\nfastio = Fastio()\nrd = fastio.read\nwrtln = fastio.writeln\n\
+    \n\nn, m = rd(), rd()\nX = [rd() for _ in range(n)]\nedges = []\nscc = IncrementalScc(n)\n\
+    for _ in range(m):\n    u, v = rd(), rd()\n    edges.append((u, v))\n    scc.add_edge(u,\
+    \ v)\nres = scc.solve()\nuf = UnionFind(n)\nans = 0\nfor i in range(m):\n    for\
+    \ ei in res[i]:\n        u, v = edges[ei]\n        u = uf.leader(u)\n        v\
+    \ = uf.leader(v)\n        w = uf.merge(u, v)\n        ans = (X[u] * X[v] + ans)\
+    \ % MOD\n        X[w] = X[u] + X[v]\n        if X[w] >= MOD:\n            X[w]\
+    \ -= MOD\n    wrtln(ans)\n"
   dependsOn:
   - utility/fastio.py
   - graph/scc_incremental.py
@@ -44,8 +41,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc_incremental.test.py
   requiredBy: []
-  timestamp: '2024-09-10 07:48:24+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-14 02:07:16+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc_incremental.test.py
 layout: document
