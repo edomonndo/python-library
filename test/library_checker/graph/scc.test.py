@@ -8,6 +8,7 @@ edges = [tuple(map(int, input().split())) for _ in range(m)]
 scc = SCC(n)
 for u, v in edges:
     scc.add_edge(u, v)
+scc.build()
 num = scc.count_components()
 cc = scc.get_mapping()
 ans = [[] for _ in range(num)]
