@@ -5,19 +5,19 @@ data:
     path: graph/csr.py
     title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   _extendedVerifiedWith:
   - icon: ':x:'
     path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
     title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/scc.test.py
     title: Strongly Connected Components
   _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -33,9 +33,8 @@ data:
     \                        idx -= 1\n                        ord[idx], p = p, par[p]\n\
     \                        continue\n                    q = arr[eis[p]]\n     \
     \               eis[p] += 1\n                    if par[q] == -1:\n          \
-    \              par[q], p = p, q\n        for i in range(len(edges)):\n       \
-    \     u, v = edges[i]\n            edges[i] = (v, u)\n        rev = CSR.build(n,\
-    \ edges, True)\n        sep = [0]\n        csr = [0] * n\n        vis = [0] *\
+    \              par[q], p = p, q\n        rev = CSR.build(n, [(v, u) for u, v in\
+    \ edges], True)\n        sep = [0]\n        csr = [0] * n\n        vis = [0] *\
     \ n\n        p1, p2 = 0, 0\n        for s in ord:\n            if not vis[s]:\n\
     \                csr[p2], vis[s] = s, 1\n                p2 += 1\n           \
     \     while p1 < p2:\n                    v = csr[p1]\n                    for\
@@ -44,7 +43,7 @@ data:
     \            p2 += 1\n                    p1 += 1\n                sep.append(p2)\n\
     \        self.induce = CSR.from_raw(sep, csr)\n        self._componet_count =\
     \ len(self.induce)\n\n    def count_components(self):\n        return self._componet_count\n\
-    \n    def get_mapping(self):\n        res = [0] * self.n\n        for i in range(self.componet_count):\n\
+    \n    def get_mapping(self):\n        res = [0] * self.n\n        for i in range(self._componet_count):\n\
     \            for v in self.induce[i]:\n                res[v] = i\n        return\
     \ res\n"
   dependsOn:
@@ -53,8 +52,8 @@ data:
   path: graph/scc.py
   requiredBy:
   - graph/scc_incremental.py
-  timestamp: '2024-09-14 02:07:16+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-09-14 02:11:30+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/graph/scc.test.py
   - test/aoj/grl/grl_3_c_strongly_connected_components.test.py

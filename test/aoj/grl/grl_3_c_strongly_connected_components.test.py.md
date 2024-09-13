@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':question:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:07:16+09:00'
+  timestamp: '2024-09-14 02:11:30+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
