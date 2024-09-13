@@ -1,16 +1,16 @@
-class CSR:
-    def __init__(self):
-        self.n = 0
-        self.start = []
-        self.elist = []
+from typing import Optional
 
-    @staticmethod
-    def from_raw(start: list[int], elist: list[int]) -> "CSR":
-        res = CSR()
-        res.n = len(start) - 1
-        res.start = start
-        res.elist = elist
-        return res
+
+class CSR:
+    def __init__(
+        self,
+        n: int = 0,
+        start: Optional[list[int]] = None,
+        elist: Optional[list[int]] = None,
+    ):
+        self.n = n
+        self.start = start
+        self.elist = elist
 
     @staticmethod
     def build(
@@ -38,11 +38,7 @@ class CSR:
             if not directed:
                 elist[counter[v]] = u
                 counter[v] += 1
-        res = CSR()
-        res.n = n
-        res.start = start
-        res.elist = elist
-        return res
+        return CSR(n, start, elist)
 
     def __len__(self) -> int:
         return self.n

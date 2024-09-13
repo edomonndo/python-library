@@ -86,4 +86,4 @@ class IncrementalScc:
         dfs(n, 0, eis)
         for i in range(len(sep) - 1):
             sep[i + 1] += sep[i]
-        return CSR.from_raw(sep, nc)
+        return CSR(len(sep) - 1, sep, nc)

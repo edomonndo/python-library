@@ -35,23 +35,23 @@ class SCC:
                         par[q], p = p, q
         rev = CSR.build(n, self.redges, True)
         sep = [0]
-        csr = [0] * n
+        elist = [0] * n
         vis = [0] * n
         p1, p2 = 0, 0
         for s in ord:
             if not vis[s]:
-                csr[p2], vis[s] = s, 1
+                elist[p2], vis[s] = s, 1
                 p2 += 1
                 while p1 < p2:
-                    v = csr[p1]
+                    v = elist[p1]
                     for u in rev[v]:
                         if not vis[u]:
                             vis[u] = 1
-                            csr[p2] = u
+                            elist[p2] = u
                             p2 += 1
                     p1 += 1
                 sep.append(p2)
-        self.induce = CSR.from_raw(sep, csr)
+        self.induce = CSR(len(sep) - 1, sep, elist)
         self._componet_count = len(self.induce)
 
     def count_components(self):
