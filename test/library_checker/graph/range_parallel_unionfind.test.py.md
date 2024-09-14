@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/range_parallel_unionfind.py
     title: Range Parallel Union Find
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/connectivity/unionfind.py
     title: Union Find
   _extendedRequiredBy: []

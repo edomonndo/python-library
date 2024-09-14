@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/scc
     links:
@@ -20,16 +20,15 @@ data:
   code: "# verification-helper: PROBLEM https://judge.yosupo.jp/problem/scc\n\nfrom\
     \ graph.scc import SCC\n\nn, m = map(int, input().split())\nedges = [tuple(map(int,\
     \ input().split())) for _ in range(m)]\n\nscc = SCC(n)\nfor u, v in edges:\n \
-    \   scc.add_edge(u, v)\nscc.build()\nnum = scc.count_components()\ncc = scc.get_mapping()\n\
-    ans = [[] for _ in range(num)]\nfor i in range(n):\n    ans[cc[i]].append(i)\n\
-    print(len(ans))\nfor group in ans:\n    print(len(group), *group)\n"
+    \   scc.add_edge(u, v)\nans = scc.get_mapping()\nprint(len(ans))\nfor group in\
+    \ ans:\n    print(len(group), *group)\n"
   dependsOn:
   - graph/scc.py
   isVerificationFile: true
   path: test/library_checker/graph/scc.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:50:27+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-14 17:35:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc.test.py
 layout: document

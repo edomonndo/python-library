@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/connectivity/unionfind.py
     title: Union Find
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: utility/fastio.py
     title: "\u9AD8\u901F\u5165\u51FA\u529B"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: py
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     PROBLEM: https://judge.yosupo.jp/problem/incremental_scc
     links:
@@ -41,8 +41,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc_incremental.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:50:27+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-09-14 17:35:06+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc_incremental.test.py
 layout: document

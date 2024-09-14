@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: graph/scc.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
@@ -20,15 +20,14 @@ data:
   code: "# verification-helper: PROBLEM https://onlinejudge.u-aizu.ac.jp/problems/GRL_3_C\n\
     \nfrom graph.scc import SCC\n\nn, m = map(int, input().split())\nedges = [tuple(map(int,\
     \ input().split())) for _ in range(m)]\n\nscc = SCC(n)\nfor u, v in edges:\n \
-    \   scc.add_edge(u, v)\nscc.build()\ncc = scc.get_mapping()\nq = int(input())\n\
-    for _ in range(q):\n    s, t = map(int, input().split())\n    print(1 if cc[s]\
-    \ == cc[t] else 0)\n"
+    \   scc.add_edge(u, v)\n_, cc = scc.scc_ids()\nq = int(input())\nfor _ in range(q):\n\
+    \    s, t = map(int, input().split())\n    print(1 if cc[s] == cc[t] else 0)\n"
   dependsOn:
   - graph/scc.py
   isVerificationFile: true
   path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
   requiredBy: []
-  timestamp: '2024-09-14 02:50:27+09:00'
+  timestamp: '2024-09-14 17:35:06+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
