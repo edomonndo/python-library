@@ -52,7 +52,7 @@ class IncrementalScc:
             for ei in eis[:y]:
                 u, v = edges[ei]
                 scc.add_edge(u, v)
-            cc = scc.scc_ids()
+            _, cc = scc.scc_ids()
             eis_left, eis_right = [], []
             for ei in eis[:x]:
                 u, v = edges[ei]
