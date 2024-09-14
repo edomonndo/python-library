@@ -12,12 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/grl/grl_3_c_strongly_connected_components.test.py
     title: "GRL3C \u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/scc.test.py
     title: Strongly Connected Components
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -52,7 +52,7 @@ data:
     \ get_mapping(self) -> list[list[int]]:\n        if self.ids is None:\n      \
     \      self.scc_ids()\n        group_num, ids = self.group_num, self.ids\n   \
     \     counts = [0] * group_num\n        for x in ids:\n            counts[x] +=\
-    \ 1\n        groups = [[] for _ in range(group_num)]\n        for i in range(n):\n\
+    \ 1\n        groups = [[] for _ in range(group_num)]\n        for i in range(self.n):\n\
     \            groups[ids[i]].append(i)\n        return groups\n"
   dependsOn:
   - graph/csr.py
@@ -60,8 +60,8 @@ data:
   path: graph/scc.py
   requiredBy:
   - graph/scc_incremental.py
-  timestamp: '2024-09-14 17:40:48+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-09-14 17:45:42+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/scc.test.py
   - test/aoj/grl/grl_3_c_strongly_connected_components.test.py
