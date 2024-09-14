@@ -5,6 +5,7 @@ class SCC:
     def __init__(self, n: int):
         self.n = n
         self.edges = []
+        self.ids = None
 
     def from_edge(self, edges: list[tuple[int, int]]):
         self.edges = edges
@@ -59,7 +60,7 @@ class SCC:
         return group_num, ids
 
     def get_mapping(self) -> list[list[int]]:
-        if self.ids is not None:
+        if self.ids is None:
             self.scc_ids()
         group_num, ids = self.group_num, self.ids
         counts = [0] * group_num
