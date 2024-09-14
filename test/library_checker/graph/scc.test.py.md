@@ -27,7 +27,7 @@ data:
   isVerificationFile: true
   path: test/library_checker/graph/scc.test.py
   requiredBy: []
-  timestamp: '2024-09-14 17:35:06+09:00'
+  timestamp: '2024-09-14 17:40:48+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/graph/scc.test.py
