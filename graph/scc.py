@@ -67,6 +67,6 @@ class SCC:
         for x in ids:
             counts[x] += 1
         groups = [[] for _ in range(group_num)]
-        for i in range(n):
+        for i in range(self.n):
             groups[ids[i]].append(i)
         return groups
