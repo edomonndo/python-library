@@ -5,7 +5,7 @@ data:
     path: graph/csr.py
     title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   _extendedVerifiedWith:

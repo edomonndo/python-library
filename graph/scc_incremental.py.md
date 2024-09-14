@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
     title: Union Find
   - icon: ':warning:'
@@ -12,12 +12,12 @@ data:
     title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/scc_incremental.test.py
     title: Strongly Connected Components (Incremental)
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: py
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/PyPy/3.10.14/x64/lib/pypy3.10/site-packages/onlinejudge_verify/documentation/build.py\"\
@@ -44,19 +44,19 @@ data:
     \ idx[j] = sz\n                        sz += 1\n                edges[ei] = (idx[u],\
     \ idx[v])\n            y = (x + m) >> 1\n            scc = SCC(sz)\n         \
     \   for ei in eis[:y]:\n                u, v = edges[ei]\n                scc.add_edge(u,\
-    \ v)\n            cc = scc.scc_ids()\n            eis_left, eis_right = [], []\n\
-    \            for ei in eis[:x]:\n                u, v = edges[ei]\n          \
-    \      if cc[u] == cc[v]:\n                    eis_left.append(ei)\n         \
-    \       else:\n                    eis_right.append(ei)\n            xl = len(eis_left)\n\
-    \            for ei in eis[x:y]:\n                u, v = edges[ei]\n         \
-    \       if cc[u] == cc[v]:\n                    eis_left.append(ei)\n        \
-    \        else:\n                    eis_right.append(ei)\n            xr = len(eis_right)\n\
-    \            for ei in eis[y:]:\n                u, v = edges[ei]\n          \
-    \      if cc[u] != cc[v]:\n                    eis_right.append(ei)\n        \
-    \    dfs(sz, xl, eis_left)\n            for ei in eis_right:\n               \
-    \ u, v = edges[ei]\n                edges[ei] = (cc[u], cc[v])\n            dfs(sz,\
-    \ xr, eis_right)\n\n        dfs(n, 0, eis)\n        for i in range(len(sep) -\
-    \ 1):\n            sep[i + 1] += sep[i]\n        return CSR(len(sep) - 1, sep,\
+    \ v)\n            _, cc = scc.scc_ids()\n            eis_left, eis_right = [],\
+    \ []\n            for ei in eis[:x]:\n                u, v = edges[ei]\n     \
+    \           if cc[u] == cc[v]:\n                    eis_left.append(ei)\n    \
+    \            else:\n                    eis_right.append(ei)\n            xl =\
+    \ len(eis_left)\n            for ei in eis[x:y]:\n                u, v = edges[ei]\n\
+    \                if cc[u] == cc[v]:\n                    eis_left.append(ei)\n\
+    \                else:\n                    eis_right.append(ei)\n           \
+    \ xr = len(eis_right)\n            for ei in eis[y:]:\n                u, v =\
+    \ edges[ei]\n                if cc[u] != cc[v]:\n                    eis_right.append(ei)\n\
+    \            dfs(sz, xl, eis_left)\n            for ei in eis_right:\n       \
+    \         u, v = edges[ei]\n                edges[ei] = (cc[u], cc[v])\n     \
+    \       dfs(sz, xr, eis_right)\n\n        dfs(n, 0, eis)\n        for i in range(len(sep)\
+    \ - 1):\n            sep[i + 1] += sep[i]\n        return CSR(len(sep) - 1, sep,\
     \ nc)\n"
   dependsOn:
   - graph/csr.py
@@ -65,8 +65,8 @@ data:
   isVerificationFile: false
   path: graph/scc_incremental.py
   requiredBy: []
-  timestamp: '2024-09-14 17:45:42+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2024-09-14 18:28:16+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/scc_incremental.test.py
 documentation_of: graph/scc_incremental.py

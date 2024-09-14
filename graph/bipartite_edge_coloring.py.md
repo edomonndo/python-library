@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: graph/bipartite_matching.py
     title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
     title: Union Find
   _extendedRequiredBy: []
