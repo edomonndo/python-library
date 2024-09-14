@@ -5,61 +5,67 @@ class SCC:
     def __init__(self, n: int):
         self.n = n
         self.edges = []
-        self.redges = []
+
+    def from_edge(self, edges: list[tuple[int, int]]):
+        self.edges = edges
 
     def add_edge(self, src: int, dst: int) -> None:
         # assert 0 <= src < self.n
         # assert 0 <= dst < self.n
         self.edges.append((src, dst))
-        self.redges.append((dst, src))
 
-    def build(self) -> None:
-        n = self.n
-        ord = [0] * n
-        adj = CSR.build(n, self.edges, True)
-        idx = n
-        par = [-1] * n
-        eis = [0] * n
-        for s in range(n):
-            if par[s] == -1:
-                par[s], p = -2, s
-                while p >= 0:
-                    arr = adj[p]
-                    if eis[p] == len(arr):
-                        idx -= 1
-                        ord[idx], p = p, par[p]
+    def scc_ids(self) -> tuple[int, list[list[int]]]:
+        n, edges = self.n, self.edges
+        adj = CSR.build(n, edges, True)
+        visited = []
+        low = [0] * n
+        ord = [-1] * n
+        ids = [0] * n
+        idx = group_num = 0
+        for i in range(n):
+            if ord[i] != -1:
+                continue
+            st = [(~i, -1), (i, -1)]
+            while st:
+                v, p = st.pop()
+                if v >= 0:
+                    if p != -1 and ord[v] != -1:
+                        low[p] = min(low[p], ord[v])
+                        st.pop()
                         continue
-                    q = arr[eis[p]]
-                    eis[p] += 1
-                    if par[q] == -1:
-                        par[q], p = p, q
-        rev = CSR.build(n, self.redges, True)
-        sep = [0]
-        elist = [0] * n
-        vis = [0] * n
-        p1, p2 = 0, 0
-        for s in ord:
-            if not vis[s]:
-                elist[p2], vis[s] = s, 1
-                p2 += 1
-                while p1 < p2:
-                    v = elist[p1]
-                    for u in rev[v]:
-                        if not vis[u]:
-                            vis[u] = 1
-                            elist[p2] = u
-                            p2 += 1
-                    p1 += 1
-                sep.append(p2)
-        self.induce = CSR(len(sep) - 1, sep, elist)
-        self._componet_count = len(self.induce)
+                    low[v] = ord[v] = idx
+                    idx += 1
+                    visited.append(v)
+                    for u in adj[v]:
+                        if ord[u] == -1:
+                            st += [(~u, v), (u, v)]
+                        else:
+                            low[v] = min(low[v], ord[u])
+                    continue
+                v = ~v
+                if low[v] == ord[v]:
+                    while True:
+                        u = visited.pop()
+                        ord[u] = n
+                        ids[u] = group_num
+                        if u == v:
+                            break
+                    group_num += 1
+                low[p] = min(low[p], low[v])
+        for i in range(n):
+            ids[i] = group_num - 1 - ids[i]
+        self.group_num = group_num
+        self.ids = ids
+        return group_num, ids
 
-    def count_components(self):
-        return self._componet_count
-
-    def get_mapping(self):
-        res = [0] * self.n
-        for i in range(self._componet_count):
-            for v in self.induce[i]:
-                res[v] = i
-        return res
+    def get_mapping(self) -> list[list[int]]:
+        if self.ids is not None:
+            self.scc_ids()
+        group_num, ids = self.group_num, self.ids
+        counts = [0] * group_num
+        for x in ids:
+            counts[x] += 1
+        groups = [[] for _ in range(group_num)]
+        for i in range(n):
+            groups[ids[i]].append(i)
+        return groups

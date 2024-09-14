@@ -18,11 +18,8 @@ class IncrementalScc:
         n = self.n
         edges = self.edges
         scc = SCC(n)
-        for u, v in edges:
-            scc.add_edge(u, v)
-        scc.build()
-        cc = scc.get_mapping()
-        del scc
+        scc.from_edge(edges)
+        _, cc = scc.scc_ids()
         eis = [i for i, (u, v) in enumerate(edges) if cc[u] == cc[v]]
         sep = [0] * (len(edges) + 1)
         nc = []
@@ -55,9 +52,7 @@ class IncrementalScc:
             for ei in eis[:y]:
                 u, v = edges[ei]
                 scc.add_edge(u, v)
-            scc.build()
-            cc = scc.get_mapping()
-            del scc
+            cc = scc.scc_ids()
             eis_left, eis_right = [], []
             for ei in eis[:x]:
                 u, v = edges[ei]
