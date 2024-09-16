@@ -1365,7 +1365,7 @@ data:
       title: Number of Substrings
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/palindromes_in_deque.test.py
-      title: test/library_checker/string/palindromes_in_deque.test.py
+      title: Palindromes in Deque
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: Suffix Array

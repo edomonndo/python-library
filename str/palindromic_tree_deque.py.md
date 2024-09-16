@@ -9,7 +9,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/string/palindromes_in_deque.test.py
-    title: test/library_checker/string/palindromes_in_deque.test.py
+    title: Palindromes in Deque
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
