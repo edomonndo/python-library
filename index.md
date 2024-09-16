@@ -648,7 +648,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: str/palindromic_tree.py
       title: "\u56DE\u6587\u6728"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: str/palindromic_tree_deque.py
       title: str/palindromic_tree_deque.py
     - icon: ':warning:'
@@ -1363,6 +1363,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/number_of_substrings.test.py
       title: Number of Substrings
+    - icon: ':heavy_check_mark:'
+      path: test/library_checker/string/palindromes_in_deque.test.py
+      title: test/library_checker/string/palindromes_in_deque.test.py
     - icon: ':heavy_check_mark:'
       path: test/library_checker/string/suffix_array.test.py
       title: Suffix Array

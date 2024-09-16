@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: str/palindromic_tree_deque.py
     title: str/palindromic_tree_deque.py
   _extendedVerifiedWith: []
