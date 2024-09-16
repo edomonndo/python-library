@@ -1201,7 +1201,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/shortest_path.test.py
       title: Shortest Path
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/st_numbering.test.py
       title: test/library_checker/graph/st_numbering.test.py
     - icon: ':heavy_check_mark:'
