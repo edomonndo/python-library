@@ -31,27 +31,6 @@ class STNumbering:
         pre[s] = 0
         vs = [s]
 
-        st = [(~t, -1), (t, -1)]
-        while st:
-            v, p = st.pop()
-            if v >= 0:
-                pre[v] = len(vs)
-                vs.append(v)
-                low[v] = v
-                for u in adj[v]:
-                    if u == v:
-                        continue
-                    if pre[u] == -1:
-                        par[u] = v
-                        st.append((~u, v))
-                        st.append((u, v))
-                    elif pre[u] < pre[low[v]]:
-                        low[v] = u
-                continue
-            v = ~v
-            if pre[low[v]] < pre[low[p]]:
-                low[p] = low[v]
-
         def dfs(v: int) -> None:
             pre[v] = len(vs)
             vs.append(v)
@@ -68,7 +47,7 @@ class STNumbering:
                     low[v] = u
             return
 
-        # dfs(t)
+        dfs(t)
         if len(vs) < n:
             return None
 
