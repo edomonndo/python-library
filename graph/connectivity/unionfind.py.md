@@ -22,7 +22,7 @@ data:
     title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/graph/manhattanmst.test.py
+    path: test/library_checker/geometory/manhattanmst.test.py
     title: Manhattan MST
   - icon: ':heavy_check_mark:'
     path: test/library_checker/graph/minimum_spanning_tree.test.py
@@ -77,9 +77,9 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/minimum_spanning_tree.test.py
-  - test/library_checker/graph/manhattanmst.test.py
   - test/library_checker/graph/scc_incremental.test.py
   - test/library_checker/graph/range_parallel_unionfind.test.py
+  - test/library_checker/geometory/manhattanmst.test.py
 documentation_of: graph/connectivity/unionfind.py
 layout: document
 title: Union Find

@@ -32,12 +32,12 @@ data:
   - geometory/manhattan_mst.py
   - graph/connectivity/unionfind.py
   isVerificationFile: true
-  path: test/library_checker/graph/manhattanmst.test.py
+  path: test/library_checker/geometory/manhattanmst.test.py
   requiredBy: []
-  timestamp: '2024-08-05 20:55:28+09:00'
+  timestamp: '2024-09-16 14:22:37+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/library_checker/graph/manhattanmst.test.py
+documentation_of: test/library_checker/geometory/manhattanmst.test.py
 layout: document
 title: Manhattan MST
 ---

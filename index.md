@@ -1104,6 +1104,9 @@ data:
       path: test/library_checker/geometory/furthest_pair.test.py
       title: Furthest Pair of Points
     - icon: ':heavy_check_mark:'
+      path: test/library_checker/geometory/manhattanmst.test.py
+      title: Manhattan MST
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/geometory/sort_points_by_argument.test.py
       title: Sort Points by Argument
     - icon: ':heavy_check_mark:'
@@ -1177,9 +1180,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/k_shortest_walk.test.py
       title: K-Shortest Walk
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/graph/manhattanmst.test.py
-      title: Manhattan MST
     - icon: ':heavy_check_mark:'
       path: test/library_checker/graph/matching_on_general_graph.test.py
       title: Matching on General Graph
@@ -1341,14 +1341,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
       title: Sqrt of Formal Power Series (Sparse)
-  - name: test/library_checker/sample
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/sample/aplusb.test.py
-      title: A + B
-    - icon: ':heavy_check_mark:'
-      path: test/library_checker/sample/many_aplusb.test.py
-      title: Many A + B
   - name: test/library_checker/string
     pages:
     - icon: ':heavy_check_mark:'

@@ -7,7 +7,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/library_checker/graph/manhattanmst.test.py
+    path: test/library_checker/geometory/manhattanmst.test.py
     title: Manhattan MST
   _isVerificationFailed: false
   _pathExtension: py
@@ -50,7 +50,7 @@ data:
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/manhattanmst.test.py
+  - test/library_checker/geometory/manhattanmst.test.py
 documentation_of: geometory/manhattan_mst.py
 layout: document
 title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\u57DF\
