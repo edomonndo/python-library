@@ -191,6 +191,7 @@
 "test/library_checker/string/enumerate_palindroms.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/string/longeset_common_substring.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/string/number_of_substrings.test.py": "2024-07-02 07:09:42 +0900",
+"test/library_checker/string/palindromes_in_deque.test.py": "2024-09-16 13:52:09 +0900",
 "test/library_checker/string/suffix_array.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/string/z_algorithm.test.py": "2024-07-02 07:09:42 +0900",
 "test/library_checker/tree/cartesian_tree.test.py": "2024-07-04 12:06:06 +0900",
