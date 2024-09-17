@@ -32,8 +32,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc291h.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc200-299/abc291h.test.py
-- /verify/test/atcoder/abc200-299/abc291h.test.py.html
-title: test/atcoder/abc200-299/abc291h.test.py
+title: H - Balanced Tree
 ---

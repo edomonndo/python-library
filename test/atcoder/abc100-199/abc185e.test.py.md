@@ -42,8 +42,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc100-199/abc185e.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc100-199/abc185e.test.py
-- /verify/test/atcoder/abc100-199/abc185e.test.py.html
-title: test/atcoder/abc100-199/abc185e.test.py
+title: E - Sequence Matching
 ---

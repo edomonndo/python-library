@@ -73,8 +73,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/two_edge_connected_components.test.py
-  - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
+  - test/aoj/grl/grl_3_a_articulation_points.test.py
 documentation_of: graph/low_link.py
 layout: document
 redirect_from:

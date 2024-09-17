@@ -75,8 +75,8 @@ data:
   timestamp: '2024-07-02 08:45:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/polynomial/multipoint_evaluation_pt.test.py
   - test/library_checker/polynomial/polynomial_interpolation.test.py
+  - test/library_checker/polynomial/multipoint_evaluation_pt.test.py
 documentation_of: polynomial/product_tree.py
 layout: document
 redirect_from:

@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc100-199/abc185e.test.py
-    title: test/atcoder/abc100-199/abc185e.test.py
+    title: E - Sequence Matching
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

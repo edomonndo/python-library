@@ -34,8 +34,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc001-99/abc035c.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc001-99/abc035c.test.py
-- /verify/test/atcoder/abc001-99/abc035c.test.py.html
-title: test/atcoder/abc001-99/abc035c.test.py
+title: "C - \u30AA\u30BB\u30ED"
 ---

@@ -66,8 +66,8 @@ data:
   timestamp: '2024-08-15 10:59:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/cgl/cgl_7_b_incircle_of_a_triangle.test.py
   - test/aoj/cgl/cgl_7_a_intersection.test.py
+  - test/aoj/cgl/cgl_7_b_incircle_of_a_triangle.test.py
 documentation_of: geometory/basic/circle.py
 layout: document
 redirect_from:

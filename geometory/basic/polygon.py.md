@@ -70,8 +70,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_a_area.test.py
-  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
+  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
 documentation_of: geometory/basic/polygon.py
 layout: document
 redirect_from:

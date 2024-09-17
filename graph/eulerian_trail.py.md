@@ -57,8 +57,8 @@ data:
   timestamp: '2024-07-19 13:46:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/eulerian_trail_directed.test.py
   - test/library_checker/graph/eulerian_trail_undirected.test.py
+  - test/library_checker/graph/eulerian_trail_directed.test.py
 documentation_of: graph/eulerian_trail.py
 layout: document
 redirect_from:

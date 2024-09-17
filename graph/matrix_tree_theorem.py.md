@@ -46,8 +46,8 @@ data:
   timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/count_spanning_trees_undirected.test.py
   - test/library_checker/graph/count_spanning_trees_directed.test.py
+  - test/library_checker/graph/count_spanning_trees_undirected.test.py
 documentation_of: graph/matrix_tree_theorem.py
 layout: document
 redirect_from:

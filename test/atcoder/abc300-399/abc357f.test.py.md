@@ -41,8 +41,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc357f.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc300-399/abc357f.test.py
-- /verify/test/atcoder/abc300-399/abc357f.test.py.html
-title: test/atcoder/abc300-399/abc357f.test.py
+title: F - Two Sequence Queries
 ---

@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc300-399/abc357f.test.py
-    title: test/atcoder/abc300-399/abc357f.test.py
+    title: F - Two Sequence Queries
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'

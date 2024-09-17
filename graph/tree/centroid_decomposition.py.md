@@ -8,7 +8,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc200-299/abc291h.test.py
-    title: test/atcoder/abc200-299/abc291h.test.py
+    title: H - Balanced Tree
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'

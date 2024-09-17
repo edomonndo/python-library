@@ -40,8 +40,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc242g.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc200-299/abc242g.test.py
-- /verify/test/atcoder/abc200-299/abc242g.test.py.html
-title: test/atcoder/abc200-299/abc242g.test.py
+title: G - Range Pairing Query
 ---

@@ -35,8 +35,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc348e.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc300-399/abc348e.test.py
-- /verify/test/atcoder/abc300-399/abc348e.test.py.html
-title: test/atcoder/abc300-399/abc348e.test.py
+title: E - Minimize Sum of Distances
 ---

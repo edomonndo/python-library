@@ -5,10 +5,10 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc200-299/abc242g.test.py
-    title: test/atcoder/abc200-299/abc242g.test.py
+    title: G - Range Pairing Query
   - icon: ':grey_question:'
     path: test/atcoder/abc200-299/abc293g.test.py
-    title: test/atcoder/abc200-299/abc293g.test.py
+    title: G - Triple Index
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'

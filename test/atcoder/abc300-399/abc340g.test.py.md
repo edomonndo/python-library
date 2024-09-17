@@ -45,8 +45,5 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc340g.test.py
 layout: document
-redirect_from:
-- /verify/test/atcoder/abc300-399/abc340g.test.py
-- /verify/test/atcoder/abc300-399/abc340g.test.py.html
-title: test/atcoder/abc300-399/abc340g.test.py
+title: G - Leaf Color
 ---

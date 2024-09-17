@@ -106,22 +106,22 @@ data:
   isVerificationFile: false
   path: geometory/basic/point.py
   requiredBy:
-  - geometory/basic/polygon.py
-  - geometory/basic/line.py
-  - geometory/basic/rectangle.py
-  - geometory/basic/circle.py
-  - geometory/convex_layer.py
-  - geometory/convex_full.py
-  - geometory/closest_pair.py
   - geometory/diameter.py
+  - geometory/basic/circle.py
+  - geometory/basic/line.py
+  - geometory/basic/polygon.py
+  - geometory/basic/rectangle.py
   - geometory/arg_sort.py
+  - geometory/convex_full.py
+  - geometory/convex_layer.py
+  - geometory/closest_pair.py
   timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_a_area.test.py
-  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
-  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
+  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 redirect_from:
