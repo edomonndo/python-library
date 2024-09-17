@@ -36,5 +36,8 @@ data:
   verifiedWith: []
 documentation_of: number_theory/palindromic_number.py
 layout: document
-title: "\u56DE\u6587\u6570"
+redirect_from:
+- /library/number_theory/palindromic_number.py
+- /library/number_theory/palindromic_number.py.html
+title: number_theory/palindromic_number.py
 ---

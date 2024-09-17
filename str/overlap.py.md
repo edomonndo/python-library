@@ -35,9 +35,8 @@ data:
   verifiedWith: []
 documentation_of: str/overlap.py
 layout: document
-title: "\u6587\u5B57\u5217\u9023\u7D50\u6642\u306E\u91CD\u8907"
+redirect_from:
+- /library/str/overlap.py
+- /library/str/overlap.py.html
+title: str/overlap.py
 ---
-
-文字列$S$の後ろに文字列$T$を文字の重なり有りで連結するときの最大重複文字数を計算する.
-z-algorithmを使用して O(min(|S|,|T|))の計算量である.
-'snuke' + 'kensho' -> 2

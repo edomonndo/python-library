@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/static_top_tree.py
-    title: Static Top Tree
+    title: graph/tree/static_top_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -40,5 +40,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc351g.test.py
 layout: document
-title: G - Hash on Tree
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc351g.test.py
+- /verify/test/atcoder/abc300-399/abc351g.test.py.html
+title: test/atcoder/abc300-399/abc351g.test.py
 ---

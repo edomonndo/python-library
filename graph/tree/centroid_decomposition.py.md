@@ -4,11 +4,11 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/tree/contour_query.py
-    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
+    title: graph/tree/contour_query.py
   _extendedVerifiedWith:
   - icon: ':grey_question:'
     path: test/atcoder/abc200-299/abc291h.test.py
-    title: H - Balanced Tree
+    title: test/atcoder/abc200-299/abc291h.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':warning:'
@@ -75,8 +75,8 @@ data:
   - test/atcoder/abc200-299/abc291h.test.py
 documentation_of: graph/tree/centroid_decomposition.py
 layout: document
-title: "\u91CD\u5FC3\u5206\u89E3"
+redirect_from:
+- /library/graph/tree/centroid_decomposition.py
+- /library/graph/tree/centroid_decomposition.py.html
+title: graph/tree/centroid_decomposition.py
 ---
-
-References:
-- https://qiita.com/navel_tos/items/d1a2fd2b63e73380eadb

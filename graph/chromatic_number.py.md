@@ -36,5 +36,8 @@ data:
   - test/library_checker/graph/chromatic_number.test.py
 documentation_of: graph/chromatic_number.py
 layout: document
-title: "\u5F69\u8272\u6570"
+redirect_from:
+- /library/graph/chromatic_number.py
+- /library/graph/chromatic_number.py.html
+title: graph/chromatic_number.py
 ---

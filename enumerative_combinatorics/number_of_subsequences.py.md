@@ -30,5 +30,8 @@ data:
   - test/library_checker/enumerative_combinatorics/number_of_subsequences.test.py
 documentation_of: enumerative_combinatorics/number_of_subsequences.py
 layout: document
-title: Number of Subsequences
+redirect_from:
+- /library/enumerative_combinatorics/number_of_subsequences.py
+- /library/enumerative_combinatorics/number_of_subsequences.py.html
+title: enumerative_combinatorics/number_of_subsequences.py
 ---

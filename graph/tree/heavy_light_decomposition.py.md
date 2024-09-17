@@ -141,11 +141,8 @@ data:
   - test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
 documentation_of: graph/tree/heavy_light_decomposition.py
 layout: document
-title: "HL\u5206\u89E3"
+redirect_from:
+- /library/graph/tree/heavy_light_decomposition.py
+- /library/graph/tree/heavy_light_decomposition.py.html
+title: graph/tree/heavy_light_decomposition.py
 ---
-
-木の高さを圧縮する.
-
-https://qiita.com/Pro_ktmr/items/4e1e051ea0561772afa3
-
-

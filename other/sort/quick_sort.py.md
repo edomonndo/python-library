@@ -26,5 +26,8 @@ data:
   verifiedWith: []
 documentation_of: other/sort/quick_sort.py
 layout: document
-title: "\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/other/sort/quick_sort.py
+- /library/other/sort/quick_sort.py.html
+title: other/sort/quick_sort.py
 ---

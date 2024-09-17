@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
-    title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
+    title: data_structure/fenwick_tree/range_add_range_sum.py
   - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
-    title: "HL\u5206\u89E3"
+    title: graph/tree/heavy_light_decomposition.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -26,5 +26,8 @@ data:
   verifiedWith: []
 documentation_of: other/sort/bubble_sort.py
 layout: document
-title: "\u30D0\u30D6\u30EB\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/other/sort/bubble_sort.py
+- /library/other/sort/bubble_sort.py.html
+title: other/sort/bubble_sort.py
 ---

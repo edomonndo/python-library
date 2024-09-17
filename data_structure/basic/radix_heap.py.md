@@ -38,7 +38,8 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/radix_heap.py
 layout: document
-title: Radix Heap
+redirect_from:
+- /library/data_structure/basic/radix_heap.py
+- /library/data_structure/basic/radix_heap.py.html
+title: data_structure/basic/radix_heap.py
 ---
-
-Dijkstraの優先度付きキューで使用すると,通常の優先度付きキューより定数倍高速化が図れる.

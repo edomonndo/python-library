@@ -69,5 +69,8 @@ data:
   - test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
 documentation_of: graph/connectivity/weighted_unionfind.py
 layout: document
-title: "\u91CD\u307F\u4ED8\u304D Union Find"
+redirect_from:
+- /library/graph/connectivity/weighted_unionfind.py
+- /library/graph/connectivity/weighted_unionfind.py.html
+title: graph/connectivity/weighted_unionfind.py
 ---

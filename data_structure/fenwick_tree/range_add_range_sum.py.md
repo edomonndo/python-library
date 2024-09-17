@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
-    title: "\u62BD\u8C61\u5316Fenwick Tree"
+    title: data_structure/fenwick_tree/fenwick_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -40,7 +40,8 @@ data:
   - test/aoj/grl/grl_5_e_range_query_on_a_tree2_hld.test.py
 documentation_of: data_structure/fenwick_tree/range_add_range_sum.py
 layout: document
-title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
+redirect_from:
+- /library/data_structure/fenwick_tree/range_add_range_sum.py
+- /library/data_structure/fenwick_tree/range_add_range_sum.py.html
+title: data_structure/fenwick_tree/range_add_range_sum.py
 ---
-
-BIT２本による区間加算・区間和取得

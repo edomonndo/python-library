@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/biconnected_components.py
-    title: "\u4E8C\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3/Block Cut Tree"
+    title: graph/biconnected_components.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -4,10 +4,10 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/scc.py
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: graph/scc.py
   - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
+    title: graph/scc_incremental.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -45,8 +45,8 @@ data:
   verifiedWith: []
 documentation_of: graph/csr.py
 layout: document
-title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
+redirect_from:
+- /library/graph/csr.py
+- /library/graph/csr.py.html
+title: graph/csr.py
 ---
-
-疎なグラフを省メモリで表現できる形式．
-

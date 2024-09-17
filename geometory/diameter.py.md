@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    title: geometory/basic/point.py
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
-    title: Convex full
+    title: geometory/convex_full.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -52,5 +52,8 @@ data:
   - test/aoj/cgl/cgl_4_b_diameter_of_a_convex_polygon.test.py
 documentation_of: geometory/diameter.py
 layout: document
-title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
+redirect_from:
+- /library/geometory/diameter.py
+- /library/geometory/diameter.py.html
+title: geometory/diameter.py
 ---

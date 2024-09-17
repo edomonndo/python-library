@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    title: geometory/basic/point.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -58,5 +58,8 @@ data:
   - test/aoj/cgl/cgl_5_a_closest_pair.test.py
 documentation_of: geometory/closest_pair.py
 layout: document
-title: Closest Pair
+redirect_from:
+- /library/geometory/closest_pair.py
+- /library/geometory/closest_pair.py.html
+title: geometory/closest_pair.py
 ---

@@ -60,14 +60,8 @@ data:
   verifiedWith: []
 documentation_of: data_structure/binary_search_tree/hu_tucker.py
 layout: document
-title: "\u6700\u9069\u4E8C\u5206\u63A2\u7D22\u6728(Hu-Tucker)"
+redirect_from:
+- /library/data_structure/binary_search_tree/hu_tucker.py
+- /library/data_structure/binary_search_tree/hu_tucker.py.html
+title: data_structure/binary_search_tree/hu_tucker.py
 ---
-
-$n$個の葉をもつ順序付き二分木の最小コストを求める.
-コストは以下で定義する.
-
-$$\displaystyle\sum^{n-1}_{i=0} {W_i} \times {depth_i}$$
-
-$W_i$は葉の重み,$depth_i$は二分木における左から$i$個目の葉の深さを表す.
-
-参考：https://atcoder.jp/contests/atc002/tasks/atc002_c

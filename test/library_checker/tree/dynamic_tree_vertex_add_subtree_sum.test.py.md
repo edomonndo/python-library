@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/offline_dynamic_connectivity.py
-    title: Dynamic Connectivity (Offline)
+    title: graph/connectivity/offline_dynamic_connectivity.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

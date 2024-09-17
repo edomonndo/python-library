@@ -44,5 +44,8 @@ data:
   - test/aoj/dsl/dsl_5_b_the_maximum_number_of_overlaps_fw2d.test.py
 documentation_of: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
 layout: document
-title: "\u4E8C\u6B21\u5143\u52D5\u7684Fenwick Tree"
+redirect_from:
+- /library/data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
+- /library/data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py.html
+title: data_structure/fenwick_tree/dynamic_fenwick_tree_2d.py
 ---

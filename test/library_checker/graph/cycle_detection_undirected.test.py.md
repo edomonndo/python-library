@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/find_cycle_undirected.py
-    title: "\u9589\u8DEF\u691C\u51FA\uFF08\u7121\u5411\u30B0\u30E9\u30D5\uFF09"
+    title: graph/find_cycle_undirected.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

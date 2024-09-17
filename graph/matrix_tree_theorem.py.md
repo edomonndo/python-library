@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: linear_algebra/matrix.py
-    title: "\u884C\u5217"
+    title: linear_algebra/matrix.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -50,5 +50,8 @@ data:
   - test/library_checker/graph/count_spanning_trees_directed.test.py
 documentation_of: graph/matrix_tree_theorem.py
 layout: document
-title: "\u884C\u5217\u6728\u5B9A\u7406"
+redirect_from:
+- /library/graph/matrix_tree_theorem.py
+- /library/graph/matrix_tree_theorem.py.html
+title: graph/matrix_tree_theorem.py
 ---

@@ -47,7 +47,8 @@ data:
   - test/library_checker/graph/dominator_tree.test.py
 documentation_of: graph/tree/dominator_tree.py
 layout: document
-title: Dominator Tree
+redirect_from:
+- /library/graph/tree/dominator_tree.py
+- /library/graph/tree/dominator_tree.py.html
+title: graph/tree/dominator_tree.py
 ---
-
-有向グラフから支配木を作成する．

@@ -26,6 +26,8 @@ data:
   verifiedWith: []
 documentation_of: number_theory/eratosthenes.py
 layout: document
-title: "\u7D20\u6570\u5224\u5B9A(\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\
-  )"
+redirect_from:
+- /library/number_theory/eratosthenes.py
+- /library/number_theory/eratosthenes.py.html
+title: number_theory/eratosthenes.py
 ---

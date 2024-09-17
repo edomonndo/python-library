@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
-    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
+    title: data_structure/segtree/lazy_segment_tree.py
   - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
-    title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
+    title: data_structure/segtree/monoids_action/range_add_range_product_sum.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -41,5 +41,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc357f.test.py
 layout: document
-title: F - Two Sequence Queries
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc357f.test.py
+- /verify/test/atcoder/abc300-399/abc357f.test.py.html
+title: test/atcoder/abc300-399/abc357f.test.py
 ---

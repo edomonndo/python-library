@@ -42,7 +42,8 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/DeletableHeapQue.py
 layout: document
-title: "\u524A\u9664\u53EF\u80FD\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
+redirect_from:
+- /library/data_structure/basic/DeletableHeapQue.py
+- /library/data_structure/basic/DeletableHeapQue.py.html
+title: data_structure/basic/DeletableHeapQue.py
 ---
-
-`hdel(x)`でキュー内のxを1つ削除できる．$x$はキューに含まれた値とする．

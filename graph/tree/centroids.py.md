@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc300-399/abc348e.test.py
-    title: E - Minimize Sum of Distances
+    title: test/atcoder/abc300-399/abc348e.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -37,8 +37,8 @@ data:
   - test/atcoder/abc300-399/abc348e.test.py
 documentation_of: graph/tree/centroids.py
 layout: document
-title: "\u91CD\u5FC3\u5224\u5B9A"
+redirect_from:
+- /library/graph/tree/centroids.py
+- /library/graph/tree/centroids.py.html
+title: graph/tree/centroids.py
 ---
-
-木の重心を求める.
-重心は１つか２つの頂点で返る.

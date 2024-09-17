@@ -26,5 +26,8 @@ data:
   verifiedWith: []
 documentation_of: other/sort/count_sort.py
 layout: document
-title: "\u30AB\u30A6\u30F3\u30C8\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/other/sort/count_sort.py
+- /library/other/sort/count_sort.py.html
+title: other/sort/count_sort.py
 ---

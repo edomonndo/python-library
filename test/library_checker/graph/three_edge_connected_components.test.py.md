@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/three_edge_connected_components.py
-    title: "\u4E09\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: graph/three_edge_connected_components.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

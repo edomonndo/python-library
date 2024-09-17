@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/matrix_tree_theorem.py
-    title: "\u884C\u5217\u6728\u5B9A\u7406"
+    title: graph/matrix_tree_theorem.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

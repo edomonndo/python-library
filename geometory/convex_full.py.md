@@ -3,11 +3,11 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    title: geometory/basic/point.py
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
-    title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
+    title: geometory/diameter.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/static_convex_hull.test.py
@@ -46,7 +46,8 @@ data:
   - test/library_checker/geometory/static_convex_hull.test.py
 documentation_of: geometory/convex_full.py
 layout: document
-title: Convex full
+redirect_from:
+- /library/geometory/convex_full.py
+- /library/geometory/convex_full.py.html
+title: geometory/convex_full.py
 ---
-
-凸包．複数の点から全ての点を内包する多角形を考えた時，多角形を構成する点を求める．

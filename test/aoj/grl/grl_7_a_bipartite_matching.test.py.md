@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/maxflow.py
-    title: "\u6700\u5927\u30D5\u30ED\u30FC"
+    title: graph/maxflow.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

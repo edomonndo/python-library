@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/wordsize_tree_set.py
-    title: "32\u5206\u6728"
+    title: data_structure/basic/wordsize_tree_set.py
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    title: data_structure/segtree/segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -59,20 +59,8 @@ data:
   - test/library_checker/data_structure/range_set_range_composite.test.py
 documentation_of: data_structure/segtree/range_set_range_composite.py
 layout: document
-title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+redirect_from:
+- /library/data_structure/segtree/range_set_range_composite.py
+- /library/data_structure/segtree/range_set_range_composite.py.html
+title: data_structure/segtree/range_set_range_composite.py
 ---
-
-セグメント木にソート済みの配列をのせたもの.
-
-
-### mst = MergeSortTree(arr)
-
-初期化．$arr$はクエリの配列であり変更不可．
-
-### mst.sum_le(l, r, x)
-
-配列$arr$の半開区間$[l,r)$で、$x$以下の値の合計を計算する.
-
-### mst.sum_lt(l, r, x)
-
-配列$arr$の半開区間$[l,r)$で、$x$未満の値の合計を計算する.

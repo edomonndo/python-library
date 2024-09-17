@@ -58,21 +58,8 @@ data:
   verifiedWith: []
 documentation_of: str/rolling_hash.py
 layout: document
-title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
+redirect_from:
+- /library/str/rolling_hash.py
+- /library/str/rolling_hash.py.html
+title: str/rolling_hash.py
 ---
-
-文字列を高速に検索する.
-
-### RollingHash(list, mod, base)
-
-文字列は整数(>0)に変換しておくこと．(例：`LIST = [ord(s)-ord("a")+1 for s in S]`)
-
-baseの指定がない場合，2以上mod未満の値からランダムに選択する.
-
-### update(p, x)
-
-0-indexでp番目の値をxに変更する.
-
-### get(l, r)
-
-区間$[l,r)$のハッシュを取得する．

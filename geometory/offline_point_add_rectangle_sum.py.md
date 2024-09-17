@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
-    title: "\u62BD\u8C61\u5316Fenwick Tree"
+    title: data_structure/fenwick_tree/fenwick_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -68,6 +68,8 @@ data:
   - test/library_checker/data_structure/point_add_rectangle_sum.test.py
 documentation_of: geometory/offline_point_add_rectangle_sum.py
 layout: document
-title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\
-  )"
+redirect_from:
+- /library/geometory/offline_point_add_rectangle_sum.py
+- /library/geometory/offline_point_add_rectangle_sum.py.html
+title: geometory/offline_point_add_rectangle_sum.py
 ---

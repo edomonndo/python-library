@@ -38,10 +38,8 @@ data:
   verifiedWith: []
 documentation_of: graph/grid/grid.py
 layout: document
-title: "\u30B0\u30EA\u30C3\u30C9"
+redirect_from:
+- /library/graph/grid/grid.py
+- /library/graph/grid/grid.py.html
+title: graph/grid/grid.py
 ---
-
-グリッド上を探索する．
-- 近傍は上下4方向
-- 番兵をH+1行目，W+1列目に配置し，盤面外参照の判別を簡略化
-- 高速化のため配列を１次元化

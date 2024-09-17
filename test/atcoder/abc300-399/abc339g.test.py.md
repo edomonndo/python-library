@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/merge_sort_tree.py
-    title: Merge Sort Tree
+    title: data_structure/segtree/merge_sort_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -32,5 +32,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc339g.test.py
 layout: document
-title: G - Smaller Sum
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc339g.test.py
+- /verify/test/atcoder/abc300-399/abc339g.test.py.html
+title: test/atcoder/abc300-399/abc339g.test.py
 ---

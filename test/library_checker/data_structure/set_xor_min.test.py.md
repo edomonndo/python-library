@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_trie.py
-    title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
+    title: data_structure/binary_trie.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

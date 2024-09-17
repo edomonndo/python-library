@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc100-199/abc185e.test.py
-    title: E - Sequence Matching
+    title: test/atcoder/abc100-199/abc185e.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -40,5 +40,8 @@ data:
   - test/atcoder/abc100-199/abc185e.test.py
 documentation_of: dynamic_programming/edit_distance.py
 layout: document
-title: "\u7DE8\u96C6\u8DDD\u96E2"
+redirect_from:
+- /library/dynamic_programming/edit_distance.py
+- /library/dynamic_programming/edit_distance.py.html
+title: dynamic_programming/edit_distance.py
 ---

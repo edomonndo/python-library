@@ -194,13 +194,8 @@ data:
   - test/unit_test/wavelet_matrix.test.py
 documentation_of: data_structure/wavelet_matrix.py
 layout: document
-title: "\u30A6\u30A7\u30FC\u30D6\u30EC\u30C3\u30C8\u884C\u5217"
+redirect_from:
+- /library/data_structure/wavelet_matrix.py
+- /library/data_structure/wavelet_matrix.py.html
+title: data_structure/wavelet_matrix.py
 ---
-
-静的配列を高速に検索する．
-前処理: $n$列$b$ビットの配列で$0(nb)$, 検索: ($O(\log b)$ or $O(k\log b)$)
-
-
-参考：
-https://miti-7.hatenablog.com/entry/2018/04/28/152259
-https://miti-7.hatenablog.com/entry/2018/04/15/155638

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
-    title: ValueRangeSum
+    title: data_structure/fenwick_tree/value_range_sum.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/eulerian_trail.py
-    title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
+    title: graph/eulerian_trail.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/range_set_range_composite.py
-    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+    title: data_structure/segtree/range_set_range_composite.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/data_structure/predecessor_problem.test.py
@@ -70,5 +70,8 @@ data:
   - test/library_checker/data_structure/predecessor_problem.test.py
 documentation_of: data_structure/basic/wordsize_tree_set.py
 layout: document
-title: "32\u5206\u6728"
+redirect_from:
+- /library/data_structure/basic/wordsize_tree_set.py
+- /library/data_structure/basic/wordsize_tree_set.py.html
+title: data_structure/basic/wordsize_tree_set.py
 ---

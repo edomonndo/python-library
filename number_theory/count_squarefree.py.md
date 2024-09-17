@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: number_theory/kth_root.py
-    title: Kth Root
+    title: number_theory/kth_root.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -49,7 +49,8 @@ data:
   - test/library_checker/number_theory/counting_squarefrees.test.py
 documentation_of: number_theory/count_squarefree.py
 layout: document
-title: "\u7121\u5E73\u65B9\u6570\u306E\u6570\u3048\u4E0A\u3052"
+redirect_from:
+- /library/number_theory/count_squarefree.py
+- /library/number_theory/count_squarefree.py.html
+title: number_theory/count_squarefree.py
 ---
-
-制約: $1 <= n <= 10^{18}$

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
-    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+    title: polynomial/formal_power_series.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

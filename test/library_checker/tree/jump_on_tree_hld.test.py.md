@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
-    title: "HL\u5206\u89E3"
+    title: graph/tree/heavy_light_decomposition.py
   - icon: ':heavy_check_mark:'
     path: graph/tree/template.py
     title: graph/tree/template.py

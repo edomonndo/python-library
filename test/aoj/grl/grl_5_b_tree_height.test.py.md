@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/tree_dp.py
-    title: "(\u5168\u65B9\u4F4D)\u6728DP"
+    title: graph/tree/tree_dp.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

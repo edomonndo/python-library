@@ -3,8 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/static_range_lis_query.py
-    title: "\u9759\u7684\u533A\u9593\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217\u30AF\
-      \u30A8\u30EA"
+    title: data_structure/static_range_lis_query.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

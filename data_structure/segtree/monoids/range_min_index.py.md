@@ -31,5 +31,8 @@ data:
   - test/yukicoder/875_range_mindex_query.test.py
 documentation_of: data_structure/segtree/monoids/range_min_index.py
 layout: document
-title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
+redirect_from:
+- /library/data_structure/segtree/monoids/range_min_index.py
+- /library/data_structure/segtree/monoids/range_min_index.py.html
+title: data_structure/segtree/monoids/range_min_index.py
 ---

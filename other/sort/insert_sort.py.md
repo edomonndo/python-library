@@ -25,5 +25,8 @@ data:
   verifiedWith: []
 documentation_of: other/sort/insert_sort.py
 layout: document
-title: "\u633F\u5165\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/other/sort/insert_sort.py
+- /library/other/sort/insert_sort.py.html
+title: other/sort/insert_sort.py
 ---

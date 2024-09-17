@@ -3,8 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/sortable_segtree.py
-    title: "\uFF11\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u30BD\u30FC\u30C8\u30BB\u30B0\
-      \u30E1\u30F3\u30C8\u6728"
+    title: data_structure/segtree/sortable_segtree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

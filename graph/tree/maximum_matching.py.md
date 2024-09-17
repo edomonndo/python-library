@@ -28,7 +28,8 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/maximum_matching.py
 layout: document
-title: "\u6728\u306E\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
+redirect_from:
+- /library/graph/tree/maximum_matching.py
+- /library/graph/tree/maximum_matching.py.html
+title: graph/tree/maximum_matching.py
 ---
-
-[参考](https://algo-method.com/tasks/979)

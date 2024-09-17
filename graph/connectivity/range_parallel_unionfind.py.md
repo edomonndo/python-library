@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -48,5 +48,8 @@ data:
   - test/library_checker/graph/range_parallel_unionfind.test.py
 documentation_of: graph/connectivity/range_parallel_unionfind.py
 layout: document
-title: Range Parallel Union Find
+redirect_from:
+- /library/graph/connectivity/range_parallel_unionfind.py
+- /library/graph/connectivity/range_parallel_unionfind.py.html
+title: graph/connectivity/range_parallel_unionfind.py
 ---

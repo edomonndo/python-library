@@ -36,7 +36,8 @@ data:
   - test/library_checker/data_structure/associative_array.test.py
 documentation_of: data_structure/basic/safe_int_dict.py
 layout: document
-title: Safe Int Dict
+redirect_from:
+- /library/data_structure/basic/safe_int_dict.py
+- /library/data_structure/basic/safe_int_dict.py.html
+title: data_structure/basic/safe_int_dict.py
 ---
-
-特定ケースにおいて，Dictが遅くなるのを回避させるため，keyをxorでラップする.

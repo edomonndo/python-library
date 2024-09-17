@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: persistent_data_structure/persistent_array.py
-    title: "\u6C38\u7D9A\u914D\u5217"
+    title: persistent_data_structure/persistent_array.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -50,5 +50,8 @@ data:
   - test/library_checker/data_structure/persistent_unionfind.test.py
 documentation_of: persistent_data_structure/persistent_union_find.py
 layout: document
-title: "\u6C38\u7D9A Union Find"
+redirect_from:
+- /library/persistent_data_structure/persistent_union_find.py
+- /library/persistent_data_structure/persistent_union_find.py.html
+title: persistent_data_structure/persistent_union_find.py
 ---

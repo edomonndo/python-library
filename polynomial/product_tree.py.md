@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+    title: convolution/convolution.py
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
-    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+    title: polynomial/formal_power_series.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -79,5 +79,8 @@ data:
   - test/library_checker/polynomial/polynomial_interpolation.test.py
 documentation_of: polynomial/product_tree.py
 layout: document
-title: Product Tree
+redirect_from:
+- /library/polynomial/product_tree.py
+- /library/polynomial/product_tree.py.html
+title: polynomial/product_tree.py
 ---

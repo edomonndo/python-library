@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -78,5 +78,8 @@ data:
   - test/library_checker/graph/tree_decomposition_width2.test.py
 documentation_of: graph/tree_decomposition_width2.py
 layout: document
-title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
+redirect_from:
+- /library/graph/tree_decomposition_width2.py
+- /library/graph/tree_decomposition_width2.py.html
+title: graph/tree_decomposition_width2.py
 ---

@@ -3,12 +3,12 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    title: data_structure/segtree/segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc300-399/abc340g.test.py
-    title: G - Leaf Color
+    title: test/atcoder/abc300-399/abc340g.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -58,11 +58,8 @@ data:
   - test/atcoder/abc300-399/abc340g.test.py
 documentation_of: graph/tree/auxiliary_tree.py
 layout: document
-title: Auxiliary tree
+redirect_from:
+- /library/graph/tree/auxiliary_tree.py
+- /library/graph/tree/auxiliary_tree.py.html
+title: graph/tree/auxiliary_tree.py
 ---
-
-木から、頂点集合$vs$とそれらのLCAからなる木を構築する
-.
-木の頂点数が圧縮され、$vs$の頂点数を$k$としたとき頂点数の上限は$2k-1$となる.
-
-実装はEulerTour + Segment TreeでLCAを求めている.(前処理: $O(N)$, 構築: $O(k(logk + logN))$)

@@ -61,5 +61,8 @@ data:
   - test/library_checker/graph/eulerian_trail_undirected.test.py
 documentation_of: graph/eulerian_trail.py
 layout: document
-title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
+redirect_from:
+- /library/graph/eulerian_trail.py
+- /library/graph/eulerian_trail.py.html
+title: graph/eulerian_trail.py
 ---

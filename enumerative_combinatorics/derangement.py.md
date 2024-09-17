@@ -30,5 +30,8 @@ data:
   - test/library_checker/enumerative_combinatorics/montmort_number_mod.test.py
 documentation_of: enumerative_combinatorics/derangement.py
 layout: document
-title: "\u64B9\u4E71\u9806\u5217"
+redirect_from:
+- /library/enumerative_combinatorics/derangement.py
+- /library/enumerative_combinatorics/derangement.py.html
+title: enumerative_combinatorics/derangement.py
 ---

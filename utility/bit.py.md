@@ -54,7 +54,8 @@ data:
   verifiedWith: []
 documentation_of: utility/bit.py
 layout: document
-title: "\u30D3\u30C3\u30C8\u6F14\u7B97"
+redirect_from:
+- /library/utility/bit.py
+- /library/utility/bit.py.html
+title: utility/bit.py
 ---
-
-

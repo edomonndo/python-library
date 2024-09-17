@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/mo.py
-    title: Mo's Algorithm
+    title: data_structure/mo.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -40,5 +40,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc293g.test.py
 layout: document
-title: G - Triple Index
+redirect_from:
+- /verify/test/atcoder/abc200-299/abc293g.test.py
+- /verify/test/atcoder/abc200-299/abc293g.test.py.html
+title: test/atcoder/abc200-299/abc293g.test.py
 ---

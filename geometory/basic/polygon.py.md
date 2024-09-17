@@ -3,11 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/line.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
-      \u5206)"
+    title: geometory/basic/line.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    title: geometory/basic/point.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -75,5 +74,8 @@ data:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
 documentation_of: geometory/basic/polygon.py
 layout: document
-title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
+redirect_from:
+- /library/geometory/basic/polygon.py
+- /library/geometory/basic/polygon.py.html
+title: geometory/basic/polygon.py
 ---

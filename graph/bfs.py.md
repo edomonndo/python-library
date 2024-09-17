@@ -27,5 +27,8 @@ data:
   verifiedWith: []
 documentation_of: graph/bfs.py
 layout: document
-title: "\u5E45\u512A\u5148\u63A2\u7D22"
+redirect_from:
+- /library/graph/bfs.py
+- /library/graph/bfs.py.html
+title: graph/bfs.py
 ---

@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/basic/leftist_heap.py
-    title: Leftist Heap
+    title: data_structure/basic/leftist_heap.py
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.py
-    title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
+    title: graph/dijkstra.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: graph/tree/centroid_decomposition.py
-    title: "\u91CD\u5FC3\u5206\u89E3"
+    title: graph/tree/centroid_decomposition.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -119,5 +119,8 @@ data:
   - test/library_checker/tree/vertex_add_range_contour_sum_on_tree.test.py
 documentation_of: graph/tree/contour_query.py
 layout: document
-title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
+redirect_from:
+- /library/graph/tree/contour_query.py
+- /library/graph/tree/contour_query.py.html
+title: graph/tree/contour_query.py
 ---

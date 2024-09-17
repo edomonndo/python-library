@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
-    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
+    title: data_structure/segtree/lazy_segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -41,5 +41,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc341e.test.py
 layout: document
-title: E - Alternating String
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc341e.test.py
+- /verify/test/atcoder/abc300-399/abc341e.test.py.html
+title: test/atcoder/abc300-399/abc341e.test.py
 ---

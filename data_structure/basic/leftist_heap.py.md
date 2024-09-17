@@ -34,5 +34,8 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/leftist_heap.py
 layout: document
-title: Leftist Heap
+redirect_from:
+- /library/data_structure/basic/leftist_heap.py
+- /library/data_structure/basic/leftist_heap.py.html
+title: data_structure/basic/leftist_heap.py
 ---

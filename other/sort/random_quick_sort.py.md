@@ -29,5 +29,8 @@ data:
   verifiedWith: []
 documentation_of: other/sort/random_quick_sort.py
 layout: document
-title: "\u4E71\u629E\u30AF\u30A4\u30C3\u30AF\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/other/sort/random_quick_sort.py
+- /library/other/sort/random_quick_sort.py.html
+title: other/sort/random_quick_sort.py
 ---

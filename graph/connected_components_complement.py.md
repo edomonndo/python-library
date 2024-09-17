@@ -36,5 +36,8 @@ data:
   - test/library_checker/graph/connected_components_of_complement_graph.test.py
 documentation_of: graph/connected_components_complement.py
 layout: document
-title: "\u88DC\u30B0\u30E9\u30D5\u306E\u9023\u7D50\u6210\u5206\u5206\u89E3"
+redirect_from:
+- /library/graph/connected_components_complement.py
+- /library/graph/connected_components_complement.py.html
+title: graph/connected_components_complement.py
 ---

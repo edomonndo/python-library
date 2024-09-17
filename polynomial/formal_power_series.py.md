@@ -3,17 +3,17 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+    title: convolution/convolution.py
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
-    title: Composition
+    title: polynomial/composition.py
   - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
-    title: Multipoint Evaluation
+    title: polynomial/multipoint_evaluation.py
   - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
-    title: Product Tree
+    title: polynomial/product_tree.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
@@ -208,5 +208,8 @@ data:
   - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
 documentation_of: polynomial/formal_power_series.py
 layout: document
-title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+redirect_from:
+- /library/polynomial/formal_power_series.py
+- /library/polynomial/formal_power_series.py.html
+title: polynomial/formal_power_series.py
 ---

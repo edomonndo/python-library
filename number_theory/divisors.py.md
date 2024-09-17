@@ -25,9 +25,8 @@ data:
   verifiedWith: []
 documentation_of: number_theory/divisors.py
 layout: document
-title: "\u7D04\u6570\u5217\u6319"
+redirect_from:
+- /library/number_theory/divisors.py
+- /library/number_theory/divisors.py.html
+title: number_theory/divisors.py
 ---
-
-### `make_divisors(n: int)`
-
-$n$の約数を列挙する.

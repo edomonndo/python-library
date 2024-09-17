@@ -62,8 +62,8 @@ data:
   - test/library_checker/data_structure/static_range_mode_query.test.py
 documentation_of: data_structure/static_range_mode_query.py
 layout: document
-title: "\u533A\u9593\u6700\u983B\u5024\u30AF\u30A8\u30EA"
+redirect_from:
+- /library/data_structure/static_range_mode_query.py
+- /library/data_structure/static_range_mode_query.py.html
+title: data_structure/static_range_mode_query.py
 ---
-
-静的な数列の区間に対して最頻値と頻度を求めます.
-計算量は,前処理$O(N\sqrt{N})$, クエリ$O(\sqrt{N})$です．

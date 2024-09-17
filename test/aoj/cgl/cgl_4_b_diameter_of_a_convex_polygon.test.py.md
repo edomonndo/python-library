@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
-    title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
+    title: geometory/diameter.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

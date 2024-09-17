@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    title: data_structure/segtree/segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':grey_question:'
@@ -41,5 +41,8 @@ data:
   - test/atcoder/arc/arc008d_segtree.test.py
 documentation_of: data_structure/segtree/compressed_segtree.py
 layout: document
-title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+redirect_from:
+- /library/data_structure/segtree/compressed_segtree.py
+- /library/data_structure/segtree/compressed_segtree.py.html
+title: data_structure/segtree/compressed_segtree.py
 ---

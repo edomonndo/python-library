@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/centroids.py
-    title: "\u91CD\u5FC3\u5224\u5B9A"
+    title: graph/tree/centroids.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -35,5 +35,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc348e.test.py
 layout: document
-title: E - Minimize Sum of Distances
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc348e.test.py
+- /verify/test/atcoder/abc300-399/abc348e.test.py.html
+title: test/atcoder/abc300-399/abc348e.test.py
 ---

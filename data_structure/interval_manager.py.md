@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/basic/SortedSet.py
-    title: SortedSet
+    title: data_structure/basic/SortedSet.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -71,5 +71,8 @@ data:
   - test/atcoder/past/past6m.test.py
 documentation_of: data_structure/interval_manager.py
 layout: document
-title: "\u533A\u9593\u7BA1\u7406"
+redirect_from:
+- /library/data_structure/interval_manager.py
+- /library/data_structure/interval_manager.py.html
+title: data_structure/interval_manager.py
 ---

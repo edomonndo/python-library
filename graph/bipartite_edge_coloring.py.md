@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/bipartite_matching.py
-    title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
+    title: graph/bipartite_matching.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -93,5 +93,8 @@ data:
   - test/library_checker/graph/bipartite_edge_coloring.test.py
 documentation_of: graph/bipartite_edge_coloring.py
 layout: document
-title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
+redirect_from:
+- /library/graph/bipartite_edge_coloring.py
+- /library/graph/bipartite_edge_coloring.py.html
+title: graph/bipartite_edge_coloring.py
 ---

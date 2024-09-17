@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/range_parallel_unionfind.py
-    title: Range Parallel Union Find
+    title: graph/connectivity/range_parallel_unionfind.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

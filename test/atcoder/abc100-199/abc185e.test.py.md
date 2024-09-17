@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: dynamic_programming/edit_distance.py
-    title: "\u7DE8\u96C6\u8DDD\u96E2"
+    title: dynamic_programming/edit_distance.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -42,5 +42,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc100-199/abc185e.test.py
 layout: document
-title: E - Sequence Matching
+redirect_from:
+- /verify/test/atcoder/abc100-199/abc185e.test.py
+- /verify/test/atcoder/abc100-199/abc185e.test.py.html
+title: test/atcoder/abc100-199/abc185e.test.py
 ---

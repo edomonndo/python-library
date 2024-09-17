@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/static_range_inversion_query.py
-    title: "\u9759\u7684\u533A\u9593\u53CD\u8EE2\u30AF\u30A8\u30EA"
+    title: data_structure/static_range_inversion_query.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

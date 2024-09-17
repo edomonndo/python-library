@@ -24,9 +24,8 @@ data:
   verifiedWith: []
 documentation_of: number_theory/ext_gcd.py
 layout: document
-title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
+redirect_from:
+- /library/number_theory/ext_gcd.py
+- /library/number_theory/ext_gcd.py.html
+title: number_theory/ext_gcd.py
 ---
-
-2つの整数$a,b$について，  
-$$ax+by=gcd(a,b)$$  
-の整数解$(x,y)$を返す．

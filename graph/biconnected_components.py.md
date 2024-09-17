@@ -69,5 +69,8 @@ data:
   - test/library_checker/graph/biconnected_components.test.py
 documentation_of: graph/biconnected_components.py
 layout: document
-title: "\u4E8C\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3/Block Cut Tree"
+redirect_from:
+- /library/graph/biconnected_components.py
+- /library/graph/biconnected_components.py.html
+title: graph/biconnected_components.py
 ---

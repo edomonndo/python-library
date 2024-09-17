@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/dynamic_connectivity.py
-    title: Dynamic Connectivity (Online)
+    title: graph/connectivity/dynamic_connectivity.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -119,5 +119,8 @@ data:
   verifiedWith: []
 documentation_of: graph/connectivity/euler_tour_tree.py
 layout: document
-title: Euler Tour Tree
+redirect_from:
+- /library/graph/connectivity/euler_tour_tree.py
+- /library/graph/connectivity/euler_tour_tree.py.html
+title: graph/connectivity/euler_tour_tree.py
 ---

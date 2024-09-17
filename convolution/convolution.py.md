@@ -4,28 +4,28 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: polynomial/chirp_z.py
-    title: Chirp Z
+    title: polynomial/chirp_z.py
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
-    title: Composition
+    title: polynomial/composition.py
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
-    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+    title: polynomial/formal_power_series.py
   - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
-    title: Multipoint Evaluation
+    title: polynomial/multipoint_evaluation.py
   - icon: ':warning:'
     path: polynomial/multivariate_multiplication.py
-    title: Multivariate Multiplication
+    title: polynomial/multivariate_multiplication.py
   - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
-    title: Product Tree
+    title: polynomial/product_tree.py
   - icon: ':heavy_check_mark:'
     path: polynomial/sample_point_shift.py
-    title: Sample Point Shift
+    title: polynomial/sample_point_shift.py
   - icon: ':heavy_check_mark:'
     path: polynomial/tayler_shift.py
-    title: Tayler Shift
+    title: polynomial/tayler_shift.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/convolution/convolution_mod.test.py
@@ -127,12 +127,8 @@ data:
   - test/library_checker/convolution/convolution_mod.test.py
 documentation_of: convolution/convolution.py
 layout: document
-title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+redirect_from:
+- /library/convolution/convolution.py
+- /library/convolution/convolution.py.html
+title: convolution/convolution.py
 ---
-
-多項式 $a_0+a_1x+a_2x^2+a_{n-1}x^{n-1}$ を配列 $[a_0,a_1,...,a_{n-1}]$　で表す.
-
-このとき, $A=[a_0,a_1,...,a_{n-1}]$ と $B=[b_0,b_1,...,b_{m-1}]$ から $C=[c_0,c_1,...,c_{(n-1)+(m-1)}]$ を求める.
-ただし,
-
-$$C_k=\displaystyle\sum^{}_{i+j=k}a_ib_j\mod998,244,353$$

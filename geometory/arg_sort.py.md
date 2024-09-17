@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+    title: geometory/basic/point.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -56,7 +56,8 @@ data:
   - test/library_checker/geometory/sort_points_by_argument.test.py
 documentation_of: geometory/arg_sort.py
 layout: document
-title: "\u504F\u89D2\u30BD\u30FC\u30C8"
+redirect_from:
+- /library/geometory/arg_sort.py
+- /library/geometory/arg_sort.py.html
+title: geometory/arg_sort.py
 ---
-
-座標群を第3象限から第2象限の順に偏角で並べ替える．

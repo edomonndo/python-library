@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    title: data_structure/segtree/segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -52,5 +52,8 @@ data:
   verifiedWith: []
 documentation_of: dynamic_programming/longest_increase_subsequence.py
 layout: document
-title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
+redirect_from:
+- /library/dynamic_programming/longest_increase_subsequence.py
+- /library/dynamic_programming/longest_increase_subsequence.py.html
+title: dynamic_programming/longest_increase_subsequence.py
 ---

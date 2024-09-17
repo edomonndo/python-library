@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+    title: convolution/convolution.py
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
-    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
+    title: polynomial/formal_power_series.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -63,5 +63,8 @@ data:
   - test/library_checker/polynomial/composition_inverse_of_formal_power_series.test.py
 documentation_of: polynomial/composition.py
 layout: document
-title: Composition
+redirect_from:
+- /library/polynomial/composition.py
+- /library/polynomial/composition.py.html
+title: polynomial/composition.py
 ---

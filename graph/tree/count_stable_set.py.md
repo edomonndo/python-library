@@ -38,7 +38,8 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/count_stable_set.py
 layout: document
-title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
+redirect_from:
+- /library/graph/tree/count_stable_set.py
+- /library/graph/tree/count_stable_set.py.html
+title: graph/tree/count_stable_set.py
 ---
-
-[参考](https://algo-method.com/tasks/983)

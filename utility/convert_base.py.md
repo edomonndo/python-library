@@ -27,7 +27,8 @@ data:
   verifiedWith: []
 documentation_of: utility/convert_base.py
 layout: document
-title: "\u9032\u6570\u5909\u63DB"
+redirect_from:
+- /library/utility/convert_base.py
+- /library/utility/convert_base.py.html
+title: utility/convert_base.py
 ---
-
-10進数 ⇆ n進数

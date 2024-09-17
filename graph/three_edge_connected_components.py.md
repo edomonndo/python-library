@@ -51,5 +51,8 @@ data:
   - test/library_checker/graph/three_edge_connected_components.test.py
 documentation_of: graph/three_edge_connected_components.py
 layout: document
-title: "\u4E09\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
+redirect_from:
+- /library/graph/three_edge_connected_components.py
+- /library/graph/three_edge_connected_components.py.html
+title: graph/three_edge_connected_components.py
 ---

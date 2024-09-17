@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/monoids/range_min_index.py
-    title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
+    title: data_structure/segtree/monoids/range_min_index.py
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+    title: data_structure/segtree/segment_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

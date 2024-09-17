@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
-    title: Multipoint Evaluation
+    title: polynomial/multipoint_evaluation.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

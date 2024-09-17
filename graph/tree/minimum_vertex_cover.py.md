@@ -28,7 +28,8 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/minimum_vertex_cover.py
 layout: document
-title: "\u6728\u306E\u6700\u5C0F\u9802\u70B9\u88AB\u8986"
+redirect_from:
+- /library/graph/tree/minimum_vertex_cover.py
+- /library/graph/tree/minimum_vertex_cover.py.html
+title: graph/tree/minimum_vertex_cover.py
 ---
-
-[参考](https://algo-method.com/tasks/980)

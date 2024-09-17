@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: number_theory/stern_brocot_tree.py
-    title: Stern Brocot tree
+    title: number_theory/stern_brocot_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

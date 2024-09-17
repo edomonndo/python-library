@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
+    title: convolution/convolution.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -43,5 +43,8 @@ data:
   - test/library_checker/polynomial/multipoint_evaluation_geometric_sequence.test.py
 documentation_of: polynomial/chirp_z.py
 layout: document
-title: Chirp Z
+redirect_from:
+- /library/polynomial/chirp_z.py
+- /library/polynomial/chirp_z.py.html
+title: polynomial/chirp_z.py
 ---

@@ -36,5 +36,8 @@ data:
   verifiedWith: []
 documentation_of: utility/bitset.py
 layout: document
-title: Bitset
+redirect_from:
+- /library/utility/bitset.py
+- /library/utility/bitset.py.html
+title: utility/bitset.py
 ---

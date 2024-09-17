@@ -5,7 +5,7 @@ data:
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/atcoder/abc300-399/abc351g.test.py
-    title: G - Hash on Tree
+    title: test/atcoder/abc300-399/abc351g.test.py
   _isVerificationFailed: false
   _pathExtension: py
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -94,11 +94,8 @@ data:
   - test/atcoder/abc300-399/abc351g.test.py
 documentation_of: graph/tree/static_top_tree.py
 layout: document
-title: Static Top Tree
+redirect_from:
+- /library/graph/tree/static_top_tree.py
+- /library/graph/tree/static_top_tree.py.html
+title: graph/tree/static_top_tree.py
 ---
-
-頂点の１点更新と区間演算を木上で行う.
-木を分解し，二分木状である二分木をマージしていくことで，深さが$O(logN)$で抑えられ,効率良く木DPを再計算できる．
-
-
-[解説](https://atcoder.jp/contests/abc351/editorial/9868)

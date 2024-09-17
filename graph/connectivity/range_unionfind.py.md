@@ -36,5 +36,8 @@ data:
   verifiedWith: []
 documentation_of: graph/connectivity/range_unionfind.py
 layout: document
-title: Range Union Find
+redirect_from:
+- /library/graph/connectivity/range_unionfind.py
+- /library/graph/connectivity/range_unionfind.py.html
+title: graph/connectivity/range_unionfind.py
 ---

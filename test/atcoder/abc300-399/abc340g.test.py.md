@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
-    title: Auxiliary tree
+    title: graph/tree/auxiliary_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -45,5 +45,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc300-399/abc340g.test.py
 layout: document
-title: G - Leaf Color
+redirect_from:
+- /verify/test/atcoder/abc300-399/abc340g.test.py
+- /verify/test/atcoder/abc300-399/abc340g.test.py.html
+title: test/atcoder/abc300-399/abc340g.test.py
 ---

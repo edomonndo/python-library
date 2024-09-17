@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/scc.py
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
+    title: graph/scc.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

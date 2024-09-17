@@ -52,19 +52,8 @@ data:
   - test/library_checker/other/two_sat.test.py
 documentation_of: other/two_sat.py
 layout: document
-title: 2 Sat
+redirect_from:
+- /library/other/two_sat.py
+- /library/other/two_sat.py.html
+title: other/two_sat.py
 ---
-
-2-SATを解きます. 変数 $x_0, x_1, ..., x_{N-1}$に関して,
-$$(x_i = f)∨(x_j = g)$$
-というクローズを足し,これをすべて満たす変数の割当があるかを解きます.
-
-### `two_sat(n: int, clause: List[Tuple[int, bool, int, bool]])`
-
-- Args
-    - $n$: 変数の数
-    - $clause$: M個の節.各節を$(x_i, f, x_j, g)$で表す.なお$f$,$g$は`bool`.
-
-- Return
-    - 充足可能な場合: 割り当て可能な各変数の真偽値
-    - 充足不可の場合: `None`

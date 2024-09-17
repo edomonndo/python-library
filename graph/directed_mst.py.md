@@ -6,7 +6,7 @@ data:
     title: data_structure/basic/skew_heap.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -65,8 +65,8 @@ data:
   - test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
 documentation_of: graph/directed_mst.py
 layout: document
-title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
+redirect_from:
+- /library/graph/directed_mst.py
+- /library/graph/directed_mst.py.html
+title: graph/directed_mst.py
 ---
-
-有向グラフから最小全域木を構築する.
-返り値は全域木に使用される辺番号のリスト．

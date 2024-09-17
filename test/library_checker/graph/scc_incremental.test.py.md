@@ -3,13 +3,13 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: Union Find
+    title: graph/connectivity/unionfind.py
   - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
-    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
+    title: graph/scc_incremental.py
   - icon: ':heavy_check_mark:'
     path: utility/fastio.py
-    title: "\u9AD8\u901F\u5165\u51FA\u529B"
+    title: utility/fastio.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

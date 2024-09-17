@@ -36,5 +36,8 @@ data:
   - test/aoj/dsl/dsl_2_c_range_search.test.py
 documentation_of: geometory/kd_tree.py
 layout: document
-title: KD tree
+redirect_from:
+- /library/geometory/kd_tree.py
+- /library/geometory/kd_tree.py.html
+title: geometory/kd_tree.py
 ---

@@ -4,19 +4,19 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: data_structure/segtree/compressed_segtree.py
-    title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
+    title: data_structure/segtree/compressed_segtree.py
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/range_set_range_composite.py
-    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+    title: data_structure/segtree/range_set_range_composite.py
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
-    title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
+    title: dynamic_programming/longest_increase_subsequence.py
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
-    title: Auxiliary tree
+    title: graph/tree/auxiliary_tree.py
   - icon: ':heavy_check_mark:'
     path: graph/tree/euler_tour.py
-    title: Euler tour
+    title: graph/tree/euler_tour.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_a_range_min_query.test.py
@@ -118,22 +118,8 @@ data:
   - test/aoj/dsl/dsl_2_a_range_min_query.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document
-title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
+redirect_from:
+- /library/data_structure/segtree/segment_tree.py
+- /library/data_structure/segtree/segment_tree.py.html
+title: data_structure/segtree/segment_tree.py
 ---
-
-一点更新・区間クエリを高速で計算することが出来る.
-
-| セグ木関数 | 単位元 | 補足 |
-| ---- | ---- | ---- | 
-| add | $0$ | 足し算 | 
-| times | $1$ | 掛け算 | 
-| min | $INF$ | 最小値 | 
-| max | $-INF$ | 最大値 | 
-| gcd | $0$ | 最大公約数 | 
-| lcm | $1$ | 最小公倍数 | 
-| xor | $0$ | 排他的論理和 | 
-| or | $0$ | bitwise or | 
-| and | $2^N-1$ | bitwise and（Nは制約に応じて十分大きな値を取る） | 
-| convolution | $[1]$ | 多項式の積（畳み込みを参照） | 
-(a,b)*(c,d)->(ac,bc+d) | $(1,0)$ | 1次関数の合成,(a,b)はx->ax+bに対応 | 
-| matrix | 単位行列 | 行列の積 | 

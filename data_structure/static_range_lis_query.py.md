@@ -59,6 +59,8 @@ data:
   - test/library_checker/data_structure/static_range_lis_query.test.py
 documentation_of: data_structure/static_range_lis_query.py
 layout: document
-title: "\u9759\u7684\u533A\u9593\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217\u30AF\u30A8\
-  \u30EA"
+redirect_from:
+- /library/data_structure/static_range_lis_query.py
+- /library/data_structure/static_range_lis_query.py.html
+title: data_structure/static_range_lis_query.py
 ---

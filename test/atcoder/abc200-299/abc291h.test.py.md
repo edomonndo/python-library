@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: graph/tree/centroid_decomposition.py
-    title: "\u91CD\u5FC3\u5206\u89E3"
+    title: graph/tree/centroid_decomposition.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -32,5 +32,8 @@ data:
   verifiedWith: []
 documentation_of: test/atcoder/abc200-299/abc291h.test.py
 layout: document
-title: H - Balanced Tree
+redirect_from:
+- /verify/test/atcoder/abc200-299/abc291h.test.py
+- /verify/test/atcoder/abc200-299/abc291h.test.py.html
+title: test/atcoder/abc200-299/abc291h.test.py
 ---

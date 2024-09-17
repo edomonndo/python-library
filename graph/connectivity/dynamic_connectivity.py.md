@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: graph/connectivity/euler_tour_tree.py
-    title: Euler Tour Tree
+    title: graph/connectivity/euler_tour_tree.py
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -76,5 +76,8 @@ data:
   - test/aoj/other/2235_graph_construction.test.py
 documentation_of: graph/connectivity/dynamic_connectivity.py
 layout: document
-title: Dynamic Connectivity (Online)
+redirect_from:
+- /library/graph/connectivity/dynamic_connectivity.py
+- /library/graph/connectivity/dynamic_connectivity.py.html
+title: graph/connectivity/dynamic_connectivity.py
 ---

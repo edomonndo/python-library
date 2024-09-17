@@ -4,32 +4,31 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: geometory/arg_sort.py
-    title: "\u504F\u89D2\u30BD\u30FC\u30C8"
+    title: geometory/arg_sort.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/circle.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
+    title: geometory/basic/circle.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/line.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
-      \u5206)"
+    title: geometory/basic/line.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/polygon.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
+    title: geometory/basic/polygon.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
-    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
+    title: geometory/basic/rectangle.py
   - icon: ':heavy_check_mark:'
     path: geometory/closest_pair.py
-    title: Closest Pair
+    title: geometory/closest_pair.py
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
-    title: Convex full
+    title: geometory/convex_full.py
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
   - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
-    title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
+    title: geometory/diameter.py
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
@@ -125,5 +124,8 @@ data:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
 documentation_of: geometory/basic/point.py
 layout: document
-title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
+redirect_from:
+- /library/geometory/basic/point.py
+- /library/geometory/basic/point.py.html
+title: geometory/basic/point.py
 ---

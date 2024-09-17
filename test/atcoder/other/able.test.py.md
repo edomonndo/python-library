@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
-    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
+    title: data_structure/segtree/lazy_segment_tree.py
   - icon: ':warning:'
     path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
-    title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
+    title: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
