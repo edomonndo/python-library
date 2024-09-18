@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: data_structure/segtree/linear_add_rmq.py
     title: data_structure/segtree/linear_add_rmq.py
   _extendedVerifiedWith: []

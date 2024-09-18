@@ -145,7 +145,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: data_structure/segtree/lazy_segment_tree.py
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: data_structure/segtree/linear_add_rmq.py
       title: data_structure/segtree/linear_add_rmq.py
     - icon: ':heavy_check_mark:'
@@ -1018,7 +1018,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: Range Kth Smallest
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_linear_add_range_min.test.py
       title: Range Linear Add Range Min
     - icon: ':heavy_check_mark:'
