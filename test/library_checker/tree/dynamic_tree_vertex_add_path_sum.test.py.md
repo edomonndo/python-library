@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/link_cut_tree.py
-    title: graph/connectivity/link_cut_tree.py
+    title: Link Cut Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

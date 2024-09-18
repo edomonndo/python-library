@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
-    title: graph/tree/auxiliary_tree.py
+    title: Auxiliary tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

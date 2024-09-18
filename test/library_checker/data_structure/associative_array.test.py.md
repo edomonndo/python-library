@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/safe_int_dict.py
-    title: data_structure/basic/safe_int_dict.py
+    title: Safe Int Dict
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

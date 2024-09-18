@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/basic/unionfind.py
-    title: data_structure/basic/unionfind.py
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,8 +19,7 @@ data:
     UF = UnionFind(N)\n\nfor _ in range(Q):\n    t, u, v = map(int, input().split())\n\
     \n    if t == 0:\n        UF.merge(u, v)\n\n    elif t == 1:\n        print(1\
     \ if UF.same(u, v) else 0)\n"
-  dependsOn:
-  - data_structure/basic/unionfind.py
+  dependsOn: []
   isVerificationFile: true
   path: test/library_checker/data_structure/unionfind.test.py
   requiredBy: []

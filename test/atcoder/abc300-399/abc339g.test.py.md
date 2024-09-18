@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/merge_sort_tree.py
-    title: data_structure/segtree/merge_sort_tree.py
+    title: Merge Sort Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

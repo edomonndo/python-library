@@ -59,8 +59,5 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/FixedSizeHeapQue.py
 layout: document
-redirect_from:
-- /library/data_structure/basic/FixedSizeHeapQue.py
-- /library/data_structure/basic/FixedSizeHeapQue.py.html
-title: data_structure/basic/FixedSizeHeapQue.py
+title: "\u5E45\u56FA\u5B9A\u30D2\u30FC\u30D7\u30AD\u30E5\u30FC"
 ---

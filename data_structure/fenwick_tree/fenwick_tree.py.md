@@ -4,16 +4,17 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/point_set_range_frequency.py
-    title: data_structure/fenwick_tree/point_set_range_frequency.py
+    title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
+      \u30A4\u30F3\uFF09"
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_point_get.py
-    title: data_structure/fenwick_tree/range_add_point_get.py
+    title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/range_add_range_sum.py
-    title: data_structure/fenwick_tree/range_add_range_sum.py
+    title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
   - icon: ':warning:'
     path: data_structure/fenwick_tree/value_range_sum.py
-    title: data_structure/fenwick_tree/value_range_sum.py
+    title: ValueRangeSum
   - icon: ':heavy_check_mark:'
     path: geometory/offline_point_add_rectangle_sum.py
     title: geometory/offline_point_add_rectangle_sum.py
@@ -94,8 +95,38 @@ data:
   - test/aoj/grl/grl_5_d_range_query_on_a_tree_hld.test.py
 documentation_of: data_structure/fenwick_tree/fenwick_tree.py
 layout: document
-redirect_from:
-- /library/data_structure/fenwick_tree/fenwick_tree.py
-- /library/data_structure/fenwick_tree/fenwick_tree.py.html
-title: data_structure/fenwick_tree/fenwick_tree.py
+title: "\u62BD\u8C61\u5316Fenwick Tree"
 ---
+
+数列 $a_i (i=0,...,n-1)$ に対して以下のクエリを高速に行えます.
+
+- $a_i$ を $x$ に更新する
+- $k$ に対して, $a_0+...+a_{k-1}$ を求める
+
+### 初期化
+
+```
+FT = fenwick_tree(N, e = 0)
+```
+$N$は配列のサイズです. モノイドをのせるときは,eにモノイドの単位元を指定します．
+
+### 更新
+
+```
+FT.add(i, a)
+```
+$i$番目の値を$a$に更新します
+
+### 和を求める1
+
+```
+print(FT.sum0(r))
+```
+$a_0+...+a_{r-1}$ の総和,つまり $sum(a[:r))$ を求めます.
+
+### 和を求める2
+
+```
+print(FT.sum(l, r))
+```
+$a_l+...+a_{r-1}$ の総和,つまり $sum(a[l:r))$ を求めます.

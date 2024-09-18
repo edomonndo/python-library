@@ -23,8 +23,5 @@ data:
   verifiedWith: []
 documentation_of: other/sort/heap_sort.py
 layout: document
-redirect_from:
-- /library/other/sort/heap_sort.py
-- /library/other/sort/heap_sort.py.html
-title: other/sort/heap_sort.py
+title: "\u30D2\u30FC\u30D7\u30BD\u30FC\u30C8"
 ---

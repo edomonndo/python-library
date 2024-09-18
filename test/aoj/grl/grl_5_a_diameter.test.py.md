@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/diameter.py
-    title: graph/tree/diameter.py
+    title: "\u6728\u306E\u76F4\u5F84"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

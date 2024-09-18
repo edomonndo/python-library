@@ -27,8 +27,5 @@ data:
   verifiedWith: []
 documentation_of: data_structure/fenwick_tree/cumulative_sum.py
 layout: document
-redirect_from:
-- /library/data_structure/fenwick_tree/cumulative_sum.py
-- /library/data_structure/fenwick_tree/cumulative_sum.py.html
-title: data_structure/fenwick_tree/cumulative_sum.py
+title: "\u7D2F\u7A4D\u548C"
 ---

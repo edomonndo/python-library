@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: graph/tree/rooted_tree.py
-    title: graph/tree/rooted_tree.py
+    title: "\u6839\u4ED8\u304D\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -44,8 +44,7 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/maximum_weighted_stable_set.py
 layout: document
-redirect_from:
-- /library/graph/tree/maximum_weighted_stable_set.py
-- /library/graph/tree/maximum_weighted_stable_set.py.html
-title: graph/tree/maximum_weighted_stable_set.py
+title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
 ---
+
+[参考](https://algo-method.com/tasks/982)

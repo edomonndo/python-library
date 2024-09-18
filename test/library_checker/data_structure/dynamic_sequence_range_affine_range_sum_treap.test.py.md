@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/binary_search_tree/implicit_treap.py
-    title: data_structure/binary_search_tree/implicit_treap.py
+    title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

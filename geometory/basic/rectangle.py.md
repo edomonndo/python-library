@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/basic/point.py
-    title: geometory/basic/point.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -62,8 +62,5 @@ data:
   - test/aoj/dsl/dsl_4_a_union_of_rectangles_basic.test.py
 documentation_of: geometory/basic/rectangle.py
 layout: document
-redirect_from:
-- /library/geometory/basic/rectangle.py
-- /library/geometory/basic/rectangle.py.html
-title: geometory/basic/rectangle.py
+title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
 ---

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/lazy_segment_tree.py
-    title: data_structure/segtree/lazy_segment_tree.py
+    title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -83,8 +83,5 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/permutation_tree.py
 layout: document
-redirect_from:
-- /library/graph/tree/permutation_tree.py
-- /library/graph/tree/permutation_tree.py.html
-title: graph/tree/permutation_tree.py
+title: "\u9806\u5217\u6728"
 ---

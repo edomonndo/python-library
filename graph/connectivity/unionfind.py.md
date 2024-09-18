@@ -7,10 +7,10 @@ data:
     title: graph/bipartite_edge_coloring.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/range_parallel_unionfind.py
-    title: graph/connectivity/range_parallel_unionfind.py
+    title: Range Parallel Union Find
   - icon: ':warning:'
     path: graph/connectivity/static_range_parallel_unionfind.py
-    title: graph/connectivity/static_range_parallel_unionfind.py
+    title: Static Range Parallel Union Find
   - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
     title: graph/directed_mst.py
@@ -82,8 +82,5 @@ data:
   - test/library_checker/geometory/manhattanmst.test.py
 documentation_of: graph/connectivity/unionfind.py
 layout: document
-redirect_from:
-- /library/graph/connectivity/unionfind.py
-- /library/graph/connectivity/unionfind.py.html
-title: graph/connectivity/unionfind.py
+title: Union Find
 ---

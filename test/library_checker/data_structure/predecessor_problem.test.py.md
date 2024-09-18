@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/wordsize_tree_set.py
-    title: data_structure/basic/wordsize_tree_set.py
+    title: "32\u5206\u6728"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

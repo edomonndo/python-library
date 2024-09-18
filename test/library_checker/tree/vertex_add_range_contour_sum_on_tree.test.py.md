@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree/fenwick_tree.py
-    title: data_structure/fenwick_tree/fenwick_tree.py
+    title: "\u62BD\u8C61\u5316Fenwick Tree"
   - icon: ':heavy_check_mark:'
     path: graph/tree/contour_query.py
-    title: graph/tree/contour_query.py
+    title: "\u7B49\u9AD8\u7DDA\u30AF\u30A8\u30EA"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

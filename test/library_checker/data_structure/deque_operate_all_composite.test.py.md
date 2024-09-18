@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/FoldableDeque.py
-    title: data_structure/basic/FoldableDeque.py
+    title: Foldable Deque(DSWAG)
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

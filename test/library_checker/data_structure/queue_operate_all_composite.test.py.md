@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/FoldableQue.py
-    title: data_structure/basic/FoldableQue.py
+    title: Foldable Queue(SWAG)
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

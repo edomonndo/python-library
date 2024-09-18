@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/lca.py
-    title: graph/tree/lca.py
+    title: "\u6700\u8FD1\u5171\u901A\u7956\u5148(Lowest Common Ancestor)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

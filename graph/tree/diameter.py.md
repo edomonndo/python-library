@@ -41,8 +41,7 @@ data:
   - test/aoj/grl/grl_5_a_diameter.test.py
 documentation_of: graph/tree/diameter.py
 layout: document
-redirect_from:
-- /library/graph/tree/diameter.py
-- /library/graph/tree/diameter.py.html
-title: graph/tree/diameter.py
+title: "\u6728\u306E\u76F4\u5F84"
 ---
+
+木を２回dfsすることで木の直径を求める．返り値はタプルで，`(直径，直径を通るパス)`となっている．

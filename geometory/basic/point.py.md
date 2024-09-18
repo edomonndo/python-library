@@ -7,16 +7,17 @@ data:
     title: geometory/arg_sort.py
   - icon: ':heavy_check_mark:'
     path: geometory/basic/circle.py
-    title: geometory/basic/circle.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
   - icon: ':heavy_check_mark:'
     path: geometory/basic/line.py
-    title: geometory/basic/line.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\
+      \u5206)"
   - icon: ':heavy_check_mark:'
     path: geometory/basic/polygon.py
-    title: geometory/basic/polygon.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u591A\u89D2\u5F62)"
   - icon: ':heavy_check_mark:'
     path: geometory/basic/rectangle.py
-    title: geometory/basic/rectangle.py
+    title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - icon: ':heavy_check_mark:'
     path: geometory/closest_pair.py
     title: geometory/closest_pair.py
@@ -124,8 +125,5 @@ data:
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
 documentation_of: geometory/basic/point.py
 layout: document
-redirect_from:
-- /library/geometory/basic/point.py
-- /library/geometory/basic/point.py.html
-title: geometory/basic/point.py
+title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"
 ---

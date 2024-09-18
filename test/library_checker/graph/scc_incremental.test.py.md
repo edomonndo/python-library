@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: graph/connectivity/unionfind.py
+    title: Union Find
   - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
     title: graph/scc_incremental.py

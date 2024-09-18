@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree.py
-    title: data_structure/segtree/segment_tree.py
+    title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -108,8 +108,12 @@ data:
   - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
 documentation_of: graph/tree/euler_tour.py
 layout: document
-redirect_from:
-- /library/graph/tree/euler_tour.py
-- /library/graph/tree/euler_tour.py.html
-title: graph/tree/euler_tour.py
+title: Euler tour
 ---
+
+木をDFS順に訪問し，その結果をさまざまな形式で格納していく.
+木の情報を列に変換し，区間計算できるようにする．
+
+参考 https://maspypy.com/euler-tour-のお勉強
+
+- [ABC294G](https://atcoder.jp/contests/abc294/tasks/abc294_g)

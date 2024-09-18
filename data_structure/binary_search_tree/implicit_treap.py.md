@@ -116,8 +116,8 @@ data:
   - test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
 documentation_of: data_structure/binary_search_tree/implicit_treap.py
 layout: document
-redirect_from:
-- /library/data_structure/binary_search_tree/implicit_treap.py
-- /library/data_structure/binary_search_tree/implicit_treap.py.html
-title: data_structure/binary_search_tree/implicit_treap.py
+title: "\u5E73\u8861\u4E8C\u5206\u63A2\u7D22\u6728(Implicit Treap)"
 ---
+
+各ノードにランダムな優先度をもたせることで、木の偏りを防ぐ.
+インターフェースは遅延セグ木と同様の形式.

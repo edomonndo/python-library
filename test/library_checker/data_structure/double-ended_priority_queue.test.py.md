@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/SortedMultiset.py
-    title: data_structure/basic/SortedMultiset.py
+    title: SortedMultiset
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

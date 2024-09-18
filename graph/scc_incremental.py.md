@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: graph/connectivity/unionfind.py
+    title: Union Find
   - icon: ':warning:'
     path: graph/csr.py
     title: graph/csr.py

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/weighted_unionfind.py
-    title: graph/connectivity/weighted_unionfind.py
+    title: "\u91CD\u307F\u4ED8\u304D Union Find"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

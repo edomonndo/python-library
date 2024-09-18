@@ -3,7 +3,8 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/basic/deque.py
-    title: data_structure/basic/deque.py
+    title: "Deque\uFF08\uFF0B\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u30FB\
+      \u5408\u8A08\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'

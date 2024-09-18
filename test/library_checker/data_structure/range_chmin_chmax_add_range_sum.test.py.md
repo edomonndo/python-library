@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/segment_tree_beats.py
-    title: data_structure/segtree/segment_tree_beats.py
+    title: Segment Tree Beats
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

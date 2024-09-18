@@ -1,9 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: data_structure/basic/unionfind.py
-    title: data_structure/basic/unionfind.py
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -22,8 +19,7 @@ data:
     edges = [tuple(map(int, input().split())) for _ in range(M)]\nedges.sort(key=lambda\
     \ x: x[2])\nG = UnionFind(N)\nans = 0\nfor u, v, w in edges:\n    if G.same(u,\
     \ v):\n        continue\n    G.merge(u, v)\n    ans += w\n\nprint(ans)\n"
-  dependsOn:
-  - data_structure/basic/unionfind.py
+  dependsOn: []
   isVerificationFile: true
   path: test/aoj/grl/grl_2_a_minimum_spanning_tree_kruskal.test.py
   requiredBy: []

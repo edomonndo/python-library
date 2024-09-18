@@ -6,7 +6,7 @@ data:
     title: data_structure/basic/skew_heap.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: graph/connectivity/unionfind.py
+    title: Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'

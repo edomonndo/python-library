@@ -114,8 +114,5 @@ data:
   - test/library_checker/tree/dynamic_tree_vertex_add_path_sum.test.py
 documentation_of: graph/connectivity/link_cut_tree.py
 layout: document
-redirect_from:
-- /library/graph/connectivity/link_cut_tree.py
-- /library/graph/connectivity/link_cut_tree.py.html
-title: graph/connectivity/link_cut_tree.py
+title: Link Cut Tree
 ---

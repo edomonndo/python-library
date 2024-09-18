@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: graph/tree/maximum_weighted_stable_set.py
-    title: graph/tree/maximum_weighted_stable_set.py
+    title: "\u6728\u306E\u91CD\u307F\u4ED8\u304D\u6700\u5927\u5B89\u5B9A\u96C6\u5408"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -32,8 +32,7 @@ data:
   verifiedWith: []
 documentation_of: graph/tree/rooted_tree.py
 layout: document
-redirect_from:
-- /library/graph/tree/rooted_tree.py
-- /library/graph/tree/rooted_tree.py.html
-title: graph/tree/rooted_tree.py
+title: "\u6839\u4ED8\u304D\u6728"
 ---
+
+無向グラフから根を$r$としたときの根付き木を作成する．

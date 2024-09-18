@@ -69,8 +69,6 @@ data:
   verifiedWith: []
 documentation_of: data_structure/basic/doubly_linked_list.py
 layout: document
-redirect_from:
-- /library/data_structure/basic/doubly_linked_list.py
-- /library/data_structure/basic/doubly_linked_list.py.html
-title: data_structure/basic/doubly_linked_list.py
+title: "\u53CC\u65B9\u5411\u9023\u7D50\u30EA\u30B9\u30C8"
 ---
+

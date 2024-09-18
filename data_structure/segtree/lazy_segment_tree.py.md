@@ -7,7 +7,7 @@ data:
     title: geometory/union_area_rectangle.py
   - icon: ':warning:'
     path: graph/tree/permutation_tree.py
-    title: graph/tree/permutation_tree.py
+    title: "\u9806\u5217\u6728"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/dsl/dsl_2_f_range_update_min_query.test.py
@@ -152,8 +152,66 @@ data:
   - test/aoj/dsl/dsl_2_g_range_add_sum_query.test.py
 documentation_of: data_structure/segtree/lazy_segment_tree.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/lazy_segment_tree.py
-- /library/data_structure/segtree/lazy_segment_tree.py.html
-title: data_structure/segtree/lazy_segment_tree.py
+title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
 ---
+
+#### 区間加算・区間最小値取得
+```
+inf=float("inf")
+mapping = lambda f,x: f + x
+composition = lambda f,g: f + g
+ID = 0
+seg = LazySegtree(A, min, inf, mapping, composition, ID)
+```
+
+#### 区間加算・区間最大値取得
+```
+inf=float("inf")
+mapping = lambda f,x: f + x
+composition = lambda f,g: f + g
+ID = 0
+seg = LazySegtree(A, max, -inf, mapping, composition, ID)
+```
+#### 区間加算・区間和取得
+
+区間幅が必要なので値をタプルで持つ．`(value,size)`
+
+```
+op = lambda x,y: (x[0]+y[0], x[1]+y[1])
+mapping = lambda f,x: (x[0]+f*x[1], x[1])
+composition = lambda f,g: f + g
+ID = 0
+seg = LazySegtree(A, op, (0,1), mapping, composition, ID)
+```
+
+#### 区間変更・区間最小値取得
+```
+inf=float("inf")
+mapping = lambda f,x: x if f==ID else f
+composition = lambda f,g: g if f==ID else f
+ID = inf
+seg = LazySegtree(A, min, inf, mapping, composition, ID)
+```
+
+#### 区間変更・区間最大値取得
+
+```
+inf=float("inf")
+mapping = lambda f,x: x if f==ID else f
+composition = lambda f,g: g if f==ID else f
+ID = inf
+seg = LazySegtree(A, max, -inf, mapping, composition, ID)
+```
+
+#### 区間変更・区間和取得
+
+区間幅が必要なので値をタプルで持つ．`(value,size)`
+
+```
+inf=float("inf")
+op = lambda x,y: (x[0]+y[0], x[1]+y[1])
+mapping = lambda f,x: x if f==ID else (f*x[1], x[1])
+composition = lambda f,g: g if f==ID else f
+ID = inf
+G = LazySegtree(A, op, (0,1), mapping, composition, ID)
+```

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: graph/connectivity/rollback_unionfind.py
-    title: graph/connectivity/rollback_unionfind.py
+    title: Rollback Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -81,8 +81,5 @@ data:
   - test/library_checker/graph/dynamic_graph_vertex_add_component_sum_offline.test.py
 documentation_of: graph/connectivity/offline_dynamic_connectivity.py
 layout: document
-redirect_from:
-- /library/graph/connectivity/offline_dynamic_connectivity.py
-- /library/graph/connectivity/offline_dynamic_connectivity.py.html
-title: graph/connectivity/offline_dynamic_connectivity.py
+title: Dynamic Connectivity (Offline)
 ---

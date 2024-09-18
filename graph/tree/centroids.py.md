@@ -37,8 +37,8 @@ data:
   - test/atcoder/abc300-399/abc348e.test.py
 documentation_of: graph/tree/centroids.py
 layout: document
-redirect_from:
-- /library/graph/tree/centroids.py
-- /library/graph/tree/centroids.py.html
-title: graph/tree/centroids.py
+title: "\u91CD\u5FC3\u5224\u5B9A"
 ---
+
+木の重心を求める.
+重心は１つか２つの頂点で返る.

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/basic/leftist_heap.py
-    title: data_structure/basic/leftist_heap.py
+    title: Leftist Heap
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.py
     title: graph/dijkstra.py

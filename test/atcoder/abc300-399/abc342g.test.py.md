@@ -3,10 +3,11 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/basic/SortedMultiset.py
-    title: data_structure/basic/SortedMultiset.py
+    title: SortedMultiset
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/dual_segment_tree_commutative.py
-    title: data_structure/segtree/dual_segment_tree_commutative.py
+    title: "\u64CD\u4F5C\u53EF\u63DB\u53CC\u5BFE\u30BB\u30B0\u30E1\u30F3\u30C8\u6728\
+      \ (Dual Segment Tree)"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

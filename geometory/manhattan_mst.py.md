@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: data_structure/basic/SortedSet.py
-    title: data_structure/basic/SortedSet.py
+    title: SortedSet
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'

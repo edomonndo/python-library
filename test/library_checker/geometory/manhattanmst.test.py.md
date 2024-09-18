@@ -6,7 +6,7 @@ data:
     title: geometory/manhattan_mst.py
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/unionfind.py
-    title: graph/connectivity/unionfind.py
+    title: Union Find
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

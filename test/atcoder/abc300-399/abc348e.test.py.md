@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/tree/centroids.py
-    title: graph/tree/centroids.py
+    title: "\u91CD\u5FC3\u5224\u5B9A"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

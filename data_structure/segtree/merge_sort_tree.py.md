@@ -45,8 +45,20 @@ data:
   - test/atcoder/abc300-399/abc339g.test.py
 documentation_of: data_structure/segtree/merge_sort_tree.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/merge_sort_tree.py
-- /library/data_structure/segtree/merge_sort_tree.py.html
-title: data_structure/segtree/merge_sort_tree.py
+title: Merge Sort Tree
 ---
+
+セグメント木にソート済みの配列をのせたもの.
+
+
+### mst = MergeSortTree(arr)
+
+初期化．$arr$はクエリの配列であり変更不可．
+
+### mst.sum_le(l, r, x)
+
+配列$arr$の半開区間$[l,r)$で、$x$以下の値の合計を計算する.
+
+### mst.sum_lt(l, r, x)
+
+配列$arr$の半開区間$[l,r)$で、$x$未満の値の合計を計算する.
