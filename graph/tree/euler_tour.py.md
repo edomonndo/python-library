@@ -103,8 +103,8 @@ data:
   timestamp: '2024-08-05 22:04:36+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/vertex_add_path_sum_et.test.py
   - test/library_checker/tree/vertex_add_subtree_sum_et.test.py
+  - test/library_checker/tree/vertex_add_path_sum_et.test.py
   - test/aoj/grl/grl_5_c_lowest_common_ancestor.test.py
 documentation_of: graph/tree/euler_tour.py
 layout: document

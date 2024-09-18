@@ -139,11 +139,11 @@ data:
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/linear_algebra/matrix_inverse.test.py
-  - test/library_checker/linear_algebra/linear_equations.test.py
-  - test/library_checker/linear_algebra/matrix_determinant.test.py
-  - test/library_checker/linear_algebra/matrix_rank.test.py
   - test/library_checker/linear_algebra/matrix_product.test.py
+  - test/library_checker/linear_algebra/matrix_inverse.test.py
+  - test/library_checker/linear_algebra/matrix_determinant.test.py
+  - test/library_checker/linear_algebra/linear_equations.test.py
+  - test/library_checker/linear_algebra/matrix_rank.test.py
   - test/library_checker/linear_algebra/matrix_power.test.py
 documentation_of: linear_algebra/matrix.py
 layout: document

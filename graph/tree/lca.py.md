@@ -53,8 +53,8 @@ data:
   timestamp: '2024-07-04 12:06:06+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/lowest_common_ancestor.test.py
   - test/library_checker/tree/jump_on_tree_doubling.test.py
+  - test/library_checker/tree/lowest_common_ancestor.test.py
 documentation_of: graph/tree/lca.py
 layout: document
 redirect_from:

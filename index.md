@@ -145,12 +145,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/lazy_segment_tree.py
       title: data_structure/segtree/lazy_segment_tree.py
+    - icon: ':x:'
+      path: data_structure/segtree/linear_add_rmq.py
+      title: data_structure/segtree/linear_add_rmq.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/merge_sort_tree.py
       title: data_structure/segtree/merge_sort_tree.py
-    - icon: ':warning:'
-      path: data_structure/segtree/range_linear_add_range_min.py
-      title: data_structure/segtree/range_linear_add_range_min.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/range_set_range_composite.py
       title: data_structure/segtree/range_set_range_composite.py
@@ -1018,6 +1018,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_kth_smallest.test.py
       title: Range Kth Smallest
+    - icon: ':x:'
+      path: test/library_checker/data_structure/range_linear_add_range_min.test.py
+      title: Range Linear Add Range Min
     - icon: ':heavy_check_mark:'
       path: test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
       title: Range Reverse Range Sum (Treap)

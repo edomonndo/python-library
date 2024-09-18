@@ -112,8 +112,8 @@ data:
   timestamp: '2024-06-07 10:09:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
   - test/library_checker/data_structure/range_reverse_range_sum_treap.test.py
+  - test/library_checker/data_structure/dynamic_sequence_range_affine_range_sum_treap.test.py
 documentation_of: data_structure/binary_search_tree/implicit_treap.py
 layout: document
 redirect_from:

@@ -188,24 +188,24 @@ data:
   isVerificationFile: false
   path: polynomial/formal_power_series.py
   requiredBy:
-  - polynomial/composition.py
-  - polynomial/multipoint_evaluation.py
   - polynomial/product_tree.py
+  - polynomial/multipoint_evaluation.py
+  - polynomial/composition.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/polynomial/exp_of_formal_power_series.test.py
-  - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
-  - test/library_checker/polynomial/division_of_polynomials.test.py
-  - test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/inv_of_formal_power_series.test.py
-  - test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
+  - test/library_checker/polynomial/division_of_polynomials.test.py
+  - test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/exp_of_formal_power_series.test.py
+  - test/library_checker/polynomial/log_of_formal_power_series.test.py
   - test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series.test.py
-  - test/library_checker/polynomial/log_of_formal_power_series.test.py
-  - test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
+  - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
 documentation_of: polynomial/formal_power_series.py
 layout: document
 redirect_from:

@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':x:'
+    path: data_structure/segtree/linear_add_rmq.py
+    title: data_structure/segtree/linear_add_rmq.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -48,7 +51,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: utility/bit.py
-  requiredBy: []
+  requiredBy:
+  - data_structure/segtree/linear_add_rmq.py
   timestamp: '2024-09-01 02:12:38+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

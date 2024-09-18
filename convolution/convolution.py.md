@@ -113,14 +113,14 @@ data:
   isVerificationFile: false
   path: convolution/convolution.py
   requiredBy:
-  - polynomial/composition.py
-  - polynomial/multivariate_multiplication.py
-  - polynomial/chirp_z.py
+  - polynomial/product_tree.py
+  - polynomial/tayler_shift.py
   - polynomial/sample_point_shift.py
   - polynomial/multipoint_evaluation.py
-  - polynomial/tayler_shift.py
-  - polynomial/product_tree.py
   - polynomial/formal_power_series.py
+  - polynomial/chirp_z.py
+  - polynomial/multivariate_multiplication.py
+  - polynomial/composition.py
   timestamp: '2024-06-20 10:59:04+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
