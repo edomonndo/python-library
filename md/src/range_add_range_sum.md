@@ -1,6 +1,4 @@
 ---
-title: 区間加算・区間和取得
-documentation_of: //data_structure/fenwick_tree/range_add_range_sum.py
+title: 区間加算・区間和
+documentation_of: //data_structure/segtree/monoids_action/range_add_range_sum.py
 ---
-
-BIT２本による区間加算・区間和取得

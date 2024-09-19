@@ -1,5 +1,4 @@
 ---
-title: 1点更新・区間頻度（オフライン）
-documentation_of: //data_structure/fenwick_tree/point_set_range_frequency.py
+title: Point Set Range Frequency
+documentation_of: //test/library_checker/data_structure/point_set_range_frequency.test.py
 ---
-
