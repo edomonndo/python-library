@@ -44,8 +44,7 @@ data:
   verifiedWith: []
 documentation_of: utility/modint.py
 layout: document
-redirect_from:
-- /library/utility/modint.py
-- /library/utility/modint.py.html
-title: utility/modint.py
+title: modint
 ---
+
+遅いのでコンテストでは非推奨．

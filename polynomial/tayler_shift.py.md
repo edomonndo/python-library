@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   - icon: ':warning:'
     path: enumerative_combinatorics/combination_mod.py
-    title: enumerative_combinatorics/combination_mod.py
+    title: "\u4E8C\u9805\u4FC2\u6570(mod)"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -39,8 +39,5 @@ data:
   - test/library_checker/polynomial/polynomial_tayler_shift.test.py
 documentation_of: polynomial/tayler_shift.py
 layout: document
-redirect_from:
-- /library/polynomial/tayler_shift.py
-- /library/polynomial/tayler_shift.py.html
-title: polynomial/tayler_shift.py
+title: Tayler Shift
 ---

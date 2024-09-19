@@ -50,8 +50,5 @@ data:
   verifiedWith: []
 documentation_of: dynamic_programming/knapsack.py
 layout: document
-redirect_from:
-- /library/dynamic_programming/knapsack.py
-- /library/dynamic_programming/knapsack.py.html
-title: dynamic_programming/knapsack.py
+title: "\u30CA\u30C3\u30D7\u30B5\u30C3\u30AF\u554F\u984C"
 ---

@@ -40,8 +40,5 @@ data:
   - test/atcoder/abc100-199/abc185e.test.py
 documentation_of: dynamic_programming/edit_distance.py
 layout: document
-redirect_from:
-- /library/dynamic_programming/edit_distance.py
-- /library/dynamic_programming/edit_distance.py.html
-title: dynamic_programming/edit_distance.py
+title: "\u7DE8\u96C6\u8DDD\u96E2"
 ---

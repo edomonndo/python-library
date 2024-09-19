@@ -65,8 +65,8 @@ data:
   - test/aoj/grl/grl_2_b_minimum_cost_arborescence.test.py
 documentation_of: graph/directed_mst.py
 layout: document
-redirect_from:
-- /library/graph/directed_mst.py
-- /library/graph/directed_mst.py.html
-title: graph/directed_mst.py
+title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
 ---
+
+有向グラフから最小全域木を構築する.
+返り値は全域木に使用される辺番号のリスト．

@@ -54,8 +54,5 @@ data:
   - test/aoj/dsl/dsl_4_a_union_of_rectangles_lst.test.py
 documentation_of: geometory/union_area_rectangle.py
 layout: document
-redirect_from:
-- /library/geometory/union_area_rectangle.py
-- /library/geometory/union_area_rectangle.py.html
-title: geometory/union_area_rectangle.py
+title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
 ---

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: enumerative_combinatorics/derangement.py
-    title: enumerative_combinatorics/derangement.py
+    title: "\u64B9\u4E71\u9806\u5217"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

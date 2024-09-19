@@ -37,8 +37,5 @@ data:
   - test/library_checker/graph/enumerate_triangles.test.py
 documentation_of: graph/enumerate_triangles.py
 layout: document
-redirect_from:
-- /library/graph/enumerate_triangles.py
-- /library/graph/enumerate_triangles.py.html
-title: graph/enumerate_triangles.py
+title: Enumerate Triangles
 ---

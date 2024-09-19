@@ -67,8 +67,7 @@ data:
   - test/library_checker/number_theory/rational_approximation.test.py
 documentation_of: number_theory/stern_brocot_tree.py
 layout: document
-redirect_from:
-- /library/number_theory/stern_brocot_tree.py
-- /library/number_theory/stern_brocot_tree.py.html
-title: number_theory/stern_brocot_tree.py
+title: Stern Brocot tree
 ---
+
+https://tjkendev.github.io/procon-library/python/math/stern-brocot-tree.html

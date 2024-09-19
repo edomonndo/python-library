@@ -7,10 +7,10 @@ data:
     title: "\u5EA7\u6A19\u5727\u7E2E\u30BB\u30B0\u30E1\u30F3\u30C8\u6728"
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/range_set_range_composite.py
-    title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+    title: data_structure/segtree/range_set_range_composite.py
   - icon: ':warning:'
     path: dynamic_programming/longest_increase_subsequence.py
-    title: dynamic_programming/longest_increase_subsequence.py
+    title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
   - icon: ':heavy_check_mark:'
     path: graph/tree/auxiliary_tree.py
     title: Auxiliary tree
@@ -102,20 +102,20 @@ data:
   isVerificationFile: false
   path: data_structure/segtree/segment_tree.py
   requiredBy:
-  - dynamic_programming/longest_increase_subsequence.py
+  - data_structure/segtree/range_set_range_composite.py
+  - data_structure/segtree/compressed_segtree.py
   - graph/tree/euler_tour.py
   - graph/tree/auxiliary_tree.py
-  - data_structure/segtree/compressed_segtree.py
-  - data_structure/segtree/range_set_range_composite.py
+  - dynamic_programming/longest_increase_subsequence.py
   timestamp: '2024-05-30 15:25:43+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
-  - test/yukicoder/875_range_mindex_query.test.py
-  - test/library_checker/tree/vertext_set_path_composite.test.py
   - test/library_checker/data_structure/point_set_range_composite.test.py
   - test/library_checker/data_structure/static_rmq_segtree.test.py
+  - test/library_checker/tree/vertext_set_path_composite.test.py
   - test/aoj/dsl/dsl_2_a_range_min_query.test.py
+  - "test/yukicoder/650_\u884C\u5217\u6728\u30AF\u30A8\u30EA.test.py"
+  - test/yukicoder/875_range_mindex_query.test.py
 documentation_of: data_structure/segtree/segment_tree.py
 layout: document
 title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"

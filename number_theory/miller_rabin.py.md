@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: number_theory/factorize.py
-    title: number_theory/factorize.py
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -35,8 +35,7 @@ data:
   verifiedWith: []
 documentation_of: number_theory/miller_rabin.py
 layout: document
-redirect_from:
-- /library/number_theory/miller_rabin.py
-- /library/number_theory/miller_rabin.py.html
-title: number_theory/miller_rabin.py
+title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5)"
 ---
+
+$n$が素数かを高速に判定する. $n<=2^{64}$で決定的.

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/hungarian.py
-    title: graph/hungarian.py
+    title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

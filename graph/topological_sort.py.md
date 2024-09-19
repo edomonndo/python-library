@@ -35,8 +35,14 @@ data:
   - test/aoj/grl/grl_4_b_topological_sort.test.py
 documentation_of: graph/topological_sort.py
 layout: document
-redirect_from:
-- /library/graph/topological_sort.py
-- /library/graph/topological_sort.py.html
-title: graph/topological_sort.py
+title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
 ---
+
+有向グラフの順序を守るようにソートする
+閉路があるか判定も出来る
+計算量: O(E+V)
+
+G (list): edge[i] = [a, b,...] iからa,b,...に辺が伸びている
+deg (list): deg[i] = iの入力辺の本数
+
+返り値が$-1$のとき閉路が存在する．それ以外のとき，ソートされた頂点リストが返る．

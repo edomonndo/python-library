@@ -71,8 +71,5 @@ data:
   - test/atcoder/past/past6m.test.py
 documentation_of: data_structure/interval_manager.py
 layout: document
-redirect_from:
-- /library/data_structure/interval_manager.py
-- /library/data_structure/interval_manager.py.html
-title: data_structure/interval_manager.py
+title: "\u533A\u9593\u7BA1\u7406"
 ---

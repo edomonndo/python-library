@@ -4,10 +4,11 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: data_structure/interval_manager.py
-    title: data_structure/interval_manager.py
+    title: "\u533A\u9593\u7BA1\u7406"
   - icon: ':heavy_check_mark:'
     path: geometory/manhattan_mst.py
-    title: geometory/manhattan_mst.py
+    title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
+      \u57DF\u6728"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py

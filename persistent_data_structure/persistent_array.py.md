@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: persistent_data_structure/persistent_union_find.py
-    title: persistent_data_structure/persistent_union_find.py
+    title: "\u6C38\u7D9A Union Find"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -54,8 +54,5 @@ data:
   verifiedWith: []
 documentation_of: persistent_data_structure/persistent_array.py
 layout: document
-redirect_from:
-- /library/persistent_data_structure/persistent_array.py
-- /library/persistent_data_structure/persistent_array.py.html
-title: persistent_data_structure/persistent_array.py
+title: "\u6C38\u7D9A\u914D\u5217"
 ---

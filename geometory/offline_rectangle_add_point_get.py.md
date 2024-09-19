@@ -69,8 +69,6 @@ data:
   - test/library_checker/data_structure/rectangle_add_point_get.test.py
 documentation_of: geometory/offline_rectangle_add_point_get.py
 layout: document
-redirect_from:
-- /library/geometory/offline_rectangle_add_point_get.py
-- /library/geometory/offline_rectangle_add_point_get.py.html
-title: geometory/offline_rectangle_add_point_get.py
+title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\u30A4\
+  \u30F3)"
 ---

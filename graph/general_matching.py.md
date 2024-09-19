@@ -69,8 +69,5 @@ data:
   - test/library_checker/graph/matching_on_general_graph.test.py
 documentation_of: graph/general_matching.py
 layout: document
-redirect_from:
-- /library/graph/general_matching.py
-- /library/graph/general_matching.py.html
-title: graph/general_matching.py
+title: "\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
 ---

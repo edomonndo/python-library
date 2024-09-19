@@ -3,17 +3,17 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
-    title: polynomial/composition.py
+    title: Composition
   - icon: ':heavy_check_mark:'
     path: polynomial/multipoint_evaluation.py
-    title: polynomial/multipoint_evaluation.py
+    title: Multipoint Evaluation
   - icon: ':heavy_check_mark:'
     path: polynomial/product_tree.py
-    title: polynomial/product_tree.py
+    title: Product Tree
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/polynomial/division_of_polynomials.test.py
@@ -188,28 +188,25 @@ data:
   isVerificationFile: false
   path: polynomial/formal_power_series.py
   requiredBy:
-  - polynomial/product_tree.py
-  - polynomial/multipoint_evaluation.py
   - polynomial/composition.py
+  - polynomial/multipoint_evaluation.py
+  - polynomial/product_tree.py
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/polynomial/inv_of_formal_power_series.test.py
+  - test/library_checker/polynomial/exp_of_formal_power_series.test.py
+  - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
   - test/library_checker/polynomial/division_of_polynomials.test.py
-  - test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
+  - test/library_checker/polynomial/inv_of_formal_power_series.test.py
+  - test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
   - test/library_checker/polynomial/log_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series_sparse.test.py
-  - test/library_checker/polynomial/inv_of_formal_power_series_sparse.test.py
-  - test/library_checker/polynomial/exp_of_formal_power_series.test.py
-  - test/library_checker/polynomial/log_of_formal_power_series.test.py
   - test/library_checker/polynomial/sqrt_of_formal_power_series_sparse.test.py
   - test/library_checker/polynomial/pow_of_formal_power_series.test.py
-  - test/library_checker/polynomial/sqrt_of_formal_power_series.test.py
-  - test/library_checker/polynomial/product_of_polynomial_sequence.test.py
+  - test/library_checker/polynomial/log_of_formal_power_series.test.py
+  - test/library_checker/polynomial/exp_of_formal_power_series_sparse.test.py
 documentation_of: polynomial/formal_power_series.py
 layout: document
-redirect_from:
-- /library/polynomial/formal_power_series.py
-- /library/polynomial/formal_power_series.py.html
-title: polynomial/formal_power_series.py
+title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
 ---

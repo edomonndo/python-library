@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/maximum_independent_set.py
-    title: graph/maximum_independent_set.py
+    title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

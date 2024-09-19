@@ -40,8 +40,9 @@ data:
   - test/library_checker/string/enumerate_palindroms.test.py
 documentation_of: str/manacher.py
 layout: document
-redirect_from:
-- /library/str/manacher.py
-- /library/str/manacher.py.html
-title: str/manacher.py
+title: Manacher
 ---
+
+ある文字列Sが与えられているとする.
+Manacherでは,それぞれのiについて文字iを中心とする最長回文の半径を記録した配列を線形時間で構築する
+    

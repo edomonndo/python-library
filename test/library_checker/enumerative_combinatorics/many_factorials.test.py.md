@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: enumerative_combinatorics/factorial_iter_mod.py
-    title: enumerative_combinatorics/factorial_iter_mod.py
+    title: "\u968E\u4E57\u30AF\u30A8\u30EA mod 998244353"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: geometory/arg_sort.py
-    title: geometory/arg_sort.py
+    title: "\u504F\u89D2\u30BD\u30FC\u30C8"
   - icon: ':heavy_check_mark:'
     path: geometory/basic/circle.py
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u5186)"
@@ -20,16 +20,16 @@ data:
     title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u56DB\u89D2\u5F62)"
   - icon: ':heavy_check_mark:'
     path: geometory/closest_pair.py
-    title: geometory/closest_pair.py
+    title: Closest Pair
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
-    title: geometory/convex_full.py
+    title: Convex full
   - icon: ':warning:'
     path: geometory/convex_layer.py
     title: geometory/convex_layer.py
   - icon: ':heavy_check_mark:'
     path: geometory/diameter.py
-    title: geometory/diameter.py
+    title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
@@ -107,22 +107,22 @@ data:
   isVerificationFile: false
   path: geometory/basic/point.py
   requiredBy:
-  - geometory/basic/polygon.py
-  - geometory/basic/line.py
-  - geometory/basic/rectangle.py
-  - geometory/basic/circle.py
-  - geometory/convex_layer.py
-  - geometory/convex_full.py
-  - geometory/closest_pair.py
   - geometory/diameter.py
+  - geometory/basic/circle.py
+  - geometory/basic/line.py
+  - geometory/basic/polygon.py
+  - geometory/basic/rectangle.py
   - geometory/arg_sort.py
+  - geometory/convex_full.py
+  - geometory/convex_layer.py
+  - geometory/closest_pair.py
   timestamp: '2024-08-14 05:50:48+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/cgl/cgl_3_a_area.test.py
-  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
-  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
   - test/aoj/cgl/cgl_3_b_is_convex.test.py
+  - test/aoj/cgl/cgl_1_c_counter_clockwise.test.py
+  - test/aoj/cgl/cgl_3_c_polygon_point_containment.test.py
 documentation_of: geometory/basic/point.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u70B9)"

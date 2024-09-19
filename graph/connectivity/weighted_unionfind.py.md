@@ -64,8 +64,8 @@ data:
   timestamp: '2024-07-29 12:40:49+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/graph/unionfind_with_potential.test.py
   - test/library_checker/graph/unionfind_with_potential_non_commutative_group.test.py
+  - test/library_checker/graph/unionfind_with_potential.test.py
   - test/aoj/dsl/dsl_1_b_weighted_union_find.test.py
 documentation_of: graph/connectivity/weighted_unionfind.py
 layout: document

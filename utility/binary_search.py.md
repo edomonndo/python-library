@@ -24,8 +24,10 @@ data:
   verifiedWith: []
 documentation_of: utility/binary_search.py
 layout: document
-redirect_from:
-- /library/utility/binary_search.py
-- /library/utility/binary_search.py.html
-title: utility/binary_search.py
+title: "\u4E8C\u5206\u6CD5"
 ---
+
+初期値のng,okを受け取り,is_okを満たす最小(最大)のokを返す  
+ng,okはとり得る最小の値-1 とり得る最大の値+1  
+最大最小が逆の場合はよしなにひっくり返す
+

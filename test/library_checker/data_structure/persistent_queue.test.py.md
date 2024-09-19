@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: persistent_data_structure/persistent_queue.py
-    title: persistent_data_structure/persistent_queue.py
+    title: "\u6C38\u7D9A\u30AD\u30E5\u30FC"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

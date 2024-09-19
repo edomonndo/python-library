@@ -26,8 +26,7 @@ data:
   verifiedWith: []
 documentation_of: utility/fast_power.py
 layout: document
-redirect_from:
-- /library/utility/fast_power.py
-- /library/utility/fast_power.py.html
-title: utility/fast_power.py
+title: "\u51AA\u4E57"
 ---
+
+$a^{b}$を高速に計算する．ただし，$a>=1, b>=0$

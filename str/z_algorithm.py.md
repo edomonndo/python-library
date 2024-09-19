@@ -31,8 +31,14 @@ data:
   - test/library_checker/string/z_algorithm.test.py
 documentation_of: str/z_algorithm.py
 layout: document
-redirect_from:
-- /library/str/z_algorithm.py
-- /library/str/z_algorithm.py.html
-title: str/z_algorithm.py
+title: Z algorithm
 ---
+
+z配列 $Z[i]$は,
+文字列$S=S[0]+S[1]+⋯+S[|S|−1]$ と
+文字列$S[i]+S[i+1]+⋯+S[|S|−1]$ の
+**最長共通接頭辞の長さ**と表す.
+
+### `z_algorithm(s: str)`
+
+文字列からz配列を求める.

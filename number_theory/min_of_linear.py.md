@@ -52,8 +52,11 @@ data:
   - test/library_checker/number_theory/min_of_linear.test.py
 documentation_of: number_theory/min_of_linear.py
 layout: document
-redirect_from:
-- /library/number_theory/min_of_linear.py
-- /library/number_theory/min_of_linear.py.html
-title: number_theory/min_of_linear.py
+title: Min of linear
 ---
+
+### `min_of_linear(L: int, R: int, A: int, B: int, M: int)`
+
+以下の値を計算する.
+
+$$\min(Ax+B\bmod M | L <= x < R )$$

@@ -40,8 +40,5 @@ data:
   - test/atcoder/abc300-399/abc357f.test.py
 documentation_of: data_structure/segtree/monoids_action/range_add_range_product_sum.py
 layout: document
-redirect_from:
-- /library/data_structure/segtree/monoids_action/range_add_range_product_sum.py
-- /library/data_structure/segtree/monoids_action/range_add_range_product_sum.py.html
-title: data_structure/segtree/monoids_action/range_add_range_product_sum.py
+title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
 ---

@@ -25,8 +25,8 @@ data:
   verifiedWith: []
 documentation_of: number_theory/euler_phi.py
 layout: document
-redirect_from:
-- /library/number_theory/euler_phi.py
-- /library/number_theory/euler_phi.py.html
-title: number_theory/euler_phi.py
+title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\u30F3\
+  \u30C8\u95A2\u6570)"
 ---
+
+正の整数$n$に対して，$n$と互いに素である$1$以上$n$以下の自然数の個数を返す．

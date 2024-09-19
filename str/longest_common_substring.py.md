@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: str/suffix_array.py
-    title: str/suffix_array.py
+    title: Suffix array
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -40,8 +40,8 @@ data:
   - test/library_checker/string/longeset_common_substring.test.py
 documentation_of: str/longest_common_substring.py
 layout: document
-redirect_from:
-- /library/str/longest_common_substring.py
-- /library/str/longest_common_substring.py.html
-title: str/longest_common_substring.py
+title: Longest Common Substring
 ---
+
+文字列$S, T$の最長共通文字列を求める．
+返り値は，$si, sj, ti, tj$. ここで$S[si: sj], T[ti: tj]$が最長共通文字列となる.

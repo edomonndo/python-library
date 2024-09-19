@@ -73,12 +73,16 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/library_checker/graph/two_edge_connected_components.test.py
-  - test/aoj/grl/grl_3_a_articulation_points.test.py
   - test/aoj/grl/grl_3_b_bridges.test.py
+  - test/aoj/grl/grl_3_a_articulation_points.test.py
 documentation_of: graph/low_link.py
 layout: document
-redirect_from:
-- /library/graph/low_link.py
-- /library/graph/low_link.py.html
-title: graph/low_link.py
+title: Low Link
 ---
+
+以下を求める.
+
+- 関節点:　グラフから取り除くと連結でなくなる頂点
+- 橋: グラフから取り除くと連結でなくなる頂点
+- 二辺連結成分分解: 辺を１つ取り除いても連結である連結成分に分解
+- 二頂点連結成分分解: 頂点を１つ取り除いても連結である連結成分に分解

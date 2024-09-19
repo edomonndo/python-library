@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/closest_pair.py
-    title: geometory/closest_pair.py
+    title: Closest Pair
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

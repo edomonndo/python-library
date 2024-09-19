@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: geometory/convex_full.py
-    title: geometory/convex_full.py
+    title: Convex full
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

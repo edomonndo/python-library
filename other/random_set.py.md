@@ -54,8 +54,39 @@ data:
   verifiedWith: []
 documentation_of: other/random_set.py
 layout: document
-redirect_from:
-- /library/other/random_set.py
-- /library/other/random_set.py.html
-title: other/random_set.py
+title: "\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u308B\u96C6\u5408"
 ---
+
+$0 <= k < n$の整数$k$を集合を配列で管理することで，追加・削除・取得を$O(1)$で操作する．
+
+### S = RandomSet(n)
+
+要素の大きさの上限$n$で初期化．
+
+### k in S
+
+集合にkが含まれているかを判定．
+
+### len(S)
+
+集合に含まれる要素数を返す．
+
+### for s in S
+
+ランダムな順で集合の要素にアクセスする．
+
+### S.add(k)
+
+集合にkを追加. 追加できればTrue, 既に集合にkが含まれていればFalseを返す．
+
+### S.remove(k)
+
+集合からkを削除.削除できればTrue, 集合にkが含まれてなければFalseを返す．
+
+### S.get()
+
+集合からランダムに要素を取得.
+
+### S.pop()
+
+集合からランダムに要素を取得し，その要素を集合から削除．

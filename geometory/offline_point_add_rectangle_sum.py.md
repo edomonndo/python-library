@@ -68,8 +68,6 @@ data:
   - test/library_checker/data_structure/point_add_rectangle_sum.test.py
 documentation_of: geometory/offline_point_add_rectangle_sum.py
 layout: document
-redirect_from:
-- /library/geometory/offline_point_add_rectangle_sum.py
-- /library/geometory/offline_point_add_rectangle_sum.py.html
-title: geometory/offline_point_add_rectangle_sum.py
+title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\
+  )"
 ---

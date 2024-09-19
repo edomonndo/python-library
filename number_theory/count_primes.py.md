@@ -51,8 +51,11 @@ data:
   - test/library_checker/number_theory/count_primes.test.py
 documentation_of: number_theory/count_primes.py
 layout: document
-redirect_from:
-- /library/number_theory/count_primes.py
-- /library/number_theory/count_primes.py.html
-title: number_theory/count_primes.py
+title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
 ---
+
+内容を理解していない.
+
+### `count_primes(n: int)`
+
+$n$以下の素数の数を返す.計算量は$O(N^{0.75} / logN)$.

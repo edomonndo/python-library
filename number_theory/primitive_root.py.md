@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: number_theory/factorize.py
-    title: number_theory/factorize.py
+    title: "\u7D20\u56E0\u6570\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -36,8 +36,12 @@ data:
   - test/library_checker/number_theory/primitive_root.test.py
 documentation_of: number_theory/primitive_root.py
 layout: document
-redirect_from:
-- /library/number_theory/primitive_root.py
-- /library/number_theory/primitive_root.py.html
-title: number_theory/primitive_root.py
+title: "\u539F\u59CB\u6839"
 ---
+
+（3以上の）素数$p$と$1$以上$p$未満の整数$r$が以下の性質を満たすとき，$r$を法$p$に対する原始根と呼ぶ.
+
+
+$r,r^2,⋯ ,r^{p−2}のいずれもがpで割って余り1でない$
+
+（また，$r=1$は $p=2$に対する原始根である，とする.）

@@ -6,10 +6,10 @@ data:
     title: Union Find
   - icon: ':warning:'
     path: graph/csr.py
-    title: graph/csr.py
+    title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
   - icon: ':heavy_check_mark:'
     path: graph/scc.py
-    title: graph/scc.py
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -72,8 +72,5 @@ data:
   - test/library_checker/graph/scc_incremental.test.py
 documentation_of: graph/scc_incremental.py
 layout: document
-redirect_from:
-- /library/graph/scc_incremental.py
-- /library/graph/scc_incremental.py.html
-title: graph/scc_incremental.py
+title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
 ---

@@ -53,8 +53,5 @@ data:
   - test/library_checker/number_theory/nim_product_64.test.py
 documentation_of: number_theory/nimber.py
 layout: document
-redirect_from:
-- /library/number_theory/nimber.py
-- /library/number_theory/nimber.py.html
-title: number_theory/nimber.py
+title: Nimber
 ---

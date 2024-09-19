@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: number_theory/count_squarefree.py
-    title: number_theory/count_squarefree.py
+    title: "\u7121\u5E73\u65B9\u6570\u306E\u6570\u3048\u4E0A\u3052"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/kth_root_integer.test.py
@@ -43,8 +43,5 @@ data:
   - test/library_checker/number_theory/kth_root_integer.test.py
 documentation_of: number_theory/kth_root.py
 layout: document
-redirect_from:
-- /library/number_theory/kth_root.py
-- /library/number_theory/kth_root.py.html
-title: number_theory/kth_root.py
+title: Kth Root
 ---

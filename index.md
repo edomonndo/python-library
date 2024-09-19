@@ -5,16 +5,16 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: convolution/convolution.py
-      title: convolution/convolution.py
+      title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
     - icon: ':heavy_check_mark:'
       path: convolution/cooley_turkey.py
-      title: convolution/cooley_turkey.py
+      title: "\u7573\u307F\u8FBC\u307F \u30AB\u30E9\u30C4\u30D0\u6CD5"
     - icon: ':heavy_check_mark:'
       path: convolution/walsh_hadamard_tranform.py
-      title: convolution/walsh_hadamard_tranform.py
+      title: "\u30A6\u30A9\u30EB\u30B7\u30E5\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
     - icon: ':heavy_check_mark:'
       path: convolution/zeta_moebius_transform.py
-      title: convolution/zeta_moebius_transform.py
+      title: "\u30BC\u30FC\u30BF\u5909\u63DB\u30FB\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
   - name: data_structure/basic
     pages:
     - icon: ':warning:'
@@ -72,25 +72,25 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/binary_trie.py
-      title: data_structure/binary_trie.py
+      title: "\u30D0\u30A4\u30CA\u30EA\u30C8\u30E9\u30A4\u6728"
     - icon: ':warning:'
       path: data_structure/convex_hull_trick.py
-      title: data_structure/convex_hull_trick.py
+      title: Convex Hull Trick
     - icon: ':heavy_check_mark:'
       path: data_structure/interval_manager.py
-      title: data_structure/interval_manager.py
+      title: "\u533A\u9593\u7BA1\u7406"
     - icon: ':warning:'
       path: data_structure/inversion_number.py
-      title: data_structure/inversion_number.py
+      title: "\u8EE2\u7F6E\u6570"
     - icon: ':heavy_check_mark:'
       path: data_structure/li_chao_tree.py
-      title: data_structure/li_chao_tree.py
+      title: Li Chao Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/mo.py
-      title: data_structure/mo.py
+      title: Mo's Algorithm
     - icon: ':heavy_check_mark:'
       path: data_structure/sparse_table.py
-      title: data_structure/sparse_table.py
+      title: Sparse table
     - icon: ':heavy_check_mark:'
       path: data_structure/static_range_inversion_query.py
       title: data_structure/static_range_inversion_query.py
@@ -116,14 +116,13 @@ data:
       title: "\u62BD\u8C61\u5316Fenwick Tree"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/point_set_range_frequency.py
-      title: "1\u70B9\u66F4\u65B0\u30FB\u533A\u9593\u983B\u5EA6\uFF08\u30AA\u30D5\u30E9\
-        \u30A4\u30F3\uFF09"
+      title: data_structure/fenwick_tree/point_set_range_frequency.py
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_point_get.py
       title: "\u533A\u9593\u52A0\u7B97\u30FB1\u70B9\u53D6\u5F97"
     - icon: ':heavy_check_mark:'
       path: data_structure/fenwick_tree/range_add_range_sum.py
-      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C\u53D6\u5F97"
+      title: data_structure/fenwick_tree/range_add_range_sum.py
     - icon: ':warning:'
       path: data_structure/fenwick_tree/value_range_sum.py
       title: ValueRangeSum
@@ -147,13 +146,13 @@ data:
       title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/linear_add_rmq.py
-      title: "\u7B49\u5DEE\u6570\u5217\u52A0\u7B97\u30FB\u6700\u5C0F\u5024\u53D6\u5F97"
+      title: data_structure/segtree/linear_add_rmq.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/merge_sort_tree.py
       title: Merge Sort Tree
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/range_set_range_composite.py
-      title: "\u533A\u9593\u66F4\u65B0\u30FB\u533A\u9593\u30A2\u30D5\u30A3\u30F3"
+      title: data_structure/segtree/range_set_range_composite.py
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/segment_tree.py
       title: "\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Segment Tree)"
@@ -171,29 +170,29 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/segtree/monoids/range_min_index.py
-      title: data_structure/segtree/monoids/range_min_index.py
+      title: "\u533A\u9593\u6700\u5C0F\u5024\u306Eindex"
   - name: data_structure/segtree/monoids_action
     pages:
     - icon: ':warning:'
       path: data_structure/segtree/monoids_action/range_add_range_product_sum.py
-      title: data_structure/segtree/monoids_action/range_add_range_product_sum.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u7A4D\u548C"
     - icon: ':warning:'
       path: data_structure/segtree/monoids_action/range_add_range_sum.py
-      title: data_structure/segtree/monoids_action/range_add_range_sum.py
+      title: "\u533A\u9593\u52A0\u7B97\u30FB\u533A\u9593\u548C"
     - icon: ':warning:'
       path: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
-      title: data_structure/segtree/monoids_action/range_str_update_range_int_sum.py
+      title: "\u533A\u9593\u6587\u5B57\u5217\u66F4\u65B0\u30FB\u533A\u9593\u548C"
   - name: dynamic_programming
     pages:
     - icon: ':heavy_check_mark:'
       path: dynamic_programming/edit_distance.py
-      title: dynamic_programming/edit_distance.py
+      title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':warning:'
       path: dynamic_programming/knapsack.py
-      title: dynamic_programming/knapsack.py
+      title: "\u30CA\u30C3\u30D7\u30B5\u30C3\u30AF\u554F\u984C"
     - icon: ':warning:'
       path: dynamic_programming/longest_increase_subsequence.py
-      title: dynamic_programming/longest_increase_subsequence.py
+      title: "\u6700\u9577\u5897\u52A0\u6587\u5B57\u5217(LIS)"
   - name: embed_cpp
     pages:
     - icon: ':warning:'
@@ -203,19 +202,19 @@ data:
     pages:
     - icon: ':warning:'
       path: enumerative_combinatorics/combination_mod.py
-      title: enumerative_combinatorics/combination_mod.py
+      title: "\u4E8C\u9805\u4FC2\u6570(mod)"
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/derangement.py
-      title: enumerative_combinatorics/derangement.py
+      title: "\u64B9\u4E71\u9806\u5217"
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/factorial_iter_mod.py
-      title: enumerative_combinatorics/factorial_iter_mod.py
+      title: "\u968E\u4E57\u30AF\u30A8\u30EA mod 998244353"
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/factorial_mod.py
-      title: enumerative_combinatorics/factorial_mod.py
+      title: "\u968E\u4E57 mod 998244353"
     - icon: ':heavy_check_mark:'
       path: enumerative_combinatorics/number_of_subsequences.py
-      title: enumerative_combinatorics/number_of_subsequences.py
+      title: Number of Subsequences
   - name: .
     pages:
     - icon: ':warning:'
@@ -225,40 +224,44 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: geometory/arg_sort.py
-      title: geometory/arg_sort.py
+      title: "\u504F\u89D2\u30BD\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
       path: geometory/closest_pair.py
-      title: geometory/closest_pair.py
+      title: Closest Pair
     - icon: ':heavy_check_mark:'
       path: geometory/convex_full.py
-      title: geometory/convex_full.py
+      title: Convex full
     - icon: ':warning:'
       path: geometory/convex_layer.py
       title: geometory/convex_layer.py
     - icon: ':heavy_check_mark:'
       path: geometory/diameter.py
-      title: geometory/diameter.py
+      title: "\u591A\u89D2\u5F62\u306E\u76F4\u5F84"
     - icon: ':heavy_check_mark:'
       path: geometory/kd_tree.py
-      title: geometory/kd_tree.py
+      title: KD tree
     - icon: ':heavy_check_mark:'
       path: geometory/manhattan_mst.py
-      title: geometory/manhattan_mst.py
+      title: "\u30DE\u30F3\u30CF\u30C3\u30BF\u30F3\u8DDD\u96E2\u306E\u6700\u5C0F\u5168\
+        \u57DF\u6728"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_point_add_rectangle_sum.py
-      title: geometory/offline_point_add_rectangle_sum.py
+      title: "\uFF11\u70B9\u52A0\u7B97\u30FB\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\
+        \u30F3)"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_rectangle_add_point_get.py
-      title: geometory/offline_rectangle_add_point_get.py
+      title: "\u77E9\u5F62\u52A0\u7B97\u30FB\uFF11\u70B9\u53D6\u5F97(\u30AA\u30D5\u30E9\
+        \u30A4\u30F3)"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_rectangle_add_rectangle_sum.py
-      title: geometory/offline_rectangle_add_rectangle_sum.py
+      title: "\u77E9\u5F62\u52A0\u7B97\u30FB\u77E9\u5F62\u548C\u53D6\u5F97(\u30AA\u30D5\
+        \u30E9\u30A4\u30F3)"
     - icon: ':heavy_check_mark:'
       path: geometory/offline_static_rectangle_sum.py
-      title: geometory/offline_static_rectangle_sum.py
+      title: "\u77E9\u5F62\u548C(\u30AA\u30D5\u30E9\u30A4\u30F3\u30FB\u9759\u7684)"
     - icon: ':heavy_check_mark:'
       path: geometory/union_area_rectangle.py
-      title: geometory/union_area_rectangle.py
+      title: "\u9577\u65B9\u5F62\u306E\u548C\u96C6\u5408\u306E\u9762\u7A4D"
   - name: geometory/basic
     pages:
     - icon: ':heavy_check_mark:'
@@ -281,100 +284,101 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: graph/bellman_ford.py
-      title: graph/bellman_ford.py
+      title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
     - icon: ':warning:'
       path: graph/bfs.py
-      title: graph/bfs.py
+      title: "\u5E45\u512A\u5148\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
       path: graph/biconnected_components.py
-      title: graph/biconnected_components.py
+      title: "\u4E8C\u9802\u70B9\u9023\u7D50\u6210\u5206\u5206\u89E3/Block Cut Tree"
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_edge_coloring.py
-      title: graph/bipartite_edge_coloring.py
+      title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
     - icon: ':heavy_check_mark:'
       path: graph/bipartite_matching.py
-      title: graph/bipartite_matching.py
+      title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: graph/chordal_graph.py
-      title: graph/chordal_graph.py
+      title: "\u5F26\u30B0\u30E9\u30D5"
     - icon: ':heavy_check_mark:'
       path: graph/chromatic_number.py
-      title: graph/chromatic_number.py
+      title: "\u5F69\u8272\u6570"
     - icon: ':heavy_check_mark:'
       path: graph/connected_components_complement.py
-      title: graph/connected_components_complement.py
+      title: "\u88DC\u30B0\u30E9\u30D5\u306E\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':warning:'
       path: graph/csr.py
-      title: graph/csr.py
+      title: "CSR\u30B0\u30E9\u30D5(Compressed Spare Row)"
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.py
-      title: graph/dijkstra.py
+      title: "Dijkstra\uFF08\u30C0\u30A4\u30AF\u30B9\u30C8\u30E9\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/directed_mst.py
-      title: graph/directed_mst.py
+      title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
     - icon: ':heavy_check_mark:'
       path: graph/enumerate_cliques.py
-      title: graph/enumerate_cliques.py
+      title: Enumerate Cliques
     - icon: ':heavy_check_mark:'
       path: graph/enumerate_triangles.py
-      title: graph/enumerate_triangles.py
+      title: Enumerate Triangles
     - icon: ':heavy_check_mark:'
       path: graph/eulerian_trail.py
-      title: graph/eulerian_trail.py
+      title: "\u30AA\u30A4\u30E9\u30FC\u8DEF"
     - icon: ':heavy_check_mark:'
       path: graph/extreme_vertex_set.py
-      title: graph/extreme_vertex_set.py
+      title: "\u6975\u70B9\u96C6\u5408"
     - icon: ':heavy_check_mark:'
       path: graph/find_cycle_directed.py
-      title: graph/find_cycle_directed.py
+      title: "\u9589\u8DEF\u691C\u51FA\uFF08\u6709\u5411\u30B0\u30E9\u30D5\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/find_cycle_undirected.py
-      title: graph/find_cycle_undirected.py
+      title: "\u9589\u8DEF\u691C\u51FA\uFF08\u7121\u5411\u30B0\u30E9\u30D5\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/floyd_warshall.py
-      title: graph/floyd_warshall.py
+      title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\
+        \u5BFE\u6700\u77ED\u8DDD\u96E2)"
     - icon: ':heavy_check_mark:'
       path: graph/general_matching.py
-      title: graph/general_matching.py
+      title: "\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: graph/general_weighted_matching.py
-      title: graph/general_weighted_matching.py
+      title: "\u91CD\u307F\u4ED8\u304D\u6700\u5927\u30DE\u30C3\u30C1\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: graph/hungarian.py
-      title: graph/hungarian.py
+      title: "\u30CF\u30F3\u30AC\u30EA\u30A2\u30F3\u6CD5"
     - icon: ':heavy_check_mark:'
       path: graph/low_link.py
-      title: graph/low_link.py
+      title: Low Link
     - icon: ':heavy_check_mark:'
       path: graph/matrix_tree_theorem.py
-      title: graph/matrix_tree_theorem.py
+      title: "\u884C\u5217\u6728\u5B9A\u7406"
     - icon: ':heavy_check_mark:'
       path: graph/maxflow.py
-      title: graph/maxflow.py
+      title: "\u6700\u5927\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
       path: graph/maximum_independent_set.py
-      title: graph/maximum_independent_set.py
+      title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
     - icon: ':heavy_check_mark:'
       path: graph/mincostflow.py
-      title: graph/mincostflow.py
+      title: "\u6700\u5C0F\u30B3\u30B9\u30C8\u30D5\u30ED\u30FC"
     - icon: ':heavy_check_mark:'
       path: graph/scc.py
-      title: graph/scc.py
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: graph/scc_incremental.py
-      title: graph/scc_incremental.py
+      title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
     - icon: ':heavy_check_mark:'
       path: graph/shortest_paths.py
       title: Shortest paths
     - icon: ':heavy_check_mark:'
       path: graph/three_edge_connected_components.py
-      title: graph/three_edge_connected_components.py
+      title: "\u4E09\u8FBA\u9023\u7D50\u6210\u5206\u5206\u89E3"
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.py
-      title: graph/topological_sort.py
+      title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
     - icon: ':heavy_check_mark:'
       path: graph/tree_decomposition_width2.py
-      title: graph/tree_decomposition_width2.py
+      title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   - name: graph/connectivity
     pages:
     - icon: ':heavy_check_mark:'
@@ -434,7 +438,7 @@ data:
       title: "\u6728\u306E\u5B89\u5B9A\u96C6\u5408\u306E\u500B\u6570"
     - icon: ':heavy_check_mark:'
       path: graph/tree/diameter.py
-      title: "\u6728\u306E\u76F4\u5F84"
+      title: graph/tree/diameter.py
     - icon: ':heavy_check_mark:'
       path: graph/tree/dominator_tree.py
       title: Dominator Tree
@@ -476,79 +480,83 @@ data:
       title: graph/tree/template.py
     - icon: ':heavy_check_mark:'
       path: graph/tree/tree_dp.py
-      title: "(\u5168\u65B9\u4F4D)\u6728DP"
+      title: "\u6728\u306E\u5165\u51FA\u529B"
   - name: linear_algebra
     pages:
     - icon: ':heavy_check_mark:'
       path: linear_algebra/determinant_arbitrary.py
-      title: linear_algebra/determinant_arbitrary.py
+      title: "\u884C\u5217\u5F0F"
     - icon: ':heavy_check_mark:'
       path: linear_algebra/matrix.py
-      title: linear_algebra/matrix.py
+      title: "\u884C\u5217"
   - name: number_theory
     pages:
     - icon: ':warning:'
       path: number_theory/chinese_remainder_theorem.py
-      title: number_theory/chinese_remainder_theorem.py
+      title: "\u4E2D\u56FD\u4F59\u5270\u5B9A\u7406"
     - icon: ':heavy_check_mark:'
       path: number_theory/count_primes.py
-      title: number_theory/count_primes.py
+      title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
     - icon: ':heavy_check_mark:'
       path: number_theory/count_squarefree.py
-      title: number_theory/count_squarefree.py
+      title: "\u7121\u5E73\u65B9\u6570\u306E\u6570\u3048\u4E0A\u3052"
     - icon: ':warning:'
       path: number_theory/divisors.py
-      title: number_theory/divisors.py
+      title: "\u7D04\u6570\u5217\u6319"
     - icon: ':warning:'
       path: number_theory/eratosthenes.py
-      title: number_theory/eratosthenes.py
+      title: "\u7D20\u6570\u5224\u5B9A(\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\
+        \u7BE9)"
     - icon: ':warning:'
       path: number_theory/euler_phi.py
-      title: number_theory/euler_phi.py
+      title: "\u30AA\u30A4\u30E9\u30FC\u306E\u03C6\u95A2\u6570(\u30C8\u30FC\u30B7\u30A7\
+        \u30F3\u30C8\u95A2\u6570)"
     - icon: ':warning:'
       path: number_theory/ext_gcd.py
-      title: number_theory/ext_gcd.py
+      title: "\u62E1\u5F35\u30E6\u30FC\u30AF\u30EA\u30C3\u30C9\u306E\u4E92\u52A9\u6CD5"
     - icon: ':heavy_check_mark:'
       path: number_theory/factorize.py
-      title: number_theory/factorize.py
+      title: "\u7D20\u56E0\u6570\u5206\u89E3"
     - icon: ':warning:'
       path: number_theory/factorize_linux.py
-      title: number_theory/factorize_linux.py
+      title: "\u7D20\u56E0\u6570\u5206\u89E3(Linux OS\u30B3\u30DE\u30F3\u30C9)"
     - icon: ':heavy_check_mark:'
       path: number_theory/floor_sum.py
-      title: number_theory/floor_sum.py
+      title: Floor sum
     - icon: ':heavy_check_mark:'
       path: number_theory/kth_root.py
-      title: number_theory/kth_root.py
+      title: Kth Root
     - icon: ':warning:'
       path: number_theory/miller_rabin.py
-      title: number_theory/miller_rabin.py
+      title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
+        )"
     - icon: ':heavy_check_mark:'
       path: number_theory/min_of_linear.py
-      title: number_theory/min_of_linear.py
+      title: Min of linear
     - icon: ':heavy_check_mark:'
       path: number_theory/nimber.py
-      title: number_theory/nimber.py
+      title: Nimber
     - icon: ':warning:'
       path: number_theory/palindromic_number.py
-      title: number_theory/palindromic_number.py
+      title: "\u56DE\u6587\u6570"
     - icon: ':heavy_check_mark:'
       path: number_theory/primitive_root.py
-      title: number_theory/primitive_root.py
+      title: "\u539F\u59CB\u6839"
     - icon: ':heavy_check_mark:'
       path: number_theory/stern_brocot_tree.py
-      title: number_theory/stern_brocot_tree.py
+      title: Stern Brocot tree
   - name: other
     pages:
     - icon: ':warning:'
       path: other/random_set.py
-      title: other/random_set.py
+      title: "\u30E9\u30F3\u30C0\u30E0\u30A2\u30AF\u30BB\u30B9\u3067\u304D\u308B\u96C6\
+        \u5408"
     - icon: ':heavy_check_mark:'
       path: other/two_sat.py
-      title: other/two_sat.py
+      title: 2 Sat
     - icon: ':heavy_check_mark:'
       path: other/typical_problems_of_sum.py
-      title: other/typical_problems_of_sum.py
+      title: "\u5178\u578B\u554F\u984C\uFF08\u8DB3\u3057\u4E0A\u3052\uFF09"
   - name: other/sort
     pages:
     - icon: ':warning:'
@@ -588,103 +596,103 @@ data:
     pages:
     - icon: ':warning:'
       path: persistent_data_structure/persistent_array.py
-      title: persistent_data_structure/persistent_array.py
+      title: "\u6C38\u7D9A\u914D\u5217"
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_queue.py
-      title: persistent_data_structure/persistent_queue.py
+      title: "\u6C38\u7D9A\u30AD\u30E5\u30FC"
     - icon: ':heavy_check_mark:'
       path: persistent_data_structure/persistent_union_find.py
-      title: persistent_data_structure/persistent_union_find.py
+      title: "\u6C38\u7D9A Union Find"
   - name: polynomial
     pages:
     - icon: ':heavy_check_mark:'
       path: polynomial/chirp_z.py
-      title: polynomial/chirp_z.py
+      title: Chirp Z
     - icon: ':heavy_check_mark:'
       path: polynomial/composition.py
-      title: polynomial/composition.py
+      title: Composition
     - icon: ':heavy_check_mark:'
       path: polynomial/formal_power_series.py
-      title: polynomial/formal_power_series.py
+      title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
     - icon: ':heavy_check_mark:'
       path: polynomial/multipoint_evaluation.py
-      title: polynomial/multipoint_evaluation.py
+      title: Multipoint Evaluation
     - icon: ':warning:'
       path: polynomial/multivariate_multiplication.py
-      title: polynomial/multivariate_multiplication.py
+      title: Multivariate Multiplication
     - icon: ':heavy_check_mark:'
       path: polynomial/product_tree.py
-      title: polynomial/product_tree.py
+      title: Product Tree
     - icon: ':heavy_check_mark:'
       path: polynomial/sample_point_shift.py
-      title: polynomial/sample_point_shift.py
+      title: Sample Point Shift
     - icon: ':heavy_check_mark:'
       path: polynomial/tayler_shift.py
-      title: polynomial/tayler_shift.py
+      title: Tayler Shift
   - name: str
     pages:
     - icon: ':heavy_check_mark:'
       path: str/longest_common_substring.py
-      title: str/longest_common_substring.py
+      title: Longest Common Substring
     - icon: ':heavy_check_mark:'
       path: str/manacher.py
-      title: str/manacher.py
+      title: Manacher
     - icon: ':warning:'
       path: str/overlap.py
-      title: str/overlap.py
+      title: "\u6587\u5B57\u5217\u9023\u7D50\u6642\u306E\u91CD\u8907"
     - icon: ':heavy_check_mark:'
       path: str/palindromic_tree.py
-      title: str/palindromic_tree.py
+      title: "\u56DE\u6587\u6728"
     - icon: ':heavy_check_mark:'
       path: str/palindromic_tree_deque.py
       title: str/palindromic_tree_deque.py
     - icon: ':warning:'
       path: str/rolling_hash.py
-      title: str/rolling_hash.py
+      title: "\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5"
     - icon: ':heavy_check_mark:'
       path: str/suffix_array.py
-      title: str/suffix_array.py
+      title: Suffix array
     - icon: ':warning:'
       path: str/trie_tree.py
-      title: str/trie_tree.py
+      title: Trie tree
     - icon: ':heavy_check_mark:'
       path: str/z_algorithm.py
-      title: str/z_algorithm.py
+      title: Z algorithm
   - name: utility
     pages:
     - icon: ':warning:'
       path: utility/antirec.py
-      title: utility/antirec.py
+      title: "\u518D\u5E30\u9AD8\u901F\u5316"
     - icon: ':warning:'
       path: utility/binary_search.py
-      title: utility/binary_search.py
+      title: "\u4E8C\u5206\u6CD5"
     - icon: ':warning:'
       path: utility/bit.py
-      title: utility/bit.py
+      title: "\u30D3\u30C3\u30C8\u6F14\u7B97"
     - icon: ':warning:'
       path: utility/bitset.py
-      title: utility/bitset.py
+      title: Bitset
     - icon: ':warning:'
       path: utility/compress.py
-      title: utility/compress.py
+      title: "\u5EA7\u6A19\u5727\u7E2E"
     - icon: ':warning:'
       path: utility/convert_base.py
-      title: utility/convert_base.py
+      title: "\u9032\u6570\u5909\u63DB"
     - icon: ':warning:'
       path: utility/fast_power.py
-      title: utility/fast_power.py
+      title: "\u51AA\u4E57"
     - icon: ':heavy_check_mark:'
       path: utility/fastio.py
-      title: utility/fastio.py
+      title: "\u9AD8\u901F\u5165\u51FA\u529B"
     - icon: ':warning:'
       path: utility/imos2d.py
-      title: utility/imos2d.py
+      title: "\u4E8C\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':warning:'
       path: utility/modint.py
-      title: utility/modint.py
+      title: modint
     - icon: ':warning:'
       path: utility/permutations.py
-      title: utility/permutations.py
+      title: "\u9806\u5217"
   verificationCategories:
   - name: embed_cpp
     pages:

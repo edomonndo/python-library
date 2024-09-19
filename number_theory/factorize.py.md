@@ -3,11 +3,12 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: number_theory/miller_rabin.py
-    title: number_theory/miller_rabin.py
+    title: "\u7D20\u6570\u5224\u5B9A(\u30DF\u30E9\u30FC\u30FB\u30E9\u30D3\u30F3\u6CD5\
+      )"
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: number_theory/primitive_root.py
-    title: number_theory/primitive_root.py
+    title: "\u539F\u59CB\u6839"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/number_theory/factorize.test.py
@@ -53,8 +54,9 @@ data:
   - test/library_checker/number_theory/factorize.test.py
 documentation_of: number_theory/factorize.py
 layout: document
-redirect_from:
-- /library/number_theory/factorize.py
-- /library/number_theory/factorize.py.html
-title: number_theory/factorize.py
+title: "\u7D20\u56E0\u6570\u5206\u89E3"
 ---
+
+### `factorize(n: int)`
+
+$n$を素因数分解する.返り値はdictで,keyが素因数,valueがその素因数で割れる回数.

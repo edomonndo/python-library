@@ -229,8 +229,5 @@ data:
   - test/library_checker/enumerative_combinatorics/factorial.test.py
 documentation_of: enumerative_combinatorics/factorial_mod.py
 layout: document
-redirect_from:
-- /library/enumerative_combinatorics/factorial_mod.py
-- /library/enumerative_combinatorics/factorial_mod.py.html
-title: enumerative_combinatorics/factorial_mod.py
+title: "\u968E\u4E57 mod 998244353"
 ---

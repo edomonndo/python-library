@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: data_structure/segtree/linear_add_rmq.py
-    title: "\u7B49\u5DEE\u6570\u5217\u52A0\u7B97\u30FB\u6700\u5C0F\u5024\u53D6\u5F97"
+    title: data_structure/segtree/linear_add_rmq.py
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: py
@@ -58,8 +58,7 @@ data:
   verifiedWith: []
 documentation_of: utility/bit.py
 layout: document
-redirect_from:
-- /library/utility/bit.py
-- /library/utility/bit.py.html
-title: utility/bit.py
+title: "\u30D3\u30C3\u30C8\u6F14\u7B97"
 ---
+
+

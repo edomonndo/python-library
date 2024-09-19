@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

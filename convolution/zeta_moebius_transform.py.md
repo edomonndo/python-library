@@ -44,8 +44,5 @@ data:
   - test/library_checker/convolution/bitwise_and_convolution.test.py
 documentation_of: convolution/zeta_moebius_transform.py
 layout: document
-redirect_from:
-- /library/convolution/zeta_moebius_transform.py
-- /library/convolution/zeta_moebius_transform.py.html
-title: convolution/zeta_moebius_transform.py
+title: "\u30BC\u30FC\u30BF\u5909\u63DB\u30FB\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
 ---

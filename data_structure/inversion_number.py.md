@@ -28,8 +28,5 @@ data:
   verifiedWith: []
 documentation_of: data_structure/inversion_number.py
 layout: document
-redirect_from:
-- /library/data_structure/inversion_number.py
-- /library/data_structure/inversion_number.py.html
-title: data_structure/inversion_number.py
+title: "\u8EE2\u7F6E\u6570"
 ---

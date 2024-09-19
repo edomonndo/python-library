@@ -37,8 +37,5 @@ data:
   - test/library_checker/graph/maximum_independent_set.test.py
 documentation_of: graph/maximum_independent_set.py
 layout: document
-redirect_from:
-- /library/graph/maximum_independent_set.py
-- /library/graph/maximum_independent_set.py.html
-title: graph/maximum_independent_set.py
+title: "\u6700\u5927\u72EC\u7ACB\u70B9\u96C6\u5408"
 ---

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: str/manacher.py
-    title: str/manacher.py
+    title: Manacher
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

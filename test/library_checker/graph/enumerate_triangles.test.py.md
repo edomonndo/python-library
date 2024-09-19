@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/enumerate_triangles.py
-    title: graph/enumerate_triangles.py
+    title: Enumerate Triangles
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/enumerate_cliques.py
-    title: graph/enumerate_cliques.py
+    title: Enumerate Cliques
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

@@ -56,8 +56,7 @@ data:
   - test/library_checker/geometory/sort_points_by_argument.test.py
 documentation_of: geometory/arg_sort.py
 layout: document
-redirect_from:
-- /library/geometory/arg_sort.py
-- /library/geometory/arg_sort.py.html
-title: geometory/arg_sort.py
+title: "\u504F\u89D2\u30BD\u30FC\u30C8"
 ---
+
+座標群を第3象限から第2象限の順に偏角で並べ替える．

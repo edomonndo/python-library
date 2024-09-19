@@ -45,8 +45,5 @@ data:
   - test/library_checker/graph/global_minimum_cut_of_dynamic_star_augmented_graph.test.py
 documentation_of: graph/extreme_vertex_set.py
 layout: document
-redirect_from:
-- /library/graph/extreme_vertex_set.py
-- /library/graph/extreme_vertex_set.py.html
-title: graph/extreme_vertex_set.py
+title: "\u6975\u70B9\u96C6\u5408"
 ---

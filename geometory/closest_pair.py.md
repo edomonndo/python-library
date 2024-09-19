@@ -58,8 +58,5 @@ data:
   - test/aoj/cgl/cgl_5_a_closest_pair.test.py
 documentation_of: geometory/closest_pair.py
 layout: document
-redirect_from:
-- /library/geometory/closest_pair.py
-- /library/geometory/closest_pair.py.html
-title: geometory/closest_pair.py
+title: Closest Pair
 ---

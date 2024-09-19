@@ -51,8 +51,8 @@ data:
   - test/aoj/grl/grl_1_b_bellman_ford.test.py
 documentation_of: graph/bellman_ford.py
 layout: document
-redirect_from:
-- /library/graph/bellman_ford.py
-- /library/graph/bellman_ford.py.html
-title: graph/bellman_ford.py
+title: "\u30D9\u30EB\u30DE\u30F3\u30D5\u30A9\u30FC\u30C9"
 ---
+
+負の辺があるときに最短経路を求められる．
+有向閉路があるときは，$(-1,-1)$を返す．

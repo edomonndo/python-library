@@ -102,12 +102,12 @@ data:
   timestamp: '2024-08-15 10:59:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+  - test/aoj/cgl/cgl_2_d_distance.test.py
   - test/aoj/cgl/cgl_1_a_projection.test.py
   - test/aoj/cgl/cgl_2_b_intersection.test.py
-  - test/aoj/cgl/cgl_2_c_cross_point.test.py
   - test/aoj/cgl/cgl_1_b_refrection.test.py
-  - test/aoj/cgl/cgl_2_d_distance.test.py
+  - test/aoj/cgl/cgl_2_a_parallel_orthogonal.test.py
+  - test/aoj/cgl/cgl_2_c_cross_point.test.py
 documentation_of: geometory/basic/line.py
 layout: document
 title: "\u5E7E\u4F55\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8(\u76F4\u7DDA\u30FB\u7DDA\u5206\

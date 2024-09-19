@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: polynomial/tayler_shift.py
-    title: polynomial/tayler_shift.py
+    title: Tayler Shift
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

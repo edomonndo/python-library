@@ -32,8 +32,8 @@ data:
   - test/aoj/grl/grl_1_c_floyd_warshall.test.py
 documentation_of: graph/floyd_warshall.py
 layout: document
-redirect_from:
-- /library/graph/floyd_warshall.py
-- /library/graph/floyd_warshall.py.html
-title: graph/floyd_warshall.py
+title: "\u30D5\u30ED\u30A4\u30C9\u30FB\u30EF\u30FC\u30B7\u30E3\u30EB(\u5168\u70B9\u5BFE\
+  \u6700\u77ED\u8DDD\u96E2)"
 ---
+
+全ての頂点間の最短距離を求める．$O(V^3)$

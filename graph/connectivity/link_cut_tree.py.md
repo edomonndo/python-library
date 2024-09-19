@@ -110,8 +110,8 @@ data:
   timestamp: '2024-07-02 07:09:42+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/library_checker/tree/dynamic_tree_vertex_set_path_composite.test.py
   - test/library_checker/tree/dynamic_tree_vertex_add_path_sum.test.py
+  - test/library_checker/tree/dynamic_tree_vertex_set_path_composite.test.py
 documentation_of: graph/connectivity/link_cut_tree.py
 layout: document
 title: Link Cut Tree

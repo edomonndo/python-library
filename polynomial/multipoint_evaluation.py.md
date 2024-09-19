@@ -3,10 +3,10 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   - icon: ':heavy_check_mark:'
     path: polynomial/formal_power_series.py
-    title: polynomial/formal_power_series.py
+    title: "\u5F62\u5F0F\u7684\u51AA\u7D1A\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -56,8 +56,5 @@ data:
   - test/library_checker/polynomial/multipoint_evaluation.test.py
 documentation_of: polynomial/multipoint_evaluation.py
 layout: document
-redirect_from:
-- /library/polynomial/multipoint_evaluation.py
-- /library/polynomial/multipoint_evaluation.py.html
-title: polynomial/multipoint_evaluation.py
+title: Multipoint Evaluation
 ---

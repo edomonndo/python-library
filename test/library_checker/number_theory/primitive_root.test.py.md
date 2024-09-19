@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: number_theory/primitive_root.py
-    title: number_theory/primitive_root.py
+    title: "\u539F\u59CB\u6839"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

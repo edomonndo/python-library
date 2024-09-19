@@ -35,8 +35,5 @@ data:
   - test/library_checker/convolution/bitwise_xor_convolution.test.py
 documentation_of: convolution/walsh_hadamard_tranform.py
 layout: document
-redirect_from:
-- /library/convolution/walsh_hadamard_tranform.py
-- /library/convolution/walsh_hadamard_tranform.py.html
-title: convolution/walsh_hadamard_tranform.py
+title: "\u30A6\u30A9\u30EB\u30B7\u30E5\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
 ---

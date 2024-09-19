@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: number_theory/count_primes.py
-    title: number_theory/count_primes.py
+    title: "\u7D20\u6570\u6570\u3048\u4E0A\u3052"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

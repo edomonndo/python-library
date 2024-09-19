@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':warning:'
     path: utility/bit.py
-    title: utility/bit.py
+    title: "\u30D3\u30C3\u30C8\u6F14\u7B97"
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -108,5 +108,8 @@ data:
   - test/library_checker/data_structure/range_linear_add_range_min.test.py
 documentation_of: data_structure/segtree/linear_add_rmq.py
 layout: document
-title: "\u7B49\u5DEE\u6570\u5217\u52A0\u7B97\u30FB\u6700\u5C0F\u5024\u53D6\u5F97"
+redirect_from:
+- /library/data_structure/segtree/linear_add_rmq.py
+- /library/data_structure/segtree/linear_add_rmq.py.html
+title: data_structure/segtree/linear_add_rmq.py
 ---

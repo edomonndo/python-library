@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: polynomial/composition.py
-    title: polynomial/composition.py
+    title: Composition
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

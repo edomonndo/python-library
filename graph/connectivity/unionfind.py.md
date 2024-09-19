@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':heavy_check_mark:'
     path: graph/bipartite_edge_coloring.py
-    title: graph/bipartite_edge_coloring.py
+    title: "\u4E8C\u90E8\u30B0\u30E9\u30D5\u306E\u8FBA\u5F69\u8272"
   - icon: ':heavy_check_mark:'
     path: graph/connectivity/range_parallel_unionfind.py
     title: Range Parallel Union Find
@@ -13,13 +13,13 @@ data:
     title: Static Range Parallel Union Find
   - icon: ':heavy_check_mark:'
     path: graph/directed_mst.py
-    title: graph/directed_mst.py
+    title: "\u6700\u5C0F\u5168\u57DF\u6709\u5411\u6728"
   - icon: ':heavy_check_mark:'
     path: graph/scc_incremental.py
-    title: graph/scc_incremental.py
+    title: "\u5F37\u9023\u7D50\u6210\u5206\u5206\u89E3(Incremental)"
   - icon: ':heavy_check_mark:'
     path: graph/tree_decomposition_width2.py
-    title: graph/tree_decomposition_width2.py
+    title: "\u6728\u5206\u89E3\uFF08\u6728\u5E45\uFF12\u4EE5\u4E0B\uFF09"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/library_checker/geometory/manhattanmst.test.py
@@ -68,17 +68,17 @@ data:
   path: graph/connectivity/unionfind.py
   requiredBy:
   - graph/bipartite_edge_coloring.py
-  - graph/connectivity/static_range_parallel_unionfind.py
   - graph/connectivity/range_parallel_unionfind.py
+  - graph/connectivity/static_range_parallel_unionfind.py
   - graph/tree_decomposition_width2.py
   - graph/directed_mst.py
   - graph/scc_incremental.py
   timestamp: '2024-08-05 20:55:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/library_checker/graph/range_parallel_unionfind.test.py
   - test/library_checker/graph/minimum_spanning_tree.test.py
   - test/library_checker/graph/scc_incremental.test.py
-  - test/library_checker/graph/range_parallel_unionfind.test.py
   - test/library_checker/geometory/manhattanmst.test.py
 documentation_of: graph/connectivity/unionfind.py
 layout: document

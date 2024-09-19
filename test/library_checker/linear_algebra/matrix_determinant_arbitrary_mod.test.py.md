@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: linear_algebra/determinant_arbitrary.py
-    title: linear_algebra/determinant_arbitrary.py
+    title: "\u884C\u5217\u5F0F"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

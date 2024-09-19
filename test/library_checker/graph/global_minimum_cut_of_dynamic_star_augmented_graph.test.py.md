@@ -6,7 +6,7 @@ data:
     title: "\u9045\u5EF6\u30BB\u30B0\u30E1\u30F3\u30C8\u6728 (Lazy Segment Tree)"
   - icon: ':heavy_check_mark:'
     path: graph/extreme_vertex_set.py
-    title: graph/extreme_vertex_set.py
+    title: "\u6975\u70B9\u96C6\u5408"
   - icon: ':heavy_check_mark:'
     path: graph/tree/heavy_light_decomposition.py
     title: "HL\u5206\u89E3"

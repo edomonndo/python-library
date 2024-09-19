@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: convolution/convolution.py
-    title: convolution/convolution.py
+    title: "\u7573\u307F\u8FBC\u307F $mod=998244353$"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -38,8 +38,5 @@ data:
   verifiedWith: []
 documentation_of: polynomial/multivariate_multiplication.py
 layout: document
-redirect_from:
-- /library/polynomial/multivariate_multiplication.py
-- /library/polynomial/multivariate_multiplication.py.html
-title: polynomial/multivariate_multiplication.py
+title: Multivariate Multiplication
 ---

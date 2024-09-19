@@ -43,8 +43,5 @@ data:
   - test/library_checker/graph/scc_incremental.test.py
 documentation_of: utility/fastio.py
 layout: document
-redirect_from:
-- /library/utility/fastio.py
-- /library/utility/fastio.py.html
-title: utility/fastio.py
+title: "\u9AD8\u901F\u5165\u51FA\u529B"
 ---
